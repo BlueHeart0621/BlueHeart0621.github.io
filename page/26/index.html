@@ -7,8 +7,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
-  <link rel="icon" href="/img/favicon.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/self/portrait.jpg">
+  <link rel="icon" href="/img/self/portrait.jpg">
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -197,25 +197,20 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Linux/Manjaro/Manjaro20.0%E6%B7%BB%E5%8A%A0%E5%9B%BD%E5%86%85%E6%BA%90%E3%80%81%E7%A4%BE%E5%8C%BA%E6%BA%90%E3%80%81AUR%E6%BA%90/">Manjaro20.0添加国内源、社区源、AUR源</a>
+        <a href="/2020/05/26/MatLab/MatLab%E5%B7%A5%E4%BD%9C%E5%8C%BA/">MatLab工作区</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Linux/Manjaro/Manjaro20.0%E6%B7%BB%E5%8A%A0%E5%9B%BD%E5%86%85%E6%BA%90%E3%80%81%E7%A4%BE%E5%8C%BA%E6%BA%90%E3%80%81AUR%E6%BA%90/">
+        <a href="/2020/05/26/MatLab/MatLab%E5%B7%A5%E4%BD%9C%E5%8C%BA/">
           
           
             
           
-          1. 添加国内源
-1.1 备份文件
-1sudo cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak
-1.2 编辑文件
-1sudo vim /etc/pacman.d/mirrorlist
-添加的源从上到下优先级依次降低。
-
-添加 Manjaro 源
-
-123456789## manjaro 稳定源# 中科大Server = https:
+          1. 基础工作区
+MatLab 中的基础工作区是针对当前 MatLab 窗口内的脚本代码而言的（无论是命令行窗口输入的还是 M 脚本文件中的），是所有脚本代码所共享的（即对当前 MatLab 窗口而言是唯一的），是对外可见的（即 MatLab 窗口中显示的工作区），与当前 MatLab 窗口是共存亡的。
+【注】从函数中调用脚本时，脚本使用的是调用函数的函数工作区。
+2. 函数工作区
+MatLab 
         </a>
       </p>
 
@@ -232,9 +227,7 @@
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/Linux/">Linux</a>
-            
-              <a href="/categories/Linux/Manjaro/">Manjaro</a>
+              <a href="/categories/MatLab/">MatLab</a>
             
           </div>
         
@@ -242,9 +235,7 @@
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/Manjaro/">Manjaro</a>
+              <a href="/tags/MatLab/">MatLab</a>
             
           </div>
         
@@ -258,22 +249,42 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Linux/Manjaro/Manjaro20.0%E9%85%8D%E7%BD%AETR4527%E6%89%93%E5%8D%B0%E6%9C%BA%E5%92%8C%E6%89%AB%E6%8F%8F%E4%BB%AA%E9%A9%B1%E5%8A%A8/">Manjaro20.0配置TR4527打印机和扫描仪驱动</a>
+        <a href="/2020/05/26/MatLab/MatLab%E8%BF%90%E7%AE%97%E7%AC%A6%E4%B8%8E%E8%BF%90%E7%AE%97/">MatLab运算符与运算</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Linux/Manjaro/Manjaro20.0%E9%85%8D%E7%BD%AETR4527%E6%89%93%E5%8D%B0%E6%9C%BA%E5%92%8C%E6%89%AB%E6%8F%8F%E4%BB%AA%E9%A9%B1%E5%8A%A8/">
+        <a href="/2020/05/26/MatLab/MatLab%E8%BF%90%E7%AE%97%E7%AC%A6%E4%B8%8E%E8%BF%90%E7%AE%97/">
           
           
             
           
-          【注】Manjaro 系统日常使用问题可以上 Manjaro 官方论坛上逛一逛，说不定具有解决办法。
-1. 打印机驱动
-Arch Linux AUR 源已经提供了 TR4527 打印机驱动程序 cnijfilter2，详情参见地址。
-在终端手动安装该驱动程序即可：
-1yay -S cnijfilter2
-2. 扫描仪驱动
-Arch Linux AUR 源已经提供了 TR4527 扫描仪驱动程序 s
+          1. 算术运算符
+MatLab 算术运算符有四则运算符和带点四则运算符。
+
+
+
+运算符
+运算法则
+运算符
+运算法则
+
+
+
+
+A+B
+A 与 B 相加（维度必须一致）
+A-B
+A 与 B 相减（维度必须一致）
+
+
+A*B
+A 与 B 相乘（二者之一为标量或满足矩阵相乘条件）
+A.*B
+A 与 B 相应元素相乘（维度必须一致）
+
+
+A\B
+B 与 A 相除（A 为标量或满足 A 非奇异，A\B=A−1
         </a>
       </p>
 
@@ -290,9 +301,7 @@ Arch Linux AUR 源已经提供了 TR4527 扫描仪驱动程序 s
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/Linux/">Linux</a>
-            
-              <a href="/categories/Linux/Manjaro/">Manjaro</a>
+              <a href="/categories/MatLab/">MatLab</a>
             
           </div>
         
@@ -300,9 +309,7 @@ Arch Linux AUR 源已经提供了 TR4527 扫描仪驱动程序 s
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/Manjaro/">Manjaro</a>
+              <a href="/tags/MatLab/">MatLab</a>
             
           </div>
         
@@ -316,18 +323,20 @@ Arch Linux AUR 源已经提供了 TR4527 扫描仪驱动程序 s
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Linux/Mint/Mint19.1%E4%B8%8Bdpkg%E6%8A%A5%E9%94%99/">Mint19.1下dpkg报错</a>
+        <a href="/2020/05/26/MySQL/Deepin15.11%E9%85%8D%E7%BD%AEMySQL%E7%8E%AF%E5%A2%83/">Deepin15.11配置MySQL环境</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Linux/Mint/Mint19.1%E4%B8%8Bdpkg%E6%8A%A5%E9%94%99/">
+        <a href="/2020/05/26/MySQL/Deepin15.11%E9%85%8D%E7%BD%AEMySQL%E7%8E%AF%E5%A2%83/">
           
           
             
           
-          1. E: Sub-process /usr/bin/dpkg returned an error code (1)
-解决办法如下：
-12345678cd /var/lib/dpkgsudo mv info info_baksudo mkdir infosudo apt update &gt; /dev/null			# 若要输出信息，去除重定向符及其后内容sudo apt install -fs
+          【注】mysql 环境配置详情请参阅 mysql 官方教程。
+1. 添加 APT Repository
+从官网上下载对应的 MySQL APT Repository 配置包，然后安装该 mysql-apt-config_x.y.z_all.deb 包（具体取决于所下载的 deb 包）。
+1sudo dpkg -i mysql-apt-config_x.y.z_all.deb
+在安装该 APT Re
         </a>
       </p>
 
@@ -344,9 +353,7 @@ Arch Linux AUR 源已经提供了 TR4527 扫描仪驱动程序 s
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/Linux/">Linux</a>
-            
-              <a href="/categories/Linux/Mint/">Mint</a>
+              <a href="/categories/MySQL/">MySQL</a>
             
           </div>
         
@@ -354,9 +361,7 @@ Arch Linux AUR 源已经提供了 TR4527 扫描仪驱动程序 s
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/Mint/">Mint</a>
+              <a href="/tags/MySQL/">MySQL</a>
             
           </div>
         
@@ -370,373 +375,30 @@ Arch Linux AUR 源已经提供了 TR4527 扫描仪驱动程序 s
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Linux/Mint/Mint19.1%E4%B8%8B%E4%BD%BF%E7%94%A8npm%E5%B7%A5%E5%85%B7/">Mint19.1下使用npm工具</a>
+        <a href="/2020/05/26/MySQL/MySQL%E6%8A%A5%E9%94%99/">MySQL报错</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Linux/Mint/Mint19.1%E4%B8%8B%E4%BD%BF%E7%94%A8npm%E5%B7%A5%E5%85%B7/">
+        <a href="/2020/05/26/MySQL/MySQL%E6%8A%A5%E9%94%99/">
           
           
             
           
-          1. 简介
+          1. The MySQL server is running with the --secure-file-priv option ***
 
-
-npm 是一个 NodeJS 平台的 JavaScript 包管理工具，它用于管理包发布、查询、安装、开发以及包之间的依赖性冲突等。
-
-
-npm 安装软件目录有两种模式，一个是全局模式、一个是局部模式（默认）。
-
-
-3. 格式
-1npm &lt;command&gt; [args]
-4. 查看帮助信息
-12345npm help helpnpm help package.jsonn
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Linux/">Linux</a>
-            
-              <a href="/categories/Linux/Mint/">Mint</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/Mint/">Mint</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/05/26/Linux/Mint/Mint19.1%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%92%AD%E6%94%BE%E9%9F%B3%E4%B9%90/">Mint19.1命令行播放音乐</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/05/26/Linux/Mint/Mint19.1%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%92%AD%E6%94%BE%E9%9F%B3%E4%B9%90/">
-          
-          
-            
-          
-          1. 安装必要软件包
-1sudo apt install sox libsox-fmt-all
-2. 命令行播放音乐
-安装上述软件包后，就可以在命令行中使用 play 命令
-1play [musicname].mp3
-play 命令有很多强大的功能，具体用法可以 help 一下
-1play --help
-3. 用途
-安装该功能后，就能在 bash 脚本中使用，可以实现诸如报警、提醒、定时闹钟等功能
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Linux/">Linux</a>
-            
-              <a href="/categories/Linux/Mint/">Mint</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/Mint/">Mint</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/05/26/Linux/Mint/Mint19.1%E5%AE%89%E8%A3%85man%E4%B8%AD%E6%96%87%E6%89%8B%E5%86%8C/">Mint19.1安装man中文手册</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/05/26/Linux/Mint/Mint19.1%E5%AE%89%E8%A3%85man%E4%B8%AD%E6%96%87%E6%89%8B%E5%86%8C/">
-          
-          
-            
-          
-          1. 安装 man 中文软件包
-1sudo apt install manpages-zh
-2. 查询 man 中文手册安装目录
-1dpkg -L manpages-zh | less
-发现 man 中文手册安装目录为 /usr/share/man/zh_CN（简体）或 /usr/share/man/zh_TW （繁体）。
-3. 设置中英文 man 别名
-
-编辑 ~/.bashrc文件：
-
-1su
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Linux/">Linux</a>
-            
-              <a href="/categories/Linux/Mint/">Mint</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/Mint/">Mint</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/05/26/Linux/Mint/Mint19.1%E6%B8%85%E9%99%A4%E7%B3%BB%E7%BB%9F%E5%9E%83%E5%9C%BE/">Mint19.1清除系统垃圾</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/05/26/Linux/Mint/Mint19.1%E6%B8%85%E9%99%A4%E7%B3%BB%E7%BB%9F%E5%9E%83%E5%9C%BE/">
-          
-          
-            
-          
-          1. 清除不再需要的软件依赖包
-1sudo apt autoremove
-2. 清除所有软件安装包
-1sudo apt clean
-3. 清除系统旧的不再使用的软件安装包
-1sudo apt autoclean
-4. 清除系统多余内核
-
-首先查看当前内核
-
-1uname -a
-
-然后查看系统所有内核
-
-1dpkg --get-selections | grep linux
-
-最后删除不需要的内核
-
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Linux/">Linux</a>
-            
-              <a href="/categories/Linux/Mint/">Mint</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/Mint/">Mint</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/05/26/Linux/Shell/BashShell%E6%95%B0%E5%80%BC%E8%BF%90%E7%AE%97/">BashShell数值运算</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/05/26/Linux/Shell/BashShell%E6%95%B0%E5%80%BC%E8%BF%90%E7%AE%97/">
-          
-          
-            
-          
-          Bash Shell 本身一些内置命令可以执行简单的整数运算，但复杂一些的运算（比如浮点数运算）需要通过一些外部命令来实现，Bash Shell 数学运算符只支持整数运算。
-
-
-内置命令：(( ))、let、$[ ]（方括号并不是所有的 Shell 都支持）
-
-
-外部命令：expr、bc、awk
-
-
-从运行效率来看，Bash Shell 内置命令的执行效率要高于外部命令，(( )) 执行效率最高，
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Linux/">Linux</a>
-            
-              <a href="/categories/Linux/Shell/">Shell</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/Shell/">Shell</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/05/26/Linux/Shell/BashShell%E8%BF%90%E7%AE%97%E7%AC%A6%E5%8F%8A%E4%BC%98%E5%85%88%E7%BA%A7/">BashShell运算符及优先级</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/05/26/Linux/Shell/BashShell%E8%BF%90%E7%AE%97%E7%AC%A6%E5%8F%8A%E4%BC%98%E5%85%88%E7%BA%A7/">
-          
-          
-            
-          
-          Bash Shell 语言中的运算符及其优先级、聚合程度与 C 语言相同，以下运算符表按照优先级级别分组并从上往下递减：
+问题：secure-file-priv 未配置或配置与当前使用路径冲突。secure-file-priv 参数是用来限制 mysql 下数据导入导出只能发生的路径下。
 
 
 
-优先级
+
+secure-file-priv 参数值
 说明
 
 
 
 
-( )
-圆括号运算符
-
-
-id++、id--
-变量自增、自减（在后）
-
-
-++id、--id
-变量自增、自减（在前）
-
-
--、+
-（单目）取负、取正
-
-
-!、~
-逻辑非、位取反
-
-
-**
-乘幂
-
-
-*、/、%
-乘、除、取余
-
-
-+、-
-加、减
-
-
-&
+''
+表示 mysqld 
         </a>
       </p>
 
@@ -753,9 +415,7 @@ id++、id--
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/Linux/">Linux</a>
-            
-              <a href="/categories/Linux/Shell/">Shell</a>
+              <a href="/categories/MySQL/">MySQL</a>
             
           </div>
         
@@ -763,9 +423,7 @@ id++、id--
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/Shell/">Shell</a>
+              <a href="/tags/MySQL/">MySQL</a>
             
           </div>
         
@@ -779,31 +437,26 @@ id++、id--
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%88%87%E6%8D%A2%E5%89%8D%E5%90%8E%E5%8F%B0%E7%A8%8B%E5%BA%8F/">LinuxShell切换前后台程序</a>
+        <a href="/2020/05/26/MySQL/%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%B8%8B%E4%BD%BF%E7%94%A8MySQL/">命令行下使用MySQL</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%88%87%E6%8D%A2%E5%89%8D%E5%90%8E%E5%8F%B0%E7%A8%8B%E5%BA%8F/">
+        <a href="/2020/05/26/MySQL/%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%B8%8B%E4%BD%BF%E7%94%A8MySQL/">
           
           
             
           
-          1. 前台运行
-直接在 Linux 终端运行命令则默认在前台执行。
-2. 后台运行
+          1. 进入 MySQL 终端
 
+指定服务器 host 和 user
 
-commands  &amp;：但一旦关闭对应终端则后台程序也会被强制关闭。
+1mysql -h host -u user -p    # -p 选项指明输入密码
 
+匿名形式进入 MySQL 终端（host 默认为 localhost，user 默认为当前系统的 user）
 
-nohup commands：即使关闭对应终端后台程序也不会被强制关闭。（在别的终端需要使用 ps 命令 查看）
-
-
-1ps -aux | grep XXX	# XXX为对应程序名
-3. 前后转到后台
-
-
-ctrl + z：将在前
+1mysql
+【注】linux 系统下可能需要使用超级用户权限：
+12sudo mysql -h host -u user -ps
         </a>
       </p>
 
@@ -820,9 +473,7 @@ ctrl + z：将在前
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/Linux/">Linux</a>
-            
-              <a href="/categories/Linux/Shell/">Shell</a>
+              <a href="/categories/MySQL/">MySQL</a>
             
           </div>
         
@@ -830,9 +481,266 @@ ctrl + z：将在前
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/Linux/">Linux</a>
+              <a href="/tags/MySQL/">MySQL</a>
             
-              <a href="/tags/Shell/">Shell</a>
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/05/26/Net/Hosts%E6%96%87%E4%BB%B6%E4%BF%AE%E6%94%B9/">Hosts文件修改</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/05/26/Net/Hosts%E6%96%87%E4%BB%B6%E4%BF%AE%E6%94%B9/">
+          
+          
+            
+          
+          1. 简介
+有时访问某些国外网站很卡（不包括无法访问的网站），很大的原因是这些网站的 CDN 的域名遭到 DNS 污染了。这时就可以选择直接访问源网站 IP ，绕过 DNS 解析，即通过修改主机 hosts 文件的方式，将域名和 IP 的对应关系直接记录下来，来加速对这些网站的访问。
+2. 原理
+主机操作系统下都有一个 hosts 文件，其作用在于将一些常用网址域名与其对应的 IP 地址建立一个关
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-05-26 10:44" pubdate>
+              2020-05-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Net/">Net</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Net/">Net</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/05/26/NodeJS/Mint19.1%E5%AE%89%E8%A3%85NodeJS/">Mint19.1安装NodeJS</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/05/26/NodeJS/Mint19.1%E5%AE%89%E8%A3%85NodeJS/">
+          
+          
+            
+          
+          1. 查看 NodeJS 版本
+查看最新版本的 NodeJS，见官网地址。
+2. 添加 NodeJS 源
+NodeJS 每个大版本都有相对应的源，比如 12.16.2 版本对应的源为 https://deb.nodesource.com/setup_12.x，将所需安装的 NodeJS 版本源添加到系统中：
+1curl -sL https://deb.nodesource.com/setup_12
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-05-26 10:44" pubdate>
+              2020-05-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/NodeJS/">NodeJS</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/NodeJS/">NodeJS</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/05/26/Python/Python%E6%8A%A5%E9%94%99/">Python报错</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/05/26/Python/Python%E6%8A%A5%E9%94%99/">
+          
+          
+            
+          
+          1. fatal error: Python.h: 没有那个文件或目录
+
+问题：缺少 python-dev 包
+解决：安装对应包：
+
+1sudo apt install python-dev # 最好指定 python 版本，比如：python3.6-dev
+2. ERROR: Package 'pylint' requires a different Python: 2.7.15 not in 
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-05-26 10:44" pubdate>
+              2020-05-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Python/">Python</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Python/">Python</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/05/26/Python/pip%E4%B8%8B%E8%BD%BDPython%E5%BA%93%E9%80%9F%E5%BA%A6%E6%85%A2%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/">pip下载Python库速度慢解决方案</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/05/26/Python/pip%E4%B8%8B%E8%BD%BDPython%E5%BA%93%E9%80%9F%E5%BA%A6%E6%85%A2%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/">
+          
+          
+            
+          
+          1. 简介
+python 的 pip 安装包工具非常便利，但由于其默认的下载源为国外源，因此在安装 python 库的时候下载速度较慢。有时库文件过大，超出 pip 的下载时间限制，就会报错 The read operation timed out。所以我们可是手动更改 pip 的下载源为国内的镜像下载源以提升下载速度。
+2. 国内镜像源
+国内主要的 pip 镜像源有以下几个：
+1234https
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-05-26 10:44" pubdate>
+              2020-05-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Python/">Python</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Python/">Python</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/05/26/Qt/Deepin15.11Qt5.14%E7%A8%8B%E5%BA%8F%E6%89%93%E5%8C%85/">Deepin15.11Qt5.14程序打包</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/05/26/Qt/Deepin15.11Qt5.14%E7%A8%8B%E5%BA%8F%E6%89%93%E5%8C%85/">
+          
+          
+            
+          
+          【注】使用 linuxdeployqt 工具首先要保证当前系统已经配置好相应的 Qt 环境。
+Qt5.14 for Linux 并没有提供相应的程序打包服务，所以 Linux 下打包 Qt 应用程序并不轻松。好在已经有人开源了一个在 Linux 平台下打包 Qt 应用程序的工具：linuxdeployqt，使用该工具可以轻松打包 Qt 应用程序。
+开发人员提供了已经编译好可直接运行的程序 linu
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-05-26 10:44" pubdate>
+              2020-05-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Qt/">Qt</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Qt/">Qt</a>
             
           </div>
         
@@ -844,7 +752,7 @@ ctrl + z：将在前
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/page/25/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/24/#board">24</a><a class="page-number" href="/page/25/#board">25</a><span class="page-number current">26</span><a class="page-number" href="/page/27/#board">27</a><a class="page-number" href="/page/28/#board">28</a><span class="space">&hellip;</span><a class="page-number" href="/page/31/#board">31</a><a class="extend next" rel="next" href="/page/27/#board"><i class="iconfont icon-arrowright"></i></a>
+      <a class="extend prev" rel="prev" href="/page/25/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/24/#board">24</a><a class="page-number" href="/page/25/#board">25</a><span class="page-number current">26</span><a class="page-number" href="/page/27/#board">27</a><a class="page-number" href="/page/28/#board">28</a><span class="space">&hellip;</span><a class="page-number" href="/page/34/#board">34</a><a class="extend next" rel="next" href="/page/27/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 

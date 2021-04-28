@@ -7,8 +7,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
-  <link rel="icon" href="/img/favicon.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/self/portrait.jpg">
+  <link rel="icon" href="/img/self/portrait.jpg">
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -197,67 +197,21 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/01/23/TeX/LaTeX/LaTeX%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7/LaTeX%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7/">LaTeX数学符号</a>
+        <a href="/2021/04/16/Linux/Manjaro/Manjaro21.0%E4%B8%8BKDE5%E6%A1%8C%E9%9D%A2%E8%AE%BE%E7%BD%AE%E6%A1%8C%E9%9D%A2%E5%A3%81%E7%BA%B8/">Manjaro21.0下KDE5桌面设置桌面壁纸</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/01/23/TeX/LaTeX/LaTeX%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7/LaTeX%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7/">
+        <a href="/2021/04/16/Linux/Manjaro/Manjaro21.0%E4%B8%8BKDE5%E6%A1%8C%E9%9D%A2%E8%AE%BE%E7%BD%AE%E6%A1%8C%E9%9D%A2%E5%A3%81%E7%BA%B8/">
           
           
             
           
-          【注】摘自 Scott Pakin 的 《The Comprehensive LaTeX Symbol List》 。
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+          1. 缘由
+本来 Manjaro 的 KDE 桌面是可以直接在「系统设置」中直接 GUI 直接更换桌面壁纸的，但我发现每次系统进行滚动更新后，原先的壁纸设置就消失了，需要重新设置。本着不愿动鼠标的念头，不如写个脚本来实现吧（本质还是懒）。然而这个似乎不是简单的事情，好在 StackOverflow 在手，知识全有（白嫖真香）。
+2. 代码
+2.1 单张壁纸固定
+固定显示某张图片作为桌面壁纸。
+12
         </a>
       </p>
 
@@ -265,8 +219,8 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-23 13:28" pubdate>
-              2021-01-23
+            <time datetime="2021-04-16 18:25" pubdate>
+              2021-04-16
             </time>
           </div>
         
@@ -274,9 +228,9 @@
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/TeX/">TeX</a>
+              <a href="/categories/Linux/">Linux</a>
             
-              <a href="/categories/TeX/LaTeX/">LaTeX</a>
+              <a href="/categories/Linux/Manjaro/">Manjaro</a>
             
           </div>
         
@@ -284,9 +238,9 @@
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/TeX/">TeX</a>
+              <a href="/tags/Linux/">Linux</a>
             
-              <a href="/tags/LaTeX/">LaTeX</a>
+              <a href="/tags/Manjaro/">Manjaro</a>
             
           </div>
         
@@ -300,41 +254,24 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/01/23/TeX/LaTeX/LaTeX%E6%AD%A3%E6%96%87%E7%AC%A6%E5%8F%B7/LaTeX%E6%AD%A3%E6%96%87%E7%AC%A6%E5%8F%B7/">LaTeX正文符号</a>
+        <a href="/2021/04/15/Linux/Shell/BashShell%E5%8F%98%E9%87%8F/">BashShell变量</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/01/23/TeX/LaTeX/LaTeX%E6%AD%A3%E6%96%87%E7%AC%A6%E5%8F%B7/LaTeX%E6%AD%A3%E6%96%87%E7%AC%A6%E5%8F%B7/">
+        <a href="/2021/04/15/Linux/Shell/BashShell%E5%8F%98%E9%87%8F/">
           
           
             
           
-          【注】摘自 Scott Pakin 的 《The Comprehensive LaTeX Symbol List》 。
+          1. 简介
+Bash Shell 使用「环境变量」来存储有关 Shell 会话和工作环境的信息。环境变量分为两类：
 
+全局环境变量：全局环境变量对于所有 Shell 会话和所生成的子 Shell 都是可见的。
+局部环境变量：局部环境变量只对创建它们的 Shell 可见。
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+系统环境变量基本都是使用全大写字母，以区别于用户自定义的环境变量，因此用户自定义的环境变量最好都使用小写。
+2. 环境变量
+2
         </a>
       </p>
 
@@ -342,8 +279,8 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-23 13:28" pubdate>
-              2021-01-23
+            <time datetime="2021-04-15 11:21" pubdate>
+              2021-04-15
             </time>
           </div>
         
@@ -351,9 +288,9 @@
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/TeX/">TeX</a>
+              <a href="/categories/Linux/">Linux</a>
             
-              <a href="/categories/TeX/LaTeX/">LaTeX</a>
+              <a href="/categories/Linux/Shell/">Shell</a>
             
           </div>
         
@@ -361,9 +298,9 @@
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/TeX/">TeX</a>
+              <a href="/tags/Linux/">Linux</a>
             
-              <a href="/tags/LaTeX/">LaTeX</a>
+              <a href="/tags/Shell/">Shell</a>
             
           </div>
         
@@ -377,42 +314,20 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/01/23/TeX/LaTeX/LaTeX%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6%E5%92%8C%E7%AC%A6%E5%8F%B7/LaTeX%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6%E5%92%8C%E7%AC%A6%E5%8F%B7/">LaTeX特殊字符和符号</a>
+        <a href="/2021/04/08/JavaScript/TypeScript/TypeScript%E7%B3%BB%E5%88%97%E8%B5%84%E6%96%99/">TypeScript系列资料</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/01/23/TeX/LaTeX/LaTeX%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6%E5%92%8C%E7%AC%A6%E5%8F%B7/LaTeX%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6%E5%92%8C%E7%AC%A6%E5%8F%B7/">
+        <a href="/2021/04/08/JavaScript/TypeScript/TypeScript%E7%B3%BB%E5%88%97%E8%B5%84%E6%96%99/">
           
           
             
           
-          1. 引号
-无论什么字体，LaTeX以一个反勾号或重音符(`)当做左引号，以一个正勾号或直立引号(')当做右引号。
+          
+官方手册
+TypeScript 开发 VSCode 插件
 
 
-
-单引号（‘xxx’）
-`xxx' 或 ‘xxx’
-
-
-
-
-双引号（“xxx”）
-``xxx'' 或 “xxx”
-
-
-
-【注】如果出现单引号与双引号连续出现的情况，则在二者中间用 \, 分隔开。
-
-
-
-字符串示例
-LaTeX 代码
-
-
-
-
-“ ‘A’ or ‘B’ ”，he as
         </a>
       </p>
 
@@ -420,8 +335,8 @@ LaTeX 代码
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-23 13:28" pubdate>
-              2021-01-23
+            <time datetime="2021-04-08 23:43" pubdate>
+              2021-04-08
             </time>
           </div>
         
@@ -429,9 +344,9 @@ LaTeX 代码
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/TeX/">TeX</a>
+              <a href="/categories/JavaScript/">JavaScript</a>
             
-              <a href="/categories/TeX/LaTeX/">LaTeX</a>
+              <a href="/categories/JavaScript/TypeScript/">TypeScript</a>
             
           </div>
         
@@ -439,9 +354,9 @@ LaTeX 代码
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/TeX/">TeX</a>
+              <a href="/tags/JavaScript/">JavaScript</a>
             
-              <a href="/tags/LaTeX/">LaTeX</a>
+              <a href="/tags/TypeScript/">TypeScript</a>
             
           </div>
         
@@ -455,24 +370,21 @@ LaTeX 代码
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/01/23/TeX/LaTeX/LaTeX%E7%A7%91%E6%8A%80%E7%AC%A6%E5%8F%B7/LaTeX%E7%A7%91%E6%8A%80%E7%AC%A6%E5%8F%B7/">LaTeX科技符号</a>
+        <a href="/2021/04/06/ImageCompression/XBM%E6%A0%BC%E5%BC%8F/">XBM格式</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/01/23/TeX/LaTeX/LaTeX%E7%A7%91%E6%8A%80%E7%AC%A6%E5%8F%B7/LaTeX%E7%A7%91%E6%8A%80%E7%AC%A6%E5%8F%B7/">
+        <a href="/2021/04/06/ImageCompression/XBM%E6%A0%BC%E5%BC%8F/">
           
           
             
           
-          【注】摘自 Scott Pakin 的 《The Comprehensive LaTeX Symbol List》 。
-
-
-
-
-
-
-
-
+          1. 简介
+XBM 是一种最简单的一种图像格式，不像其他图像格式那样最终存储的二进制数据，XBM 图像格式存的是 C 源码。XBM 格式基本只在 X Windows 系统上使用，只支持两种颜色。相较于 BMP 格式，XBM 格式更像是 BMP 图像在 Windows 下的 icon 文件。
+【注】XBM 格式在 X Windows 环境外几乎很少用到。
+2. 格式
+2.1 详解
+XBM 图像格式示
         </a>
       </p>
 
@@ -480,8 +392,8 @@ LaTeX 代码
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-23 13:28" pubdate>
-              2021-01-23
+            <time datetime="2021-04-06 16:42" pubdate>
+              2021-04-06
             </time>
           </div>
         
@@ -489,9 +401,7 @@ LaTeX 代码
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/TeX/">TeX</a>
-            
-              <a href="/categories/TeX/LaTeX/">LaTeX</a>
+              <a href="/categories/ImageCompression/">ImageCompression</a>
             
           </div>
         
@@ -499,9 +409,7 @@ LaTeX 代码
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/TeX/">TeX</a>
-            
-              <a href="/tags/LaTeX/">LaTeX</a>
+              <a href="/tags/ImageCompression/">ImageCompression</a>
             
           </div>
         
@@ -515,18 +423,24 @@ LaTeX 代码
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/01/23/TeX/LaTeX/LaTeX%E4%B8%ADTikZ%E5%AE%8F%E5%8C%85/TikZ%E4%B8%AD%E8%8A%82%E7%82%B9%E7%BB%98%E5%88%B6%E7%9A%84%E5%BE%AA%E7%8E%AF%E9%80%89%E9%A1%B9%E9%97%AE%E9%A2%98/TikZ%E4%B8%AD%E8%8A%82%E7%82%B9%E7%BB%98%E5%88%B6%E7%9A%84%E5%BE%AA%E7%8E%AF%E9%80%89%E9%A1%B9%E9%97%AE%E9%A2%98/">TikZ中节点绘制的循环选项问题</a>
+        <a href="/2021/04/06/ImageCompression/BMP%E6%A0%BC%E5%BC%8F/BMP%E6%A0%BC%E5%BC%8F/">BMP格式</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/01/23/TeX/LaTeX/LaTeX%E4%B8%ADTikZ%E5%AE%8F%E5%8C%85/TikZ%E4%B8%AD%E8%8A%82%E7%82%B9%E7%BB%98%E5%88%B6%E7%9A%84%E5%BE%AA%E7%8E%AF%E9%80%89%E9%A1%B9%E9%97%AE%E9%A2%98/TikZ%E4%B8%AD%E8%8A%82%E7%82%B9%E7%BB%98%E5%88%B6%E7%9A%84%E5%BE%AA%E7%8E%AF%E9%80%89%E9%A1%B9%E9%97%AE%E9%A2%98/">
+        <a href="/2021/04/06/ImageCompression/BMP%E6%A0%BC%E5%BC%8F/BMP%E6%A0%BC%E5%BC%8F/">
           
           
             
           
-          在 LaTeX 中使用 TikZ 宏包绘制闭合曲线时，可以在 \draw 中使用循环选项。
-1.第一种情况
-12345678910111213\documentclass&#123;article&#125;\usepackage&#123;tikz&#125;\usetikzlibrary&#123;arrows,backgrounds,calc,fit,intersections,throug
+          1. 简介
+BMP 格式是 Windows 下最简单的图像存储格式，它支持图像以每像素 1,4,8,16,24,321,4,8,16,24,321,4,8,16,24,32 比特表示。BMP 格式也支持 4,84,84,8 比特每像素的游程算法压缩图像。
+2. 格式
+BMP 文件基本结构如下：
+
+其详细结构如下：
+
+2.1 File Header
+BMP 文件中的 File Header 包含一个
         </a>
       </p>
 
@@ -534,8 +448,8 @@ LaTeX 代码
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-23 13:28" pubdate>
-              2021-01-23
+            <time datetime="2021-04-06 12:28" pubdate>
+              2021-04-06
             </time>
           </div>
         
@@ -543,11 +457,7 @@ LaTeX 代码
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/TeX/">TeX</a>
-            
-              <a href="/categories/TeX/LaTeX/">LaTeX</a>
-            
-              <a href="/categories/TeX/LaTeX/LaTeX%E4%B8%ADTikZ%E5%AE%8F%E5%8C%85/">LaTeX中TikZ宏包</a>
+              <a href="/categories/ImageCompression/">ImageCompression</a>
             
           </div>
         
@@ -555,11 +465,7 @@ LaTeX 代码
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/TeX/">TeX</a>
-            
-              <a href="/tags/LaTeX/">LaTeX</a>
-            
-              <a href="/tags/LaTeX%E4%B8%ADTikZ%E5%AE%8F%E5%8C%85/">LaTeX中TikZ宏包</a>
+              <a href="/tags/ImageCompression/">ImageCompression</a>
             
           </div>
         
@@ -573,21 +479,19 @@ LaTeX 代码
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/01/23/TeX/LaTeX/LaTeX%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F%E6%8E%92%E7%89%88/">LaTeX数学公式排版</a>
+        <a href="/2021/04/05/ImageCompression/%E5%87%8F%E8%89%B2%E7%AE%97%E6%B3%95/">减色算法</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/01/23/TeX/LaTeX/LaTeX%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F%E6%8E%92%E7%89%88/">
+        <a href="/2021/04/05/ImageCompression/%E5%87%8F%E8%89%B2%E7%AE%97%E6%B3%95/">
           
           
             
           
-          1. 公式对齐
-1234\begin&#123;aligned&#125;    x &amp; = a + &amp; b \\    c + d &amp; = &amp; y \\\end&#123;aligned&#125;
-其中，&amp; 表示的是需要对齐的位置。结果显示如下：
-x=a+bc+d=y{\begin{array}{c}
-\begin{aligned}
-    x &amp
+          1. 简介
+减色算法（ColorQuantization）是一种应用在色彩空间中用于减少图像离散色彩值的一类算法，旨在通过减少图像的离散色彩值从而减少了每个色彩值的表示比特数。一方面达到压缩图像的效果，另一方面使得一些以固定有限比特数表示像素的显示设备也能显示每个像素更多表示比特的图像。
+2. 中位切割算法
+中位切割算法（Median Cut）是最知名、应用最广泛的减色算法，常见的图像处理软件如 
         </a>
       </p>
 
@@ -595,8 +499,8 @@ x=a+bc+d=y{\begin{array}{c}
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-23 13:26" pubdate>
-              2021-01-23
+            <time datetime="2021-04-05 23:49" pubdate>
+              2021-04-05
             </time>
           </div>
         
@@ -604,9 +508,7 @@ x=a+bc+d=y{\begin{array}{c}
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/TeX/">TeX</a>
-            
-              <a href="/categories/TeX/LaTeX/">LaTeX</a>
+              <a href="/categories/ImageCompression/">ImageCompression</a>
             
           </div>
         
@@ -614,9 +516,11 @@ x=a+bc+d=y{\begin{array}{c}
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/TeX/">TeX</a>
+              <a href="/tags/ImageCompression/">ImageCompression</a>
             
-              <a href="/tags/LaTeX/">LaTeX</a>
+              <a href="/tags/ColorQuantization/">ColorQuantization</a>
+            
+              <a href="/tags/%E5%87%8F%E8%89%B2%E7%AE%97%E6%B3%95/">减色算法</a>
             
           </div>
         
@@ -630,20 +534,21 @@ x=a+bc+d=y{\begin{array}{c}
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/01/22/TeX/LaTeX/LaTeX%E6%96%87%E7%AB%A0%E6%8F%90%E7%BA%B2/LaTeX%E6%96%87%E7%AB%A0%E6%8F%90%E7%BA%B2/">LaTeX文章提纲</a>
+        <a href="/2021/04/03/TeX/LaTeX/LaTeX%E8%89%B2%E5%BD%A9/">LaTeX色彩</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/01/22/TeX/LaTeX/LaTeX%E6%96%87%E7%AB%A0%E6%8F%90%E7%BA%B2/LaTeX%E6%96%87%E7%AB%A0%E6%8F%90%E7%BA%B2/">
+        <a href="/2021/04/03/TeX/LaTeX/LaTeX%E8%89%B2%E5%BD%A9/">
           
           
             
           
           【注】笔记来自《LaTeX入门》——刘海洋。
-1. 导言区
-在 \begin&#123;document&#125; 前面的部分称为导言区，导言区通常用来对文档的性质做一些设置，或者自定义一些命令。
-1.1 声明文档类
-12\documentclass&#123;article&#125;         # 西文短文类\documentclass[UTF8]&#123;ctexart&#125;
+1. 简介
+原始的 TeX 引擎不支持彩色，有关彩色的功能都是由输出 PS、PDF 格式的 TeX 引擎或驱动提供的，有关命令是在绘图相关的扩展宏包中定义的。基本的彩色支持工具是 color 宏包，它是 LaTeX 的基本组件，graphics 工具包的一部分。
+2. 基础
+2.1 预定义颜色
+在标准的 color 宏包中只有几种原色是预定义的，分别是
         </a>
       </p>
 
@@ -651,8 +556,8 @@ x=a+bc+d=y{\begin{array}{c}
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-22 19:50" pubdate>
-              2021-01-22
+            <time datetime="2021-04-03 23:41" pubdate>
+              2021-04-03
             </time>
           </div>
         
@@ -686,26 +591,21 @@ x=a+bc+d=y{\begin{array}{c}
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/01/22/TeX/LaTeX/LaTeX%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86/LaTeX%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86/">LaTeX相关知识</a>
+        <a href="/2021/04/03/TeX/LaTeX/LaTeX%E6%A0%87%E9%A2%98%E6%8E%A7%E5%88%B6/">LaTeX标题控制</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/01/22/TeX/LaTeX/LaTeX%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86/LaTeX%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86/">
+        <a href="/2021/04/03/TeX/LaTeX/LaTeX%E6%A0%87%E9%A2%98%E6%8E%A7%E5%88%B6/">
           
           
             
           
-          1. TeX 引擎、命令、格式
-
-TeX 引擎目前主要有四种：TeX/eTeX、pdfTeX、XeTeX、LuaTeX
-TeX 格式目前主要有三种：Plain TeX、LaTeX、ConTeXt
-
-TeX 引擎对不同的 TeX 格式提供的排版命令以及编译输出的排版文件格式如下表：
-
-2. TeX 引擎编译流程
-
-
-早些年代电子文档格式主要是 PostScript（PS），那时主要通过 dvips 
+          【注】笔记来自《LaTeX入门》——刘海洋。详细参数可参见 LaTeX 官方文档：
+1texdoc caption
+1. 简介
+在设计文档时，我们经常需要修改浮动体标题的字体、间距、对齐方式等格式，然而 LaTeX 内核及标准文档并没有提供直接修改浮动标题格式的命令，这时就可以使用 caption 宏包来完成相关的设置。
+2. 格式选项
+使用 caption 宏包设置标题格式是通过一系列键值对形式
         </a>
       </p>
 
@@ -713,8 +613,8 @@ TeX 引擎对不同的 TeX 格式提供的排版命令以及编译输出的排�
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-22 10:04" pubdate>
-              2021-01-22
+            <time datetime="2021-04-03 10:41" pubdate>
+              2021-04-03
             </time>
           </div>
         
@@ -748,24 +648,21 @@ TeX 引擎对不同的 TeX 格式提供的排版命令以及编译输出的排�
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/01/21/TeX/LaTeX/TeXStudio%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/">TeXStudio使用技巧</a>
+        <a href="/2021/03/30/TeX/LaTeX/LaTeX%E6%B5%AE%E5%8A%A8%E4%BD%93/">LaTeX浮动体</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/01/21/TeX/LaTeX/TeXStudio%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/">
+        <a href="/2021/03/30/TeX/LaTeX/LaTeX%E6%B5%AE%E5%8A%A8%E4%BD%93/">
           
           
             
           
-          1. 正反向查找
-正反向查找是由 SyncTeX 机制实现的, 需要源代码编辑器、pdf 阅读器和 TeX 输出程序的共同参与。
-1.1 正向查找
-正向查找即根据源文件位置查找生成的 pdf 文件对应位置。
+          【注】笔记来自《LaTeX入门》——刘海洋。
+1. 简介
+图片或表格通常都占有较大的一块，直接放在文档常常会造成分页的困难，即前一页放不下，放在后一页又会造成很大的留白。其他一些大块的内容也可能有类似的问题，比如程序算法、大型公式和不宜断开的特殊形状段落。LaTeX 中通过引入浮动体来解决这类问题。
 
-在 TeXStudio 环境中，使用快捷键 Ctrl+鼠标左击 即可定位源文件中鼠标位置在 pdf 文件中的对应位置。
 
-1.2 反向查找
-反向查找即根据 pdf 文件位置查找源文件的对应位
+「浮动体」是一个活动的盒子，它可以把内容放在距离浮动体代码前后不远的地方，通常就是浮动体代码所
         </a>
       </p>
 
@@ -773,8 +670,8 @@ TeX 引擎对不同的 TeX 格式提供的排版命令以及编译输出的排�
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-21 21:14" pubdate>
-              2021-01-21
+            <time datetime="2021-03-30 19:21" pubdate>
+              2021-03-30
             </time>
           </div>
         
@@ -808,24 +705,38 @@ TeX 引擎对不同的 TeX 格式提供的排版命令以及编译输出的排�
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/01/21/TeX/LaTeX/VSCode+LaTeXWorkshop%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/">VSCode+LaTeXWorkshop使用技巧</a>
+        <a href="/2021/03/29/TeX/LaTeX/LaTeX%E6%8F%92%E5%9B%BE/">LaTeX插图</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/01/21/TeX/LaTeX/VSCode+LaTeXWorkshop%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/">
+        <a href="/2021/03/29/TeX/LaTeX/LaTeX%E6%8F%92%E5%9B%BE/">
           
           
             
           
-          1. 正反向查找
-正反向查找是由 SyncTeX 机制实现的, 需要源代码编辑器、pdf 阅读器和 TeX 输出程序的共同参与。
-1.1 正向查找
-正向查找即根据源文件位置查找生成的 pdf 文件对应位置。
+          【注】笔记来自《LaTeX入门》——刘海洋。
+1. 简介
+插图功能是利用 TeX 的特定编译程序提供的机制实现的，不同的编译程序支持不同的图形方式。不同 LaTeX 编译程序对应的插图格式如下表所示：
 
-在 VSCode+LaTeXWorkshop 环境中，使用快捷键 Ctrl+Alt+j 即可定位源文件中鼠标位置在 pdf 文件中的对应位置。
 
-1.2 反向查找
-反向查找即根据 pdf 文
+
+TeX 引擎命令
+图形驱动
+支持的格式
+说明
+
+
+
+
+latex
+Dvips
+EPS
+MiKTeX 还部分支持 PNG 和 JPEG
+
+
+latex
+DVIPDFMx
+EPS,PDF,PNG,
         </a>
       </p>
 
@@ -833,8 +744,8 @@ TeX 引擎对不同的 TeX 格式提供的排版命令以及编译输出的排�
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-21 21:08" pubdate>
-              2021-01-21
+            <time datetime="2021-03-29 14:22" pubdate>
+              2021-03-29
             </time>
           </div>
         
@@ -866,7 +777,7 @@ TeX 引擎对不同的 TeX 格式提供的排版命令以及编译输出的排�
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/page/2/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/#board">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/#board">4</a><a class="page-number" href="/page/5/#board">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/31/#board">31</a><a class="extend next" rel="next" href="/page/4/#board"><i class="iconfont icon-arrowright"></i></a>
+      <a class="extend prev" rel="prev" href="/page/2/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/#board">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/#board">4</a><a class="page-number" href="/page/5/#board">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/34/#board">34</a><a class="extend next" rel="next" href="/page/4/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 

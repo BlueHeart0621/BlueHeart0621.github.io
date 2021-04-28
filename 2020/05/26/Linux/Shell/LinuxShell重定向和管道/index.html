@@ -7,8 +7,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
-  <link rel="icon" href="/img/favicon.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/self/portrait.jpg">
+  <link rel="icon" href="/img/self/portrait.jpg">
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -200,7 +200,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      476 字
+      769 字
     </span>
   
 
@@ -210,7 +210,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      5
+      8
        分钟
     </span>
   
@@ -284,6 +284,18 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">command</span> &lt;&lt; <span class="hljs-string">marker</span><br><span class="hljs-string">data</span><br><span class="hljs-string">marker</span><br></code></pre></td></tr></table></figure>
 <p><code>&lt;&lt;</code> 重定向符也被成为<strong>内联输入重定向符</strong>，该输入重定向用于从命令行中指定用于输入重定向的数据，而不用使用文件进行输入重定向。<br />
 其中，<code>data</code> 是指定用于输入重定向的数据，<code>marker</code> 为文本标记（可用任何字符串作为文本标记），用于划分输入数据的开始和结尾。</p>
+<ul>
+<li><code>marker</code> 仅被字符串看待，不会被扩展成变量、命令、算术表达式等。</li>
+<li><code>marker</code> 中如果没有任何一部分被引号包裹，则输入数据 <code>data</code> 中每一行数据将扩展变量、命令、算术表达式（因此若要使用特殊字符诸如 <code>$</code> 则需进行转义 <code>\$</code>）。</li>
+<li><code>marker</code> 中如果有任何一部分被引号包裹，则输入数据 <code>data</code> 中的每一行数据将只被看作为字符串处理。</li>
+<li>如果在输入重定向符 <code>&lt;&lt;</code> 后加上 <code>-</code>，即 <code>&lt;&lt;-</code>，则在读取输入数据 <code>data</code> 的每一行数据时，其前导 Tab 会被忽略。</li>
+</ul>
+<blockquote>
+<p><strong>内联输入重定向符</strong>可以用来在 Shell 中进行自动交互，以 <code>ssh-keygen</code> 命令为例：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-meta">#!/bin/bash</span><br><br>ssh-keygen -t rsa -C <span class="hljs-string">&quot;example@163.com&quot;</span> &lt;&lt; <span class="hljs-string">EOF</span><br><span class="hljs-string">$HOME/Tmp/example</span><br><span class="hljs-string"></span><br><span class="hljs-string"></span><br><span class="hljs-string">EOF</span><br></code></pre></td></tr></table></figure>
+<p>这样就能实现 <code>ssh-keygen</code> 自动生成密钥并保存的功能，而不需要通过人为手动输入来进行交互。</p>
+</blockquote>
+<p>【注】更多自动交互方法参见 <a href="/2021/04/16/Linux/Shell/LinuxShell%E8%87%AA%E5%8A%A8%E4%BA%A4%E4%BA%92">LinuxShell自动交互</a>。</p>
 <h2 id="3-管道">3. 管道</h2>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">command1 | command2<br></code></pre></td></tr></table></figure>
 <p><code>|</code> 用于将 <code>command1</code> 的输出重定向作为 <code>command2</code> 的输入：</p>
@@ -294,6 +306,12 @@
 <li>
 <p>Linux 系统实际上会同时运行 <code>command1</code> 和 <code>command2</code>，并在内部将它们连接起来。而不是表面看起来先运行 <code>command1</code> 然后在运行 <code>command2</code>。</p>
 </li>
+</ul>
+<h2 id="附录">附录</h2>
+<p>更多详细介绍可参见以下资料：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.gnu.org/software/bash/manual/bash.html">bash-manual</a></li>
+<li><a target="_blank" rel="noopener" href="https://askubuntu.com/questions/678915/whats-the-difference-between-and-in-bash">What's the difference between &lt;&lt;, &lt;&lt;&lt; and &lt; &lt; in bash?</a></li>
 </ul>
 
             </div>
@@ -343,8 +361,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2020/05/26/Linux/Ubuntu/Ubuntu18.04%E6%9B%B4%E6%8D%A2%E5%9B%BD%E5%86%85%E6%BA%90/">
-                        <span class="hidden-mobile">Ubuntu18.04更换国内源</span>
+                      <a href="/2020/05/26/Linux/SystemTap/SystemTap/">
+                        <span class="hidden-mobile">SystemTap</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

@@ -7,8 +7,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
-  <link rel="icon" href="/img/favicon.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/self/portrait.jpg">
+  <link rel="icon" href="/img/self/portrait.jpg">
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -20,7 +20,7 @@
   
     <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script> <script src="/live2d-widget/autoload.js" type="text/javascript"></script> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
   
-  <title>LinuxShell概述 - お前はどこまで見えている</title>
+  <title>Manjaro21.0系统报错 - お前はどこまで見えている</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
 
@@ -178,7 +178,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="LinuxShell概述">
+            <span class="h2" id="subtitle" title="Manjaro21.0系统报错">
               
             </span>
 
@@ -188,8 +188,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2020-05-26 10:44" pubdate>
-        2020年5月26日 上午
+      <time datetime="2021-04-17 22:00" pubdate>
+        2021年4月17日 晚上
       </time>
     </span>
   
@@ -200,7 +200,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      1k 字
+      59 字
     </span>
   
 
@@ -210,7 +210,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      11
+      1
        分钟
     </span>
   
@@ -248,83 +248,18 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">LinuxShell概述</h1>
+            <h1 style="display: none">Manjaro21.0系统报错</h1>
             
             <div class="markdown-body">
-              <p>Linux Shell 从交互式和登录式来看可划分为不同的类别。</p>
-<h2 id="1-交互式-Shell">1. 交互式 Shell</h2>
-<p>交互式 Shell 是指在终端命令行上执行，以提示符的方式在终端等待用户输入，并实时运行用户输入的命令的模式；即与用户交互的模式。</p>
-<h3 id="1-1-交互登录式-Shell">1.1 交互登录式 Shell</h3>
-<p>交互登录式 Shell 是需要<strong>用户名和密码</strong>登录后进入的 Shell（比如终端下登录远程服务器）或者通过 <code>-login</code> 选项在终端启动的 Shell 。</p>
+              <h3 id="1-ENOSPC-System-limit-for-number-of-file-watchers-reached">1. ENOSPC: System limit for number of file watchers reached</h3>
 <ul>
-<li>
-<p>交互登录式 Shell 可以使用 <code>exit</code> 或 <code>logout</code> 命令退出 Shell</p>
+<li>问题：系统对文件监控的数量已经达到限制数量了。</li>
+<li>解决：
+<ul>
+<li>修改 <code>/etc/sysctl.conf</code> 文件，添加以下代码：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">fs.inotify.max_user_watches=52428800<br></code></pre></td></tr></table></figure>
 </li>
-<li>
-<p>登录本地桌面 Linux 系统本质上也是登录一个 Linux Shell 会话，即交互登录式 Shell（这也是为什么系统会有<strong>注销/登出</strong>选项退出当前系统）</p>
-</li>
+<li>然后刷新配置：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo sysctl -p<br></code></pre></td></tr></table></figure></li>
 </ul>
-<blockquote>
-<h4 id="blacktriangle-登录交互登录式-Shell-时"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">▲</mi></mrow><annotation encoding="application/x-tex">\blacktriangle</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.54986em;vertical-align:0em;"></span><span class="mord amsrm">▲</span></span></span></span> 登录交互登录式 Shell 时</h4>
-<ol>
-<li>首先会读取 <code>/etc/profile</code> 启动文件</li>
-</ol>
-<blockquote>
-<ul>
-<li><code>/etc/profile</code> 文件是 Bash Shell 默认的主启动文件，不同 Linux 发行版其内容不尽相同</li>
-</ul>
-</blockquote>
-<ol start="2">
-<li>然后按照顺序读取第一个被找到的启动文件(<code>$HOME/.bashrc</code> 文件不在其中是因为该文件通常通过以下文件运行）：</li>
-</ol>
-<blockquote>
-<ul>
-<li><code>$HOME/.bash_profile</code></li>
-<li><code>$HOME/.bash_login</code></li>
-<li><code>$HOME/.profile</code></li>
-</ul>
-</blockquote>
-<h4 id="blacktriangle-登出交互登录式-Shell-时"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">▲</mi></mrow><annotation encoding="application/x-tex">\blacktriangle</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.54986em;vertical-align:0em;"></span><span class="mord amsrm">▲</span></span></span></span> 登出交互登录式 Shell 时</h4>
-<ol>
-<li>首先会读取 <code>$HOME/.bash_logout</code> 文件</li>
-<li>然后会读取 <code>/etc/bash.bash_logout</code> 文件（该文件并不是所有 Linux 发行版都有，比如 Manjaro 20.0 有但 Ubuntu 20.04 则没有）</li>
-</ol>
-</blockquote>
-<p>【注】如果将一些设定的系统全局环境变量存放在 <code>/etc/profile</code> 文件中，那么当所用 Linux 发行版升级时，该文件也会跟着升级，则所定制的所有变量设置就都被覆盖了。</p>
-<ul>
-<li><strong>存储系统永久性环境变量</strong>：最好的办法是将所定制的系统全局变量存放在 <code>/etc/profile.d</code> 目录下新建的一个以 <code>.sh</code> 结尾的文件中（而不是直接修改 <code>/etc/profile</code> 文件）。</li>
-<li><strong>存储个人用户永久性环境变量</strong>：将个人用户所有定制的环境变量写入 <code>$HOME/.bashrc</code> 文件中。</li>
-</ul>
-<h3 id="1-2-交互非登录式-Shell">1.2 交互非登录式 Shell</h3>
-<p>交互非登录式 Shell 是指不需要用户名和密码也不指定 <code>-login</code> 选项即可打开的 Shell（比如直接在终端运行 <code>bash</code> 打开一个 Bash Shell；或者在 Linux 系统桌面上打开一个终端 terminal 窗口程序）。</p>
-<ul>
-<li>交互非登录式 Shell 只能使用 <code>exit</code> 退出 Shell</li>
-</ul>
-<blockquote>
-<h4 id="blacktriangle-启动交互非登录式-Shell-时"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">▲</mi></mrow><annotation encoding="application/x-tex">\blacktriangle</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.54986em;vertical-align:0em;"></span><span class="mord amsrm">▲</span></span></span></span> 启动交互非登录式 Shell 时</h4>
-<ol>
-<li>只会读取 <code>$HOME/.bashrc</code> 文件（而不会读取 <code>/etc/profile</code> 文件。这也是为什么修改 <code>/etc/profile</code> 文件后，如果未重新登录系统，则新打开的交互非登录式 Shell 下并未产生影响的）</li>
-</ol>
-</blockquote>
-<h2 id="2-非交互式-Shell">2. 非交互式 Shell</h2>
-<p>非交互式 Shell 是指以 Shell 脚本形式执行。在这种模式下，Shell 不与用户进行交互，而是读取存放在 Shell 脚本文件中的命令并执行，当读取到脚本文件结尾 EOF 时，Shell 终止。</p>
-<blockquote>
-<h4 id="blacktriangle-启动非交互式-Shell-时"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">▲</mi></mrow><annotation encoding="application/x-tex">\blacktriangle</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.54986em;vertical-align:0em;"></span><span class="mord amsrm">▲</span></span></span></span> 启动非交互式 Shell 时</h4>
-<ol>
-<li>Bash Shell 提供了 <code>BASH_ENV</code> 环境变量用于指定启动非交互式 Shell 时需要启动的文件（大多数 Linux 发行版没有设定该环境变量）</li>
-</ol>
-<p>【注】如果 <code>BASH_ENV</code> 环境变量没有设定，也不意味着非交互式 Shell 就无法使用任何系统全局变量。因为非交互式 Shell 一般作为交互式 Shell 的孩子 Shell（不是子 Shell，详情参见 <a href="/2020/05/26/Linux/Shell/LinuxShell%E7%88%B6%E5%AD%90%E5%85%B3%E7%B3%BB%E6%A6%82%E8%BF%B0">LinuxShell父子关系概述</a>）启动，故会继承父 Shell 的全部全局环境变量；或者直接在交互式 Shell 下执行，故也可以直接使用当前 Shell 的所有环境变量。</p>
-</blockquote>
-<h3 id="2-1-执行-Shell-脚本文件方式">2.1 执行 Shell 脚本文件方式</h3>
-<p>Linux 下执行 Shell 脚本文件有两种方式，以下以 Bash Shell 为例：</p>
-<ul>
-<li>
-<p><code>source script</code> 或 <code>. script</code><br />
-以这种方式执行脚本文件不会创建孩子 Shell（child shell），直接在当前 Shell 执行脚本文件中的命令。</p>
-</li>
-<li>
-<p><code>bash script</code> 或 <code>./script</code><br />
-以这种方式执行脚本文件会创建孩子 Shell（child shell），并在孩子 Shell 中执行脚本文件。</p>
 </li>
 </ul>
 
@@ -338,7 +273,7 @@
                     
                       <a class="hover-with-bg" href="/categories/Linux/">Linux</a>
                     
-                      <a class="hover-with-bg" href="/categories/Linux/Shell/">Shell</a>
+                      <a class="hover-with-bg" href="/categories/Linux/Manjaro/">Manjaro</a>
                     
                   </div>
                 
@@ -348,7 +283,7 @@
                     
                       <a class="hover-with-bg" href="/tags/Linux/">Linux</a>
                     
-                      <a class="hover-with-bg" href="/tags/Shell/">Shell</a>
+                      <a class="hover-with-bg" href="/tags/Manjaro/">Manjaro</a>
                     
                   </div>
                 
@@ -365,9 +300,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%AE%9A%E6%97%B6%E5%8A%9F%E8%83%BD/">
+                      <a href="/2021/04/17/JavaScript/Vue/Vue%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99%E6%B1%87%E6%80%BB/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">LinuxShell定时功能</span>
+                        <span class="hidden-mobile">Vue学习资料汇总</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -375,8 +310,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2020/05/26/Linux/Shell/LinuxShell%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E4%B8%8E%E9%80%9A%E9%85%8D%E7%AC%A6%E7%9A%84%E5%8C%BA%E5%88%AB/">
-                        <span class="hidden-mobile">LinuxShell正则表达式与通配符的区别</span>
+                      <a href="/2021/04/17/Linux/Linux%E4%B8%8B%E6%9B%B4%E6%96%B0Deepin-Wine5%E8%BD%AF%E4%BB%B6/">
+                        <span class="hidden-mobile">Linux下更新Deepin-Wine5软件</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

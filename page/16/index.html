@@ -7,8 +7,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
-  <link rel="icon" href="/img/favicon.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/self/portrait.jpg">
+  <link rel="icon" href="/img/self/portrait.jpg">
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -197,87 +197,22 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/08/14/ACM/%E7%AE%97%E6%B3%95/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/LCS%E3%80%81LIS%E3%80%81LICS%E7%AE%97%E6%B3%95/">LCS、LIS、LICS算法</a>
+        <a href="/2020/09/02/ACM/%E7%AE%97%E6%B3%95/%E5%AD%97%E7%AC%A6%E4%B8%B2/%E5%AD%97%E5%85%B8%E6%A0%91/%E5%AD%97%E5%85%B8%E6%A0%91/">字典树</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/08/14/ACM/%E7%AE%97%E6%B3%95/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/LCS%E3%80%81LIS%E3%80%81LICS%E7%AE%97%E6%B3%95/">
-          
-          
-            
-          
-          概念
-首先，要理解子串和子序列的含义：
-
-子串：来源于原序列连续的一段。
-子序列：来源于原序列中元素相对顺序不变的一段，不要求元素连续。
-
-1. LCS\mathrm{LCS}LCS（最长公共子序列）
-1.1 转移方程
-给定两个序列 AAA、BBB，设 C[i,j]C[i, j]C[i,j] 为 LCS(Ai,Bj)\mathrm{LCS}(A_i, B_j)LCS(Ai​,Bj​) 的长度，其中
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-08-14 21:19" pubdate>
-              2020-08-14
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/ACM/">ACM</a>
-            
-              <a href="/categories/ACM/%E7%AE%97%E6%B3%95/">算法</a>
-            
-              <a href="/categories/ACM/%E7%AE%97%E6%B3%95/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">动态规划</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/ACM/">ACM</a>
-            
-              <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
-            
-              <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">动态规划</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/08/14/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%A6/BSGS%E7%AE%97%E6%B3%95/">BSGS算法</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/08/14/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%A6/BSGS%E7%AE%97%E6%B3%95/">
+        <a href="/2020/09/02/ACM/%E7%AE%97%E6%B3%95/%E5%AD%97%E7%AC%A6%E4%B8%B2/%E5%AD%97%E5%85%B8%E6%A0%91/%E5%AD%97%E5%85%B8%E6%A0%91/">
           
           
             
           
           1. 简介
-BSGS 算法也称为大小步算法，主要用来解决
-Ax≡Bmod  p{\begin{array}{c}
-A^x \equiv B \mod{p}
-\end{array}}Ax≡Bmodp​
-的问题，其中 ppp 为质数。
-2. 算法
-令 x=i⋅m−jx = i \cdot m -jx=i⋅m−j，其中 m=⌈p ⌉m = \lceil \sqrt{p} \,\rceilm=⌈p​⌉。此
+字典树（Trie）用边来代表字母，从根结点到树上某一结点的路径就代表了一个字符串。
+
+2. 实现
+
+由于字典树中的字符串都是从根结点开始，于是我们可以通过标记字符串的终止结点来记录已经插入字典树中的字符串。
+我们用 δ(u,c)\delta(u,c)δ(u,c) 表示结点 uuu 的 ccc 字符指向的下一结点，即在结点 uuu 代表的字符串后面添加一个字符 ccc 形成的字符串的结点
         </a>
       </p>
 
@@ -285,8 +220,8 @@ A^x \equiv B \mod{p}
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-08-14 21:19" pubdate>
-              2020-08-14
+            <time datetime="2020-09-02 09:27" pubdate>
+              2020-09-02
             </time>
           </div>
         
@@ -298,7 +233,7 @@ A^x \equiv B \mod{p}
             
               <a href="/categories/ACM/%E7%AE%97%E6%B3%95/">算法</a>
             
-              <a href="/categories/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%A6/">数学</a>
+              <a href="/categories/ACM/%E7%AE%97%E6%B3%95/%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</a>
             
           </div>
         
@@ -306,11 +241,13 @@ A^x \equiv B \mod{p}
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
-            
               <a href="/tags/ACM/">ACM</a>
             
               <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
+            
+              <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</a>
+            
+              <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E7%AE%97%E6%B3%95/">数据结构 算法</a>
             
           </div>
         
@@ -324,17 +261,22 @@ A^x \equiv B \mod{p}
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/08/14/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%A6/%E4%BA%8C%E7%BB%B4%E5%87%A0%E4%BD%95%E5%9F%BA%E7%A1%80/">二维几何基础</a>
+        <a href="/2020/09/01/ACM/%E9%A2%98%E8%A7%A3/P2580%E3%80%8C%E4%BA%8E%E6%98%AF%E4%BB%96%E9%94%99%E8%AF%AF%E7%9A%84%E7%82%B9%E5%90%8D%E5%BC%80%E5%A7%8B%E4%BA%86%E3%80%8D/">P2580「于是他错误的点名开始了」</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/08/14/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%A6/%E4%BA%8C%E7%BB%B4%E5%87%A0%E4%BD%95%E5%9F%BA%E7%A1%80/">
+        <a href="/2020/09/01/ACM/%E9%A2%98%E8%A7%A3/P2580%E3%80%8C%E4%BA%8E%E6%98%AF%E4%BB%96%E9%94%99%E8%AF%AF%E7%9A%84%E7%82%B9%E5%90%8D%E5%BC%80%E5%A7%8B%E4%BA%86%E3%80%8D/">
           
           
             
           
-          1. 点、线、凸边形
-123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
+          1. 题目
+题目链接：P2580「于是他错误的点名开始了」 。
+题目背景
+XS中学化学竞赛组教练是一个酷爱炉石的人。
+他会一边搓炉石一边点名以至于有一天他连续点到了某个同学两次，然后正好被路过的校长发现了然后就是一顿欧拉欧拉欧拉（详情请见已结束比赛 CON900）。
+题目描述
+这之后校长任命你为特派探员，每天记录他的点名。校长会提供化学竞赛学生的人数和名单，而你需要告诉校长他有没有点错名。（为什么
         </a>
       </p>
 
@@ -342,8 +284,8 @@ A^x \equiv B \mod{p}
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-08-14 21:19" pubdate>
-              2020-08-14
+            <time datetime="2020-09-01 23:51" pubdate>
+              2020-09-01
             </time>
           </div>
         
@@ -353,9 +295,7 @@ A^x \equiv B \mod{p}
             
               <a href="/categories/ACM/">ACM</a>
             
-              <a href="/categories/ACM/%E7%AE%97%E6%B3%95/">算法</a>
-            
-              <a href="/categories/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%A6/">数学</a>
+              <a href="/categories/ACM/%E9%A2%98%E8%A7%A3/">题解</a>
             
           </div>
         
@@ -363,11 +303,9 @@ A^x \equiv B \mod{p}
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
-            
               <a href="/tags/ACM/">ACM</a>
             
-              <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
+              <a href="/tags/%E9%A2%98%E8%A7%A3/">题解</a>
             
           </div>
         
@@ -381,20 +319,33 @@ A^x \equiv B \mod{p}
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/08/14/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%A6/%E7%9F%A9%E9%98%B5%E6%A0%91%E5%AE%9A%E7%90%86/">矩阵树定理</a>
+        <a href="/2020/09/01/Math/Theory/%E5%9B%BE%E8%AE%BA/%E5%B9%B3%E9%9D%A2%E5%9B%BE/">平面图</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/08/14/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%A6/%E7%9F%A9%E9%98%B5%E6%A0%91%E5%AE%9A%E7%90%86/">
+        <a href="/2020/09/01/Math/Theory/%E5%9B%BE%E8%AE%BA/%E5%B9%B3%E9%9D%A2%E5%9B%BE/">
           
           
             
           
-          1. 思想
-矩阵树定理：对于一个无向图 GGG，它的生成树个数等于其基尔霍夫矩阵任何一个 N−1{N-1}N−1 阶主子式的行列式的绝对值。
+          1. 定义
+1.1 平面图 &amp; 非平面图
 
-度数矩阵D：是一个 N×N{N×N}N×N 的矩阵，其中 D[i][j]=0(i≠j), D[i][i]=i{D[i][j]=0(i≠j), \, D[i][i]=i}D[i][j]=0(i=j),D[i][i]=i 号点的度数。
-邻接矩阵A：是一个 N
+
+如果能够将无向图 GGG 画在平面上使得除顶点处外无边相交，则称 GGG 为可平面图，简称平面图。
+
+
+画出的无边相交的图称作 GGG 的平面嵌入。
+
+
+无平面嵌入的图称作非平面图。
+
+
+2. 性质
+
+平面图的子图都是平面图，非平面图的母图都是非平面图。
+
+
         </a>
       </p>
 
@@ -402,8 +353,8 @@ A^x \equiv B \mod{p}
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-08-14 21:19" pubdate>
-              2020-08-14
+            <time datetime="2020-09-01 22:30" pubdate>
+              2020-09-01
             </time>
           </div>
         
@@ -411,85 +362,11 @@ A^x \equiv B \mod{p}
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/ACM/">ACM</a>
+              <a href="/categories/Math/">Math</a>
             
-              <a href="/categories/ACM/%E7%AE%97%E6%B3%95/">算法</a>
+              <a href="/categories/Math/Theory/">Theory</a>
             
-              <a href="/categories/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%A6/">数学</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
-            
-              <a href="/tags/ACM/">ACM</a>
-            
-              <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/08/14/ACM/%E7%AE%97%E6%B3%95/%E5%9B%BE%E8%AE%BA/%E7%BD%91%E7%BB%9C%E6%B5%81/%E6%9C%80%E5%A4%A7%E6%B5%81/">最大流</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/08/14/ACM/%E7%AE%97%E6%B3%95/%E5%9B%BE%E8%AE%BA/%E7%BD%91%E7%BB%9C%E6%B5%81/%E6%9C%80%E5%A4%A7%E6%B5%81/">
-          
-          
-            
-          
-          1. 简介
-最大流算法主要分为两大类，一类为增广路算法，一类为预流推进算法。最大流算法解决的是在有向网路图 G=(V,E)
-G = (V,E)
-G=(V,E) 中计算从源点 sss 到汇点 ttt 的最大流量问题，以及最小割容量问题。
-
-
-最小割最大流定理
-
-
-s−ts-ts−t 最大流的值等于 s−ts-ts−t 的最小割容量。
-2. 增广路算法
-
-
-剩余容量
-
-
-剩余容量 cf(u,v)=c(
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-08-14 21:18" pubdate>
-              2020-08-14
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/ACM/">ACM</a>
-            
-              <a href="/categories/ACM/%E7%AE%97%E6%B3%95/">算法</a>
-            
-              <a href="/categories/ACM/%E7%AE%97%E6%B3%95/%E5%9B%BE%E8%AE%BA/">图论</a>
-            
-              <a href="/categories/ACM/%E7%AE%97%E6%B3%95/%E5%9B%BE%E8%AE%BA/%E7%BD%91%E7%BB%9C%E6%B5%81/">网络流</a>
+              <a href="/categories/Math/Theory/%E5%9B%BE%E8%AE%BA/">图论</a>
             
           </div>
         
@@ -497,16 +374,12 @@ s−ts-ts−t 最大流的值等于 s−ts-ts−t 的最小割容量。
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/ACM/">ACM</a>
+              <a href="/tags/Math/">Math</a>
             
-              <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
+              <a href="/tags/Theory/">Theory</a>
             
               <a href="/tags/%E5%9B%BE%E8%AE%BA/">图论</a>
             
-              <a href="/tags/%E7%BD%91%E7%BB%9C%E6%B5%81/">网络流</a>
-            
-              <a href="/tags/%E7%BD%91%E7%BB%9C%E6%B5%81%E7%AE%97%E6%B3%95/">网络流算法</a>
-            
           </div>
         
       </div>
@@ -519,19 +392,24 @@ s−ts-ts−t 最大流的值等于 s−ts-ts−t 的最小割容量。
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/08/14/ACM/%E9%A2%98%E8%A7%A3/PAT%E3%80%8C1003%20Universal%20Travel%20Sites%20(35%E5%88%86)%E3%80%8D/">PAT「1003 Universal Travel Sites (35分)」</a>
+        <a href="/2020/09/01/Math/Theory/%E5%9B%BE%E8%AE%BA/%E6%94%AF%E9%85%8D%E9%9B%86%E3%80%81%E7%8B%AC%E7%AB%8B%E9%9B%86%E3%80%81%E8%A6%86%E7%9B%96%E9%9B%86/">支配集、独立集、覆盖集</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/08/14/ACM/%E9%A2%98%E8%A7%A3/PAT%E3%80%8C1003%20Universal%20Travel%20Sites%20(35%E5%88%86)%E3%80%8D/">
+        <a href="/2020/09/01/Math/Theory/%E5%9B%BE%E8%AE%BA/%E6%94%AF%E9%85%8D%E9%9B%86%E3%80%81%E7%8B%AC%E7%AB%8B%E9%9B%86%E3%80%81%E8%A6%86%E7%9B%96%E9%9B%86/">
           
           
             
           
-          1. 题目
-题目链接：PAT「1003 Universal Travel Sites (35分)」 。
-Description
-After finishing her tour around the Earth, CYLL is now planning a universal travel sites development project. After a careful investigat
+          1. 定义
+1.1 支配集
+
+
+设无向简单图 G=&lt;V,E&gt;,V∗⊆V
+G = \lt V,E \gt, V^* \subseteq V 
+G=&lt;V,E&gt;,V∗⊆V，若 ∀vi∈V−V∗,∃vj∈V∗
+\forall v_i \in V - V^*, \exists v_j \in V^*
+∀vi​∈V−V∗,∃vj​∈V∗ 使得 (vi,Vj)∈E(v_i,V_j) \i
         </a>
       </p>
 
@@ -539,8 +417,8 @@ After finishing her tour around the Earth, CYLL is now planning a universal trav
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-08-14 20:18" pubdate>
-              2020-08-14
+            <time datetime="2020-09-01 22:13" pubdate>
+              2020-09-01
             </time>
           </div>
         
@@ -548,9 +426,11 @@ After finishing her tour around the Earth, CYLL is now planning a universal trav
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/ACM/">ACM</a>
+              <a href="/categories/Math/">Math</a>
             
-              <a href="/categories/ACM/%E9%A2%98%E8%A7%A3/">题解</a>
+              <a href="/categories/Math/Theory/">Theory</a>
+            
+              <a href="/categories/Math/Theory/%E5%9B%BE%E8%AE%BA/">图论</a>
             
           </div>
         
@@ -558,9 +438,13 @@ After finishing her tour around the Earth, CYLL is now planning a universal trav
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/ACM/">ACM</a>
+              <a href="/tags/Math/">Math</a>
             
-              <a href="/tags/%E9%A2%98%E8%A7%A3/">题解</a>
+              <a href="/tags/Theory/">Theory</a>
+            
+              <a href="/tags/%E5%9B%BE%E8%AE%BA/">图论</a>
+            
+              <a href="/tags/math/">math</a>
             
           </div>
         
@@ -574,131 +458,18 @@ After finishing her tour around the Earth, CYLL is now planning a universal trav
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/08/14/ACM/%E9%A2%98%E8%A7%A3/PAT%E3%80%8C1002%20Business%20(35%E5%88%86)%E3%80%8D/">PAT「1002 Business (35分)」</a>
+        <a href="/2020/09/01/Math/Modeling/%E6%8E%92%E9%98%9F%E8%AE%BA%E6%A8%A1%E5%9E%8B/">排队论模型</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/08/14/ACM/%E9%A2%98%E8%A7%A3/PAT%E3%80%8C1002%20Business%20(35%E5%88%86)%E3%80%8D/">
-          
-          
-            
-          
-          1. 题目
-题目链接：PAT「1002 Business (35分)」 。
-Description
-As the manager of your company, you have to carefully consider, for each project, the time taken to finish it, the deadline, and the profit you can ga
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-08-14 18:19" pubdate>
-              2020-08-14
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/ACM/">ACM</a>
-            
-              <a href="/categories/ACM/%E9%A2%98%E8%A7%A3/">题解</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/ACM/">ACM</a>
-            
-              <a href="/tags/%E9%A2%98%E8%A7%A3/">题解</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/08/14/ACM/%E9%A2%98%E8%A7%A3/PAT%E3%80%8C1001%20Battle%20Over%20Cities%20-%20Hard%20Version%20(35%E5%88%86)%E3%80%8D/">PAT「1001 Battle Over Cities - Hard Version (35分)」</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/08/14/ACM/%E9%A2%98%E8%A7%A3/PAT%E3%80%8C1001%20Battle%20Over%20Cities%20-%20Hard%20Version%20(35%E5%88%86)%E3%80%8D/">
-          
-          
-            
-          
-          1. 题目
-题目链接：PAT「1001 Battle Over Cities - Hard Version (35分)」 。
-Description
-It is vitally important to have all the cities connected by highways in a war. If a city is conquered by the enemy, all the h
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-08-14 14:05" pubdate>
-              2020-08-14
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/ACM/">ACM</a>
-            
-              <a href="/categories/ACM/%E9%A2%98%E8%A7%A3/">题解</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/ACM/">ACM</a>
-            
-              <a href="/tags/%E9%A2%98%E8%A7%A3/">题解</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/08/14/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%B9%B6%E6%9F%A5%E9%9B%86/">并查集</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/08/14/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%B9%B6%E6%9F%A5%E9%9B%86/">
+        <a href="/2020/09/01/Math/Modeling/%E6%8E%92%E9%98%9F%E8%AE%BA%E6%A8%A1%E5%9E%8B/">
           
           
             
           
           1. 简介
-并查集是一种高效的数据结构，常用来解决集合的合并和查找问题，常见于图论问题中。
-2. 操作
-2.1 构建
-并查集一般构建为初始时每个节点所属的集合编号即为自己的节点编号。
-1234567// 初始化int father[MAXN];   // father[i] 即为节点 i 所属的集合编号void init(int n) &#123;    for(int i = n; i; --i
+我们使用六个符号表示排队模型，在符号之间用斜线隔开，记为 X/Y/Z/A/B/C 。第一个符号 X 表示顾客到达流或顾客到达间隔时间的分布；第二个符号 Y 表示服务时间的分布；第三个符号 Z 表示服务台数目；第四个符号 A 是系统容量限制；第五个符号 B 是顾客源数目；第六个符号 C 表示的是服务规则，例如先到先服务 FCFS， 后到先服务 LCFS 等。
+2. Little（利特尔）
         </a>
       </p>
 
@@ -706,8 +477,342 @@ It is vitally important to have all the cities connected by highways in a war. I
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-08-14 11:23" pubdate>
-              2020-08-14
+            <time datetime="2020-09-01 21:00" pubdate>
+              2020-09-01
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Math/">Math</a>
+            
+              <a href="/categories/Math/Modeling/">Modeling</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Math/">Math</a>
+            
+              <a href="/tags/Modeling/">Modeling</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/08/31/Math/Theory/%E5%9B%BE%E8%AE%BA/%E6%AC%A7%E6%8B%89%E5%9B%BE/">欧拉图</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/08/31/Math/Theory/%E5%9B%BE%E8%AE%BA/%E6%AC%A7%E6%8B%89%E5%9B%BE/">
+          
+          
+            
+          
+          1. 定义
+1.1 欧拉通路 &amp; 欧拉回路
+
+
+通过图（无向图或有向图）中所有边一次且仅一次行遍所有顶点的通路称作欧拉通路。
+
+
+通过图（无向图或有向图）中所有边一次且仅一次行遍所有顶点的回路称作欧拉回路。
+
+
+【注】规定平凡图是欧拉图。
+1.2 欧拉图 &amp; 半欧拉图
+
+
+具有欧拉回路的图称为欧拉图。
+
+
+具有欧拉通路而无欧拉回路的图称作半欧拉图。
+
+
+2. 性质
+
+
+无向图 GG
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-08-31 20:10" pubdate>
+              2020-08-31
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Math/">Math</a>
+            
+              <a href="/categories/Math/Theory/">Theory</a>
+            
+              <a href="/categories/Math/Theory/%E5%9B%BE%E8%AE%BA/">图论</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Math/">Math</a>
+            
+              <a href="/tags/Theory/">Theory</a>
+            
+              <a href="/tags/%E5%9B%BE%E8%AE%BA/">图论</a>
+            
+              <a href="/tags/math/">math</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/08/31/Math/Theory/%E5%9B%BE%E8%AE%BA/%E5%93%88%E5%AF%86%E9%A1%BF%E5%9B%BE/">哈密顿图</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/08/31/Math/Theory/%E5%9B%BE%E8%AE%BA/%E5%93%88%E5%AF%86%E9%A1%BF%E5%9B%BE/">
+          
+          
+            
+          
+          1. 定义
+1.1 哈密顿通路 &amp; 哈密顿回路
+
+
+经过图（无向图或有向图）中所有顶点一次且仅一次的通路称作哈密顿通路。
+
+
+经过图（无向图或有向图）中所有顶点一次且仅一次的回路称作哈密顿回路。
+
+
+1.2 哈密顿图 &amp; 半哈密顿图
+
+
+具有哈密顿回路的图称作哈密顿图。
+
+
+具有哈密顿通路但不具有哈密顿回路的图称作半哈密顿图。
+
+
+【注】规定平凡图是哈密顿图。
+2. 性质
+【注】p
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-08-31 15:16" pubdate>
+              2020-08-31
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Math/">Math</a>
+            
+              <a href="/categories/Math/Theory/">Theory</a>
+            
+              <a href="/categories/Math/Theory/%E5%9B%BE%E8%AE%BA/">图论</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Math/">Math</a>
+            
+              <a href="/tags/Theory/">Theory</a>
+            
+              <a href="/tags/%E5%9B%BE%E8%AE%BA/">图论</a>
+            
+              <a href="/tags/math/">math</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/08/30/ACM/%E9%A2%98%E8%A7%A3/P1169%E3%80%8C%E6%A3%8B%E7%9B%98%E5%88%B6%E4%BD%9C%E3%80%8D/">P1169「棋盘制作」</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/08/30/ACM/%E9%A2%98%E8%A7%A3/P1169%E3%80%8C%E6%A3%8B%E7%9B%98%E5%88%B6%E4%BD%9C%E3%80%8D/">
+          
+          
+            
+          
+          1. 题目
+题目链接：P1169「棋盘制作」 。
+题目描述
+国际象棋是世界上最古老的博弈游戏之一，和中国的围棋、象棋以及日本的将棋同享盛名。据说国际象棋起源于易经的思想，棋盘是一个 8×8 大小的黑白相间的方阵，对应八八六十四卦，黑白对应阴阳。
+而我们的主人公小Q，正是国际象棋的狂热爱好者。作为一个顶尖高手，他已不满足于普通的棋盘与规则，于是他跟他的好朋友小W决定将棋盘扩大以适应他们的新规则。
+小
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-08-30 13:28" pubdate>
+              2020-08-30
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/ACM/">ACM</a>
+            
+              <a href="/categories/ACM/%E9%A2%98%E8%A7%A3/">题解</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/ACM/">ACM</a>
+            
+              <a href="/tags/%E9%A2%98%E8%A7%A3/">题解</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/08/26/ACM/%E9%A2%98%E8%A7%A3/P4147%E3%80%8C%E7%8E%89%E8%9F%BE%E5%AE%AB%E3%80%8D/">P4147「玉蟾宫」</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/08/26/ACM/%E9%A2%98%E8%A7%A3/P4147%E3%80%8C%E7%8E%89%E8%9F%BE%E5%AE%AB%E3%80%8D/">
+          
+          
+            
+          
+          1. 题目
+题目链接：P4147「玉蟾宫」 。
+题目背景
+有一天，小猫 rainbow 和 freda 来到了湘西张家界的天门山玉蟾宫，玉蟾宫宫主蓝兔盛情地款待了它们，并赐予它们一片土地。
+题目描述
+这片土地被分成 N×MN\times MN×M 个格子，每个格子里写着 'R' 或者 'F'，R 代表这块土地被赐予了 rainbow，F 代表这块土地被赐予了 freda。
+现在 freda 要在这
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-08-26 23:24" pubdate>
+              2020-08-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/ACM/">ACM</a>
+            
+              <a href="/categories/ACM/%E9%A2%98%E8%A7%A3/">题解</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/ACM/">ACM</a>
+            
+              <a href="/tags/%E9%A2%98%E8%A7%A3/">题解</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/08/26/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%8D%95%E8%B0%83%E6%A0%88/%E5%8D%95%E8%B0%83%E6%A0%88/">单调栈</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/08/26/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%8D%95%E8%B0%83%E6%A0%88/%E5%8D%95%E8%B0%83%E6%A0%88/">
+          
+          
+            
+          
+          1. 简介
+单调栈是一种用来解决首递增序列问题的数据结构，其满足从栈顶元素到栈底元素单调的性质。单调栈还可以用来解决求矩形统计图中最大内矩形面积的问题，进一步可以用来求最小矩阵和问题。
+2. 概念
+
+首递增序列
+
+
+对于序列 a1,a2,⋯ ,aNa_1,a_2,\cdots,a_Na1​,a2​,⋯,aN​，定义从左往右 aia_iai​ 的首递增序列为 ab0=ai,ab1,ab2,⋯ ,ab
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-08-26 14:52" pubdate>
+              2020-08-26
             </time>
           </div>
         
@@ -731,64 +836,9 @@ It is vitally important to have all the cities connected by highways in a war. I
             
               <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
             
+              <a href="/tags/%E7%AE%97%E6%B3%95-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">算法 数据结构</a>
+            
               <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/08/10/ACM/%E9%A2%98%E8%A7%A3/SpringOuting/">SpringOuting</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/08/10/ACM/%E9%A2%98%E8%A7%A3/SpringOuting/">
-          
-          
-            
-          
-          1. 题目
-题目链接：Spring Outing 。
-题目描述
-  You class are planning for a spring outing. N people are voting for a destination out of K candidate places.
-  voting progress is below:
-  First the class vote for th
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-08-10 22:23" pubdate>
-              2020-08-10
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/ACM/">ACM</a>
-            
-              <a href="/categories/ACM/%E9%A2%98%E8%A7%A3/">题解</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/ACM/">ACM</a>
-            
-              <a href="/tags/%E9%A2%98%E8%A7%A3/">题解</a>
             
           </div>
         
@@ -800,7 +850,7 @@ It is vitally important to have all the cities connected by highways in a war. I
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/page/15/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/#board">14</a><a class="page-number" href="/page/15/#board">15</a><span class="page-number current">16</span><a class="page-number" href="/page/17/#board">17</a><a class="page-number" href="/page/18/#board">18</a><span class="space">&hellip;</span><a class="page-number" href="/page/31/#board">31</a><a class="extend next" rel="next" href="/page/17/#board"><i class="iconfont icon-arrowright"></i></a>
+      <a class="extend prev" rel="prev" href="/page/15/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/#board">14</a><a class="page-number" href="/page/15/#board">15</a><span class="page-number current">16</span><a class="page-number" href="/page/17/#board">17</a><a class="page-number" href="/page/18/#board">18</a><span class="space">&hellip;</span><a class="page-number" href="/page/34/#board">34</a><a class="extend next" rel="next" href="/page/17/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 

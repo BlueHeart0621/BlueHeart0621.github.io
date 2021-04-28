@@ -7,8 +7,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
-  <link rel="icon" href="/img/favicon.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/self/portrait.jpg">
+  <link rel="icon" href="/img/self/portrait.jpg">
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -200,7 +200,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      1.3k 字
+      1.4k 字
     </span>
   
 
@@ -210,7 +210,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      16
+      17
        分钟
     </span>
   
@@ -288,7 +288,7 @@
 <li><code>$&#123;#file&#125;</code>：获取字符串长度：27</li>
 </ul>
 <h3 id="2-3-字符串-Leftrightarrow-数组">2.3 字符串 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>⇔</mo></mrow><annotation encoding="application/x-tex">\Leftrightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mrel">⇔</span></span></span></span> 数组</h3>
-<p>【注】 <code>$&#123;&#125;</code> 语法默认使用 IFS 指定的分隔符分隔字符串（即空白符：空格、tab 符、换行符），默认使用空格连接字符串元素。</p>
+<p><code>$&#123;&#125;</code> 语法默认使用 IFS 指定的分隔符分隔字符串（即空白符：空格、tab 符、换行符），默认使用空格连接字符串元素。</p>
 <ul>
 <li>
 <p><code>$&#123;str[*]&#125;</code>：得到数组所有元素作为一个长字符串整体（all of the elements）</p>
@@ -306,6 +306,7 @@
 <p><code>$&#123;!str[@]&#125;</code>：得到数组每一个元素的下标（each index of elements）</p>
 </li>
 </ul>
+<p>【注】此数组非 Bash Shell 的数组变量，只是为了方便理解而称呼，其本质还是单变量，Bash Shell 对其进行了扩展从而使得解析时呈现不同效果。</p>
 <h3 id="2-4-大小写转换">2.4 大小写转换</h3>
 <ul>
 <li>

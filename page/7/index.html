@@ -7,8 +7,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
-  <link rel="icon" href="/img/favicon.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/self/portrait.jpg">
+  <link rel="icon" href="/img/self/portrait.jpg">
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -197,21 +197,28 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/10/29/Math/Theory/%E7%9F%A9%E9%98%B5/%E7%9F%A9%E9%98%B5%E7%89%B9%E6%AE%8A%E8%BF%90%E7%AE%97/">矩阵特殊运算</a>
+        <a href="/2021/01/17/CMake/CMake%E4%BD%BF%E7%94%A8%E5%AD%A6%E4%B9%A0/">CMake 使用学习</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/10/29/Math/Theory/%E7%9F%A9%E9%98%B5/%E7%9F%A9%E9%98%B5%E7%89%B9%E6%AE%8A%E8%BF%90%E7%AE%97/">
+        <a href="/2021/01/17/CMake/CMake%E4%BD%BF%E7%94%A8%E5%AD%A6%E4%B9%A0/">
           
           
             
           
-          1. 直和
-1.1 定义
-m×mm \times mm×m 矩阵 A\boldsymbol{A}A 与 n×nn \times nn×n 矩阵 B\boldsymbol{B}B 的直和记作 A⊕B
-\boldsymbol{A} \oplus \boldsymbol{B}
-A⊕B，它是一个 (m+n)×(m+n)(m+n) \times (m+n)(m+n)×(m+n) 的矩阵，定义为
-A⊕B=[A
+          1. 概述
+CMake 工具能够自动生成 Makefile 文件，减轻手写 Makefile 文件的工作量，同时减少书写 Makefile 文件产生的错误。
+2. CMake 命令
+CMake 运行主要分为两个阶段：
+
+
+配置阶段：解析 CMakeLists.txt 文件
+
+
+生成阶段：生成构建环境
+
+
+有关 cmake 的详细参数参见 cmake --help，本文仅对其中较难理解的选项加以描述
         </a>
       </p>
 
@@ -219,8 +226,8 @@ A⊕B=[A
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-10-29 11:19" pubdate>
-              2020-10-29
+            <time datetime="2021-01-17 11:25" pubdate>
+              2021-01-17
             </time>
           </div>
         
@@ -228,11 +235,7 @@ A⊕B=[A
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/Math/">Math</a>
-            
-              <a href="/categories/Math/Theory/">Theory</a>
-            
-              <a href="/categories/Math/Theory/%E7%9F%A9%E9%98%B5/">矩阵</a>
+              <a href="/categories/CMake/">CMake</a>
             
           </div>
         
@@ -240,11 +243,7 @@ A⊕B=[A
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/Math/">Math</a>
-            
-              <a href="/tags/Theory/">Theory</a>
-            
-              <a href="/tags/%E7%9F%A9%E9%98%B5/">矩阵</a>
+              <a href="/tags/CMake/">CMake</a>
             
           </div>
         
@@ -258,20 +257,31 @@ A⊕B=[A
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/10/28/Math/Theory/%E7%9F%A9%E9%98%B5/%E5%90%91%E9%87%8F%E7%A9%BA%E9%97%B4/%E5%90%91%E9%87%8F%E7%A9%BA%E9%97%B4/">向量空间</a>
+        <a href="/2021/01/16/DeepLearning/Padding%E7%AD%96%E7%95%A5/Padding%E7%AD%96%E7%95%A5/">Padding策略</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/10/28/Math/Theory/%E7%9F%A9%E9%98%B5/%E5%90%91%E9%87%8F%E7%A9%BA%E9%97%B4/%E5%90%91%E9%87%8F%E7%A9%BA%E9%97%B4/">
+        <a href="/2021/01/16/DeepLearning/Padding%E7%AD%96%E7%95%A5/Padding%E7%AD%96%E7%95%A5/">
           
           
             
           
-          
-1. 向量空间（线性空间）
-1.1 定义
-1.1.1 向量空间
-对于以向量为元素的集合 V\boldsymbol{V}V，若对于向量集合 V\boldsymbol{V}V 中的向量 x,y,w\boldsymbol{x},\boldsymbol{y},\boldsymbol{w}x,y,w 和标量域 K\mathbb{K}K 中的标量 a,ba,ba,b，以下两个闭合性和关于加法及乘法的 888
+          1. Zero Padding
+
+均用 0 值填充。
+
+
+2. Replicate Padding
+
+用距离最近的像素值填充。
+
+
+3. Mirror Padding
+
+关于四边界成镜像对称，关于四角成镜像对称。
+
+
+
         </a>
       </p>
 
@@ -279,254 +289,8 @@ A⊕B=[A
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-10-28 16:23" pubdate>
-              2020-10-28
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Math/">Math</a>
-            
-              <a href="/categories/Math/Theory/">Theory</a>
-            
-              <a href="/categories/Math/Theory/%E7%9F%A9%E9%98%B5/">矩阵</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Math/">Math</a>
-            
-              <a href="/tags/Theory/">Theory</a>
-            
-              <a href="/tags/%E7%9F%A9%E9%98%B5/">矩阵</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/10/26/Math/Theory/%E7%9F%A9%E9%98%B5/%E7%9F%A9%E9%98%B5%E5%BE%AE%E5%88%86/%E7%9F%A9%E9%98%B5%E5%BE%AE%E5%88%86/">矩阵微分</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/10/26/Math/Theory/%E7%9F%A9%E9%98%B5/%E7%9F%A9%E9%98%B5%E5%BE%AE%E5%88%86/%E7%9F%A9%E9%98%B5%E5%BE%AE%E5%88%86/">
-          
-          
-            
-          
-          独立性假设
-假定实值函数的向量变元 x=[xi]i=1m∈Rm
-\boldsymbol{x} = [x_i]_{i=1}^m \in \mathbb{R}^m
-x=[xi​]i=1m​∈Rm 或者矩阵变元 X=[xij]i=1,j=1m,n∈Rm×n
-\boldsymbol{X} = [x_{ij}]_{i=1,j=1}^{m,n} \in \mathbb{R}^{m \times n}
-X=[x
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-10-26 19:56" pubdate>
-              2020-10-26
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Math/">Math</a>
-            
-              <a href="/categories/Math/Theory/">Theory</a>
-            
-              <a href="/categories/Math/Theory/%E7%9F%A9%E9%98%B5/">矩阵</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
-            
-              <a href="/tags/Math/">Math</a>
-            
-              <a href="/tags/Theory/">Theory</a>
-            
-              <a href="/tags/%E7%9F%A9%E9%98%B5/">矩阵</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/10/25/InputMethod/Rime%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%96%B9%E6%A1%88/">Rime中文输入方案</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/10/25/InputMethod/Rime%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%96%B9%E6%A1%88/">
-          
-          
-            
-          
-          【注】更多功能参见 Rime 官网。
-1. 简介
-Rime 可谓是一款「神级」中文输入方案，集多种输入法于一身，诸如拼音、注音、仓颉、速成、五笔、双拼、宫保拼音、粤拼、吴语、中古汉语拼音、五笔画、Emoji、国际音标……
-同时 Rime 也是一款开源跨平台的软件，支持平台有：
-
-【中州韻】 ibus-rime、fcitx-rime →\rightarrow→ Linux
-【小狼毫】 Weasel 
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-10-25 11:43" pubdate>
-              2020-10-25
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/InputMethod/">InputMethod</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/InputMethod/">InputMethod</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/10/24/Math/Theory/%E7%9F%A9%E9%98%B5/Toeplitz%E7%9F%A9%E9%98%B5%E5%92%8C%E5%BE%AA%E7%8E%AF%E7%9F%A9%E9%98%B5/">Toeplitz矩阵和循环矩阵</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/10/24/Math/Theory/%E7%9F%A9%E9%98%B5/Toeplitz%E7%9F%A9%E9%98%B5%E5%92%8C%E5%BE%AA%E7%8E%AF%E7%9F%A9%E9%98%B5/">
-          
-          
-            
-          
-          1. Toeplitz矩阵
-1.1 定义
-Toeplitz（特普利茨）矩阵又称为常对角矩阵，该矩阵每条左上至右下的对角线均为常数。Toeplitz矩阵 AAA 为满足以下条件的矩阵：
-Aij=Ai+1,j+1{\begin{array}{c}
-A_{ij} = A_{i+1,j+1}
-\end{array}}Aij​=Ai+1,j+1​​
-其一般形式为：
-A=[a0a−1⋯a−(n−1)a1a0⋯
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-10-24 22:12" pubdate>
-              2020-10-24
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Math/">Math</a>
-            
-              <a href="/categories/Math/Theory/">Theory</a>
-            
-              <a href="/categories/Math/Theory/%E7%9F%A9%E9%98%B5/">矩阵</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Math/">Math</a>
-            
-              <a href="/tags/Theory/">Theory</a>
-            
-              <a href="/tags/%E7%9F%A9%E9%98%B5/">矩阵</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/10/22/DeepLearning/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E7%BB%8F%E5%85%B8%E7%BD%91%E7%BB%9C/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E7%BB%8F%E5%85%B8%E7%BD%91%E7%BB%9C/">图像处理经典网络</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/10/22/DeepLearning/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E7%BB%8F%E5%85%B8%E7%BD%91%E7%BB%9C/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E7%BB%8F%E5%85%B8%E7%BD%91%E7%BB%9C/">
-          
-          
-            
-          
-          【注】本文采用 PyTorch 框架，基于 Fashion-MNIST 数据集。
-1. LeNet
-LeNet分为卷积层块和全连接层块两个部分。
-
-1.1 卷积层块
-
-
-卷积层块⾥的基本单位是卷积层后接最⼤池化层：卷积层⽤来识别图像⾥的空间模式，如线条和物体局部，之后的最⼤池化层则⽤来降低卷积层对位置的敏感性。
-
-
-在卷积层块中：每个卷积层都使⽤ 5×55 \times 55×5 的窗⼝，并在输出
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-10-22 10:51" pubdate>
-              2020-10-22
+            <time datetime="2021-01-16 18:08" pubdate>
+              2021-01-16
             </time>
           </div>
         
@@ -558,22 +322,79 @@ LeNet分为卷积层块和全连接层块两个部分。
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/10/17/DeepLearning/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/AdaDelta/">AdaDelta</a>
+        <a href="/2021/01/16/CSAPP/%E6%B5%AE%E7%82%B9%E6%95%B0/%E6%B5%AE%E7%82%B9%E6%95%B0/">浮点数</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/10/17/DeepLearning/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/AdaDelta/">
+        <a href="/2021/01/16/CSAPP/%E6%B5%AE%E7%82%B9%E6%95%B0/%E6%B5%AE%E7%82%B9%E6%95%B0/">
+          
+          
+            
+          
+          1. IEEE 754 标准
+IEEE 754 浮点标准用 V=(−1)s×M×2EV = (-1)^s \times M \times 2^EV=(−1)s×M×2E 的形式来表示一个数。
+
+
+
+符号位（s）：指明数的正负，即 VVV 中的 sss。
+
+
+阶码（exp）：对浮点数加权，即 VVV 中的 EEE。
+
+
+尾数（frac）：二进制小数，即 VVV 中的 MMM，范围为 1∼2−ε1 \
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-16 18:06" pubdate>
+              2021-01-16
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/CSAPP/">CSAPP</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/CSAPP/">CSAPP</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/01/16/Math/Modeling/PCA%E6%A8%A1%E5%9E%8B/">PCA模型</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/01/16/Math/Modeling/PCA%E6%A8%A1%E5%9E%8B/">
           
           
             
           
           1. 简介
-AdaDelta 算法是 AdaGrad 算法的改进，和 RMSprop 算法类似，AdaDelta 算法通过梯度平方的指数衰减移动平均来调整学习率；此外，AdaDelta 算法还引入了每次参数更新差值 Δθ\Delta \thetaΔθ 的平方的指数衰减移动平均。
+主成分分析是指将数据中相关性很高的属性/变量转化成彼此相互独立或不相关的新属性/变量，利用较少的新属性/变量（主成分）去解释原来数据中的大部分属性/变量的一种降维方法。
 2. 原理
-第 ttt 次迭代时：
-
-首先计算参数更新差值 ΔW\Delta WΔW 的平方的指数衰减权值移动平均为：
-
+2.1 基础思想
+以学校课程为例，用 x1,x2,⋯ ,xp{x_1,x_2,\cdots,x_p}x1​,x2​,⋯,xp​ 表示 p 门课程的成绩变量， c1,c2,⋯ ,cp{c_1,c_2,\cdo
         </a>
       </p>
 
@@ -581,8 +402,8 @@ AdaDelta 算法是 AdaGrad 算法的改进，和 RMSprop 算法类似，AdaDelta
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-10-17 16:21" pubdate>
-              2020-10-17
+            <time datetime="2021-01-16 18:06" pubdate>
+              2021-01-16
             </time>
           </div>
         
@@ -590,9 +411,9 @@ AdaDelta 算法是 AdaGrad 算法的改进，和 RMSprop 算法类似，AdaDelta
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/DeepLearning/">DeepLearning</a>
+              <a href="/categories/Math/">Math</a>
             
-              <a href="/categories/DeepLearning/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/">优化算法</a>
+              <a href="/categories/Math/Modeling/">Modeling</a>
             
           </div>
         
@@ -600,11 +421,9 @@ AdaDelta 算法是 AdaGrad 算法的改进，和 RMSprop 算法类似，AdaDelta
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/DeepLearning/">DeepLearning</a>
+              <a href="/tags/Math/">Math</a>
             
-              <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a>
-            
-              <a href="/tags/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/">优化算法</a>
+              <a href="/tags/Modeling/">Modeling</a>
             
           </div>
         
@@ -618,136 +437,20 @@ AdaDelta 算法是 AdaGrad 算法的改进，和 RMSprop 算法类似，AdaDelta
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/10/17/DeepLearning/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/RMSprop/">RMSprop</a>
+        <a href="/2021/01/16/Math/Theory/%E5%87%B8%E5%87%BD%E6%95%B0%E5%8F%8A%E5%85%B6%E6%80%A7%E8%B4%A8/">凸函数及其性质</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/10/17/DeepLearning/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/RMSprop/">
-          
-          
-            
-          
-          1. 简介
-RMSprop 算法是 AdaGrad 算法的改进，可以在有些情况下避免 AdaGrad 算法中学习率不断单调下降以至于过早衰减的缺点。
-2. 原理
-第 ttt 次迭代时：
-
-RMSprop 算法首先计算每次迭代梯度 ∂L∂W\frac{\partial L}{\partial \boldsymbol{W}}∂W∂L​ 平方的指数衰减移动平均：
-
-ht=βht−1+(1−β)∂L∂Wt
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-10-17 16:21" pubdate>
-              2020-10-17
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/DeepLearning/">DeepLearning</a>
-            
-              <a href="/categories/DeepLearning/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/">优化算法</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/DeepLearning/">DeepLearning</a>
-            
-              <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a>
-            
-              <a href="/tags/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/">优化算法</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/10/17/DeepLearning/%E8%87%AA%E5%8A%A8%E6%B1%82%E6%A2%AF%E5%BA%A6/">自动求梯度</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/10/17/DeepLearning/%E8%87%AA%E5%8A%A8%E6%B1%82%E6%A2%AF%E5%BA%A6/">
-          
-          
-            
-          
-          【注】参考自邱锡鹏的《神经网络与深度学习》。
-自动计算梯度的方法主要分为三类：数值微分、符号微分和自动微分。
-1. 数值微分
-1.1 原理
-根据函数 f(x)f(x)f(x) 在点 xxx 处的导数的定义：
-f′(x)=lim⁡Δx→0f(x+Δx)−f(x)Δx{\begin{array}{c}
-f^{&#x27;}(x) = \lim_{\Delta x \rightarrow 0} \fra
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-10-17 14:42" pubdate>
-              2020-10-17
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/DeepLearning/">DeepLearning</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/DeepLearning/">DeepLearning</a>
-            
-              <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/10/15/Math/Theory/%E5%9B%BE%E5%83%8F%E7%9F%A9/%E5%BE%84%E5%90%91%E7%9F%A9/">径向矩</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/10/15/Math/Theory/%E5%9B%BE%E5%83%8F%E7%9F%A9/%E5%BE%84%E5%90%91%E7%9F%A9/">
+        <a href="/2021/01/16/Math/Theory/%E5%87%B8%E5%87%BD%E6%95%B0%E5%8F%8A%E5%85%B6%E6%80%A7%E8%B4%A8/">
           
           
             
           
           1. 定义
-1.1 径向矩
-径向矩定义为极坐标表示的空间中的图像，kkk 阶径向矩的定义为
-Ψ(k,p,q,l)=∫r=0∞∫θ=02prk⋅cos⁡pθ⋅sin⁡qθ⋅eikθ⋅g(r,θ)drdθ\Psi (k,p,q,l) = \int_{r=0}^{\infty} \int_{\theta = 0}^{2p} r^k \cdot \cos^p \theta \cdot \sin^q \th
+1.1 上凸函数
+
+
+如果对任意 x1x_1x1​、x2x_2x2​ 总有 f[αx1+(1−α)x2]≥αf(x1)+(1−α)f(x2)f[\alpha x_1 + (1 - \alpha )x_2] \geq \alpha f(x_1) + (1 - \alpha )f(x_2)f[αx1​+(1−α)x2​]≥αf(x1​)+(1−α)f(x2​)，其中 0≤α≤10 \leq
         </a>
       </p>
 
@@ -755,8 +458,8 @@ f^{&#x27;}(x) = \lim_{\Delta x \rightarrow 0} \fra
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-10-15 12:09" pubdate>
-              2020-10-15
+            <time datetime="2021-01-16 18:06" pubdate>
+              2021-01-16
             </time>
           </div>
         
@@ -768,7 +471,313 @@ f^{&#x27;}(x) = \lim_{\Delta x \rightarrow 0} \fra
             
               <a href="/categories/Math/Theory/">Theory</a>
             
-              <a href="/categories/Math/Theory/%E5%9B%BE%E5%83%8F%E7%9F%A9/">图像矩</a>
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Math/">Math</a>
+            
+              <a href="/tags/Theory/">Theory</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/01/16/Math/Theory/%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0/">欧拉函数</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/01/16/Math/Theory/%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0/">
+          
+          
+            
+          
+          1. 欧拉函数定义
+欧拉函数 ϕ(n){\phi(n)}ϕ(n) 表示的是小于等于 nnn 且和 nnn 互质的正整数的个数。（易知 ϕ(1)=1{\phi(1) = 1}ϕ(1)=1）
+2. 欧拉函数公式
+对于任意整数 nnn，若其质因数分解结果为 n=p1k1p2k1⋯pnkn{n = p_1^{k_1}p_2^{k_1} \cdots p_n^{k_n}}n=p1k1​​p2k1​​⋯pnk
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-16 18:06" pubdate>
+              2021-01-16
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Math/">Math</a>
+            
+              <a href="/categories/Math/Theory/">Theory</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Math/">Math</a>
+            
+              <a href="/tags/Theory/">Theory</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/01/16/Math/Modeling/%E4%BC%A0%E6%9F%93%E7%97%85%E6%A8%A1%E5%9E%8B/%E4%BC%A0%E6%9F%93%E7%97%85%E6%A8%A1%E5%9E%8B/">传染病模型</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/01/16/Math/Modeling/%E4%BC%A0%E6%9F%93%E7%97%85%E6%A8%A1%E5%9E%8B/%E4%BC%A0%E6%9F%93%E7%97%85%E6%A8%A1%E5%9E%8B/">
+          
+          
+            
+          
+          
+
+基础定义
+
+
+将传染病范围内的人群分为以下类别：
+
+SSS(Susceptible)类：指未得病，但与感染者接触后容易收到感染的人。
+EEE(Exposed)类：指接触过感染者，但暂时没有传播的能力的人。
+III(Infectious)类：指染上传染病，具有传播能力的人。（可以传播给SSS类人员，将其变成EEE类或III类成员）
+RRR(Recovered / Removed)类：指病愈而具有
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-16 18:06" pubdate>
+              2021-01-16
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Math/">Math</a>
+            
+              <a href="/categories/Math/Modeling/">Modeling</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Math/">Math</a>
+            
+              <a href="/tags/Modeling/">Modeling</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/01/16/Math/Theory/%E5%88%9A%E6%80%A7%E6%96%B9%E7%A8%8B/%E5%88%9A%E6%80%A7%E6%96%B9%E7%A8%8B/">刚性方程</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/01/16/Math/Theory/%E5%88%9A%E6%80%A7%E6%96%B9%E7%A8%8B/%E5%88%9A%E6%80%A7%E6%96%B9%E7%A8%8B/">
+          
+          
+            
+          
+          摘自Wikipedia——刚性方程。
+1.  定义
+在数学领域中，刚性方程（stiffness equation）是指一个微分方程，其数值分析的解只有在时间间隔很小时才会稳定，只要时间间隔略大，其解就会不稳定。目前很难去精确地去定义哪些微分方程是刚性方程，然而粗略而言，若此方程式中包含使其快速变动的项，则其为刚性方程。
+在积分微分方程时，若某一区域的解曲线的变化很大，会希望在这个区域的积分间隔密一
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-16 18:06" pubdate>
+              2021-01-16
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Math/">Math</a>
+            
+              <a href="/categories/Math/Theory/">Theory</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Math/">Math</a>
+            
+              <a href="/tags/Theory/">Theory</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/01/15/Python/Torch/Torch%E5%87%BD%E6%95%B0/">Torch函数</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/01/15/Python/Torch/Torch%E5%87%BD%E6%95%B0/">
+          
+          
+            
+          
+          torch.clamp(input, min, max, out=None) → Tensor
+将 input 张量中的每个元素值截断到区间 [min, max] 中。
+torch.stack(tensors, dim=0, out=None) → Tensor
+对 tensors 沿指定维度拼接，但会额外增加一维拼接的维度，即拼接时来自于 tensors 中每个 tensor 中的拼接元素单独组
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-15 22:44" pubdate>
+              2021-01-15
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Python/">Python</a>
+            
+              <a href="/categories/Python/Torch/">Torch</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Python/">Python</a>
+            
+              <a href="/tags/Torch/">Torch</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/12/23/Math/Theory/%E6%95%B0%E5%AD%A6%E6%9C%AF%E8%AF%AD%E7%BC%A9%E5%86%99/">数学术语缩写</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/12/23/Math/Theory/%E6%95%B0%E5%AD%A6%E6%9C%AF%E8%AF%AD%E7%BC%A9%E5%86%99/">
+          
+          
+            
+          
+          
+
+s.t. = such that：使得
+
+
+i.e. = id est：即
+
+
+resp. = respectively：相对地
+
+
+e.g. = for example：举例
+
+
+cf. = confer：比较
+
+
+viz. = ：不然
+
+
+Q.E.D. ：证毕
+
+
+iff = if and only if
+
+
+i.i.d. ：独立同分布
+
+
+
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-12-23 15:32" pubdate>
+              2020-12-23
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Math/">Math</a>
+            
+              <a href="/categories/Math/Theory/">Theory</a>
             
           </div>
         
@@ -781,8 +790,6 @@ f^{&#x27;}(x) = \lim_{\Delta x \rightarrow 0} \fra
               <a href="/tags/Math/">Math</a>
             
               <a href="/tags/Theory/">Theory</a>
-            
-              <a href="/tags/%E5%9B%BE%E5%83%8F%E7%9F%A9/">图像矩</a>
             
           </div>
         
@@ -794,7 +801,7 @@ f^{&#x27;}(x) = \lim_{\Delta x \rightarrow 0} \fra
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/page/6/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/#board">5</a><a class="page-number" href="/page/6/#board">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/#board">8</a><a class="page-number" href="/page/9/#board">9</a><span class="space">&hellip;</span><a class="page-number" href="/page/31/#board">31</a><a class="extend next" rel="next" href="/page/8/#board"><i class="iconfont icon-arrowright"></i></a>
+      <a class="extend prev" rel="prev" href="/page/6/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/#board">5</a><a class="page-number" href="/page/6/#board">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/#board">8</a><a class="page-number" href="/page/9/#board">9</a><span class="space">&hellip;</span><a class="page-number" href="/page/34/#board">34</a><a class="extend next" rel="next" href="/page/8/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 

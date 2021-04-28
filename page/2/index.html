@@ -7,8 +7,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
-  <link rel="icon" href="/img/favicon.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/self/portrait.jpg">
+  <link rel="icon" href="/img/self/portrait.jpg">
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -197,20 +197,23 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/03/02/Linux/Manjaro/Manjaro20.2%E5%BC%80%E6%9C%BA%E8%BF%90%E8%A1%8C%E8%87%AA%E5%AE%9A%E4%B9%89%E8%84%9A%E6%9C%AC/">Manjaro20.2开机运行自定义脚本</a>
+        <a href="/2021/04/18/Rust/Rust%E4%BB%A3%E7%A0%81%E6%A0%BC%E5%BC%8F/">Rust代码格式</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/03/02/Linux/Manjaro/Manjaro20.2%E5%BC%80%E6%9C%BA%E8%BF%90%E8%A1%8C%E8%87%AA%E5%AE%9A%E4%B9%89%E8%84%9A%E6%9C%AC/">
+        <a href="/2021/04/18/Rust/Rust%E4%BB%A3%E7%A0%81%E6%A0%BC%E5%BC%8F/">
           
           
             
           
-          1. 简介
-Manjaro 是一款 Arch Linux 发行版，不同于基于 Debian 的 Linux 系统，Manjaro 并不默认支持 rc-local.service 服务，这个服务主要用来在系统启动时运行用户自定义的脚本命令等。
-2. 安装
-虽然 Arch Linux 没有默认支持 rc-local.service 服务，但是我们可以手动安装这个服务并设置开机启动：
-12sudo pa
+          1. 代码格式
+
+函数体需要用花括号包裹，一般左花括号与函数声明置于同一行并以空格分隔。
+Rust 缩进风格为 4 个空格，而不是 1 个水平制表符。
+Rust 代码中的函数和变量名使用 snake case 规范风格。
+
+2. 自动格式化
+Rust 开发了一个叫做 rustfmt 的自动格式化工具，能够将用户编写的代码自动调整为一种标准风格。最新版的 Rust 中已经包含了该工具。详细使用参见命
         </a>
       </p>
 
@@ -218,8 +221,187 @@ Manjaro 是一款 Arch Linux 发行版，不同于基于 Debian 的 Linux 系统
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-03-02 14:32" pubdate>
-              2021-03-02
+            <time datetime="2021-04-18 21:16" pubdate>
+              2021-04-18
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Rust/">Rust</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Rust/">Rust</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/04/18/Rust/Rust%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99%E6%B1%87%E6%80%BB/">Rust学习资料汇总</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/04/18/Rust/Rust%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99%E6%B1%87%E6%80%BB/">
+          
+          
+            
+          
+          1. 学习资料
+1.1 在线学习资料
+
+Rust 官方资料集合
+Rust 程序设计语言英文版
+Rust 程序设计语言中文版
+Rust 安装和版本管理工具：Rustup 使用文档
+Rust 构建工具和包管理器：Cargo 使用文档
+Rust API 文档
+
+1.2 本地学习资料
+
+运行 rustup doc 在浏览器查看本地文档。
+
+2. 学习论坛
+
+Rust 官方 Discord 群聊
+Rust 
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-04-18 20:09" pubdate>
+              2021-04-18
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Rust/">Rust</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Rust/">Rust</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/04/17/JavaScript/Vue/Vue%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99%E6%B1%87%E6%80%BB/">Vue学习资料汇总</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/04/17/JavaScript/Vue/Vue%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99%E6%B1%87%E6%80%BB/">
+          
+          
+            
+          
+          
+官方手册
+
+
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-04-17 22:08" pubdate>
+              2021-04-17
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/JavaScript/">JavaScript</a>
+            
+              <a href="/categories/JavaScript/Vue/">Vue</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/JavaScript/">JavaScript</a>
+            
+              <a href="/tags/Vue/">Vue</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/04/17/Linux/Manjaro/Manjaro21.0%E7%B3%BB%E7%BB%9F%E6%8A%A5%E9%94%99/">Manjaro21.0系统报错</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/04/17/Linux/Manjaro/Manjaro21.0%E7%B3%BB%E7%BB%9F%E6%8A%A5%E9%94%99/">
+          
+          
+            
+          
+          1. ENOSPC: System limit for number of file watchers reached
+
+问题：系统对文件监控的数量已经达到限制数量了。
+解决：
+
+修改 /etc/sysctl.conf 文件，添加以下代码：1fs.inotify.max_user_watches=52428800
+
+然后刷新配置：1sudo sysctl -p
+
+
+
+
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-04-17 22:00" pubdate>
+              2021-04-17
             </time>
           </div>
         
@@ -253,22 +435,19 @@ Manjaro 是一款 Arch Linux 发行版，不同于基于 Debian 的 Linux 系统
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/02/28/OperationSystem/%E5%A4%9A%E7%B3%BB%E7%BB%9F%E5%85%B1%E4%BA%AB%E8%93%9D%E7%89%99%E8%AE%BE%E5%A4%87/">多系统共享蓝牙设备</a>
+        <a href="/2021/04/17/Linux/Linux%E4%B8%8B%E6%9B%B4%E6%96%B0Deepin-Wine5%E8%BD%AF%E4%BB%B6/">Linux下更新Deepin-Wine5软件</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/02/28/OperationSystem/%E5%A4%9A%E7%B3%BB%E7%BB%9F%E5%85%B1%E4%BA%AB%E8%93%9D%E7%89%99%E8%AE%BE%E5%A4%87/">
+        <a href="/2021/04/17/Linux/Linux%E4%B8%8B%E6%9B%B4%E6%96%B0Deepin-Wine5%E8%BD%AF%E4%BB%B6/">
           
           
             
           
           1. 简介
-当我们在一台电脑上安装了多个操作系统，且电脑只有一个蓝牙适配器时，如果此时使用蓝牙设备（比如蓝牙鼠标），且希望切换系统时能自动连接，则会发现问题：
-
-如果在当前系统配对后，然后跑到另一个系统下配对，再回到当前系统下会发现蓝牙无法自动连接，只能删除配对并再次配对。然而这样导致的结果就是在另一个系统下同样无法自动连接。
-如此往复，永远无法实现能够在两个操作系统共享蓝牙设备。
-
-这种情况下你
+Deepin-Wine 已经升级到第 5 版，对国内一些 Windows 应用兼容性也更好，希望深度越做越好（虽然 Linux 原版要更好，但奈何大多数国内软件厂家都不做 Linux 版应用）。
+2. 更新
+假设 Linux 系统上已经安装了 deepin-wine5 和一些 wine 版的软件，比如 Tim 和 WeChat。如果要更新这些应用（直接在软件里更新是显然不成的），需要先
         </a>
       </p>
 
@@ -276,8 +455,8 @@ Manjaro 是一款 Arch Linux 发行版，不同于基于 Debian 的 Linux 系统
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-02-28 23:03" pubdate>
-              2021-02-28
+            <time datetime="2021-04-17 16:40" pubdate>
+              2021-04-17
             </time>
           </div>
         
@@ -285,7 +464,7 @@ Manjaro 是一款 Arch Linux 发行版，不同于基于 Debian 的 Linux 系统
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/OperationSystem/">OperationSystem</a>
+              <a href="/categories/Linux/">Linux</a>
             
           </div>
         
@@ -293,7 +472,7 @@ Manjaro 是一款 Arch Linux 发行版，不同于基于 Debian 的 Linux 系统
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/OperationSystem/">OperationSystem</a>
+              <a href="/tags/Linux/">Linux</a>
             
           </div>
         
@@ -307,34 +486,28 @@ Manjaro 是一款 Arch Linux 发行版，不同于基于 Debian 的 Linux 系统
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/02/28/Linux/Shell/LinuxShell%E5%A4%9A%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/">LinuxShell多命令执行</a>
+        <a href="/2021/04/17/TeX/LaTeX/LaTeX%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99%E6%B1%87%E6%80%BB/">LaTeX学习资料汇总</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/02/28/Linux/Shell/LinuxShell%E5%A4%9A%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/">
+        <a href="/2021/04/17/TeX/LaTeX/LaTeX%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99%E6%B1%87%E6%80%BB/">
           
           
             
           
-          在 Linux 终端下，一行多命令顺序执行主要有三种方式，其基本格式和区别如下：
+          1. 学习资料
+1.1 在线学习资料
 
+Learn LaTeX.org
+CTex.org
 
+1.2 本地学习资料
 
-多命令执行符
-基本格式
-作用
+texdoc 工具
 
+2. 学习论坛
 
-
-
-;
-command1 ; command2
-多个命令按照先后顺序执行，命令之间没有逻辑制约关系
-
-
-&amp;&amp;
-command1 &amp;&amp; command2
-两个命令为逻辑与制约关系，只有当 command1 执行正确后，command2 才会执行
+tex stack exchange
 
 
         </a>
@@ -344,8 +517,241 @@ command1 &amp;&amp; command2
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-02-28 22:49" pubdate>
-              2021-02-28
+            <time datetime="2021-04-17 16:20" pubdate>
+              2021-04-17
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/TeX/">TeX</a>
+            
+              <a href="/categories/TeX/LaTeX/">LaTeX</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/TeX/">TeX</a>
+            
+              <a href="/tags/LaTeX/">LaTeX</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/04/17/JavaScript/NodeJS/NodeJS%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99%E6%B1%87%E6%80%BB/">NodeJS学习资料汇总</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/04/17/JavaScript/NodeJS/NodeJS%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99%E6%B1%87%E6%80%BB/">
+          
+          
+            
+          
+          
+中文官方文档
+英文官方文档
+
+
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-04-17 16:18" pubdate>
+              2021-04-17
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/JavaScript/">JavaScript</a>
+            
+              <a href="/categories/JavaScript/NodeJS/">NodeJS</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/JavaScript/">JavaScript</a>
+            
+              <a href="/tags/NodeJS/">NodeJS</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/04/17/MarkDown/MarkDown%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99%E6%B1%87%E6%80%BB/">MarkDown学习资料汇总</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/04/17/MarkDown/MarkDown%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99%E6%B1%87%E6%80%BB/">
+          
+          
+            
+          
+          
+Learning-Markdown (Markdown 入门参考)
+
+
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-04-17 13:08" pubdate>
+              2021-04-17
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/MarkDown/">MarkDown</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/MarkDown/">MarkDown</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/04/17/Linux/Linux%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99%E6%B1%87%E6%80%BB/">Linux学习资料汇总</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/04/17/Linux/Linux%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99%E6%B1%87%E6%80%BB/">
+          
+          
+            
+          
+          1. 在线学习资料
+1.1 Bash Shell
+
+bash-manual
+Advanced Bash-Scripting Guide
+
+1.2 鸟哥的 Linux 私房菜
+
+鸟哥的 Linux 私房菜
+
+2. 本地学习资料
+
+help 命令
+man 手册
+info 手册
+
+3. 学习论坛
+
+stack overflow
+unix stack exchange
+
+
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-04-17 12:34" pubdate>
+              2021-04-17
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Linux/">Linux</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Linux/">Linux</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/04/16/Linux/Shell/LinuxShell%E8%87%AA%E5%8A%A8%E4%BA%A4%E4%BA%92/">LinuxShell自动交互</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/04/16/Linux/Shell/LinuxShell%E8%87%AA%E5%8A%A8%E4%BA%A4%E4%BA%92/">
+          
+          
+            
+          
+          1. 简介
+Linux Shell 的自动交互在很多场景下会使用到，比如我们需要批量运行一些需要输入参数进行交互的命令时，此时 Shell 的自动交互就能将我们从重复无聊的手动交互中解放出来。
+2. 方法
+以下我们通过 ssh-keygen 命令生成密钥来举例说明各个方法的使用。
+2.1 内联输入重定向符
+内联输入重定向符是一种输入重定向符，该输入重定向符用于从命令行中指定用于输入重定向的数据，因
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-04-16 20:34" pubdate>
+              2021-04-16
             </time>
           </div>
         
@@ -373,420 +779,11 @@ command1 &amp;&amp; command2
     </article>
   </div>
 
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/02/23/Research/2006-IEEE-Recovering%20DC%20coefficients%20in%20block-based%20DCT/2006-IEEE-Recovering%20DC%20coefficients%20in%20block-based%20DCT/">2006-IEEE-Recovering DC coefficients in block-based DCT</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/02/23/Research/2006-IEEE-Recovering%20DC%20coefficients%20in%20block-based%20DCT/2006-IEEE-Recovering%20DC%20coefficients%20in%20block-based%20DCT/">
-          
-          
-            
-          
-          【注】此论文中谈论的图像均为像素值在 (0,255)(0,255)(0,255) 范围内的 RGB 图像，定义点 (i,j)(i,j)(i,j) 处像素值为 f(i,j)f(i,j)f(i,j)。
-1. 拉普拉斯分布特性
-对于自然图像而言，点 (i,j)(i,j)(i,j) 处的相邻像素点为
-{(i−1,j−1),(i−1,j),(i−1,j+1),(i,j−1),(i,j+1),(i+1,j−1
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-02-23 20:28" pubdate>
-              2021-02-23
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Research/">Research</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Research/">Research</a>
-            
-              <a href="/tags/CV/">CV</a>
-            
-              <a href="/tags/DC%E7%B3%BB%E6%95%B0%E6%81%A2%E5%A4%8D/">DC系数恢复</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/02/22/Linux/Linux%E4%B8%8B%E6%9F%A5%E7%9C%8B%E5%B7%A5%E5%85%B7%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3/">Linux下查看工具官方文档</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/02/22/Linux/Linux%E4%B8%8B%E6%9F%A5%E7%9C%8B%E5%B7%A5%E5%85%B7%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3/">
-          
-          
-            
-          
-          1. 简介
-Linux 系统包含大量开源工具，大部分开源工具在安装时都自带手册，而手册又分为使用手册、技术手册和帮助文档等。
-2. 使用手册
-Linux 下非内建工具的使用手册一般都集成在 man 或 info 工具中，内建工具的使用手册集成在 help 工具。查看工具 xxx 的使用手册直接在终端运行以下命令中对应的那个即可：
-123man xxxinfo xxxhelp xxx
-3. 技术手册
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-02-22 18:57" pubdate>
-              2021-02-22
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Linux/">Linux</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Linux/">Linux</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/02/11/Linux/Linux%E4%BF%AE%E6%94%B9grub%E8%8F%9C%E5%8D%95/">Linux修改grub菜单</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/02/11/Linux/Linux%E4%BF%AE%E6%94%B9grub%E8%8F%9C%E5%8D%95/">
-          
-          
-            
-          
-          【注】参考自 grub 官方手册。
-1. 保留上一次 grub 菜单选项
-1.1 问题
-每次开机时，大部分 Linux 发行版的 grub 菜单都是定位在首选项位置（即当前系统选项位置）。这就导致如果我们电脑安装了多个系统，那么每次开机进入其他系统都要重新选择 grub 菜单选项。而我们一般都是一段时间固定使用一个系统，因此如果 grub 菜单能够记住上一次的菜单选项，我们平常使用就不需要手动切换
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-02-11 10:12" pubdate>
-              2021-02-11
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Linux/">Linux</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Linux/">Linux</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/01/26/ACM/%E9%A2%98%E8%A7%A3/P1439%E3%80%8C%E3%80%90%E6%A8%A1%E6%9D%BF%E3%80%91%E6%9C%80%E9%95%BF%E5%85%AC%E5%85%B1%E5%AD%90%E5%BA%8F%E5%88%97%E3%80%8D/">P1439「【模板】最长公共子序列」</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/01/26/ACM/%E9%A2%98%E8%A7%A3/P1439%E3%80%8C%E3%80%90%E6%A8%A1%E6%9D%BF%E3%80%91%E6%9C%80%E9%95%BF%E5%85%AC%E5%85%B1%E5%AD%90%E5%BA%8F%E5%88%97%E3%80%8D/">
-          
-          
-            
-          
-          1. 题目
-题目链接：P1439「【模板】最长公共子序列」 。
-题目描述
-给出 1,2,…,n1,2,\ldots,n1,2,…,n 的两个排列 P1P_1P1​  和 P2P_2P2​，求它们的最长公共子序列。
-输入格式
-第一行是一个数 nnn。
-接下来两行，每行为 nnn 个数，为自然数 1,2,…,n1,2,\ldots,n1,2,…,n 的一个排列。
-输出格式
-一个数，即最长公共子序列的长
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-26 01:19" pubdate>
-              2021-01-26
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/ACM/">ACM</a>
-            
-              <a href="/categories/ACM/%E9%A2%98%E8%A7%A3/">题解</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/ACM/">ACM</a>
-            
-              <a href="/tags/%E9%A2%98%E8%A7%A3/">题解</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/01/23/English/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%8B%B1%E8%AF%AD/">计算机英语</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/01/23/English/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%8B%B1%E8%AF%AD/">
-          
-          
-            
-          
-          2020-07-24
-
-in itself : 本身、实质上
-It is up to sb. to do sth. : 由某人来做某事
-nothing but = nothing else than : 只、不过
-
-2020-08-24
-
-feel a nagging tension ：感到紧张
-tactic ：策略
-polymorphic ：多态的
-noninvasively ：非侵袭性地
-on
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-23 19:30" pubdate>
-              2021-01-23
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/English/">English</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/English/">English</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/01/23/TeX/LaTeX/LaTeX%E4%BF%AE%E9%A5%B0%E7%AC%A6%E5%8F%B7/LaTeX%E4%BF%AE%E9%A5%B0%E7%AC%A6%E5%8F%B7/">LaTeX修饰符号</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/01/23/TeX/LaTeX/LaTeX%E4%BF%AE%E9%A5%B0%E7%AC%A6%E5%8F%B7/LaTeX%E4%BF%AE%E9%A5%B0%E7%AC%A6%E5%8F%B7/">
-          
-          
-            
-          
-          【注】摘自 Scott Pakin 的 《The Comprehensive LaTeX Symbol List》 。
-
-
-
-
-
-
-
-
-
-
-
-
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-23 13:28" pubdate>
-              2021-01-23
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/TeX/">TeX</a>
-            
-              <a href="/categories/TeX/LaTeX/">LaTeX</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/TeX/">TeX</a>
-            
-              <a href="/tags/LaTeX/">LaTeX</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/01/23/TeX/LaTeX/LaTeX%E5%85%B6%E4%BB%96%E7%AC%A6%E5%8F%B7/LaTeX%E5%85%B6%E4%BB%96%E7%AC%A6%E5%8F%B7/">LaTeX其他符号</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/01/23/TeX/LaTeX/LaTeX%E5%85%B6%E4%BB%96%E7%AC%A6%E5%8F%B7/LaTeX%E5%85%B6%E4%BB%96%E7%AC%A6%E5%8F%B7/">
-          
-          
-            
-          
-          【注】摘自 Scott Pakin 的 《The Comprehensive LaTeX Symbol List》 。
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-23 13:28" pubdate>
-              2021-01-23
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/TeX/">TeX</a>
-            
-              <a href="/categories/TeX/LaTeX/">LaTeX</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/TeX/">TeX</a>
-            
-              <a href="/tags/LaTeX/">LaTeX</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
 
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/#board">3</a><a class="page-number" href="/page/4/#board">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/31/#board">31</a><a class="extend next" rel="next" href="/page/3/#board"><i class="iconfont icon-arrowright"></i></a>
+      <a class="extend prev" rel="prev" href="/"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/#board">3</a><a class="page-number" href="/page/4/#board">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/34/#board">34</a><a class="extend next" rel="next" href="/page/3/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 

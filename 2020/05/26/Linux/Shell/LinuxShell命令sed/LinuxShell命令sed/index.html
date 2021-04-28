@@ -7,8 +7,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
-  <link rel="icon" href="/img/favicon.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/self/portrait.jpg">
+  <link rel="icon" href="/img/self/portrait.jpg">
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -200,7 +200,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      1.3k 字
+      1.4k 字
     </span>
   
 
@@ -210,7 +210,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      15
+      16
        分钟
     </span>
   
@@ -280,7 +280,7 @@
 <li><code>#</code> ：注释该行 <code>#</code> 后的所有内容。</li>
 <li><code>&amp;</code> ：代表替换命令中匹配到的模式。</li>
 <li><code>$</code> ：代表数据流中的最后一行（也可直接用数字指定行，用 <code>x,y</code> 指定第 <code>x</code> 到第 <code>y</code> 行）。</li>
-<li><code>\( regexp \)</code> ：定义了替换模式中的子模式（之后可用 <code>\x</code> 来引用第 <code>x</code> 个匹配的子模式）。</li>
+<li><code>\( regexp \)</code> ：定义了替换模式中的子模式（之后可用 <code>\x</code> 来引用第 <code>x</code> 个匹配的子模式）。当 sed 使用了 <strong>ERE</strong> 引擎后，子模式按照 ERE 中的规范为 <code>( )</code>，不再需要转义。</li>
 <li><code>&#123;&#125;</code> ：组合多条 sed 脚本命令（多条脚本命令用 <code>;</code> 分隔）。</li>
 <li><code>a\ text</code> ：在指定行后追加内容为 text 的新行。</li>
 <li><code>i\ text</code> ：在指定行前追加内容为 text 的新行。</li>
@@ -338,6 +338,12 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;XYZZYX&quot;</span> | sed -f script.sed<br></code></pre></td></tr></table></figure>
 <p>（3）显示结果如下：</p>
 <figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">xyzzyx</span><br></code></pre></td></tr></table></figure>
+<ul>
+<li>将 github 仓库的 https 协议链接转换成 ssh 协议链接：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sed -Ei <span class="hljs-string">&#x27;s/http[s]?:\/\/[^[:space:]\/]+\/([^[:space:]]+)/git@github.com:\1/&#x27;</span> testfile<br></code></pre></td></tr></table></figure>
+<p>其中，testfile 为包含 github 仓库的 https 协议链接的文件。</p>
+
             </div>
             <hr>
             <div>
