@@ -1,0 +1,1106 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/self/portrait.jpg">
+  <link rel="icon" href="/img/self/portrait.jpg">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="一个记录各种笔记的小匣子^-^">
+  <meta name="author" content="BlueHeart0621">
+  <meta name="keywords" content="頑張れ">
+  
+    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script> <script src="/live2d-widget/autoload.js" type="text/javascript"></script> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
+  
+  <title>服务设计原则 - お前はどこまで見えている</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"blueheart0621.github.io","root":"/","version":"1.8.9","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":"§"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":"c194cf0c8cbc33bfb846ba1329537d81","google":"G-SXJN0942X9","gtag":"G-D3DEHLLP3W","tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"A24MlA4oV7hlze3uNQiXDAIi-MdYXbMMI","app_key":"3moFK5Ao3TD4rjA1HCmPTSm6","server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>お前はどこまで見えている</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/covers/%E5%9B%9B%E6%9C%88%E6%98%AF%E4%BD%A0%E7%9A%84%E8%B0%8E%E8%A8%80-1.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="服务设计原则">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2020-05-26 10:44" pubdate>
+        2020年5月26日 上午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      3.6k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      37
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- LeanCloud 统计文章PV -->
+      <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="leancloud-page-views"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">服务设计原则</h1>
+            
+            <div class="markdown-body">
+              <h2 id="1-标准化服务合约">1. 标准化服务合约</h2>
+<h3 id="1-1-服务合约">1.1 服务合约</h3>
+<ul>
+<li>建立了与服务交互有关的术语</li>
+<li>提供了技术限制和需求，及服务的拥有者希望对外公布的所有语义信息</li>
+</ul>
+<p><img src="/img/ServiceComputing/%E6%9C%8D%E5%8A%A1%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/%E6%9C%8D%E5%8A%A1%E5%90%88%E7%BA%A6.png" srcset="/img/loading.gif" lazyload alt="服务合约" /></p>
+<h3 id="1-2-标准化服务合约">1.2 标准化服务合约</h3>
+<ul>
+<li>使用形式化或者标准化的合约</li>
+</ul>
+<blockquote>
+<ol>
+<li>服务功能描述的标准化</li>
+<li>服务数据表示的标准化</li>
+</ol>
+<blockquote>
+<ul>
+<li>提倡尽量保持不同服务之间、在数据总体模型和特定数据类型之间的一致性</li>
+</ul>
+<blockquote>
+<ol>
+<li>非标准化的服务数据表示将导致频繁的数据转换</li>
+<li>Schema 被单独设计和实现，与使用它的服务操作分离</li>
+<li>采用“Schema 集中化”的设计模式，倡导对每个信息集合定义一个“官方”的 Schema</li>
+<li>可以将一个企业划分为多个分离的领域，每个领域都可以被独立地进行标准化和治理</li>
+</ol>
+</blockquote>
+<ul>
+<li>除集中式的 Schema 外，也常常需要提供特定服务相关类型的额外的 Schema</li>
+</ul>
+</blockquote>
+<ol start="3">
+<li>服务策略的标准化</li>
+</ol>
+<blockquote>
+<ul>
+<li>WS-Policy 定义为服务合约添加了一个单独的潜在抽象层次</li>
+<li>使得逻辑能以单独的策略断言的形式存在于物理上独立的策略定义文档中</li>
+<li>多层次的标准化</li>
+</ul>
+<blockquote>
+<ol>
+<li>专用的断言词汇</li>
+<li>参数和嵌套策略</li>
+<li>策略的模块化和集中化</li>
+<li>结构化标准</li>
+</ol>
+</blockquote>
+</blockquote>
+</blockquote>
+<ul>
+<li>其他的设计原则也会直接影响到合约的定位、设计以及最终的使用</li>
+</ul>
+<h3 id="2-3-合约与服务设计">2.3 合约与服务设计</h3>
+<ul>
+<li>数据表示标准化和转换的避免</li>
+</ul>
+<blockquote>
+<p>在对服务记性集成时，统一的数据结构减少转换环节</p>
+</blockquote>
+<ul>
+<li>标准化与粒度</li>
+</ul>
+<blockquote>
+<ol>
+<li>标准化带来合适的粒度</li>
+<li>服务级别的粒度通常受到服务模型的选择的影响</li>
+<li>设计标准引入或改变服务操作的粒度</li>
+<li>设计标准引入或改变数据的粒度</li>
+</ol>
+</blockquote>
+<ul>
+<li>标准化服务合约与服务模型</li>
+</ul>
+<blockquote>
+<ol>
+<li>以不同的标准适应不同的服务模型</li>
+<li>通用类型模板</li>
+</ol>
+<blockquote>
+<ul>
+<li>以实体为核心的服务</li>
+<li>应用服务</li>
+<li>以任务为核心的服务</li>
+</ul>
+</blockquote>
+<ol start="3">
+<li>为同一种服务模型应用同一组设计标准和命名惯例</li>
+</ol>
+</blockquote>
+<ul>
+<li>服务合约设计的相关风险</li>
+</ul>
+<blockquote>
+<ol>
+<li>版本化（服务合约的演化）</li>
+</ol>
+<blockquote>
+<ul>
+<li>服务实施后，就可能建立起与服务消费者之间的依赖关系</li>
+<li>底层逻辑越是可复用，那些需要消费它的程度的数量和消费频率就会越大</li>
+<li>可扩展可能引入“破坏”既定合约的重大变化，从而导致发布新的服务版本的要求</li>
+</ul>
+</blockquote>
+<ol start="2">
+<li>技术依赖</li>
+</ol>
+<blockquote>
+<ul>
+<li>不同的编程语言和开发平台来实现</li>
+</ul>
+<blockquote>
+<ol>
+<li>使用基于构件的系统并通过增强的 RPC 技术以支持面向服务</li>
+<li>Web Service 平台以及它的非专用通信框架</li>
+</ol>
+</blockquote>
+<ul>
+<li>操作性系统层的技术性变化导致服务合约变化</li>
+</ul>
+</blockquote>
+<ol start="3">
+<li>开发工具缺陷</li>
+</ol>
+<blockquote>
+<ul>
+<li>使用开发工具自动生成合约可能产生非标准化的服务合约</li>
+</ul>
+</blockquote>
+</blockquote>
+<h2 id="2-服务松散耦合">2. 服务松散耦合</h2>
+<h3 id="2-1-服务耦合（服务内及消费者依赖）">2.1 服务耦合（服务内及消费者依赖）</h3>
+<ul>
+<li>关注服务耦合在哪里发生</li>
+<li>关注一个服务组合中的各部分之间以及服务内部的各部分之间以及服务内部的各部分之间应该耦合到什么程度</li>
+</ul>
+<h3 id="2-2-服务松散耦合原则">2.2 服务松散耦合原则</h3>
+<p>服务的生命周期是一直要大于某个服务系统的生命周期。</p>
+<p><img src="/img/ServiceComputing/%E6%9C%8D%E5%8A%A1%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/%E6%9C%8D%E5%8A%A1%E4%B8%8E%E6%B6%88%E8%B4%B9%E8%80%85%E9%97%B4%E7%9A%84%E8%80%A6%E5%90%88%E5%85%B3%E7%B3%BB.png" srcset="/img/loading.gif" lazyload alt="服务与消费者间的耦合关系" /></p>
+<h3 id="2-3-服务合约耦合的类型">2.3 服务合约耦合的类型</h3>
+<ul>
+<li>“逻辑-合约”耦合（正面的、积极的耦合关系）</li>
+</ul>
+<blockquote>
+<ol>
+<li>服务逻辑到服务合约的耦合</li>
+<li>合约优先</li>
+</ol>
+<blockquote>
+<ul>
+<li>首先设计合约，然后再设计底层的方案逻辑</li>
+<li>允许对底层逻辑进行微调以支持服务合约</li>
+<li>底层逻辑的微调能够优化运行效率和增强服务的健壮性</li>
+</ul>
+</blockquote>
+<ol start="3">
+<li>“合约优先”的过程会造成服务逻辑对服务合约的紧密耦合</li>
+<li>服务合约对服务逻辑无耦合，在相同的服务合约下，可以替换服务逻辑</li>
+</ol>
+</blockquote>
+<ul>
+<li>“合约-逻辑”耦合（负面的耦合，反模式，应尽可能避免）</li>
+</ul>
+<blockquote>
+<ol>
+<li>服务合约到服务逻辑的耦合</li>
+<li>从现有的方案逻辑当中生成 Web Service</li>
+</ol>
+<blockquote>
+<ul>
+<li>合约设计中 WSDL 定义根据组件接口的定义自动生成</li>
+<li>XML Schema 从数据库表和其他数据模型中自动生成</li>
+</ul>
+</blockquote>
+<ol start="3">
+<li>往往会增加技术、功能和实现的耦合级别</li>
+<li>作为一种“反模式”，缩短服务合约生命周期，并限制服务的长期演化</li>
+</ol>
+</blockquote>
+<ul>
+<li>“合约-技术”耦合（不好的耦合）</li>
+</ul>
+<blockquote>
+<ol>
+<li>服务合约到其底层技术的耦合</li>
+<li>有的时候服务是作为传统专用组件存在的，这就需要服务合约与服务相关的通信技术紧密地耦合</li>
+<li>所产生的“合约-技术”耦合会限制潜在的消费者</li>
+</ol>
+</blockquote>
+<ul>
+<li>“合约-实现”耦合（不好的耦合）</li>
+</ul>
+<blockquote>
+<ol>
+<li>服务合约到其实现环境的耦合</li>
+<li>任何一个物理上发布的服务都会包含或者需要包含除了核心服务逻辑之外的一系列实现技术和产品，比如：</li>
+</ol>
+<blockquote>
+<ul>
+<li>物理数据库和相关的物理数据模型</li>
+<li>遗留系统 API</li>
+<li>用户和群组账户以及相关的物理目录结构</li>
+<li>物理服务器环境和相关的域名</li>
+<li>文件名和网络路径</li>
+</ul>
+</blockquote>
+<ol start="3">
+<li>实现相关的特性和细节可能会在服务合约的内容中体现出来，导致“合约-实现”耦合</li>
+</ol>
+</blockquote>
+<ul>
+<li>“合约-功能”耦合</li>
+</ul>
+<blockquote>
+<ol>
+<li>服务合约到其外部逻辑的耦合</li>
+<li>当由一个服务（更确切地说是一个服务操作）所封装的逻辑被专门设计为支持服务边界之外的功能体的时候，就可能产生“合约-功能”耦合’</li>
+<li>该耦合会导致服务的复用性较差</li>
+<li>常见的“合约-功能”耦合包括</li>
+</ol>
+<blockquote>
+<ul>
+<li>上层进程耦合</li>
+<li>“服务-消费者”耦合</li>
+<li>任务服务（特意的功能耦合）</li>
+</ul>
+</blockquote>
+</blockquote>
+<h3 id="2-4-服务消费者耦合的类型">2.4 服务消费者耦合的类型</h3>
+<ul>
+<li>“消费者-实现”耦合（不好的耦合）</li>
+</ul>
+<blockquote>
+<ol>
+<li>绕过服务合约，直接使用其他入口访问服务</li>
+</ol>
+</blockquote>
+<ul>
+<li>“消费者-合约”耦合</li>
+</ul>
+<blockquote>
+<ol>
+<li>本质上形成松散耦合跨服务关系的基础</li>
+<li>由于合约与其他因素的耦合关系而产生消费者与其他因素的直接和间接的耦合关系</li>
+</ol>
+</blockquote>
+<h3 id="2-5-服务松散耦合与服务设计">2.5 服务松散耦合与服务设计</h3>
+<ul>
+<li><strong>耦合与面向服务</strong>：“积极耦合” vs. “消极耦合”</li>
+<li><strong>服务松散耦合与粒度</strong>：粗粒度 vs. 细粒度</li>
+</ul>
+<blockquote>
+<ol>
+<li>过粗操作粒度，不必要的额外处理；过细操作粒度，过多服务往返开销。</li>
+<li>过粗数据粒度，接受无用的额外信息；过细数据粒度，没有足够信息，需要额外调用。</li>
+</ol>
+</blockquote>
+<ul>
+<li><strong>耦合与服务模型</strong>：实体服务、应用服务、任务服务、编排服务</li>
+</ul>
+<blockquote>
+<ol>
+<li>实体服务</li>
+</ol>
+<blockquote>
+<ul>
+<li>解耦的服务合约</li>
+<li>与业务实体本身高度耦合</li>
+</ul>
+</blockquote>
+<ol start="2">
+<li>应用服务</li>
+</ol>
+<blockquote>
+<ul>
+<li>往往是高度耦合的（实现耦合）</li>
+<li>通过标准化服务合约，避免“消费者-实现”的间接耦合</li>
+</ul>
+</blockquote>
+<ol start="3">
+<li>任务服务</li>
+</ol>
+<blockquote>
+<ul>
+<li>有时是在功能上耦合的</li>
+<li>有时构成“服务-消费者”耦合</li>
+</ul>
+</blockquote>
+<ol start="4">
+<li>编排服务</li>
+</ol>
+<blockquote>
+<ul>
+<li>避免技术耦合</li>
+<li>无法避免“合约-实现”耦合</li>
+</ul>
+</blockquote>
+</blockquote>
+<h3 id="2-6-服务松散耦合的相关风险">2.6 服务松散耦合的相关风险</h3>
+<ul>
+<li>“逻辑-合约”耦合的限制</li>
+</ul>
+<blockquote>
+<ol>
+<li>统一底层逻辑对应两个或者多个合约，从而建立多个入口，每一入口向不同类型的消费者暴露不同的服务能力</li>
+</ol>
+</blockquote>
+<ul>
+<li>数据类型耦合太“松散”</li>
+</ul>
+<blockquote>
+<ol>
+<li>为了强调服务的兼容性演化能力，通过过分简化合约，追求减少消费者依赖，仅确定了一些非常通用的数据类型（弱类型）</li>
+<li>验证并处理弱类型，增加服务所需的性能要求</li>
+<li>服务合约发布的信息越少，消费者程序就需要知道越多关于服务实现逻辑的信息，从而产生消极耦合</li>
+</ol>
+</blockquote>
+<h2 id="3-服务抽象（信息隐藏与元抽象类型）">3. 服务抽象（信息隐藏与元抽象类型）</h2>
+<ul>
+<li>服务发布的信息传达了它的目的和能力，并给潜在用户提供了关于该服务应该如何通过程序进行调用和使用的详细信息</li>
+<li>没有发布的服务信息用来保护它和未来用户之间形成的耦合关系的完整新，从而保障服务在合约的前提下进行演化的能力</li>
+<li>服务抽象原则就是为了获得信息隐藏的正确平衡点</li>
+</ul>
+<h3 id="3-1-服务抽象原则">3.1 服务抽象原则</h3>
+<ul>
+<li>服务合约中发布的信息越多，随后的“消费者-合约”耦合就会越深</li>
+<li>向负责设计服务消费程序的人呈现的信息越多，他们所知的底层逻辑、平台和服务相关的细节就会越多，导致事实上的“消费者-实现”耦合</li>
+</ul>
+<h3 id="3-2-服务元信息">3.2 服务元信息</h3>
+<ul>
+<li>元信息类型</li>
+</ul>
+<blockquote>
+<ol>
+<li>技术信息：描述底层服务逻辑的技术实现</li>
+</ol>
+<blockquote>
+<ul>
+<li>隐藏构建软件程序的技术细节是有益的，从而可以自由地进行技术上的变化而不影响现有的用户</li>
+<li>发布</li>
+</ul>
+<blockquote>
+<ol>
+<li>调用程序需要的技术</li>
+<li>与程序交互需要的技术</li>
+</ol>
+</blockquote>
+<ul>
+<li>隐藏</li>
+</ul>
+<blockquote>
+<ol>
+<li>写程序使用的编程语言</li>
+<li>程序使用的系统资源</li>
+</ol>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<ol start="2">
+<li>功能信息：描述服务可以做什么</li>
+</ol>
+<blockquote>
+<ul>
+<li>功能抽象决定了程序的哪些能力通过技术合约是可见的</li>
+</ul>
+</blockquote>
+</blockquote>
+<blockquote>
+<ol start="3">
+<li>程序逻辑信息：描述服务如何实现这些能力</li>
+</ol>
+<blockquote>
+<ul>
+<li>程序逻辑抽象（简称逻辑抽象）故意对外界隐藏程序的内部细节</li>
+</ul>
+</blockquote>
+</blockquote>
+<blockquote>
+<ol start="4">
+<li>服务质量信息：描述服务的行为、限制和交互需求</li>
+</ol>
+<blockquote>
+<ul>
+<li>服务质量数据被用来描述一个服务的行为性的、基于规则的、和可靠性等相关的元信息</li>
+<li>比如：</li>
+</ul>
+<blockquote>
+<ol>
+<li>确保服务及时响应的并发访问阈值</li>
+<li>可用性限制</li>
+<li>决定服务对不同类型输入数据的处理和响应的业务规则</li>
+</ol>
+</blockquote>
+<ul>
+<li>使用策略或 SLA 等文档加以描述</li>
+</ul>
+</blockquote>
+</blockquote>
+<ul>
+<li>不同类型的元数据可以不同的方法加以抽象，并使用不同的方式来描述和归档</li>
+</ul>
+<h3 id="3-3-服务抽象度量">3.3 服务抽象度量</h3>
+<ul>
+<li>合约内容的抽象级别（有效程度）</li>
+</ul>
+<blockquote>
+<ol>
+<li>详细的合约（暴露所有信息）</li>
+<li>简明的合约</li>
+<li>优化的合约</li>
+<li>混合的详细合约（服务能力位于不同的抽象级别）</li>
+</ol>
+</blockquote>
+<ul>
+<li>访问控制级别（源代码和设计规格）</li>
+</ul>
+<blockquote>
+<ol>
+<li>开放访问</li>
+<li>受控访问</li>
+<li>不可访问</li>
+</ol>
+</blockquote>
+<ul>
+<li>抽象级别与服务质量元信息<br />
+服务质量元信息也能够适用于抽象级别和访问控制级别</li>
+</ul>
+<h3 id="3-4-服务抽象-VS-服务封装">3.4 服务抽象 VS. 服务封装</h3>
+<ul>
+<li><strong>封装</strong>是指服务边界内部的逻辑、资源和信息（服务由合约及其所封装的东西组成）</li>
+<li><strong>抽象</strong>是指服务所封装的内容中，暴露给服务便捷之外的消费者程序的部分以及对他们隐藏的部分。抽象决定了封装逻辑中有多少是公开的</li>
+<li>在良好抽象的服务中，可以改变所封装的内容，而不会影响已经在使用该服务的消费者程序</li>
+</ul>
+<p><img src="/img/ServiceComputing/%E6%9C%8D%E5%8A%A1%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/%E6%9C%8D%E5%8A%A1%E5%B0%81%E8%A3%85%E4%B8%8E%E6%8A%BD%E8%B1%A1.png" srcset="/img/loading.gif" lazyload alt="服务封装与抽象" /></p>
+<ul>
+<li>封装遗留系统的服务</li>
+</ul>
+<blockquote>
+<ol>
+<li>抽象的程度可能需要依靠底层服务适配器和相应的遗留 API 来决定</li>
+<li>访问控制可能会很难实现</li>
+</ol>
+</blockquote>
+<ul>
+<li>封装定制组件的服务</li>
+</ul>
+<blockquote>
+<ol>
+<li>拥有定制的能力使得内容和访问抽象级别能够较好的定义</li>
+</ol>
+</blockquote>
+<ul>
+<li>封装服务的服务</li>
+</ul>
+<blockquote>
+<ol>
+<li>除了服务本身外，所封装的子服务也对内容和访问抽象级别有所影响</li>
+</ol>
+</blockquote>
+<h3 id="3-4-服务抽象与非技术合约文档">3.4 服务抽象与非技术合约文档</h3>
+<ul>
+<li>
+<p>除技术服务合约内容、源代码和设计规格的访问以外，还需讨论对非技术合约文档的抽象</p>
+</li>
+<li>
+<p>非技术的服务描述（如 SLA）为技术合约增加了额外的规则、约束、策略、保证和担保等，这些文档由服务拥有者建立，并应当被服务消费者程序设计人员所知晓</p>
+</li>
+<li>
+<p>如非技术的服务描述过于详细（依赖于当前实现），也为影响到服务的演化</p>
+</li>
+</ul>
+<h3 id="3-5-服务抽象与粒度">3.5 服务抽象与粒度</h3>
+<ul>
+<li>
+<p>服务抽象鼓励发布尽可能少的细节，以便在服务随时间而演化的过程中给服务的拥有者最大的自由度，这可能导致粗粒度的约束级别</p>
+</li>
+<li>
+<p>在使用策略时，可能导致暴露服务底层的逻辑、行为和参数选择的细节</p>
+</li>
+<li>
+<p>其他的面向服务原则（如服务松散耦合和服务自治）也提倡在服务合约中减少约束</p>
+</li>
+</ul>
+<h3 id="3-6-服务抽象与服务模型">3.6 服务抽象与服务模型</h3>
+<ul>
+<li>
+<p>实体服务与应用服务<br />
+抽象程度往往和所封装的定制逻辑<br />
+遗留 API 等密切相关；需要严格的访问控制，以确保服务合约的寿命和底层逻辑的可复用性</p>
+</li>
+<li>
+<p>任务服务与编排服务<br />
+无法达成过高的抽象级别</p>
+</li>
+</ul>
+<h3 id="3-7-服务抽象的相关风险">3.7 服务抽象的相关风险</h3>
+<ul>
+<li>多消费者耦合的要求</li>
+</ul>
+<blockquote>
+<ol>
+<li>不同消费者可能需要不同的技术接口细节，所需的抽象级别也不尽相同</li>
+<li>使用合约反规范化，提供不同界别的抽象级别</li>
+</ol>
+</blockquote>
+<ul>
+<li>认为误判</li>
+</ul>
+<blockquote>
+<ol>
+<li>过于抽象的服务合约导致曲解或不同充分理解一个服务，从而丧失潜在的复用机会</li>
+<li>过于具体的服务合约导致对服务的行为做出与服务相关的假设，从而导致实现偶合</li>
+</ol>
+</blockquote>
+<ul>
+<li>安全和隐私的考虑</li>
+</ul>
+<blockquote>
+<ol>
+<li>服务合约可能暴露私有或者敏感信息</li>
+</ol>
+<blockquote>
+<ul>
+<li>不同的使用环境（组织内部 vs. 组织外部）</li>
+<li>并发和冗余的服务合约内容已解决这一问题</li>
+</ul>
+</blockquote>
+</blockquote>
+<h2 id="4-服务可复用性">4. 服务可复用性</h2>
+<h2 id="5-服务自治">5. 服务自治</h2>
+<h2 id="6-服务无状态性">6. 服务无状态性</h2>
+<h2 id="7-服务可发现性">7. 服务可发现性</h2>
+<h2 id="8-服务可组合性">8. 服务可组合性</h2>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/ServiceComputing/">ServiceComputing</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/ServiceComputing/">ServiceComputing</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/05/26/ServiceComputing/%E6%9C%8D%E5%8A%A1%E7%94%9F%E6%80%81%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%9E%84%E5%BB%BA/%E6%9C%8D%E5%8A%A1%E7%94%9F%E6%80%81%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%9E%84%E5%BB%BA/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">服务生态系统的构建</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/05/26/VSCode/VSCode%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/VSCode%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/">
+                        <span class="hidden-mobile">VSCode常用快捷键</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.lazyComments('valine', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function () {
+        new Valine({
+          el: "#valine",
+          app_id: "kJgPdAqoTM5JKOdTdYLmXqq5-gzGzoHsz",
+          app_key: "X4MnxJgITkyJVettcgYX6ebP",
+          placeholder: "说点什么",
+          path: window.location.pathname,
+          avatar: "retro",
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: false,
+          recordIP: false,
+          serverURLs: "",
+        });
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the
+    <a target="_blank" href="https://valine.js.org" rel="nofollow noopener noopener">comments powered by Valine.</a>
+  </noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+      <div class="col-lg-7 mx-auto nopadding-x-md">
+        <div class="container custom mx-auto">
+          <script src="https://myhkw.cn/api/player/161389264877" id="myhk" key="161389264877" m="1"></script>
+        </div>
+      </div>
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+
+  <script defer src="/js/leancloud.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- KaTeX -->
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" />
+  
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/mermaid@8.8.3/dist/mermaid.min.js" ></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({"theme":"default"});
+    }
+  </script>
+
+
+
+
+  
+    <!-- Baidu Analytics -->
+    <script defer>
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?c194cf0c8cbc33bfb846ba1329537d81";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  
+    <!-- Google Analytics -->
+    <script defer>
+      window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) };
+      ga.l = +new Date;
+      ga('create', 'G-SXJN0942X9', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+  
+
+  
+    <!-- Google gtag.js -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D3DEHLLP3W"></script>
+    <script defer>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-D3DEHLLP3W');
+    </script>
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

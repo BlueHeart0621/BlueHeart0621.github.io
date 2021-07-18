@@ -1,0 +1,924 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/self/portrait.jpg">
+  <link rel="icon" href="/img/self/portrait.jpg">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="一个记录各种笔记的小匣子^-^">
+  <meta name="author" content="BlueHeart0621">
+  <meta name="keywords" content="頑張れ">
+  
+    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script> <script src="/live2d-widget/autoload.js" type="text/javascript"></script> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
+  
+  <title>引论 - お前はどこまで見えている</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"blueheart0621.github.io","root":"/","version":"1.8.9","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":"§"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":"c194cf0c8cbc33bfb846ba1329537d81","google":"G-SXJN0942X9","gtag":"G-D3DEHLLP3W","tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"A24MlA4oV7hlze3uNQiXDAIi-MdYXbMMI","app_key":"3moFK5Ao3TD4rjA1HCmPTSm6","server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>お前はどこまで見えている</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/covers/%E5%9B%9B%E6%9C%88%E6%98%AF%E4%BD%A0%E7%9A%84%E8%B0%8E%E8%A8%80-1.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="引论">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2020-05-26 10:44" pubdate>
+        2020年5月26日 上午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      2.2k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      23
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- LeanCloud 统计文章PV -->
+      <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="leancloud-page-views"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">引论</h1>
+            
+            <div class="markdown-body">
+              <h2 id="1-主要内容">1. 主要内容</h2>
+<ul>
+<li>引论</li>
+<li>高级语言及其文法</li>
+<li>语法分析</li>
+<li>自顶向下的语法分析</li>
+<li>自底向上的语法分析</li>
+<li>语法制导翻译与属性文法</li>
+<li>语义分析与中间代码生成</li>
+<li>符号表管理</li>
+<li>运行时的存储组织</li>
+<li>代码优化</li>
+<li>代码生成</li>
+</ul>
+<h2 id="2-程序设计语言">2. 程序设计语言</h2>
+<ul>
+<li>
+<p>机器语言与汇编语言：01 代码与助记符，更接近于计算机硬件指令系统的工作</p>
+</li>
+<li>
+<p>高级语言：其表示方法更接近于带解决的表示方法</p>
+</li>
+<li>
+<p>命令语言：控制系统的工作，以功能封装为特征（如 UNIX 上的 shell）</p>
+</li>
+</ul>
+<h2 id="3-程序设计语言的分类">3. 程序设计语言的分类</h2>
+<ul>
+<li>强制性（命令式）语言（Imperative Language)</li>
+</ul>
+<blockquote>
+<ol>
+<li>通过指明一系列可执行的运算及运算的次序来描述计算过程的语言</li>
+<li>程序的层次性和抽象性不高</li>
+<li>FORTRAN（段结构）、BASIC、Pascal（嵌套结构）、C <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>⋯</mo></mrow><annotation encoding="application/x-tex">\cdots</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.31em;vertical-align:0em;"></span><span class="minner">⋯</span></span></span></span></li>
+</ol>
+</blockquote>
+<ul>
+<li>申述性语言（Declarative Language）</li>
+</ul>
+<blockquote>
+<ol>
+<li>着重描述要处理什么，而非如何处理的非命令式语言</li>
+<li>函数（应用）式语言（Functional Language），基本运算单位是函数（如 LISP、ML <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>⋯</mo></mrow><annotation encoding="application/x-tex">\cdots</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.31em;vertical-align:0em;"></span><span class="minner">⋯</span></span></span></span>）</li>
+<li>逻辑式（基于规则）语言（Logical Language），基本运算单位是谓词（如 Prolog、Yacc <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>⋯</mo></mrow><annotation encoding="application/x-tex">\cdots</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.31em;vertical-align:0em;"></span><span class="minner">⋯</span></span></span></span>）</li>
+<li>并发式语言（Concurrent Language），着重如何描述潜在的并行机制（如 ErLang、Fortran+MPI <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>⋯</mo></mrow><annotation encoding="application/x-tex">\cdots</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.31em;vertical-align:0em;"></span><span class="minner">⋯</span></span></span></span>）</li>
+</ol>
+</blockquote>
+<ul>
+<li>面向对象语言（Object-Oriented Language）</li>
+</ul>
+<blockquote>
+<ol>
+<li>以对象为核心（如 Smalltalk、C++、Java、Ada（程序包）<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>⋯</mo></mrow><annotation encoding="application/x-tex">\cdots</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.31em;vertical-align:0em;"></span><span class="minner">⋯</span></span></span></span> ）</li>
+<li>具有认识性（对象）、类别性（类）、多态性和继承性</li>
+</ol>
+</blockquote>
+<h2 id="4-程序语言的翻译">4. 程序语言的翻译</h2>
+<ul>
+<li>翻译程序：将一种语言描述的程序（源程序）翻译成等价的另一种语言描述的程序（目标程序）</li>
+</ul>
+<p><img src="/img/CompilingPrinciple/%E5%BC%95%E8%AE%BA/%E7%BF%BB%E8%AF%91%E7%A8%8B%E5%BA%8F.png" srcset="/img/loading.gif" lazyload alt="翻译程序" /></p>
+<ul>
+<li>解释程序：一边解释一边执行的翻译程序</li>
+</ul>
+<p><img src="/img/CompilingPrinciple/%E5%BC%95%E8%AE%BA/%E8%A7%A3%E9%87%8A%E7%A8%8B%E5%BA%8F.png" srcset="/img/loading.gif" lazyload alt="解释程序" /></p>
+<ul>
+<li>编译程序：将源程序完整地转换成机器语言程序或汇编语言程序，然后再执行翻译程序（比如汇编程序）进行处理转换为机器语言程序（高级语言程序 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>→</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mrel">→</span></span></span></span> 汇编/机器语言程序）</li>
+</ul>
+<p><img src="/img/CompilingPrinciple/%E5%BC%95%E8%AE%BA/%E7%BC%96%E8%AF%91%E7%A8%8B%E5%BA%8F.png" srcset="/img/loading.gif" lazyload alt="编译程序" /></p>
+<p>【注】解释程序和编译程序都属于翻译程序。</p>
+<blockquote>
+<p><strong>常见翻译程序</strong></p>
+<ol>
+<li>汇编语言（Assembler）</li>
+<li>交叉汇编程序（Cross Assembler）</li>
+<li>反汇编程序（Disassembler）</li>
+<li>交叉编译程序（Cross Compiler）</li>
+<li>反编译程序（Decompiler）</li>
+<li>可变目标编译程序（Retargetable Compiler）</li>
+<li>并行编译程序（Parallelizing Compiler）</li>
+<li>诊断编译程序（Diagnostic Compiler）</li>
+<li>优化编译程序（Optimizing Compiler）</li>
+</ol>
+</blockquote>
+<ul>
+<li>编译系统：编译系统 = 编译程序 + 运行系统（支撑环境、运行库等）</li>
+</ul>
+<p><img src="/img/CompilingPrinciple/%E5%BC%95%E8%AE%BA/%E7%BF%BB%E8%AF%91%E7%A8%8B%E5%BA%8F%E6%B1%87%E6%80%BB.png" srcset="/img/loading.gif" lazyload alt="翻译程序汇总" /></p>
+<h2 id="5-编译程序总体结构">5. 编译程序总体结构</h2>
+<p><img src="/img/CompilingPrinciple/%E5%BC%95%E8%AE%BA/%E7%BC%96%E8%AF%91%E7%A8%8B%E5%BA%8F%E6%80%BB%E4%BD%93%E7%BB%93%E6%9E%84.png" srcset="/img/loading.gif" lazyload alt="编译程序总体结构" /></p>
+<ul>
+<li>词法分析</li>
+</ul>
+<blockquote>
+<ol>
+<li>词法分析由词法分析器（Lexical Analyzer）完成，词法分析器又称为扫描器（Scanner）</li>
+<li>词法分析器从左到右扫描组成源程序的字符串，并将其转换为单词（token）串，同时检查词法错误，进行标记符登记（符号表管理）</li>
+<li><strong>输入</strong> ：字符串<br />
+<strong>输出</strong> ：序对 ——（种别码，属性值），其中，属性值为 token 的机内表示</li>
+</ol>
+</blockquote>
+<ul>
+<li>语法分析</li>
+</ul>
+<blockquote>
+<ol>
+<li>语法分析器由语法分析器（Syntax Analyzer）完成，语法分析器又叫 Parser</li>
+<li>功能：</li>
+</ol>
+<blockquote>
+<ul>
+<li>Parser 实现「组词成句」（将词组成各类语法成分：表达式、因子、项、语句、子程序 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>⋯</mo></mrow><annotation encoding="application/x-tex">\cdots</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.31em;vertical-align:0em;"></span><span class="minner">⋯</span></span></span></span> ）</li>
+<li>构造分析树</li>
+<li>指出语法错误</li>
+<li>指导翻译</li>
+</ul>
+</blockquote>
+<ol start="3">
+<li><strong>输入</strong> ：token 序列<br />
+<strong>输出</strong> ：语法成分</li>
+</ol>
+</blockquote>
+<ul>
+<li>语义分析</li>
+</ul>
+<blockquote>
+<ol>
+<li>语义分析一般和语法分析同时进行，称为语法制导翻译（Syntax-Directed Translation）</li>
+<li>功能：分析由语法分析器识别出来的语法成分的语义</li>
+</ol>
+<blockquote>
+<ul>
+<li>获取标识符的属性：类型、作用域等</li>
+<li>语义检查：运算的合法性、取值范围等</li>
+<li>子程序的静态绑定：代码的相对地址</li>
+<li>变量的静态绑定：数据的相对地址</li>
+</ul>
+</blockquote>
+</blockquote>
+<ul>
+<li>中间代码生成</li>
+</ul>
+<blockquote>
+<ol>
+<li>中间代码表示</li>
+</ol>
+<blockquote>
+<ul>
+<li>后缀表达式（逆波兰表达式）</li>
+<li>前缀表达式（波兰表达式）</li>
+<li>四元式表示（三地址码）</li>
+<li>三元式表示</li>
+</ul>
+</blockquote>
+<ol start="2">
+<li>中间代码特点</li>
+</ol>
+<blockquote>
+<ul>
+<li>简单规范</li>
+<li>与机器无关</li>
+<li>易于优化与转换</li>
+</ul>
+</blockquote>
+</blockquote>
+<ul>
+<li>代码优化</li>
+</ul>
+<blockquote>
+<ol>
+<li>代码优化是指对中间代码进行优化处理，式程序运行能够尽量节省存储空间，更有效地利用机器资源，使得程序的运行速度更快，效率更高（【注】这种优化变换必须是等价的）。代码优化包括：与机器无关的优化和与机器有关的优化</li>
+<li>与机器无关的优化</li>
+</ol>
+<blockquote>
+<p>局部优化：常量合并、公共子表达式的提取等<br />
+循环优化：强度削减（较快操作代替较慢操作）、代码外提（循环不变量提出循环）</p>
+</blockquote>
+<ol start="3">
+<li>与机器有关的优化</li>
+</ol>
+<blockquote>
+<p>寄存器的利用：常用量放入寄存器，减少访存次数<br />
+体系结构：MIMD、SIMD、SPMD、向量机、流水机<br />
+存储策略：根据算法访存的要求安排（Cache、并行存储体系——减少访问冲突）<br />
+任务划分：按运行的算法及体系结构，划分子任务（MPMD）</p>
+</blockquote>
+</blockquote>
+<ul>
+<li>目标代码生成</li>
+</ul>
+<blockquote>
+<ol>
+<li>将中间代码转换成目标机上的机器指令代码或汇编代码</li>
+</ol>
+<blockquote>
+<ul>
+<li>确定源语言的各种语法成分的目标代码结构（机器指令组/汇编语句组）</li>
+<li>制定从中间代码到目标代码的翻译策略或算法</li>
+</ul>
+</blockquote>
+<ol start="2">
+<li>目标代码的形式</li>
+</ol>
+<blockquote>
+<ul>
+<li>具有绝对地址的机器指令</li>
+<li>汇编语言形式的目标程序</li>
+<li>模块结构的机器指令（需要链接程序）</li>
+</ul>
+</blockquote>
+</blockquote>
+<ul>
+<li>表格管理</li>
+</ul>
+<blockquote>
+<ol>
+<li>管理各种符号表（常数、标号、变量、过程、结构 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>⋯</mo></mrow><annotation encoding="application/x-tex">\cdots</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.31em;vertical-align:0em;"></span><span class="minner">⋯</span></span></span></span> ），查、填（登记、查找）源程序中出现的符号和编译程序生成的符号，为编译的各个阶段提供信息</li>
+</ol>
+<blockquote>
+<ul>
+<li>辅助语法检查、语义检查</li>
+<li>完成静态绑定、管理编译过程</li>
+</ul>
+</blockquote>
+<ol start="2">
+<li>Hash 表、链表等各种表的查、填技术</li>
+<li>「数据结构」与「算法」</li>
+</ol>
+</blockquote>
+<ul>
+<li>错误处理</li>
+</ul>
+<blockquote>
+<ol>
+<li>进行各种错误的检查、报告、纠正，以及相应的续编译处理（比如错误的定位与局部化）</li>
+</ol>
+<blockquote>
+<p>词法：拼写 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>⋯</mo></mrow><annotation encoding="application/x-tex">\cdots</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.31em;vertical-align:0em;"></span><span class="minner">⋯</span></span></span></span><br />
+语法：语句结构、表达式结构 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>⋯</mo></mrow><annotation encoding="application/x-tex">\cdots</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.31em;vertical-align:0em;"></span><span class="minner">⋯</span></span></span></span><br />
+语义：类型不匹配、参数不匹配</p>
+</blockquote>
+</blockquote>
+<h2 id="6-模块分类">6. 模块分类</h2>
+<p>8 项功能对应 8 个模块：</p>
+<ul>
+<li>分析：词法分析、语法分析、语义分析</li>
+<li>综合：中间代码生成、代码优化、目标代码生成</li>
+<li>辅助：符号表管理、出错处理</li>
+</ul>
+<h2 id="7-编译程序的组织">7. 编译程序的组织</h2>
+<ul>
+<li>根据系统资源的状况、运行目标的要求 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>⋯</mo></mrow><annotation encoding="application/x-tex">\cdots</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.31em;vertical-align:0em;"></span><span class="minner">⋯</span></span></span></span>，可以将一个编译程序设计成多遍（Pass）扫描的形式，在每一遍扫描中，完成不同的任务。单遍代码不太有效；遍可以和阶段相对应，也可以和阶段无关</li>
+</ul>
+<blockquote>
+<p>比如，首遍构造语法树、二遍处理中间表示、增加信息等</p>
+</blockquote>
+<ul>
+<li>编译程序的设计目标</li>
+</ul>
+<blockquote>
+<ol>
+<li>规模小、速度快、诊断能力强、可靠性高、可移植性好、可扩充性好</li>
+<li>目标程序也要规模小、执行速度快</li>
+</ol>
+</blockquote>
+<ul>
+<li>编译系统规模较大，可移植性很重要。为提供可移植性，将编译程序划分为前端和后端</li>
+</ul>
+<blockquote>
+<ol>
+<li>前端</li>
+</ol>
+<blockquote>
+<p>与源语言有关、与目标机无关的部分<br />
+词法分析、语法分析、语义分析、中间代码生成、与机器无关的代码优化</p>
+</blockquote>
+<ol start="2">
+<li>后端</li>
+</ol>
+<blockquote>
+<p>与目标机有关的部分<br />
+与机器有关的代码优化、目标代码生成</p>
+</blockquote>
+</blockquote>
+<h2 id="8-编译程序的生成">8. 编译程序的生成</h2>
+<ul>
+<li>
+<p>如何实现编译器？：自展——使用语言提供的功能来编译该语言自身</p>
+</li>
+<li>
+<p>T 形图：表示语言翻译过程<br />
+<img src="/img/CompilingPrinciple/%E5%BC%95%E8%AE%BA/T%E5%BD%A2%E5%9B%BE.png" srcset="/img/loading.gif" lazyload alt="T形图" /><br />
+其含义为：源语言通过实现语言翻译为目标语言</p>
+</li>
+<li>
+<p>自展</p>
+</li>
+</ul>
+<blockquote>
+<p>问题：如何在一个机器上实现 C 语言编译器？<br />
+<img src="/img/CompilingPrinciple/%E5%BC%95%E8%AE%BA/%E5%AE%9E%E7%8E%B0C%E8%AF%AD%E8%A8%80%E7%BC%96%E8%AF%91%E5%99%A8T%E5%BD%A2%E5%9B%BE.png" srcset="/img/loading.gif" lazyload alt="实现C语言编译器T形图" /></p>
+</blockquote>
+<ul>
+<li>移植</li>
+</ul>
+<blockquote>
+<p>问题：如何将 A 机上的 C 语言编译器移植到 B 机上的 C 语言编译器？<br />
+<img src="/img/CompilingPrinciple/%E5%BC%95%E8%AE%BA/%E7%A7%BB%E6%A4%8DC%E8%AF%AD%E8%A8%80%E7%BC%96%E8%AF%91%E5%99%A8T%E5%BD%A2%E5%9B%BE.png" srcset="/img/loading.gif" lazyload alt="移植C语言编译器T形图" /></p>
+</blockquote>
+<ul>
+<li>交叉编译</li>
+</ul>
+<blockquote>
+<p>问题：如何利用 A 机上的 C 语言编译器实现新语言 NEW 的编译器？<br />
+<img src="/img/CompilingPrinciple/%E5%BC%95%E8%AE%BA/C%E8%AF%AD%E8%A8%80%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E6%96%B0%E8%AF%AD%E8%A8%80%E7%BC%96%E8%AF%91%E5%99%A8T%E5%BD%A2%E5%9B%BE.png" srcset="/img/loading.gif" lazyload alt="C语言交叉编译新语言编译器T形图" /></p>
+</blockquote>
+<ul>
+<li>编译程序自动生成</li>
+</ul>
+<blockquote>
+<ol>
+<li>词法分析器的自动生成程序</li>
+</ol>
+<blockquote>
+<p><strong>输入</strong>：词法（正规表达式）、识别动作（C程序段）<br />
+<strong>输出</strong>：yylex() 函数<br />
+<img src="/img/CompilingPrinciple/%E5%BC%95%E8%AE%BA/%E8%AF%8D%E6%B3%95%E5%88%86%E6%9E%90%E5%99%A8%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90%E7%A8%8B%E5%BA%8F.png" srcset="/img/loading.gif" lazyload alt="词法分析器自动生成程序" /></p>
+</blockquote>
+<ol start="2">
+<li>语法分析器的自动生成程序</li>
+</ol>
+<blockquote>
+<p><strong>输入</strong>：语法规则（产生式）、语义动作（C程序段）<br />
+<strong>输出</strong>：yyparse() 函数<br />
+<img src="/img/CompilingPrinciple/%E5%BC%95%E8%AE%BA/%E8%AF%AD%E6%B3%95%E5%88%86%E6%9E%90%E5%99%A8%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90%E7%A8%8B%E5%BA%8F.png" srcset="/img/loading.gif" lazyload alt="语法分析器自动生成程序" /></p>
+</blockquote>
+</blockquote>
+<h2 id="9-编译技术的应用">9. 编译技术的应用</h2>
+<p>将复杂数据看作一条语句：</p>
+<ul>
+<li>数据格式的分析：利用词法、语法分析方法</li>
+<li>数据处理的框架：基于语法制导的语义处理框架</li>
+</ul>
+<blockquote>
+<p>自然语言的理解和翻译：句子翻译、输入法、语音合成、翻译、内容过滤 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>⋯</mo></mrow><annotation encoding="application/x-tex">\cdots</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.31em;vertical-align:0em;"></span><span class="minner">⋯</span></span></span></span><br />
+语法制导的结构化编辑器<br />
+程序格式化工具<br />
+软件测试工具<br />
+程序理解工具<br />
+高级语言的翻译程序<br />
+<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>⋯</mo></mrow><annotation encoding="application/x-tex">\cdots</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.31em;vertical-align:0em;"></span><span class="minner">⋯</span></span></span></span></p>
+</blockquote>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/CompilingPrinciple/">CompilingPrinciple</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/CompilingPrinciple/">CompilingPrinciple</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/05/26/Python/pip%E4%B8%8B%E8%BD%BDPython%E5%BA%93%E9%80%9F%E5%BA%A6%E6%85%A2%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">pip下载Python库速度慢解决方案</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/05/26/ComputerSystemSecurity/UNIX%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6/UNIX%E8%AE%BF%E9%97%AE%E6%9D%83%E9%99%90/">
+                        <span class="hidden-mobile">UNIX访问权限</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.lazyComments('valine', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function () {
+        new Valine({
+          el: "#valine",
+          app_id: "kJgPdAqoTM5JKOdTdYLmXqq5-gzGzoHsz",
+          app_key: "X4MnxJgITkyJVettcgYX6ebP",
+          placeholder: "说点什么",
+          path: window.location.pathname,
+          avatar: "retro",
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: false,
+          recordIP: false,
+          serverURLs: "",
+        });
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the
+    <a target="_blank" href="https://valine.js.org" rel="nofollow noopener noopener">comments powered by Valine.</a>
+  </noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+      <div class="col-lg-7 mx-auto nopadding-x-md">
+        <div class="container custom mx-auto">
+          <script src="https://myhkw.cn/api/player/161389264877" id="myhk" key="161389264877" m="1"></script>
+        </div>
+      </div>
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+
+  <script defer src="/js/leancloud.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- KaTeX -->
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" />
+  
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/mermaid@8.8.3/dist/mermaid.min.js" ></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({"theme":"default"});
+    }
+  </script>
+
+
+
+
+  
+    <!-- Baidu Analytics -->
+    <script defer>
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?c194cf0c8cbc33bfb846ba1329537d81";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  
+    <!-- Google Analytics -->
+    <script defer>
+      window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) };
+      ga.l = +new Date;
+      ga('create', 'G-SXJN0942X9', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+  
+
+  
+    <!-- Google gtag.js -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D3DEHLLP3W"></script>
+    <script defer>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-D3DEHLLP3W');
+    </script>
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

@@ -1,0 +1,1166 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/self/portrait.jpg">
+  <link rel="icon" href="/img/self/portrait.jpg">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="一个记录各种笔记的小匣子^-^">
+  <meta name="author" content="BlueHeart0621">
+  <meta name="keywords" content="頑張れ">
+  
+    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script> <script src="/live2d-widget/autoload.js" type="text/javascript"></script> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
+  
+  <title>服务生态系统的构建 - お前はどこまで見えている</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"blueheart0621.github.io","root":"/","version":"1.8.9","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":"§"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":"c194cf0c8cbc33bfb846ba1329537d81","google":"G-SXJN0942X9","gtag":"G-D3DEHLLP3W","tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"A24MlA4oV7hlze3uNQiXDAIi-MdYXbMMI","app_key":"3moFK5Ao3TD4rjA1HCmPTSm6","server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>お前はどこまで見えている</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/covers/%E5%9B%9B%E6%9C%88%E6%98%AF%E4%BD%A0%E7%9A%84%E8%B0%8E%E8%A8%80-1.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="服务生态系统的构建">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2020-05-26 10:44" pubdate>
+        2020年5月26日 上午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      4.8k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      48
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- LeanCloud 统计文章PV -->
+      <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="leancloud-page-views"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">服务生态系统的构建</h1>
+            
+            <div class="markdown-body">
+              <h2 id="1-服务生命周期">1. 服务生命周期</h2>
+<h3 id="1-1-基本阶段">1.1 基本阶段</h3>
+<ul>
+<li>面向服务的分析</li>
+<li>面向服务的设计</li>
+<li>服务的开发</li>
+<li>服务的测试</li>
+<li>服务的部署</li>
+<li>服务的管理</li>
+</ul>
+<h3 id="1-2-业务逻辑-应用逻辑">1.2 业务逻辑/应用逻辑</h3>
+<ul>
+<li>业务逻辑源自于企业业务领域，也无需求的文档化实现</li>
+</ul>
+<blockquote>
+<ol>
+<li>一般被构造为表达这些需求的流程</li>
+<li>包括任何相关的约束、依赖及外部影响</li>
+</ol>
+</blockquote>
+<ul>
+<li>应用逻辑是组织成不同技术解决方案的业务逻辑的自动化实现</li>
+</ul>
+<p><img src="/img/ServiceComputing/%E6%9C%8D%E5%8A%A1%E7%94%9F%E6%80%81%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%9E%84%E5%BB%BA/%E4%B8%9A%E5%8A%A1%E9%80%BB%E8%BE%91%E4%B8%8E%E5%BA%94%E7%94%A8%E9%80%BB%E8%BE%91.png" srcset="/img/loading.gif" lazyload alt="业务逻辑与应用逻辑" /></p>
+<p>【注】业务逻辑和应用逻辑可以认为是针对同一个问题在不同层级上的解决方案。</p>
+<h3 id="1-3-服务层次">1.3 服务层次</h3>
+<p>服务生态系统服务可分为三个不同类别：</p>
+<ul>
+<li>应用服务层：针对底层应用逻辑进行封装的服务</li>
+<li>业务服务层：用来满足服务调用者的业务需求的服务</li>
+<li>编排层：对业务服务采用编排方式加以实现（可选层）</li>
+</ul>
+<p><img src="/img/ServiceComputing/%E6%9C%8D%E5%8A%A1%E7%94%9F%E6%80%81%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%9E%84%E5%BB%BA/%E6%9C%8D%E5%8A%A1%E5%B1%82%E6%AC%A1.png" srcset="/img/loading.gif" lazyload alt="服务层次" /></p>
+<p>【注】若将应用服务和业务服务在同一个服务接口中间加以实现，则称为混合（应用）服务。</p>
+<h3 id="1-4-面向服务的交付策略">1.4 面向服务的交付策略</h3>
+<ul>
+<li>自顶向下策略——分析优先</li>
+</ul>
+<blockquote>
+<ol>
+<li>定义企业范围的相关本体（Ontology，领域知识的概念及其关联）</li>
+<li>将相关的业务模型（包括实体模型）与新的或修订后的本体匹配</li>
+<li>进行面向服务的分析</li>
+<li>进行面向服务的设计</li>
+<li>开发所需服务</li>
+<li>测试服务及所有的服务操作</li>
+<li>部署服务</li>
+</ol>
+</blockquote>
+<p>【注】自顶向下策略完全发挥了面向服务的特征；但前两个步骤并不能直接产生可用软件，前期投入较高。</p>
+<ul>
+<li>自底向上策略——按需交付、封装并集成遗留系统优先</li>
+</ul>
+<blockquote>
+<ol>
+<li>对所需的应用服务进行建模，多为混合（应用）服务</li>
+<li>设计所需的服务</li>
+<li>开发所需的服务</li>
+<li>测试服务</li>
+<li>部署服务</li>
+</ol>
+</blockquote>
+<p>【注】自底向上策略完全为了应对我们迫在眉睫的某一个特定业务系统的开发的需求（多、快、好、省），并不是完整的想要用面向服务的方式最大化一系列的优势。</p>
+<ul>
+<li>敏捷策略（折中方式）——平衡策略<br />
+服务生态系统的分析（业务人员为主、IT 人员为辅）和设计和具体服务的分析和设计（IT 人员为主、业务员人员为辅）并发进行。</li>
+</ul>
+<p><img src="/img/ServiceComputing/%E6%9C%8D%E5%8A%A1%E7%94%9F%E6%80%81%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%9E%84%E5%BB%BA/%E6%95%8F%E6%8D%B7%E7%AD%96%E7%95%A5.png" srcset="/img/loading.gif" lazyload alt="敏捷策略" /></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">策略</th>
+<th style="text-align:left">优点</th>
+<th style="text-align:left">缺点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">自顶向下</td>
+<td style="text-align:left">高质量的服务架构<br>彻底分析每个服务的接口和设计<br>最大的可复用潜能<br>促进组织的服务化</td>
+<td style="text-align:left">大量的预先分析工作量<br>前期投入的时间和资金</td>
+</tr>
+<tr>
+<td style="text-align:left">自底向上</td>
+<td style="text-align:left">以建立应用（服务系统）为主要目标快速建立 Web Service<br>简单易行</td>
+<td style="text-align:left">保留现有应用环境（非面向服务）<br>Web Service 仍然面向应用<br>如需实现面向服务，后期需大量额外工作</td>
+</tr>
+<tr>
+<td style="text-align:left">敏捷策略</td>
+<td style="text-align:left">综合满足长期需求和短期需求</td>
+<td style="text-align:left">服务可能被重新回顾、设计、开发<br>增加回顾业务环节</td>
+</tr>
+</tbody>
+</table>
+<h2 id="2-面向服务的分析">2. 面向服务的分析</h2>
+<h3 id="2-1-面向服务的分析的目标">2.1 面向服务的分析的目标</h3>
+<ul>
+<li>在服务生态系统中（初步）讨论需要构建哪些服务、每个服务需要封装哪些逻辑</li>
+</ul>
+<blockquote>
+<ol>
+<li>定义一组预备的服务操作初选</li>
+<li>将服务操作候选分组到符合逻辑的语境（服务候选）中</li>
+<li>初步定义服务的边界，以使他们不会与任何现有的或已经规划好的服务相重叠</li>
+<li>识别封装好的逻辑（服务操作候选、服务候选）能够被复用的潜在可能</li>
+<li>确保被封装的逻辑（服务操作候选、服务候选）语境符合预期的用途</li>
+<li>定义任何已知的候选合成模型</li>
+</ol>
+</blockquote>
+<h3 id="2-2-面向服务分析的流程">2.2 面向服务分析的流程</h3>
+<ul>
+<li>定义流程自动化需求：文档化的需求描述，是服务候选建模的依据</li>
+<li>识别现有的自动化系统</li>
+<li>对服务候选建模：对服务操作候选，并将其分组到服务候选中的过程</li>
+</ul>
+<h3 id="2-3-以业务为核心的-SOA">2.3 以业务为核心的 SOA</h3>
+<p>【注】面向技术 vs. 面向业务：Web Service 仍然是面向技术的</p>
+<ul>
+<li>面向服务的分析应以业务服务为核心</li>
+</ul>
+<blockquote>
+<ol>
+<li>业务服务分别隔离来自业务领域和应用领域的变化</li>
+<li>服务编排以业务服务为对象</li>
+<li>业务服务实现复用</li>
+<li>业务服务促进面向服务的企业</li>
+</ol>
+</blockquote>
+<ul>
+<li>常见业务分析方法</li>
+</ul>
+<blockquote>
+<ol>
+<li>业务流程管理（BMP）模型：大多数组织业务分析归档的主要形式<br />
+<img src="/img/ServiceComputing/%E6%9C%8D%E5%8A%A1%E7%94%9F%E6%80%81%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%9E%84%E5%BB%BA/%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E7%AE%A1%E7%90%86%E6%A8%A1%E5%9E%8B.png" srcset="/img/loading.gif" lazyload alt="业务流程管理模型" /></li>
+<li>实体模型：遵循 OO 规范<br />
+<img src="/img/ServiceComputing/%E6%9C%8D%E5%8A%A1%E7%94%9F%E6%80%81%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%9E%84%E5%BB%BA/%E5%AE%9E%E4%BD%93%E6%A8%A1%E5%9E%8B.png" srcset="/img/loading.gif" lazyload alt="实体模型" /></li>
+</ol>
+</blockquote>
+<ul>
+<li>业务服务的派生类型</li>
+</ul>
+<blockquote>
+<ol>
+<li>以任务为核心的业务服务（灵活性）</li>
+</ol>
+<blockquote>
+<ul>
+<li>可能来源：用例模型，BPM 流程定义</li>
+<li>较少分析工作，有限复用潜力</li>
+<li>需要对多个用例和业务流程模型进行分析以识别公共性</li>
+</ul>
+</blockquote>
+</blockquote>
+<blockquote>
+<ol start="2">
+<li>以实体为核心的业务服务（稳定性）</li>
+</ol>
+<blockquote>
+<ul>
+<li>来源：实体模型</li>
+<li>较多分析工作，不包含业务流程逻辑，较高复用潜力</li>
+</ul>
+</blockquote>
+</blockquote>
+<ul>
+<li>业务服务与编排（灵活）</li>
+</ul>
+<blockquote>
+<ol>
+<li>业务中心化</li>
+<li>编排能够组合以任务为核心的工作服务和以实体为核心的业务服务</li>
+</ol>
+<blockquote>
+<ul>
+<li>基本的业务模型由以实体为核心的服务来表示</li>
+<li>与业务逻辑相关的任务由以任务为核心的服务来表示</li>
+</ul>
+</blockquote>
+<ol start="3">
+<li>在不影响业务服务和应用服务的前提下进行业务规则和业务逻辑的变更</li>
+</ol>
+</blockquote>
+<h3 id="2-4-服务建模的过程">2.4 服务建模的过程</h3>
+<ul>
+<li>分解业务流程</li>
+<li>识别业务服务候选逻辑</li>
+</ul>
+<blockquote>
+<ol>
+<li>识别业务流程中不应该被抽象为服务候选的步骤</li>
+</ol>
+<blockquote>
+<ul>
+<li>不能或者不应该被自动化的手工流程步骤</li>
+<li>流程步骤由现有遗留逻辑加以执行，且不允许被封装为服务候选</li>
+</ul>
+</blockquote>
+<ol start="2">
+<li>分析潜在的可复用性，具备潜在复用性的流程步骤，应充分考虑被抽象为单独的服务候选</li>
+</ol>
+</blockquote>
+<ul>
+<li>抽象编排逻辑</li>
+</ul>
+<blockquote>
+<ol>
+<li>定义由编排层完成的潜在逻辑</li>
+</ol>
+<blockquote>
+<ul>
+<li>业务规则</li>
+<li>条件逻辑</li>
+<li>异常逻辑</li>
+<li>序列逻辑</li>
+</ul>
+</blockquote>
+<ol start="2">
+<li>创建的编排逻辑亦为服务操作候选</li>
+</ol>
+</blockquote>
+<ul>
+<li>创建业务服务候选：在创建业务服务候选时，充分考虑业务中立，引入对额外的服务操作候选的分析</li>
+<li>提炼和应用面向服务原则（复用、自治）</li>
+<li>识别服务候选组合</li>
+</ul>
+<blockquote>
+<ol>
+<li>假想一系列业务流程中的通用场景</li>
+</ol>
+<blockquote>
+<ul>
+<li>有助于识别当前的业务流程步骤划分是否合理</li>
+<li>显示编排服务层和业务服务层之间的潜在关系</li>
+<li>定义潜在的服务组合</li>
+<li>突出显现当前缺失的工作流逻辑或过程步骤</li>
+</ul>
+</blockquote>
+</blockquote>
+<ul>
+<li>修订业务服务候选</li>
+<li>分析应用处理需求</li>
+</ul>
+<blockquote>
+<ol>
+<li>为了完成服务操作候选描述的动作，需要执行那些底层应用逻辑</li>
+<li>所需的应用逻辑是否存在，是否需要全新开发</li>
+<li>所需的应用逻辑是否跨越应用边界，即是否需要多个系统完成该应用逻辑</li>
+</ol>
+</blockquote>
+<ul>
+<li>识别应用服务操作候选：不应与业务流程步骤的上下文相关</li>
+<li>创建应用服务候选</li>
+<li>修订服务候选组合</li>
+<li>修订应用服务候选</li>
+<li>保存服务候选库存（文档化或形式化方式，可选步骤）</li>
+</ul>
+<h2 id="3-面向服务的设计">3. 面向服务的设计</h2>
+<ul>
+<li>在面对服务设计的过程中，通过从服务候选（逻辑）派生出具体的服务设计（物理），然后装配到实现业务流程的抽象组合中</li>
+<li>面向服务设计的目标</li>
+</ul>
+<blockquote>
+<ol>
+<li>确定架构扩展的核心集合（协议及版本）</li>
+<li>设定架构的边界</li>
+<li>识别所需的设计标准</li>
+<li>定义抽象服务接口设计</li>
+<li>识别潜在的服务组合</li>
+<li>评估面向服务原则的支持</li>
+<li>探究 SOA 特征的支持</li>
+</ol>
+</blockquote>
+<h3 id="3-1-面向服务的设计过程">3.1 面向服务的设计过程</h3>
+<ul>
+<li>组合 SOA</li>
+</ul>
+<blockquote>
+<ol>
+<li>选择服务层</li>
+</ol>
+<blockquote>
+<ul>
+<li>必选：以业务核心的服务</li>
+<li>对内：用应用服务封装实现</li>
+<li>对外：用编排服务来封装灵活变化的流程</li>
+</ul>
+</blockquote>
+<ol start="2">
+<li>定位核心的 SOA 标准（协议、版本）</li>
+<li>选择 SOA 扩展</li>
+</ol>
+</blockquote>
+<ul>
+<li>设计服务</li>
+</ul>
+<blockquote>
+<ol>
+<li>设计以实体为核心的业务服务</li>
+<li>设计应用服务</li>
+<li>设计以任务为核心的业务服务</li>
+</ol>
+</blockquote>
+<ul>
+<li>设计面向服务的业务过程</li>
+<li>WSDL 优先的服务设计（主要是服务合约的设计）</li>
+</ul>
+<blockquote>
+<ol>
+<li>服务被设计为精确表达对应服务候选的上下文和功能</li>
+<li>约定服务操作命名标准，从而产生标准化的接入点定义</li>
+<li>抽象地对操作的粒度进行建模，提供一致性和可预知的接口设计，从而得到消息大小以及适应于目标通讯架构的负载比例</li>
+<li>要求底层应用遵循服务设计的表示（现有服务合约，再有服务实现），否则，常会使得业务层需要组合依赖于 RPC 风格的通信的旧由组件</li>
+<li>业务服务的设计由业务领域专家辅助完成，以确保业务逻辑的精确表示</li>
+</ol>
+</blockquote>
+<h3 id="3-2-以实体为核心的业务服务设计">3.2 以实体为核心的业务服务设计</h3>
+<ul>
+<li>审查现存服务：服务建模时已经考虑现有服务，设计时再次审查以确保服务操作候选所表示的部分或所有功能并不存在与现有的其他服务中</li>
+<li>定义消息 Schema 类型（不推荐从无到有定义类型，数据类型应该谁拥有谁定义）</li>
+<li>提取抽象服务接口</li>
+<li>应用面向服务原则</li>
+</ul>
+<blockquote>
+<ol>
+<li>服务可复用性</li>
+<li>服务自治</li>
+<li>服务无状态</li>
+<li>服务可发现性</li>
+</ol>
+</blockquote>
+<ul>
+<li>标准化并完善服务接口</li>
+</ul>
+<blockquote>
+<ol>
+<li>审查并应用现存设计标准和原则</li>
+<li>修订服务设计</li>
+<li>验证 WS-I 基本概要的一致性要求（完成到目前为止产物的校验）</li>
+</ol>
+</blockquote>
+<ul>
+<li>扩展服务设计</li>
+</ul>
+<blockquote>
+<ol>
+<li>添加新操作</li>
+<li>在现存操作中添加新参数</li>
+<li>实体为核心的服务的一组经典操作：</li>
+</ol>
+<blockquote>
+<ul>
+<li>Get Something</li>
+<li>Update Something</li>
+<li>Add Something</li>
+<li>Delete Something</li>
+</ul>
+</blockquote>
+</blockquote>
+<ul>
+<li>识别必要处理：在服务建模的基础上进一步识别应用服务</li>
+</ul>
+<h3 id="3-3-应用服务设计">3.3 应用服务设计</h3>
+<ul>
+<li>审查现有服务</li>
+</ul>
+<blockquote>
+<ol>
+<li>避免应用服务内的冗余</li>
+<li>考虑使用第三方服务（业务、实体服务几乎不可能，所以不用考虑）</li>
+</ol>
+</blockquote>
+<ul>
+<li>确认上下文：在与现有服务设计所构成的上下文进行对比的基础上，重新评估由服务候选所提议的操作候选分组（在以实体为核心的服务中，由于实体模型已经预定义了上下文，故不需要此步骤）</li>
+<li>提取初始服务的服务接口</li>
+<li>应用面向服务原则</li>
+</ul>
+<blockquote>
+<ol>
+<li>服务可复用性：审查现存的操作候选，以确保设计的通用和可复用</li>
+<li>服务自治；确保用以执行服务操作的底层应用逻辑不强制依赖于该服务，且自身也没有依赖性</li>
+<li>服务无状态：不同的应用平台和实现环境带来的挑战（功能/性能）</li>
+<li>服务可发现性：以统一方式描述，使用元数据标注服务</li>
+</ol>
+</blockquote>
+<ul>
+<li>标准化并提炼服务接口</li>
+</ul>
+<blockquote>
+<ol>
+<li>审查并应用现存设计标准和原则</li>
+<li>审查设计目标，修订服务设计</li>
+<li>验证 WS-I 基本概要的一致性要求（完成到目前为止产物的校验）</li>
+</ol>
+</blockquote>
+<ul>
+<li>为服务候选引入推理性特性</li>
+</ul>
+<blockquote>
+<ol>
+<li>可能修改现有操作或引入全新操作，需回溯到第 1 步</li>
+<li>如需要调整或新加入特性时，需回溯到第 2～5 步以确保良好和一致的设计</li>
+</ol>
+</blockquote>
+<ul>
+<li>识别技术约束</li>
+</ul>
+<blockquote>
+<ol>
+<li>特定功能的物理接入点（需要引用什么组件、需要调用什么 API 函数、需要激活什么适配器）</li>
+<li>与处理过程中任意部分相关的安全性约束</li>
+<li>每个处理功能的响应时间</li>
+<li>执行处理功能的底层系统的可用性</li>
+<li>与服务部署位置相关的环境因素</li>
+<li>底层应用逻辑的技术限制（尤其是当面临遗留系统时）</li>
+<li>服务所带来的管理需求</li>
+<li>潜在的 SLA（服务合约）需求</li>
+</ol>
+</blockquote>
+<h3 id="3-4-以任务为核心的业务服务设计">3.4 以任务为核心的业务服务设计</h3>
+<ul>
+<li>定义工作流逻辑</li>
+</ul>
+<blockquote>
+<ol>
+<li>为每个可能的交互场景定义逻辑（执行路径）</li>
+<li>便于提供定义类型、操作和消息格式的消息</li>
+</ol>
+</blockquote>
+<ul>
+<li>提取服务接口</li>
+</ul>
+<blockquote>
+<ol>
+<li>根据活动图派生服务所需执行的动作集合</li>
+<li>服务其他服务的接口（WSDL）和类型（XSD Schema）</li>
+</ol>
+</blockquote>
+<ul>
+<li>应用面向服务原则</li>
+</ul>
+<blockquote>
+<ol>
+<li>服务可复用性：相对较弱，仍可对子流程进行抽象，达成跨流程和流程内的复用</li>
+<li>服务自治：取决于底层子服务的自治性</li>
+<li>服务无状态：使用文档风格的 SOAP 消息来转义状态信息</li>
+<li>服务可发现性：要求相对较高，使用元数据标注服务</li>
+</ol>
+</blockquote>
+<ul>
+<li>标准化并完善服务接口</li>
+</ul>
+<blockquote>
+<ol>
+<li>审查并应用现存设计标准和原则</li>
+<li>审查设计目标，修订服务设计</li>
+<li>验证 WS-I 基本概要的一致性要求（完成目前位置产物的校验）</li>
+</ol>
+</blockquote>
+<ul>
+<li>识别所需要的处理</li>
+</ul>
+<blockquote>
+<ol>
+<li>鉴于复用性，以任务为核心的业务服务可能调用了以实体为核心的业务服务，应用服务以及其他的以任务为核心的业务服务。</li>
+<li>确定所需子服务已经存在或者已经完成设计，否则需要重新进行考虑</li>
+</ol>
+</blockquote>
+<h3 id="3-5-面向服务的业务流程设计">3.5 面向服务的业务流程设计</h3>
+<ul>
+<li>传统上</li>
+</ul>
+<blockquote>
+<ol>
+<li>业务流程由分析师采用建模工具设计，产生图标交给架构师和开发者实现</li>
+<li>在一个自动化解决方案中，工作流程图及其相应的文档是传达该逻辑应如何实现的唯一方式</li>
+</ol>
+</blockquote>
+<ul>
+<li>面向服务的业务流程设计</li>
+</ul>
+<blockquote>
+<ol>
+<li>技术分析师和系统架构师来图形化地创建代表他们工作的工作流逻辑和业务流程图，并自动转化并对应到 BPEL 脚本</li>
+<li>更加自动化的工具使得业务分析师可以在不了解 BPEL 的前提下，完成流程的设计</li>
+</ol>
+</blockquote>
+<h2 id="4-服务的开发、测试及其它">4. 服务的开发、测试及其它</h2>
+<h3 id="4-1-服务的开发">4.1 服务的开发</h3>
+<ul>
+<li>在具体开发平台上，使用特定语言</li>
+</ul>
+<blockquote>
+<ol>
+<li>开发定制服务</li>
+<li>包装遗留系统（查漏补缺）</li>
+<li>构建应用系统</li>
+</ol>
+</blockquote>
+<h3 id="4-2-服务的测试">4.2 服务的测试</h3>
+<ul>
+<li>服务的潜在访问者有哪些类型</li>
+<li>能够满足所有服务策略断言吗</li>
+<li>服务可能会面临怎样的异常情况</li>
+<li>服务描述在多大程度上良好表达了服务语义</li>
+<li>修订后的服务描述是否改变或扩展了前一版本</li>
+<li>服务被组合的简易程度有多高</li>
+<li>服务描述被发现的简易程度有多高</li>
+<li>是否遵循了 WS-I 该要的要求</li>
+<li>会出现什么与数据类型相关的问题</li>
+<li>是否已经提出了所有可能的服务活动和服务组合</li>
+<li>补偿过程是否已经被充分测试</li>
+<li>在补偿过程汇总出现异常时，会发生什么</li>
+<li>新的服务是否遵循了已有的设计规范</li>
+<li>新服务是否引入了定制的 SOAP 头，如果有，是否所有的潜在调用者（包括中间节点）也需要引入，并对他们进行理解和处理</li>
+<li>新服务是否引入了当前架构不支持的功能或 QoS 需求</li>
+</ul>
+<h3 id="4-3-面向服务的测试的特点">4.3 面向服务的测试的特点</h3>
+<ul>
+<li>基于规约的测试</li>
+</ul>
+<blockquote>
+<ol>
+<li>服务用户可能没有看到或看不到源码</li>
+<li>服务提供者虽然没有看见源码，可能不知道源码会被谁使用以及如何使用</li>
+<li>服务代理了解服务规约，但是依然不知道具体的使用方法和源码</li>
+</ol>
+</blockquote>
+<ul>
+<li>动态性测试</li>
+<li>协同测试</li>
+</ul>
+<blockquote>
+<ol>
+<li>协同验证与确认（CV &amp; V）</li>
+<li>独立验证预确认（IV &amp; V）</li>
+</ol>
+</blockquote>
+<h3 id="4-4-面向服务的测试方法">4.4 面向服务的测试方法</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">测试方法</th>
+<th style="text-align:left">如何测试</th>
+<th style="text-align:left">应用范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">不测试</td>
+<td style="text-align:left">不做任何测试</td>
+<td style="text-align:left">一些对计算可信性要求不高的个人或小型应用</td>
+</tr>
+<tr>
+<td style="text-align:left">“相信我，没错的！”</td>
+<td style="text-align:left">用公司信誉作服务质量担保</td>
+<td style="text-align:left">对日常的许多应用都是可以的，但不是用于对计算可信性较高的应用<br>是用信誉或法律来保障服务软件的质量</td>
+</tr>
+<tr>
+<td style="text-align:left">“统统高告诉我‘代码’”</td>
+<td style="text-align:left">测试一些可能的组合，仅使用那些通过测试的组合</td>
+<td style="text-align:left">服务提供者愿意提供源代码<br>评估比较客观<br>真正进行测试以确保软件质量<br>由于需要测试所有组合，且组合总数十分庞大，代价很昂贵</td>
+</tr>
+<tr>
+<td style="text-align:left">CV &amp; V</td>
+<td style="text-align:left">用户选择进过排名的服务</td>
+<td style="text-align:left">SOA 框架中的每一方（服务用户、服务中介和服务提供者）都需要参与到 CV &amp; V 过程中来<br>评估比较客观<br>真正进行测试以确保软件的质量<br>可以对新组合的应用程序进行运行时的测试</td>
+</tr>
+</tbody>
+</table>
+<h3 id="4-5-WebStar">4.5 WebStar</h3>
+<ul>
+<li>用以发布与服务相关的测试资产，如测试用例、测试用例的排名方法、测试生成方法、测试生成方法排名、软件可靠性模型、软件可靠性模型的排名方法</li>
+<li>用以提供服务排名、测试用例排名、测试方法排名、可靠性模型排名</li>
+</ul>
+<p><img src="/img/ServiceComputing/%E6%9C%8D%E5%8A%A1%E7%94%9F%E6%80%81%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%9E%84%E5%BB%BA/WebStar.png" srcset="/img/loading.gif" lazyload alt="WebStar" /></p>
+<h3 id="4-6-服务的部署">4.6 服务的部署</h3>
+<ul>
+<li>服务如何部署</li>
+<li>基础设施是否能够适应满足所有服务的处理需求</li>
+<li>引入新服务将如何影响现有的服务和应用</li>
+<li>如何定位和部署在多个解决方案中复用的服务</li>
+<li>引入所需要的中间件将如何影响现有环境</li>
+<li>在服务引入新版本的服务描述时，是否需要和现有版本一起部署</li>
+<li>需要怎样的安全设置和账号</li>
+<li>为适应计划中或不可预见的扩展性需求，如何维护服务池</li>
+<li>如何维护和监管具有性能和可靠性限制的包装遗留系统</li>
+</ul>
+<h3 id="4-7-服务的管理">4.7 服务的管理</h3>
+<ul>
+<li>如何监管服务的使用</li>
+<li>为了管理服务描述文档，需要何种形式的版本控制</li>
+<li>如何跟踪和管理信小溪</li>
+<li>如何检测性能瓶颈</li>
+</ul>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/ServiceComputing/">ServiceComputing</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/ServiceComputing/">ServiceComputing</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/05/26/ServiceComputing/%E6%9C%8D%E5%8A%A1%E7%94%9F%E6%80%81%E7%B3%BB%E7%BB%9F%E4%B8%8E%E9%9D%A2%E5%90%91%E6%9C%8D%E5%8A%A1%E7%9A%84%E8%AE%A1%E7%AE%97/%E6%9C%8D%E5%8A%A1%E7%94%9F%E6%80%81%E7%B3%BB%E7%BB%9F%E4%B8%8E%E9%9D%A2%E5%90%91%E6%9C%8D%E5%8A%A1%E7%9A%84%E8%AE%A1%E7%AE%97/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">服务生态系统与面向服务的计算</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/05/26/ServiceComputing/%E6%9C%8D%E5%8A%A1%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/%E6%9C%8D%E5%8A%A1%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/">
+                        <span class="hidden-mobile">服务设计原则</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.lazyComments('valine', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function () {
+        new Valine({
+          el: "#valine",
+          app_id: "kJgPdAqoTM5JKOdTdYLmXqq5-gzGzoHsz",
+          app_key: "X4MnxJgITkyJVettcgYX6ebP",
+          placeholder: "说点什么",
+          path: window.location.pathname,
+          avatar: "retro",
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: false,
+          recordIP: false,
+          serverURLs: "",
+        });
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the
+    <a target="_blank" href="https://valine.js.org" rel="nofollow noopener noopener">comments powered by Valine.</a>
+  </noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+      <div class="col-lg-7 mx-auto nopadding-x-md">
+        <div class="container custom mx-auto">
+          <script src="https://myhkw.cn/api/player/161389264877" id="myhk" key="161389264877" m="1"></script>
+        </div>
+      </div>
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+
+  <script defer src="/js/leancloud.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- KaTeX -->
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" />
+  
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/mermaid@8.8.3/dist/mermaid.min.js" ></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({"theme":"default"});
+    }
+  </script>
+
+
+
+
+  
+    <!-- Baidu Analytics -->
+    <script defer>
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?c194cf0c8cbc33bfb846ba1329537d81";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  
+    <!-- Google Analytics -->
+    <script defer>
+      window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) };
+      ga.l = +new Date;
+      ga('create', 'G-SXJN0942X9', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+  
+
+  
+    <!-- Google gtag.js -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D3DEHLLP3W"></script>
+    <script defer>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-D3DEHLLP3W');
+    </script>
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

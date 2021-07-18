@@ -1,0 +1,976 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/self/portrait.jpg">
+  <link rel="icon" href="/img/self/portrait.jpg">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="一个记录各种笔记的小匣子^-^">
+  <meta name="author" content="BlueHeart0621">
+  <meta name="keywords" content="頑張れ">
+  
+    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script> <script src="/live2d-widget/autoload.js" type="text/javascript"></script> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
+  
+  <title>お前はどこまで見えている</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"blueheart0621.github.io","root":"/","version":"1.8.9","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":"§"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":"c194cf0c8cbc33bfb846ba1329537d81","google":"G-SXJN0942X9","gtag":"G-D3DEHLLP3W","tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"A24MlA4oV7hlze3uNQiXDAIi-MdYXbMMI","app_key":"3moFK5Ao3TD4rjA1HCmPTSm6","server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
+</head>
+
+
+<body>
+  <header style="height: 100vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>お前はどこまで見えている</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/covers/%E5%9B%9B%E6%9C%88%E6%98%AF%E4%BD%A0%E7%9A%84%E8%B0%8E%E8%A8%80-2.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="僕たちは そうやって どこまで行くのだろう、どこまで行けるのだろう">
+              
+            </span>
+
+            
+          </div>
+
+          
+            <div class="scroll-down-bar">
+              <i class="iconfont icon-arrowdown"></i>
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      <div class="container nopadding-x-md">
+        <div class="py-5" id="board"
+          style=margin-top:0>
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
+                
+
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/09/12/ACM/%E9%A2%98%E8%A7%A3/UVA437%E3%80%8CThe%20Tower%20of%20Babylon%E3%80%8D/">UVA437「The Tower of Babylon」</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/09/12/ACM/%E9%A2%98%E8%A7%A3/UVA437%E3%80%8CThe%20Tower%20of%20Babylon%E3%80%8D/">
+          
+          
+            
+          
+          1. 题目
+题目链接：UVA437「The Tower of Babylon」 。
+Description
+Perhaps you have heard of the legend of the Tower of Babylon. Nowadays many details of this tale have been forgotten. So now, in line with the edu
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-09-12 11:51" pubdate>
+              2020-09-12
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/ACM/">ACM</a>
+            
+              <a href="/categories/ACM/%E9%A2%98%E8%A7%A3/">题解</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/ACM/">ACM</a>
+            
+              <a href="/tags/%E9%A2%98%E8%A7%A3/">题解</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/09/10/ACM/%E9%A2%98%E8%A7%A3/CF1407D%E3%80%8CDiscrete%20Centrifugal%20Jumps%E3%80%8D/">CF1407D「Discrete Centrifugal Jumps」</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/09/10/ACM/%E9%A2%98%E8%A7%A3/CF1407D%E3%80%8CDiscrete%20Centrifugal%20Jumps%E3%80%8D/">
+          
+          
+            
+          
+          1. 题目
+题目链接：CF1407D「Discrete Centrifugal Jumps」 。
+Description
+There are nnn beautiful skyscrapers in New York, the height of the iii-th one is hih_ihi​. Today some villains have set on fire first n−1n-
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-09-10 13:21" pubdate>
+              2020-09-10
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/ACM/">ACM</a>
+            
+              <a href="/categories/ACM/%E9%A2%98%E8%A7%A3/">题解</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/ACM/">ACM</a>
+            
+              <a href="/tags/%E9%A2%98%E8%A7%A3/">题解</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/09/09/ACM/%E9%A2%98%E8%A7%A3/CF991F%E3%80%8CTree%20Destruction%E3%80%8D/">CF991F「Tree Destruction」</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/09/09/ACM/%E9%A2%98%E8%A7%A3/CF991F%E3%80%8CTree%20Destruction%E3%80%8D/">
+          
+          
+            
+          
+          1. 题目
+题目链接：CF991F「Tree Destruction」 。
+Description
+You are given an unweighted tree with nnn vertices. Then n−1n - 1n−1 following operations are applied to the tree. A single operation consists of the 
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-09-09 15:19" pubdate>
+              2020-09-09
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/ACM/">ACM</a>
+            
+              <a href="/categories/ACM/%E9%A2%98%E8%A7%A3/">题解</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/ACM/">ACM</a>
+            
+              <a href="/tags/%E9%A2%98%E8%A7%A3/">题解</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/09/08/ACM/%E9%A2%98%E8%A7%A3/CF1405D%E3%80%8CTree%20Tag%E3%80%8D/">CF1405D「Tree Tag」</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/09/08/ACM/%E9%A2%98%E8%A7%A3/CF1405D%E3%80%8CTree%20Tag%E3%80%8D/">
+          
+          
+            
+          
+          1. 题目
+题目链接：CF1405D「Tree Tag」 。
+DESCRIPTION
+Alice and Bob are playing a fun game of tree tag.
+The game is played on a tree of nnn vertices numbered from 111 to nnn. Recall that a tree on nnn vertices i
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-09-08 19:58" pubdate>
+              2020-09-08
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/ACM/">ACM</a>
+            
+              <a href="/categories/ACM/%E9%A2%98%E8%A7%A3/">题解</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/ACM/">ACM</a>
+            
+              <a href="/tags/%E9%A2%98%E8%A7%A3/">题解</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/09/08/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%A6/LCM%E4%B8%8EGCD%E7%AE%97%E6%B3%95/">LCM与GCD算法</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/09/08/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%A6/LCM%E4%B8%8EGCD%E7%AE%97%E6%B3%95/">
+          
+          
+            
+          
+          LCM（最小公倍数）和 GCD（最大公因数）在做 ACM 题时经常会用到，求两个整数的 LCM 和 GCD 有两种方法。
+1. 辗转相除法（欧几里得算法）
+
+
+定理：对于任意的两个整数 a,b(a≥b)a,b (a \geq b)a,b(a≥b)， 有 (a,b)=(b,a%b)(a,b) = (b, a\%b)(a,b)=(b,a%b) 。（(a,b)(a, b)(a,b) 表示 aaa 和 b
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-09-08 19:51" pubdate>
+              2020-09-08
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/ACM/">ACM</a>
+            
+              <a href="/categories/ACM/%E7%AE%97%E6%B3%95/">算法</a>
+            
+              <a href="/categories/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%A6/">数学</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
+            
+              <a href="/tags/ACM/">ACM</a>
+            
+              <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/09/08/ACM/%E7%AE%97%E6%B3%95/%E5%9B%BE%E8%AE%BA/%E6%A0%91/%E6%A0%91%E7%9A%84%E7%9B%B4%E5%BE%84/">树的直径</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/09/08/ACM/%E7%AE%97%E6%B3%95/%E5%9B%BE%E8%AE%BA/%E6%A0%91/%E6%A0%91%E7%9A%84%E7%9B%B4%E5%BE%84/">
+          
+          
+            
+          
+          1. 简介
+树中所有简单路径的最大值即为树的直径，可以通过两次 DFS 或者树形 DP 在 O(n)O(n)O(n) 时间内求解。
+2. 思路
+2.1 两次 DFS
+
+
+首先将任意一个结点 uuu 看作是树根，然后进行 DFS 求出最远的结点 sss；则 sss 一定是树的直径的其中一个端点。
+
+
+
+证明
+  假设结点 s′s&#x27;s′ 和 t′t&#x27;t′ 之间唯一的简单路径为树的直
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-09-08 14:58" pubdate>
+              2020-09-08
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/ACM/">ACM</a>
+            
+              <a href="/categories/ACM/%E7%AE%97%E6%B3%95/">算法</a>
+            
+              <a href="/categories/ACM/%E7%AE%97%E6%B3%95/%E5%9B%BE%E8%AE%BA/">图论</a>
+            
+              <a href="/categories/ACM/%E7%AE%97%E6%B3%95/%E5%9B%BE%E8%AE%BA/%E6%A0%91/">树</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/ACM/">ACM</a>
+            
+              <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
+            
+              <a href="/tags/%E5%9B%BE%E8%AE%BA/">图论</a>
+            
+              <a href="/tags/%E6%A0%91/">树</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/09/07/ACM/%E9%A2%98%E8%A7%A3/P2014%E3%80%8C%5BCTSC1997%5D%E9%80%89%E8%AF%BE%E3%80%8D/">P2014「[CTSC1997]选课」</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/09/07/ACM/%E9%A2%98%E8%A7%A3/P2014%E3%80%8C%5BCTSC1997%5D%E9%80%89%E8%AF%BE%E3%80%8D/">
+          
+          
+            
+          
+          1. 题目
+题目链接：P2014「[CTSC1997]选课」 。
+题目描述
+在大学里每个学生，为了达到一定的学分，必须从很多课程里选择一些课程来学习，在课程里有些课程必须在某些课程之前学习，如高等数学总是在其它课程之前学习。现在有 NN 门功课，每门课有个学分，每门课有一门或没有直接先修课（若课程 a 是课程 b 的先修课即只有学完了课程 a，才能学习课程 b）。一个学生要从这些课程里选择 MM 
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-09-07 18:46" pubdate>
+              2020-09-07
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/ACM/">ACM</a>
+            
+              <a href="/categories/ACM/%E9%A2%98%E8%A7%A3/">题解</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/ACM/">ACM</a>
+            
+              <a href="/tags/%E9%A2%98%E8%A7%A3/">题解</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/09/07/ACM/%E9%A2%98%E8%A7%A3/P1352%E3%80%8C%E6%B2%A1%E6%9C%89%E4%B8%8A%E5%8F%B8%E7%9A%84%E8%88%9E%E4%BC%9A%E3%80%8D/">P1352「没有上司的舞会」</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/09/07/ACM/%E9%A2%98%E8%A7%A3/P1352%E3%80%8C%E6%B2%A1%E6%9C%89%E4%B8%8A%E5%8F%B8%E7%9A%84%E8%88%9E%E4%BC%9A%E3%80%8D/">
+          
+          
+            
+          
+          1. 题目
+题目链接：P1352「没有上司的舞会」 。
+题目描述
+某大学有 nnn 个职员，编号为 1…n1 \ldots n1…n 。
+他们之间有从属关系，也就是说他们的关系就像一棵以校长为根的树，父结点就是子结点的直接上司。
+现在有个周年庆宴会，宴会每邀请来一个职员都会增加一定的快乐指数 rir_iri​，但是呢，如果某个职员的直接上司来参加舞会了，那么这个职员就无论如何也不肯来参加舞会了。
+
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-09-07 14:28" pubdate>
+              2020-09-07
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/ACM/">ACM</a>
+            
+              <a href="/categories/ACM/%E9%A2%98%E8%A7%A3/">题解</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/ACM/">ACM</a>
+            
+              <a href="/tags/%E9%A2%98%E8%A7%A3/">题解</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/09/06/ACM/%E9%A2%98%E8%A7%A3/P5357%E3%80%8C%E3%80%90%E6%A8%A1%E6%9D%BF%E3%80%91AC%E8%87%AA%E5%8A%A8%E6%9C%BA%EF%BC%88%E4%BA%8C%E6%AC%A1%E5%8A%A0%E5%BC%BA%E7%89%88%EF%BC%89%E3%80%8D/">P5357「【模板】AC自动机（二次加强版）」</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/09/06/ACM/%E9%A2%98%E8%A7%A3/P5357%E3%80%8C%E3%80%90%E6%A8%A1%E6%9D%BF%E3%80%91AC%E8%87%AA%E5%8A%A8%E6%9C%BA%EF%BC%88%E4%BA%8C%E6%AC%A1%E5%8A%A0%E5%BC%BA%E7%89%88%EF%BC%89%E3%80%8D/">
+          
+          
+            
+          
+          1. 题目
+题目链接：P5357「【模板】AC自动机（二次加强版）」 。
+题目描述
+给你一个文本串 SSS 和 nnn 个模式串 T1..nT_{1..n}T1..n​，请你分别求出每个模式串 TiT_iTi​ 在 SS 中出现的次数。
+输入格式
+第一行包含一个正整数 nnn 表示模式串的个数。
+接下来 nnn 行，第 iii 行包含一个由小写英文字母构成的字符串 TiT_iTi​ 。
+最后一行包
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-09-06 22:26" pubdate>
+              2020-09-06
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/ACM/">ACM</a>
+            
+              <a href="/categories/ACM/%E9%A2%98%E8%A7%A3/">题解</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/ACM/">ACM</a>
+            
+              <a href="/tags/%E9%A2%98%E8%A7%A3/">题解</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/09/06/ACM/%E9%A2%98%E8%A7%A3/CF1409F%E3%80%8CSubsequences%20of%20Length%20Two%E3%80%8D/">CF1409F「Subsequences of Length Two」</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/09/06/ACM/%E9%A2%98%E8%A7%A3/CF1409F%E3%80%8CSubsequences%20of%20Length%20Two%E3%80%8D/">
+          
+          
+            
+          
+          1. 题目
+题目链接：CF1409F「Subsequences of Length Two」 。
+Description
+You are given two strings s and t consisting of lowercase Latin letters. The length of t is 2 (i.e. this string consists only of two charac
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-09-06 15:41" pubdate>
+              2020-09-06
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/ACM/">ACM</a>
+            
+              <a href="/categories/ACM/%E9%A2%98%E8%A7%A3/">题解</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/ACM/">ACM</a>
+            
+              <a href="/tags/%E9%A2%98%E8%A7%A3/">题解</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+
+
+  <nav aria-label="navigation">
+    <span class="pagination" id="pagination">
+      <a class="extend prev" rel="prev" href="/page/17/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/16/#board">16</a><a class="page-number" href="/page/17/#board">17</a><span class="page-number current">18</span><a class="page-number" href="/page/19/#board">19</a><a class="page-number" href="/page/20/#board">20</a><span class="space">&hellip;</span><a class="page-number" href="/page/37/#board">37</a><a class="extend next" rel="next" href="/page/19/#board"><i class="iconfont icon-arrowright"></i></a>
+    </span>
+  </nav>
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+      <div class="col-lg-7 mx-auto nopadding-x-md">
+        <div class="container custom mx-auto">
+          <script src="https://myhkw.cn/api/player/161389264877" id="myhk" key="161389264877" m="1"></script>
+        </div>
+      </div>
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+
+  <script defer src="/js/leancloud.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <!-- Baidu Analytics -->
+    <script defer>
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?c194cf0c8cbc33bfb846ba1329537d81";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  
+    <!-- Google Analytics -->
+    <script defer>
+      window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) };
+      ga.l = +new Date;
+      ga('create', 'G-SXJN0942X9', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+  
+
+  
+    <!-- Google gtag.js -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D3DEHLLP3W"></script>
+    <script defer>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-D3DEHLLP3W');
+    </script>
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

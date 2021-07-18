@@ -1,0 +1,999 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/self/portrait.jpg">
+  <link rel="icon" href="/img/self/portrait.jpg">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="一个记录各种笔记的小匣子^-^">
+  <meta name="author" content="BlueHeart0621">
+  <meta name="keywords" content="頑張れ">
+  
+    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script> <script src="/live2d-widget/autoload.js" type="text/javascript"></script> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
+  
+  <title>お前はどこまで見えている</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"blueheart0621.github.io","root":"/","version":"1.8.9","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":"§"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":"c194cf0c8cbc33bfb846ba1329537d81","google":"G-SXJN0942X9","gtag":"G-D3DEHLLP3W","tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"A24MlA4oV7hlze3uNQiXDAIi-MdYXbMMI","app_key":"3moFK5Ao3TD4rjA1HCmPTSm6","server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
+</head>
+
+
+<body>
+  <header style="height: 100vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>お前はどこまで見えている</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/covers/%E5%9B%9B%E6%9C%88%E6%98%AF%E4%BD%A0%E7%9A%84%E8%B0%8E%E8%A8%80-2.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="僕たちは そうやって どこまで行くのだろう、どこまで行けるのだろう">
+              
+            </span>
+
+            
+          </div>
+
+          
+            <div class="scroll-down-bar">
+              <i class="iconfont icon-arrowdown"></i>
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      <div class="container nopadding-x-md">
+        <div class="py-5" id="board"
+          style=margin-top:0>
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
+                
+
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/09/26/DeepLearning/%E6%BF%80%E6%B4%BB%E5%87%BD%E6%95%B0/%E6%BF%80%E6%B4%BB%E5%87%BD%E6%95%B0/">激活函数</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/09/26/DeepLearning/%E6%BF%80%E6%B4%BB%E5%87%BD%E6%95%B0/%E6%BF%80%E6%B4%BB%E5%87%BD%E6%95%B0/">
+          
+          
+            
+          
+          常见激活函数及其导数：
+
+1. Sigmoid 函数
+【注】Sigmoid 型函数是指一类 S 型曲线函数，为两端饱和函数。常用的 Sigmoid 型函数有Logistic函数和Tanh函数。
+1.1 Logistic 函数
+
+定义：
+
+σ(x)=11+e−x{\begin{array}{c}
+\sigma(x) = {1 \over 1 + e^{-x}}
+\end{array}}σ(x)=1+
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-09-26 20:21" pubdate>
+              2020-09-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/DeepLearning/">DeepLearning</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/DeepLearning/">DeepLearning</a>
+            
+              <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">机器学习&深度学习</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/09/26/Math/Theory/%E6%95%B0%E5%AD%97%E4%B8%96%E7%95%8C%E4%B8%AD%E5%B8%B8%E8%A7%81%E5%87%BD%E6%95%B0/">数字世界中常见函数</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/09/26/Math/Theory/%E6%95%B0%E5%AD%97%E4%B8%96%E7%95%8C%E4%B8%AD%E5%B8%B8%E8%A7%81%E5%87%BD%E6%95%B0/">
+          
+          
+            
+          
+          1. 狄利克雷函数
+英文名称为「Dirac Delta Function」。
+1.1 简介
+狄利克雷函数在除零以外的点取值均为 0，但在整个定义域上的积分为 1。δ\deltaδ 函数可以看作是在原点处无限高、无限细，但总面积为 1 的一个尖峰。
+1.2 定义
+δ(x)={+∞x=00x≠0∫−∞+∞δ(x)dx=1{\begin{array}{c}
+\delta(x) = \begin{case
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-09-26 12:23" pubdate>
+              2020-09-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Math/">Math</a>
+            
+              <a href="/categories/Math/Theory/">Theory</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
+            
+              <a href="/tags/Math/">Math</a>
+            
+              <a href="/tags/Theory/">Theory</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/09/24/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%A6/%E5%BF%AB%E9%80%9F%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/">快速傅里叶变换</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/09/24/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%A6/%E5%BF%AB%E9%80%9F%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/">
+          
+          
+            
+          
+          【注】参考自算法导论。
+1. 简介
+快速傅里叶变换（FFT）是实现离散傅里叶变换（DFT）和离散傅里叶逆变换（IDFT）的快速算法，其时间复杂度为 O(nlog⁡n)O(n \log n)O(nlogn)。DFT 在实际生活中有很多应用，比如通过离散傅里叶变换，可以将系数表示的多项式转为点值表示的多项式，从而使得多项式的乘法的复杂度由 O(n2)O(n^2)O(n2) 降为 O(n)O(n)O(n
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-09-24 10:12" pubdate>
+              2020-09-24
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/ACM/">ACM</a>
+            
+              <a href="/categories/ACM/%E7%AE%97%E6%B3%95/">算法</a>
+            
+              <a href="/categories/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%A6/">数学</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
+            
+              <a href="/tags/ACM/">ACM</a>
+            
+              <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
+            
+              <a href="/tags/%E6%95%B0%E5%AD%A6-%E7%AE%97%E6%B3%95/">数学 算法</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/09/23/Math/Theory/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/%E7%A6%BB%E6%95%A3%E4%BD%99%E5%BC%A6%E5%8F%98%E6%8D%A2/">离散余弦变换</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/09/23/Math/Theory/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/%E7%A6%BB%E6%95%A3%E4%BD%99%E5%BC%A6%E5%8F%98%E6%8D%A2/">
+          
+          
+            
+          
+          1. 简介
+离散余弦变换类似于离散傅里叶变换，但是只使用实数。离散余弦变换相当于一个长度大概是它两倍的离散傅里叶变换。
+2. 定义
+离散余弦变换是一个线性的可逆函数 F:Rn→RnF: R^n \rightarrow R^nF:Rn→Rn，其中 RRR 是实数集。
+2.1 DCT-1
+fm=12(x0+(−1)mxn−1)+∑k=1n−2xkcos(πn−1mk){\begin{array}{c}
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-09-23 09:05" pubdate>
+              2020-09-23
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Math/">Math</a>
+            
+              <a href="/categories/Math/Theory/">Theory</a>
+            
+              <a href="/categories/Math/Theory/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/">傅里叶变换</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
+            
+              <a href="/tags/Math/">Math</a>
+            
+              <a href="/tags/Theory/">Theory</a>
+            
+              <a href="/tags/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/">傅里叶变换</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/09/21/Math/Theory/%E6%9F%AF%E8%A5%BF%E4%B8%BB%E5%80%BC%E7%A7%AF%E5%88%86/">柯西主值积分</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/09/21/Math/Theory/%E6%9F%AF%E8%A5%BF%E4%B8%BB%E5%80%BC%E7%A7%AF%E5%88%86/">
+          
+          
+            
+          
+          1. 简介
+柯西主值积分是以特殊方式定义的反常积分，其值又称为柯西主值。
+2. 定义
+2.1 第一类反常积分（无穷积分）
+
+设函数 f(x)f(x)f(x) 在 (−∞,+∞)(-\infty,+\infty)(−∞,+∞) 上连续且可积，则定义第一类反常积分：
+
+∫−∞+∞f(x)dx=lim⁡u→−∞∫ucf(x)dx+lim⁡v→+∞∫cvf(x)dx{\begin{array}{c}
+\i
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-09-21 21:22" pubdate>
+              2020-09-21
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Math/">Math</a>
+            
+              <a href="/categories/Math/Theory/">Theory</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Math/">Math</a>
+            
+              <a href="/tags/Theory/">Theory</a>
+            
+              <a href="/tags/%E6%95%B0%E5%AD%A6%E7%90%86%E8%AE%BA/">数学理论</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/09/20/ACM/%E7%AE%97%E6%B3%95/%E6%9F%A5%E6%89%BE/%E6%95%B0%E7%BB%84%E4%B8%AD%E7%AC%ACK%E5%B0%8F%E7%9A%84%E6%95%B0/">数组中第K小的数</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/09/20/ACM/%E7%AE%97%E6%B3%95/%E6%9F%A5%E6%89%BE/%E6%95%B0%E7%BB%84%E4%B8%AD%E7%AC%ACK%E5%B0%8F%E7%9A%84%E6%95%B0/">
+          
+          
+            
+          
+          1. 简介
+查找一个序列中的最大/最小值时间复杂度均为 O(N)O(N)O(N)，而查询一个序列中第 K(K=0⋯N−1)K(K = 0 \cdots N-1)K(K=0⋯N−1) 大的数时间复杂度最坏情况下即为排序的最好时间复杂度 O(Nlog⁡N)O(N \log N)O(NlogN)（只考虑比较排序），但利用快排的 PartitionPartitionPartition 思想也可以达到期望 
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-09-20 21:46" pubdate>
+              2020-09-20
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/ACM/">ACM</a>
+            
+              <a href="/categories/ACM/%E7%AE%97%E6%B3%95/">算法</a>
+            
+              <a href="/categories/ACM/%E7%AE%97%E6%B3%95/%E6%9F%A5%E6%89%BE/">查找</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/ACM/">ACM</a>
+            
+              <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
+            
+              <a href="/tags/%E6%9F%A5%E6%89%BE/">查找</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/09/19/ACM/%E7%AE%97%E6%B3%95/%E5%85%B6%E4%BB%96/%E7%AE%97%E6%B3%95%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/%E7%AE%97%E6%B3%95%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/">算法时间复杂度</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/09/19/ACM/%E7%AE%97%E6%B3%95/%E5%85%B6%E4%BB%96/%E7%AE%97%E6%B3%95%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/%E7%AE%97%E6%B3%95%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/">
+          
+          
+            
+          
+          1. 简介
+算法的时间复杂度是指在问题规模为 NNN 时整个算法执行的基本语句单元次数，记为 T(N)T(N)T(N) 。
+2. 分类
+在算法时间复杂度分析中，常用 log⁡−log⁡ plot\log-\log \ plotlog−log plot 图去衡量算法时间复杂度，该图横坐标为 log⁡N\log NlogN（NNN 为问题规模），纵坐标为 log⁡T\log TlogT（TTT 为时间
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-09-19 19:50" pubdate>
+              2020-09-19
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/ACM/">ACM</a>
+            
+              <a href="/categories/ACM/%E7%AE%97%E6%B3%95/">算法</a>
+            
+              <a href="/categories/ACM/%E7%AE%97%E6%B3%95/%E5%85%B6%E4%BB%96/">其他</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/ACM/">ACM</a>
+            
+              <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
+            
+              <a href="/tags/%E5%85%B6%E4%BB%96/">其他</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/09/17/ACM/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/">快速排序</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/09/17/ACM/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/">
+          
+          
+            
+          
+          【注】参考自教材「算法导论」。
+1. 简介
+快速排序是一种被广泛运用的排序算法，虽然其最坏情况下的时间复杂度为 O(n2)O(n^2)O(n2)，但其平均时间复杂度为 (nlog⁡2n)(n\log_2 n)(nlog2​n)，而且其常数因子非常小，所以实际情况下跑的很快。快速排序是不稳定的、原址的排序算法。
+【注】实际上只要保证快排的每一层枢轴左右两边的序列大小的划分比不超过某一常数比（即与序列
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-09-17 22:34" pubdate>
+              2020-09-17
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/ACM/">ACM</a>
+            
+              <a href="/categories/ACM/%E7%AE%97%E6%B3%95/">算法</a>
+            
+              <a href="/categories/ACM/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/">排序</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/ACM/">ACM</a>
+            
+              <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
+            
+              <a href="/tags/%E6%8E%92%E5%BA%8F/">排序</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/09/15/Math/Theory/%E6%A6%82%E7%8E%87%E8%AE%BA/%E5%B8%B8%E8%A7%81%E5%88%86%E5%B8%83/">常见分布</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/09/15/Math/Theory/%E6%A6%82%E7%8E%87%E8%AE%BA/%E5%B8%B8%E8%A7%81%E5%88%86%E5%B8%83/">
+          
+          
+            
+          
+          1. 离散分布
+设 q=1−pq = 1 - pq=1−p ：
+1.1 0-1 分布（伯努利分布）
+P(X=1)=pP(X=0)=q{\begin{array}{c}
+P(X = 1) = p \\
+P(X = 0) = q
+\end{array}}P(X=1)=pP(X=0)=q​
+1.2 二项分布（n 重伯努利分布）
+P(X=k)=Cnkpkqn−k{\begin{array}{c}
+P(X 
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-09-15 11:27" pubdate>
+              2020-09-15
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/ProbabilityTheory/">ProbabilityTheory</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/ProbabilityTheory/">ProbabilityTheory</a>
+            
+              <a href="/tags/%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/">概率论与数理统计</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/09/14/MachineLearning/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%A6%82%E8%BF%B0/">机器学习概述</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/09/14/MachineLearning/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%A6%82%E8%BF%B0/">
+          
+          
+            
+          
+          1. 定义
+假设用 PPP 来评估计算机程序在某任务类 TTT 上的性能，若一个程序通过利用经验 EEE 在 TTT 中的任务上获得了性能改善，我们就说关于 TTT 和 PPP，该程序对 EEE 进行了学习。
+2. 分类
+
+机械学习
+示教学习
+类比学习
+归纳学习（主流技术，涵盖监督学习、无监督学习等，相当于「从样例中学习」）
+
+3. 归纳学习
+3.1 符号主义
+
+
+决策树：经典的决策树学习以信息论
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-09-14 22:32" pubdate>
+              2020-09-14
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/MachineLearning/">MachineLearning</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/MachineLearning/">MachineLearning</a>
+            
+              <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+
+
+  <nav aria-label="navigation">
+    <span class="pagination" id="pagination">
+      <a class="extend prev" rel="prev" href="/page/16/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/15/#board">15</a><a class="page-number" href="/page/16/#board">16</a><span class="page-number current">17</span><a class="page-number" href="/page/18/#board">18</a><a class="page-number" href="/page/19/#board">19</a><span class="space">&hellip;</span><a class="page-number" href="/page/37/#board">37</a><a class="extend next" rel="next" href="/page/18/#board"><i class="iconfont icon-arrowright"></i></a>
+    </span>
+  </nav>
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+      <div class="col-lg-7 mx-auto nopadding-x-md">
+        <div class="container custom mx-auto">
+          <script src="https://myhkw.cn/api/player/161389264877" id="myhk" key="161389264877" m="1"></script>
+        </div>
+      </div>
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+
+  <script defer src="/js/leancloud.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <!-- Baidu Analytics -->
+    <script defer>
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?c194cf0c8cbc33bfb846ba1329537d81";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  
+    <!-- Google Analytics -->
+    <script defer>
+      window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) };
+      ga.l = +new Date;
+      ga('create', 'G-SXJN0942X9', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+  
+
+  
+    <!-- Google gtag.js -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D3DEHLLP3W"></script>
+    <script defer>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-D3DEHLLP3W');
+    </script>
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

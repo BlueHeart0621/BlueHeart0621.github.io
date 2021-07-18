@@ -1,0 +1,700 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/self/portrait.jpg">
+  <link rel="icon" href="/img/self/portrait.jpg">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="一个记录各种笔记的小匣子^-^">
+  <meta name="author" content="BlueHeart0621">
+  <meta name="keywords" content="頑張れ">
+  
+    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script> <script src="/live2d-widget/autoload.js" type="text/javascript"></script> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
+  
+  <title>最大流 - お前はどこまで見えている</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"blueheart0621.github.io","root":"/","version":"1.8.9","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":"§"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":"c194cf0c8cbc33bfb846ba1329537d81","google":"G-SXJN0942X9","gtag":"G-D3DEHLLP3W","tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"A24MlA4oV7hlze3uNQiXDAIi-MdYXbMMI","app_key":"3moFK5Ao3TD4rjA1HCmPTSm6","server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>お前はどこまで見えている</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/covers/%E5%9B%9B%E6%9C%88%E6%98%AF%E4%BD%A0%E7%9A%84%E8%B0%8E%E8%A8%80-1.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="最大流">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2020-08-14 21:18" pubdate>
+        2020年8月14日 晚上
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      3.7k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      56
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- LeanCloud 统计文章PV -->
+      <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="leancloud-page-views"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">最大流</h1>
+            
+            <div class="markdown-body">
+              <h2 id="1-简介">1. 简介</h2>
+<p>最大流算法主要分为两大类，一类为增广路算法，一类为预流推进算法。最大流算法解决的是在有向网路图 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>G</mi><mo>=</mo><mo stretchy="false">(</mo><mi>V</mi><mo separator="true">,</mo><mi>E</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">
+G = (V,E)
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal">G</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span><span class="mclose">)</span></span></span></span> 中计算从源点 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi></mrow><annotation encoding="application/x-tex">s</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">s</span></span></span></span> 到汇点 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi></mrow><annotation encoding="application/x-tex">t</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.61508em;vertical-align:0em;"></span><span class="mord mathnormal">t</span></span></span></span> 的最大流量问题，以及最小割容量问题。</p>
+<ul>
+<li>
+<h4 id="最小割最大流定理">最小割最大流定理</h4>
+</li>
+</ul>
+<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>−</mo><mi>t</mi></mrow><annotation encoding="application/x-tex">s-t</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord mathnormal">s</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.61508em;vertical-align:0em;"></span><span class="mord mathnormal">t</span></span></span></span> 最大流的值等于 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>−</mo><mi>t</mi></mrow><annotation encoding="application/x-tex">s-t</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord mathnormal">s</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.61508em;vertical-align:0em;"></span><span class="mord mathnormal">t</span></span></span></span> 的最小割容量。</p>
+<h2 id="2-增广路算法">2. 增广路算法</h2>
+<ul>
+<li>
+<h4 id="剩余容量">剩余容量</h4>
+</li>
+</ul>
+<p>剩余容量 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>c</mi><mi>f</mi></msub><mo stretchy="false">(</mo><mi>u</mi><mo separator="true">,</mo><mi>v</mi><mo stretchy="false">)</mo><mo>=</mo><mi>c</mi><mo stretchy="false">(</mo><mi>u</mi><mo separator="true">,</mo><mi>v</mi><mo stretchy="false">)</mo><mo>−</mo><mi>f</mi><mo stretchy="false">(</mo><mi>u</mi><mo separator="true">,</mo><mi>v</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">
+c_f(u,v) = c(u,v) - f(u,v)
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.036108em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord mathnormal">c</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361079999999999em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.10764em;">f</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">u</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">c</span><span class="mopen">(</span><span class="mord mathnormal">u</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">u</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="mclose">)</span></span></span></span> 表示边 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi>u</mi><mo separator="true">,</mo><mi>v</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(u,v)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal">u</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="mclose">)</span></span></span></span> 的容量与流量之差。</p>
+<ul>
+<li>
+<h4 id="增广路">增广路</h4>
+</li>
+</ul>
+<p>对于一个网络图 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>G</mi><mo>=</mo><mo stretchy="false">(</mo><mi>V</mi><mo separator="true">,</mo><mi>E</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">
+G = (V,E)
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal">G</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span><span class="mclose">)</span></span></span></span>，从图 G 中找到一条从源节点 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi></mrow><annotation encoding="application/x-tex">s</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">s</span></span></span></span> 到目标节点 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi></mrow><annotation encoding="application/x-tex">t</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.61508em;vertical-align:0em;"></span><span class="mord mathnormal">t</span></span></span></span> 的路径，且路径上所有边的剩余容量都大于 0 ，则这条路径称为<strong>增广路</strong> 。</p>
+<ul>
+<li>
+<h4 id="残量网络">残量网络</h4>
+</li>
+</ul>
+<p>对于网络图 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>G</mi></mrow><annotation encoding="application/x-tex">G</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal">G</span></span></span></span>，残量网络定义为网络 G 中所有节点和剩余容量大于 0 的边构成的子图，即</p>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mtable rowspacing="0.15999999999999992em" columnalign="center" columnspacing="1em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><msub><mi>G</mi><mi>f</mi></msub><mo>=</mo><mo stretchy="false">(</mo><msub><mi>V</mi><mi>f</mi></msub><mo>=</mo><mi>V</mi><mo separator="true">,</mo><msub><mi>E</mi><mi>f</mi></msub><mo>=</mo><mrow><mo stretchy="false">(</mo><mi>u</mi><mo separator="true">,</mo><mi>v</mi><mo stretchy="false">)</mo><mo>∈</mo><mi>E</mi><mo separator="true">,</mo><msub><mi>c</mi><mi>f</mi></msub><mo stretchy="false">(</mo><mi>u</mi><mo separator="true">,</mo><mi>v</mi><mo stretchy="false">)</mo><mo>&gt;</mo><mn>0</mn></mrow><mo stretchy="false">)</mo></mrow></mstyle></mtd></mtr></mtable><annotation encoding="application/x-tex">{\begin{array}{c}
+G_f = (V_f = V, E_f = {(u,v) \in E, c_f(u,v) \gt 0})
+\end{array}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.2000000000000002em;vertical-align:-0.35000000000000003em;"></span><span class="mord"><span class="mord"><span class="mtable"><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8500000000000001em;"><span style="top:-3.01em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">G</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361079999999999em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.10764em;">f</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361079999999999em;"><span style="top:-2.5500000000000003em;margin-left:-0.22222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.10764em;">f</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">E</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361079999999999em;"><span style="top:-2.5500000000000003em;margin-left:-0.05764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.10764em;">f</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord"><span class="mopen">(</span><span class="mord mathnormal">u</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal">c</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361079999999999em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.10764em;">f</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">u</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord">0</span></span><span class="mclose">)</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.35000000000000003em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span></span></span></span></span></span></span></span></p>
+<h3 id="2-1-EK-算法">2.1 EK 算法</h3>
+<ul>
+<li>BFS 寻找增广路，一次 BFS 一次增广</li>
+<li>每一条有向边都需要构造反向边，因为当前增广路可能不是最优的，后续增广可能需要修改流量流向。</li>
+</ul>
+<p>EK 算法复杂度为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><msup><mi>m</mi><mn>2</mn></msup><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(nm^2)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mord"><span class="mord mathnormal">m</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span>（<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span></span></span></span> 为节点数，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi></mrow><annotation encoding="application/x-tex">m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">m</span></span></span></span> 为边数）。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;bits/stdc++.h&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;<br><br><span class="hljs-comment">// EK 算法</span><br><span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">EK</span> &#123;</span><br>    <span class="hljs-meta">#<span class="hljs-meta-keyword">ifndef</span> _EK_</span><br>    <span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> ll long long </span><br>    <span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> MAXN 505</span><br>    <span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> MAXM 240005</span><br>    <span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> INF 1e12</span><br>    <span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span></span><br>    ll cnt_edge;    <span class="hljs-comment">// 边数</span><br>    ll head[MAXN];  <span class="hljs-comment">// 节点的第一条边的编号</span><br>    ll flag[MAXN];  <span class="hljs-comment">// 节点标记数组</span><br>    <span class="hljs-comment">// 链式前向星</span><br>    <span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">edge</span> &#123;</span><br>        ll to, next, flow; <span class="hljs-comment">// 分别代表：边的终点、同起点的下一条边的编号、边的流量</span><br>        edge() &#123;&#125;<br>        edge(ll _to, ll _next, ll _flow): to(_to), next(_next), flow(_flow) &#123;&#125;<br>    &#125;e[MAXM];       <span class="hljs-comment">// 边数组 </span><br>    <span class="hljs-comment">// 增广路径</span><br>    <span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">path</span> &#123;</span><br>        ll from, index; <span class="hljs-comment">// 分别代表：边的起点，边的编号</span><br>    &#125;p[MAXN];<br>    EK() &#123;&#125;<br>    <span class="hljs-comment">// 初始化前向星结构</span><br>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">init</span><span class="hljs-params">(ll n)</span> </span>&#123;<br>        cnt_edge = <span class="hljs-number">0</span>;<br>        <span class="hljs-built_in">memset</span>(head, <span class="hljs-number">-1</span>, <span class="hljs-keyword">sizeof</span>(ll)*(n+<span class="hljs-number">1</span>));<br>    &#125;<br>    <span class="hljs-comment">// 添加边（正反向两条边）</span><br>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">addEdge</span><span class="hljs-params">(ll u, ll v, ll w)</span> </span>&#123;<br>        e[cnt_edge].to = v;<br>        e[cnt_edge].next = head[u];<br>        e[cnt_edge].flow = w;<br>        head[u] = cnt_edge++;<br>        e[cnt_edge].to = u;<br>        e[cnt_edge].next = head[v];<br>        e[cnt_edge].flow = <span class="hljs-number">0</span>;<br>        head[v] = cnt_edge++;<br>    &#125;<br>    <span class="hljs-comment">// BFS 寻找增广路</span><br>    <span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">bfs</span><span class="hljs-params">(ll s, ll t, ll n)</span> </span>&#123;<br>        <span class="hljs-built_in">memset</span>(flag, <span class="hljs-number">0</span>, <span class="hljs-keyword">sizeof</span>(ll)*(n+<span class="hljs-number">1</span>));<br>        <span class="hljs-built_in">memset</span>(p, <span class="hljs-number">-1</span>, <span class="hljs-keyword">sizeof</span>(ll)*(n+<span class="hljs-number">1</span>));<br>        <span class="hljs-built_in">queue</span> &lt;ll&gt; bfsq;<br>        bfsq.push(s);<br>        <span class="hljs-keyword">while</span>(!bfsq.empty()) &#123;<br>            ll u = bfsq.front();<br>            bfsq.pop();<br>            <span class="hljs-keyword">for</span>(ll i = head[u]; i != <span class="hljs-number">-1</span>; i = e[i].next) &#123;<br>                ll v = e[i].to, w = e[i].flow;<br>                <span class="hljs-keyword">if</span>(!flag[v] &amp;&amp; w) &#123;<br>                    flag[v] = <span class="hljs-number">1</span>;<br>                    p[v].from = u;<br>                    p[v].index = i;<br>                    <span class="hljs-keyword">if</span>(v == t) &#123;<br>                        <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;<br>                    &#125;<br>                    bfsq.push(v);<br>                &#125;<br>            &#125;<br>        &#125;<br>        <span class="hljs-comment">// 没有找到增广路</span><br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>    &#125;<br>    <span class="hljs-comment">// 求最大流</span><br>    <span class="hljs-function">ll <span class="hljs-title">maxFlow</span><span class="hljs-params">(ll s, ll t, ll n)</span> </span>&#123;<br>        ll ans = <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">while</span>(bfs(s,t,n)) &#123;<br>            ll maxflow = INF;<br>            <span class="hljs-keyword">for</span>(ll i = t; i != s; i = p[i].from) &#123;<br>                maxflow = min(maxflow, e[p[i].index].flow);<br>            &#125;<br>            <span class="hljs-keyword">for</span>(ll i = t; i != s; i = p[i].from) &#123;<br>                e[p[i].index].flow -= maxflow;<br>                e[p[i].index ^ <span class="hljs-number">1</span>].flow += maxflow;<br>            &#125;<br>            ans += maxflow;<br>        &#125;<br>        <span class="hljs-keyword">return</span> ans;<br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
+<h3 id="2-2-Dinic-算法">2.2 Dinic 算法</h3>
+<p>可以看出，EK 算法存在以下明显不足：</p>
+<ul>
+<li>
+<p>一次 BFS 只增广一次，如果残量网络中还存在增广路则被浪费了</p>
+</li>
+<li>
+<p>对于已经没有剩余容量的边，EK 算法仍然进行增广判断从而导致时间上的浪费</p>
+</li>
+</ul>
+<h4 id="层次深度">层次深度</h4>
+<blockquote>
+<p>当前节点到源点的最短路径长度（边权值视为 1 ）。</p>
+</blockquote>
+<p>Dinic 算法则巧妙解决了 EK 算法的不足之处：</p>
+<ul>
+<li>一次 BFS 后使用 DFS 进行多次增广</li>
+<li>DFS 多次增广过程中，对于已经没有容量的边，采用弧优化的方法巧妙避免重复增广判断</li>
+</ul>
+<p>Dinic 算法的复杂度为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><msup><mi>n</mi><mn>2</mn></msup><mi>m</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n^2m)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mord mathnormal">m</span><span class="mclose">)</span></span></span></span>（<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span></span></span></span> 为节点数，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi></mrow><annotation encoding="application/x-tex">m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">m</span></span></span></span> 为边数）。在稀疏图上，Dinic 算法和 EK 算法相差不大，但在稠密图上（二分匹配之类的）Dinic的优势很明显。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;bits/stdc++.h&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;<br><br><span class="hljs-comment">// Dinic 算法</span><br><span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">Dinic</span> &#123;</span><br>    <span class="hljs-meta">#<span class="hljs-meta-keyword">ifndef</span> _DINIC_</span><br>    <span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> ll long long </span><br>    <span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> MAXN 505</span><br>    <span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> MAXM 250005</span><br>    <span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> INF 1e12</span><br>    <span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span></span><br>    <br>    ll cnt_edge;    <span class="hljs-comment">// 边数</span><br>    ll head[MAXN];  <span class="hljs-comment">// 节点的第一条边的编号</span><br>    ll shead[MAXN]; <span class="hljs-comment">// shead 用来临时保存 head 的副本</span><br>    ll level[MAXN]; <span class="hljs-comment">// 节点所在层次</span><br>    <span class="hljs-comment">// 链式前向星</span><br>    <span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">edge</span> &#123;</span><br>        ll to, next, flow; <span class="hljs-comment">// 分别代表：边的终点、同起点的下一条边的编号、边的流量</span><br>        edge() &#123;&#125;<br>        edge(ll _to, ll _next, ll _flow): to(_to), next(_next), flow(_flow) &#123;&#125;<br>    &#125;e[MAXM];       <span class="hljs-comment">// 边数组 </span><br>    Dinic() &#123;&#125;<br>    <span class="hljs-comment">// 初始化前向星结构</span><br>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">init</span><span class="hljs-params">(ll n)</span> </span>&#123;<br>        cnt_edge = <span class="hljs-number">0</span>;<br>        <span class="hljs-built_in">memset</span>(head, <span class="hljs-number">-1</span>, <span class="hljs-keyword">sizeof</span>(ll)*(n+<span class="hljs-number">1</span>));<br>    &#125;<br>    <span class="hljs-comment">// 添加边（正反向两条边）</span><br>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">addEdge</span><span class="hljs-params">(ll u, ll v, ll w)</span> </span>&#123;<br>        e[cnt_edge].to = v;<br>        e[cnt_edge].next = head[u];<br>        e[cnt_edge].flow = w;<br>        head[u] = cnt_edge++;<br>        e[cnt_edge].to = u;<br>        e[cnt_edge].next = head[v];<br>        e[cnt_edge].flow = <span class="hljs-number">0</span>;<br>        head[v] = cnt_edge++;<br>    &#125;<br>    <span class="hljs-comment">// BFS 寻找增广路，构建层次网络</span><br>    <span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">bfs</span><span class="hljs-params">(ll s, ll t, ll n)</span> </span>&#123;<br>        <span class="hljs-built_in">memset</span>(level, <span class="hljs-number">0</span>, <span class="hljs-keyword">sizeof</span>(ll)*(n+<span class="hljs-number">1</span>));<br>        <span class="hljs-built_in">queue</span> &lt;ll&gt; bfsq;<br>        bfsq.push(s);<br>        level[s] = <span class="hljs-number">1</span>;   <span class="hljs-comment">// 0 用来表示没有 bfs 到，故源点深度从 1 开始</span><br>        <span class="hljs-keyword">while</span>(!bfsq.empty()) &#123;<br>            ll u = bfsq.front();<br>            bfsq.pop();<br>            <span class="hljs-keyword">for</span>(ll i = head[u]; i != <span class="hljs-number">-1</span>; i = e[i].next) &#123;<br>                ll v = e[i].to, w = e[i].flow;<br>                <span class="hljs-keyword">if</span>(!level[v] &amp;&amp; w) &#123;<br>                    level[v] = level[u] + <span class="hljs-number">1</span>;<br>                    bfsq.push(v);<br>                &#125;<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">if</span>(level[t])    <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;<br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>    &#125;<br>    <span class="hljs-comment">// DFS 进行路径增广</span><br>    <span class="hljs-function">ll <span class="hljs-title">dfs</span><span class="hljs-params">(ll u, ll curflow, ll t)</span> </span>&#123;<br>        <span class="hljs-keyword">if</span>(u == t) &#123;<br>            <span class="hljs-keyword">return</span> curflow;<br>        &#125;<br>        <span class="hljs-keyword">for</span>(ll &amp; i = shead[u]; i != <span class="hljs-number">-1</span>; i = e[i].next) &#123;<br>            ll v = e[i].to, w = e[i].flow;<br>            <span class="hljs-keyword">if</span>(level[v] == level[u] + <span class="hljs-number">1</span> &amp;&amp; w) &#123;<br>                ll maxflow = dfs(v, min(curflow, w), t);<br>                <span class="hljs-keyword">if</span>(maxflow) &#123;<br>                    e[i].flow -= maxflow;<br>                    e[i^<span class="hljs-number">1</span>].flow += maxflow;<br>                    <span class="hljs-keyword">return</span> maxflow;<br>                &#125;<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>    &#125;<br>    <span class="hljs-comment">// 求最大流</span><br>    <span class="hljs-function">ll <span class="hljs-title">maxFlow</span><span class="hljs-params">(ll s, ll t, ll n)</span> </span>&#123;<br>        ll ans = <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">while</span>(bfs(s,t,n)) &#123;<br>            ll maxflow = INF, curflow;<br>            <span class="hljs-built_in">memcpy</span>(shead, head, <span class="hljs-keyword">sizeof</span>(head));<br>            <span class="hljs-keyword">while</span>((curflow = dfs(s, maxflow, t))) &#123;<br>                ans += curflow;<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">return</span> ans;<br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
+<h3 id="2-3-ISAP-算法">2.3 ISAP 算法</h3>
+<p>SAP 算法引入了断层的优化方法：</p>
+<ul>
+<li>
+<h4 id="距离">距离</h4>
+</li>
+</ul>
+<p>当前节点到汇点的最短路径长度（边权值视为 1 ）。类似于 Dinic 算法中的层次深度的计算，不过是在反图上从汇点到源点进行 BFS 。</p>
+<ul>
+<li>
+<h4 id="断层">断层</h4>
+</li>
+</ul>
+<p>gap[i] 数组用来统计距离为 i 的节点个数。如果增广到某一距离发现节点数为零，需要重新计算所有节点的距离并计算 gap ；如果重新计算后仍然无法增广，则说明源点和汇点之间出现了断层，此时算法结束。</p>
+<p>SAP 算法复杂度为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><msup><mi>n</mi><mn>2</mn></msup><mi>m</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n^2m)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mord mathnormal">m</span><span class="mclose">)</span></span></span></span>（<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span></span></span></span> 为节点数，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi></mrow><annotation encoding="application/x-tex">m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">m</span></span></span></span> 为边数）。</p>
+<ul>
+<li>ISAP 算法即为 SAP 算法的优化版本，在 SAP 算法基础上加上了当前弧优化和分层优化（即 DFS 后不需要重跑 BFS 来进行分层）。</li>
+</ul>
+<p>ISAP 算法复杂度为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><msup><mi>n</mi><mn>2</mn></msup><mi>m</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n^2m)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mord mathnormal">m</span><span class="mclose">)</span></span></span></span>（<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span></span></span></span> 为节点数，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi></mrow><annotation encoding="application/x-tex">m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">m</span></span></span></span> 为边数）。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;bits/stdc++.h&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;<br><br><span class="hljs-comment">// ISAP 算法</span><br><span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">ISAP</span> &#123;</span><br>    <span class="hljs-meta">#<span class="hljs-meta-keyword">ifndef</span> _ISAP_</span><br>    <span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> ll long long </span><br>    <span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> MAXN 1205</span><br>    <span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> MAXM 240005</span><br>    <span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> INF 1e12</span><br>    <span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span></span><br>    <br>    ll cnt_edge;    <span class="hljs-comment">// 边数</span><br>    ll head[MAXN];  <span class="hljs-comment">// 节点的第一条边的编号</span><br>    ll shead[MAXN]; <span class="hljs-comment">// shead 用来临时保存 head 的副本</span><br>    ll level[MAXN]; <span class="hljs-comment">// 节点所在层次</span><br>    ll gap[MAXN+<span class="hljs-number">1</span>];   <span class="hljs-comment">// 层次节点数</span><br>    <span class="hljs-comment">// 链式前向星</span><br>    <span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">edge</span> &#123;</span><br>        ll to, next, flow; <span class="hljs-comment">// 分别代表：边的终点、同起点的下一条边的编号、边的流量</span><br>        edge() &#123;&#125;<br>        edge(ll _to, ll _next, ll _flow): to(_to), next(_next), flow(_flow) &#123;&#125;<br>    &#125;e[MAXM];       <span class="hljs-comment">// 边数组 </span><br>    ISAP() &#123;&#125;<br>    <span class="hljs-comment">// 初始化前向星结构</span><br>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">init</span><span class="hljs-params">(ll n)</span> </span>&#123;<br>        cnt_edge = <span class="hljs-number">0</span>;<br>        <span class="hljs-built_in">memset</span>(head, <span class="hljs-number">-1</span>, <span class="hljs-keyword">sizeof</span>(ll)*(n+<span class="hljs-number">1</span>));<br>    &#125;<br>    <span class="hljs-comment">// 添加边（正反向两条边）</span><br>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">addEdge</span><span class="hljs-params">(ll u, ll v, ll w)</span> </span>&#123;<br>        e[cnt_edge].to = v;<br>        e[cnt_edge].next = head[u];<br>        e[cnt_edge].flow = w;<br>        head[u] = cnt_edge++;<br>        e[cnt_edge].to = u;<br>        e[cnt_edge].next = head[v];<br>        e[cnt_edge].flow = <span class="hljs-number">0</span>;<br>        head[v] = cnt_edge++;<br>    &#125;<br>    <span class="hljs-comment">// BFS 寻找增广路，构建层次网络</span><br>    <span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">bfs</span><span class="hljs-params">(ll s, ll t, ll n)</span> </span>&#123;<br>        <span class="hljs-built_in">memset</span>(level, <span class="hljs-number">0</span>, <span class="hljs-keyword">sizeof</span>(ll)*(n+<span class="hljs-number">1</span>));<br>        <span class="hljs-built_in">memset</span>(gap, <span class="hljs-number">0</span>, <span class="hljs-keyword">sizeof</span>(ll)*(n+<span class="hljs-number">2</span>));   <span class="hljs-comment">// 最大 level 可达 n+1（见下文）</span><br>        <span class="hljs-built_in">queue</span> &lt;ll&gt; bfsq;<br>        level[t] = <span class="hljs-number">1</span>;   <span class="hljs-comment">// 0 用来表示没有 bfs 到，故到汇点的距离从 1 开始</span><br>        gap[<span class="hljs-number">1</span>] = <span class="hljs-number">1</span>;    <br>        bfsq.push(t); <br>        <span class="hljs-keyword">while</span>(!bfsq.empty()) &#123;<br>            ll u = bfsq.front();<br>            bfsq.pop();<br>            <span class="hljs-keyword">for</span>(ll i = head[u]; i != <span class="hljs-number">-1</span>; i = e[i].next) &#123;<br>                <span class="hljs-comment">// 在反图中构建层次网络，故需反向判断路径容量</span><br>                ll v = e[i].to;<br>                <span class="hljs-keyword">if</span>(!level[v] &amp;&amp; e[i^<span class="hljs-number">1</span>].flow) &#123;<br>                    level[v] = level[u] + <span class="hljs-number">1</span>;<br>                    ++gap[level[v]];<br>                    bfsq.push(v);<br>                &#125;<br>            &#125;<br>        &#125;<br>        <span class="hljs-comment">// 判断 s 到 t 是否有增广路</span><br>        <span class="hljs-keyword">if</span>(level[s])    <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;<br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>    &#125;<br>    <span class="hljs-comment">// 重贴标签（更新层次深度）</span><br>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">relabel</span><span class="hljs-params">(ll u, ll n)</span> </span>&#123;<br>        level[u] = n + <span class="hljs-number">1</span>;<br>        <span class="hljs-keyword">for</span>(ll i = head[u]; i != <span class="hljs-number">-1</span>; i = e[i].next) &#123;<br>            ll v = e[i].to, w = e[i].flow;<br>            <span class="hljs-keyword">if</span>(level[v] &lt; level[u] - <span class="hljs-number">1</span> &amp;&amp; w) &#123;<br>                level[u] = level[v] + <span class="hljs-number">1</span>;<br>            &#125;<br>        &#125;<br>    &#125;<br>    <span class="hljs-comment">// DFS 进行路径增广</span><br>    <span class="hljs-function">ll <span class="hljs-title">dfs</span><span class="hljs-params">(ll u, ll curflow, ll s, ll t, ll n)</span> </span>&#123;<br>        <span class="hljs-keyword">if</span>(u == t) &#123;<br>            <span class="hljs-keyword">return</span> curflow;<br>        &#125;<br>        <span class="hljs-keyword">for</span>(ll &amp; i = shead[u]; i != <span class="hljs-number">-1</span>; i = e[i].next) &#123;<br>            ll v = e[i].to, w = e[i].flow;<br>            <span class="hljs-keyword">if</span>(level[v] == level[u] - <span class="hljs-number">1</span> &amp;&amp; w) &#123;<br>                ll maxflow = dfs(v, min(curflow, w), s, t, n);<br>                <span class="hljs-keyword">if</span>(maxflow) &#123;<br>                    e[i].flow -= maxflow;<br>                    e[i^<span class="hljs-number">1</span>].flow += maxflow;<br>                    <span class="hljs-keyword">return</span> maxflow;<br>                &#125;<br>            &#125;<br>        &#125;<br>        <span class="hljs-comment">// 程序执行到此说明该点出去的所有点都已经流过了</span><br>        <span class="hljs-comment">// 此时需要更改层次深度</span><br>        <span class="hljs-comment">// 同样要更新对应点的 shead</span><br>        shead[u] = head[u];<br>        --gap[level[u]];<br>        <span class="hljs-keyword">if</span>(gap[level[u]] == <span class="hljs-number">0</span>) &#123;<br>            level[s] = n + <span class="hljs-number">1</span>;<br>        &#125;<br>        <span class="hljs-comment">// 提高当前层次深度（因为可能存在路径更长的增广）</span><br>        <span class="hljs-comment">// 方案一：直接更新为出边的最小层次深度+1</span><br>        relabel(u, n);<br>        <span class="hljs-comment">// 方案二：直接更新为原层次深度+1</span><br>        <span class="hljs-comment">// ++level[u];</span><br>        ++gap[level[u]];<br>        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>    &#125;<br>    <span class="hljs-comment">// 求最大流</span><br>    <span class="hljs-function">ll <span class="hljs-title">maxFlow</span><span class="hljs-params">(ll s, ll t, ll n)</span> </span>&#123;<br>        ll ans = <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">if</span>(bfs(s,t,n)) &#123;<br>            ll maxflow = INF;<br>            <span class="hljs-built_in">memcpy</span>(shead, head, <span class="hljs-keyword">sizeof</span>(head));<br>            <span class="hljs-keyword">while</span>(level[s] &lt;= n) &#123;<br>                ans += dfs(s, maxflow, s, t, n);<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">return</span> ans;<br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
+<h2 id="3-预流推进算法">3. 预流推进算法</h2>
+<p>预流推进算法的主要思想是允许水在非源汇点的节点中暂时存储，然后每个节点都尽可能将自身的<strong>超额流</strong>推送出去，并且保证在算法结束后所有非源汇点的超额流都为0，那这种方案就是合法的。</p>
+<ul>
+<li>
+<h4 id="超额流">超额流</h4>
+</li>
+</ul>
+<p>存储在非源汇点中的流称作这个点的超额流。</p>
+<h3 id="3-1-HLPP-算法">3.1 HLPP 算法</h3>
+<p>HLPP 算法的主要思想如下：</p>
+<ul>
+<li>对于非源汇点的层次深度，每次选择层次深度最大的节点进行推流</li>
+<li>如果节点推流后还有余流，则对该节点重贴标签后抬高其高度，回到上一步骤</li>
+<li>直到所有非汇源点的余流都等于零，程序结束</li>
+</ul>
+<h4 id="GAP-优化">GAP 优化</h4>
+<ul>
+<li>当出现断层后，直接将断层以上深度的所有节点的层次深度设为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">n + 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span>，使得这些再也无法推流到汇点的节点的余流尽快推送回源点，从而减少重贴标签的操作。</li>
+</ul>
+<p>HLPP 算法复杂度为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><msup><mi>n</mi><mn>2</mn></msup><msqrt><mi>m</mi></msqrt><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n^2 \sqrt{m})</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8002800000000001em;"><span class="svg-align" style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord" style="padding-left:0.833em;"><span class="mord mathnormal">m</span></span></span><span style="top:-2.76028em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail" style="min-width:0.853em;height:1.08em;"><svg width='400em' height='1.08em' viewBox='0 0 400000 1080' preserveAspectRatio='xMinYMin slice'><path d='M95,702
+c-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,-10,-9.5,-14
+c0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54
+c44.2,-33.3,65.8,-50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10
+s173,378,173,378c0.7,0,35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429
+c69,-144,104.5,-217.7,106.5,-221
+l0 -0
+c5.3,-9.3,12,-14,20,-14
+H400000v40H845.2724
+s-225.272,467,-225.272,467s-235,486,-235,486c-2.7,4.7,-9,7,-19,7
+c-6,0,-10,-1,-12,-3s-194,-422,-194,-422s-65,47,-65,47z
+M834 80h400000v40h-400000z'/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.23972em;"><span></span></span></span></span></span><span class="mclose">)</span></span></span></span>（<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span></span></span></span> 为节点数，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi></mrow><annotation encoding="application/x-tex">m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">m</span></span></span></span> 为边数）。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;bits/stdc++.h&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;<br><br><span class="hljs-comment">// HLPP 算法</span><br><span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">HLPP</span> &#123;</span><br>    <span class="hljs-meta">#<span class="hljs-meta-keyword">ifndef</span> _HLPP_</span><br>    <span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> ll long long </span><br>    <span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> MAXN 1205</span><br>    <span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> MAXM 240005</span><br>    <span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> INF 1e12</span><br>    <span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span></span><br>    <br>    ll cnt_edge;    <span class="hljs-comment">// 边数</span><br>    ll head[MAXN];  <span class="hljs-comment">// 节点的第一条边的编号</span><br>    ll rflow[MAXN]; <span class="hljs-comment">// 每个点对应的余流（所有节点的余流初始化为0）</span><br>    ll level[MAXN]; <span class="hljs-comment">// 节点所在层次</span><br>    ll flag[MAXN];  <span class="hljs-comment">// 标记是否已经在层次深度链表数组中</span><br>    ll gap[MAXN&lt;&lt;<span class="hljs-number">1</span>];        <span class="hljs-comment">// 层次节点数，重贴标签后层次深度可能达到 2n</span><br>    <span class="hljs-comment">// 层次深度结构体</span><br>    <span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">depth</span> &#123;</span><br>        ll node;    <span class="hljs-comment">// 节点编号</span><br>        ll level;   <span class="hljs-comment">// 节点层次深度</span><br>        depth() &#123;&#125;<br>        depth(ll _node, ll _level): node(_node), level(_level) &#123;&#125;<br>        <span class="hljs-keyword">bool</span> <span class="hljs-keyword">operator</span> &lt; (<span class="hljs-keyword">const</span> depth d) <span class="hljs-keyword">const</span> &#123;<br>            <span class="hljs-keyword">return</span> level &lt; d.level;<br>        &#125;<br>    &#125;;<br>    <span class="hljs-comment">// 层次深度优先队列</span><br>    <span class="hljs-built_in">priority_queue</span> &lt;depth&gt; pq;<br>    <span class="hljs-comment">// 链式前向星</span><br>    <span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">edge</span> &#123;</span><br>        ll to, next, flow; <span class="hljs-comment">// 分别代表：边的终点、同起点的下一条边的编号、边的流量</span><br>        edge() &#123;&#125;<br>        edge(ll _to, ll _next, ll _flow): to(_to), next(_next), flow(_flow) &#123;&#125;<br>    &#125;e[MAXM];       <span class="hljs-comment">// 边数组 </span><br>    HLPP() &#123;&#125;<br>    <span class="hljs-comment">// 初始化前向星结构</span><br>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">init</span><span class="hljs-params">(ll n)</span> </span>&#123;<br>        cnt_edge = <span class="hljs-number">0</span>;<br>        <span class="hljs-built_in">memset</span>(head, <span class="hljs-number">-1</span>, <span class="hljs-keyword">sizeof</span>(ll)*(n+<span class="hljs-number">1</span>));<br>    &#125;<br>    <span class="hljs-comment">// 添加边（正反向两条边）</span><br>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">addEdge</span><span class="hljs-params">(ll u, ll v, ll w)</span> </span>&#123;<br>        e[cnt_edge].to = v;<br>        e[cnt_edge].next = head[u];<br>        e[cnt_edge].flow = w;<br>        head[u] = cnt_edge++;<br>        e[cnt_edge].to = u;<br>        e[cnt_edge].next = head[v];<br>        e[cnt_edge].flow = <span class="hljs-number">0</span>;<br>        head[v] = cnt_edge++;<br>    &#125;<br>    <span class="hljs-comment">// BFS 寻找增广路，构建层次网络（反向构建）</span><br>    <span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">bfs</span><span class="hljs-params">(ll s, ll t, ll n)</span> </span>&#123;<br>        <span class="hljs-built_in">memset</span>(level, <span class="hljs-number">0</span>, <span class="hljs-keyword">sizeof</span>(ll)*(n+<span class="hljs-number">1</span>));<br>        <span class="hljs-built_in">queue</span> &lt;ll&gt; bfsq;<br>        level[t] = <span class="hljs-number">1</span>;   <span class="hljs-comment">// 0 用来表示没有 bfs 到，故到汇点的距离从 1 开始</span><br>        bfsq.push(t); <br>        <span class="hljs-keyword">while</span>(!bfsq.empty()) &#123;<br>            ll u = bfsq.front();<br>            bfsq.pop();<br>            <span class="hljs-keyword">for</span>(ll i = head[u]; i != <span class="hljs-number">-1</span>; i = e[i].next) &#123;<br>                <span class="hljs-comment">// 在反图中构建层次网络，故需反向判断路径容量</span><br>                ll v = e[i].to;<br>                <span class="hljs-keyword">if</span>(!level[v] &amp;&amp; e[i^<span class="hljs-number">1</span>].flow) &#123;<br>                    level[v] = level[u] + <span class="hljs-number">1</span>;<br>                    bfsq.push(v);<br>                &#125;<br>            &#125;<br>        &#125;<br>        <span class="hljs-comment">// 判断 s 到 t 是否有增广路</span><br>        <span class="hljs-keyword">if</span>(level[s])    <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;<br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>    &#125;<br>    <span class="hljs-comment">// 预流推进</span><br>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">preflowPush</span><span class="hljs-params">(ll u, ll s, ll t)</span> </span>&#123;<br>        <span class="hljs-keyword">for</span>(ll i = head[u]; i != <span class="hljs-number">-1</span>; i = e[i].next) &#123;<br>            ll v = e[i].to, w = e[i].flow;<br>            <span class="hljs-keyword">if</span>(level[v] == level[u] - <span class="hljs-number">1</span> &amp;&amp; w) &#123;<br>                ll maxflow = min(rflow[u], e[i].flow);<br>                e[i].flow -= maxflow;<br>                e[i^<span class="hljs-number">1</span>].flow += maxflow;<br>                rflow[u] -= maxflow;<br>                rflow[v] += maxflow;<br>                <span class="hljs-keyword">if</span>(v != s &amp;&amp; v != t &amp;&amp; !flag[v]) &#123;<br>                    pq.push(depth&#123;v, level[v]&#125;);<br>                    flag[v] = <span class="hljs-number">1</span>;<br>                &#125;<br>                <span class="hljs-keyword">if</span>(rflow[u] == <span class="hljs-number">0</span>) &#123;<br>                    <span class="hljs-comment">// 全部流量推送完毕</span><br>                    <span class="hljs-keyword">break</span>;<br>                &#125;<br>            &#125;<br>        &#125;<br>    &#125;<br>    <span class="hljs-comment">// 重贴标签（更新层次深度）</span><br>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">relabel</span><span class="hljs-params">(ll u, ll n)</span> </span>&#123;<br>        level[u] = <span class="hljs-number">2</span>*n;<br>        <span class="hljs-keyword">for</span>(ll i = head[u]; i != <span class="hljs-number">-1</span>; i = e[i].next) &#123;<br>            ll v = e[i].to, w = e[i].flow;<br>            <span class="hljs-keyword">if</span>(level[v] &lt; level[u] - <span class="hljs-number">1</span> &amp;&amp; w) &#123;<br>                level[u] = level[v] + <span class="hljs-number">1</span>;<br>            &#125;<br>        &#125;<br>    &#125;<br>    <span class="hljs-comment">// 求最大流</span><br>    <span class="hljs-function">ll <span class="hljs-title">maxFlow</span><span class="hljs-params">(ll s, ll t, ll n)</span> </span>&#123;<br>        <span class="hljs-keyword">if</span>(!bfs(s,t,n)) &#123;<br>            <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>        &#125;<br>        <span class="hljs-comment">// 防止s的临近节点过早的推流回s节点</span><br>        level[s] = n + <span class="hljs-number">1</span>;<br>        <span class="hljs-comment">// 初始化 gap 数组</span><br>        <span class="hljs-built_in">memset</span>(gap, <span class="hljs-number">0</span>, <span class="hljs-keyword">sizeof</span>(ll)*((n+<span class="hljs-number">1</span>)&lt;&lt;<span class="hljs-number">1</span>));<br>        <span class="hljs-keyword">for</span>(ll i = <span class="hljs-number">1</span>; i &lt;= n; ++i) &#123;<br>            <span class="hljs-keyword">if</span>(level[i]) &#123;<br>                ++gap[level[i]];<br>            &#125;<br>        &#125;<br>        <span class="hljs-comment">// 设定源点 s 的出边节点初始余流</span><br>        <span class="hljs-keyword">for</span>(ll i = head[s]; i != <span class="hljs-number">-1</span>; i = e[i].next) &#123;<br>            ll v = e[i].to, w = e[i].flow;<br>            <span class="hljs-keyword">if</span>(w) &#123;<br>                e[i].flow -= w;<br>                e[i^<span class="hljs-number">1</span>].flow += w;<br>                rflow[s] -= w;<br>                rflow[v] += w;<br>                <span class="hljs-keyword">if</span>(v != s &amp;&amp; v != t &amp;&amp; !flag[v]) &#123;<br>                    pq.push(depth&#123;v, level[v]&#125;);<br>                    flag[v] = <span class="hljs-number">1</span>;<br>                &#125;<br>            &#125;<br>        &#125;<br>        <span class="hljs-comment">// 开始从最高高度节点预推流</span><br>        <span class="hljs-keyword">while</span>(!pq.empty()) &#123;<br>            ll u = pq.top().node;<br>            pq.pop();<br>            flag[u] = <span class="hljs-number">0</span>;<br>            preflowPush(u, s, t);<br>            <span class="hljs-keyword">if</span>(rflow[u]) &#123;<br>                <span class="hljs-comment">// 如果当前节点还有余流</span><br>                --gap[level[u]];<br>                <span class="hljs-keyword">if</span>(!gap[level[u]]) &#123;<br>                    <span class="hljs-comment">// 断层</span><br>                    <span class="hljs-keyword">for</span>(ll v = <span class="hljs-number">1</span>; v &lt;= n; ++v) &#123;<br>                        <span class="hljs-keyword">if</span>(v != s &amp;&amp; v != t &amp;&amp; level[v] &gt; level[u] &amp;&amp; level[v] &lt; n + <span class="hljs-number">1</span>) &#123;<br>                            level[v] = n + <span class="hljs-number">1</span>;<br>                        &#125;<br>                    &#125;<br>                &#125;<br>                relabel(u, n); <span class="hljs-comment">// 重贴标签，提升高度</span><br>                ++gap[level[u]];<br>                pq.push(depth&#123;u, level[u]&#125;);<br>                flag[u] = <span class="hljs-number">1</span>;<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">return</span> rflow[t];<br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/ACM/">ACM</a>
+                    
+                      <a class="hover-with-bg" href="/categories/ACM/%E7%AE%97%E6%B3%95/">算法</a>
+                    
+                      <a class="hover-with-bg" href="/categories/ACM/%E7%AE%97%E6%B3%95/%E5%9B%BE%E8%AE%BA/">图论</a>
+                    
+                      <a class="hover-with-bg" href="/categories/ACM/%E7%AE%97%E6%B3%95/%E5%9B%BE%E8%AE%BA/%E7%BD%91%E7%BB%9C%E6%B5%81/">网络流</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/ACM/">ACM</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E5%9B%BE%E8%AE%BA/">图论</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E7%BD%91%E7%BB%9C%E6%B5%81/">网络流</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E7%BD%91%E7%BB%9C%E6%B5%81%E7%AE%97%E6%B3%95/">网络流算法</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/08/14/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%A6/%E7%9F%A9%E9%98%B5%E6%A0%91%E5%AE%9A%E7%90%86/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">矩阵树定理</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/08/14/ACM/%E9%A2%98%E8%A7%A3/PAT%E3%80%8C1003%20Universal%20Travel%20Sites%20(35%E5%88%86)%E3%80%8D/">
+                        <span class="hidden-mobile">PAT「1003 Universal Travel Sites (35分)」</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.lazyComments('valine', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function () {
+        new Valine({
+          el: "#valine",
+          app_id: "kJgPdAqoTM5JKOdTdYLmXqq5-gzGzoHsz",
+          app_key: "X4MnxJgITkyJVettcgYX6ebP",
+          placeholder: "说点什么",
+          path: window.location.pathname,
+          avatar: "retro",
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: false,
+          recordIP: false,
+          serverURLs: "",
+        });
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the
+    <a target="_blank" href="https://valine.js.org" rel="nofollow noopener noopener">comments powered by Valine.</a>
+  </noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+      <div class="col-lg-7 mx-auto nopadding-x-md">
+        <div class="container custom mx-auto">
+          <script src="https://myhkw.cn/api/player/161389264877" id="myhk" key="161389264877" m="1"></script>
+        </div>
+      </div>
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+
+  <script defer src="/js/leancloud.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- KaTeX -->
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" />
+  
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/mermaid@8.8.3/dist/mermaid.min.js" ></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({"theme":"default"});
+    }
+  </script>
+
+
+
+
+  
+    <!-- Baidu Analytics -->
+    <script defer>
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?c194cf0c8cbc33bfb846ba1329537d81";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  
+    <!-- Google Analytics -->
+    <script defer>
+      window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) };
+      ga.l = +new Date;
+      ga('create', 'G-SXJN0942X9', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+  
+
+  
+    <!-- Google gtag.js -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D3DEHLLP3W"></script>
+    <script defer>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-D3DEHLLP3W');
+    </script>
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

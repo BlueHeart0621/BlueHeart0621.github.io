@@ -1,0 +1,895 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/self/portrait.jpg">
+  <link rel="icon" href="/img/self/portrait.jpg">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="一个记录各种笔记的小匣子^-^">
+  <meta name="author" content="BlueHeart0621">
+  <meta name="keywords" content="頑張れ">
+  
+    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script> <script src="/live2d-widget/autoload.js" type="text/javascript"></script> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
+  
+  <title>UNIX访问权限 - お前はどこまで見えている</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"blueheart0621.github.io","root":"/","version":"1.8.9","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":"§"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":"c194cf0c8cbc33bfb846ba1329537d81","google":"G-SXJN0942X9","gtag":"G-D3DEHLLP3W","tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"A24MlA4oV7hlze3uNQiXDAIi-MdYXbMMI","app_key":"3moFK5Ao3TD4rjA1HCmPTSm6","server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>お前はどこまで見えている</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/covers/%E5%9B%9B%E6%9C%88%E6%98%AF%E4%BD%A0%E7%9A%84%E8%B0%8E%E8%A8%80-1.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="UNIX访问权限">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2020-05-26 10:44" pubdate>
+        2020年5月26日 上午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      2.9k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      32
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- LeanCloud 统计文章PV -->
+      <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="leancloud-page-views"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">UNIX访问权限</h1>
+            
+            <div class="markdown-body">
+              <p>【注】*NIX 下很重要的概念是「一切皆文件」；以下仅以 *NIX 家族的起源 UNIX 作为分析对象。</p>
+<h2 id="1-文件的组织与权限表示">1. 文件的组织与权限表示</h2>
+<h3 id="1-1-文件的组织方式（此处文件为泛指概念，包括目录等）">1.1 文件的组织方式（此处文件为泛指概念，包括目录等）</h3>
+<ul>
+<li>
+<p>文件存在于目录中</p>
+</li>
+<li>
+<p>目录是一种特殊的文件</p>
+</li>
+<li>
+<p>文件采用层次结构存放<br />
+<img src="/img/ComputerSystemSecurity/UNIX%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6/UNIX%E7%B3%BB%E7%BB%9F%E6%96%87%E4%BB%B6%E5%B1%82%E6%AC%A1%E7%BB%93%E6%9E%84.png" srcset="/img/loading.gif" lazyload alt="UNIX系统文件层次结构" /></p>
+</li>
+<li>
+<p>文件的基本操作：open、close、read、write、lseek</p>
+</li>
+<li>
+<p>打开现存文件或创建新文件，内核都会向进程返回一个文件描述符 fid</p>
+</li>
+<li>
+<p>对内核而言，所有文件都由文件描述符引用</p>
+</li>
+<li>
+<p>UNIX 下，每个文件都有一个对应的 inode。UNIX 系统中的 inode 结构如下：<br />
+<img src="/img/ComputerSystemSecurity/UNIX%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6/UNIX%E7%B3%BB%E7%BB%9Finode%E7%BB%93%E6%9E%84.png" srcset="/img/loading.gif" lazyload alt="UNIX系统inode结构" /><br />
+以 Ext2 文件系统为例，inode 信息在文件系统的结构层次如下：<br />
+<img src="/img/ComputerSystemSecurity/UNIX%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6/Ext2%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E7%BB%93%E6%9E%84.png" srcset="/img/loading.gif" lazyload alt="Ext2文件系统结构" /></p>
+</li>
+</ul>
+<p>【注】stat 命令可以查看文件的 inode 信息。</p>
+<h3 id="1-2-文件的权限表示（此处文件为泛指概念，包括目录等）">1.2 文件的权限表示（此处文件为泛指概念，包括目录等）</h3>
+<ul>
+<li>文件的基本权限</li>
+</ul>
+<blockquote>
+<ol>
+<li>Read 权限：控制读文件权限</li>
+<li>Write 权限：控制写文件权限</li>
+<li>Execute 权限：控制将文件调入内存执行</li>
+</ol>
+</blockquote>
+<ul>
+<li>文件的基本权限位<br />
+<img src="/img/ComputerSystemSecurity/UNIX%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6/UNIX%E6%96%87%E4%BB%B6%E5%9F%BA%E6%9C%AC%E6%9D%83%E9%99%90%E4%BD%8D.png" srcset="/img/loading.gif" lazyload alt="UNIX文件基本权限位" /><br />
+其中，<strong>r</strong> 代表 Read 权限，<strong>w</strong> 代表 Write 权限，<strong>x</strong> 代表 Execute 权限。rwx 权限位组合在一起用来表示文件具有的基本权限，可使用 <strong>ls -l</strong> 命令列出文件的基本权限位信息，在对应位若为 <strong>-</strong>，则表明不具有对应位权限；若为对应 r\w\x 字母，则表明具有对应权限。每组 rwx 权限位组合对应的权限数值如下表（对应权限位为 0 代表不具有该权限，为 1 代表具有该权限）：</li>
+</ul>
+<blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">r</th>
+<th style="text-align:center">w</th>
+<th style="text-align:center">x</th>
+<th style="text-align:center">权限数值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">2</td>
+</tr>
+<tr>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">3</td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">4</td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">5</td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">6</td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">7</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<ul>
+<li>UNIX 中 chmod 命令可以更改文件权限；fchmod 命令可以对已打开的文件更改权限</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">chmod 745 foo       <span class="hljs-comment"># 将 foo 文件权限数值改为 745（7 4 5 依次对应文件拥有者、文件拥有者所在组、其他人的权限）</span><br></code></pre></td></tr></table></figure>
+<ul>
+<li>UNIX 中文件权限检查时依次检查拥有者、拥有者所在组、其他用户</li>
+</ul>
+<h3 id="1-3-文件的权限要求">1.3 文件的权限要求</h3>
+<ul>
+<li>二进制文件 vs. 脚本文件</li>
+</ul>
+<blockquote>
+<ol>
+<li>UNIX 下二进制文件执行只需要执行权限即可</li>
+<li>UNIX 下脚本文件执行需要读权限和执行权限</li>
+</ol>
+</blockquote>
+<ul>
+<li>权限的特殊性：权限位不是直接授权用户操作某程序，而是授权给用户可以使用相应的系统调用。</li>
+</ul>
+<blockquote>
+<p><strong>比如：</strong> 在 UNIX 下的 cat 和 more 命令调用了 read() 系统调用，用户要想使用其显示某文件内容，则必须满足两个权限要求：</p>
+<ol>
+<li>当前用户需要 cat 和 more 命令的执行权限</li>
+<li>当前用户需要读取文件的读权限（用于调用 read() 系统调用）</li>
+</ol>
+<p><strong>同理：</strong> 在 UNIX 下用户要想使用某个命令写文件，也必须满足两个权限要求：</p>
+<ol>
+<li>当前用户需要写文件的命令的执行权限</li>
+<li>当前用户需要写文件的写权限（用于调用 write() 系统调用）</li>
+</ol>
+</blockquote>
+<ul>
+<li>文件写权限作用</li>
+</ul>
+<blockquote>
+<ol>
+<li>改文件名、删除文件不需要对文件有写权限，但需要对文件所在目录具有写权限（故不是文件的拥有者也可以删除相应文件）</li>
+</ol>
+</blockquote>
+<h3 id="1-4-文件的特殊权限">1.4 文件的特殊权限</h3>
+<p>除了上述说明的三组 rwx 共 9 位权限位外，UNIX 下文件还具有另外 3 位特殊权限位：suid\sgid\sticky。该三位特殊权限位组成一组，使用 chmod 命令时该组权限值放在最前面：<code>chmod 4755 xxx</code> 其中 4 即为该组特殊权限位组。</p>
+<ul>
+<li>suid 位：用于临时将进程的 euid 设置为程序文件的 ruid</li>
+</ul>
+<p>【注】用户运行程序后是该进程的拥有者（ruid），进程执行者（euid）代表该进程以相应身份访问系统资源。若位设置 suid 位，ruid 和 euid 均为当前用户 id；设置了 suid 位后，ruid 仍为当前用户 id，euid 为该程序文件的拥有者 id。（ruid、euid 解释见下文 <strong>4</strong>）</p>
+<blockquote>
+<p><strong>比如：</strong> 用户 Jane 运行命令 <code>view memo.txt</code>，view 和 memo.txt 的权限和所用者信息如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">-rwx--x--x 1 root bin 4515 Aug 14 13:08   <span class="hljs-comment"># view</span><br>-rw------- 1 root bin 218 Aug 14 13:08    <span class="hljs-comment"># memo.txt</span><br></code></pre></td></tr></table></figure>
+<p>由于 Jane 用户运行 view 程序时对应的进程的 euid 为 Jane 用户 id，而 Jane 对 memo.txt 文件不具备可读权限，故无法执行。但利用 chmod 命令将 view 程序的权限改为 4755 则可以执行该命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">-rws--x--x 1 root bin 4515 Aug 14 13:08   <span class="hljs-comment"># view</span><br>-rw------- 1 root bin 218 Aug 14 13:08    <span class="hljs-comment"># memo.txt</span><br></code></pre></td></tr></table></figure>
+<p>原因在于设置了 suid 后，Jane 用户运行 view程序时对应的进程的 euid 为 view 程序文件的拥有者 root 的 id，而 root 用户具备对 memo.txt 文件的可读权限，故该命令可以正常执行。</p>
+</blockquote>
+<p>【注】设置了 suid 后，利用 <strong>ls -l</strong> 命令显示时 suid 对应文件拥有者那组 rwx 中的 x 位：</p>
+<blockquote>
+<ol>
+<li>若既设置了 x 权限又设置了 suid，则显示 <strong>s</strong></li>
+<li>若未设置 x 权限，但设置了 suid，则显示 <strong>S</strong></li>
+</ol>
+</blockquote>
+<ul>
+<li>sgid 位：用于临时将进程的 egid 设置为程序文件的 rgid（类比 suid）</li>
+</ul>
+<p>【注】设置了 sgid 后，利用 <strong>ls -l</strong> 命令显示时 sgid 对应文件拥有者所在组那组 rwx 中的 x 位：</p>
+<blockquote>
+<ol>
+<li>若既设置了 x 权限又设置了 sgid，则显示 <strong>s</strong></li>
+<li>若未设置 x 权限，但设置了 sgid，则显示 <strong>S</strong></li>
+</ol>
+</blockquote>
+<ul>
+<li>sticky 位：如果一个可执行程序设置了该位，则该程序执行结束后，程序正文的一个文本被保存在交换区，下次执行该程序时能较快装入内存。如果一个目录设置了该位，则可以保护该目录下的文件不能被轻易删除，只有满足以下条件之一才能删除或更名目录下的文件：</li>
+</ul>
+<blockquote>
+<ol>
+<li>拥有此文件</li>
+<li>拥有此目录</li>
+<li>是超级用户</li>
+</ol>
+</blockquote>
+<p>【注】设置了 sticky 后，利用 <strong>ls -l</strong> 命令显示时 sticky 对应其他用户那组 rwx 中的 x 位：</p>
+<blockquote>
+<ol>
+<li>若既设置了 x 权限又设置了 sticky，则显示 <strong>t</strong></li>
+<li>若未设置 x 权限，但设置了 sticky，则显示 <strong>T</strong></li>
+</ol>
+</blockquote>
+<h2 id="2-目录的组织与权限表示">2. 目录的组织与权限表示</h2>
+<h3 id="2-1-目录的组织">2.1 目录的组织</h3>
+<p>UNIX 目录在文件系统也是作为广泛意义上的文件，只是其中存储的不是文件内容，而是其包含的文件的文件名和对应文件的 inode 指针。</p>
+<h3 id="2-2-目录的权限">2.2 目录的权限</h3>
+<ul>
+<li>
+<p>目录的读权限位：仅能显示目录下的文件名（不能访问文件的 inode 指针）</p>
+</li>
+<li>
+<p>目录的执行权限位：可以遍历目录内的文件属性信息（可以访问文件的 inode 指针）</p>
+</li>
+<li>
+<p>目录的写权限位 + 执行权限位：可以在目录下创建/删除文件（不要求对文件具有权限）</p>
+</li>
+</ul>
+<blockquote>
+<ol>
+<li>目录拥有者对目录没有执行权限：不能访问目录下的文件（即使对文件具有权限）</li>
+<li>用户对目录具有读权限，无执行权限：只能运行 <strong>ls DIR</strong> 而不能运行 <strong>ls -l DIR</strong></li>
+<li>用户对目录拥有执行权限，无读权限：可运行 <strong>ls -l DIR/FILE</strong> 而不能运行 <strong>ls DIR</strong></li>
+</ol>
+</blockquote>
+<p>【注】在 UINX 中，目录的权限不具有继承性，即不能被子目录继承。故访问一个路径下的文件时，需要整个路径上的目录都具有执行权限。</p>
+<h2 id="3-文件链接">3. 文件链接</h2>
+<h3 id="3-1-文件硬链接">3.1 文件硬链接</h3>
+<p>每个 inode 节点都有一个链接计数，表示指向该 inode 节点的 inode 指针数。只有当链接计数减少为 0 时，才表示删除了该文件。链接计数表示的是该文件拥有的硬链接数，创建硬链接时，系统不会为它重新分配 inode，而是在目录下直接添加一个指向文件 inode 节点的 inode 指针项。</p>
+<p><img src="/img/ComputerSystemSecurity/UNIX%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6/UNIX%E6%96%87%E4%BB%B6%E7%A1%AC%E9%93%BE%E6%8E%A5.png" srcset="/img/loading.gif" lazyload alt="UNIX文件硬链接" /></p>
+<ul>
+<li>创建硬链接：link 命令</li>
+<li>删除硬链接：unlink 命令</li>
+<li>删除文件：UNIX 下删除文件是删除文件的硬链接，而并非释放该文件占用的磁盘块，只有当一个文件的硬链接数减为 0 时，该文件才彻底从文件系统中删除了（即无法访问到了）</li>
+</ul>
+<p>【注】硬链接不可以在不同文件系统间建立。对于目录的硬链接，只有超级用户可以创建。</p>
+<h3 id="3-2-文件软链接（符号链接）">3.2 文件软链接（符号链接）</h3>
+<p>对一个 inode 节点的间接指针，不同于硬链接，容易被清除。创建符号链接时，系统会分配一个新的 inode 节点，所以符号链接的 inode 号和文件的 inode 号不相同。符号链接中的 inode 里存放者指向文件的路径，当文件的被删除时，符号链接也就失效了。</p>
+<p>【注】符号链接可以跨文件系统建立。任何用户均可创建文件的符号链接。</p>
+<h2 id="4-用户、主体和客体">4. 用户、主体和客体</h2>
+<h3 id="4-1-用户标识">4.1 用户标识</h3>
+<p>UNIX 系统中，每个用户有一个唯一的 UID。</p>
+<ul>
+<li>root 用户的 UID ：0</li>
+<li>用户不能更改其用户 UID</li>
+<li>内核根据 UID 检验其权限</li>
+<li>/etc/passwd 文件：保存用户名和用户 ID 映射关系</li>
+</ul>
+<p>同时，用户可以属于某一个组，组 ID 是系统管理员分配的。</p>
+<ul>
+<li>同组中的成员之间可以共享资源</li>
+<li>/etc/group 文件：保存组用户和组 ID 映射关系</li>
+<li>一个用户可以属于多个组</li>
+</ul>
+<h3 id="4-2-主体">4.2 主体</h3>
+<ul>
+<li>用户访问文件，具体的操作由主体执行，主体是进程</li>
+<li>当一个主体访问文件时，需要知道其以哪个用户身份访问</li>
+<li>进程是主体，进程保存相关联的用户信息</li>
+</ul>
+<blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">ID</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">ruid rgid</td>
+<td style="text-align:left">在登录系统时取自口令文件中的登录项</td>
+</tr>
+<tr>
+<td style="text-align:left">euid egid</td>
+<td style="text-align:left">用于文件存取许可权检查，决定了对文件的访问权</td>
+</tr>
+<tr>
+<td style="text-align:left">suid sgid</td>
+<td style="text-align:left">由 exec 函数保存，保存了 euid 和 egid 的副本</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<p>【注】此 suid 非上文说到的文件权限 suid 位。</p>
+<h3 id="4-3-进程控制">4.3 进程控制</h3>
+<p>每个进程拥有一个非负整数的唯一进程 ID。</p>
+<ul>
+<li>专用进程</li>
+</ul>
+<blockquote>
+<ol>
+<li>进程 ID = 0 是调度进程（交互进程），是内核的一部分，称作系统进程</li>
+<li>进程 ID = 1 是 init 进程，对应与 /sbin/init 。此进程负责在内核自举后启动一个 UNIX 系统，并将系统引导到一个状态（与初始化文件 /etc/rc* 相关）</li>
+</ol>
+</blockquote>
+<ul>
+<li>fork 函数：内核创建新进程（子进程）</li>
+</ul>
+<blockquote>
+<ol>
+<li>函数调用一次，返回两次：子进程返回 0，父进程返回子进程 ID</li>
+<li>fork 创建的子进程是父进程的复制品，子进程获得父进程的数据空间、堆、栈的复制品（而不是共享这些存储空间）</li>
+<li>父子进程的执行顺序不确定，取决于内核的调度算法</li>
+</ol>
+</blockquote>
+<h3 id="4-4-文件共享">4.4 文件共享</h3>
+<p>UNIX 支持在不同进程间共享打开文件。内核使用三个数据结构，使多个进程共享一个文件。</p>
+<ul>
+<li>每个进程在进程表中都有一个记录项，每个记录项中包含一张打开文件描述符，包含：</li>
+</ul>
+<blockquote>
+<ol>
+<li>文件描述符标志</li>
+<li>指向一个文件表项的指针</li>
+</ol>
+</blockquote>
+<ul>
+<li>内核为所有打开文件维持一张文件表，包含：</li>
+</ul>
+<blockquote>
+<ol>
+<li>文件状态标志：读、写、增写、同步等</li>
+<li>当前文件位移量</li>
+<li>指向该文件 v 节点表项</li>
+</ol>
+</blockquote>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/ComputerSystemSecurity/">ComputerSystemSecurity</a>
+                    
+                      <a class="hover-with-bg" href="/categories/ComputerSystemSecurity/UNIX%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6/">UNIX访问控制</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/ComputerSystemSecurity/">ComputerSystemSecurity</a>
+                    
+                      <a class="hover-with-bg" href="/tags/UNIX%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6/">UNIX访问控制</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/05/26/CompilingPrinciple/%E5%BC%95%E8%AE%BA/%E5%BC%95%E8%AE%BA/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">引论</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/05/26/ComputerSystemSecurity/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8%E5%9F%BA%E7%A1%80/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8%E5%9F%BA%E7%A1%80/">
+                        <span class="hidden-mobile">操作系统安全基础</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.lazyComments('valine', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function () {
+        new Valine({
+          el: "#valine",
+          app_id: "kJgPdAqoTM5JKOdTdYLmXqq5-gzGzoHsz",
+          app_key: "X4MnxJgITkyJVettcgYX6ebP",
+          placeholder: "说点什么",
+          path: window.location.pathname,
+          avatar: "retro",
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: false,
+          recordIP: false,
+          serverURLs: "",
+        });
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the
+    <a target="_blank" href="https://valine.js.org" rel="nofollow noopener noopener">comments powered by Valine.</a>
+  </noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+      <div class="col-lg-7 mx-auto nopadding-x-md">
+        <div class="container custom mx-auto">
+          <script src="https://myhkw.cn/api/player/161389264877" id="myhk" key="161389264877" m="1"></script>
+        </div>
+      </div>
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+
+  <script defer src="/js/leancloud.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- KaTeX -->
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" />
+  
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/mermaid@8.8.3/dist/mermaid.min.js" ></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({"theme":"default"});
+    }
+  </script>
+
+
+
+
+  
+    <!-- Baidu Analytics -->
+    <script defer>
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?c194cf0c8cbc33bfb846ba1329537d81";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  
+    <!-- Google Analytics -->
+    <script defer>
+      window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) };
+      ga.l = +new Date;
+      ga('create', 'G-SXJN0942X9', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+  
+
+  
+    <!-- Google gtag.js -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D3DEHLLP3W"></script>
+    <script defer>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-D3DEHLLP3W');
+    </script>
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

@@ -1,0 +1,707 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/self/portrait.jpg">
+  <link rel="icon" href="/img/self/portrait.jpg">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="一个记录各种笔记的小匣子^-^">
+  <meta name="author" content="BlueHeart0621">
+  <meta name="keywords" content="頑張れ">
+  
+    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script> <script src="/live2d-widget/autoload.js" type="text/javascript"></script> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
+  
+  <title>MatLab函数xlsread、xlswrite、xlsfinfo - お前はどこまで見えている</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"blueheart0621.github.io","root":"/","version":"1.8.9","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":"§"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":"c194cf0c8cbc33bfb846ba1329537d81","google":"G-SXJN0942X9","gtag":"G-D3DEHLLP3W","tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"A24MlA4oV7hlze3uNQiXDAIi-MdYXbMMI","app_key":"3moFK5Ao3TD4rjA1HCmPTSm6","server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>お前はどこまで見えている</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/covers/%E5%9B%9B%E6%9C%88%E6%98%AF%E4%BD%A0%E7%9A%84%E8%B0%8E%E8%A8%80-1.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="MatLab函数xlsread、xlswrite、xlsfinfo">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2020-05-26 10:44" pubdate>
+        2020年5月26日 上午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      2k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      24
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- LeanCloud 统计文章PV -->
+      <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="leancloud-page-views"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">MatLab函数xlsread、xlswrite、xlsfinfo</h1>
+            
+            <div class="markdown-body">
+              <p>【注】详情请参阅 <strong>MatLab help 文档</strong>。</p>
+<h2 id="1-xlsread-函数">1. xlsread 函数</h2>
+<h3 id="1-1-作用">1.1 作用</h3>
+<p>读取 XLS、XLSX、XLSM、XLTX 和 XLTM 电子表格文件。<br />
+【注】xlsread 仅读取 7 位 ASCII 字符，不支持非相邻范围。</p>
+<h3 id="1-2-语法">1.2 语法</h3>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs matlab">data = xlsread(filename)<br>data = xlsread(filename,sheet)<br>data = xlsread(filename,xlRange)<br>data = xlsread(filename,sheet,xlRange)<br>data = xlsread(filename,sheet,xlRange,<span class="hljs-string">&#x27;basic&#x27;</span>)<br>[data,text,raw] = xlsread(___)<br>___ = xlsread(filename,<span class="hljs-number">-1</span>)<br>[data,text,raw,custom] = xlsread(filename,sheet,xlRange,<span class="hljs-string">&#x27;&#x27;</span>,processFcn)<br></code></pre></td></tr></table></figure>
+<ul>
+<li>
+<p><strong>data = xlsread(filename)</strong><br />
+读取电子表格文件的第一张工作表，并在矩阵中返回数值数据。</p>
+</li>
+<li>
+<p><strong>data = xlsread(filename,sheet)</strong><br />
+读取电子表格文件中指定的工作表，sheet 的可选值为 <strong>字符向量|字符串|正整数</strong>，即指定工作表的名称（不能包含 : 号，basic 模式的 XLS 文件区分大小写）或工作表索引的正整数。要确定电子表格中工作表的名称，请使用 xlsfinfo 函数（见下文）。</p>
+</li>
+<li>
+<p><strong>data = xlsread(filename,xlRange)</strong><br />
+从电子表格文件中的第一张工作表中指定范围内读取数据。xlRange 为矩阵范围，指定为字符向量或字符串（不区分大小写），使用 Excel 范围语法（使用 Excel A1 引用样式），用两个对角指定 xlRange，即要读取的区域，比如 'D2:H6'。（basic 模式的 XLS 文件不支持范围选择）</p>
+</li>
+</ul>
+<p>【注】Excel A1 引用样式为行号用整数标识、列号用字母标识，比如 C3 就表示为第 3 行第 C 列对应的单元格；Excel R1C1 引用样式为行号、列号均用整数表示，比如 R3C3 就表示为第 3 行第 3 列对应的单元格（R 即 row，C 即 column）。</p>
+<ul>
+<li>
+<p><strong>data = xlsread(filename,sheet,xlRange)</strong><br />
+读取电子表格中指定的工作表内的范围。</p>
+</li>
+<li>
+<p><strong>data = xlsread(filename,sheet,xlRange,'basic')</strong><br />
+在 basic 导入模式下读取电子表格中的数据（basic 模式用于系统未安装 Excel 情况下使用），该模式支持 XLS、XLSX、XLSM、XLTX 和 XLTM 文件。若不指定所有参数，则未指定的参数用 '' 作为占位符。</p>
+</li>
+<li>
+<p><strong>[data,text,raw] = xlsread(___)</strong><br />
+使用上述格式读取电子表格，在数值矩阵 data 中返回数据，在元胞数组 text 中返回文本字段，在元胞数组 raw 中返回数值数据和文本数据。</p>
+</li>
+<li>
+<p><strong>___ = xlsread(filename,-1)</strong><br />
+打开一个 Excel 窗口以便使用交互方式来选择数据：选择工作表，将鼠标拖放到所需范围上，然后点击确定（只用安装了 Excel 软件的 Windows 计算机支持改语法）</p>
+</li>
+<li>
+<p><strong>[data,text,raw,custom] = xlsread(filename,sheet,xlRange,'',processFcn)</strong><br />
+读取电子表格，对数据调用 processFcn（函数句柄），并在 data 中返回最终的数值结果，在元胞数组 text 中返回文本字段，在元胞数组 raw 中返回数值和文本数据，在数组 custom 中返回 processFcn 的第二个输出（只有安装了 Excel 软件的 Windows 计算机支持改语法）</p>
+</li>
+</ul>
+<h3 id="1-3-举例">1.3 举例</h3>
+<ul>
+<li>将电子表格中第一个工作表中在范围 [0.2,0.8] 之外的值设置为 0.2 或 0.8，并返回更改后的元素的索引。</li>
+</ul>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs matlab">[data,text,raw,index] = xlsread(<span class="hljs-string">&#x27;myexample.xlsx&#x27;</span>,<span class="hljs-number">1</span>,<span class="hljs-string">&#x27;&#x27;</span>,<span class="hljs-string">&#x27;&#x27;</span>,@setMinMax);<br><br><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">[data,index]</span> = <span class="hljs-title">setMinMax</span><span class="hljs-params">(data)</span></span><br>    minval = <span class="hljs-number">-1</span>;<br>    maxval = <span class="hljs-number">1</span>;<br>    index = [];<br><br>    <span class="hljs-keyword">for</span> <span class="hljs-built_in">i</span> = <span class="hljs-number">1</span>:data.Count<br>        v = data.Value&#123;<span class="hljs-built_in">i</span>&#125;;<br>        <span class="hljs-keyword">if</span> v &gt; maxval<br>            data.Value&#123;<span class="hljs-built_in">i</span>&#125; = maxval;<br>            index = [index <span class="hljs-built_in">i</span>];<br>        <span class="hljs-keyword">elseif</span> v &lt; minval<br>            data.Value&#123;<span class="hljs-built_in">i</span>&#125; = minval;<br>            index = [index <span class="hljs-built_in">i</span>];<br>        <span class="hljs-keyword">end</span><br>    <span class="hljs-keyword">end</span><br><span class="hljs-keyword">end</span><br></code></pre></td></tr></table></figure>
+<h2 id="2-xlswrite-函数">2. xlswrite 函数</h2>
+<h3 id="2-1-作用">2.1 作用</h3>
+<p>将数据写入 XLS、XLSX、XLSB 或 XLSM 表格文件中。</p>
+<p>【注】如果未安装 Excel，则 xlswrite 会将矩阵 A （必须为数值矩阵）写入逗号分隔值格式（CSV）的文件中，同时忽略掉 sheet 和 xlRange 参数。</p>
+<h3 id="2-2-语法">2.2 语法</h3>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs matlab">xlswrite(filename,A)<br>xlswrite(filename,A,sheet)<br>xlswrite(filename,A,xlRange)<br>xlswrite(filename,A,sheet,xlRange)<br>status = xlswrite(___)<br>[status,message] = xlswrite(___)<br></code></pre></td></tr></table></figure>
+<ul>
+<li>
+<p><strong>xlswrite(filename,A)</strong><br />
+将矩阵 A 中的数据写入 filename 指定的电子表格文件中的第一张工作表，从单元格 A1 开始写入。filename 为文件（相对/绝对）路径的字符向量或字符串。如果 filename 指定的文件不存在，xlswrite 将创建该文件。filename 支持扩展名 .xls、.xlsx、.xlsb、.xlsm，如果 filename 未指定扩展名，则 xlswrite 将使用默认扩展名 .xls 。</p>
+</li>
+<li>
+<p><strong>xlswrite(filename,A,sheet)</strong><br />
+将矩阵 A 中的数据写入 filename 指定的电子表格文件中指定的工作表。sheet 的可选值为 <strong>字符向量|字符串|正整数</strong>，即指定工作表的名称（不能包含 : 号）或工作表索引的正整数。如果 sheet 不存在，xlswrite 将在工作表集合末尾添加一张新的工作表。如果 sheet 为大于工作表张数的索引，则 xlswrite 将追加空工作表直至工作表数等于 sheet。</p>
+</li>
+</ul>
+<p>【注】当添加新工作表时，xlswrite 都会生成一条警告信息提示已添加新工作表。</p>
+<ul>
+<li><strong>xlswrite(filename,A,xlRange)</strong><br />
+将矩阵 A 中的数据写入 filename 指定的电子表格文件中的第一张工作表中由 xlRange 指定的矩形区域内。xlRange 为矩阵范围，指定为字符向量或字符串（不区分大小写），使用 Excel 范围语法（使用 Excel A1 引用样式），用两个对角指定 xlRange，即要读取的区域，比如 'D2:H6'（当指定了 sheet 后只能指定第一个单元格，如 'D2'）。<strong>xlswrite 不能识别 Excel 文件中的命名范围</strong>。<br />
+如果 xlsRange 大于输入矩阵 A 的大小，则 Excel 软件将使用 #N/A 填充该区域的其余部分；如果 xlRange 小于 A 的大小，则 xlswrite 仅将适应 xlRange 的子集写入到 Excel 文件。</li>
+</ul>
+<p>【注】Excel A1 引用样式为行号用整数标识、列号用字母标识，比如 C3 就表示为第 3 行第 C 列对应的单元格；Excel R1C1 引用样式为行号、列号均用整数表示，比如 R3C3 就表示为第 3 行第 3 列对应的单元格（R 即 row，C 即 column）。</p>
+<ul>
+<li>
+<p><strong>xlswrite(filename,A,sheet,xlRange)</strong><br />
+将矩阵 A 中的数据写入 filename 指定的电子表格文件中指定的工作表中指定的区域内。由于已经指定工作表 sheet，xlRange 只能指定第一个单元（如 'D2'），xlwrite 将从该单元格开始写入输入矩阵 A 。</p>
+</li>
+<li>
+<p><strong>status = xlswrite(___)</strong><br />
+使用上述任何一个语法写入数据，当操作成功时，status 为 1；否则，status 为 0。</p>
+</li>
+<li>
+<p><strong>[status,message] = xlswrite(___)</strong><br />
+在 status = xlswrite(___) 基础上，将写入操作生成的任何警告或错误信息写入结构体 message 。</p>
+</li>
+</ul>
+<h3 id="2-3-举例">2.3 举例</h3>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs matlab">filename = <span class="hljs-string">&#x27;Data/myexample.xlsx&#x27;</span>;<br>A = randi(<span class="hljs-number">100</span>,<span class="hljs-number">100</span>,<span class="hljs-number">100</span>);<br>xlswrite(filename,A,<span class="hljs-string">&#x27;A&#x27;</span>);<br></code></pre></td></tr></table></figure>
+<h2 id="3-xlsfinfo-函数">3. xlsfinfo 函数</h2>
+<h3 id="3-1-作用">3.1 作用</h3>
+<p>确认文件是否包含 Excel 电子表格。</p>
+<p>【注】xlsfinfo 仅支持 7 位 ASCII 字符。</p>
+<h3 id="3-2-格式">3.2 格式</h3>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs matlab">status = xlsfinfo(filename)<br>[status,sheets] = xlsfinfo(filename)<br>[status,sheets,xlFormat] = xlsfinfo(filename)<br></code></pre></td></tr></table></figure>
+<ul>
+<li>
+<p><strong>status = xlsfinfo(filename)</strong><br />
+确认 filename 是否为 xlsread 函数可读的文件，staus 为字符向量。若 filename 是xlsread 可读的文件，则 status 为描述性文本；若 filename 不是 xlsread 可读的文件，则 status 为空（即 ''）；若 MatLab 找不到文件，则 xlsfinfo 返回错误。</p>
+</li>
+<li>
+<p><strong>[status,sheets] = xlsfinfo(filename)</strong><br />
+在 status = xlsfinfo(filename) 的基础上，返回 filename 文件中每个工作表的名称到 sheets 变量中。sheets 为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>×</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">{1 \times n}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord"><span class="mord">1</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathnormal">n</span></span></span></span></span> 字符向量元胞数组（每个元胞包含工作表的名称），其中 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span></span></span></span> 是文件中工作表数量。如果 xlsread 无法读取特定的工作表，对应元胞包含错误；如果 xlsfinfo 找不到文件，则 sheets 包含错误信息。</p>
+</li>
+<li>
+<p><strong>[status,sheets,xlFormat] = xlsfinfo(filename)</strong><br />
+在 [status,sheets] = xlsfinfo(filename) 的基础上，返回 Excel 有关文件格式的说明到 xlFormat 变量中（在未安装 Excel 的系统上，xlFormat 是一个空字符向量 ''）。xlFormat 为字符向量，在安装有 Excel 的系统上，xlFormat 为以下选项之一。</p>
+</li>
+</ul>
+<blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">xlFormat</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">'xlOpenXMLWorkbook'</td>
+<td style="text-align:left">XLSX 格式的电子表格（Excel 2007 或更高版本）</td>
+</tr>
+<tr>
+<td style="text-align:left">'xlWorkbookNormal' 或 'xlExcel8'</td>
+<td style="text-align:left">XLS 格式的电子表格（与 Excel 97-2003 兼容）</td>
+</tr>
+<tr>
+<td style="text-align:left">'xlCSV'</td>
+<td style="text-align:left">逗号分隔值格式（CSV）文件</td>
+</tr>
+<tr>
+<td style="text-align:left">'xlHtml' 或 'xlWebArchive'</td>
+<td style="text-align:left">导出为 HTML 格式的电子表格</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/MatLab/">MatLab</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/MatLab/">MatLab</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/05/26/MatLab/MatLab%E5%87%BD%E6%95%B0sort%E3%80%81issorted%E3%80%81sortrows%E3%80%81issortedrows/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">MatLab函数sort、issorted、sortrows、issortedrows</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/05/26/MatLab/MatLab%E5%8F%96%E6%95%B4%E5%87%BD%E6%95%B0/">
+                        <span class="hidden-mobile">MatLab取整函数</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.lazyComments('valine', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function () {
+        new Valine({
+          el: "#valine",
+          app_id: "kJgPdAqoTM5JKOdTdYLmXqq5-gzGzoHsz",
+          app_key: "X4MnxJgITkyJVettcgYX6ebP",
+          placeholder: "说点什么",
+          path: window.location.pathname,
+          avatar: "retro",
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: false,
+          recordIP: false,
+          serverURLs: "",
+        });
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the
+    <a target="_blank" href="https://valine.js.org" rel="nofollow noopener noopener">comments powered by Valine.</a>
+  </noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+      <div class="col-lg-7 mx-auto nopadding-x-md">
+        <div class="container custom mx-auto">
+          <script src="https://myhkw.cn/api/player/161389264877" id="myhk" key="161389264877" m="1"></script>
+        </div>
+      </div>
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+
+  <script defer src="/js/leancloud.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- KaTeX -->
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" />
+  
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/mermaid@8.8.3/dist/mermaid.min.js" ></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({"theme":"default"});
+    }
+  </script>
+
+
+
+
+  
+    <!-- Baidu Analytics -->
+    <script defer>
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?c194cf0c8cbc33bfb846ba1329537d81";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  
+    <!-- Google Analytics -->
+    <script defer>
+      window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) };
+      ga.l = +new Date;
+      ga('create', 'G-SXJN0942X9', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+  
+
+  
+    <!-- Google gtag.js -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D3DEHLLP3W"></script>
+    <script defer>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-D3DEHLLP3W');
+    </script>
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

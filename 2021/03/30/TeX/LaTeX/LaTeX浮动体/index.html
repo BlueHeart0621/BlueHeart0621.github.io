@@ -1,0 +1,830 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/self/portrait.jpg">
+  <link rel="icon" href="/img/self/portrait.jpg">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="一个记录各种笔记的小匣子^-^">
+  <meta name="author" content="BlueHeart0621">
+  <meta name="keywords" content="頑張れ">
+  
+    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script> <script src="/live2d-widget/autoload.js" type="text/javascript"></script> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
+  
+  <title>LaTeX浮动体 - お前はどこまで見えている</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"blueheart0621.github.io","root":"/","version":"1.8.9","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":"§"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":"c194cf0c8cbc33bfb846ba1329537d81","google":"G-SXJN0942X9","gtag":"G-D3DEHLLP3W","tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"A24MlA4oV7hlze3uNQiXDAIi-MdYXbMMI","app_key":"3moFK5Ao3TD4rjA1HCmPTSm6","server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>お前はどこまで見えている</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/covers/%E5%9B%9B%E6%9C%88%E6%98%AF%E4%BD%A0%E7%9A%84%E8%B0%8E%E8%A8%80-1.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="LaTeX浮动体">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-03-30 19:21" pubdate>
+        2021年3月30日 晚上
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      4.7k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      54
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- LeanCloud 统计文章PV -->
+      <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="leancloud-page-views"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">LaTeX浮动体</h1>
+            
+            <div class="markdown-body">
+              <p>【注】笔记来自《LaTeX入门》——刘海洋。</p>
+<h2 id="1-简介">1. 简介</h2>
+<p>图片或表格通常都占有较大的一块，直接放在文档常常会造成分页的困难，即前一页放不下，放在后一页又会造成很大的留白。其他一些大块的内容也可能有类似的问题，比如程序算法、大型公式和不宜断开的特殊形状段落。LaTeX 中通过引入浮动体来解决这类问题。</p>
+<ul>
+<li>
+<p>「浮动体」是一个活动的盒子，它可以把内容放在距离浮动体代码前后不远的地方，通常就是浮动体代码所在地，也可以放在页面开头、末尾或者单独的一页中。</p>
+</li>
+<li>
+<p>「浮动体」的另一个作用是给图表添加一个标题。LaTeX 的浮动体环境为图表标题提供了专门的命令进行自动编号、自动生成目录的功能，通过第三方宏包还可以对标题格式进行整体设计。</p>
+</li>
+</ul>
+<h2 id="2-使用">2. 使用</h2>
+<h3 id="2-1-环境">2.1 环境</h3>
+<p>LaTeX 的标准文档类预定义了两种浮动体环境：<code>figure</code> 和 <code>table</code>，通常分别用于图和表的排版。<code>figure</code> 环境的语法格式为：</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-keyword">\begin</span>&#123;figure&#125;[&lt;允许位置&gt;]<br>    &lt;任意内容&gt;<br><span class="hljs-keyword">\end</span>&#123;figure&#125;<br></code></pre></td></tr></table></figure>
+<p><code>table</code> 环境与之类似。其中可选参数 <code>&lt;允许位置&gt;</code> 用来设定浮动环境可以出现在页面的位置，即 <code>h,t,b,p</code> 四个选项的组合（默认为 <code>tbp</code>）：</p>
+<ul>
+<li><code>h</code>：此处（here），浮动体的内容被放在代码所在的上下文位置。</li>
+<li><code>t</code>：页顶（top），浮动体被放在一页的顶部，这可以是代码环境所在页面或之后的页面。</li>
+<li><code>b</code>：页底（bottom），浮动体被放在一页的底部，这可以是代码环境所在页面或之后的页面。</li>
+<li><code>p</code>：独立一页（page），一个或多个浮动体被放在单独的页面中，这个页面被称为「浮动页」。与之对应，有正文的页面被称为「文本页」。</li>
+</ul>
+<p>比如用选项 <code>hbp</code> 表示允许浮动体出现在环境所在位置、页面底部或单独一页。浮动体允许位置选项的顺序并不重要，LaTeX 总是以 <code>htbp</code> 的顺序尝试放置浮动体。不过单独的一个 <code>h</code> 选项通常并不总能满足，LaTeX 会把它放宽为 <code>ht</code> 两个可能，因此以下三种浮动体环境开头是等价的：</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-keyword">\begin</span>&#123;figure&#125;[ht]<br><span class="hljs-keyword">\begin</span>&#123;figure&#125;[th]<br><span class="hljs-keyword">\begin</span>&#123;figure&#125;[h]<br></code></pre></td></tr></table></figure>
+<p>【注】如果图表较多，最好将浮动图表的位置限定设置得宽松一些，以防止浮动体积压过多，导致最后统一输出。</p>
+<h3 id="2-2-应用">2.2 应用</h3>
+<p>浮动体最常见的应用就是直接在 <code>table</code> 环境中放置 <code>tabular</code> 生成的表格，或者在 <code>figure</code> 环境中放置 <code>\includegraphics</code> 命令插入图片。经常还在前面使用 <code>\centering</code> 命令让图表居中放置：</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-keyword">\begin</span>&#123;figure&#125;[htbp]    <span class="hljs-comment">% 允许在各个位置</span><br>    <span class="hljs-keyword">\centering</span><br>    <span class="hljs-keyword">\includegraphics</span>&#123;picture&#125;<br><span class="hljs-keyword">\end</span>&#123;figure&#125;<br><span class="hljs-keyword">\begin</span>&#123;table&#125;           <span class="hljs-comment">% 默认在页面顶部、底部或单独一页</span><br>    <span class="hljs-keyword">\centering</span><br>    <span class="hljs-keyword">\begin</span>&#123;tabular&#125;&#123;|c|c|&#125;<br>        <span class="hljs-keyword">\hline</span><br>        图形 <span class="hljs-built_in">&amp;</span> <span class="hljs-keyword">\verb</span>=<span class="hljs-string">figure</span>= 环境 <span class="hljs-keyword">\\</span><br>        <span class="hljs-keyword">\hline</span><br>        表格 <span class="hljs-built_in">&amp;</span> <span class="hljs-keyword">\verb</span>=<span class="hljs-string">table</span>= 环境 <span class="hljs-keyword">\\</span><br>        <span class="hljs-keyword">\hline</span><br>    <span class="hljs-keyword">\end</span>&#123;tabular&#125;<br><span class="hljs-keyword">\end</span>&#123;table&#125;<br></code></pre></td></tr></table></figure>
+<p>无论是 <code>figure</code> 环境还是 <code>table</code> 环境，浮动环境的名称和内容并没有必然联系。一个浮动体只是一个与版心等宽的盒子，内容可以任意放置。<code>figure</code> 环境也可以使用 TeX 代码或者是 ASCII 字符画的图形，甚至放置算法、代码或者很长，<code>table</code> 环境中也可以是以插图形式得到的表格，甚至内容可以和名称毫无关系。</p>
+<h3 id="2-3-标题">2.3 标题</h3>
+<p>浮动体的另一个重要功能就是使用 <code>\caption</code> 命令加标题，其语法格式为：</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-keyword">\caption</span>&#123;&lt;标题&gt;&#125;<br><span class="hljs-keyword">\caption</span>&#123;&lt;短标题&gt;&#125;&#123;&lt;长标题&gt;&#125;<br></code></pre></td></tr></table></figure>
+<p>可选的参数短标题用于图表目录，而交叉引用的标题 <code>\label</code> 需要放在 <code>\caption</code> 后面，或者 <code>&lt;标题&gt;</code>、<code>&lt;长标题&gt;</code> 中。在 <code>\caption</code> 的 <code>&lt;长标题&gt;</code> 中可以进行长达多段的叙述，但 <code>&lt;短标题&gt;</code> 或单独的 <code>&lt;标题&gt;</code> 中不允许分段。</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-keyword">\begin</span>&#123;figure&#125;[htp]<br>    <span class="hljs-keyword">\centering</span><br>    <span class="hljs-keyword">\includegraphics</span>&#123;picture&#125;<br>    <span class="hljs-keyword">\caption</span>[图片]&#123;这是一张图片&#125;<span class="hljs-keyword">\label</span>&#123;fig:picture&#125;<br>    <span class="hljs-comment">% 或者 \caption[图片]&#123;\label&#123;fig:picture&#125;这是一张图片&#125;</span><br><span class="hljs-keyword">\end</span>&#123;figure&#125;<br></code></pre></td></tr></table></figure>
+<p>【注】更复杂的标题控制可参见 <a href="/2021/04/03/TeX/LaTeX/LaTeX%E6%A0%87%E9%A2%98%E6%8E%A7%E5%88%B6">LaTeX标题控制</a>。</p>
+<h3 id="2-4-双栏">2.4 双栏</h3>
+<p>以上环境都是考虑在单栏文档中，对于双栏或多栏文档，<code>figure</code> 和 <code>table</code> 环境就成为只占一栏的浮动盒子（宽度是 <code>\columnwidth</code>），其用法与单栏环境相同。</p>
+<p>此外，LaTeX 标准文档类还提供了跨栏排版的图表环境 <code>figure*</code> 和 <code>table*</code>，用来产生跨栏排版的浮动体。跨栏浮动体只允许排在页面的顶部（<code>t</code>）或单独的浮动页面（<code>p</code>）中，其他位置参数会被忽略。<code>figure*</code> 和 <code>table*</code> 环境的默认位置都是 <code>tp</code>。在大多数情况下，使用 <code>table*</code> 或 <code>figure*</code> 环境的效果就是把内容排在后面一页的顶部。</p>
+<h2 id="3-详解">3. 详解</h2>
+<p>尽管环境参数中可以设置位置，但浮动体的位置并不总能令人满意，在图表较多时这个问题尤为明显。</p>
+<h3 id="3-1-其他参数">3.1 其他参数</h3>
+<p>LaTeX 对每个位置的浮动体的总数和占用大小有一定限制，超出限制的浮动体会被排在较后的页面中，但可以在 <code>&lt;允许位置&gt;</code> 选项中增加一个 <code>!</code> 符号来忽略这些参数限制。因此，在 LaTeX 中最宽松的浮动体位置就是 <code>!htbp</code>。在位置选项中加上 <code>!</code> 号将使浮动体相对更靠近文字或靠前出现，如果使用这一手段浮动体仍然被排在很靠后的位置，就可能需要将浮动体适当前移一段距离。</p>
+<p>和 <code>!</code> 位置选项相反，<code>\suppressfloats</code> 命令用于禁止浮动体出现在当前页，从而将浮动体的位置向后推。<code>\suppressfloats</code> 命令可以带一个可选参数 <code>t</code> 或 <code>b</code>，表示本页顶部或底部禁止放置浮动体。</p>
+<ul>
+<li>限制浮动环境数量和占用大小的参数</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">参数</th>
+<th style="text-align:left">类型</th>
+<th style="text-align:left">默认值</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>topnumber</code></td>
+<td style="text-align:left">计数器</td>
+<td style="text-align:left"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn></mrow><annotation encoding="application/x-tex">2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span></span></span></span></td>
+<td style="text-align:left">文本页顶部浮动体的最大数量</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>bottomnumber</code></td>
+<td style="text-align:left">计数器</td>
+<td style="text-align:left"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span></td>
+<td style="text-align:left">文本页底部浮动体的最大数量</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>totalnumber</code></td>
+<td style="text-align:left">计数器</td>
+<td style="text-align:left"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn></mrow><annotation encoding="application/x-tex">3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span></span></span></span></td>
+<td style="text-align:left">文本页上所有浮动体的最大数量</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>dbltopnumber</code></td>
+<td style="text-align:left">计数器</td>
+<td style="text-align:left"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn></mrow><annotation encoding="application/x-tex">2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span></span></span></span></td>
+<td style="text-align:left"><code>topnumber</code> 的跨双栏版本</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>\topfraction</code></td>
+<td style="text-align:left">宏</td>
+<td style="text-align:left"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.7</mn></mrow><annotation encoding="application/x-tex">0.7</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span><span class="mord">.</span><span class="mord">7</span></span></span></span></td>
+<td style="text-align:left">文本页顶部浮动体的最大占用空间比</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>\bottomfraction</code></td>
+<td style="text-align:left">宏</td>
+<td style="text-align:left"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.3</mn></mrow><annotation encoding="application/x-tex">0.3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span><span class="mord">.</span><span class="mord">3</span></span></span></span></td>
+<td style="text-align:left">文本页底部浮动体的最大占用空间比</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>\textfraction</code></td>
+<td style="text-align:left">宏</td>
+<td style="text-align:left"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.2</mn></mrow><annotation encoding="application/x-tex">0.2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span><span class="mord">.</span><span class="mord">2</span></span></span></span></td>
+<td style="text-align:left">文本页中文本所占的最小空间比例</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>\floatpagefraction</code></td>
+<td style="text-align:left">宏</td>
+<td style="text-align:left"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.5</mn></mrow><annotation encoding="application/x-tex">0.5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span><span class="mord">.</span><span class="mord">5</span></span></span></span></td>
+<td style="text-align:left">浮动页中浮动体所占的最小空间比例</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>\dbltopfraction</code></td>
+<td style="text-align:left">宏</td>
+<td style="text-align:left"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.7</mn></mrow><annotation encoding="application/x-tex">0.7</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span><span class="mord">.</span><span class="mord">7</span></span></span></span></td>
+<td style="text-align:left"><code>\topfraction</code> 的跨双栏版本</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>\dblfloatfraction</code></td>
+<td style="text-align:left">宏</td>
+<td style="text-align:left"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.5</mn></mrow><annotation encoding="application/x-tex">0.5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span><span class="mord">.</span><span class="mord">5</span></span></span></span></td>
+<td style="text-align:left"><code>\floatpagefraction</code> 的跨双栏版本</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>\floatsep</code></td>
+<td style="text-align:left">弹性长度</td>
+<td style="text-align:left"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>12</mn><mo>±</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">12 \pm 2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">1</span><span class="mord">2</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">±</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span></span></span></span> pt</td>
+<td style="text-align:left">文本页上，处于页顶或页底的多个浮动体之间的垂直间距</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>\textfloatset</code></td>
+<td style="text-align:left">弹性长度</td>
+<td style="text-align:left"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>19</mn><mo>±</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">19 \pm 3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">1</span><span class="mord">9</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">±</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span></span></span></span> pt</td>
+<td style="text-align:left">文本页上，处于页顶或页底的浮动体与正文之间的垂直间距</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>\intextsep</code></td>
+<td style="text-align:left">弹性长度</td>
+<td style="text-align:left"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>12</mn><mo>±</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">12 \pm 2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">1</span><span class="mord">2</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">±</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span></span></span></span> pt</td>
+<td style="text-align:left">文本页上，使用 <code>h</code> 位置选项排在页面中间的浮动体与上下文之间的垂直间距</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>\dblfloatset</code></td>
+<td style="text-align:left">弹性长度</td>
+<td style="text-align:left"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>12</mn><mo>±</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">12 \pm 2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">1</span><span class="mord">2</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">±</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span></span></span></span> pt</td>
+<td style="text-align:left"><code>\floatsep</code> 的跨双栏版本</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>\dbltextfloatsep</code></td>
+<td style="text-align:left">弹性长度</td>
+<td style="text-align:left"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>19</mn><mo>±</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">19 \pm 3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">1</span><span class="mord">9</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">±</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span></span></span></span> pt</td>
+<td style="text-align:left"><code>\textfloatsep</code> 的跨双栏版本</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-comment">% 设置「限制浮动环境数量和占用大小的参数」示例</span><br><span class="hljs-keyword">\setcounter</span>&#123;topnumber&#125;&#123;4&#125;<br><span class="hljs-keyword">\setcounter</span>&#123;bottomnumber&#125;&#123;4&#125;<br><span class="hljs-keyword">\renewcommand</span>&#123;<span class="hljs-keyword">\textfraction</span>&#125;&#123;0.15&#125;<br><span class="hljs-keyword">\renewcommand</span>&#123;<span class="hljs-keyword">\topfraction</span>&#125;&#123;0.85&#125;<br></code></pre></td></tr></table></figure>
+<ul>
+<li>控制浮动页面间距的内部命令（内部命令一般只在宏包或文档类中修改，如果要在正文导言区进行设置，可以在前后分别加上 <code>\makeatletter</code> 和 <code>\makeatother</code>）</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">参数</th>
+<th style="text-align:left">类型</th>
+<th style="text-align:left">默认值</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>\@fptop</code></td>
+<td style="text-align:left">弹性长度</td>
+<td style="text-align:left"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span> pt <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>+</mo></mrow><annotation encoding="application/x-tex">+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord">+</span></span></span></span> <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span> fil</td>
+<td style="text-align:left">浮动页中页面顶部与浮动体的垂直间距</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>\@fpsep</code></td>
+<td style="text-align:left">弹性长度</td>
+<td style="text-align:left"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>8</mn></mrow><annotation encoding="application/x-tex">8</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">8</span></span></span></span> pt <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>+</mo></mrow><annotation encoding="application/x-tex">+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord">+</span></span></span></span> <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn></mrow><annotation encoding="application/x-tex">2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span></span></span></span> fil</td>
+<td style="text-align:left">浮动页中多个浮动体之间的垂直间距</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>\@fpbot</code></td>
+<td style="text-align:left">弹性长度</td>
+<td style="text-align:left"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span> pt <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>+</mo></mrow><annotation encoding="application/x-tex">+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord">+</span></span></span></span> <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span> fil</td>
+<td style="text-align:left">浮动页中页面底部与浮动体之间的垂直间距</td>
+</tr>
+</tbody>
+</table>
+<h3 id="3-2-浮动机制">3.2 浮动机制</h3>
+<p>LaTeX 会把浮动环境做成一个个盒子，所有未输出的浮动体按次序放在队列中处理。LaTeX 所使用的浮动规则可描述为：</p>
+<ul>
+<li>浮动体会排在所有位置选项允许的位置中尽可能靠前的地方，但 <code>h</code> 选项优先于 <code>t</code> 选项。总体来说，浮动体的位置选项参数优先级按照 <code>h,t,b,p</code> 的顺序依次降低。</li>
+<li>浮动体不会排在比浮动环境所处位置更靠前的页面中。只有在 <code>t</code> 选项生效时，浮动体会排在环境代码位置的同一页更靠前的位置。</li>
+<li>对于相同类型的浮动环境，多个浮动体会按次序输出，即当前 <code>figure</code> 不会在更早的 <code>figure</code> 之前输出。但可以在更早的 <code>table</code> 之前输出。特别需要注意的是，双栏文档中，跨栏的 <code>figure*</code>、<code>table*</code> 环境和不跨栏的 <code>figure</code>、<code>table</code> 也没有先后制约的关系，因此在双栏环境应该避免混用。</li>
+<li>只有浮动体 <code>&lt;允许位置&gt;</code> 可选参数中的位置才会放置浮动体。如果省略这个参数，默认位置参数为 <code>tbp</code>，双栏的跨栏浮动体则是 <code>tp</code>。当仅使用了 <code>h</code> 位置时，LaTeX 会将其扩充为 <code>ht</code> 并发出警告。双栏的跨栏浮动体只有 <code>t,p</code> 选项可以生效，其余选项默认忽略。</li>
+<li>浮动体的输出不能造成页面的上溢出。即浮动体输出时，垂直高度不能超过版心的位置。</li>
+<li>浮动体的输出必须遵守「3.1」节中的参数限制。但如果 <code>&lt;允许位置&gt;</code> 参数中有 <code>!</code> 号，有关文本页的限制将被忽略，只有浮动页的限制起效（<code>\floatpagefraction</code> 和 <code>\dblfloatpagefraction</code>）</li>
+<li>LaTeX 最多保存 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>18</mn></mrow><annotation encoding="application/x-tex">18</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord">8</span></span></span></span> 个未处理的浮动体。如果有过多的浮动体积压不能及时输出，就会报错。通常遇到这种问题只要增加浮动体允许的输出位置参数，或是使用 <code>\clearpage</code> 立即输出所有的浮动体。如果确实要求保留原参数中设定的位置，则可以使用 <code>morefloats</code> 宏包增大保存未处理浮动体的限制。</li>
+<li>脚注和边注也是特殊的浮动体，它们的输出位置与普通浮动体不同，但同样具有浮动的效果，会占用未处理的浮动体个数。对于太长而排不下的脚注和边注会排在后面的页面。</li>
+</ul>
+<p>上面最后三条规则在遇到 <code>\clearpage</code>、<code>\cleardoublepage</code> 或 <code>\end&#123;document&#125;</code> 时会被打破，此时所有队列中未处理的浮动体都会直接输出，<code>&lt;允许位置&gt;</code> 的 <code>p</code> 选项也会打开以保证可以将所有浮动体输出。</p>
+<p>【注】由上文的浮动机制可知，双栏文档中带星号跨栏的浮动环境与不带星号的环境不能按顺序输出，这是个 BUG 。</p>
+<blockquote>
+<ul>
+<li>对于使用 LaTex 2e 版本的用户，可以使用 <code>fixltx2e</code> 宏包来修正这个错误。<code>fixltx2e</code> 是对 <code>LaTeX 2e</code> 核心的修正代码，除了双栏浮动体还做了一些其他改进。</li>
+<li>对于使用 2015 年之后的 LaTeX 版本的用户，内核已经修复这些 BUG，不再需要额外使用宏包。</li>
+</ul>
+</blockquote>
+<h2 id="4-扩展">4. 扩展</h2>
+<h3 id="4-1-float-宏包">4.1 <code>float</code> 宏包</h3>
+<p>浮动图表的目的使用浮动的位置来避免糟糕的分页，但如果不在乎因为图表太大而产生的分页，而要求有确定的位置，即要求不使用「浮动」环境。把图表简单地放在 <code>center</code>、<code>quote</code> 等环境中就可以做到这一点。<code>float</code> 宏包为标准的浮动环境提供了一个新的 <code>H</code> 位置选项用来产生没有浮动效果的图表环境，它的使用和一般的浮动环境没有什么区别。</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-comment">% 导言区</span><br><span class="hljs-keyword">\usepackage</span>&#123;float&#125;<br><span class="hljs-comment">% ……</span><br><span class="hljs-keyword">\begin</span>&#123;figure&#125;[H]<br>    <span class="hljs-keyword">\centering</span><br>    <span class="hljs-keyword">\includegraphics</span>[height=1cm]&#123;picture&#125;<br>    <span class="hljs-keyword">\caption</span>&#123;不浮动的图片&#125;<br><span class="hljs-keyword">\end</span>&#123;figure&#125;<br></code></pre></td></tr></table></figure>
+<p>【注】<code>H</code>（Here）选项不能与 <code>h,t,b,p</code> 等其他位置选项混用。</p>
+<p>事实上，使用了 <code>H</code> 选项的 <code>figure</code> 和 <code>table</code> 环境就不再是一个浮动体，而只是一个前后间距与内容格式都与普通浮动环境相同的一个大盒子。<code>float</code> 宏包提供的 <code>H</code> 选项比用 <code>center</code> 环境和 <code>caption</code> 宏包的 <code>\captionof</code> 命令来模拟普通浮动环境的格式要更准确，也更自然一些。</p>
+<h4 id="4-1-1-newfloat-命令">4.1.1 <code>\newfloat</code> 命令</h4>
+<p><code>float</code> 宏包还提供了定义新浮动环境的功能，这是由 <code>\newfloat</code> 命令完成的，其语法格式如下：</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-keyword">\newfloat</span>&#123;&lt;环境名&gt;&#125;&#123;&lt;位置&gt;&#125;&#123;&lt;目录文件扩展名&gt;&#125;[&lt;上级计数器&gt;]<br></code></pre></td></tr></table></figure>
+<p>其中，<code>&lt;位置&gt;</code> 是浮动环境默认的位置选项，可以使用 <code>h,t,b,p</code> 或单独的 <code>H</code>。<code>&lt;目录文件扩展名&gt;</code> 是用于产生与图表目录类似的目录的辅助文件扩展名。而可选的 <code>&lt;上级计数器&gt;</code> 则可以让浮动环境按章节编号。使用 <code>\newfloat</code> 定义了新的浮动体后，一般还要用 <code>\floatname</code> 命令定义这个浮动体的标题标签名。</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-comment">% 导言区</span><br><span class="hljs-keyword">\usepackage</span>&#123;float&#125;<br><span class="hljs-keyword">\newfloat</span>&#123;flowchart&#125;&#123;htbp&#125;&#123;loflow&#125;[chapter]<br><span class="hljs-keyword">\floatname</span>&#123;flowchart&#125;&#123;流程图&#125;<br><span class="hljs-comment">% 正文</span><br><span class="hljs-keyword">\begin</span>&#123;flowchart&#125;<br>    <span class="hljs-keyword">\centering</span><br>    <span class="hljs-keyword">\includegraphics</span>&#123;picture&#125;<br>    <span class="hljs-keyword">\caption</span>&#123;这是新的浮动体&#125;<br><span class="hljs-keyword">\end</span>&#123;flowchart&#125;<br></code></pre></td></tr></table></figure>
+<h4 id="4-1-2-floatstyle-命令">4.1.2 <code>\floatstyle</code> 命令</h4>
+<p><code>float</code> 宏包还提供了 <code>\floatstyle&#123;&lt;格式&gt;&#125;</code> 命令，可以使之后用 <code>\newfloat</code> 定义的所有浮动体按指定的格式输出。也可以在后面使用 <code>\restylefloat&#123;&lt;环境名&gt;&#125;</code> 来指定变换原有浮动环境的格式，可选的格式如下：</p>
+<ul>
+<li><code>plain</code>：默认格式，它与标准文档类 <code>figure</code>、<code>table</code> 环境的格式基本相同，只是 <code>\caption</code> 产生的标题总在浮动体环境的底部。</li>
+<li><code>plaintop</code>：标题在顶部，其余与 <code>plain</code> 格式相同。</li>
+<li><code>boxed</code>：浮动体内容在一个线框中，标题在线框下面。</li>
+<li><code>ruled</code>：浮动体类似三线表的格式，标题在顶部，标题前后与浮动体后面各有一条横线。</li>
+</ul>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-keyword">\floatstyle</span>&#123;ruled&#125;<br><span class="hljs-keyword">\restylefloat</span>&#123;flowchart&#125;<br><span class="hljs-comment">% 正文</span><br><span class="hljs-keyword">\begin</span>&#123;flowchart&#125;<br>    <span class="hljs-keyword">\fbox</span>&#123;A&#125; <span class="hljs-built_in">$</span><span class="hljs-keyword">\longrightarrow</span><span class="hljs-built_in">$</span> <span class="hljs-keyword">\fbox</span>&#123;B&#125; <span class="hljs-keyword">\\</span><br>    <span class="hljs-keyword">\fbox</span>&#123;C&#125; <span class="hljs-built_in">$</span><span class="hljs-keyword">\longrightarrow</span><span class="hljs-built_in">$</span> <span class="hljs-keyword">\fbox</span>&#123;D&#125;<br><span class="hljs-keyword">\caption</span>&#123;基本流程图&#125;<br><span class="hljs-keyword">\end</span>&#123;flowchart&#125;<br></code></pre></td></tr></table></figure>
+<p>【注】使用 <code>float</code> 宏包的 <code>\newfloat</code> 或 <code>\restylefloat</code> 重定义浮动环境中只能使用一个 <code>\caption</code> 标题，标题的位置也固定为顶部或底部，这对于排版并列图表非常不便。<code>caption</code> 宏包个别功能也因此受到影响，<code>ruled</code> 格式中标题格式则完全固定。因此，如果对标题有较高要求，更高的方式是是噢能够 <code>newfloat</code> 宏包的 <code>\DeclareFloatingEnvironment</code> 命令来定义新的浮动体，其语法格式如下：</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-keyword">\DeclareFloatingEnvironment</span>[&lt;选项表&gt;]&#123;&lt;环境名&gt;&#125;<br></code></pre></td></tr></table></figure>
+<p>其中，<code>&lt;选项表&gt;</code> 可以使用下面的选项：</p>
+<ul>
+<li><code>name=&lt;标签名&gt;</code></li>
+<li><code>listname=&lt;目录名&gt;</code></li>
+<li><code>fileext=&lt;目录文件扩展名&gt;</code>（默认是<code>lo&lt;环境名&gt;</code>）</li>
+<li><code>placement=&lt;位置参数&gt;</code></li>
+<li><code>within=&lt;上级计数器&gt;</code>（可以为 <code>none</code>）</li>
+<li><code>chapterlistsgaps=on</code> 或 <code>off</code>（在目录中，设置不同章浮动体标题间是否增加额外间距）</li>
+</ul>
+<p>此时，定义流程图的格式可以使用如下命令：</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-keyword">\usepackage</span>&#123;newfloat&#125;<br><span class="hljs-keyword">\DeclareFloatingEnvironment</span>[fileext=loflow,placement=htbp,within=chapter,name=流程图,listname=流程图目录]&#123;flowchart&#125;<br></code></pre></td></tr></table></figure>
+<p>使用这种方式定义的新浮动体环境没有标题方面的限制，可以与 <code>caption</code> 更好的结合。并且可以使用 <code>\listof&lt;环境名&gt;s</code> 这样的命令来输出目录，比如前面定义的流程图可以使用 <code>\listofflowcharts</code> 来输出目录。</p>
+<h4 id="4-1-3-floatplacement-命令">4.1.3 <code>\floatplacement</code> 命令</h4>
+<p><code>float</code> 宏包的 <code>\floatplacement</code> 可以重定义浮动环境的默认位置参数，比如让图表环境都允许 <code>h</code> 位置：</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-keyword">\floatplacement</span>&#123;figure&#125;&#123;htbp&#125;<br><span class="hljs-keyword">\floatplacement</span>&#123;table&#125;&#123;htbp&#125;<br></code></pre></td></tr></table></figure>
+<h4 id="4-1-4-listof-命令">4.1.4 <code>\listof</code> 命令</h4>
+<p><code>float</code> 中的 <code>\listof&#123;&lt;环境名&gt;&#125;&#123;&lt;标题&gt;&#125;</code> 命令的功能与命令 <code>\listoffigures</code> 和 <code>\listoftables</code> 类似，用来输出新定义的浮动环境的标题目录：</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-keyword">\listof</span>&#123;flowchart&#125;&#123;流程图目录&#125;<br></code></pre></td></tr></table></figure>
+<h3 id="4-2-placeins-宏包">4.2 <code>placeins</code> 宏包</h3>
+<p><code>placeins</code> 宏包提供了一个 <code>\FloatBarrier</code> 命令，它会在所在的位置产生一个无形的屏障，所有之前的浮动体都必须在这个屏障之前输出。<code>\FloatBarrier</code> 命令的功能类似 <code>\clearpage</code>，不过只要可能，<code>\FloatBarrier</code> 命令会避免直接分页。<code>placeins</code> 宏包有几个选项：</p>
+<ul>
+<li><code>section</code> 选项会在每个 <code>\section</code> 命令之前隐含地增加一个 <code>\FloatBarrier</code> 命令，使浮动体局限在一节的范围之内。</li>
+<li><code>above</code> 和 <code>below</code> 选项可以放宽 <code>\FloatBarrier</code> 命令的位置限制，使浮动体可以出现在同一页的较前或较后的位置。</li>
+</ul>
+<h3 id="4-3-afterpage-宏包">4.3 <code>afterpage</code> 宏包</h3>
+<p><code>float</code> 宏包的 <code>H</code> 选项给出了确切的「此处」位置，也可以使用 <code>afterpage</code> 宏包来得到确切的「下一页顶部」位置。<code>afterpage</code> 宏包提供了一个 <code>\afterpage</code> 命令，可以把参数中的内容放在下一页的开头，同时不影响正常的正文流向。因此，可以使用以下代码来得到下一页顶部的浮动图表环境：</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-comment">% 导言区</span><br><span class="hljs-keyword">\usepackage</span>&#123;afterpage&#125;<br><span class="hljs-comment">% ……</span><br><span class="hljs-keyword">\afterpage</span>&#123;<span class="hljs-keyword">\begin</span>&#123;figure&#125;[H]<br>    <span class="hljs-comment">% ……</span><br><span class="hljs-keyword">\end</span>&#123;figure&#125;&#125;<br></code></pre></td></tr></table></figure>
+<p>而如果使用以下代码则会产生与 <code>placeins</code> 的 <code>\FloatBarrier</code> 有类似的效果，它强制所有浮动体在下一页之前输出完毕：</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-comment">% 导言区</span><br><span class="hljs-keyword">\usepackage</span>&#123;afterpage&#125;<br><span class="hljs-comment">% ……</span><br><span class="hljs-keyword">\afterpage</span>&#123;<span class="hljs-keyword">\clearpage</span>&#125;<br><span class="hljs-comment">% 或 \afterpage&#123;\FloatBarrier&#125;</span><br></code></pre></td></tr></table></figure>
+<h3 id="4-4-endfloat-宏包">4.4 <code>endfloat</code> 宏包</h3>
+<p>有些期刊会要求稿件将所有的图表放在整个文章的末尾，但把整个浮动环境挪到文档末尾却非常不方便修改，<code>endfloat</code> 宏包就解决了这个问题。引用 <code>endfloat</code> 宏包后，所有的浮动图表都会被放在文档最后。也可以使用 <code>\processdelayedfloats</code> 命令直接输出之前延迟输出的浮动图表，比如放在文档正文之后，参考文献列表之前。</p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/TeX/">TeX</a>
+                    
+                      <a class="hover-with-bg" href="/categories/TeX/LaTeX/">LaTeX</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/TeX/">TeX</a>
+                    
+                      <a class="hover-with-bg" href="/tags/LaTeX/">LaTeX</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2021/04/03/TeX/LaTeX/LaTeX%E6%A0%87%E9%A2%98%E6%8E%A7%E5%88%B6/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">LaTeX标题控制</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/03/29/TeX/LaTeX/LaTeX%E6%8F%92%E5%9B%BE/">
+                        <span class="hidden-mobile">LaTeX插图</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.lazyComments('valine', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function () {
+        new Valine({
+          el: "#valine",
+          app_id: "kJgPdAqoTM5JKOdTdYLmXqq5-gzGzoHsz",
+          app_key: "X4MnxJgITkyJVettcgYX6ebP",
+          placeholder: "说点什么",
+          path: window.location.pathname,
+          avatar: "retro",
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: false,
+          recordIP: false,
+          serverURLs: "",
+        });
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the
+    <a target="_blank" href="https://valine.js.org" rel="nofollow noopener noopener">comments powered by Valine.</a>
+  </noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+      <div class="col-lg-7 mx-auto nopadding-x-md">
+        <div class="container custom mx-auto">
+          <script src="https://myhkw.cn/api/player/161389264877" id="myhk" key="161389264877" m="1"></script>
+        </div>
+      </div>
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+
+  <script defer src="/js/leancloud.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- KaTeX -->
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" />
+  
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/mermaid@8.8.3/dist/mermaid.min.js" ></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({"theme":"default"});
+    }
+  </script>
+
+
+
+
+  
+    <!-- Baidu Analytics -->
+    <script defer>
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?c194cf0c8cbc33bfb846ba1329537d81";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  
+    <!-- Google Analytics -->
+    <script defer>
+      window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) };
+      ga.l = +new Date;
+      ga('create', 'G-SXJN0942X9', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+  
+
+  
+    <!-- Google gtag.js -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D3DEHLLP3W"></script>
+    <script defer>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-D3DEHLLP3W');
+    </script>
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

@@ -1,0 +1,665 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/self/portrait.jpg">
+  <link rel="icon" href="/img/self/portrait.jpg">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="一个记录各种笔记的小匣子^-^">
+  <meta name="author" content="BlueHeart0621">
+  <meta name="keywords" content="頑張れ">
+  
+    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script> <script src="/live2d-widget/autoload.js" type="text/javascript"></script> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
+  
+  <title>Rust模块系统 - お前はどこまで見えている</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"blueheart0621.github.io","root":"/","version":"1.8.9","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":"§"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":"c194cf0c8cbc33bfb846ba1329537d81","google":"G-SXJN0942X9","gtag":"G-D3DEHLLP3W","tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"A24MlA4oV7hlze3uNQiXDAIi-MdYXbMMI","app_key":"3moFK5Ao3TD4rjA1HCmPTSm6","server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>お前はどこまで見えている</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/covers/%E5%9B%9B%E6%9C%88%E6%98%AF%E4%BD%A0%E7%9A%84%E8%B0%8E%E8%A8%80-1.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="Rust模块系统">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-04-21 21:59" pubdate>
+        2021年4月21日 晚上
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      2k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      23
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- LeanCloud 统计文章PV -->
+      <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="leancloud-page-views"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">Rust模块系统</h1>
+            
+            <div class="markdown-body">
+              <h2 id="1-简介">1. 简介</h2>
+<p>Rust 的模块系统用来管理代码的组织，包括哪些内容可以被公开，哪些内容作为私有部分，以及程序每个作用域中的名字等。模块系统包括：</p>
+<ul>
+<li>包（Packages）：Cargo 的一个功能，允许构建、测试和分享 crate。</li>
+<li>crate：一个模块的树形结构，它形成了库或二进制项目。</li>
+<li>模块（Modules）和 use： 允许你控制作用域和路径的私有性。</li>
+<li>路径（path）：一个命名例如结构体、函数或模块等项的方式。</li>
+</ul>
+<h2 id="2-包和-crate">2. 包和 crate</h2>
+<h3 id="2-1-crate">2.1 crate</h3>
+<p>crate 是一个二进制项或者库。<code>crate root</code> 是一个源文件，Rust 编译器以它为起始点，并构成你的 crate 的根模块。</p>
+<ul>
+<li>一个 crate 会将一个作用域内的相关功能分组到一起，使得该功能可以很方便地在多个项目之间共享。</li>
+</ul>
+<h3 id="2-2-包">2.2 包</h3>
+<p>包（package） 是提供一系列功能的一个或者多个 crate。一个包会包含有一个 <code>Cargo.toml</code> 文件，阐述如何去构建这些 crate。</p>
+<ul>
+<li>一个包中至多只能包含一个库 crate（library crate）。</li>
+<li>包中可以包含任意多个二进制 crate（binary crate）。</li>
+<li>包中至少包含一个 crate，无论是库的还是二进制的。</li>
+</ul>
+<blockquote>
+<p>当我们使用 <code>cargo new &lt;project&gt;</code> 创建一个包的时候会发现，Cargo 创建的 <code>Cargo.toml</code> 文件中并没有提到 <code>src/main.rs</code>，这是因为 Cargo 遵循一个约定：</p>
+<ul>
+<li><code>src/main.rs</code> 就是一个与包同名的二进制 crate 的 <code>crate root</code>。同样的，Cargo 知道如果包目录中包含 <code>src/lib.rs</code>，则包带有与其同名的库 crate，且 <code>src/lib.rs</code> 是 <code>crate root</code>。crate 根文件将由 Cargo 传递给 <code>rustc</code> 来实际构建库或者二进制项目。</li>
+<li>如果一个包同时含有 <code>src/main.rs</code> 和 <code>src/lib.rs</code>，则它有两个 crate：一个库和一个二进制项，且名字都与包相同。通过将文件放在 <code>src/bin</code> 目录下，一个包可以拥有多个二进制 crate，每个 <code>src/bin</code> 下的文件都会被编译成一个独立的二进制 crate。</li>
+</ul>
+</blockquote>
+<h2 id="3-模块">3. 模块</h2>
+<p>模块可以将一个 crate 中的代码进行分组，以提高可读性与重用性。模块还可以控制项的「私有性」，即项是可以被外部代码使用的（public），还是作为一个内部实现的内容，不能被外部代码使用（private）。</p>
+<h3 id="3-1-定义">3.1 定义</h3>
+<p>定义一个模块的基本语法格式如下：</p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs rust"><span class="hljs-keyword">mod</span> &lt;name&gt; &#123;<br>	...<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>其中，<code>&lt;name&gt;</code> 为模块名。在模块内，还可以嵌套其他模块。通过使用模块，我们可以将相关的定义分组到一起，并指出他们为什么相关。</p>
+<h3 id="3-2-模块树">3.2 模块树</h3>
+<p>前面提到，<code>src/main.rs</code> 和 <code>src/lib.rs</code> 叫做 <code>crate root</code>。之所以这样叫它们是因为这两个文件的内容都分别在 crate 模块结构的根组成了一个名为 crate 的模块，该结构被称为「模块树」（module tree）。以以下模块为例：</p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs rust"><span class="hljs-keyword">mod</span> front_of_house &#123;<br>    <span class="hljs-keyword">mod</span> hosting &#123;<br>        <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">add_to_waitlist</span></span>() &#123;&#125;<br><br>        <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">seat_at_table</span></span>() &#123;&#125;<br>    &#125;<br><br>    <span class="hljs-keyword">mod</span> serving &#123;<br>        <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">take_order</span></span>() &#123;&#125;<br><br>        <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">server_order</span></span>() &#123;&#125;<br><br>        <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">take_payment</span></span>() &#123;&#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>其模块树结构为：</p>
+<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs mipsasm">crate<br> └── front_of_house<br>     ├── hosting<br>     │   ├── <span class="hljs-keyword">add_to_waitlist</span><br><span class="hljs-keyword"> </span>    │   └── seat_at_table<br>     └── serving<br>         ├── take_order<br>         ├── serve_order<br>         └── take_payment<br></code></pre></td></tr></table></figure>
+<ul>
+<li>Rust 中默认所有项（函数、方法、结构体、枚举、模块和常量）都是私有的。</li>
+<li>父模块中的项不能使用子模块中的私有项，但是子模块中的项可以使用他们父模块中的项。这是因为子模块封装并隐藏了他们的实现详情，但是子模块可以看到他们定义的上下文。</li>
+<li>可以通过使用 <code>pub</code> 关键字来创建公共项，使子模块的内部部分暴露给上级模块。</li>
+</ul>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs rust"><span class="hljs-keyword">mod</span> front_of_house &#123;<br>    <span class="hljs-keyword">pub</span> <span class="hljs-keyword">mod</span> hosting &#123;<br>        <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">add_to_waitlist</span></span>() &#123;&#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<blockquote>
+<h4 id="将模块分割进不同文件">将模块分割进不同文件</h4>
+<p>比如，将 <code>front_of_house</code> 模块移动到属于它自己的文件 <code>src/front_of_house.rs</code> 中：</p>
+<ul>
+<li>改变 crate 根文件 <code>src/lib.rs</code> 或 <code>src/main.rs</code>，通过声明 <code>front_of_house</code> 模块告诉 Rust 在另一个与模块同名的文件中加载模块的内容：</li>
+</ul>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs rust"><span class="hljs-keyword">mod</span> front_of_house;	<span class="hljs-comment">// 声明 front_of_house 模块</span><br></code></pre></td></tr></table></figure>
+<ul>
+<li>创建一个 <code>src/front_of_house</code> 目录和一个包含 <code>hosting</code> 模块定义的 <code>src/front_of_house/hosting.rs</code> 文件：</li>
+</ul>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs rust"><span class="hljs-keyword">pub</span> <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">add_to_waitlist</span></span>() &#123;&#125;<br></code></pre></td></tr></table></figure>
+</blockquote>
+<p>【注】Rust 中的私有性规则不但应用于模块，还应用于结构体、枚举、函数和方法。</p>
+<blockquote>
+<ul>
+<li>如果我们在一个结构体定义的前面使用了 <code>pub</code>，这个结构体会变成公有的，但是这个结构体的字段仍然是私有的。如果要将字段公有化，则还需要分别在字段前使用 <code>pub</code> 关键字。</li>
+<li>如果我们将枚举设为公有，则它的所有成员都将变为公有。</li>
+</ul>
+</blockquote>
+<h3 id="3-3-路径">3.3 路径</h3>
+<p>在 Rust 中要在模块树中找到一个项的位置，需要使用路径的方式，就像在文件系统使用路径一样。路径有两种形式：</p>
+<ul>
+<li>绝对路径（absolute path）：从 crate 根开始，以 crate 名或者字面值 <code>crate</code> 开头。</li>
+<li>相对路径（relative path）：从当前模块开始，以 <code>self</code>、<code>super</code> 或当前模块的标识符开头。</li>
+</ul>
+<p>绝对路径和相对路径都后跟一个或多个由双冒号 <code>::</code> 分割的标识符。</p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs rust"><span class="hljs-keyword">mod</span> front_of_house &#123;<br>    <span class="hljs-keyword">mod</span> hosting &#123;<br>        <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">add_to_waitlist</span></span>() &#123;&#125;<br>    &#125;<br>&#125;<br><br><span class="hljs-keyword">pub</span> <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">eat_at_restaurant</span></span>() &#123;<br>    <span class="hljs-comment">// 绝对路径</span><br>    crate::front_of_house::hosting::add_to_waitlist();<br><br>    <span class="hljs-comment">// 相对路径</span><br>    front_of_house::hosting::add_to_waitlist();<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>还可以使用 <code>super</code> 开头来构建从父模块开始的相对路径。类似于文件系统中以 <code>..</code> 开头的语法。</p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs rust"><span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">serve_order</span></span>() &#123;&#125;<br><br><span class="hljs-keyword">mod</span> back_of_house &#123;<br>    <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">fix_incorrect_order</span></span>() &#123;<br>        cook_order();<br>        super::serve_order();<br>    &#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">cook_order</span></span>() &#123;&#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<blockquote>
+<h4 id="use-关键字引入路径"><code>use</code> 关键字引入路径</h4>
+<p>对每一个模块中的函数都使用路径来调用非常冗长且重复，并不方便。Rust 提供了 <code>use</code> 关键字将路径一次性引入作用域，然后就可以直接调用该路径中的项，就如同它们是本地项一样。</p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs rust"><span class="hljs-keyword">mod</span> front_of_house &#123;<br>    <span class="hljs-keyword">pub</span> <span class="hljs-keyword">mod</span> hosting &#123;<br>        <span class="hljs-keyword">pub</span> <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">add_to_waitlist</span></span>() &#123;&#125;<br>    &#125;<br>&#125;<br><br><span class="hljs-keyword">use</span> crate::front_of_house::hosting;	<span class="hljs-comment">// 绝对路径</span><br><span class="hljs-comment">// use front_of_house::hosting;		// 相对路径</span><br><br><span class="hljs-keyword">pub</span> <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">eat_at_restaurant</span></span>() &#123;<br>    hosting::add_to_waitlist();<br>    hosting::add_to_waitlist();<br>    hosting::add_to_waitlist();<br>&#125;<br></code></pre></td></tr></table></figure>
+<ul>
+<li>作用域中使用 <code>use</code> 引入路径类似于在文件系统中创建软连接。</li>
+<li>通过 <code>use</code> 引入作用域的路径也会检查私有性，同其它路径一样。</li>
+<li>使用 <code>use</code> 引入函数时，习惯将函数的父模块引入到作用域，这样可以清晰地表明函数不是在本地定义的，同时使完整路径的重复度最小化。</li>
+<li>使用 <code>use</code> 引入结构体、枚举和其他项时，习惯直接引入它们的完整路径。</li>
+</ul>
+<p>当需要引入很多定义于相同包或相同模块的项时，为每一项单独列出一行会占用源码很大的空间。相反，我们可以使用嵌套路径将相同的项在一行中引入作用域。这么做需要指定路径的相同部分，接着是两个冒号，接着是大括号中的各自不同的路径部分：</p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs rust"><span class="hljs-keyword">use</span> std::&#123;cmp::Ordering, io&#125;;<br></code></pre></td></tr></table></figure>
+<p>如果希望将一个路径下所有公有项引入作用域，可以指定路径后跟 <code>*</code>（glob 运算符）：</p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs rust"><span class="hljs-keyword">use</span> std::collections::*;<br></code></pre></td></tr></table></figure>
+<h4 id="as-关键字指定别名"><code>as</code> 关键字指定别名</h4>
+<p>使用 <code>use</code> 将两个同名类型引入同一作用域可能会产生冲突。此时可以使用 <code>as</code> 关键字对引入的路径指定一个别名来区分彼此。</p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs rust"><span class="hljs-keyword">use</span> std::fmt::<span class="hljs-built_in">Result</span>;<br><span class="hljs-keyword">use</span> std::io::<span class="hljs-built_in">Result</span> <span class="hljs-keyword">as</span> IoResult;<br><br><span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">function1</span></span>() -&gt; <span class="hljs-built_in">Result</span> &#123;<br>    <span class="hljs-comment">// --snip--</span><br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">function2</span></span>() -&gt; IoResult&lt;()&gt; &#123;<br>    <span class="hljs-comment">// --snip--</span><br>&#125;<br></code></pre></td></tr></table></figure>
+<h4 id="pub-use-重导出"><code>pub use</code> 重导出</h4>
+<p>当使用 <code>use</code> 关键字将名称导入作用域时，在新作用域中可用的名称是私有的。 如果要让调用新作用域模块的代码也能调用 <code>use</code> 引入的项，可以使用 <code>pub use</code> 来重导出项。</p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs rust"><span class="hljs-keyword">mod</span> front_of_house &#123;<br>    <span class="hljs-keyword">pub</span> <span class="hljs-keyword">mod</span> hosting &#123;<br>        <span class="hljs-keyword">pub</span> <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">add_to_waitlist</span></span>() &#123;&#125;<br>    &#125;<br>&#125;<br><br><span class="hljs-keyword">pub</span> <span class="hljs-keyword">use</span> crate::front_of_house::hosting;<br><br><span class="hljs-keyword">pub</span> <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">eat_at_restaurant</span></span>() &#123;<br>    hosting::add_to_waitlist();<br>    hosting::add_to_waitlist();<br>    hosting::add_to_waitlist();<br>&#125;<br></code></pre></td></tr></table></figure></blockquote>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/Rust/">Rust</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Rust/">Rust</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2021/04/22/Rust/Rust%E5%B8%B8%E8%A7%81%E9%9B%86%E5%90%88/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Rust常见集合</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/04/21/Rust/Rust%E6%96%B9%E6%B3%95%E5%92%8C%E5%85%B3%E8%81%94%E5%87%BD%E6%95%B0/">
+                        <span class="hidden-mobile">Rust方法和关联函数</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.lazyComments('valine', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function () {
+        new Valine({
+          el: "#valine",
+          app_id: "kJgPdAqoTM5JKOdTdYLmXqq5-gzGzoHsz",
+          app_key: "X4MnxJgITkyJVettcgYX6ebP",
+          placeholder: "说点什么",
+          path: window.location.pathname,
+          avatar: "retro",
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: false,
+          recordIP: false,
+          serverURLs: "",
+        });
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the
+    <a target="_blank" href="https://valine.js.org" rel="nofollow noopener noopener">comments powered by Valine.</a>
+  </noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+      <div class="col-lg-7 mx-auto nopadding-x-md">
+        <div class="container custom mx-auto">
+          <script src="https://myhkw.cn/api/player/161389264877" id="myhk" key="161389264877" m="1"></script>
+        </div>
+      </div>
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+
+  <script defer src="/js/leancloud.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- KaTeX -->
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" />
+  
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/mermaid@8.8.3/dist/mermaid.min.js" ></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({"theme":"default"});
+    }
+  </script>
+
+
+
+
+  
+    <!-- Baidu Analytics -->
+    <script defer>
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?c194cf0c8cbc33bfb846ba1329537d81";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  
+    <!-- Google Analytics -->
+    <script defer>
+      window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) };
+      ga.l = +new Date;
+      ga('create', 'G-SXJN0942X9', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+  
+
+  
+    <!-- Google gtag.js -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D3DEHLLP3W"></script>
+    <script defer>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-D3DEHLLP3W');
+    </script>
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

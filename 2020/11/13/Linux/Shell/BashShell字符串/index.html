@@ -1,0 +1,704 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/self/portrait.jpg">
+  <link rel="icon" href="/img/self/portrait.jpg">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="一个记录各种笔记的小匣子^-^">
+  <meta name="author" content="BlueHeart0621">
+  <meta name="keywords" content="頑張れ">
+  
+    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script> <script src="/live2d-widget/autoload.js" type="text/javascript"></script> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
+  
+  <title>BashShell字符串 - お前はどこまで見えている</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"blueheart0621.github.io","root":"/","version":"1.8.9","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":"§"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":"c194cf0c8cbc33bfb846ba1329537d81","google":"G-SXJN0942X9","gtag":"G-D3DEHLLP3W","tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"A24MlA4oV7hlze3uNQiXDAIi-MdYXbMMI","app_key":"3moFK5Ao3TD4rjA1HCmPTSm6","server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>お前はどこまで見えている</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/covers/%E5%9B%9B%E6%9C%88%E6%98%AF%E4%BD%A0%E7%9A%84%E8%B0%8E%E8%A8%80-1.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="BashShell字符串">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2020-11-13 14:53" pubdate>
+        2020年11月13日 下午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.4k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      17
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- LeanCloud 统计文章PV -->
+      <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="leancloud-page-views"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">BashShell字符串</h1>
+            
+            <div class="markdown-body">
+              <h2 id="1-简介">1. 简介</h2>
+<p>BashShell 字符串内置许多字符串操作，包括有字符串切割、替换、分割等。</p>
+<h2 id="2-语法">2. <code>$&#123;&#125;</code> 语法</h2>
+<h3 id="2-1-字符串截取">2.1 字符串截取</h3>
+<p>举例来说：对于字符串 <code>file=/dir1/dir2/dir3/my.file.txt</code>，可以用 <code>$&#123;&#125;</code> 分别替换得到不同的值：</p>
+<ul>
+<li><code>$&#123;file#*/&#125;</code>：   删掉第一个 / 及其左边的字符串：<code>dir1/dir2/dir3/my.file.txt</code></li>
+<li><code>$&#123;file##*/&#125;</code>： 删掉最后一个 / 及其左边的字符串：<code>my.file.txt</code></li>
+<li><code>$&#123;file#*.&#125;</code>：    删掉第一个 . 及其左边的字符串：<code>file.txt</code></li>
+<li><code>$&#123;file##*.&#125;</code>：  删掉最后一个 . 及其左边的字符串：<code>txt</code></li>
+<li><code>$&#123;file%/*&#125;</code>：    删掉最后一个 / 及其右边的字符串：<code>/dir1/dir2/dir3</code></li>
+<li><code>$&#123;file%%/*&#125;</code>： 删掉第一个 / 及其右边的字符串：<code>(空值)</code></li>
+<li><code>$&#123;file%.*&#125;</code>：    删掉最后一个 . 及其右边的字符串：<code>/dir1/dir2/dir3/my.file</code></li>
+<li><code>$&#123;file%%.*&#125;</code>： 删掉第一个 . 及其右边的字符串：<code>/dir1/dir2/dir3/my</code></li>
+</ul>
+<p>记忆方法：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta">#</span><span class="bash"> 是去掉左边（键盘上 <span class="hljs-comment"># 在 $ 的左边）</span></span><br><span class="hljs-meta">%</span><span class="bash"> 是去掉右边（键盘上 % 在 $ 的右边）</span><br>单一符号是最小匹配；两个符号是最大匹配<br></code></pre></td></tr></table></figure>
+<h3 id="2-2-子串提取、替换">2.2 子串提取、替换</h3>
+<p>对于字符串 <code>file=/dir1/dir2/dir3/my.file.txt</code>，还可以使用 <code>$&#123;&#125;</code> 语法来进行子串提取和替换：</p>
+<ul>
+<li><code>$&#123;file: start: length&#125;</code> 语法：</li>
+</ul>
+<blockquote>
+<ul>
+<li><code>$&#123;file: 0: 5&#125;</code>：提取最左边的 5 个字节：<code>/dir1</code></li>
+<li><code>$&#123;file: 5: 5&#125;</code>：提取从左往右数第 5 个字节右边的连续 5 个字节：<code>/dir2</code></li>
+<li><code>$&#123;file: 5&#125;</code>：提取第 5 个字节右边的所有字节：<code>/dir2/dir3/my.file.txt</code></li>
+<li><code>$&#123;file: -8: 4&#125;</code>：提取从右往左数第 8 个字节右边的连续 4 个字节：<code>file</code></li>
+<li><code>$&#123;file: -8&#125;</code>：提取从右往左数第 8 个字节右边的所有字节：<code>file.txt</code></li>
+</ul>
+</blockquote>
+<ul>
+<li><code>$&#123;file/dir/path&#125;</code>：将第一个 <code>dir</code> 提换为 <code>path</code>：<code>/path1/dir2/dir3/my.file.txt</code></li>
+<li><code>$&#123;file//dir/path&#125;</code>：将全部 <code>dir</code> 提换为 <code>path</code>：<code>/path1/path2/path3/my.file.txt</code></li>
+<li><code>$&#123;#file&#125;</code>：获取字符串长度：27</li>
+</ul>
+<h3 id="2-3-字符串-Leftrightarrow-数组">2.3 字符串 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>⇔</mo></mrow><annotation encoding="application/x-tex">\Leftrightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mrel">⇔</span></span></span></span> 数组</h3>
+<p><code>$&#123;&#125;</code> 语法默认使用 IFS 指定的分隔符分隔字符串（即空白符：空格、tab 符、换行符），默认使用空格连接字符串元素。</p>
+<ul>
+<li>
+<p><code>$&#123;str[*]&#125;</code>：得到数组所有元素作为一个长字符串整体（all of the elements）</p>
+</li>
+<li>
+<p><code>$&#123;str[@]&#125;</code>：得到数组每一个元素，即子串数组（each of elements）</p>
+</li>
+<li>
+<p><code>$&#123;#str[*]&#125;</code>：得到数组元素的个数（number of elements）</p>
+</li>
+<li>
+<p><code>$&#123;!str[*]&#125;</code>：得到数组所有元素的下标（all indexs of elements）</p>
+</li>
+<li>
+<p><code>$&#123;!str[@]&#125;</code>：得到数组每一个元素的下标（each index of elements）</p>
+</li>
+</ul>
+<p>【注】此数组非 Bash Shell 的数组变量，只是为了方便理解而称呼，其本质还是单变量，Bash Shell 对其进行了扩展从而使得解析时呈现不同效果。</p>
+<h3 id="2-4-大小写转换">2.4 大小写转换</h3>
+<ul>
+<li>
+<p><code>$&#123;str,,&#125;</code>：将字符串全部转为小写</p>
+</li>
+<li>
+<p><code>$&#123;str^^&#125;</code>：将字符串全部转为大写</p>
+</li>
+</ul>
+<h3 id="2-5-字符串分割">2.5 字符串分割</h3>
+<p>bash shell 下将带有特定分隔符的长字符串分割短字符串数组有很多种方式。</p>
+<h4 id="2-5-1-直接修改-IFS-环境变量">2.5.1 直接修改 IFS 环境变量</h4>
+<p>对于长字符串分隔符不是空白符（IFS 默认分隔符为空白符：即空格、tab、换行符）的长字符串，可以通过修改 IFS 环境变量来指定字符串分割规则。比如在 bash shell 中输入以下代码：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">IFS=:<br>_str_=<span class="hljs-string">&quot;hello:world&quot;</span><br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-variable">$_str_</span>; <span class="hljs-keyword">do</span> <span class="hljs-built_in">echo</span> <span class="hljs-variable">$i</span>; <span class="hljs-keyword">done</span><br></code></pre></td></tr></table></figure>
+<p>会得到以下结果：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">hello<br>world<br></code></pre></td></tr></table></figure>
+<p>详细参见 <a href="/2020/02/11/Linux/Shell/IFS%E5%8F%98%E9%87%8F%E5%AF%B9%E5%8A%A0%E5%8F%8C%E5%BC%95%E5%8F%B7%E5%92%8C%E4%B8%8D%E5%8A%A0%E5%8F%8C%E5%BC%95%E5%8F%B7%E5%8F%98%E9%87%8F%E7%9A%84%E5%8C%BA%E5%88%AB%E5%AF%B9%E5%BE%85">IFS变量对加双引号和不加双引号变量的区别对待</a> 。</p>
+<h4 id="2-5-2-使用-语法">2.5.2 使用 <code>$&#123;&#125;</code> 语法</h4>
+<p>如果不想修改 IFS 环境变量，可以使用上文中的 <code>$&#123;&#125;</code> 语法将长字符串分隔符替换为空白符，这样就可以使用默认的 IFS 环境变量。比如在 bash shell 中输入以下代码：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">_str_=<span class="hljs-string">&quot;hello:world&quot;</span><br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-variable">$&#123;_str_//:/ &#125;</span>; <span class="hljs-keyword">do</span> <span class="hljs-built_in">echo</span> <span class="hljs-variable">$i</span>; <span class="hljs-keyword">done</span><br></code></pre></td></tr></table></figure>
+<p>会得到以下结果：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">hello<br>world<br></code></pre></td></tr></table></figure>
+<h2 id="3-语法">3. <code>[[ ]]</code> 语法</h2>
+<ul>
+<li>
+<p><code>[[ $str1 == $str2 ]]</code>：判定字符串是否相等</p>
+</li>
+<li>
+<p><code>[[ $str1 != $str2 ]]</code>：判定字符串是否不等</p>
+</li>
+<li>
+<p><code>[[ $str1 =~ $str2 ]]</code>：判定字符串 str1 是否包含字符串 str2</p>
+</li>
+<li>
+<p><code>[[ $str1 &gt; $str2 ]]</code>：判定字符串 str1 是否按字典序大于字符串 str2</p>
+</li>
+<li>
+<p><code>[[ $str1 &lt; $str2 ]]</code>：判定字符串 str1 是否按字典序小于字符串 str2</p>
+</li>
+<li>
+<p><code>[[ -z $str ]]</code>：判定字符串是否等于空</p>
+</li>
+<li>
+<p><code>[[ -n $str ]]</code>：判定字符串是否不等于空</p>
+</li>
+</ul>
+<h2 id="4-语法">4. <code>[ ]</code> 语法</h2>
+<p>【注】<code>[ ]</code> 不能用来判断字符串相包含；且判断字符串的大小关系时需要使用 `` 转义 <code>&lt; &gt;</code>，防止 bash shell 将其识别为重定向符号；此外，对于 <code>-z</code> 和 <code>-n</code> 选项，字符串必须要用 <code>&quot;&quot;</code> 包裹，不然可能导致奇怪的问题，建议 <code>[]</code> 语法中用到的字符串变量都用 <code>&quot;&quot;</code> 包裹。</p>
+<ul>
+<li>
+<p><code>[ $str1 = $str2 ]</code> 或 <code>[ $str1 == $str2 ]</code>：判定字符串是否相等</p>
+</li>
+<li>
+<p><code>[ $str1 != $str2 ]</code>：判定字符串是否不等</p>
+</li>
+<li>
+<p><code>[ $str1 =~ $str2 ]</code>：判定字符串 str1 是否包含字符串 str2</p>
+</li>
+<li>
+<p><code>[ $str1 \&gt; $str2 ]</code>：判定字符串 str1 是否按字典序大于字符串 str2</p>
+</li>
+<li>
+<p><code>[ $str1 \&lt; $str2 ]</code>：判定字符串 str1 是否按字典序小于字符串 str2</p>
+</li>
+<li>
+<p><code>[ -z &quot;$str&quot; ]</code>：判定字符串是否等于空</p>
+</li>
+<li>
+<p><code>[ -n &quot;$str&quot; ]</code>：判定字符串是否不等于空</p>
+</li>
+</ul>
+<h2 id="5-test-语法">5. test 语法</h2>
+<p>【注】test 语法和 <code>[ ]</code> 语法基本一样，也不能用来判断字符串的相包含，<code>&lt; &gt;</code> 也同样需要转义。二者唯一的区别在于，<code>[ ]</code> 是内建的语法，而 test 是调用外在的程序，因此 <code>[ ]</code> 要比 test 更高效。</p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/Linux/">Linux</a>
+                    
+                      <a class="hover-with-bg" href="/categories/Linux/Shell/">Shell</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Linux/">Linux</a>
+                    
+                      <a class="hover-with-bg" href="/tags/Shell/">Shell</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/11/16/Linux/Shell/LinuxShell%E5%88%86%E5%8D%B7%E5%8E%8B%E7%BC%A9/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">LinuxShell分卷压缩</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/11/11/ImageCompression/JPEG%E5%8E%8B%E7%BC%A9%E5%9B%BE%E5%83%8F%E5%A2%9E%E5%BC%BA%E7%BB%BC%E8%BF%B0/JPEG%E5%8E%8B%E7%BC%A9%E5%9B%BE%E5%83%8F%E5%A2%9E%E5%BC%BA%E7%BB%BC%E8%BF%B0/">
+                        <span class="hidden-mobile">JPEG压缩图像增强综述</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.lazyComments('valine', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function () {
+        new Valine({
+          el: "#valine",
+          app_id: "kJgPdAqoTM5JKOdTdYLmXqq5-gzGzoHsz",
+          app_key: "X4MnxJgITkyJVettcgYX6ebP",
+          placeholder: "说点什么",
+          path: window.location.pathname,
+          avatar: "retro",
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: false,
+          recordIP: false,
+          serverURLs: "",
+        });
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the
+    <a target="_blank" href="https://valine.js.org" rel="nofollow noopener noopener">comments powered by Valine.</a>
+  </noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+      <div class="col-lg-7 mx-auto nopadding-x-md">
+        <div class="container custom mx-auto">
+          <script src="https://myhkw.cn/api/player/161389264877" id="myhk" key="161389264877" m="1"></script>
+        </div>
+      </div>
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+
+  <script defer src="/js/leancloud.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- KaTeX -->
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" />
+  
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/mermaid@8.8.3/dist/mermaid.min.js" ></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({"theme":"default"});
+    }
+  </script>
+
+
+
+
+  
+    <!-- Baidu Analytics -->
+    <script defer>
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?c194cf0c8cbc33bfb846ba1329537d81";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  
+    <!-- Google Analytics -->
+    <script defer>
+      window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) };
+      ga.l = +new Date;
+      ga('create', 'G-SXJN0942X9', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+  
+
+  
+    <!-- Google gtag.js -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D3DEHLLP3W"></script>
+    <script defer>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-D3DEHLLP3W');
+    </script>
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

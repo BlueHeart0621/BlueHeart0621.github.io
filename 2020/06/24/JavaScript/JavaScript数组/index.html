@@ -1,0 +1,806 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/self/portrait.jpg">
+  <link rel="icon" href="/img/self/portrait.jpg">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="一个记录各种笔记的小匣子^-^">
+  <meta name="author" content="BlueHeart0621">
+  <meta name="keywords" content="頑張れ">
+  
+    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script> <script src="/live2d-widget/autoload.js" type="text/javascript"></script> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
+  
+  <title>JavaScript数组 - お前はどこまで見えている</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"blueheart0621.github.io","root":"/","version":"1.8.9","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":"§"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":"c194cf0c8cbc33bfb846ba1329537d81","google":"G-SXJN0942X9","gtag":"G-D3DEHLLP3W","tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"A24MlA4oV7hlze3uNQiXDAIi-MdYXbMMI","app_key":"3moFK5Ao3TD4rjA1HCmPTSm6","server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>お前はどこまで見えている</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/covers/%E5%9B%9B%E6%9C%88%E6%98%AF%E4%BD%A0%E7%9A%84%E8%B0%8E%E8%A8%80-1.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="JavaScript数组">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2020-06-24 09:36" pubdate>
+        2020年6月24日 上午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.9k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      22
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- LeanCloud 统计文章PV -->
+      <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="leancloud-page-views"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">JavaScript数组</h1>
+            
+            <div class="markdown-body">
+              <h2 id="1-概述">1. 概述</h2>
+<p>数组是一种特殊类型的对象。在 JavaScript 中对数组使用 typeof 运算符会返回 &quot;object&quot;。</p>
+<ul>
+<li>数组元素可以通过下表访问（非键值对数组），也可以通过键访问（键值对数组）。</li>
+<li>JavaScript 变量可以是对象。数组是特殊类型的对象。可以在相同数组中存放不同类型的变量：对象、函数、数组等……</li>
+</ul>
+<h3 id="1-1-创建数组">1.1 创建数组</h3>
+<ul>
+<li>语法：</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> array-name = [item1, item2, ...];<br><span class="hljs-keyword">var</span> cars = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Array</span>(<span class="hljs-string">&quot;Saab&quot;</span>, <span class="hljs-string">&quot;Volvo&quot;</span>, <span class="hljs-string">&quot;BMW&quot;</span>);<br></code></pre></td></tr></table></figure>
+<h3 id="1-2-访问数组元素">1.2 访问数组元素</h3>
+<ul>
+<li>通过引用索引号（下标号）来引用某个数组元素。</li>
+</ul>
+<h3 id="1-3-添加数组元素">1.3 添加数组元素</h3>
+<ul>
+<li>向数组添加新元素的最佳方法是使用 push() 方法。</li>
+<li>也可以使用下标直接向数组添加新元素（若添加索引高出数组当前长度范围，则会在数组中未赋值的下标位置创建未定义的“洞”）：</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> fruits = [<span class="hljs-string">&quot;Banana&quot;</span>, <span class="hljs-string">&quot;Orange&quot;</span>, <span class="hljs-string">&quot;Apple&quot;</span>, <span class="hljs-string">&quot;Mango&quot;</span>];<br>fruits[fruits.length] = <span class="hljs-string">&quot;Lemon&quot;</span>;     <span class="hljs-comment">// 向 fruits 添加一个新元素 (Lemon)</span><br></code></pre></td></tr></table></figure>
+<h3 id="1-4-数组和对象的区别">1.4 数组和对象的区别</h3>
+<ul>
+<li>在 JavaScript 中，数组使用数字索引。</li>
+<li>在 JavaScript 中，对象使用命名索引。</li>
+</ul>
+<h2 id="2-属性">2. 属性</h2>
+<ul>
+<li><strong>length</strong> ：属性返回数组的长度（数组元素的数目）。</li>
+</ul>
+<h2 id="3-方法">3. 方法</h2>
+<ul>
+<li><strong>toString()</strong> ：把数组转换为数组值（逗号分隔）的字符串。<br />
+【注】所有 JavaScript 对象都拥有 toString() 方法。</li>
+<li><strong>join()</strong> ：方法也可将所有数组元素结合为一个字符串。它的行为类似 toString()，但是您还可以规定分隔符。</li>
+<li><strong>pop()</strong> ：方法从数组中删除最后一个元素。pop() 方法返回“被弹出”的值。</li>
+<li><strong>push()</strong> ：方法（在数组结尾处）向数组添加一个新的元素。push() 方法返回新数组的长度。</li>
+<li><strong>shift()</strong> ：方法会删除首个数组元素，并把所有其他元素“位移”到更低的索引。shift() 方法返回被“位移出”的字符串。</li>
+<li><strong>unshift()</strong> ：方法（在开头）向数组添加新元素，并“反向位移”旧元素。unshift() 方法返回新数组的长度。</li>
+<li><strong>splice()</strong> ：方法可用于向数组添加新项。splice() 方法返回一个包含已删除项的数组。</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> fruits = [<span class="hljs-string">&quot;Banana&quot;</span>, <span class="hljs-string">&quot;Orange&quot;</span>, <span class="hljs-string">&quot;Apple&quot;</span>, <span class="hljs-string">&quot;Mango&quot;</span>];<br>fruits.splice(<span class="hljs-number">2</span>, <span class="hljs-number">0</span>, <span class="hljs-string">&quot;Lemon&quot;</span>, <span class="hljs-string">&quot;Kiwi&quot;</span>);<br></code></pre></td></tr></table></figure>
+<p>其中，第一个参数（2）定义了应添加新元素的位置（拼接）；第二个参数（0）定义应删除多少元素；其余参数（“Lemon”，“Kiwi”）定义要添加的新元素。<br />
+【注】其余参数可省略。</p>
+<ul>
+<li><strong>concat()</strong> ：方法通过合并（连接）现有数组来创建一个新数组。concat() 方法不会更改现有数组。它总是返回一个新数组。concat() 方法可以使用任意数量的数组参数。</li>
+<li><strong>slice()</strong> ：方法用数组的某个片段切出新数组。slice() 方法创建新数组。它不会从源数组中删除任何元素。</li>
+</ul>
+<blockquote>
+<p>slice() 可接受两个参数，比如 (1, 3)。该方法会<strong>从开始参数选取元素，直到结束参数（不包括）为止</strong>。如果结束参数被省略，比如第一个例子，则 slice() 会切出数组的剩余部分。</p>
+</blockquote>
+<ul>
+<li><strong>sort()</strong> ：方法以字母顺序对数组进行排序。sort() 可以接受自定义的比较函数来定义自己的排序顺序。</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> points = [<span class="hljs-number">40</span>, <span class="hljs-number">100</span>, <span class="hljs-number">1</span>, <span class="hljs-number">5</span>, <span class="hljs-number">25</span>, <span class="hljs-number">10</span>];<br>points.sort(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">a, b</span>)</span>&#123;<span class="hljs-keyword">return</span> b - a&#125;); <br></code></pre></td></tr></table></figure>
+<ul>
+<li><strong>reverse()</strong> ：方法反转数组中的元素。</li>
+<li><strong>Math.max.apply()</strong> ：来查找数组中的最大值。</li>
+<li><strong>Math.min.apply()</strong> ：来查找数组中的最低值。</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">myArrayMax</span>(<span class="hljs-params">arr</span>) </span>&#123;<br>    <span class="hljs-keyword">return</span> <span class="hljs-built_in">Math</span>.max.apply(<span class="hljs-literal">null</span>, arr);<br>&#125;<br><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">myArrayMin</span>(<span class="hljs-params">arr</span>) </span>&#123;<br>    <span class="hljs-keyword">return</span> <span class="hljs-built_in">Math</span>.min.apply(<span class="hljs-literal">null</span>, arr);<br>&#125;<br></code></pre></td></tr></table></figure>
+<h3 id="【注】以下方法老版本浏览器（比如-Internet-Explorer-8-或更早的版本）不支持。">【注】以下方法老版本浏览器（比如 Internet Explorer 8 或更早的版本）不支持。</h3>
+<ul>
+<li><strong>forEach()</strong> ：方法为每个数组元素调用一次函数（回调函数）。</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> txt = <span class="hljs-string">&quot;&quot;</span>;<br><span class="hljs-keyword">var</span> numbers = [<span class="hljs-number">45</span>, <span class="hljs-number">4</span>, <span class="hljs-number">9</span>, <span class="hljs-number">16</span>, <span class="hljs-number">25</span>];<br>numbers.forEach(myFunction);<br><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">myFunction</span>(<span class="hljs-params">value, index, array</span>) </span>&#123;<br>  txt = txt + value + <span class="hljs-string">&quot;&lt;br&gt;&quot;</span>; <br>&#125;<br></code></pre></td></tr></table></figure>
+<p>该函数接受 3 个参数：</p>
+<blockquote>
+<ol>
+<li>项目值</li>
+<li>项目索引</li>
+<li>数组本身</li>
+</ol>
+</blockquote>
+<ul>
+<li><strong>map()</strong> ：方法通过对每个数组元素执行函数来创建新数组。</li>
+</ul>
+<blockquote>
+<ol>
+<li>map() 方法不会对没有值的数组元素执行函数。</li>
+<li>map() 方法不会更改原始数组。</li>
+</ol>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> numbers1 = [<span class="hljs-number">45</span>, <span class="hljs-number">4</span>, <span class="hljs-number">9</span>, <span class="hljs-number">16</span>, <span class="hljs-number">25</span>];<br><span class="hljs-keyword">var</span> numbers2 = numbers1.map(myFunction);<br><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">myFunction</span>(<span class="hljs-params">value, index, array</span>) </span>&#123;<br>  <span class="hljs-keyword">return</span> value * <span class="hljs-number">2</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>该函数接受 3 个参数（当回调函数仅使用 value 参数时，可以省略索引和数组参数）：</p>
+<blockquote>
+<ol>
+<li>项目值</li>
+<li>项目索引</li>
+<li>数组本身</li>
+</ol>
+</blockquote>
+<ul>
+<li><strong>filter()</strong> ：方法创建一个包含通过测试的数组元素的新数组。</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> numbers = [<span class="hljs-number">45</span>, <span class="hljs-number">4</span>, <span class="hljs-number">9</span>, <span class="hljs-number">16</span>, <span class="hljs-number">25</span>];<br><span class="hljs-keyword">var</span> over18 = numbers.filter(myFunction);<br><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">myFunction</span>(<span class="hljs-params">value, index, array</span>) </span>&#123;<br>  <span class="hljs-keyword">return</span> value &gt; <span class="hljs-number">18</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>该函数接受 3 个参数（当回调函数仅使用 value 参数时，可以省略索引和数组参数）：</p>
+<blockquote>
+<ol>
+<li>项目值</li>
+<li>项目索引</li>
+<li>数组本身</li>
+</ol>
+</blockquote>
+<ul>
+<li><strong>reduce()</strong> ：方法在每个数组元素上运行函数，以生成（减少它）单个值。</li>
+</ul>
+<blockquote>
+<ol>
+<li>reduce() 方法在数组中从左到右工作。另请参见 reduceRight（）。</li>
+<li>reduce() 方法不会减少原始数组。</li>
+<li>reduce() 方法能够接受一个初始值。</li>
+</ol>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> numbers1 = [<span class="hljs-number">45</span>, <span class="hljs-number">4</span>, <span class="hljs-number">9</span>, <span class="hljs-number">16</span>, <span class="hljs-number">25</span>];<br><span class="hljs-keyword">var</span> sum = numbers1.reduce(myFunction, <span class="hljs-number">100</span>);<br><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">myFunction</span>(<span class="hljs-params">total, value</span>) </span>&#123;<br>  <span class="hljs-keyword">return</span> total + value;<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>此函数接受 4 个参数：</p>
+<blockquote>
+<ol>
+<li>总数（初始值/先前返回的值）</li>
+<li>项目值</li>
+<li>项目索引</li>
+<li>数组本身</li>
+</ol>
+</blockquote>
+<ul>
+<li><strong>reduceRight()</strong> ：（同 reduce() 方法）方法在每个数组元素上运行函数，以生成（减少它）单个值。</li>
+</ul>
+<blockquote>
+<ol>
+<li>reduceRight() 方法在数组中从左到右工作。另请参见 reduce（）。</li>
+<li>reduceRight() 方法不会减少原始数组。</li>
+<li>reduceRight() 方法能够接受一个初始值。</li>
+</ol>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> numbers1 = [<span class="hljs-number">45</span>, <span class="hljs-number">4</span>, <span class="hljs-number">9</span>, <span class="hljs-number">16</span>, <span class="hljs-number">25</span>];<br><span class="hljs-keyword">var</span> sum = numbers1.reduceRight(myFunction);<br><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">myFunction</span>(<span class="hljs-params">total, value, index, array</span>) </span>&#123;<br>  <span class="hljs-keyword">return</span> total + value;<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>此函数接受 4 个参数：</p>
+<blockquote>
+<ol>
+<li>总数（初始值/先前返回的值）</li>
+<li>项目值</li>
+<li>项目索引</li>
+<li>数组本身</li>
+</ol>
+</blockquote>
+<ul>
+<li><strong>every()</strong> ：方法检查所有数组值是否通过测试。</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> numbers = [<span class="hljs-number">45</span>, <span class="hljs-number">4</span>, <span class="hljs-number">9</span>, <span class="hljs-number">16</span>, <span class="hljs-number">25</span>];<br><span class="hljs-keyword">var</span> allOver18 = numbers.every(myFunction);<br><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">myFunction</span>(<span class="hljs-params">value</span>) </span>&#123;<br>  <span class="hljs-keyword">return</span> value &gt; <span class="hljs-number">18</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>此函数接受 3 个参数：</p>
+<blockquote>
+<ol>
+<li>项目值</li>
+<li>项目索引</li>
+<li>数组本身</li>
+</ol>
+</blockquote>
+<ul>
+<li><strong>some()</strong> ：方法检查某些数组值是否通过了测试。</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> numbers = [<span class="hljs-number">45</span>, <span class="hljs-number">4</span>, <span class="hljs-number">9</span>, <span class="hljs-number">16</span>, <span class="hljs-number">25</span>];<br><span class="hljs-keyword">var</span> someOver18 = numbers.some(myFunction);<br><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">myFunction</span>(<span class="hljs-params">value, index, array</span>) </span>&#123;<br>  <span class="hljs-keyword">return</span> value &gt; <span class="hljs-number">18</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>此函数接受 3 个参数：</p>
+<blockquote>
+<ol>
+<li>项目值</li>
+<li>项目索引</li>
+<li>数组本身</li>
+</ol>
+</blockquote>
+<ul>
+<li><strong>indexOf()</strong> ：方法在数组中搜索元素值并返回其位置。</li>
+</ul>
+<p>语法格式：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript">array.indexOf(item, start)<br></code></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>item</th>
+<th>必需。要检索的项目。</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>start</td>
+<td>可选。从哪里开始搜索。负值将从结尾开始的给定位置开始，并搜索到结尾。</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>lastIndexOf()</strong> ：与 indexOf() 类似，但是从数组结尾开始搜索。<br />
+语法格式：</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript">array.lastIndexOf(item, start)<br></code></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>item</th>
+<th>必需。要检索的项目。</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>start</td>
+<td>可选。从哪里开始搜索。负值将从结尾开始的给定位置开始，并搜索到开头。</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>find()</strong> ：方法返回通过测试函数的第一个数组元素的值。</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> numbers = [<span class="hljs-number">4</span>, <span class="hljs-number">9</span>, <span class="hljs-number">16</span>, <span class="hljs-number">25</span>, <span class="hljs-number">29</span>];<br><span class="hljs-keyword">var</span> first = numbers.find(myFunction);<br><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">myFunction</span>(<span class="hljs-params">value, index, array</span>) </span>&#123;<br>  <span class="hljs-keyword">return</span> value &gt; <span class="hljs-number">18</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>此函数接受 3 个参数：</p>
+<blockquote>
+<ol>
+<li>项目值</li>
+<li>项目索引</li>
+<li>数组本身</li>
+</ol>
+</blockquote>
+<ul>
+<li><strong>findIndex()</strong> ：方法返回通过测试函数的第一个数组元素的索引。</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> numbers = [<span class="hljs-number">4</span>, <span class="hljs-number">9</span>, <span class="hljs-number">16</span>, <span class="hljs-number">25</span>, <span class="hljs-number">29</span>];<br><span class="hljs-keyword">var</span> first = numbers.findIndex(myFunction);<br><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">myFunction</span>(<span class="hljs-params">value, index, array</span>) </span>&#123;<br>  <span class="hljs-keyword">return</span> value &gt; <span class="hljs-number">18</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>此函数接受 3 个参数：</p>
+<blockquote>
+<ol>
+<li>项目值</li>
+<li>项目索引</li>
+<li>数组本身</li>
+</ol>
+</blockquote>
+<h2 id="4-其他">4. 其他</h2>
+<ul>
+<li><strong>delete</strong> 运算符可用于删除数组项。<br />
+【注】使用 delete 会在数组留下未定义的空洞。</li>
+</ul>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/JavaScript/">JavaScript</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/JavaScript/">JavaScript</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/06/24/JavaScript/JavaScript%E6%95%B0%E5%80%BC/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">JavaScript数值</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/06/24/Math/Theory/%E5%8D%A1%E8%BF%88%E5%85%8B%E5%B0%94%E5%87%BD%E6%95%B0/">
+                        <span class="hidden-mobile">卡迈克尔函数</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.lazyComments('valine', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function () {
+        new Valine({
+          el: "#valine",
+          app_id: "kJgPdAqoTM5JKOdTdYLmXqq5-gzGzoHsz",
+          app_key: "X4MnxJgITkyJVettcgYX6ebP",
+          placeholder: "说点什么",
+          path: window.location.pathname,
+          avatar: "retro",
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: false,
+          recordIP: false,
+          serverURLs: "",
+        });
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the
+    <a target="_blank" href="https://valine.js.org" rel="nofollow noopener noopener">comments powered by Valine.</a>
+  </noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+      <div class="col-lg-7 mx-auto nopadding-x-md">
+        <div class="container custom mx-auto">
+          <script src="https://myhkw.cn/api/player/161389264877" id="myhk" key="161389264877" m="1"></script>
+        </div>
+      </div>
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+
+  <script defer src="/js/leancloud.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- KaTeX -->
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" />
+  
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/mermaid@8.8.3/dist/mermaid.min.js" ></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({"theme":"default"});
+    }
+  </script>
+
+
+
+
+  
+    <!-- Baidu Analytics -->
+    <script defer>
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?c194cf0c8cbc33bfb846ba1329537d81";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  
+    <!-- Google Analytics -->
+    <script defer>
+      window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) };
+      ga.l = +new Date;
+      ga('create', 'G-SXJN0942X9', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+  
+
+  
+    <!-- Google gtag.js -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D3DEHLLP3W"></script>
+    <script defer>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-D3DEHLLP3W');
+    </script>
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>
