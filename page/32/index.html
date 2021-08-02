@@ -197,323 +197,6 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Linux/Mint/Mint19.1%E5%AE%89%E8%A3%85man%E4%B8%AD%E6%96%87%E6%89%8B%E5%86%8C/">Mint19.1安装man中文手册</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/05/26/Linux/Mint/Mint19.1%E5%AE%89%E8%A3%85man%E4%B8%AD%E6%96%87%E6%89%8B%E5%86%8C/">
-          
-          
-            
-          
-          1. 安装 man 中文软件包
-1sudo apt install manpages-zh
-2. 查询 man 中文手册安装目录
-1dpkg -L manpages-zh | less
-发现 man 中文手册安装目录为 /usr/share/man/zh_CN（简体）或 /usr/share/man/zh_TW （繁体）。
-3. 设置中英文 man 别名
-
-编辑 ~/.bashrc文件：
-
-1su
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Linux/">Linux</a>
-            
-              <a href="/categories/Linux/Mint/">Mint</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/Mint/">Mint</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/05/26/Linux/Mint/Mint19.1%E6%B8%85%E9%99%A4%E7%B3%BB%E7%BB%9F%E5%9E%83%E5%9C%BE/">Mint19.1清除系统垃圾</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/05/26/Linux/Mint/Mint19.1%E6%B8%85%E9%99%A4%E7%B3%BB%E7%BB%9F%E5%9E%83%E5%9C%BE/">
-          
-          
-            
-          
-          1. 清除不再需要的软件依赖包
-1sudo apt autoremove
-2. 清除所有软件安装包
-1sudo apt clean
-3. 清除系统旧的不再使用的软件安装包
-1sudo apt autoclean
-4. 清除系统多余内核
-
-首先查看当前内核
-
-1uname -a
-
-然后查看系统所有内核
-
-1dpkg --get-selections | grep linux
-
-最后删除不需要的内核
-
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Linux/">Linux</a>
-            
-              <a href="/categories/Linux/Mint/">Mint</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/Mint/">Mint</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/05/26/Linux/Manjaro/Manjaro20.0%E4%B8%8B%E8%93%9D%E7%89%99%E9%85%8D%E5%AF%B9%E5%92%8C%E8%BF%9E%E6%8E%A5/">Manjaro20.0下蓝牙配对和连接</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/05/26/Linux/Manjaro/Manjaro20.0%E4%B8%8B%E8%93%9D%E7%89%99%E9%85%8D%E5%AF%B9%E5%92%8C%E8%BF%9E%E6%8E%A5/">
-          
-          
-            
-          
-          首先确保 bluez, bluez-utils 已经安装好，否则在终端安装：
-1sudo pacman -S bluez bluez-utils
-1. 查看蓝牙服务状态
-1systemctl status bluetooth.service
-2. 启动蓝牙服务
-如果蓝牙服务未启动，则需手动启动蓝牙服务：
-1sudo systemctl start bluetooth.service
-3. 操控蓝牙
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Linux/">Linux</a>
-            
-              <a href="/categories/Linux/Manjaro/">Manjaro</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/Manjaro/">Manjaro</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/05/26/Linux/Manjaro/Manjaro20.0%E5%AE%89%E8%A3%85EasyConnect/">Manjaro20.0安装EasyConnect</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/05/26/Linux/Manjaro/Manjaro20.0%E5%AE%89%E8%A3%85EasyConnect/">
-          
-          
-            
-          
-          EasyConnect 是深信服公司新一代的 SSLVPN，支持各大操作系统平台，但 Linux 目前只支持 deb 包和 rpm 包，所以 Manjaro 安装 EasyConnect 并不友好。
-1. 安装最新版 EasyConnect
-1.1 终端安装 AUR 版本
-
-yaourt 用户
-
-1yaourt -S easyconnect
-
-yay 用户
-
-1yay -S easyconnect
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Linux/">Linux</a>
-            
-              <a href="/categories/Linux/Manjaro/">Manjaro</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/Manjaro/">Manjaro</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/05/26/Linux/Manjaro/Manjaro20.0%E5%AE%89%E8%A3%85deb%E8%BD%AF%E4%BB%B6%E5%8C%85/">Manjaro20.0安装deb软件包</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/05/26/Linux/Manjaro/Manjaro20.0%E5%AE%89%E8%A3%85deb%E8%BD%AF%E4%BB%B6%E5%8C%85/">
-          
-          
-            
-          
-          由于 Manjaro 基于 ArchLinux，而 deb 软件包格式为 Debian 系统安装包格式，故 Manjaro 不能直接安装 deb 软件包，而需要借助 debtap 工具。
-1. 安装 debtap
-
-yaourt 工具
-
-1yaourt -S debtap
-
-yay 工具
-
-1yay -S debtap
-
-pacaur 工具
-
-1pacaur -S debtap
-【注】三种方式任选
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Linux/">Linux</a>
-            
-              <a href="/categories/Linux/Manjaro/">Manjaro</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/Manjaro/">Manjaro</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
         <a href="/2020/05/26/Linux/Manjaro/Manjaro20.0%E5%AE%89%E8%A3%85man%E4%B8%AD%E6%96%87%E6%89%8B%E5%86%8C/">Manjaro20.0安装man中文手册</a>
       </h1>
 
@@ -681,6 +364,314 @@ Arch Linux AUR 源已经提供了 TR4527 扫描仪驱动程序 s
               <a href="/tags/Linux/">Linux</a>
             
               <a href="/tags/Manjaro/">Manjaro</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/05/26/Linux/Mint/Mint19.1%E4%B8%8Bdpkg%E6%8A%A5%E9%94%99/">Mint19.1下dpkg报错</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/05/26/Linux/Mint/Mint19.1%E4%B8%8Bdpkg%E6%8A%A5%E9%94%99/">
+          
+          
+            
+          
+          1. E: Sub-process /usr/bin/dpkg returned an error code (1)
+解决办法如下：
+12345678cd /var/lib/dpkgsudo mv info info_baksudo mkdir infosudo apt update &gt; /dev/null			# 若要输出信息，去除重定向符及其后内容sudo apt install -fs
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-05-26 10:44" pubdate>
+              2020-05-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Linux/">Linux</a>
+            
+              <a href="/categories/Linux/Mint/">Mint</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Linux/">Linux</a>
+            
+              <a href="/tags/Mint/">Mint</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/05/26/Linux/Mint/Mint19.1%E4%B8%8B%E4%BD%BF%E7%94%A8npm%E5%B7%A5%E5%85%B7/">Mint19.1下使用npm工具</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/05/26/Linux/Mint/Mint19.1%E4%B8%8B%E4%BD%BF%E7%94%A8npm%E5%B7%A5%E5%85%B7/">
+          
+          
+            
+          
+          1. 简介
+
+
+npm 是一个 NodeJS 平台的 JavaScript 包管理工具，它用于管理包发布、查询、安装、开发以及包之间的依赖性冲突等。
+
+
+npm 安装软件目录有两种模式，一个是全局模式、一个是局部模式（默认）。
+
+
+3. 格式
+1npm &lt;command&gt; [args]
+4. 查看帮助信息
+12345npm help helpnpm help package.jsonn
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-05-26 10:44" pubdate>
+              2020-05-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Linux/">Linux</a>
+            
+              <a href="/categories/Linux/Mint/">Mint</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Linux/">Linux</a>
+            
+              <a href="/tags/Mint/">Mint</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/05/26/Linux/Mint/Mint19.1%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%92%AD%E6%94%BE%E9%9F%B3%E4%B9%90/">Mint19.1命令行播放音乐</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/05/26/Linux/Mint/Mint19.1%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%92%AD%E6%94%BE%E9%9F%B3%E4%B9%90/">
+          
+          
+            
+          
+          1. 安装必要软件包
+1sudo apt install sox libsox-fmt-all
+2. 命令行播放音乐
+安装上述软件包后，就可以在命令行中使用 play 命令
+1play [musicname].mp3
+play 命令有很多强大的功能，具体用法可以 help 一下
+1play --help
+3. 用途
+安装该功能后，就能在 bash 脚本中使用，可以实现诸如报警、提醒、定时闹钟等功能
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-05-26 10:44" pubdate>
+              2020-05-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Linux/">Linux</a>
+            
+              <a href="/categories/Linux/Mint/">Mint</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Linux/">Linux</a>
+            
+              <a href="/tags/Mint/">Mint</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/05/26/Linux/Mint/Mint19.1%E5%AE%89%E8%A3%85man%E4%B8%AD%E6%96%87%E6%89%8B%E5%86%8C/">Mint19.1安装man中文手册</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/05/26/Linux/Mint/Mint19.1%E5%AE%89%E8%A3%85man%E4%B8%AD%E6%96%87%E6%89%8B%E5%86%8C/">
+          
+          
+            
+          
+          1. 安装 man 中文软件包
+1sudo apt install manpages-zh
+2. 查询 man 中文手册安装目录
+1dpkg -L manpages-zh | less
+发现 man 中文手册安装目录为 /usr/share/man/zh_CN（简体）或 /usr/share/man/zh_TW （繁体）。
+3. 设置中英文 man 别名
+
+编辑 ~/.bashrc文件：
+
+1su
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-05-26 10:44" pubdate>
+              2020-05-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Linux/">Linux</a>
+            
+              <a href="/categories/Linux/Mint/">Mint</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Linux/">Linux</a>
+            
+              <a href="/tags/Mint/">Mint</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/05/26/Linux/Mint/Mint19.1%E6%B8%85%E9%99%A4%E7%B3%BB%E7%BB%9F%E5%9E%83%E5%9C%BE/">Mint19.1清除系统垃圾</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/05/26/Linux/Mint/Mint19.1%E6%B8%85%E9%99%A4%E7%B3%BB%E7%BB%9F%E5%9E%83%E5%9C%BE/">
+          
+          
+            
+          
+          1. 清除不再需要的软件依赖包
+1sudo apt autoremove
+2. 清除所有软件安装包
+1sudo apt clean
+3. 清除系统旧的不再使用的软件安装包
+1sudo apt autoclean
+4. 清除系统多余内核
+
+首先查看当前内核
+
+1uname -a
+
+然后查看系统所有内核
+
+1dpkg --get-selections | grep linux
+
+最后删除不需要的内核
+
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-05-26 10:44" pubdate>
+              2020-05-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Linux/">Linux</a>
+            
+              <a href="/categories/Linux/Mint/">Mint</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Linux/">Linux</a>
+            
+              <a href="/tags/Mint/">Mint</a>
             
           </div>
         

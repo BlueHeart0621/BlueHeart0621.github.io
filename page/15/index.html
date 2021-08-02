@@ -431,21 +431,22 @@ Xavier的论文中提出的设定值， 不仅考虑了前一层的输入节点�
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/10/02/DeepLearning/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/AdaGrad/">AdaGrad</a>
+        <a href="/2020/10/02/DeepLearning/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/Nesterov/">Nesterov</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/10/02/DeepLearning/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/AdaGrad/">
+        <a href="/2020/10/02/DeepLearning/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/Nesterov/">
           
           
             
           
           1. 简介
-AdaGrad 算法是借鉴 ℓ2\ell_2ℓ2​ 正则化的思想，每次迭代时自适应地调整每个参数的学习率。
+Nesterov 加速梯度算法是一种对 Momentum 动量法的改进。
 2. 原理
 第 ttt 次迭代时：
-ht=ht−1+∂L∂Wt−1⊙∂L∂Wt−1Wt=Wt−1−η1ht+ε∂L∂Wt−1{\begin{array}{c}
-\boldsymbol{h}_t = \boldsymbol{h}_{t-1} + \frac{\partial L}{
+W^t=Wt−1+αΔWt−1Wt=Wt^−η∂L∂W^t{\begin{array}{c}
+\hat{\boldsymbol{W}}_t = \boldsymbol{W}_{t-1} + \alpha \Delta \boldsymbol{W}_{t-1} \\
+\bolds
         </a>
       </p>
 
@@ -490,22 +491,21 @@ ht=ht−1+∂L∂Wt−1⊙∂L∂Wt−1Wt=Wt−1−η1ht+ε∂L∂Wt−1{\begin{
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/10/02/DeepLearning/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/Nesterov/">Nesterov</a>
+        <a href="/2020/10/02/DeepLearning/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/AdaGrad/">AdaGrad</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/10/02/DeepLearning/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/Nesterov/">
+        <a href="/2020/10/02/DeepLearning/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/AdaGrad/">
           
           
             
           
           1. 简介
-Nesterov 加速梯度算法是一种对 Momentum 动量法的改进。
+AdaGrad 算法是借鉴 ℓ2\ell_2ℓ2​ 正则化的思想，每次迭代时自适应地调整每个参数的学习率。
 2. 原理
 第 ttt 次迭代时：
-W^t=Wt−1+αΔWt−1Wt=Wt^−η∂L∂W^t{\begin{array}{c}
-\hat{\boldsymbol{W}}_t = \boldsymbol{W}_{t-1} + \alpha \Delta \boldsymbol{W}_{t-1} \\
-\bolds
+ht=ht−1+∂L∂Wt−1⊙∂L∂Wt−1Wt=Wt−1−η1ht+ε∂L∂Wt−1{\begin{array}{c}
+\boldsymbol{h}_t = \boldsymbol{h}_{t-1} + \frac{\partial L}{
         </a>
       </p>
 

@@ -514,41 +514,18 @@ sed 默认不会直接修改源文件，而是将读入的数据先复制到模�
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Linux/Shell/LinuxShell%E9%80%9A%E9%85%8D%E7%AC%A6/LinuxShell%E9%80%9A%E9%85%8D%E7%AC%A6/">LinuxShell通配符</a>
+        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4%E6%A6%82%E8%BF%B0/LinuxShell%E5%91%BD%E4%BB%A4%E6%A6%82%E8%BF%B0/">LinuxShell命令概述</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Linux/Shell/LinuxShell%E9%80%9A%E9%85%8D%E7%AC%A6/LinuxShell%E9%80%9A%E9%85%8D%E7%AC%A6/">
+        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4%E6%A6%82%E8%BF%B0/LinuxShell%E5%91%BD%E4%BB%A4%E6%A6%82%E8%BF%B0/">
           
           
             
           
           1. 简介
-通配符广泛用于文件扩展匹配，能帮助我们快速筛选文件名，其正式名称叫作元字符通配符。
-2. 基础通配符
-
-
-
-通配符
-名称
-功能
-
-
-
-
-?
-问号
-匹配任意一个字符
-
-
-*
-星号
-匹配0个或多个任意字符
-
-
-[ ]
-中括号
-匹配中括号内字符组中的任意一个字符若在字符组的开头加 ^ 符（[^ ]），则匹配除括号内之外的任一字符若在两个字符间加 - 符（例[x-y]），则匹配 x～y 区间内
+1.1 概述
+Linux Shell 中包含大量的命令，提供了许许多多强大的功能。Shell 命令分为内建命令和外部命令；如果需要查看不同命令的帮助，对于内建命令，可以使用 Shell 的一个内建命令 help 来查询帮助信息；对于外置命令，可以使用 Shell 的外部命令 man 或 info（更详细）来查询帮助信息。判断某个命令是内建命令还是外部命令可以使用 Shell 的一个内建
         </a>
       </p>
 
@@ -651,18 +628,41 @@ B --&gt; D[滤出数据]
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4%E6%A6%82%E8%BF%B0/LinuxShell%E5%91%BD%E4%BB%A4%E6%A6%82%E8%BF%B0/">LinuxShell命令概述</a>
+        <a href="/2020/05/26/Linux/Shell/LinuxShell%E9%80%9A%E9%85%8D%E7%AC%A6/LinuxShell%E9%80%9A%E9%85%8D%E7%AC%A6/">LinuxShell通配符</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4%E6%A6%82%E8%BF%B0/LinuxShell%E5%91%BD%E4%BB%A4%E6%A6%82%E8%BF%B0/">
+        <a href="/2020/05/26/Linux/Shell/LinuxShell%E9%80%9A%E9%85%8D%E7%AC%A6/LinuxShell%E9%80%9A%E9%85%8D%E7%AC%A6/">
           
           
             
           
           1. 简介
-1.1 概述
-Linux Shell 中包含大量的命令，提供了许许多多强大的功能。Shell 命令分为内建命令和外部命令；如果需要查看不同命令的帮助，对于内建命令，可以使用 Shell 的一个内建命令 help 来查询帮助信息；对于外置命令，可以使用 Shell 的外部命令 man 或 info（更详细）来查询帮助信息。判断某个命令是内建命令还是外部命令可以使用 Shell 的一个内建
+通配符广泛用于文件扩展匹配，能帮助我们快速筛选文件名，其正式名称叫作元字符通配符。
+2. 基础通配符
+
+
+
+通配符
+名称
+功能
+
+
+
+
+?
+问号
+匹配任意一个字符
+
+
+*
+星号
+匹配0个或多个任意字符
+
+
+[ ]
+中括号
+匹配中括号内字符组中的任意一个字符若在字符组的开头加 ^ 符（[^ ]），则匹配除括号内之外的任一字符若在两个字符间加 - 符（例[x-y]），则匹配 x～y 区间内
         </a>
       </p>
 
