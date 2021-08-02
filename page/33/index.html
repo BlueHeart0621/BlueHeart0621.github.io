@@ -197,6 +197,403 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
+        <a href="/2020/05/26/Linux/Sundry/Linux%E4%B8%8B%E4%BD%BF%E7%94%A8%E6%89%93%E5%8D%B0%E6%9C%BA/">Linux下使用打印机</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/05/26/Linux/Sundry/Linux%E4%B8%8B%E4%BD%BF%E7%94%A8%E6%89%93%E5%8D%B0%E6%9C%BA/">
+          
+          
+            
+          
+          1. 查看打印机守护进程状态
+1systemctl status cups.service
+如果打印机守护进程没有开启，则需要先启动：
+1systemctl start cups.service
+2. 查看 CPUs 守护进程状态
+在浏览器输入 http://localhost:631，会弹出打印机的管理界面。
+3. 查看 USB 是否连上打印机
+打开 /dev/usb 文件夹，如果有 lpn 文
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-05-26 10:44" pubdate>
+              2020-05-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Linux/">Linux</a>
+            
+              <a href="/categories/Linux/Sundry/">Sundry</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Linux/">Linux</a>
+            
+              <a href="/tags/Sundry/">Sundry</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/05/26/Linux/Shell/BashShell%E5%B8%B8%E9%87%8F%E5%92%8C%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6/">BashShell常量和特殊字符</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/05/26/Linux/Shell/BashShell%E5%B8%B8%E9%87%8F%E5%92%8C%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6/">
+          
+          
+            
+          
+          1. 常量
+1.1 整数
+Bash Shell 中的整数常量的基本形式如下：
+1[base#]n
+其中，base 是一个 2 到 64 的十进制数值，表示数字的基数；n 是在 base 基数中的数字的值。如果忽略 base# ，则默认以 10 为基数。n 中的每一位数如果大于 9，则依次以小写字母、大写字母、@、_ 表示（最大表示到十进制中的 63，因为 base 最大为 64）。
+
+
+如果 ba
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-05-26 10:44" pubdate>
+              2020-05-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Linux/">Linux</a>
+            
+              <a href="/categories/Linux/Shell/">Shell</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Linux/">Linux</a>
+            
+              <a href="/tags/Shell/">Shell</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/05/26/Linux/Shell/BashShell%E6%95%B0%E5%80%BC%E8%BF%90%E7%AE%97/">BashShell数值运算</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/05/26/Linux/Shell/BashShell%E6%95%B0%E5%80%BC%E8%BF%90%E7%AE%97/">
+          
+          
+            
+          
+          1. 简介
+Bash Shell 本身一些内置命令可以执行简单的整数运算，但复杂一些的运算（比如浮点数运算）需要通过一些外部命令来实现，Bash Shell 数学运算符只支持整数运算。
+
+
+内置命令：(( ))、let、$[ ]（方括号并不是所有的 Shell 都支持）
+
+
+外部命令：expr、bc、awk
+
+
+从运行效率来看，Bash Shell 内置命令的执行效率要高于外部命令，(( )) 执
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-05-26 10:44" pubdate>
+              2020-05-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Linux/">Linux</a>
+            
+              <a href="/categories/Linux/Shell/">Shell</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Linux/">Linux</a>
+            
+              <a href="/tags/Shell/">Shell</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/05/26/Linux/Shell/BashShell%E8%BF%90%E7%AE%97%E7%AC%A6%E5%8F%8A%E4%BC%98%E5%85%88%E7%BA%A7/">BashShell运算符及优先级</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/05/26/Linux/Shell/BashShell%E8%BF%90%E7%AE%97%E7%AC%A6%E5%8F%8A%E4%BC%98%E5%85%88%E7%BA%A7/">
+          
+          
+            
+          
+          Bash Shell 语言中的运算符及其优先级、聚合程度与 C 语言相同，以下运算符表按照优先级级别分组并从上往下递减：
+
+
+
+优先级
+说明
+
+
+
+
+( )
+圆括号运算符
+
+
+id++、id--
+变量自增、自减（在后）
+
+
+++id、--id
+变量自增、自减（在前）
+
+
+-、+
+（单目）取负、取正
+
+
+!、~
+逻辑非、位取反
+
+
+**
+乘幂
+
+
+*、/、%
+乘、除、取余
+
+
++、-
+加、减
+
+
+&
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-05-26 10:44" pubdate>
+              2020-05-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Linux/">Linux</a>
+            
+              <a href="/categories/Linux/Shell/">Shell</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Linux/">Linux</a>
+            
+              <a href="/tags/Shell/">Shell</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%88%86%E7%B1%BB/">LinuxShell分类</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%88%86%E7%B1%BB/">
+          
+          
+            
+          
+          Linux Shell 从交互式和登录式来看可划分为不同的类别。
+1. 交互式 Shell
+交互式 Shell 是指在终端命令行上执行，以提示符的方式在终端等待用户输入，并实时运行用户输入的命令的模式；即与用户交互的模式。
+1.1 交互登录式 Shell
+交互登录式 Shell 是需要用户名和密码登录后进入的 Shell（比如终端下登录远程服务器）或者通过 -login 选项在终端启动的 Shel
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-05-26 10:44" pubdate>
+              2020-05-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Linux/">Linux</a>
+            
+              <a href="/categories/Linux/Shell/">Shell</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Linux/">Linux</a>
+            
+              <a href="/tags/Shell/">Shell</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%88%87%E6%8D%A2%E5%89%8D%E5%90%8E%E5%8F%B0%E7%A8%8B%E5%BA%8F/">LinuxShell切换前后台程序</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%88%87%E6%8D%A2%E5%89%8D%E5%90%8E%E5%8F%B0%E7%A8%8B%E5%BA%8F/">
+          
+          
+            
+          
+          1. 前台运行
+直接在 Linux 终端运行命令则默认在前台执行。
+2. 后台运行
+
+
+commands  &amp;：但一旦关闭对应终端则后台程序也会被强制关闭。
+
+
+nohup commands：即使关闭对应终端后台程序也不会被强制关闭。（在别的终端需要使用 ps 命令 查看）
+
+
+1ps -aux | grep XXX	# XXX为对应程序名
+3. 前后转到后台
+
+
+ctrl + z：将在前
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-05-26 10:44" pubdate>
+              2020-05-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Linux/">Linux</a>
+            
+              <a href="/categories/Linux/Shell/">Shell</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Linux/">Linux</a>
+            
+              <a href="/tags/Shell/">Shell</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
         <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%8D%95%E5%BC%95%E5%8F%B7%E3%80%81%E5%8F%8C%E5%BC%95%E5%8F%B7%E3%80%81%E5%8F%8D%E5%BC%95%E5%8F%B7%E4%BB%A5%E5%8F%8A%E6%97%A0%E5%BC%95%E5%8F%B7%E7%9A%84%E5%8C%BA%E5%88%AB/">LinuxShell单引号、双引号、反引号以及无引号的区别</a>
       </h1>
 
@@ -423,369 +820,11 @@ grep 命令用来在文件中查找并输出包含匹配指定模式的字符的
     </article>
   </div>
 
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4head/">LinuxShell命令head</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4head/">
-          
-          
-            
-          
-          【注】具体详解参见 man 手册。
-1. 简介
-head 命令用于在标准输出上显示每个文件起始 10 行。如果多于一个文件，则会逐个进行显示，并在每个文件显示的首部给出对应的文件名。如果没有指定文件或者指定为 -，则从标准输入上读取。
-2. 格式
-1head [OPTION]... [FILE]...
-其中，OPTION 指定选项参数，FILE 指定显示的文件。
-3. 选项
-
-
-
-选项参数
-说明
-
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Linux/">Linux</a>
-            
-              <a href="/categories/Linux/Shell/">Shell</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/Shell/">Shell</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4history/">LinuxShell命令history</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4history/">
-          
-          
-            
-          
-          【注】具体详解参见 help 手册。
-1. 简介
-history 内建命令用于显示或操纵历史命令列表。
-2. 格式
-123history [NUM|-c|-d [offset]]history [-a|-n|-r|-w] [FILE]history [-p|-s] ARG [ARG ...]
-其中，FILE 用于指定保存历史命令列表的文件，默认是~/.bash_history 文件。若未指定任何选
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Linux/">Linux</a>
-            
-              <a href="/categories/Linux/Shell/">Shell</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/Shell/">Shell</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4let/">LinuxShell命令let</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4let/">
-          
-          
-            
-          
-          【注】具体详解参见 help 手册。
-1. 简介
-Linux Shell 内建命令用于估算算数表达式。估算的计算以定宽的整数完成，不带溢出检测，但除 0 会报错。
-2. 格式
-1let ARG [ARG ...]
-其中，ARG 参数会被 let 作为算数表达式来进行估值。ARG 中的算术操作符列表按照优先级由高到低给出如下：
-【注】如果最后一个 ARG 估值为 0,则返回 1；否则返回 0 。
-
-
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Linux/">Linux</a>
-            
-              <a href="/categories/Linux/Shell/">Shell</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/Shell/">Shell</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4more/">LinuxShell命令more</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4more/">
-          
-          
-            
-          
-          【注】具体详解参见 man 手册。
-1. 简介
-more 是一个用于屏幕阅读的文件分页阅览过滤的 Shell 命令，一次阅览一屏幕文字，同时提供页面阅读的基于 vi 交互式命令的交互环境。
-2. 格式
-1more [OPTIONS] FILE...
-其中，OPTIONS 指定选项参数，FILE 指定阅读的文件。
-除命令行指定 OPTIONS 选项参数外，more 也同时从环境变量 MORE（选项参
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Linux/">Linux</a>
-            
-              <a href="/categories/Linux/Shell/">Shell</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/Shell/">Shell</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4ps/">LinuxShell命令ps</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4ps/">
-          
-          
-            
-          
-          【注】具体详解参见 man 手册。
-1. 简介
-ps 是 Linux 下显示瞬间进程状态的强大命令，并不动态连续显示进程状态（top 命令则是对进程进行实时监控）。
-2. 格式
-1ps [options]
-Linux 系统中使用 ps 命令支持三种不同类型的命令行选项参数：
-
-Unix 风格参数（参数前使用单破折线）
-BSD 风格参数（参数前不使用破折线）
-GNU 风格长参数（参数前加双破折线）
-
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Linux/">Linux</a>
-            
-              <a href="/categories/Linux/Shell/">Shell</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/Shell/">Shell</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4sort/">LinuxShell命令sort</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4sort/">
-          
-          
-            
-          
-          【注】具体详解参见 man 手册和 info 手册。
-1. 简介
-sort 命令用于对给定的文件中的行进行排序并写到标准输出上。如果没有给定文件或者给定的文件名为 - ，则从标准输入读取数据。
-2. 格式
-12sort [OPTION]... [FILE]...sort [OPTION]... --files0-from=F
-其中，OPTION 指定选项参数，FILE 指定文件名，--files0
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Linux/">Linux</a>
-            
-              <a href="/categories/Linux/Shell/">Shell</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/Shell/">Shell</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
 
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/page/32/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/31/#board">31</a><a class="page-number" href="/page/32/#board">32</a><span class="page-number current">33</span><a class="page-number" href="/page/34/#board">34</a><a class="page-number" href="/page/35/#board">35</a><span class="space">&hellip;</span><a class="page-number" href="/page/37/#board">37</a><a class="extend next" rel="next" href="/page/34/#board"><i class="iconfont icon-arrowright"></i></a>
+      <a class="extend prev" rel="prev" href="/page/32/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/31/#board">31</a><a class="page-number" href="/page/32/#board">32</a><span class="page-number current">33</span><a class="page-number" href="/page/34/#board">34</a><a class="page-number" href="/page/35/#board">35</a><span class="space">&hellip;</span><a class="page-number" href="/page/38/#board">38</a><a class="extend next" rel="next" href="/page/34/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 

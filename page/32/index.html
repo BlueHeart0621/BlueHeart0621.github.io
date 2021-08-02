@@ -197,6 +197,186 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
+        <a href="/2020/05/26/Linux/Manjaro/Manjaro20.0%E5%AE%89%E8%A3%85man%E4%B8%AD%E6%96%87%E6%89%8B%E5%86%8C/">Manjaro20.0安装man中文手册</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/05/26/Linux/Manjaro/Manjaro20.0%E5%AE%89%E8%A3%85man%E4%B8%AD%E6%96%87%E6%89%8B%E5%86%8C/">
+          
+          
+            
+          
+          1. 安装 man 中文软件包
+1pacman -S man-pages-zh_cn   # 繁体换成 man-pages-zh_tw
+2. 查询 man 中文手册安装目录
+1pacman -Ql man-pages-zh_cn | less
+发现 man 中文手册安装目录为 /usr/share/man/zh_CN 。
+3. 设置中英文 man 别名
+
+编辑 ~/.bashrc文件：
+
+1sud
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-05-26 10:44" pubdate>
+              2020-05-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Linux/">Linux</a>
+            
+              <a href="/categories/Linux/Manjaro/">Manjaro</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Linux/">Linux</a>
+            
+              <a href="/tags/Manjaro/">Manjaro</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/05/26/Linux/Manjaro/Manjaro20.0%E6%B7%BB%E5%8A%A0%E5%9B%BD%E5%86%85%E6%BA%90%E3%80%81%E7%A4%BE%E5%8C%BA%E6%BA%90%E3%80%81AUR%E6%BA%90/">Manjaro20.0添加国内源、社区源、AUR源</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/05/26/Linux/Manjaro/Manjaro20.0%E6%B7%BB%E5%8A%A0%E5%9B%BD%E5%86%85%E6%BA%90%E3%80%81%E7%A4%BE%E5%8C%BA%E6%BA%90%E3%80%81AUR%E6%BA%90/">
+          
+          
+            
+          
+          1. 添加国内源
+1.1 备份文件
+1sudo cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak
+1.2 编辑文件
+1sudo vim /etc/pacman.d/mirrorlist
+添加的源从上到下优先级依次降低。
+
+添加 Manjaro 源
+
+123456789## manjaro 稳定源# 中科大Server = https:
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-05-26 10:44" pubdate>
+              2020-05-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Linux/">Linux</a>
+            
+              <a href="/categories/Linux/Manjaro/">Manjaro</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Linux/">Linux</a>
+            
+              <a href="/tags/Manjaro/">Manjaro</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/05/26/Linux/Manjaro/Manjaro20.0%E9%85%8D%E7%BD%AETR4527%E6%89%93%E5%8D%B0%E6%9C%BA%E5%92%8C%E6%89%AB%E6%8F%8F%E4%BB%AA%E9%A9%B1%E5%8A%A8/">Manjaro20.0配置TR4527打印机和扫描仪驱动</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/05/26/Linux/Manjaro/Manjaro20.0%E9%85%8D%E7%BD%AETR4527%E6%89%93%E5%8D%B0%E6%9C%BA%E5%92%8C%E6%89%AB%E6%8F%8F%E4%BB%AA%E9%A9%B1%E5%8A%A8/">
+          
+          
+            
+          
+          【注】Manjaro 系统日常使用问题可以上 Manjaro 官方论坛上逛一逛，说不定具有解决办法。
+1. 打印机驱动
+Arch Linux AUR 源已经提供了 TR4527 打印机驱动程序 cnijfilter2，详情参见地址。
+在终端手动安装该驱动程序即可：
+1yay -S cnijfilter2
+2. 扫描仪驱动
+Arch Linux AUR 源已经提供了 TR4527 扫描仪驱动程序 s
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-05-26 10:44" pubdate>
+              2020-05-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Linux/">Linux</a>
+            
+              <a href="/categories/Linux/Manjaro/">Manjaro</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Linux/">Linux</a>
+            
+              <a href="/tags/Manjaro/">Manjaro</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
         <a href="/2020/05/26/Linux/Mint/Mint19.1%E4%B8%8Bdpkg%E6%8A%A5%E9%94%99/">Mint19.1下dpkg报错</a>
       </h1>
 
@@ -505,23 +685,19 @@ play 命令有很多强大的功能，具体用法可以 help 一下
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Linux/Shell/BashShell%E5%B8%B8%E9%87%8F%E5%92%8C%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6/">BashShell常量和特殊字符</a>
+        <a href="/2020/05/26/Linux/Sundry/Linux%E4%B8%8Bfcitx%E9%85%8D%E7%BD%AE%E4%B8%AD%E6%96%87%E6%A0%87%E7%82%B9/">Linux下fcitx配置中文标点</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Linux/Shell/BashShell%E5%B8%B8%E9%87%8F%E5%92%8C%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6/">
+        <a href="/2020/05/26/Linux/Sundry/Linux%E4%B8%8Bfcitx%E9%85%8D%E7%BD%AE%E4%B8%AD%E6%96%87%E6%A0%87%E7%82%B9/">
           
           
             
           
-          1. 常量
-1.1 整数
-Bash Shell 中的整数常量的基本形式如下：
-1[base#]n
-其中，base 是一个 2 到 64 的十进制数值，表示数字的基数；n 是在 base 基数中的数字的值。如果忽略 base# ，则默认以 10 为基数。n 中的每一位数如果大于 9，则依次以小写字母、大写字母、@、_ 表示（最大表示到十进制中的 63，因为 base 最大为 64）。
+          Linux 系统环境下使用中文输入法往往是令人头疼的一件事。使用 fcitx 成功安装了中文输入法后，却发现中文标点和日常使用不一致。这是由于系统设定的全角标点映射集不符合我们期望，于是乎我们可以撸起袖子定制属于自己的个性化中文标点映射集。
 
-
-如果 ba
+查看 /usr/share/fcitx/data/punc.mb.zh_CN 文件
+本人系统上目前的全角标点映射集如下（第一列是键盘符号，每个键盘符号可以对
         </a>
       </p>
 
@@ -540,7 +716,7 @@ Bash Shell 中的整数常量的基本形式如下：
             
               <a href="/categories/Linux/">Linux</a>
             
-              <a href="/categories/Linux/Shell/">Shell</a>
+              <a href="/categories/Linux/Sundry/">Sundry</a>
             
           </div>
         
@@ -550,7 +726,7 @@ Bash Shell 中的整数常量的基本形式如下：
             
               <a href="/tags/Linux/">Linux</a>
             
-              <a href="/tags/Shell/">Shell</a>
+              <a href="/tags/Sundry/">Sundry</a>
             
           </div>
         
@@ -564,26 +740,23 @@ Bash Shell 中的整数常量的基本形式如下：
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Linux/Shell/BashShell%E6%95%B0%E5%80%BC%E8%BF%90%E7%AE%97/">BashShell数值运算</a>
+        <a href="/2020/05/26/Linux/Sundry/Linux%E4%B8%8Bsudo%E6%8A%A5%E9%94%99/">Linux下sudo报错</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Linux/Shell/BashShell%E6%95%B0%E5%80%BC%E8%BF%90%E7%AE%97/">
+        <a href="/2020/05/26/Linux/Sundry/Linux%E4%B8%8Bsudo%E6%8A%A5%E9%94%99/">
           
           
             
           
-          1. 简介
-Bash Shell 本身一些内置命令可以执行简单的整数运算，但复杂一些的运算（比如浮点数运算）需要通过一些外部命令来实现，Bash Shell 数学运算符只支持整数运算。
+          1. sudo: XXX: command not found
+其中，XXX 是所运行的程序命令。
 
 
-内置命令：(( ))、let、$[ ]（方括号并不是所有的 Shell 都支持）
+问题：直接运行 XXX 程序命令时没有问题，但加上超级权限 sudo 就报错 command not found 。
 
 
-外部命令：expr、bc、awk
-
-
-从运行效率来看，Bash Shell 内置命令的执行效率要高于外部命令，(( )) 执
+原因：使用 sudo 命令时，使用的配置文件是 /etc/sudoers，查找可运行程序命令由 /etc/sudoers 文件中的 $secure_path 环境变量指定，所
         </a>
       </p>
 
@@ -602,7 +775,7 @@ Bash Shell 本身一些内置命令可以执行简单的整数运算，但复杂
             
               <a href="/categories/Linux/">Linux</a>
             
-              <a href="/categories/Linux/Shell/">Shell</a>
+              <a href="/categories/Linux/Sundry/">Sundry</a>
             
           </div>
         
@@ -612,224 +785,7 @@ Bash Shell 本身一些内置命令可以执行简单的整数运算，但复杂
             
               <a href="/tags/Linux/">Linux</a>
             
-              <a href="/tags/Shell/">Shell</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/05/26/Linux/Shell/BashShell%E8%BF%90%E7%AE%97%E7%AC%A6%E5%8F%8A%E4%BC%98%E5%85%88%E7%BA%A7/">BashShell运算符及优先级</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/05/26/Linux/Shell/BashShell%E8%BF%90%E7%AE%97%E7%AC%A6%E5%8F%8A%E4%BC%98%E5%85%88%E7%BA%A7/">
-          
-          
-            
-          
-          Bash Shell 语言中的运算符及其优先级、聚合程度与 C 语言相同，以下运算符表按照优先级级别分组并从上往下递减：
-
-
-
-优先级
-说明
-
-
-
-
-( )
-圆括号运算符
-
-
-id++、id--
-变量自增、自减（在后）
-
-
-++id、--id
-变量自增、自减（在前）
-
-
--、+
-（单目）取负、取正
-
-
-!、~
-逻辑非、位取反
-
-
-**
-乘幂
-
-
-*、/、%
-乘、除、取余
-
-
-+、-
-加、减
-
-
-&
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Linux/">Linux</a>
-            
-              <a href="/categories/Linux/Shell/">Shell</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/Shell/">Shell</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%88%86%E7%B1%BB/">LinuxShell分类</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%88%86%E7%B1%BB/">
-          
-          
-            
-          
-          Linux Shell 从交互式和登录式来看可划分为不同的类别。
-1. 交互式 Shell
-交互式 Shell 是指在终端命令行上执行，以提示符的方式在终端等待用户输入，并实时运行用户输入的命令的模式；即与用户交互的模式。
-1.1 交互登录式 Shell
-交互登录式 Shell 是需要用户名和密码登录后进入的 Shell（比如终端下登录远程服务器）或者通过 -login 选项在终端启动的 Shel
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Linux/">Linux</a>
-            
-              <a href="/categories/Linux/Shell/">Shell</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/Shell/">Shell</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%88%87%E6%8D%A2%E5%89%8D%E5%90%8E%E5%8F%B0%E7%A8%8B%E5%BA%8F/">LinuxShell切换前后台程序</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%88%87%E6%8D%A2%E5%89%8D%E5%90%8E%E5%8F%B0%E7%A8%8B%E5%BA%8F/">
-          
-          
-            
-          
-          1. 前台运行
-直接在 Linux 终端运行命令则默认在前台执行。
-2. 后台运行
-
-
-commands  &amp;：但一旦关闭对应终端则后台程序也会被强制关闭。
-
-
-nohup commands：即使关闭对应终端后台程序也不会被强制关闭。（在别的终端需要使用 ps 命令 查看）
-
-
-1ps -aux | grep XXX	# XXX为对应程序名
-3. 前后转到后台
-
-
-ctrl + z：将在前
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Linux/">Linux</a>
-            
-              <a href="/categories/Linux/Shell/">Shell</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/Shell/">Shell</a>
+              <a href="/tags/Sundry/">Sundry</a>
             
           </div>
         
@@ -841,7 +797,7 @@ ctrl + z：将在前
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/page/31/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/30/#board">30</a><a class="page-number" href="/page/31/#board">31</a><span class="page-number current">32</span><a class="page-number" href="/page/33/#board">33</a><a class="page-number" href="/page/34/#board">34</a><span class="space">&hellip;</span><a class="page-number" href="/page/37/#board">37</a><a class="extend next" rel="next" href="/page/33/#board"><i class="iconfont icon-arrowright"></i></a>
+      <a class="extend prev" rel="prev" href="/page/31/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/30/#board">30</a><a class="page-number" href="/page/31/#board">31</a><span class="page-number current">32</span><a class="page-number" href="/page/33/#board">33</a><a class="page-number" href="/page/34/#board">34</a><span class="space">&hellip;</span><a class="page-number" href="/page/38/#board">38</a><a class="extend next" rel="next" href="/page/33/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 

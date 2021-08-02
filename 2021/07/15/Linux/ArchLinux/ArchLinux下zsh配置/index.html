@@ -200,7 +200,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      360 字
+      515 字
     </span>
   
 
@@ -210,7 +210,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      4
+      6
        分钟
     </span>
   
@@ -256,8 +256,9 @@
 作出了大量改进，同时加入了 bash、ksh 和 tcsh 的一些功能。</p>
 <h2 id="2-配置">2. 配置</h2>
 <p>Oh My Zsh 用户社区收集了 zsh 大量的第三方插件，并推出了 <a target="_blank" rel="noopener" href="https://ohmyz.sh/">oh-my-zsh</a> 框架用于管理 zsh 插件。因此对 zsh 进行配置之前，首先安装该框架：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo pacman -S oh-my-zsh-git<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 以下安装方式选一种即可</span><br>sh -c <span class="hljs-string">&quot;<span class="hljs-subst">$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)</span>&quot;</span>    <span class="hljs-comment"># curl 安装</span><br>sh -c <span class="hljs-string">&quot;<span class="hljs-subst">$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)</span>&quot;</span>     <span class="hljs-comment"># wget 安装</span><br></code></pre></td></tr></table></figure>
 <p>一般常用的配置包括主题、自动补全和语法高亮，更多配置可以参见 <a target="_blank" rel="noopener" href="https://github.com/ohmyzsh/ohmyzsh/wiki/Customization">oh-my-zsh 官方配置文档</a>。</p>
+<p>【注】虽然 ArchLinux 也可以直接使用 <code>sudo pacman -S oh-my-zsh-git</code> 安装，但似乎不是最新版本，所以最好还是使用官方给出的安装方式，即上文中的 <code>curl</code> 或 <code>wget</code> 安装。</p>
 <h3 id="2-1-主题">2.1 主题</h3>
 <p>oh-my-zsh 中集成了大量 <a target="_blank" rel="noopener" href="https://github.com/ohmyzsh/ohmyzsh/wiki/Themes">zsh 主题</a>，大家可以选择一款自己的进行配置，即修改 <code>~/.zshrc</code> 中的 <code>ZSH_THEME</code> 变量：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ZSH_THEME=robbyrussell      <span class="hljs-comment"># 这里我保持默认的主题</span><br></code></pre></td></tr></table></figure>
@@ -281,6 +282,9 @@
 <li>修改 <code>~/.zshrc</code>，增加 <code>zsh-syntax-highlighting</code> 项：</li>
 </ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">plugins=( <br>    <span class="hljs-comment"># other plugins...</span><br>    zsh-syntax-highlighting<br>)<br></code></pre></td></tr></table></figure>
+<h3 id="2-4-配置系统默认-Shell">2.4 配置系统默认 Shell</h3>
+<p>一般我们安装 <code>zsh</code> 都是用来替代系统上默认的 <code>bash</code>，因此在配置好 <code>zsh</code> 后需要更换系统默认 Shell，更换命令如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">chsh -s `<span class="hljs-built_in">which</span> zsh`<br></code></pre></td></tr></table></figure>
             </div>
             <hr>
             <div>
@@ -352,16 +356,16 @@
       Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function () {
         new Valine({
           el: "#valine",
-          app_id: "kJgPdAqoTM5JKOdTdYLmXqq5-gzGzoHsz",
-          app_key: "X4MnxJgITkyJVettcgYX6ebP",
+          app_id: "A24MlA4oV7hlze3uNQiXDAIi-MdYXbMMI",
+          app_key: "3moFK5Ao3TD4rjA1HCmPTSm6",
           placeholder: "说点什么",
           path: window.location.pathname,
-          avatar: "retro",
+          avatar: "",
           meta: ["nick","mail","link"],
           pageSize: "10",
           lang: "zh-CN",
           highlight: false,
-          recordIP: false,
+          recordIP: true,
           serverURLs: "",
         });
       });

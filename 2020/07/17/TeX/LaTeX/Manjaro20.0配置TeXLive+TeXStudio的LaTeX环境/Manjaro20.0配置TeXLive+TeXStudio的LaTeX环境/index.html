@@ -200,7 +200,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      393 字
+      392 字
     </span>
   
 
@@ -256,7 +256,7 @@
 <h4 id="1-1-1-从软件源安装">1.1.1 从软件源安装</h4>
 <p>在终端执行以下代码，安装 TeXLive 环境：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo pacman -S texlive-most<br>sudo pacman -S texlive-lang <br></code></pre></td></tr></table></figure>
-<p>【注】这样安装 TeXLive 后无法在终端使用 <code>texdoc</code> 工具，会报错：<code>/usr/local/texlive/2020/texmf-dist/doc/generic/pgf/pgfmanual.pdf</code>。</p>
+<p>【注】这样安装 TeXLive 后无法在终端使用 <code>texdoc</code> 工具，会报错：<code>texdoc error: No texlive.tlpdb nor shipped tlpdb data found.</code>。</p>
 <h4 id="1-1-2-从安装包安装">1.1.2 从安装包安装</h4>
 <p>如果想要使用 <code>texdoc</code> 等其他工具，最好的办法还是到官网下载安装包进行在本地安装（在线安装包<a target="_blank" rel="noopener" href="http://tug.ctan.org/systems/texlive/tlnet/">下载地址</a>、离线安装包<a target="_blank" rel="noopener" href="http://tug.ctan.org/systems/texlive/Images/">下载地址</a>）。下面以本人安装为例：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> install-tl-20200411<br>sudo ./install-tl<br></code></pre></td></tr></table></figure>
@@ -351,16 +351,16 @@
       Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function () {
         new Valine({
           el: "#valine",
-          app_id: "kJgPdAqoTM5JKOdTdYLmXqq5-gzGzoHsz",
-          app_key: "X4MnxJgITkyJVettcgYX6ebP",
+          app_id: "A24MlA4oV7hlze3uNQiXDAIi-MdYXbMMI",
+          app_key: "3moFK5Ao3TD4rjA1HCmPTSm6",
           placeholder: "说点什么",
           path: window.location.pathname,
-          avatar: "retro",
+          avatar: "",
           meta: ["nick","mail","link"],
           pageSize: "10",
           lang: "zh-CN",
           highlight: false,
-          recordIP: false,
+          recordIP: true,
           serverURLs: "",
         });
       });
