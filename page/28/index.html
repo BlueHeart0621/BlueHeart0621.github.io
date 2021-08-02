@@ -473,19 +473,24 @@ Code Chunk
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/MatLab/MatLab%E5%87%BD%E6%95%B0/">MatLab函数</a>
+        <a href="/2020/05/26/MatLab/MatLab%E4%B8%ADM%E6%96%87%E4%BB%B6/">MatLab中M文件</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/MatLab/MatLab%E5%87%BD%E6%95%B0/">
+        <a href="/2020/05/26/MatLab/MatLab%E4%B8%ADM%E6%96%87%E4%BB%B6/">
           
           
             
           
-          1. 普通函数
-MatLab 中的普通函数是可以传递输入参数和输出参数的函数，其基本定义格式为：
-123function [y1,...,yn] = funcname(x1,...,xn)    ...end
-其中，x1,...,xn 为输入参数变量，y1,...,yn 为输出参数变量，funcname 为函数名称。MatLab 在实现对普通函数调用时，允许使用比声明变量数目少的输入输出变量，调用
+          MatLab 中 M 文件有函数和脚本两种不同类型，是可以被 MatLab 直接执行的源代码文件。
+
+
+创建/编辑 M 文件：在命令行窗口运行 edit [filename1 [filename2 ...]] 命令。文件存在则编辑文件，文件不存在则先创建文件。若未指定 filename 参数，则默认创建无名的 M 文件。
+
+
+运行 M 文件：在命令行窗口下运行 run filename 命令。
+
+
         </a>
       </p>
 
@@ -524,24 +529,19 @@ MatLab 中的普通函数是可以传递输入参数和输出参数的函数，�
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/MatLab/MatLab%E4%B8%ADM%E6%96%87%E4%BB%B6/">MatLab中M文件</a>
+        <a href="/2020/05/26/MatLab/MatLab%E5%87%BD%E6%95%B0/">MatLab函数</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/MatLab/MatLab%E4%B8%ADM%E6%96%87%E4%BB%B6/">
+        <a href="/2020/05/26/MatLab/MatLab%E5%87%BD%E6%95%B0/">
           
           
             
           
-          MatLab 中 M 文件有函数和脚本两种不同类型，是可以被 MatLab 直接执行的源代码文件。
-
-
-创建/编辑 M 文件：在命令行窗口运行 edit [filename1 [filename2 ...]] 命令。文件存在则编辑文件，文件不存在则先创建文件。若未指定 filename 参数，则默认创建无名的 M 文件。
-
-
-运行 M 文件：在命令行窗口下运行 run filename 命令。
-
-
+          1. 普通函数
+MatLab 中的普通函数是可以传递输入参数和输出参数的函数，其基本定义格式为：
+123function [y1,...,yn] = funcname(x1,...,xn)    ...end
+其中，x1,...,xn 为输入参数变量，y1,...,yn 为输出参数变量，funcname 为函数名称。MatLab 在实现对普通函数调用时，允许使用比声明变量数目少的输入输出变量，调用
         </a>
       </p>
 
@@ -686,25 +686,20 @@ datetime 用来创建表示时间点的数组（数组元素类型为 datetime�
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/MatLab/MatLab%E5%87%BD%E6%95%B0meshgrid%E3%80%81ndgrid/">MatLab函数meshgrid、ndgrid</a>
+        <a href="/2020/05/26/MatLab/MatLab%E5%87%BD%E6%95%B0legend/">MatLab函数legend</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/MatLab/MatLab%E5%87%BD%E6%95%B0meshgrid%E3%80%81ndgrid/">
+        <a href="/2020/05/26/MatLab/MatLab%E5%87%BD%E6%95%B0legend/">
           
           
             
           
           【注】详情请参阅 MatLab help 文档。
-1. meshgrid
-1.1 作用
-meshgrid 函数用于生成二维或三维网络坐标。
-1.2 语法
-1234[X,Y] = meshgrid(x,y)[X,Y] = meshgrid(x)[X,Y,Z] = meshgrid(x,y,z)[X,Y,Z] = meshgrid(x)
-
-
-[X,Y] = meshgrid(x,y)
-基于 x、y 坐
+1. 简介
+legend 函数可以在 MatLab 的坐标区按曲线的绘制顺序添加对应曲线的图例。
+2. 格式
+1234567891011legendlegend(label1,···,labelN)legend(labels)legend(subset,___)legend(target,___)legend(___,Name,Value)lege
         </a>
       </p>
 

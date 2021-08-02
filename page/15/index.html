@@ -550,21 +550,24 @@ W^t=Wt−1+αΔWt−1Wt=Wt^−η∂L∂W^t{\begin{array}{c}
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/10/02/DeepLearning/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/Momentum/">Momentum</a>
+        <a href="/2020/10/02/DeepLearning/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/Adam/">Adam</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/10/02/DeepLearning/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/Momentum/">
+        <a href="/2020/10/02/DeepLearning/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/Adam/">
           
           
             
           
           1. 简介
-Momentum 类似于物理中的冲量的思想，Momentum 算法优化的过程给人的感觉就像是小球在地面上滚动。
+Adam 算法可以看作动量法和 RMSprop 算法的结合，不但使用动量作为参数更新方向，而且可以自适应调整学习率。
 2. 原理
 第 ttt 次迭代时：
-vt=αvt−1−η∂L∂Wt−1Wt=Wt−1+vt{\begin{array}{c}
-\boldsymbol{v}_t = \alpha \boldsymbol{v}_{t-1} - \eta \frac{\partial L}{\pa
+
+一方面计算梯度平方的指数加权平均：
+
+Gt=β2Gt−1+(1−β2)∂L∂Wt−1⊙∂L∂Wt−1{\begin{array}{c}
+\boldsymbol{G}_t = \beta_2 \boldsymbol{G}_{t-1} 
         </a>
       </p>
 
@@ -609,24 +612,21 @@ vt=αvt−1−η∂L∂Wt−1Wt=Wt−1+vt{\begin{array}{c}
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/10/02/DeepLearning/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/Adam/">Adam</a>
+        <a href="/2020/10/02/DeepLearning/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/Momentum/">Momentum</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/10/02/DeepLearning/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/Adam/">
+        <a href="/2020/10/02/DeepLearning/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/Momentum/">
           
           
             
           
           1. 简介
-Adam 算法可以看作动量法和 RMSprop 算法的结合，不但使用动量作为参数更新方向，而且可以自适应调整学习率。
+Momentum 类似于物理中的冲量的思想，Momentum 算法优化的过程给人的感觉就像是小球在地面上滚动。
 2. 原理
 第 ttt 次迭代时：
-
-一方面计算梯度平方的指数加权平均：
-
-Gt=β2Gt−1+(1−β2)∂L∂Wt−1⊙∂L∂Wt−1{\begin{array}{c}
-\boldsymbol{G}_t = \beta_2 \boldsymbol{G}_{t-1} 
+vt=αvt−1−η∂L∂Wt−1Wt=Wt−1+vt{\begin{array}{c}
+\boldsymbol{v}_t = \alpha \boldsymbol{v}_{t-1} - \eta \frac{\partial L}{\pa
         </a>
       </p>
 

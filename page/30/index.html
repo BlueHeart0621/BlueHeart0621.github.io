@@ -629,23 +629,21 @@ Qt5.14 for Linux 并没有提供相应的程序打包服务，所以 Linux 下�
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Qt/Deepin15.11%E4%B8%8BQt5.14%E6%97%A0%E6%B3%95%E4%BD%BF%E7%94%A8%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95/">Deepin15.11下Qt5.14无法使用中文输入法</a>
+        <a href="/2020/05/26/Qt/Qt%E6%8A%A5%E9%94%99%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/">Qt报错问题解决</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Qt/Deepin15.11%E4%B8%8BQt5.14%E6%97%A0%E6%B3%95%E4%BD%BF%E7%94%A8%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95/">
+        <a href="/2020/05/26/Qt/Qt%E6%8A%A5%E9%94%99%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/">
           
           
             
           
-          对于使用 fcitx 框架的中文输入法，需要手动编译 fcitx-qt5 生成中文输入法的库文件。
-1. 安装 cmake，用于编译 fcitx-qt5
-首先查看是否已经安装 cmake:
-1cmake --verison
-如果有显示版本信息说明已经安装，则可以到下一步；如果没有安装，则先安装：
-1sudo apt install cmake
-2. 安装 fcitx-libs-dev
-1sudo 
+          1. Qt 定义函数模板时，声明和实现分离（前者在 .h 头文件声明，后者在 .cpp 文件实现）引发找不到定义问题
+
+原因：Qt 编译器不支持函数模板的声明和实现分离
+解决：直接在 .h 文件声明并实现，不进行分离
+
+
         </a>
       </p>
 
@@ -684,21 +682,23 @@ Qt5.14 for Linux 并没有提供相应的程序打包服务，所以 Linux 下�
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Qt/Qt%E6%8A%A5%E9%94%99%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/">Qt报错问题解决</a>
+        <a href="/2020/05/26/Qt/Deepin15.11%E4%B8%8BQt5.14%E6%97%A0%E6%B3%95%E4%BD%BF%E7%94%A8%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95/">Deepin15.11下Qt5.14无法使用中文输入法</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Qt/Qt%E6%8A%A5%E9%94%99%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/">
+        <a href="/2020/05/26/Qt/Deepin15.11%E4%B8%8BQt5.14%E6%97%A0%E6%B3%95%E4%BD%BF%E7%94%A8%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95/">
           
           
             
           
-          1. Qt 定义函数模板时，声明和实现分离（前者在 .h 头文件声明，后者在 .cpp 文件实现）引发找不到定义问题
-
-原因：Qt 编译器不支持函数模板的声明和实现分离
-解决：直接在 .h 文件声明并实现，不进行分离
-
-
+          对于使用 fcitx 框架的中文输入法，需要手动编译 fcitx-qt5 生成中文输入法的库文件。
+1. 安装 cmake，用于编译 fcitx-qt5
+首先查看是否已经安装 cmake:
+1cmake --verison
+如果有显示版本信息说明已经安装，则可以到下一步；如果没有安装，则先安装：
+1sudo apt install cmake
+2. 安装 fcitx-libs-dev
+1sudo 
         </a>
       </p>
 
