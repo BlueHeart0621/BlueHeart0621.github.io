@@ -7,8 +7,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/self/portrait.jpg">
-  <link rel="icon" href="/img/self/portrait.jpg">
+  <link rel="apple-touch-icon" sizes="76x76" href="/image/self/portrait.jpg">
+  <link rel="icon" href="/image/self/portrait.jpg">
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -42,7 +42,7 @@
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"blueheart0621.github.io","root":"/","version":"1.8.9","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":"§"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":"c194cf0c8cbc33bfb846ba1329537d81","google":"G-SXJN0942X9","gtag":"G-D3DEHLLP3W","tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"A24MlA4oV7hlze3uNQiXDAIi-MdYXbMMI","app_key":"3moFK5Ao3TD4rjA1HCmPTSm6","server_url":null}}};
+    var CONFIG = {"hostname":"blueheart0621.github.io","root":"/","version":"1.8.9","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":"§"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/image/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":"c194cf0c8cbc33bfb846ba1329537d81","google":"G-SXJN0942X9","gtag":"G-D3DEHLLP3W","tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"A24MlA4oV7hlze3uNQiXDAIi-MdYXbMMI","app_key":"3moFK5Ao3TD4rjA1HCmPTSm6","server_url":null}}};
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
@@ -157,7 +157,7 @@
 </nav>
 
     <div class="banner" id="banner" parallax=true
-         style="background: url('/img/covers/%E5%9B%9B%E6%9C%88%E6%98%AF%E4%BD%A0%E7%9A%84%E8%B0%8E%E8%A8%80-2.png') no-repeat center center;
+         style="background: url('/image/covers/%E5%9B%9B%E6%9C%88%E6%98%AF%E4%BD%A0%E7%9A%84%E8%B0%8E%E8%A8%80-2.png') no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
@@ -685,23 +685,19 @@ play 命令有很多强大的功能，具体用法可以 help 一下
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Linux/Shell/BashShell%E5%B8%B8%E9%87%8F%E5%92%8C%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6/">BashShell常量和特殊字符</a>
+        <a href="/2020/05/26/Linux/Sundry/Linux%E4%B8%8Bfcitx%E9%85%8D%E7%BD%AE%E4%B8%AD%E6%96%87%E6%A0%87%E7%82%B9/">Linux下fcitx配置中文标点</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Linux/Shell/BashShell%E5%B8%B8%E9%87%8F%E5%92%8C%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6/">
+        <a href="/2020/05/26/Linux/Sundry/Linux%E4%B8%8Bfcitx%E9%85%8D%E7%BD%AE%E4%B8%AD%E6%96%87%E6%A0%87%E7%82%B9/">
           
           
             
           
-          1. 常量
-1.1 整数
-Bash Shell 中的整数常量的基本形式如下：
-1[base#]n
-其中，base 是一个 2 到 64 的十进制数值，表示数字的基数；n 是在 base 基数中的数字的值。如果忽略 base# ，则默认以 10 为基数。n 中的每一位数如果大于 9，则依次以小写字母、大写字母、@、_ 表示（最大表示到十进制中的 63，因为 base 最大为 64）。
+          Linux 系统环境下使用中文输入法往往是令人头疼的一件事。使用 fcitx 成功安装了中文输入法后，却发现中文标点和日常使用不一致。这是由于系统设定的全角标点映射集不符合我们期望，于是乎我们可以撸起袖子定制属于自己的个性化中文标点映射集。
 
-
-如果 ba
+查看 /usr/share/fcitx/data/punc.mb.zh_CN 文件
+本人系统上目前的全角标点映射集如下（第一列是键盘符号，每个键盘符号可以对
         </a>
       </p>
 
@@ -720,7 +716,7 @@ Bash Shell 中的整数常量的基本形式如下：
             
               <a href="/categories/Linux/">Linux</a>
             
-              <a href="/categories/Linux/Shell/">Shell</a>
+              <a href="/categories/Linux/Sundry/">Sundry</a>
             
           </div>
         
@@ -730,7 +726,7 @@ Bash Shell 中的整数常量的基本形式如下：
             
               <a href="/tags/Linux/">Linux</a>
             
-              <a href="/tags/Shell/">Shell</a>
+              <a href="/tags/Sundry/">Sundry</a>
             
           </div>
         
@@ -744,26 +740,23 @@ Bash Shell 中的整数常量的基本形式如下：
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Linux/Shell/BashShell%E6%95%B0%E5%80%BC%E8%BF%90%E7%AE%97/">BashShell数值运算</a>
+        <a href="/2020/05/26/Linux/Sundry/Linux%E4%B8%8Bsudo%E6%8A%A5%E9%94%99/">Linux下sudo报错</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Linux/Shell/BashShell%E6%95%B0%E5%80%BC%E8%BF%90%E7%AE%97/">
+        <a href="/2020/05/26/Linux/Sundry/Linux%E4%B8%8Bsudo%E6%8A%A5%E9%94%99/">
           
           
             
           
-          1. 简介
-Bash Shell 本身一些内置命令可以执行简单的整数运算，但复杂一些的运算（比如浮点数运算）需要通过一些外部命令来实现，Bash Shell 数学运算符只支持整数运算。
+          1. sudo: XXX: command not found
+其中，XXX 是所运行的程序命令。
 
 
-内置命令：(( ))、let、$[ ]（方括号并不是所有的 Shell 都支持）
+问题：直接运行 XXX 程序命令时没有问题，但加上超级权限 sudo 就报错 command not found 。
 
 
-外部命令：expr、bc、awk
-
-
-从运行效率来看，Bash Shell 内置命令的执行效率要高于外部命令，(( )) 执
+原因：使用 sudo 命令时，使用的配置文件是 /etc/sudoers，查找可运行程序命令由 /etc/sudoers 文件中的 $secure_path 环境变量指定，所
         </a>
       </p>
 
@@ -782,7 +775,7 @@ Bash Shell 本身一些内置命令可以执行简单的整数运算，但复杂
             
               <a href="/categories/Linux/">Linux</a>
             
-              <a href="/categories/Linux/Shell/">Shell</a>
+              <a href="/categories/Linux/Sundry/">Sundry</a>
             
           </div>
         
@@ -792,7 +785,7 @@ Bash Shell 本身一些内置命令可以执行简单的整数运算，但复杂
             
               <a href="/tags/Linux/">Linux</a>
             
-              <a href="/tags/Shell/">Shell</a>
+              <a href="/tags/Sundry/">Sundry</a>
             
           </div>
         
