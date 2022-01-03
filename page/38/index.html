@@ -197,20 +197,21 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/25/Linux/Sundry/Linux%E5%BC%95%E5%AF%BCgrub%E5%A4%B1%E8%B4%A5%E9%97%AE%E9%A2%98/">Linux引导grub失败问题</a>
+        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4grep/">LinuxShell命令grep</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/25/Linux/Sundry/Linux%E5%BC%95%E5%AF%BCgrub%E5%A4%B1%E8%B4%A5%E9%97%AE%E9%A2%98/">
+        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4grep/">
           
           
             
           
-          1. Windows 大更新导致 Linux 引导 grub 失败
-1.1 问题
-我的电脑装有 Windows 10 和 Manjaro 双系统，最近我把 Windows 10 升级了，没想到原来漂亮的 Manjaro grub 菜单界面就再也出不来了，只见终端弹出一下信息：
-12error:unknow filesystemgrub rescue&gt;
-此时进入的是 grub 修复模式，此模式
+          【注】具体详解参见 man 手册。
+1. 简介
+grep 命令用来在文件中查找并输出包含匹配指定模式的字符的行。
+2. 格式
+123grep [OPTIONS] PATTERN [FILE...]grep [OPTIONS] -e PATTERN ... [FILE...]grep [OPTIONS] -f FILE ... [FILE...]
+其中，OPTIONS 为指定的选项参数，PATTER
         </a>
       </p>
 
@@ -218,8 +219,8 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-25 23:30" pubdate>
-              2020-05-25
+            <time datetime="2020-05-26 10:44" pubdate>
+              2020-05-26
             </time>
           </div>
         
@@ -229,7 +230,7 @@
             
               <a href="/categories/Linux/">Linux</a>
             
-              <a href="/categories/Linux/Sundry/">Sundry</a>
+              <a href="/categories/Linux/Shell/">Shell</a>
             
           </div>
         
@@ -239,7 +240,7 @@
             
               <a href="/tags/Linux/">Linux</a>
             
-              <a href="/tags/Sundry/">Sundry</a>
+              <a href="/tags/Shell/">Shell</a>
             
           </div>
         
@@ -253,18 +254,28 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/02/11/Linux/Shell/IFS%E5%8F%98%E9%87%8F%E5%AF%B9%E5%8A%A0%E5%8F%8C%E5%BC%95%E5%8F%B7%E5%92%8C%E4%B8%8D%E5%8A%A0%E5%8F%8C%E5%BC%95%E5%8F%B7%E5%8F%98%E9%87%8F%E7%9A%84%E5%8C%BA%E5%88%AB%E5%AF%B9%E5%BE%85/">IFS变量对加双引号和不加双引号变量的区别对待</a>
+        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4head/">LinuxShell命令head</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/02/11/Linux/Shell/IFS%E5%8F%98%E9%87%8F%E5%AF%B9%E5%8A%A0%E5%8F%8C%E5%BC%95%E5%8F%B7%E5%92%8C%E4%B8%8D%E5%8A%A0%E5%8F%8C%E5%BC%95%E5%8F%B7%E5%8F%98%E9%87%8F%E7%9A%84%E5%8C%BA%E5%88%AB%E5%AF%B9%E5%BE%85/">
+        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4head/">
           
           
             
           
-          1. IFS(Internal Field Seprator) 变量
-IFS 变量是一个特殊的环境变量，叫做内部域分隔符。IFS 环境变量定义了 bash shell 用作字段分隔符的一系列字符。如果 bash shell 在数据中看到了这些字符中的任意一个，它就会假定这表明了列表中一个新数据字段的开始。默认情况下 IFS 指定为空白符（即空格、tab 符、换行符）。
-2. IFS对待未加双引号的
+          【注】具体详解参见 man 手册。
+1. 简介
+head 命令用于在标准输出上显示每个文件起始 10 行。如果多于一个文件，则会逐个进行显示，并在每个文件显示的首部给出对应的文件名。如果没有指定文件或者指定为 -，则从标准输入上读取。
+2. 格式
+1head [OPTION]... [FILE]...
+其中，OPTION 指定选项参数，FILE 指定显示的文件。
+3. 选项
+
+
+
+选项参数
+说明
+
         </a>
       </p>
 
@@ -272,8 +283,480 @@ IFS 变量是一个特殊的环境变量，叫做内部域分隔符。IFS 环境
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-02-11 14:53" pubdate>
-              2020-02-11
+            <time datetime="2020-05-26 10:44" pubdate>
+              2020-05-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Linux/">Linux</a>
+            
+              <a href="/categories/Linux/Shell/">Shell</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Linux/">Linux</a>
+            
+              <a href="/tags/Shell/">Shell</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4history/">LinuxShell命令history</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4history/">
+          
+          
+            
+          
+          【注】具体详解参见 help 手册。
+1. 简介
+history 内建命令用于显示或操纵历史命令列表。
+2. 格式
+123history [NUM|-c|-d [offset]]history [-a|-n|-r|-w] [FILE]history [-p|-s] ARG [ARG ...]
+其中，FILE 用于指定保存历史命令列表的文件，默认是~/.bash_history 文件。若未指定任何选
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-05-26 10:44" pubdate>
+              2020-05-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Linux/">Linux</a>
+            
+              <a href="/categories/Linux/Shell/">Shell</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Linux/">Linux</a>
+            
+              <a href="/tags/Shell/">Shell</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4let/">LinuxShell命令let</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4let/">
+          
+          
+            
+          
+          【注】具体详解参见 help 手册。
+1. 简介
+Linux Shell 内建命令用于估算算数表达式。估算的计算以定宽的整数完成，不带溢出检测，但除 0 会报错。
+2. 格式
+1let ARG [ARG ...]
+其中，ARG 参数会被 let 作为算数表达式来进行估值。ARG 中的算术操作符列表按照优先级由高到低给出如下：
+【注】如果最后一个 ARG 估值为 0,则返回 1；否则返回 0 。
+
+
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-05-26 10:44" pubdate>
+              2020-05-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Linux/">Linux</a>
+            
+              <a href="/categories/Linux/Shell/">Shell</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Linux/">Linux</a>
+            
+              <a href="/tags/Shell/">Shell</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4more/">LinuxShell命令more</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4more/">
+          
+          
+            
+          
+          【注】具体详解参见 man 手册。
+1. 简介
+more 是一个用于屏幕阅读的文件分页阅览过滤的 Shell 命令，一次阅览一屏幕文字，同时提供页面阅读的基于 vi 交互式命令的交互环境。
+2. 格式
+1more [OPTIONS] FILE...
+其中，OPTIONS 指定选项参数，FILE 指定阅读的文件。
+除命令行指定 OPTIONS 选项参数外，more 也同时从环境变量 MORE（选项参
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-05-26 10:44" pubdate>
+              2020-05-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Linux/">Linux</a>
+            
+              <a href="/categories/Linux/Shell/">Shell</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Linux/">Linux</a>
+            
+              <a href="/tags/Shell/">Shell</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4ps/">LinuxShell命令ps</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4ps/">
+          
+          
+            
+          
+          【注】具体详解参见 man 手册。
+1. 简介
+ps 是 Linux 下显示瞬间进程状态的强大命令，并不动态连续显示进程状态（top 命令则是对进程进行实时监控）。
+2. 格式
+1ps [options]
+Linux 系统中使用 ps 命令支持三种不同类型的命令行选项参数：
+
+Unix 风格参数（参数前使用单破折线）
+BSD 风格参数（参数前不使用破折线）
+GNU 风格长参数（参数前加双破折线）
+
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-05-26 10:44" pubdate>
+              2020-05-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Linux/">Linux</a>
+            
+              <a href="/categories/Linux/Shell/">Shell</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Linux/">Linux</a>
+            
+              <a href="/tags/Shell/">Shell</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4sort/">LinuxShell命令sort</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4sort/">
+          
+          
+            
+          
+          【注】具体详解参见 man 手册和 info 手册。
+1. 简介
+sort 命令用于对给定的文件中的行进行排序并写到标准输出上。如果没有给定文件或者给定的文件名为 - ，则从标准输入读取数据。
+2. 格式
+12sort [OPTION]... [FILE]...sort [OPTION]... --files0-from=F
+其中，OPTION 指定选项参数，FILE 指定文件名，--files0
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-05-26 10:44" pubdate>
+              2020-05-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Linux/">Linux</a>
+            
+              <a href="/categories/Linux/Shell/">Shell</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Linux/">Linux</a>
+            
+              <a href="/tags/Shell/">Shell</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4tail/">LinuxShell命令tail</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4tail/">
+          
+          
+            
+          
+          【注】具体详解参见 man 手册。
+1. 简介
+tail 命令用于在标准输出上显示每个文件最后 10 行。如果多于一个文件，则会逐个进行显示，并在每个文件显示的首部给出对应的文件名。如果没有指定文件或者指定为 -，则从标准输入上读取。
+2. 格式
+1tail [OPTION]... [FILE]...
+其中，OPTION 指定选项参数，FILE 指定显示的文件。
+3. 选项
+
+
+
+选项参数
+说明
+
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-05-26 10:44" pubdate>
+              2020-05-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Linux/">Linux</a>
+            
+              <a href="/categories/Linux/Shell/">Shell</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Linux/">Linux</a>
+            
+              <a href="/tags/Shell/">Shell</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4unset/">LinuxShell命令unset</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4unset/">
+          
+          
+            
+          
+          【注】具体详解参见 help 手册。
+1. 简介
+Linux Shell 内建命令 unset 用于取消设定 Shell 变量、函数或属性。
+【注】unset 命令不能取消设定只读变量（参见 readonly 内建命令）。
+2. 格式
+1unset [OPTION] [NAME ...]
+其中，OPTION 指定了选项参数，NAME 为指定的变量或函数。不带选项时，unset 首先尝试取消设定一个
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-05-26 10:44" pubdate>
+              2020-05-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Linux/">Linux</a>
+            
+              <a href="/categories/Linux/Shell/">Shell</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Linux/">Linux</a>
+            
+              <a href="/tags/Shell/">Shell</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4wc/">LinuxShell命令wc</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4wc/">
+          
+          
+            
+          
+          1. 简介
+wc 命令用来统计每个文件的行、单词和字节数并输出。如果指定多个文件，则输出每个文件的总行\单词\字节数及所有文件总的行\单词\字节数；如果没有指定文件或指定文件为 - ，则从标准输入读取。
+2. 格式
+12wc [options]... [filelist]wc [options]... --files0-from=F
+其中，options 指定统计输出格式，filelist 为指定
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-05-26 10:44" pubdate>
+              2020-05-26
             </time>
           </div>
         
@@ -305,7 +788,7 @@ IFS 变量是一个特殊的环境变量，叫做内部域分隔符。IFS 环境
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/page/37/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/36/#board">36</a><a class="page-number" href="/page/37/#board">37</a><span class="page-number current">38</span>
+      <a class="extend prev" rel="prev" href="/page/37/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/36/#board">36</a><a class="page-number" href="/page/37/#board">37</a><span class="page-number current">38</span><a class="page-number" href="/page/39/#board">39</a><a class="page-number" href="/page/40/#board">40</a><span class="space">&hellip;</span><a class="page-number" href="/page/42/#board">42</a><a class="extend next" rel="next" href="/page/39/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 

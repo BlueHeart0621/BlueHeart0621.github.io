@@ -197,20 +197,19 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/01/22/TeX/LaTeX/LaTeX%E6%96%87%E7%AB%A0%E6%8F%90%E7%BA%B2/LaTeX%E6%96%87%E7%AB%A0%E6%8F%90%E7%BA%B2/">LaTeX文章提纲</a>
+        <a href="/2021/04/19/Rust/Rust%E5%87%BD%E6%95%B0/">Rust函数</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/01/22/TeX/LaTeX/LaTeX%E6%96%87%E7%AB%A0%E6%8F%90%E7%BA%B2/LaTeX%E6%96%87%E7%AB%A0%E6%8F%90%E7%BA%B2/">
+        <a href="/2021/04/19/Rust/Rust%E5%87%BD%E6%95%B0/">
           
           
             
           
-          【注】笔记来自《LaTeX入门》——刘海洋。
-1. 导言区
-在 \begin&#123;document&#125; 前面的部分称为导言区，导言区通常用来对文档的性质做一些设置，或者自定义一些命令。
-1.1 声明文档类
-12\documentclass&#123;article&#125;         # 西文短文类\documentclass[UTF8]&#123;ctexart&#125;
+          1. 格式
+Rust 代码中函数定义的基本语法格式如下：
+1234fn &lt;function&gt;(&lt;parameters&gt;) &#123;	// 函数体	...&#125;
+其中，fn 为函数声明关键字，&lt;function&gt; 为函数名，&lt;parameters&gt; 为参数列表，&#123;&#125; 用于指定函数体的开始和结束。和大多数编程语言一样，Rus
         </a>
       </p>
 
@@ -218,8 +217,8 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-22 19:50" pubdate>
-              2021-01-22
+            <time datetime="2021-04-19 12:42" pubdate>
+              2021-04-19
             </time>
           </div>
         
@@ -227,9 +226,7 @@
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/TeX/">TeX</a>
-            
-              <a href="/categories/TeX/LaTeX/">LaTeX</a>
+              <a href="/categories/Rust/">Rust</a>
             
           </div>
         
@@ -237,9 +234,7 @@
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/TeX/">TeX</a>
-            
-              <a href="/tags/LaTeX/">LaTeX</a>
+              <a href="/tags/Rust/">Rust</a>
             
           </div>
         
@@ -253,26 +248,20 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/01/22/TeX/LaTeX/LaTeX%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86/LaTeX%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86/">LaTeX相关知识</a>
+        <a href="/2021/04/19/Rust/Rust%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">Rust基本数据类型</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/01/22/TeX/LaTeX/LaTeX%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86/LaTeX%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86/">
+        <a href="/2021/04/19/Rust/Rust%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">
           
           
             
           
-          1. TeX 引擎、命令、格式
+          1. 简介
+在 Rust 中，每个值都属于某一个数据类型，用来告诉 Rust 它被指定为何种数据，以便明确数据处理方式。Rust 基本数据类型主要有两类子集：标量（scalar）和复合（compound）。
 
-TeX 引擎目前主要有四种：TeX/eTeX、pdfTeX、XeTeX、LuaTeX
-TeX 格式目前主要有三种：Plain TeX、LaTeX、ConTeXt
-
-TeX 引擎对不同的 TeX 格式提供的排版命令以及编译输出的排版文件格式如下表：
-
-2. TeX 引擎编译流程
-
-
-早些年代电子文档格式主要是 PostScript（PS），那时主要通过 dvips 
+此文所讲的基本数据类型都是 Rust 原生的数据类型，它们都是创建在「栈」上的数据结构。
+Rust 标准库还提供了一些更复杂的数据类型，它们有些是创建在「堆」上的数据结构，比如下文提到的 v
         </a>
       </p>
 
@@ -280,8 +269,8 @@ TeX 引擎对不同的 TeX 格式提供的排版命令以及编译输出的排�
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-22 10:04" pubdate>
-              2021-01-22
+            <time datetime="2021-04-19 11:06" pubdate>
+              2021-04-19
             </time>
           </div>
         
@@ -289,9 +278,7 @@ TeX 引擎对不同的 TeX 格式提供的排版命令以及编译输出的排�
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/TeX/">TeX</a>
-            
-              <a href="/categories/TeX/LaTeX/">LaTeX</a>
+              <a href="/categories/Rust/">Rust</a>
             
           </div>
         
@@ -299,9 +286,7 @@ TeX 引擎对不同的 TeX 格式提供的排版命令以及编译输出的排�
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/TeX/">TeX</a>
-            
-              <a href="/tags/LaTeX/">LaTeX</a>
+              <a href="/tags/Rust/">Rust</a>
             
           </div>
         
@@ -315,24 +300,22 @@ TeX 引擎对不同的 TeX 格式提供的排版命令以及编译输出的排�
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/01/21/TeX/LaTeX/TeXStudio%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/">TeXStudio使用技巧</a>
+        <a href="/2021/04/19/Rust/Rust%E5%B8%B8%E9%87%8F%E4%B8%8E%E5%8F%98%E9%87%8F/">Rust常量与变量</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/01/21/TeX/LaTeX/TeXStudio%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/">
+        <a href="/2021/04/19/Rust/Rust%E5%B8%B8%E9%87%8F%E4%B8%8E%E5%8F%98%E9%87%8F/">
           
           
             
           
-          1. 正反向查找
-正反向查找是由 SyncTeX 机制实现的, 需要源代码编辑器、pdf 阅读器和 TeX 输出程序的共同参与。
-1.1 正向查找
-正向查找即根据源文件位置查找生成的 pdf 文件对应位置。
+          1. 常量
+声明常量使用的关键字是 const。
 
-在 TeXStudio 环境中，使用快捷键 Ctrl+鼠标左击 即可定位源文件中鼠标位置在 pdf 文件中的对应位置。
-
-1.2 反向查找
-反向查找即根据 pdf 文件位置查找源文件的对应位
+在声明常量时，必须注明值的类型。
+常量可以在任何作用域中声明，包括全局作用域。常量在它的作用域中，整个程序生命周期中都有效。
+常量只能被设置为常量表达式，而不能是函数调用的结果，或其他任何只能在运行时计算出的值。
+将遍布于应用程序中的硬编码值声明为常量，能帮助后来的代码维护人员了解值的意图。如果将来需要修改硬编码值，也只需修改汇聚于一处的硬编码值
         </a>
       </p>
 
@@ -340,8 +323,8 @@ TeX 引擎对不同的 TeX 格式提供的排版命令以及编译输出的排�
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-21 21:14" pubdate>
-              2021-01-21
+            <time datetime="2021-04-19 10:45" pubdate>
+              2021-04-19
             </time>
           </div>
         
@@ -349,9 +332,7 @@ TeX 引擎对不同的 TeX 格式提供的排版命令以及编译输出的排�
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/TeX/">TeX</a>
-            
-              <a href="/categories/TeX/LaTeX/">LaTeX</a>
+              <a href="/categories/Rust/">Rust</a>
             
           </div>
         
@@ -359,9 +340,7 @@ TeX 引擎对不同的 TeX 格式提供的排版命令以及编译输出的排�
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/TeX/">TeX</a>
-            
-              <a href="/tags/LaTeX/">LaTeX</a>
+              <a href="/tags/Rust/">Rust</a>
             
           </div>
         
@@ -375,24 +354,22 @@ TeX 引擎对不同的 TeX 格式提供的排版命令以及编译输出的排�
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/01/21/TeX/LaTeX/VSCode+LaTeXWorkshop%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/">VSCode+LaTeXWorkshop使用技巧</a>
+        <a href="/2021/04/18/Rust/Rust%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7%E5%92%8C%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8Cargo/">Rust构建工具和包管理器Cargo</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/01/21/TeX/LaTeX/VSCode+LaTeXWorkshop%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/">
+        <a href="/2021/04/18/Rust/Rust%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7%E5%92%8C%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8Cargo/">
           
           
             
           
-          1. 正反向查找
-正反向查找是由 SyncTeX 机制实现的, 需要源代码编辑器、pdf 阅读器和 TeX 输出程序的共同参与。
-1.1 正向查找
-正向查找即根据源文件位置查找生成的 pdf 文件对应位置。
-
-在 VSCode+LaTeXWorkshop 环境中，使用快捷键 Ctrl+Alt+j 即可定位源文件中鼠标位置在 pdf 文件中的对应位置。
-
-1.2 反向查找
-反向查找即根据 pdf 文
+          1. 简介
+Cargo 是 Rust 的构建系统和包管理器，大多数 Rustacean 们使用 Cargo 来管理他们的 Rust 项目，因为它可以处理很多任务，比如构建代码、下载依赖库（在 Rust 中称为「crate」）并编译这些库。
+2. 使用 Cargo
+2.1 创建项目
+Cargo 工具创建项目的基本语法格式如下：
+1cargo new &lt;project&gt;
+运行上述命令后，会
         </a>
       </p>
 
@@ -400,8 +377,8 @@ TeX 引擎对不同的 TeX 格式提供的排版命令以及编译输出的排�
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-21 21:08" pubdate>
-              2021-01-21
+            <time datetime="2021-04-18 21:24" pubdate>
+              2021-04-18
             </time>
           </div>
         
@@ -409,9 +386,7 @@ TeX 引擎对不同的 TeX 格式提供的排版命令以及编译输出的排�
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/TeX/">TeX</a>
-            
-              <a href="/categories/TeX/LaTeX/">LaTeX</a>
+              <a href="/categories/Rust/">Rust</a>
             
           </div>
         
@@ -419,9 +394,7 @@ TeX 引擎对不同的 TeX 格式提供的排版命令以及编译输出的排�
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/TeX/">TeX</a>
-            
-              <a href="/tags/LaTeX/">LaTeX</a>
+              <a href="/tags/Rust/">Rust</a>
             
           </div>
         
@@ -435,21 +408,23 @@ TeX 引擎对不同的 TeX 格式提供的排版命令以及编译输出的排�
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/01/21/TeX/LaTeX/Manjaro20.2%E9%85%8D%E7%BD%AETexLive+VSCode%E7%9A%84LaTeX%E7%8E%AF%E5%A2%83/">Manjaro20.2配置TeXLive+VSCode的LaTeX环境</a>
+        <a href="/2021/04/18/Rust/Rust%E4%BB%A3%E7%A0%81%E6%A0%BC%E5%BC%8F/">Rust代码格式</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/01/21/TeX/LaTeX/Manjaro20.2%E9%85%8D%E7%BD%AETexLive+VSCode%E7%9A%84LaTeX%E7%8E%AF%E5%A2%83/">
+        <a href="/2021/04/18/Rust/Rust%E4%BB%A3%E7%A0%81%E6%A0%BC%E5%BC%8F/">
           
           
             
           
-          1. 安装
-1.1 安装 TeXLive
-1.1.1 从软件源安装
-在终端执行以下代码，安装 TeXLive 环境：
-12sudo pacman -S texlive-mostsudo pacman -S texlive-lang 
-【注】这样安装 TeXLive 后无法在终端使用 texdoc 工具，会报错：/usr/local/texlive/2020/texmf-dist/doc/gener
+          1. 代码格式
+
+函数体需要用花括号包裹，一般左花括号与函数声明置于同一行并以空格分隔。
+Rust 缩进风格为 4 个空格，而不是 1 个水平制表符。
+Rust 代码中的函数和变量名使用 snake case 规范风格。
+
+2. 自动格式化
+Rust 开发了一个叫做 rustfmt 的自动格式化工具，能够将用户编写的代码自动调整为一种标准风格。最新版的 Rust 中已经包含了该工具。详细使用参见命
         </a>
       </p>
 
@@ -457,8 +432,8 @@ TeX 引擎对不同的 TeX 格式提供的排版命令以及编译输出的排�
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-21 20:25" pubdate>
-              2021-01-21
+            <time datetime="2021-04-18 21:16" pubdate>
+              2021-04-18
             </time>
           </div>
         
@@ -466,9 +441,7 @@ TeX 引擎对不同的 TeX 格式提供的排版命令以及编译输出的排�
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/TeX/">TeX</a>
-            
-              <a href="/categories/TeX/LaTeX/">LaTeX</a>
+              <a href="/categories/Rust/">Rust</a>
             
           </div>
         
@@ -476,9 +449,7 @@ TeX 引擎对不同的 TeX 格式提供的排版命令以及编译输出的排�
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/TeX/">TeX</a>
-            
-              <a href="/tags/LaTeX/">LaTeX</a>
+              <a href="/tags/Rust/">Rust</a>
             
           </div>
         
@@ -492,26 +463,92 @@ TeX 引擎对不同的 TeX 格式提供的排版命令以及编译输出的排�
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/01/21/NodeJS/npm%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85%E9%80%9F%E5%BA%A6%E6%85%A2%E9%97%AE%E9%A2%98/">npm下载安装速度慢问题</a>
+        <a href="/2021/04/18/Rust/Rust%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99%E6%B1%87%E6%80%BB/">Rust学习资料汇总</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/01/21/NodeJS/npm%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85%E9%80%9F%E5%BA%A6%E6%85%A2%E9%97%AE%E9%A2%98/">
+        <a href="/2021/04/18/Rust/Rust%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99%E6%B1%87%E6%80%BB/">
           
           
             
           
-          1. node 下载 electron 卡住 &amp;&amp; node install.js 卡住
+          1. 学习资料
+1.1 在线学习资料
 
-问题：都是由于访问国外网站过慢造成
+Rust 官方资料集合
+Rust 程序设计语言英文版
+Rust 程序设计语言中文版
+Rust 安装和版本管理工具：Rustup 使用文档
+Rust 构建工具和包管理器：Cargo 使用文档
+Rust API 文档
+Rust and WebAssembly
+
+1.2 本地学习资料
+
+运行 rustup doc 在浏览器查看本地文档。
+
+2. 学习论坛
+
+Rus
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-04-18 20:09" pubdate>
+              2021-04-18
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Rust/">Rust</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Rust/">Rust</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/04/17/Linux/Manjaro/Manjaro21.0%E7%B3%BB%E7%BB%9F%E6%8A%A5%E9%94%99/">Manjaro21.0系统报错</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/04/17/Linux/Manjaro/Manjaro21.0%E7%B3%BB%E7%BB%9F%E6%8A%A5%E9%94%99/">
+          
+          
+            
+          
+          1. ENOSPC: System limit for number of file watchers reached
+
+问题：系统对文件监控的数量已经达到限制数量了。
 解决：
 
+修改 /etc/sysctl.conf 文件，添加以下代码：1fs.inotify.max_user_watches=52428800
+
+然后刷新配置：1sudo sysctl -p
 
 
-配置淘宝镜像
-修改 .npmrc 文件（windows C:\Users\username\.npmrc，Linux 在 ~/.npmrc）内容为以下内容：
 
-12registry=https://registry.npm.taobao.or
+
         </a>
       </p>
 
@@ -519,8 +556,8 @@ TeX 引擎对不同的 TeX 格式提供的排版命令以及编译输出的排�
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-21 16:09" pubdate>
-              2021-01-21
+            <time datetime="2021-04-17 22:00" pubdate>
+              2021-04-17
             </time>
           </div>
         
@@ -528,7 +565,9 @@ TeX 引擎对不同的 TeX 格式提供的排版命令以及编译输出的排�
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/NodeJS/">NodeJS</a>
+              <a href="/categories/Linux/">Linux</a>
+            
+              <a href="/categories/Linux/Manjaro/">Manjaro</a>
             
           </div>
         
@@ -536,7 +575,9 @@ TeX 引擎对不同的 TeX 格式提供的排版命令以及编译输出的排�
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/NodeJS/">NodeJS</a>
+              <a href="/tags/Linux/">Linux</a>
+            
+              <a href="/tags/Manjaro/">Manjaro</a>
             
           </div>
         
@@ -550,27 +591,19 @@ TeX 引擎对不同的 TeX 格式提供的排版命令以及编译输出的排�
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/01/21/TeX/LaTeX/LaTeX%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7/">LaTeX奇技淫巧</a>
+        <a href="/2021/04/17/Linux/Sundry/Linux%E4%B8%8B%E6%9B%B4%E6%96%B0Deepin-Wine5%E8%BD%AF%E4%BB%B6/">Linux下更新Deepin-Wine5软件</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/01/21/TeX/LaTeX/LaTeX%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7/">
+        <a href="/2021/04/17/Linux/Sundry/Linux%E4%B8%8B%E6%9B%B4%E6%96%B0Deepin-Wine5%E8%BD%AF%E4%BB%B6/">
           
           
             
           
-          1. 移动符号
-第一个符号位置不变，改变第二个符号相对第一个符号的位置。
-1.1 左移
-在两个符号间插入 \! 可将第二个符号逐步往左移动。每个 \! 移动 −16-\frac{1}{6}−61​ em 的距离（−-− 表示左移）。插入越多 \! ，第二个符号左移的位移就越大。
-比如：
-
-
-$\dashv \vdash$：
-⊣⊢\dashv \vdash⊣⊢
-
-
-$\dashv \! \vdash
+          1. 简介
+Deepin-Wine 已经升级到第 5 版，对国内一些 Windows 应用兼容性也更好，希望深度越做越好（虽然 Linux 原版要更好，但奈何大多数国内软件厂家都不做 Linux 版应用）。
+2. 更新
+假设 Linux 系统上已经安装了 deepin-wine5 和一些 wine 版的软件，比如 Tim 和 WeChat。如果要更新这些应用（直接在软件里更新是显然不成的），需要先
         </a>
       </p>
 
@@ -578,8 +611,74 @@ $\dashv \! \vdash
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-21 11:46" pubdate>
-              2021-01-21
+            <time datetime="2021-04-17 16:40" pubdate>
+              2021-04-17
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Linux/">Linux</a>
+            
+              <a href="/categories/Linux/Sundry/">Sundry</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Linux/">Linux</a>
+            
+              <a href="/tags/Sundry/">Sundry</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/04/17/TeX/LaTeX/LaTeX%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99%E6%B1%87%E6%80%BB/">LaTeX学习资料汇总</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/04/17/TeX/LaTeX/LaTeX%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99%E6%B1%87%E6%80%BB/">
+          
+          
+            
+          
+          1. 学习资料
+1.1 在线学习资料
+
+Learn LaTeX.org
+CTex.org
+
+1.2 本地学习资料
+
+texdoc 工具
+
+2. 学习论坛
+
+tex stack exchange
+
+
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-04-17 16:20" pubdate>
+              2021-04-17
             </time>
           </div>
         
@@ -613,90 +712,18 @@ $\dashv \! \vdash
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/01/19/Math/Theory/%E6%96%B9%E5%90%91%E4%BD%99%E5%BC%A6/">方向余弦</a>
+        <a href="/2021/04/17/MarkDown/MarkDown%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99%E6%B1%87%E6%80%BB/">MarkDown学习资料汇总</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/01/19/Math/Theory/%E6%96%B9%E5%90%91%E4%BD%99%E5%BC%A6/">
+        <a href="/2021/04/17/MarkDown/MarkDown%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99%E6%B1%87%E6%80%BB/">
           
           
             
           
-          【注】参考自 Wikipedia 。
-1. 定义
-1.1 方向余弦
+          
+Learning-Markdown (Markdown 入门参考)
 
-在解析几何里，一个向量的三个方向余弦分别是这向量与三个坐标轴之间的角度的余弦。
-
-设 v⃗=v1x⃗+v2y⃗+v3z⃗
-\vec{v} = v_1 \vec{x} + v_2 \vec{y} + v_3 \vec{z}
-v=v1​x+v2​y​+v3​z 其中，x⃗\vec{x}x、y⃗\vec{y}y​、z⃗\vec{z}z
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-19 22:25" pubdate>
-              2021-01-19
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Math/">Math</a>
-            
-              <a href="/categories/Math/Theory/">Theory</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
-            
-              <a href="/tags/Math/">Math</a>
-            
-              <a href="/tags/Theory/">Theory</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/01/19/ACM/%E9%A2%98%E8%A7%A3/P2758%E3%80%8C%E7%BC%96%E8%BE%91%E8%B7%9D%E7%A6%BB%E3%80%8D/">P2758「编辑距离」</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/01/19/ACM/%E9%A2%98%E8%A7%A3/P2758%E3%80%8C%E7%BC%96%E8%BE%91%E8%B7%9D%E7%A6%BB%E3%80%8D/">
-          
-          
-            
-          
-          1. 题目
-题目链接：P2758「编辑距离」 。
-题目描述
-设A和B是两个字符串。我们要用最少的字符操作次数，将字符串A转换为字符串B。这里所说的字符操作共有三种：
-1、删除一个字符；
-2、插入一个字符；
-3、将一个字符改为另一个字符；
-！皆为小写字母！
-输入格式
-第一行为字符串A；第二行为字符串B；字符串A和B的长度均小于2000。
-输出格式
-只有一个正整数，为最少字符操作次数。
-输入输出样例
 
         </a>
       </p>
@@ -705,8 +732,8 @@ v=v1​x+v2​y​+v3​z 其中，x⃗\vec{x}x、y⃗\vec{y}y​、z⃗\vec{z}z
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-19 20:39" pubdate>
-              2021-01-19
+            <time datetime="2021-04-17 13:08" pubdate>
+              2021-04-17
             </time>
           </div>
         
@@ -714,9 +741,7 @@ v=v1​x+v2​y​+v3​z 其中，x⃗\vec{x}x、y⃗\vec{y}y​、z⃗\vec{z}z
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/ACM/">ACM</a>
-            
-              <a href="/categories/ACM/%E9%A2%98%E8%A7%A3/">题解</a>
+              <a href="/categories/MarkDown/">MarkDown</a>
             
           </div>
         
@@ -724,58 +749,7 @@ v=v1​x+v2​y​+v3​z 其中，x⃗\vec{x}x、y⃗\vec{y}y​、z⃗\vec{z}z
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/ACM/">ACM</a>
-            
-              <a href="/tags/%E9%A2%98%E8%A7%A3/">题解</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/01/17/Configure/Configure%E8%84%9A%E6%9C%AC%E5%AD%A6%E4%B9%A0/">Configure脚本学习</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/01/17/Configure/Configure%E8%84%9A%E6%9C%AC%E5%AD%A6%E4%B9%A0/">
-          
-          
-            
-          
-          1. 指定安装目录
-1./configure --prefix=...
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-17 11:28" pubdate>
-              2021-01-17
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Configure/">Configure</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Configure/">Configure</a>
+              <a href="/tags/MarkDown/">MarkDown</a>
             
           </div>
         
@@ -787,7 +761,7 @@ v=v1​x+v2​y​+v3​z 其中，x⃗\vec{x}x、y⃗\vec{y}y​、z⃗\vec{z}z
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/page/9/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/#board">8</a><a class="page-number" href="/page/9/#board">9</a><span class="page-number current">10</span><a class="page-number" href="/page/11/#board">11</a><a class="page-number" href="/page/12/#board">12</a><span class="space">&hellip;</span><a class="page-number" href="/page/38/#board">38</a><a class="extend next" rel="next" href="/page/11/#board"><i class="iconfont icon-arrowright"></i></a>
+      <a class="extend prev" rel="prev" href="/page/9/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/#board">8</a><a class="page-number" href="/page/9/#board">9</a><span class="page-number current">10</span><a class="page-number" href="/page/11/#board">11</a><a class="page-number" href="/page/12/#board">12</a><span class="space">&hellip;</span><a class="page-number" href="/page/42/#board">42</a><a class="extend next" rel="next" href="/page/11/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 

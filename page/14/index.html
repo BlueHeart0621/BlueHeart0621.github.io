@@ -197,21 +197,23 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/10/17/DeepLearning/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/AdaDelta/">AdaDelta</a>
+        <a href="/2021/01/23/TeX/LaTeX/LaTeX%E7%A7%91%E6%8A%80%E7%AC%A6%E5%8F%B7/LaTeX%E7%A7%91%E6%8A%80%E7%AC%A6%E5%8F%B7/">LaTeX科技符号</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/10/17/DeepLearning/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/AdaDelta/">
+        <a href="/2021/01/23/TeX/LaTeX/LaTeX%E7%A7%91%E6%8A%80%E7%AC%A6%E5%8F%B7/LaTeX%E7%A7%91%E6%8A%80%E7%AC%A6%E5%8F%B7/">
           
           
             
           
-          1. 简介
-AdaDelta 算法是 AdaGrad 算法的改进，和 RMSprop 算法类似，AdaDelta 算法通过梯度平方的指数衰减移动平均来调整学习率；此外，AdaDelta 算法还引入了每次参数更新差值 Δθ\Delta \thetaΔθ 的平方的指数衰减移动平均。
-2. 原理
-第 ttt 次迭代时：
+          【注】摘自 Scott Pakin 的 《The Comprehensive LaTeX Symbol List》 。
 
-首先计算参数更新差值 ΔW\Delta WΔW 的平方的指数衰减权值移动平均为：
+
+
+
+
+
+
 
         </a>
       </p>
@@ -220,8 +222,8 @@ AdaDelta 算法是 AdaGrad 算法的改进，和 RMSprop 算法类似，AdaDelta
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-10-17 16:21" pubdate>
-              2020-10-17
+            <time datetime="2021-01-23 13:28" pubdate>
+              2021-01-23
             </time>
           </div>
         
@@ -229,9 +231,9 @@ AdaDelta 算法是 AdaGrad 算法的改进，和 RMSprop 算法类似，AdaDelta
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/DeepLearning/">DeepLearning</a>
+              <a href="/categories/TeX/">TeX</a>
             
-              <a href="/categories/DeepLearning/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/">优化算法</a>
+              <a href="/categories/TeX/LaTeX/">LaTeX</a>
             
           </div>
         
@@ -239,11 +241,9 @@ AdaDelta 算法是 AdaGrad 算法的改进，和 RMSprop 算法类似，AdaDelta
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/DeepLearning/">DeepLearning</a>
+              <a href="/tags/TeX/">TeX</a>
             
-              <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a>
-            
-              <a href="/tags/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/">优化算法</a>
+              <a href="/tags/LaTeX/">LaTeX</a>
             
           </div>
         
@@ -257,23 +257,18 @@ AdaDelta 算法是 AdaGrad 算法的改进，和 RMSprop 算法类似，AdaDelta
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/10/17/DeepLearning/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/RMSprop/">RMSprop</a>
+        <a href="/2021/01/23/TeX/LaTeX/LaTeX%E4%B8%ADTikZ%E5%AE%8F%E5%8C%85/TikZ%E4%B8%AD%E8%8A%82%E7%82%B9%E7%BB%98%E5%88%B6%E7%9A%84%E5%BE%AA%E7%8E%AF%E9%80%89%E9%A1%B9%E9%97%AE%E9%A2%98/TikZ%E4%B8%AD%E8%8A%82%E7%82%B9%E7%BB%98%E5%88%B6%E7%9A%84%E5%BE%AA%E7%8E%AF%E9%80%89%E9%A1%B9%E9%97%AE%E9%A2%98/">TikZ中节点绘制的循环选项问题</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/10/17/DeepLearning/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/RMSprop/">
+        <a href="/2021/01/23/TeX/LaTeX/LaTeX%E4%B8%ADTikZ%E5%AE%8F%E5%8C%85/TikZ%E4%B8%AD%E8%8A%82%E7%82%B9%E7%BB%98%E5%88%B6%E7%9A%84%E5%BE%AA%E7%8E%AF%E9%80%89%E9%A1%B9%E9%97%AE%E9%A2%98/TikZ%E4%B8%AD%E8%8A%82%E7%82%B9%E7%BB%98%E5%88%B6%E7%9A%84%E5%BE%AA%E7%8E%AF%E9%80%89%E9%A1%B9%E9%97%AE%E9%A2%98/">
           
           
             
           
-          1. 简介
-RMSprop 算法是 AdaGrad 算法的改进，可以在有些情况下避免 AdaGrad 算法中学习率不断单调下降以至于过早衰减的缺点。
-2. 原理
-第 ttt 次迭代时：
-
-RMSprop 算法首先计算每次迭代梯度 ∂L∂W\frac{\partial L}{\partial \boldsymbol{W}}∂W∂L​ 平方的指数衰减移动平均：
-
-ht=βht−1+(1−β)∂L∂Wt
+          在 LaTeX 中使用 TikZ 宏包绘制闭合曲线时，可以在 \draw 中使用循环选项。
+1.第一种情况
+12345678910111213\documentclass&#123;article&#125;\usepackage&#123;tikz&#125;\usetikzlibrary&#123;arrows,backgrounds,calc,fit,intersections,throug
         </a>
       </p>
 
@@ -281,8 +276,8 @@ ht=βht−1+(1−β)∂L∂Wt
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-10-17 16:21" pubdate>
-              2020-10-17
+            <time datetime="2021-01-23 13:28" pubdate>
+              2021-01-23
             </time>
           </div>
         
@@ -290,9 +285,11 @@ ht=βht−1+(1−β)∂L∂Wt
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/DeepLearning/">DeepLearning</a>
+              <a href="/categories/TeX/">TeX</a>
             
-              <a href="/categories/DeepLearning/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/">优化算法</a>
+              <a href="/categories/TeX/LaTeX/">LaTeX</a>
+            
+              <a href="/categories/TeX/LaTeX/LaTeX%E4%B8%ADTikZ%E5%AE%8F%E5%8C%85/">LaTeX中TikZ宏包</a>
             
           </div>
         
@@ -300,11 +297,11 @@ ht=βht−1+(1−β)∂L∂Wt
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/DeepLearning/">DeepLearning</a>
+              <a href="/tags/TeX/">TeX</a>
             
-              <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a>
+              <a href="/tags/LaTeX/">LaTeX</a>
             
-              <a href="/tags/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/">优化算法</a>
+              <a href="/tags/LaTeX%E4%B8%ADTikZ%E5%AE%8F%E5%8C%85/">LaTeX中TikZ宏包</a>
             
           </div>
         
@@ -318,22 +315,21 @@ ht=βht−1+(1−β)∂L∂Wt
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/10/17/DeepLearning/%E8%87%AA%E5%8A%A8%E6%B1%82%E6%A2%AF%E5%BA%A6/">自动求梯度</a>
+        <a href="/2021/01/23/TeX/LaTeX/LaTeX%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F%E6%8E%92%E7%89%88/">LaTeX数学公式排版</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/10/17/DeepLearning/%E8%87%AA%E5%8A%A8%E6%B1%82%E6%A2%AF%E5%BA%A6/">
+        <a href="/2021/01/23/TeX/LaTeX/LaTeX%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F%E6%8E%92%E7%89%88/">
           
           
             
           
-          【注】参考自邱锡鹏的《神经网络与深度学习》。
-自动计算梯度的方法主要分为三类：数值微分、符号微分和自动微分。
-1. 数值微分
-1.1 原理
-根据函数 f(x)f(x)f(x) 在点 xxx 处的导数的定义：
-f′(x)=lim⁡Δx→0f(x+Δx)−f(x)Δx{\begin{array}{c}
-f^{&#x27;}(x) = \lim_{\Delta x \rightarrow 0} \fra
+          1. 公式对齐
+1234\begin&#123;aligned&#125;    x &amp; = a + &amp; b \\    c + d &amp; = &amp; y \\\end&#123;aligned&#125;
+其中，&amp; 表示的是需要对齐的位置。结果显示如下：
+x=a+bc+d=y\begin{array}{c}
+\begin{aligned}
+    x &amp;
         </a>
       </p>
 
@@ -341,8 +337,8 @@ f^{&#x27;}(x) = \lim_{\Delta x \rightarrow 0} \fra
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-10-17 14:42" pubdate>
-              2020-10-17
+            <time datetime="2021-01-23 13:26" pubdate>
+              2021-01-23
             </time>
           </div>
         
@@ -350,7 +346,9 @@ f^{&#x27;}(x) = \lim_{\Delta x \rightarrow 0} \fra
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/DeepLearning/">DeepLearning</a>
+              <a href="/categories/TeX/">TeX</a>
+            
+              <a href="/categories/TeX/LaTeX/">LaTeX</a>
             
           </div>
         
@@ -358,9 +356,9 @@ f^{&#x27;}(x) = \lim_{\Delta x \rightarrow 0} \fra
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/DeepLearning/">DeepLearning</a>
+              <a href="/tags/TeX/">TeX</a>
             
-              <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a>
+              <a href="/tags/LaTeX/">LaTeX</a>
             
           </div>
         
@@ -374,19 +372,20 @@ f^{&#x27;}(x) = \lim_{\Delta x \rightarrow 0} \fra
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/10/15/Math/Theory/%E5%9B%BE%E5%83%8F%E7%9F%A9/%E5%BE%84%E5%90%91%E7%9F%A9/">径向矩</a>
+        <a href="/2021/01/22/TeX/LaTeX/LaTeX%E6%96%87%E7%AB%A0%E6%8F%90%E7%BA%B2/LaTeX%E6%96%87%E7%AB%A0%E6%8F%90%E7%BA%B2/">LaTeX文章提纲</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/10/15/Math/Theory/%E5%9B%BE%E5%83%8F%E7%9F%A9/%E5%BE%84%E5%90%91%E7%9F%A9/">
+        <a href="/2021/01/22/TeX/LaTeX/LaTeX%E6%96%87%E7%AB%A0%E6%8F%90%E7%BA%B2/LaTeX%E6%96%87%E7%AB%A0%E6%8F%90%E7%BA%B2/">
           
           
             
           
-          1. 定义
-1.1 径向矩
-径向矩定义为极坐标表示的空间中的图像，kkk 阶径向矩的定义为
-Ψ(k,p,q,l)=∫r=0∞∫θ=02prk⋅cos⁡pθ⋅sin⁡qθ⋅eikθ⋅g(r,θ)drdθ\Psi (k,p,q,l) = \int_{r=0}^{\infty} \int_{\theta = 0}^{2p} r^k \cdot \cos^p \theta \cdot \sin^q \th
+          【注】笔记来自《LaTeX入门》——刘海洋。
+1. 导言区
+在 \begin&#123;document&#125; 前面的部分称为导言区，导言区通常用来对文档的性质做一些设置，或者自定义一些命令。
+1.1 声明文档类
+12\documentclass&#123;article&#125;         # 西文短文类\documentclass[UTF8]&#123;ctexart&#125;
         </a>
       </p>
 
@@ -394,8 +393,8 @@ f^{&#x27;}(x) = \lim_{\Delta x \rightarrow 0} \fra
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-10-15 12:09" pubdate>
-              2020-10-15
+            <time datetime="2021-01-22 19:50" pubdate>
+              2021-01-22
             </time>
           </div>
         
@@ -403,11 +402,9 @@ f^{&#x27;}(x) = \lim_{\Delta x \rightarrow 0} \fra
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/Math/">Math</a>
+              <a href="/categories/TeX/">TeX</a>
             
-              <a href="/categories/Math/Theory/">Theory</a>
-            
-              <a href="/categories/Math/Theory/%E5%9B%BE%E5%83%8F%E7%9F%A9/">图像矩</a>
+              <a href="/categories/TeX/LaTeX/">LaTeX</a>
             
           </div>
         
@@ -415,13 +412,9 @@ f^{&#x27;}(x) = \lim_{\Delta x \rightarrow 0} \fra
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
+              <a href="/tags/TeX/">TeX</a>
             
-              <a href="/tags/Math/">Math</a>
-            
-              <a href="/tags/Theory/">Theory</a>
-            
-              <a href="/tags/%E5%9B%BE%E5%83%8F%E7%9F%A9/">图像矩</a>
+              <a href="/tags/LaTeX/">LaTeX</a>
             
           </div>
         
@@ -435,24 +428,26 @@ f^{&#x27;}(x) = \lim_{\Delta x \rightarrow 0} \fra
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/10/13/Math/Theory/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/%E6%AD%A3%E4%BA%A4%E5%A4%9A%E9%A1%B9%E5%BC%8F/">正交多项式</a>
+        <a href="/2021/01/22/TeX/LaTeX/LaTeX%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86/LaTeX%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86/">LaTeX相关知识</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/10/13/Math/Theory/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/%E6%AD%A3%E4%BA%A4%E5%A4%9A%E9%A1%B9%E5%BC%8F/">
+        <a href="/2021/01/22/TeX/LaTeX/LaTeX%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86/LaTeX%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86/">
           
           
             
           
-          1. 定义
+          1. TeX 引擎、命令、格式
 
-若函数 W(x)W(x)W(x) 在区间 (a,b) 可积，且 W(x)≥0
-W(x) \geq 0
-W(x)≥0，则 W(x)W(x)W(x) 可作为权函数。
+TeX 引擎目前主要有四种：TeX/eTeX、pdfTeX、XeTeX、LuaTeX
+TeX 格式目前主要有三种：Plain TeX、LaTeX、ConTeXt
 
-对于一个多项式的序列 fif_ifi​ 和权函数 W(x)W(x)W(x)，定义内积
-&lt;fm,fn&gt;=∫abfm(x)fn(x)W(x)dx{\begin{array}{c}
-\lt f_m, f_n \gt 
+TeX 引擎对不同的 TeX 格式提供的排版命令以及编译输出的排版文件格式如下表：
+
+2. TeX 引擎编译流程
+
+
+早些年代电子文档格式主要是 PostScript（PS），那时主要通过 dvips 
         </a>
       </p>
 
@@ -460,8 +455,8 @@ W(x)≥0，则 W(x)W(x)W(x) 可作为权函数。
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-10-13 15:43" pubdate>
-              2020-10-13
+            <time datetime="2021-01-22 10:04" pubdate>
+              2021-01-22
             </time>
           </div>
         
@@ -469,11 +464,9 @@ W(x)≥0，则 W(x)W(x)W(x) 可作为权函数。
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/Math/">Math</a>
+              <a href="/categories/TeX/">TeX</a>
             
-              <a href="/categories/Math/Theory/">Theory</a>
-            
-              <a href="/categories/Math/Theory/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/">数值分析</a>
+              <a href="/categories/TeX/LaTeX/">LaTeX</a>
             
           </div>
         
@@ -481,13 +474,9 @@ W(x)≥0，则 W(x)W(x)W(x) 可作为权函数。
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
+              <a href="/tags/TeX/">TeX</a>
             
-              <a href="/tags/Math/">Math</a>
-            
-              <a href="/tags/Theory/">Theory</a>
-            
-              <a href="/tags/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/">数值分析</a>
+              <a href="/tags/LaTeX/">LaTeX</a>
             
           </div>
         
@@ -501,22 +490,24 @@ W(x)≥0，则 W(x)W(x)W(x) 可作为权函数。
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/10/13/Math/Theory/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/%E5%88%87%E6%AF%94%E9%9B%AA%E5%A4%AB%E5%A4%9A%E9%A1%B9%E5%BC%8F/">切比雪夫多项式</a>
+        <a href="/2021/01/21/TeX/LaTeX/TeXStudio%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/">TeXStudio使用技巧</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/10/13/Math/Theory/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/%E5%88%87%E6%AF%94%E9%9B%AA%E5%A4%AB%E5%A4%9A%E9%A1%B9%E5%BC%8F/">
+        <a href="/2021/01/21/TeX/LaTeX/TeXStudio%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/">
           
           
             
           
-          1. 简介
-切比雪夫多项式是与棣莫弗定理有关，以递归方式定义的一系列正交多项式序列。通常，第一类切比雪夫多项式以符号 TnT_nTn​ 表示，第二类切比雪夫多项式用 UnU_nUn​ 表示。切比雪夫多项式 TnT_nTn​ 或 UnU_nUn​ 代表 nnn 阶多项式。
+          1. 正反向查找
+正反向查找是由 SyncTeX 机制实现的, 需要源代码编辑器、pdf 阅读器和 TeX 输出程序的共同参与。
+1.1 正向查找
+正向查找即根据源文件位置查找生成的 pdf 文件对应位置。
 
-棣莫弗定理
-棣莫弗定理是一个关于复数和三角函数的公式，其内容为：对任意复数 xxx 和整数 nnn，下列性质成立：
+在 TeXStudio 环境中，使用快捷键 Ctrl+鼠标左击 即可定位源文件中鼠标位置在 pdf 文件中的对应位置。
 
-(cos
+1.2 反向查找
+反向查找即根据 pdf 文件位置查找源文件的对应位
         </a>
       </p>
 
@@ -524,8 +515,8 @@ W(x)≥0，则 W(x)W(x)W(x) 可作为权函数。
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-10-13 14:25" pubdate>
-              2020-10-13
+            <time datetime="2021-01-21 21:14" pubdate>
+              2021-01-21
             </time>
           </div>
         
@@ -533,11 +524,9 @@ W(x)≥0，则 W(x)W(x)W(x) 可作为权函数。
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/Math/">Math</a>
+              <a href="/categories/TeX/">TeX</a>
             
-              <a href="/categories/Math/Theory/">Theory</a>
-            
-              <a href="/categories/Math/Theory/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/">数值分析</a>
+              <a href="/categories/TeX/LaTeX/">LaTeX</a>
             
           </div>
         
@@ -545,13 +534,9 @@ W(x)≥0，则 W(x)W(x)W(x) 可作为权函数。
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
+              <a href="/tags/TeX/">TeX</a>
             
-              <a href="/tags/Math/">Math</a>
-            
-              <a href="/tags/Theory/">Theory</a>
-            
-              <a href="/tags/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/">数值分析</a>
+              <a href="/tags/LaTeX/">LaTeX</a>
             
           </div>
         
@@ -565,21 +550,24 @@ W(x)≥0，则 W(x)W(x)W(x) 可作为权函数。
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/10/13/Python/Ubuntu16.04%E4%B8%8A%E6%90%AD%E5%BB%BAVSCode+Python%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83/">Ubuntu16.04上搭建VSCode+Python虚拟环境</a>
+        <a href="/2021/01/21/TeX/LaTeX/VSCode+LaTeXWorkshop%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/">VSCode+LaTeXWorkshop使用技巧</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/10/13/Python/Ubuntu16.04%E4%B8%8A%E6%90%AD%E5%BB%BAVSCode+Python%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83/">
+        <a href="/2021/01/21/TeX/LaTeX/VSCode+LaTeXWorkshop%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/">
           
           
             
           
-          1. 安装 virtualenv 包
-1pip install virtualenv  # 或者 pip3（具体看个人需要搭建的环境）
-2. 建立存放虚拟文件的文件夹
-1mkdir venv
-3. 创建虚拟环境
-1virtualenv --system-site-packages venv  # --system-site-packages 参数表示拷贝系统 python 环境的 packages
+          1. 正反向查找
+正反向查找是由 SyncTeX 机制实现的, 需要源代码编辑器、pdf 阅读器和 TeX 输出程序的共同参与。
+1.1 正向查找
+正向查找即根据源文件位置查找生成的 pdf 文件对应位置。
+
+在 VSCode+LaTeXWorkshop 环境中，使用快捷键 Ctrl+Alt+j 即可定位源文件中鼠标位置在 pdf 文件中的对应位置。
+
+1.2 反向查找
+反向查找即根据 pdf 文
         </a>
       </p>
 
@@ -587,8 +575,8 @@ W(x)≥0，则 W(x)W(x)W(x) 可作为权函数。
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-10-13 00:46" pubdate>
-              2020-10-13
+            <time datetime="2021-01-21 21:08" pubdate>
+              2021-01-21
             </time>
           </div>
         
@@ -596,7 +584,9 @@ W(x)≥0，则 W(x)W(x)W(x) 可作为权函数。
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/Python/">Python</a>
+              <a href="/categories/TeX/">TeX</a>
+            
+              <a href="/categories/TeX/LaTeX/">LaTeX</a>
             
           </div>
         
@@ -604,7 +594,9 @@ W(x)≥0，则 W(x)W(x)W(x) 可作为权函数。
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/Python/">Python</a>
+              <a href="/tags/TeX/">TeX</a>
+            
+              <a href="/tags/LaTeX/">LaTeX</a>
             
           </div>
         
@@ -618,24 +610,21 @@ W(x)≥0，则 W(x)W(x)W(x) 可作为权函数。
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/10/11/Python/Torch/Torch%E4%B8%ADTensor/">Torch中Tensor</a>
+        <a href="/2021/01/21/TeX/LaTeX/Manjaro20.2%E9%85%8D%E7%BD%AETexLive+VSCode%E7%9A%84LaTeX%E7%8E%AF%E5%A2%83/">Manjaro20.2配置TeXLive+VSCode的LaTeX环境</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/10/11/Python/Torch/Torch%E4%B8%ADTensor/">
+        <a href="/2021/01/21/TeX/LaTeX/Manjaro20.2%E9%85%8D%E7%BD%AETexLive+VSCode%E7%9A%84LaTeX%E7%8E%AF%E5%A2%83/">
           
           
             
           
-          1. 简介
-tensor（张量）是 PyTorch 中的多维数组，类似与 Numpy 中的 ndarray 。
-2. 基本功能
-2.1 函数原型
-
-torch.empty(*sizes, out=None) → tensor
-torch.rand(*sizes, out=None) → tensor
-torch.randn(*sizes, out=None) → tensor
-torch.rand
+          1. 安装
+1.1 安装 TeXLive
+1.1.1 从软件源安装
+在终端执行以下代码，安装 TeXLive 环境：
+12sudo pacman -S texlive-mostsudo pacman -S texlive-lang 
+【注】这样安装 TeXLive 后无法在终端使用 texdoc 工具，会报错：/usr/local/texlive/2020/texmf-dist/doc/gener
         </a>
       </p>
 
@@ -643,8 +632,8 @@ torch.rand
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-10-11 23:39" pubdate>
-              2020-10-11
+            <time datetime="2021-01-21 20:25" pubdate>
+              2021-01-21
             </time>
           </div>
         
@@ -652,9 +641,9 @@ torch.rand
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/Python/">Python</a>
+              <a href="/categories/TeX/">TeX</a>
             
-              <a href="/categories/Python/Torch/">Torch</a>
+              <a href="/categories/TeX/LaTeX/">LaTeX</a>
             
           </div>
         
@@ -662,9 +651,9 @@ torch.rand
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/Python/">Python</a>
+              <a href="/tags/TeX/">TeX</a>
             
-              <a href="/tags/Torch/">Torch</a>
+              <a href="/tags/LaTeX/">LaTeX</a>
             
           </div>
         
@@ -678,23 +667,26 @@ torch.rand
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/10/10/Git/Git%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/">Git常见问题</a>
+        <a href="/2021/01/21/NodeJS/npm%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85%E9%80%9F%E5%BA%A6%E6%85%A2%E9%97%AE%E9%A2%98/">npm下载安装速度慢问题</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/10/10/Git/Git%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/">
+        <a href="/2021/01/21/NodeJS/npm%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85%E9%80%9F%E5%BA%A6%E6%85%A2%E9%97%AE%E9%A2%98/">
           
           
             
           
-          1. remote：error：File：××× exceeds 100.00 MB. ⋯\cdots⋯ remote：Please remove the file from history and try again.
+          1. node 下载 electron 卡住 &amp;&amp; node install.js 卡住
 
-问题：上传文件超出远程仓库的限制
+问题：都是由于访问国外网站过慢造成
 解决：
 
 
-方案一：撤销上一次 commit，会退到上一次 commit 前的状态，然后移除超出限制的文件，重新上传。
-1git reset 
+
+配置淘宝镜像
+修改 .npmrc 文件（windows C:\Users\username\.npmrc，Linux 在 ~/.npmrc）内容为以下内容：
+
+12registry=https://registry.npm.taobao.or
         </a>
       </p>
 
@@ -702,8 +694,8 @@ torch.rand
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-10-10 21:34" pubdate>
-              2020-10-10
+            <time datetime="2021-01-21 16:09" pubdate>
+              2021-01-21
             </time>
           </div>
         
@@ -711,7 +703,7 @@ torch.rand
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/Git/">Git</a>
+              <a href="/categories/NodeJS/">NodeJS</a>
             
           </div>
         
@@ -719,7 +711,7 @@ torch.rand
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/Git/">Git</a>
+              <a href="/tags/NodeJS/">NodeJS</a>
             
           </div>
         
@@ -733,21 +725,27 @@ torch.rand
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/10/10/Math/Theory/%E5%9B%BE%E5%83%8F%E7%9F%A9/%E5%87%A0%E4%BD%95%E7%9F%A9/">几何矩</a>
+        <a href="/2021/01/21/TeX/LaTeX/LaTeX%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7/">LaTeX奇技淫巧</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/10/10/Math/Theory/%E5%9B%BE%E5%83%8F%E7%9F%A9/%E5%87%A0%E4%BD%95%E7%9F%A9/">
+        <a href="/2021/01/21/TeX/LaTeX/LaTeX%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7/">
           
           
             
           
-          1. 定义
-1.1 几何矩
-几何矩定义于基本集 {xpyq}\{x^p y^q\}{xpyq}，则 p+qp+qp+q 阶二维几何矩用 mpqm_{pq}mpq​ 表示，其表达式为：
-mpq=∬ζxpyqf(x,y)dxdy{\begin{array}{c}
-m_{pq} = \underset{\zeta}{\iint} x^p y^q f(x,y) dxdy
-\end{array}}mpq​=
+          1. 移动符号
+第一个符号位置不变，改变第二个符号相对第一个符号的位置。
+1.1 左移
+在两个符号间插入 \! 可将第二个符号逐步往左移动。每个 \! 移动 −16-\frac{1}{6}−61​ em 的距离（−-− 表示左移）。插入越多 \! ，第二个符号左移的位移就越大。
+比如：
+
+
+$\dashv \vdash$：
+⊣⊢\dashv \vdash⊣⊢
+
+
+$\dashv \! \vdash
         </a>
       </p>
 
@@ -755,8 +753,8 @@ m_{pq} = \underset{\zeta}{\iint} x^p y^q f(x,y) dxdy
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-10-10 19:33" pubdate>
-              2020-10-10
+            <time datetime="2021-01-21 11:46" pubdate>
+              2021-01-21
             </time>
           </div>
         
@@ -764,11 +762,9 @@ m_{pq} = \underset{\zeta}{\iint} x^p y^q f(x,y) dxdy
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/Math/">Math</a>
+              <a href="/categories/TeX/">TeX</a>
             
-              <a href="/categories/Math/Theory/">Theory</a>
-            
-              <a href="/categories/Math/Theory/%E5%9B%BE%E5%83%8F%E7%9F%A9/">图像矩</a>
+              <a href="/categories/TeX/LaTeX/">LaTeX</a>
             
           </div>
         
@@ -776,13 +772,9 @@ m_{pq} = \underset{\zeta}{\iint} x^p y^q f(x,y) dxdy
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
+              <a href="/tags/TeX/">TeX</a>
             
-              <a href="/tags/Math/">Math</a>
-            
-              <a href="/tags/Theory/">Theory</a>
-            
-              <a href="/tags/%E5%9B%BE%E5%83%8F%E7%9F%A9/">图像矩</a>
+              <a href="/tags/LaTeX/">LaTeX</a>
             
           </div>
         
@@ -794,7 +786,7 @@ m_{pq} = \underset{\zeta}{\iint} x^p y^q f(x,y) dxdy
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/page/13/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/#board">12</a><a class="page-number" href="/page/13/#board">13</a><span class="page-number current">14</span><a class="page-number" href="/page/15/#board">15</a><a class="page-number" href="/page/16/#board">16</a><span class="space">&hellip;</span><a class="page-number" href="/page/38/#board">38</a><a class="extend next" rel="next" href="/page/15/#board"><i class="iconfont icon-arrowright"></i></a>
+      <a class="extend prev" rel="prev" href="/page/13/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/#board">12</a><a class="page-number" href="/page/13/#board">13</a><span class="page-number current">14</span><a class="page-number" href="/page/15/#board">15</a><a class="page-number" href="/page/16/#board">16</a><span class="space">&hellip;</span><a class="page-number" href="/page/42/#board">42</a><a class="extend next" rel="next" href="/page/15/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 

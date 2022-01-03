@@ -200,7 +200,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      376 字
+      421 字
     </span>
   
 
@@ -253,28 +253,36 @@
             <div class="markdown-body">
               <p>【注】更多功能参见 <a target="_blank" rel="noopener" href="https://rime.im/">Rime 官网</a>。</p>
 <h2 id="1-简介">1. 简介</h2>
-<p>Rime 可谓是一款「神级」中文输入方案，集多种输入法于一身，诸如拼音、注音、仓颉、速成、五笔、双拼、宫保拼音、粤拼、吴语、中古汉语拼音、五笔画、Emoji、国际音标……<br />
-同时 Rime 也是一款开源跨平台的软件，支持平台有：</p>
+<p>Rime 可谓是一款「神级」中文输入框架，支持多种输入法，诸如拼音、注音、仓颉、速成、五笔、双拼、宫保拼音、粤拼、吴语、中古汉语拼音、五笔画、Emoji、国际音标 …… 同时 Rime 也是一款开源跨平台的软件，支持平台有：</p>
 <ul>
 <li>【中州韻】 ibus-rime、fcitx-rime <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>→</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mrel">→</span></span></span></span> Linux</li>
 <li>【小狼毫】 Weasel <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>→</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mrel">→</span></span></span></span> Windows</li>
 <li>【鼠鬚管】 Squirrel <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>→</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mrel">→</span></span></span></span> Mac OS X</li>
 </ul>
+<p>Rime 安装后默认自带几种输入法，比如「朙月拼音」、「注音」、「地球拼音」等。</p>
 <h2 id="2-安装">2. 安装</h2>
-<p>各个平台上的具体安装以及更多的输入方案的安装见<a target="_blank" rel="noopener" href="https://rime.im/download/">官方地址</a>。</p>
-<h2 id="3-选择输入方案">3. 选择输入方案</h2>
-<p>安装完成后，按快捷键 <strong>Ctrl + `</strong> 或 <strong>F4</strong> 唤出输入方案选单，然后根据个人需求切换输入方案。</p>
-<h2 id="4-附录">4. 附录</h2>
-<p>Rime 还允许用户 DIY 自己的输入方案，具体方法见 <a target="_blank" rel="noopener" href="https://github.com/rime/home/wiki/CustomizationGuide">Rime 定制指南</a> 和 <a target="_blank" rel="noopener" href="https://github.com/rime/home/wiki/RimeWithSchemata">Rime 输入方案设计书</a>。</p>
-<h2 id="5-同步数据">5. 同步数据</h2>
+<p>各个平台上的具体安装以及更多的输入法的安装见<a target="_blank" rel="noopener" href="https://rime.im/download/">官方地址</a>。</p>
+<h2 id="3-选择输入法">3. 选择输入法</h2>
+<p>安装完成后，按快捷键 <strong>Ctrl + `</strong> 或 <strong>F4</strong> 唤出输入法选单，然后根据个人需求切换输入法。</p>
+<h2 id="4-同步数据">4. 同步数据</h2>
 <p>Rime 还提供保存用户输入数据的功能，保存的用户输入数据用于 Rime 提供更加个性化的输入方案，包括用户常用的字、词等；同时，也可以将保存的用户输入数据移植到其他新平台等。设置 Rime 用户数据同步保存文件夹：</p>
 <ul>
 <li>Linux 下（以 fcitx 为例）修改 <code>~/.config/fcitx/rime/installation.yaml</code> 文件，添加一行：</li>
 </ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sync_dir: <span class="hljs-string">&quot;/home/xxx&quot;</span>   <span class="hljs-comment"># 保存路径</span><br></code></pre></td></tr></table></figure>
+<blockquote>
+<p>Rime 配置文件位置：</p>
+<ol>
+<li>fcitx：<code>~/.config/fcitx/rime/installation.yaml</code></li>
+<li>fcitx5：<code>~/.local/share/fcitx5/rime/installation.yaml</code></li>
+<li>ibus：<code>~/.config/ibus/rime/installation.yaml</code></li>
+</ol>
+</blockquote>
 <ul>
 <li>Windows 下找到 RIme 的安装路径，运行安装路径下的 <code>WeaselSetup.exe</code> 或 <code>WeaselSetupx64.exe</code> 程序，会弹出修改路径页面。</li>
 </ul>
+<h2 id="5-DIY">5. DIY</h2>
+<p>Rime 还允许用户 DIY 自己的输入方案，具体方法见 <a target="_blank" rel="noopener" href="https://github.com/rime/home/wiki/CustomizationGuide">Rime 定制指南</a> 和 <a target="_blank" rel="noopener" href="https://github.com/rime/home/wiki/RimeWithSchemata">Rime 输入方案设计书</a>。</p>
 
             </div>
             <hr>

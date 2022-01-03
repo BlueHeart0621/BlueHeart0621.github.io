@@ -200,7 +200,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      461 字
+      690 字
     </span>
   
 
@@ -210,7 +210,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      5
+      8
        分钟
     </span>
   
@@ -281,6 +281,24 @@
 <li>对于 Deepin 官方源的 GPG 验证文件，无法在公钥服务器中找到其 GPG Key，目前只能通过拷贝 Deepin 系统中的 GPG 验证文件到 Ubuntu20.04 中，目前我已将个人 Deepin 系统中的 GPG 验证文件上传至 Gitee 仓库 <a target="_blank" rel="noopener" href="https://gitee.com/blueheart0621/DeepinKeying">DeepinKeying</a>，有需要的伙伴可自行下载并将其中所有的 GPG 验证文件拷贝到 <code>/etc/apt/trusted.gpg.d</code> 目录下。</li>
 </ol>
 </blockquote>
+<h3 id="3-server-certificate-verification-failed-CAfile-etc-ssl-certs-ca-certificates-crt-CRLfile-none">3. <code>server certificate verification failed. CAfile: /etc/ssl/certs/ca-certificates.crt CRLfile: none</code></h3>
+<ul>
+<li>问题：在使用 <code>apt</code> 进行更新系统或安装软件时报这个错误。</li>
+<li>原因：一般是由于本地和服务器之间的证书验证失败，可能本地没有证书或者本地证书过期，或者软件源服务器证书过期。</li>
+<li>解决：</li>
+</ul>
+<blockquote>
+<ol>
+<li>本地缺少证书 &amp; 本地证书过期。</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo update-ca-certificates<br></code></pre></td></tr></table></figure>
+<ol start="2">
+<li>软件源服务器证书过期。</li>
+</ol>
+<p>这种情况下我们个人一般就心有余而力不足了，只能修改本地配置不进行证书核验：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;Acquire &#123; https::Verify-Peer false &#125;&quot;</span> | sudo tee /etc/apt/apt.conf.d/99verify-peer.conf<br></code></pre></td></tr></table></figure>
+</blockquote>
+<p>【注】2021 年 9 月 30 日，Let's Encrypt 组织使用的 IdentTrust DST Root CA X3 根证书过期，因此很多使用了 Let's Encrypt 签发的证书但没有及时更新证书的网站都受到了影响。</p>
 
             </div>
             <hr>

@@ -1,0 +1,747 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/image/self/portrait.jpg">
+  <link rel="icon" href="/image/self/portrait.jpg">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="一个记录各种笔记的小匣子^-^">
+  <meta name="author" content="BlueHeart0621">
+  <meta name="keywords" content="頑張れ">
+  
+    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script> <script src="/live2d-widget/autoload.js" type="text/javascript"></script> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
+  
+  <title>Python相关学习资料汇总 - お前はどこまで見えている</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"blueheart0621.github.io","root":"/","version":"1.8.9","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":"§"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/image/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":"c194cf0c8cbc33bfb846ba1329537d81","google":"G-SXJN0942X9","gtag":"G-D3DEHLLP3W","tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"A24MlA4oV7hlze3uNQiXDAIi-MdYXbMMI","app_key":"3moFK5Ao3TD4rjA1HCmPTSm6","server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>お前はどこまで見えている</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/image/covers/%E5%9B%9B%E6%9C%88%E6%98%AF%E4%BD%A0%E7%9A%84%E8%B0%8E%E8%A8%80-1.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="Python相关学习资料汇总">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2020-12-03 16:55" pubdate>
+        2020年12月3日 下午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.3k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      16
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- LeanCloud 统计文章PV -->
+      <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="leancloud-page-views"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">Python相关学习资料汇总</h1>
+            
+            <div class="markdown-body">
+              <h3 id="以下资料按字母表顺序排列">以下资料按字母表顺序排列</h3>
+<ul>
+<li>Abseil : <a target="_blank" rel="noopener" href="https://abseil.io/docs/python/quickstart">https://abseil.io/docs/python/quickstart</a></li>
+</ul>
+<blockquote>
+<p>Abseil 是用于构建 Python 应用程序的 Python 库代码，主要用于处理程序的命令行输入。</p>
+</blockquote>
+<ul>
+<li>Airium : <a target="_blank" rel="noopener" href="https://pypi.org/project/airium/">https://pypi.org/project/airium/</a></li>
+</ul>
+<blockquote>
+<p>Airium 是一个简单易用的 Python 库，让用户能够用 Python 语言书写 HTML 代码。</p>
+</blockquote>
+<ul>
+<li>BeautifulSoup : <a target="_blank" rel="noopener" href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/">https://www.crummy.com/software/BeautifulSoup/bs4/doc/</a>（官方）、<a target="_blank" rel="noopener" href="https://beautiful-soup-4.readthedocs.io/en/latest/">https://beautiful-soup-4.readthedocs.io/en/latest/</a>（英文）、<a target="_blank" rel="noopener" href="https://beautifulsoup.readthedocs.io/zh_CN/v4.4.0/">https://beautifulsoup.readthedocs.io/zh_CN/v4.4.0/</a>（中文）</li>
+</ul>
+<blockquote>
+<p>Beautiful Soup 是一个可以从 HTML 或 XML 文件中提取数据的 Python 库。</p>
+</blockquote>
+<ul>
+<li>CompressAI : <a target="_blank" rel="noopener" href="https://interdigitalinc.github.io/CompressAI/">https://interdigitalinc.github.io/CompressAI/</a>（英文）</li>
+</ul>
+<blockquote>
+<p>CompressAI 是基于深度学习框架 Pytorch 的图像/视频压缩方法汇总的 Python 库。</p>
+</blockquote>
+<ul>
+<li>Domonic : <a target="_blank" rel="noopener" href="https://domonic.readthedocs.io/">https://domonic.readthedocs.io/</a></li>
+</ul>
+<blockquote>
+<p>Domonic 库能够让用户使用 Python 语言生成诸如 HTML、SVG 等代码，同时具有处理 JSON、JS 文件功能。</p>
+</blockquote>
+<ul>
+<li>Imutils：<a target="_blank" rel="noopener" href="https://github.com/PyImageSearch/imutils">https://github.com/PyImageSearch/imutils</a></li>
+</ul>
+<blockquote>
+<p>Imutils 库是一个便携的 API 库，其整合了 <code>opencv</code>、<code>numpy</code> 和 <code>matplotlib</code> 的相关操作，主要是用来进行图形图像的处理，如图像的平移、旋转、缩放、骨架提取、显示等等，后期又加入了针对视频的处理，如摄像头、本地文件等。</p>
+</blockquote>
+<ul>
+<li>Jupyter : <a target="_blank" rel="noopener" href="https://jupyter-notebook.readthedocs.io/en/stable/">https://jupyter-notebook.readthedocs.io/en/stable/</a>、<a target="_blank" rel="noopener" href="https://jupyter.readthedocs.io/en/latest/">https://jupyter.readthedocs.io/en/latest/</a></li>
+</ul>
+<blockquote>
+<p>Jupyter 本质是一个 Web 应用程序，便于创建和共享文学化程序文档，支持实时运行 Python 代码、书写 Markdown 文档。</p>
+</blockquote>
+<ul>
+<li>Keras : <a target="_blank" rel="noopener" href="https://keras.io/api/">https://keras.io/api/</a>（英文）、<a target="_blank" rel="noopener" href="https://keras.io/zh/">https://keras.io/zh/</a>（中文）、<a target="_blank" rel="noopener" href="https://keras-cn.readthedocs.io/en/latest/">https://keras-cn.readthedocs.io/en/latest/</a>（中文）</li>
+</ul>
+<blockquote>
+<p>Keras 是一个高层神经网络 API，Keras 由纯 Python 编写而成并基于深度学习框架 Tensorflow、Theano 以及 CNTK 后端。</p>
+</blockquote>
+<ul>
+<li>Matplotlib : <a target="_blank" rel="noopener" href="https://matplotlib.org/stable/contents.html">https://matplotlib.org/stable/contents.html</a>（英文）、<a target="_blank" rel="noopener" href="https://www.matplotlib.org.cn/">https://www.matplotlib.org.cn/</a>（中文）</li>
+</ul>
+<blockquote>
+<p>Matplotlib 是一个 Python 的 2D 绘图库，它以各种硬拷贝格式和跨平台的交互式环境生成出版质量级别的图形。</p>
+</blockquote>
+<ul>
+<li>Numba : <a target="_blank" rel="noopener" href="https://numba.pydata.org/numba-doc/dev/index.html">https://numba.pydata.org/numba-doc/dev/index.html</a></li>
+</ul>
+<blockquote>
+<p>Python 代码加速神器，会自适应调整数据类型精度，能有效加速 Python 循环代码。</p>
+</blockquote>
+<ul>
+<li>Numpy : <a target="_blank" rel="noopener" href="https://numpy.org/doc/stable/">https://numpy.org/doc/stable/</a>（英文）、<a target="_blank" rel="noopener" href="https://www.numpy.org.cn/">https://www.numpy.org.cn/</a>（中文）</li>
+</ul>
+<blockquote>
+<p>NumPy 是使用 Python 进行科学计算的基础软件包。</p>
+</blockquote>
+<ul>
+<li>OpenCV : <a target="_blank" rel="noopener" href="https://docs.opencv.org/master/">https://docs.opencv.org/master/</a>（英文）、<a target="_blank" rel="noopener" href="http://woshicver.com/">http://woshicver.com/</a>（中文）</li>
+</ul>
+<blockquote>
+<p>OpenCV 是计算机视觉中经典的专用库，包含数百种计算机视觉算法。</p>
+</blockquote>
+<ul>
+<li>Pandas : <a target="_blank" rel="noopener" href="https://pandas.pydata.org/docs/index.html">https://pandas.pydata.org/docs/index.html</a>（英文）、<a target="_blank" rel="noopener" href="https://www.pypandas.cn/">https://www.pypandas.cn/</a>（中文）</li>
+</ul>
+<blockquote>
+<p>Pandas 是一个强大的分析结构化数据的工具集；它的使用基础是 Numpy（提供高性能的矩阵运算）；用于数据挖掘和数据分析，同时也提供数据清洗功能。</p>
+</blockquote>
+<ul>
+<li>PaddleSlim ：<a target="_blank" rel="noopener" href="https://github.com/PaddlePaddle/PaddleSlim">https://github.com/PaddlePaddle/PaddleSlim</a></li>
+</ul>
+<blockquote>
+<p>PaddleSlim 是一个专注于深度学习模型压缩的工具库，提供剪裁、量化、蒸馏、和模型结构搜索等模型压缩策略，帮助用户快速实现模型的小型化。</p>
+</blockquote>
+<ul>
+<li>Pillow : <a target="_blank" rel="noopener" href="https://pillow.readthedocs.io/en/stable/">https://pillow.readthedocs.io/en/stable/</a>（英文）、<a target="_blank" rel="noopener" href="https://pillow-zh-cn.readthedocs.io/zh_CN/latest/">https://pillow-zh-cn.readthedocs.io/zh_CN/latest/</a>（中文）</li>
+</ul>
+<blockquote>
+<p>Pillow 是从 PIL fork 出的一个分支，PIL 是经典的 Python 图像处理库。</p>
+</blockquote>
+<ul>
+<li>Pip : <a target="_blank" rel="noopener" href="https://pip.pypa.io/en/stable/">https://pip.pypa.io/en/stable/</a>（英文）</li>
+</ul>
+<blockquote>
+<p>Pip 是 Python 的软件包安装程序。</p>
+</blockquote>
+<ul>
+<li>Psutil：<a target="_blank" rel="noopener" href="https://psutil.readthedocs.io/en/latest/">https://psutil.readthedocs.io/en/latest/</a></li>
+</ul>
+<blockquote>
+<p>Psutil (process and system utilities) 库使用一两行代码就实现系统监控，它可以跨平台使用，支持 Linux/OSX/Windows 等，是系统管理员和运维小伙伴不可或缺的必备模块。</p>
+</blockquote>
+<ul>
+<li>Pyblog ：<a target="_blank" rel="noopener" href="https://github.com/eastossifrage/pyblog">https://github.com/eastossifrage/pyblog</a></li>
+</ul>
+<blockquote>
+<p>Pyblog 是一个简单易用的在线 Markdown 博客系统，它使用 Python 的 flask 架构，理论上支持所有 flask-sqlalchemy 所能支持的数据库。</p>
+</blockquote>
+<ul>
+<li>PyGObject : <a target="_blank" rel="noopener" href="https://pygobject.readthedocs.io/en/latest/">https://pygobject.readthedocs.io/en/latest/</a></li>
+</ul>
+<blockquote>
+<p>PyGObject 是一个 GUI 库，它通过 glib、gobject、girepository、libffi 等其它库来最终访问底层的 C 语言 GUI 库（libgtk），从而提供 Python 进行 GUI 设计的接口。</p>
+</blockquote>
+<ul>
+<li>PyPlotz : <a target="_blank" rel="noopener" href="https://github.com/songlinhou/pyplotz">https://github.com/songlinhou/pyplotz</a></li>
+</ul>
+<blockquote>
+<p>PyPlotz 是跨平台轻量级的 Matplotlib 中文支持组件。</p>
+</blockquote>
+<ul>
+<li>
+<p>Python : <a target="_blank" rel="noopener" href="https://docs.python.org/zh-cn/3/py-modindex.html">https://docs.python.org/zh-cn/3/py-modindex.html</a>（英文）、<a target="_blank" rel="noopener" href="https://python3-cookbook.readthedocs.io/zh_CN/latest/index.html">https://python3-cookbook.readthedocs.io/zh_CN/latest/index.html</a>（中文）</p>
+</li>
+<li>
+<p>Requests : <a target="_blank" rel="noopener" href="https://docs.python-requests.org/en/master/">https://docs.python-requests.org/en/master/</a>（英文）、<a target="_blank" rel="noopener" href="https://docs.python-requests.org/zh_CN/latest/">https://docs.python-requests.org/zh_CN/latest/</a>（中文）</p>
+</li>
+</ul>
+<blockquote>
+<p>Requests 唯一的一个非转基因的 Python HTTP 库，人类可以安全享用（笑死）。</p>
+</blockquote>
+<ul>
+<li>Scikit-image : <a target="_blank" rel="noopener" href="https://scikit-image.org/docs/stable/index.html">https://scikit-image.org/docs/stable/index.html</a></li>
+</ul>
+<blockquote>
+<p>Scikit-image 是 SciPy 的图像处理工具箱。</p>
+</blockquote>
+<ul>
+<li>Scikit-learn : <a target="_blank" rel="noopener" href="https://scikit-learn.org/stable/user_guide.html">https://scikit-learn.org/stable/user_guide.html</a>（英文）、<a target="_blank" rel="noopener" href="http://scikitlearn.com.cn/">http://scikitlearn.com.cn/</a>（中文）、<a target="_blank" rel="noopener" href="https://sklearn.apachecn.org/#/">https://sklearn.apachecn.org/#/</a>（中文）</li>
+</ul>
+<blockquote>
+<p>Scikit-learn 是基于 Python 语言的机器学习工具。</p>
+</blockquote>
+<ul>
+<li>Scipy : <a target="_blank" rel="noopener" href="https://docs.scipy.org/doc/scipy/reference/">https://docs.scipy.org/doc/scipy/reference/</a>（英文）、<a target="_blank" rel="noopener" href="https://wizardforcel.gitbooks.io/scipy-lecture-notes/content/">https://wizardforcel.gitbooks.io/scipy-lecture-notes/content/</a>（中文）</li>
+</ul>
+<blockquote>
+<p>SciPy 是一个用于数学、科学和工程的开源软件包，它包括用于统计、优化、积分、线性代数、傅立叶变换、信号和图像处理、ODE 求解器等的模块。</p>
+</blockquote>
+<ul>
+<li>TensorFlow : <a target="_blank" rel="noopener" href="https://www.tensorflow.org/tutorials/">https://www.tensorflow.org/tutorials/</a>、<a target="_blank" rel="noopener" href="https://www.tensorflow.org/api_docs/">https://www.tensorflow.org/api_docs/</a></li>
+</ul>
+<blockquote>
+<p>谷歌开发的深度学习框架。</p>
+</blockquote>
+<ul>
+<li>Torch : <a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/index.html">https://pytorch.org/docs/stable/index.html</a>（英文）、<a target="_blank" rel="noopener" href="https://pytorch-cn.readthedocs.io/zh/latest/">https://pytorch-cn.readthedocs.io/zh/latest/</a>（中文）、<a target="_blank" rel="noopener" href="https://pytorch.apachecn.org/">https://pytorch.apachecn.org/</a>（中文）</li>
+</ul>
+<blockquote>
+<p>Facebook 开发的深度学习框架。</p>
+</blockquote>
+<ul>
+<li>XGBoost : <a target="_blank" rel="noopener" href="https://xgboost.readthedocs.io/en/latest/python/index.html">https://xgboost.readthedocs.io/en/latest/python/index.html</a>（英文）、<a target="_blank" rel="noopener" href="https://xgboost.apachecn.org/#/">https://xgboost.apachecn.org/#/</a>（中文）</li>
+</ul>
+<blockquote>
+<p>XGBoost 是一个优化的分布式梯度增强库，它在 <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Gradient_boosting">Gradient Boosting</a> 方法下实现机器学习算法。</p>
+</blockquote>
+<ul>
+<li>Yattag : <a target="_blank" rel="noopener" href="https://www.yattag.org/">https://www.yattag.org/</a> 是一个简单易用的 Python 库，让用户能够用 Python 语言书写 HTML 和 XML 代码。</li>
+</ul>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/Python/">Python</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Python/">Python</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/12/06/Python/Torch/Torch%E5%8D%B7%E7%A7%AF/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Torch卷积</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/11/24/Make/Makefile%E4%B8%AD%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6%E5%92%8C%E5%85%B3%E9%94%AE%E5%AD%97/">
+                        <span class="hidden-mobile">Makefile中特殊字符和关键字</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="waline"></div>
+  <script type="text/javascript">
+    Fluid.utils.lazyComments('waline', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js', function () {
+        new Waline({
+          el: "#waline",
+          placeholder: "都看到这里了，留个脚印再走呗~",
+          path: window.location.pathname,
+          avatar: "retro",
+          visitor: true,
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: true,
+          serverURL: "https://waline-one-beta.vercel.app/",
+          avatarCDN: "https://gravatar.loli.net/avatar/",
+          avatarForce: false,
+          requiredMeta: [],
+          emoji: ["https://cdn.jsdelivr.net/gh/hotarugali/Emoji@bilibili_tv_gif/waline/bilibili_tv_gif","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@bilibiliHotKey/waline/bilibiliHotKey","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@bilibili2233/waline/bilibili2233","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@smallshake/waline/smallshake","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@alu/waline/alu","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@QQ/waline/QQ","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@Tieba-New/waline/Tieba-New","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@weibo/waline/weibo"],
+          // emojiMaps: ,
+          login: "enable",
+          dark: 'html[data-user-color-scheme="dark"]',
+        });
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the
+    <a target="_blank" href="https://waline.js.org" rel="nofollow noopener noopener">comments powered by Waline.</a>
+  </noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+      <div class="col-lg-7 mx-auto nopadding-x-md">
+        <div class="container custom mx-auto">
+          <script src="https://myhkw.cn/api/player/161389264877" id="myhk" key="161389264877" m="1"></script>
+        </div>
+      </div>
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+
+  <script defer src="/js/leancloud.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- KaTeX -->
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" />
+  
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/mermaid@8.8.3/dist/mermaid.min.js" ></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({"theme":"default"});
+    }
+  </script>
+
+
+
+
+  
+    <!-- Baidu Analytics -->
+    <script defer>
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?c194cf0c8cbc33bfb846ba1329537d81";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  
+    <!-- Google Analytics -->
+    <script defer>
+      window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) };
+      ga.l = +new Date;
+      ga('create', 'G-SXJN0942X9', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+  
+
+  
+    <!-- Google gtag.js -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D3DEHLLP3W"></script>
+    <script defer>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-D3DEHLLP3W');
+    </script>
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

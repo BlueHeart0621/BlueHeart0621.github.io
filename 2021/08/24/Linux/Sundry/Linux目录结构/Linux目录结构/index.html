@@ -1,0 +1,888 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/image/self/portrait.jpg">
+  <link rel="icon" href="/image/self/portrait.jpg">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="一个记录各种笔记的小匣子^-^">
+  <meta name="author" content="BlueHeart0621">
+  <meta name="keywords" content="頑張れ">
+  
+    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script> <script src="/live2d-widget/autoload.js" type="text/javascript"></script> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
+  
+  <title>Linux目录结构 - お前はどこまで見えている</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"blueheart0621.github.io","root":"/","version":"1.8.9","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":"§"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/image/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":"c194cf0c8cbc33bfb846ba1329537d81","google":"G-SXJN0942X9","gtag":"G-D3DEHLLP3W","tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"A24MlA4oV7hlze3uNQiXDAIi-MdYXbMMI","app_key":"3moFK5Ao3TD4rjA1HCmPTSm6","server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>お前はどこまで見えている</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/image/covers/%E5%9B%9B%E6%9C%88%E6%98%AF%E4%BD%A0%E7%9A%84%E8%B0%8E%E8%A8%80-1.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="Linux目录结构">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-08-24 11:17" pubdate>
+        2021年8月24日 上午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      4.5k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      49
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- LeanCloud 统计文章PV -->
+      <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="leancloud-page-views"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">Linux目录结构</h1>
+            
+            <div class="markdown-body">
+              <h2 id="1-简介">1. 简介</h2>
+<p>由于 Linux 系统是开源的，存在众多不同的发行版，为了防止不同的 Linux 发行版的系统目录结构大相径庭，以至于用户从一个发行版迁移到别的发行版后不会使用，<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard">FHS</a>（Filesystem Hierarchy Standard）标准诞生了。FHS 标准旨在让用户可以了解到系统上的库文件、已安装的软件文件通常的存放位置，即规范每个特定的目录下应该要放置什么数据。目前主流的 Linux 发行版基本都遵循 FHS 标准，因此它们的系统目录结构也大致相同。</p>
+<ul>
+<li>了解 Linux 文件目录结构的标准和每个目录的详细功能，对于用户用好 Linux 系统至关重要。</li>
+</ul>
+<h2 id="2-FHS-标准">2. FHS 标准</h2>
+<p>以 Centos 7.x 为例，其文件系统架构如下图所示：</p>
+<p><img src="/img/Linux/Sundry/Linux%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84/FilesystemHierarchy_Centos7.jpg" srcset="/image/loading.gif" lazyload alt="FilesystemHierarchy_Centos7" /></p>
+<h3 id="2-1-目录的形态">2.1 目录的形态</h3>
+<p>FHS 依据文件系统使用的频繁与否和是否允许使用者随意更改，将目录定义为四种交互作用的形态，具体举例如下表格所示：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"></th>
+<th style="text-align:left">可分享的（Shareable）</th>
+<th style="text-align:left">不可分享的（Unshareable）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">不变的（Static）</td>
+<td style="text-align:left"><code>/usr</code>（软件放置处）<br><code>/opt</code>（第三方协力软件）</td>
+<td style="text-align:left"><code>/etc</code>（配置文件）<br><code>/boot</code>（开机与核心档）</td>
+</tr>
+<tr>
+<td style="text-align:left">可变动的（Variable）</td>
+<td style="text-align:left"><code>/var/mail</code>（使用者邮件信箱）<br><code>/var/spool/news</code>（新闻群组）</td>
+<td style="text-align:left"><code>/var/run</code>（程序相关）<br><code>/var/lock</code>（程序相关）</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>可分享的</strong>：可以分享给其它系统挂载使用的目录，所以包括可执行文件与使用者的邮件等数据，是能够分享给网络上其它主机挂载使用的目录。</li>
+<li><strong>不可分享的</strong>：自己机器上面运行的设备文件或者是与程序有关的 Socket 文件等，由于仅与自身机器有关，所以当然就不适合分享给其它主机了。</li>
+<li><strong>不变的</strong>：有些数据是不会经常变动的，跟随着发行版而不变动。比如函式库、文件说明文档、系统管理员所管理的主机服务配置文件等等。</li>
+<li><strong>可变的</strong>：经常改变的数据，比如登录文件、一般用户可自行收受的新闻群组等。</li>
+</ul>
+<h3 id="2-2-目录的架构">2.2 目录的架构</h3>
+<p>FHS 针对目录树架构仅定义出三层目录下面应该放置什么数据而已，分别是下面这三个目录的定义：</p>
+<ul>
+<li><code>/</code>（root，根目录）：与开机系统有关。</li>
+<li><code>/usr</code>（unix software resource）：与软件安装/执行有关。</li>
+<li><code>/var</code>（variable）：与系统运行过程有关。</li>
+</ul>
+<h4 id="2-2-1-目录">2.2.1 <code>/</code> 目录</h4>
+<p>根目录是整个系统最重要的一个目录，因为不但所有的目录都是由根目录衍生出来的，同时根目录也与开机/还原/系统修复等动作有关。由于系统开机时需要特定的开机软件、核心文件、开机所需程序、函式库等等文件数据，若系统出现错误时，根目录也必须要包含有能够修复文件系统的程序才行。</p>
+<blockquote>
+<ol>
+<li>因为根目录是这么的重要，所以在 FHS 的要求方面，它希望根目录不要放在非常大的分区内， 因为越大的分区你会放入越多的数据，如此一来根目录所在分区就可能会有较多发生错误的机会。</li>
+<li>FHS 标准建议：根目录 <code>/</code> 所在分区应该越小越好， 且应用程序所安装的软件最好不要与根目录放在同一个分区内，保持根目录越小越好。如此不但性能较佳，根目录所在的文件系统也较不容易发生问题。</li>
+</ol>
+</blockquote>
+<p>有鉴于上述的说明，因此 FHS 定义出根目录 <code>/</code> 下面应该要有下面这些次目录的存在才好，即使没有实体目录，FHS 也希望至少有链接文件存在才好:</p>
+<ul>
+<li>FHS 要求必须要存在的目录</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">目录</th>
+<th style="text-align:left">应放置文件内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>/bin</code></td>
+<td style="text-align:left">系统有很多放置可执行文件的目录，但 <code>/bin</code> 比较特殊。因为 <code>/bin</code> 放置的是在单人维护模式下还能够被操作的指令。在 <code>/bin</code> 下面的指令可以被 root 与一般帐号所使用，主要有：<code>cat</code>、<code>chmod</code>、<code>chown</code>、<code>date</code>、<code>mv</code>、<code>mkdir</code>、<code>cp</code>、<code>bash</code> 等等常用的指令。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>/boot</code></td>
+<td style="text-align:left">这个目录主要在放置开机会使用到的文件，包括 Linux 核心文件以及开机菜单与开机所需配置文件等等。Linux Kernel 常用的文件名为：vmlinuz，如果使用的是 grub2 这个开机管理程序，则还会存在 <code>/boot/grub2</code> 这个目录。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>/dev</code></td>
+<td style="text-align:left">在 Linux 系统上，任何设备与周边设备都是以文件的型态存在于这个目录当中的。你只要通过存取这个目录下面的某个文件，就等于存取某个设备。比较重要的文件有 <code>/dev/null</code>、<code>/dev/zero</code>、<code>/dev/tty</code>、<code>/dev/loop</code>、<code>/dev/sd</code> 等等。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>/etc</code></td>
+<td style="text-align:left">系统主要的配置文件几乎都放置在这个目录内，例如人员的帐号密码档、各种服务的启始档等等。一般来说，这个目录下的各文件属性是可以让一般使用者查阅的，但是只有 root 有权力修改。FHS 建议不要放置可可执行文件在这个目录中。比较重要的文件有: <code>/etc/modprobe.d/</code>、<code>/etc/passwd</code>、<code>/etc/fstab</code>、<code>/etc/issue</code> 等等。另外 FHS 还规范几个重要的目录最好要存在 <code>/etc</code> 目录下：<br><code>/etc/opt</code>（必要）——这个目录在放置第三方协力软件 <code>/opt</code> 的相关配置文件。<br><code>/etc/X11</code>（建议）——与 X Window 有关的各种配置文件都在这里，尤其是 <code>xorg.conf</code> 这个 X Server 的配置文件。<br><code>/etc/sgml</code>（建议）——与 SGML 格式有关的各项配置文件。<br><code>/etc/xml</code>（建议）——与 XML 格式有关的各项配置文件。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>/lib</code></td>
+<td style="text-align:left">系统的函式库非常的多，而 <code>/lib</code> 放置的则是在开机时会用到的函式库，以及在 <code>/bin</code> 或 <code>/sbin</code> 下面的指令会调用的函式库而已。另外 FHS 还要求下面的目录必须要存在：<br><code>/lib/modules</code>——这个目录主要放置可抽换式的核心相关模块（驱动程序）。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>/media</code></td>
+<td style="text-align:left"><code>/media</code> 下面放置的就是可移除的设备。包括软盘、光盘、DVD等等设备都暂时挂载于此。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>/mnt</code></td>
+<td style="text-align:left">如果你想要暂时挂载某些额外的设备，一般建议你可以放置到这个目录中。在很早时候，这个目录的用途与 <code>/media</code> 相同。只是有了 <code>/media</code> 之后，这个目录就用来暂时挂载用了。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>/opt</code></td>
+<td style="text-align:left">这个是给第三方协力软件放置的目录。另外，如果你想要自行安装额外的软件（非原本的发行版提供的），那么也能够将你的软件安装到这里来。不过，以前的 Linux 系统中，我们还是习惯放置在 <code>/usr/local</code> 目录下。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>/run</code></td>
+<td style="text-align:left">早期的 FHS 规定系统开机后所产生的各项信息应该要放置到 <code>/var/run</code> 目录下，新版的 FHS 则规范到 <code>/run</code> 下面。由于 <code>/run</code> 可以使用内存来仿真，因此性能上会好很多。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>/sbin</code></td>
+<td style="text-align:left">Linux 有非常多指令是用来设置系统环境的，这些指令只有 root 才能够利用来「设置」系统，其他使用者最多只能用来「查询」而已。 放在 <code>/sbin</code> 下面的为<strong>开机过程中所需要的</strong>，里面包括了开机、修复、还原系统所需要的指令。常见的指令包括：<code>fdisk</code>、<code>fsck</code>、<code>ifconfig</code>、<code>mkfs</code> 等等。<br>至于某些<strong>服务器软件程序</strong>，一般则放置到 <code>/usr/sbin</code> 当中。<br>至于本机<strong>自行安装的软件所产生的系统可执行文件</strong>，则放置到 <code>/usr/local/sbin</code> 当中。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>/srv</code></td>
+<td style="text-align:left">「srv」可以视为「service」的缩写，是一些网络服务启动之后，这些服务所需要取用的数据目录。常见的服务例如 <code>WWW</code>、<code>FTP</code> 等等。举例来说，<code>WWW</code> 服务器需要的网页数据就可以放置在 <code>/srv/www</code> 里面。 不过，系统的服务数据如果尚未要提供给网际网络任何人浏览的话，默认还是建议放置到 <code>/var/lib</code>下面即可。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>/tmp</code></td>
+<td style="text-align:left">这是让一般使用者或者是正在执行的程序暂时放置文件的地方。 这个目录是任何人都能够存取的，所以你需要定期的清理一下。当然，重要数据不可放置在此目录。因为 FHS 甚至建议在开机时，应该要将 <code>/tmp</code> 下的数据都删除。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>/usr</code></td>
+<td style="text-align:left">第二层 FHS 设置，下文介绍。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>/var</code></td>
+<td style="text-align:left">第二层 FHS 设置，下文介绍。</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>FHS 建议可以存在的目录</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">目录</th>
+<th style="text-align:left">应放置文件内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>/home</code></td>
+<td style="text-align:left">这是系统默认的使用者主文件夹。在你新增一个一般使用者帐号时，默认的使用者主文件夹都会规范到这里来。比较重要的是，主文件夹有两种代号：<br><code>~</code> ——代表目前这个使用者的主文件夹。<br><code>~xxx</code> ——代表 <code>xxx</code> 用户的主文件夹。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>/lib&lt;qual&gt;</code></td>
+<td style="text-align:left">用来存放与 <code>/lib</code> 不同的格式的二进制函式库，例如支持 32 位的 <code>/lib32</code>、64 位的 <code>/lib64</code> 函式库等。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>/root</code></td>
+<td style="text-align:left">系统管理员 <code>root</code> 的主文件夹。之所以放在这里，是因为如果进入单人维护模式而仅挂载根目录时，该目录就能够拥有 root 的主文件夹，所以我们会希望 root 的主文件夹与根目录放置在同一个分区中。</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>非 FHS 标准规定但同样重要的目录</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">目录</th>
+<th style="text-align:left">应放置文件内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>/lost+found</code></td>
+<td style="text-align:left">这个目录是使用标准的 Ext2/Ext3/Ext4 文件系统格式才会产生的一个目录，目的在于当文件系统发生错误时，将一些遗失的片段放置到这个目录下。如果使用的是 xfs 文件系统，就不会存在这个目录。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>/proc</code></td>
+<td style="text-align:left">这个目录本身是一个「虚拟文件系统」。它放置的数据都是在内存当中，例如系统核心、进程信息、周边设备的状态及网络状态等等。因为这个目录下的数据都是在内存当中，所以本身不占任何硬盘空间。比较重要的文件有：<code>/proc/cpuinfo</code>、<code>/proc/dma</code>、<code>/proc/interrupts</code>、<code>/proc/ioports</code>、<code>/proc/net/*</code> 等等。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>/sys</code></td>
+<td style="text-align:left">这个目录其实跟 <code>/proc</code> 非常类似，也是一个「虚拟文件系统」，主要也是记录核心与系统硬件信息较相关的信息。包括目前已载入的核心模块与核心侦测到的硬件设备信息等等。这个目录同样不占硬盘容量。</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>需要注意的是，因为根目录与开机有关，开机过程中仅有根目录会被挂载，其它分区则是在开机完成之后才会持续地进行挂载的行为。因此根目录下与开机过程有关的目录，就不能够与根目录放到不同的分区中。以下目录不可与根目录分开：</p>
+<ul>
+<li><code>/etc</code>：存放配置文件。</li>
+<li><code>/bin</code>：存放重要执行文件。</li>
+<li><code>/dev</code>：存放所需要的设备文件。</li>
+<li><code>/lib</code>：存放重要执行文件所需的函式库和核心相关模块。</li>
+<li><code>/sbin</code>：存放重要的系统执行文件。</li>
+</ul>
+</blockquote>
+<h4 id="2-2-2-usr-目录">2.2.2 <code>/usr</code> 目录</h4>
+<p>【注】很多读者都会误会 usr 为 user 的缩写，其实 usr 是 Unix Software Resource 的缩写，即「Unix 操作系统软件资源」所放置的目录，而不是使用者的数据目录。</p>
+<p>早期 Linux 在设计的时候，若发生问题时，救援模式通常仅挂载根目录而已，因此有五个重要的目录被要求一定要与根目录放置在一起，那就是 <code>/etc</code>、<code>/bin</code>、<code>/dev</code>、<code>/lib</code>、<code>/sbin</code> 这五个重要目录。现在许多的 Linux 发行版由于已经将许多非必要的文件移出 <code>/usr</code> 之外了，所以<br />
+<code>/usr</code> 也是越来越精简。同时因为 <code>/usr</code> 被建议为「即使挂载成为只读，系统还是可以正常运行」的模样，所以救援模式也能同时挂载 <code>/usr</code>。</p>
+<blockquote>
+<p>CentOS 7.x 版本在救援模式时就挂载了 <code>/usr</code> 目录，而且 CentOS 7.x 已经将 <code>/sbin</code>、<code>/bin</code>、<code>/lib</code> 通通移动到 <code>/usr</code> 下面了，即 <code>/sbin</code>、<code>/bin</code>、<code>/lib</code> 都只是 <code>/usr/sbin</code>、<code>/usr/bin</code>、<code>/usr/lib</code> 的符号链接。因此那个五大目录的限制其实已经被打破了。</p>
+</blockquote>
+<p>依据 FHS 的基本定义，<code>/usr</code> 里面放置的数据属于可分享的与不可变动的。所有系统默认的软件（发行版发布者提供的软件）都会放置到 <code>/usr</code> 下面，因此这个目录有点类似 Windows 系统的 <code>C:\Windows</code>（当中的一部份）和 <code>C:\Program files</code> 这两个目录的综合体。FHS 定义出目录 <code>/usr</code> 下面应该要有下面这些次目录的存在才好：</p>
+<ul>
+<li>FHS 要求必须要存在的目录</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">目录</th>
+<th style="text-align:left">应放置文件内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>/usr/bin</code></td>
+<td style="text-align:left">所有一般用户能够使用的指令都放在这里。目前新的 CentOS 7 已经将全部的使用者指令放置于此，而使用链接文件的方式将 <code>/bin</code> 链接至此。另外，FHS 要求在此目录下不应该有子目录。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>/usr/lib</code></td>
+<td style="text-align:left">基本上，与 <code>/lib</code> 功能相同，所以 <code>/lib</code> 就是链接到此目录中的。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>/usr/local</code></td>
+<td style="text-align:left">系统管理员在本机自行安装自己下载的软件（非发行版默认提供者的），建议安装到此目录，这样会比较便于管理。该目录下也具有<code>bin</code>、<code>etc</code>、<code>include</code>、<code>lib</code> 等次目录。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>/usr/sbin</code></td>
+<td style="text-align:left">非系统正常运行所需要的系统指令。最常见的就是某些网络服务器软件的服务指令（daemon）。不过基本功能与 <code>/sbin</code> 也差不多，因此目前 <code>/sbin</code> 就是链接到此目录中的。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>/usr/share</code></td>
+<td style="text-align:left">主要放置只读架构的数据文件，当然也包括共享文件。在这个目录下放置的数据几乎是不分硬件架构均可读取的数据，因为几乎都是文字文件。在此目录下常见的还有这些次目录：<br><code>/usr/share/man</code> ——线上说明文档。<br><code>/usr/share/doc</code> ——软件杂项的文件说明。<br><code>/usr/share/zoneinfo</code> ——与时区有关的时区文件。</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>FHS 建议可以存在的目录</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">目录</th>
+<th style="text-align:left">应放置文件内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>/usr/games</code></td>
+<td style="text-align:left">与游戏比较相关的数据放置处。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>/usr/include</code></td>
+<td style="text-align:left">C/C++ 等程序语言的文件开头（header）与包含档（include）放置处，当我们以 tarball 方式（<code>*.tar.gz</code> 的方式安装软件）安装某些数据时，会使用到里头的许多包含档。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>/usr/libexec</code></td>
+<td style="text-align:left">某些不被一般使用者惯用的可执行文件或脚本等等，都会放置在此目录中。例如大部分的 X 窗口下面的操作指令，很多都是放在此目录下的。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>/usr/lib&lt;qual&gt;</code></td>
+<td style="text-align:left">与 <code>/lib&lt;qual&gt;</code> 功能相同，因此目前 <code>/lib&lt;qual&gt;</code> 就是链接到此目录中。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>/usr/src</code></td>
+<td style="text-align:left">一般源代码建议放置到这里，src 有 source 的意思。至于核心源代码则建议放置到 <code>/usr/src/linux</code> 目录下。</td>
+</tr>
+</tbody>
+</table>
+<h4 id="2-2-3-var-目录">2.2.3 <code>/var</code> 目录</h4>
+<p>如果说 <code>/usr</code> 是安装时会占用较大硬盘容量的目录，那么 <code>/var</code> 就是在系统运行后才会渐渐占用硬盘容量的目录。因为 <code>/var</code> 目录主要针对常态性变动的文件，包括高速缓存（cache）、登录文件（log file）以及某些软件运行所产生的文件，包括程序文件（lock file、run file）等等。例如 MySQL 数据库的文件。FHS 定义出目录 <code>/var</code> 下面应该要有下面这些次目录的存在才好：</p>
+<ul>
+<li>FHS 要求必须要存在的目录</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">目录</th>
+<th style="text-align:left">应放置文件内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>/var/cache</code></td>
+<td style="text-align:left">应用程序本身运行过程中会产生的一些暂存文件。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>/var/lib</code></td>
+<td style="text-align:left">程序本身执行的过程中，需要使用到的数据文件放置的目录。在此目录下各自的软件应该要有各自的目录。举例来说，MySQL 的数据库放置到 <code>/var/lib/mysql</code> 中，而 rpm 的数据库则放到 <code>/var/lib/rpm</code> 中。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>/var/lock</code></td>
+<td style="text-align:left">某些设备或者是文件资源一次只能被一个应用程序所使用，如果同时有两个程序使用该设备时，就可能产生一些错误的状况，因此就得要将该设备上锁（lock），以确保该设备只会给单一软件所使用。目前此目录也已经挪到 <code>/run/lock</code> 中。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>/var/log</code></td>
+<td style="text-align:left">重要到不行。这是登录文件放置的目录，里面比较重要的文件如 <code>/var/log/messages</code>、<code>/var/log/wtmp</code>（记录登录者的信息）等。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>/var/mail</code></td>
+<td style="text-align:left">放置个人电子邮件信箱的目录，不过这个目录也被放置到 <code>/var/spool/mail</code> 目录中。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>/var/run</code></td>
+<td style="text-align:left">某些程序或者是服务启动后，会将他们的 PID 放置在这个目录下。与 <code>/run</code> 相同，这个目录链接到 <code>/run</code> 去了。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>/var/spool</code></td>
+<td style="text-align:left">这个目录通常放置一些伫列数据，所谓的「伫列」就是排队等待其他程序使用的数据，这些数据被使用后通常都会被删除。举例来说：<br>系统收到新邮件会放置到 <code>/var/spool/mail</code> 中，但使用者收下该邮件后该封邮件原则上就会被删除。<br>邮件如果暂时寄不出去会被放到 <code>/var/spool/mqueue</code> 中，等到被送出后就被删除。<br>如果是工作调度数据（crontab），就会被放置到 <code>/var/spool/cron/</code> 目录。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="附录">附录</h2>
+<p>参考资料：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="http://linux.vbird.org/linux_basic/0210filepermission.php#dir_fhs">鸟哥的 Linux 私房菜：基础学习篇之「Linux 文件权限与目录配置」</a></li>
+<li><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard">Filesystem Hierarchy Standard</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.pathname.com/fhs">FHS 2.3（2004 年版）</a></li>
+<li><a target="_blank" rel="noopener" href="https://refspecs.linuxfoundation.org/fhs.shtml">FHS 3.0（2015 年版）</a></li>
+<li><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/ENKBH2LqklUkoBc3ufkPVw">每天一个 Linux 命令（23）：Linux 目录结构</a></li>
+</ul>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/Linux/">Linux</a>
+                    
+                      <a class="hover-with-bg" href="/categories/Linux/Sundry/">Sundry</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Linux/">Linux</a>
+                    
+                      <a class="hover-with-bg" href="/tags/Sundry/">Sundry</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2021/08/26/ACM/%E9%A2%98%E8%A7%A3/P1494%E3%80%8C%5B%E5%9B%BD%E5%AE%B6%E9%9B%86%E8%AE%AD%E9%98%9F%5D%E5%B0%8FZ%E7%9A%84%E8%A2%9C%E5%AD%90%E3%80%8D/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">P1494「[国家集训队]小Z的袜子」</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/08/23/Git/Git%E4%BF%A1%E6%81%AF%E8%B7%9F%E8%B8%AA/">
+                        <span class="hidden-mobile">Git信息跟踪</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="waline"></div>
+  <script type="text/javascript">
+    Fluid.utils.lazyComments('waline', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js', function () {
+        new Waline({
+          el: "#waline",
+          placeholder: "都看到这里了，留个脚印再走呗~",
+          path: window.location.pathname,
+          avatar: "retro",
+          visitor: true,
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: true,
+          serverURL: "https://waline-one-beta.vercel.app/",
+          avatarCDN: "https://gravatar.loli.net/avatar/",
+          avatarForce: false,
+          requiredMeta: [],
+          emoji: ["https://cdn.jsdelivr.net/gh/hotarugali/Emoji@bilibili_tv_gif/waline/bilibili_tv_gif","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@bilibiliHotKey/waline/bilibiliHotKey","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@bilibili2233/waline/bilibili2233","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@smallshake/waline/smallshake","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@alu/waline/alu","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@QQ/waline/QQ","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@Tieba-New/waline/Tieba-New","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@weibo/waline/weibo"],
+          // emojiMaps: ,
+          login: "enable",
+          dark: 'html[data-user-color-scheme="dark"]',
+        });
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the
+    <a target="_blank" href="https://waline.js.org" rel="nofollow noopener noopener">comments powered by Waline.</a>
+  </noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+      <div class="col-lg-7 mx-auto nopadding-x-md">
+        <div class="container custom mx-auto">
+          <script src="https://myhkw.cn/api/player/161389264877" id="myhk" key="161389264877" m="1"></script>
+        </div>
+      </div>
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+
+  <script defer src="/js/leancloud.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- KaTeX -->
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" />
+  
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/mermaid@8.8.3/dist/mermaid.min.js" ></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({"theme":"default"});
+    }
+  </script>
+
+
+
+
+  
+    <!-- Baidu Analytics -->
+    <script defer>
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?c194cf0c8cbc33bfb846ba1329537d81";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  
+    <!-- Google Analytics -->
+    <script defer>
+      window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) };
+      ga.l = +new Date;
+      ga('create', 'G-SXJN0942X9', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+  
+
+  
+    <!-- Google gtag.js -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D3DEHLLP3W"></script>
+    <script defer>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-D3DEHLLP3W');
+    </script>
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

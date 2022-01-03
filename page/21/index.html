@@ -197,19 +197,26 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/08/26/ACM/%E9%A2%98%E8%A7%A3/POJ3250%E3%80%8CBad%20Hair%20Day%E3%80%8D/">POJ3250「Bad Hair Day」</a>
+        <a href="/2020/09/28/DeepLearning/%E8%AF%AF%E5%B7%AE%E5%87%BD%E6%95%B0/">误差函数</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/08/26/ACM/%E9%A2%98%E8%A7%A3/POJ3250%E3%80%8CBad%20Hair%20Day%E3%80%8D/">
+        <a href="/2020/09/28/DeepLearning/%E8%AF%AF%E5%B7%AE%E5%87%BD%E6%95%B0/">
           
           
             
           
-          1. 题目
-题目链接：POJ3250「Bad Hair Day」 。
-Description
-Some of Farmer John's NNN cows (1 ≤ NNN ≤ 80,000) are having a bad hair day! Since each cow is self-conscious about her messy hairstyle, FJ wants to coun
+          1. 平方误差
+
+对于单个数据来说，其平方误差为
+
+E=12∑k(yk−tk)2\begin{array}{c}
+E = \frac{1}{2} \sum_{k} (y_k - t_k)^2
+\end{array}
+E=21​∑k​(yk​−tk​)2​
+其中，yky_kyk​ 表示神经网络的输出，tkt_ktk​ 表示监督数据（ttt 采用 one-hot 编码），kkk 表示数据的维度。
+
+对
         </a>
       </p>
 
@@ -217,8 +224,8 @@ Some of Farmer John's NNN cows (1 ≤ NNN ≤ 80,000) are having a bad hair day!
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-08-26 14:51" pubdate>
-              2020-08-26
+            <time datetime="2020-09-28 11:40" pubdate>
+              2020-09-28
             </time>
           </div>
         
@@ -226,9 +233,7 @@ Some of Farmer John's NNN cows (1 ≤ NNN ≤ 80,000) are having a bad hair day!
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/ACM/">ACM</a>
-            
-              <a href="/categories/ACM/%E9%A2%98%E8%A7%A3/">题解</a>
+              <a href="/categories/DeepLearning/">DeepLearning</a>
             
           </div>
         
@@ -236,9 +241,9 @@ Some of Farmer John's NNN cows (1 ≤ NNN ≤ 80,000) are having a bad hair day!
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/ACM/">ACM</a>
+              <a href="/tags/DeepLearning/">DeepLearning</a>
             
-              <a href="/tags/%E9%A2%98%E8%A7%A3/">题解</a>
+              <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a>
             
           </div>
         
@@ -252,22 +257,22 @@ Some of Farmer John's NNN cows (1 ≤ NNN ≤ 80,000) are having a bad hair day!
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/08/24/ACM/%E7%AE%97%E6%B3%95/%E5%AD%97%E7%AC%A6%E4%B8%B2/%E5%90%8E%E7%BC%80%E6%95%B0%E7%BB%84/%E5%90%8E%E7%BC%80%E6%95%B0%E7%BB%84/">后缀数组</a>
+        <a href="/2020/09/27/Math/Theory/%E7%9F%A9%E9%98%B5/MoorePenrose%E4%BC%AA%E9%80%86/">MoorePenrose伪逆</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/08/24/ACM/%E7%AE%97%E6%B3%95/%E5%AD%97%E7%AC%A6%E4%B8%B2/%E5%90%8E%E7%BC%80%E6%95%B0%E7%BB%84/%E5%90%8E%E7%BC%80%E6%95%B0%E7%BB%84/">
+        <a href="/2020/09/27/Math/Theory/%E7%9F%A9%E9%98%B5/MoorePenrose%E4%BC%AA%E9%80%86/">
           
           
             
           
           1. 简介
-后缀数组是处理字符串的一种强有力工具，高效而且容易编程实现，可应用于求字符串的多种子串问题中，可谓处理字符串的一大利器。
-2. 思想
-2.1 子串
-字符串 SSS 的子串 s[i..j], i≤js[i..j], \ i \leq js[i..j], i≤j 表示串 SSS 中从第 iii 个字符到第 jjj 个字符形成的字符串。
-2.1.1 重复子串
-字符串 sss 在字符串 SSS
+Moore-Penrose 伪逆常用于求解或简化非一致线性方程组的最小范数最小二乘解。其在实数域和复数域上都是唯一的，并且可以通过奇异值分解求得。
+2. 定义
+矩阵 AAA 的伪逆定义为
+A+=lim⁡α→0(ATA+αI)−1AT\begin{array}{c}
+A^+ = \lim_{\alpha \rightarrow 0}(A^T A + \alpha I)^{-1} A^T
+
         </a>
       </p>
 
@@ -275,8 +280,8 @@ Some of Farmer John's NNN cows (1 ≤ NNN ≤ 80,000) are having a bad hair day!
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-08-24 17:11" pubdate>
-              2020-08-24
+            <time datetime="2020-09-27 22:13" pubdate>
+              2020-09-27
             </time>
           </div>
         
@@ -284,11 +289,11 @@ Some of Farmer John's NNN cows (1 ≤ NNN ≤ 80,000) are having a bad hair day!
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/ACM/">ACM</a>
+              <a href="/categories/Math/">Math</a>
             
-              <a href="/categories/ACM/%E7%AE%97%E6%B3%95/">算法</a>
+              <a href="/categories/Math/Theory/">Theory</a>
             
-              <a href="/categories/ACM/%E7%AE%97%E6%B3%95/%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</a>
+              <a href="/categories/Math/Theory/%E7%9F%A9%E9%98%B5/">矩阵</a>
             
           </div>
         
@@ -296,13 +301,13 @@ Some of Farmer John's NNN cows (1 ≤ NNN ≤ 80,000) are having a bad hair day!
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/ACM/">ACM</a>
+              <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
             
-              <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
+              <a href="/tags/Math/">Math</a>
             
-              <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</a>
+              <a href="/tags/Theory/">Theory</a>
             
-              <a href="/tags/%E7%AE%97%E6%B3%95-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">算法 数据结构</a>
+              <a href="/tags/%E7%9F%A9%E9%98%B5/">矩阵</a>
             
           </div>
         
@@ -316,18 +321,23 @@ Some of Farmer John's NNN cows (1 ≤ NNN ≤ 80,000) are having a bad hair day!
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/08/24/ACM/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/%E6%A1%B6%E6%8E%92%E5%BA%8F/">桶排序</a>
+        <a href="/2020/09/27/Math/Theory/%E7%9F%A9%E9%98%B5/%E8%8C%83%E6%95%B0/">范数</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/08/24/ACM/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/%E6%A1%B6%E6%8E%92%E5%BA%8F/">
+        <a href="/2020/09/27/Math/Theory/%E7%9F%A9%E9%98%B5/%E8%8C%83%E6%95%B0/">
           
           
             
           
-          【注】参考自教材「算法导论」。
-1. 简介
-  桶排序是将待排序序列分到有限数量的桶中，然后对每一个桶分别进行排序。桶排序的前提假设为被排序序列的关键字数值符合均匀分布，此时桶排序的平均时间复杂度为 O(n+n2k+k)O(n + {n^2 \over k} + k)O(n+kn2​+k)，最坏时间复杂度为 O(n2)O(n^2)O(n2)，其中 kkk 为桶的数量。当桶数量 k≈nk \appr
+          1. 向量范数
+1.1 LpL_pLp​ 范数
+LpL_pLp​ 范数是向量空间中的一组范数。
+1.1.1 定义
+Lp(x⃗)=∣x⃗∣p=(∑i=1n∣xi∣p)1p\begin{array}{c}
+L_p(\vec{x}) = |\vec{x}|_p = (\sum_{i=1}^n |x_i|^p)^{\frac{1}{p}}
+\end{array}
+Lp​(x)=∣x∣p​=(∑i=1n​∣
         </a>
       </p>
 
@@ -335,8 +345,8 @@ Some of Farmer John's NNN cows (1 ≤ NNN ≤ 80,000) are having a bad hair day!
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-08-24 13:25" pubdate>
-              2020-08-24
+            <time datetime="2020-09-27 19:20" pubdate>
+              2020-09-27
             </time>
           </div>
         
@@ -344,11 +354,11 @@ Some of Farmer John's NNN cows (1 ≤ NNN ≤ 80,000) are having a bad hair day!
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/ACM/">ACM</a>
+              <a href="/categories/Math/">Math</a>
             
-              <a href="/categories/ACM/%E7%AE%97%E6%B3%95/">算法</a>
+              <a href="/categories/Math/Theory/">Theory</a>
             
-              <a href="/categories/ACM/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/">排序</a>
+              <a href="/categories/Math/Theory/%E7%9F%A9%E9%98%B5/">矩阵</a>
             
           </div>
         
@@ -356,11 +366,13 @@ Some of Farmer John's NNN cows (1 ≤ NNN ≤ 80,000) are having a bad hair day!
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/ACM/">ACM</a>
+              <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
             
-              <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
+              <a href="/tags/Math/">Math</a>
             
-              <a href="/tags/%E6%8E%92%E5%BA%8F/">排序</a>
+              <a href="/tags/Theory/">Theory</a>
+            
+              <a href="/tags/%E7%9F%A9%E9%98%B5/">矩阵</a>
             
           </div>
         
@@ -374,20 +386,20 @@ Some of Farmer John's NNN cows (1 ≤ NNN ≤ 80,000) are having a bad hair day!
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/08/22/ACM/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/%E5%B8%8C%E5%B0%94%E6%8E%92%E5%BA%8F/">希尔排序</a>
+        <a href="/2020/09/27/Math/Theory/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/%E6%9D%A1%E4%BB%B6%E6%95%B0/">条件数</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/08/22/ACM/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/%E5%B8%8C%E5%B0%94%E6%8E%92%E5%BA%8F/">
+        <a href="/2020/09/27/Math/Theory/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/%E6%9D%A1%E4%BB%B6%E6%95%B0/">
           
           
             
           
           1. 简介
-希尔排序又称缩小增量排序，其也属于插入排序类算法。相教于一般的插入算法、折半插入算法、2-路插入算法以及表插入算法，希尔排序在时间效率上更加优秀。
-2. 思想
-对于普通的插入算法，其时间复杂度为 O(n2)O(n^2)O(n2)，且在序列有序时，可以达到最好的时间复杂度 O(n)O(n)O(n)；而且当 nnn 较小时，由于移动的元素较少，插入排序效率也比较高。
-因此，我们可以采用分治
+数值分析中，函数的条件数衡量的是输入参数的微小变化可以使函数的输出值变化多少，用来测量函数输出对于输入的微小变化的敏感程度，或者说一个问题的条件数是该数量在数值计算中容易程度的衡量。一个低条件数的问题称为良置的，而高条件数的问题称为病态（非良置）的。
+2. 定义
+给定问题 fff，输入 xxx 以及用于求解问题的算法 f~\tilde{f}f~​，则绝对误差定义为
+E(f~(x))=∣
         </a>
       </p>
 
@@ -395,8 +407,8 @@ Some of Farmer John's NNN cows (1 ≤ NNN ≤ 80,000) are having a bad hair day!
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-08-22 23:12" pubdate>
-              2020-08-22
+            <time datetime="2020-09-27 16:49" pubdate>
+              2020-09-27
             </time>
           </div>
         
@@ -404,11 +416,11 @@ Some of Farmer John's NNN cows (1 ≤ NNN ≤ 80,000) are having a bad hair day!
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/ACM/">ACM</a>
+              <a href="/categories/Math/">Math</a>
             
-              <a href="/categories/ACM/%E7%AE%97%E6%B3%95/">算法</a>
+              <a href="/categories/Math/Theory/">Theory</a>
             
-              <a href="/categories/ACM/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/">排序</a>
+              <a href="/categories/Math/Theory/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/">数值分析</a>
             
           </div>
         
@@ -416,11 +428,13 @@ Some of Farmer John's NNN cows (1 ≤ NNN ≤ 80,000) are having a bad hair day!
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/ACM/">ACM</a>
+              <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
             
-              <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
+              <a href="/tags/Math/">Math</a>
             
-              <a href="/tags/%E6%8E%92%E5%BA%8F/">排序</a>
+              <a href="/tags/Theory/">Theory</a>
+            
+              <a href="/tags/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/">数值分析</a>
             
           </div>
         
@@ -434,332 +448,23 @@ Some of Farmer John's NNN cows (1 ≤ NNN ≤ 80,000) are having a bad hair day!
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/08/22/ACM/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/%E5%9F%BA%E7%A1%80%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/">基础排序算法</a>
+        <a href="/2020/09/27/Math/Theory/%E7%9F%A9%E9%98%B5/%E6%AD%A3%E8%B4%9F%E5%AE%9A%E7%9F%A9%E9%98%B5/">正负定矩阵</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/08/22/ACM/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/%E5%9F%BA%E7%A1%80%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/">
+        <a href="/2020/09/27/Math/Theory/%E7%9F%A9%E9%98%B5/%E6%AD%A3%E8%B4%9F%E5%AE%9A%E7%9F%A9%E9%98%B5/">
           
           
             
           
-          【注】参考自教材「算法导论」。
-1. 插入排序
-1.1 简介
-插入排序是稳定的、原址的排序算法，其时间复杂度为 O(n2)O(n^2)O(n2) 。
-1.2 伪代码
-1234567891011InsertionSort(A) &#123;    for j = 2 to A.length        key = A[j]        // 将 A[j] 插入到有序数组 A[1..j-1] 中 
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-08-22 19:31" pubdate>
-              2020-08-22
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/ACM/">ACM</a>
-            
-              <a href="/categories/ACM/%E7%AE%97%E6%B3%95/">算法</a>
-            
-              <a href="/categories/ACM/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/">排序</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/ACM/">ACM</a>
-            
-              <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
-            
-              <a href="/tags/%E6%8E%92%E5%BA%8F/">排序</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/08/21/ACM/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E6%A6%82%E8%BF%B0/">排序算法概述</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/08/21/ACM/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E6%A6%82%E8%BF%B0/">
-          
-          
-            
-          
-          1. 概念
-1.1 原址
-如果输入数组中仅有常数个元素需要在排序过程中存储在数组之外，则成排序算法是原址的。
-1.2 稳定
-在输入数组中，存在多个具有相同的关键字的元素，若经过排序，这些元素的相对次序保持不变，则称这种排序算法是稳定的，否则称为不稳定的。
-2. 算法
-2.1 比较排序
-
-
-
-排序方法
-平均时间复杂度
-最坏时间复杂度
-最好时间复杂度
-空间复杂度
-稳定性
-
-
-
-
-插入排序
-O(n2)O
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-08-21 23:50" pubdate>
-              2020-08-21
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/ACM/">ACM</a>
-            
-              <a href="/categories/ACM/%E7%AE%97%E6%B3%95/">算法</a>
-            
-              <a href="/categories/ACM/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/">排序</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/ACM/">ACM</a>
-            
-              <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
-            
-              <a href="/tags/%E6%8E%92%E5%BA%8F/">排序</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/08/20/ACM/%E9%A2%98%E8%A7%A3/PAT%E3%80%8C1005%20Programming%20Pattern%20(35%E5%88%86)%E3%80%8D/">PAT「1005 Programming Pattern (35分)」</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/08/20/ACM/%E9%A2%98%E8%A7%A3/PAT%E3%80%8C1005%20Programming%20Pattern%20(35%E5%88%86)%E3%80%8D/">
-          
-          
-            
-          
-          1. 题目
-题目链接：PAT「1005 Programming Pattern (35分)」 。
-Description
-  Programmers often have a preference among program constructs. For example, some may prefer if(0==a), while others may prefer if(!a). Anal
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-08-20 23:32" pubdate>
-              2020-08-20
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/ACM/">ACM</a>
-            
-              <a href="/categories/ACM/%E9%A2%98%E8%A7%A3/">题解</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/ACM/">ACM</a>
-            
-              <a href="/tags/%E9%A2%98%E8%A7%A3/">题解</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/08/19/C++/%E6%9C%AF%E8%AF%AD/">术语</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/08/19/C++/%E6%9C%AF%E8%AF%AD/">
-          
-          
-            
-          
-          
-GP：Generic Programming
-OO：Object Oriented
-STL：Standard Template Library
-
-
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-08-19 20:10" pubdate>
-              2020-08-19
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/C/">C++</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/C/">C++</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/08/18/ACM/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F/">基数排序</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/08/18/ACM/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F/">
-          
-          
-            
-          
-          【注】参考自教材「算法导论」。
-1. 简介
-基数排序属于非比较排序算法类，故其时间复杂度不受比较排序算法时间复杂度下界的限制。基数排序对排序关键字的最低数位到最高数位中的每一数位采用其他排序算法进行排序。基数排序时间复杂度可以达到 O(d(n+k))O(d(n+k))O(d(n+k))（这中情况下对每一数位采用的排序算法为计数排序）。其中，kkk 为待排序序列的排序关键字每一数位的最大范围，ddd
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-08-18 19:05" pubdate>
-              2020-08-18
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/ACM/">ACM</a>
-            
-              <a href="/categories/ACM/%E7%AE%97%E6%B3%95/">算法</a>
-            
-              <a href="/categories/ACM/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/">排序</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/ACM/">ACM</a>
-            
-              <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
-            
-              <a href="/tags/%E6%8E%92%E5%BA%8F/">排序</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/08/18/ACM/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/%E5%A0%86%E6%8E%92%E5%BA%8F%E4%B8%8E%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97/">堆排序与优先队列</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/08/18/ACM/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/%E5%A0%86%E6%8E%92%E5%BA%8F%E4%B8%8E%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97/">
-          
-          
-            
-          
-          【注】参考自教材「算法导论」。
-1. 堆
+          1. 正定矩阵
 1.1 定义
-（二叉）堆物理上是一个数组，逻辑上是一棵完全二叉树，树上的每一个结点对应数组中的一个元素。
-设表示堆的数组 AAA，其包含两个属性：
 
 
-A.lengthA.lengthA.length 给出数组元素的个数。
-A.heapsizeA.heapsizeA.heapsize 给出有多少个堆元素存储在该数组中。
+在实数域下，一个 n×nn \times nn×n 的实对称矩阵 MMM 是正定的，当且仅当对于所有的非零实系数向量 zzz 都有 zTMz&gt;0z^T M z \gt 0zTMz&gt;0 。
 
 
-1.2 性质
-从根结点编号为 1
+在复数域下，一个 n×nn \times nn×n 的埃尔米特矩阵 MMM 是正定的当且仅当对于每个非零的复向量 zzz 都有 z∗Mz&gt;0z^* M z 
         </a>
       </p>
 
@@ -767,8 +472,243 @@ A.heapsizeA.heapsizeA.heapsize 给出有多少个堆元素存储在该数组中�
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-08-18 19:05" pubdate>
-              2020-08-18
+            <time datetime="2020-09-27 15:57" pubdate>
+              2020-09-27
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Math/">Math</a>
+            
+              <a href="/categories/Math/Theory/">Theory</a>
+            
+              <a href="/categories/Math/Theory/%E7%9F%A9%E9%98%B5/">矩阵</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
+            
+              <a href="/tags/Math/">Math</a>
+            
+              <a href="/tags/Theory/">Theory</a>
+            
+              <a href="/tags/%E7%9F%A9%E9%98%B5/">矩阵</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/09/26/MachineLearning/%E5%B8%B8%E7%94%A8%E7%9F%A9%E9%98%B5/">常用矩阵</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/09/26/MachineLearning/%E5%B8%B8%E7%94%A8%E7%9F%A9%E9%98%B5/">
+          
+          
+            
+          
+          1. Jacobian matrix(雅可比矩阵)
+1.1 定义
+如果函数 f:Rn→Rm
+\boldsymbol{f}: \mathbb{R}^n \rightarrow \mathbb{R}^m
+f:Rn→Rm 在点 x\boldsymbol{x}x 可微，则在点 x\boldsymbol{x}x 的 Jacobian 矩阵即为该函数在该点的最佳线性逼近，也被称为向量值多变数函数 f\bold
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-09-26 22:11" pubdate>
+              2020-09-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/MachineLearning/">MachineLearning</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/MachineLearning/">MachineLearning</a>
+            
+              <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/09/26/DeepLearning/%E6%BF%80%E6%B4%BB%E5%87%BD%E6%95%B0/%E6%BF%80%E6%B4%BB%E5%87%BD%E6%95%B0/">激活函数</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/09/26/DeepLearning/%E6%BF%80%E6%B4%BB%E5%87%BD%E6%95%B0/%E6%BF%80%E6%B4%BB%E5%87%BD%E6%95%B0/">
+          
+          
+            
+          
+          常见激活函数及其导数：
+
+1. Sigmoid 函数
+【注】Sigmoid 型函数是指一类 S 型曲线函数，为两端饱和函数。常用的 Sigmoid 型函数有Logistic函数和Tanh函数。
+1.1 Logistic 函数
+
+定义：
+
+σ(x)=11+e−x\begin{array}{c}
+\sigma(x) = {1 \over 1 + e^{-x}}
+\end{array}
+σ(x)=1+e
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-09-26 20:21" pubdate>
+              2020-09-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/DeepLearning/">DeepLearning</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/DeepLearning/">DeepLearning</a>
+            
+              <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">机器学习&深度学习</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/09/26/Math/Theory/%E6%95%B0%E5%AD%97%E4%B8%96%E7%95%8C%E4%B8%AD%E5%B8%B8%E8%A7%81%E5%87%BD%E6%95%B0/">数字世界中常见函数</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/09/26/Math/Theory/%E6%95%B0%E5%AD%97%E4%B8%96%E7%95%8C%E4%B8%AD%E5%B8%B8%E8%A7%81%E5%87%BD%E6%95%B0/">
+          
+          
+            
+          
+          1. 狄利克雷函数
+英文名称为「Dirac Delta Function」。
+1.1 简介
+狄利克雷函数在除零以外的点取值均为 0，但在整个定义域上的积分为 1。δ\deltaδ 函数可以看作是在原点处无限高、无限细，但总面积为 1 的一个尖峰。
+1.2 定义
+δ(x)={+∞x=00x≠0∫−∞+∞δ(x)dx=1\begin{array}{c}
+\delta(x) = \begin{cases
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-09-26 12:23" pubdate>
+              2020-09-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Math/">Math</a>
+            
+              <a href="/categories/Math/Theory/">Theory</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
+            
+              <a href="/tags/Math/">Math</a>
+            
+              <a href="/tags/Theory/">Theory</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/09/24/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%A6/%E5%BF%AB%E9%80%9F%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/">快速傅里叶变换</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/09/24/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%A6/%E5%BF%AB%E9%80%9F%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/">
+          
+          
+            
+          
+          【注】参考自算法导论。
+1. 简介
+快速傅里叶变换（FFT）是实现离散傅里叶变换（DFT）和离散傅里叶逆变换（IDFT）的快速算法，其时间复杂度为 O(nlog⁡n)O(n \log n)O(nlogn)。DFT 在实际生活中有很多应用，比如通过离散傅里叶变换，可以将系数表示的多项式转为点值表示的多项式，从而使得多项式的乘法的复杂度由 O(n2)O(n^2)O(n2) 降为 O(n)O(n)O(n
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-09-24 10:12" pubdate>
+              2020-09-24
             </time>
           </div>
         
@@ -780,7 +720,7 @@ A.heapsizeA.heapsizeA.heapsize 给出有多少个堆元素存储在该数组中�
             
               <a href="/categories/ACM/%E7%AE%97%E6%B3%95/">算法</a>
             
-              <a href="/categories/ACM/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/">排序</a>
+              <a href="/categories/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%A6/">数学</a>
             
           </div>
         
@@ -788,13 +728,77 @@ A.heapsizeA.heapsizeA.heapsize 给出有多少个堆元素存储在该数组中�
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
+              <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
+            
               <a href="/tags/ACM/">ACM</a>
             
               <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
             
-              <a href="/tags/%E6%8E%92%E5%BA%8F/">排序</a>
+              <a href="/tags/%E6%95%B0%E5%AD%A6-%E7%AE%97%E6%B3%95/">数学 算法</a>
             
-              <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a>
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/09/23/Math/Theory/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/%E7%A6%BB%E6%95%A3%E4%BD%99%E5%BC%A6%E5%8F%98%E6%8D%A2/">离散余弦变换</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/09/23/Math/Theory/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/%E7%A6%BB%E6%95%A3%E4%BD%99%E5%BC%A6%E5%8F%98%E6%8D%A2/">
+          
+          
+            
+          
+          1. 简介
+离散余弦变换类似于离散傅里叶变换，但是只使用实数。离散余弦变换相当于一个长度大概是它两倍的离散傅里叶变换。
+2. 定义
+离散余弦变换是一个线性的可逆函数 F:Rn→RnF: R^n \rightarrow R^nF:Rn→Rn，其中 RRR 是实数集。
+2.1 DCT-1
+fm=12(x0+(−1)mxn−1)+∑k=1n−2xkcos(πn−1mk)\begin{array}{c}
+
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-09-23 09:05" pubdate>
+              2020-09-23
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Math/">Math</a>
+            
+              <a href="/categories/Math/Theory/">Theory</a>
+            
+              <a href="/categories/Math/Theory/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/">傅里叶变换</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
+            
+              <a href="/tags/Math/">Math</a>
+            
+              <a href="/tags/Theory/">Theory</a>
+            
+              <a href="/tags/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/">傅里叶变换</a>
             
           </div>
         
@@ -806,7 +810,7 @@ A.heapsizeA.heapsizeA.heapsize 给出有多少个堆元素存储在该数组中�
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/page/20/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/19/#board">19</a><a class="page-number" href="/page/20/#board">20</a><span class="page-number current">21</span><a class="page-number" href="/page/22/#board">22</a><a class="page-number" href="/page/23/#board">23</a><span class="space">&hellip;</span><a class="page-number" href="/page/38/#board">38</a><a class="extend next" rel="next" href="/page/22/#board"><i class="iconfont icon-arrowright"></i></a>
+      <a class="extend prev" rel="prev" href="/page/20/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/19/#board">19</a><a class="page-number" href="/page/20/#board">20</a><span class="page-number current">21</span><a class="page-number" href="/page/22/#board">22</a><a class="page-number" href="/page/23/#board">23</a><span class="space">&hellip;</span><a class="page-number" href="/page/42/#board">42</a><a class="extend next" rel="next" href="/page/22/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 

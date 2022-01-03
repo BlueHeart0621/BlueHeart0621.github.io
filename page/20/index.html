@@ -197,22 +197,21 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/09/02/ACM/%E7%AE%97%E6%B3%95/%E5%AD%97%E7%AC%A6%E4%B8%B2/%E5%AD%97%E5%85%B8%E6%A0%91/%E5%AD%97%E5%85%B8%E6%A0%91/">字典树</a>
+        <a href="/2020/10/02/DeepLearning/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/Momentum/">Momentum</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/09/02/ACM/%E7%AE%97%E6%B3%95/%E5%AD%97%E7%AC%A6%E4%B8%B2/%E5%AD%97%E5%85%B8%E6%A0%91/%E5%AD%97%E5%85%B8%E6%A0%91/">
+        <a href="/2020/10/02/DeepLearning/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/Momentum/">
           
           
             
           
           1. 简介
-字典树（Trie）用边来代表字母，从根结点到树上某一结点的路径就代表了一个字符串。
-
-2. 实现
-
-由于字典树中的字符串都是从根结点开始，于是我们可以通过标记字符串的终止结点来记录已经插入字典树中的字符串。
-我们用 δ(u,c)\delta(u,c)δ(u,c) 表示结点 uuu 的 ccc 字符指向的下一结点，即在结点 uuu 代表的字符串后面添加一个字符 ccc 形成的字符串的结点
+Momentum 类似于物理中的冲量的思想，Momentum 算法优化的过程给人的感觉就像是小球在地面上滚动。
+2. 原理
+第 ttt 次迭代时：
+vt=αvt−1−η∂L∂Wt−1Wt=Wt−1+vt\begin{array}{c}
+\boldsymbol{v}_t = \alpha \boldsymbol{v}_{t-1} - \eta \frac{\partial L}{\par
         </a>
       </p>
 
@@ -220,8 +219,8 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-09-02 09:27" pubdate>
-              2020-09-02
+            <time datetime="2020-10-02 20:01" pubdate>
+              2020-10-02
             </time>
           </div>
         
@@ -229,11 +228,9 @@
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/ACM/">ACM</a>
+              <a href="/categories/DeepLearning/">DeepLearning</a>
             
-              <a href="/categories/ACM/%E7%AE%97%E6%B3%95/">算法</a>
-            
-              <a href="/categories/ACM/%E7%AE%97%E6%B3%95/%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</a>
+              <a href="/categories/DeepLearning/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/">优化算法</a>
             
           </div>
         
@@ -241,13 +238,11 @@
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/ACM/">ACM</a>
+              <a href="/tags/DeepLearning/">DeepLearning</a>
             
-              <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
+              <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a>
             
-              <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</a>
-            
-              <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E7%AE%97%E6%B3%95/">数据结构 算法</a>
+              <a href="/tags/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/">优化算法</a>
             
           </div>
         
@@ -261,215 +256,31 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/09/01/ACM/%E9%A2%98%E8%A7%A3/P2580%E3%80%8C%E4%BA%8E%E6%98%AF%E4%BB%96%E9%94%99%E8%AF%AF%E7%9A%84%E7%82%B9%E5%90%8D%E5%BC%80%E5%A7%8B%E4%BA%86%E3%80%8D/">P2580「于是他错误的点名开始了」</a>
+        <a href="/2020/10/02/DeepLearning/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B/">优化算法</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/09/01/ACM/%E9%A2%98%E8%A7%A3/P2580%E3%80%8C%E4%BA%8E%E6%98%AF%E4%BB%96%E9%94%99%E8%AF%AF%E7%9A%84%E7%82%B9%E5%90%8D%E5%BC%80%E5%A7%8B%E4%BA%86%E3%80%8D/">
-          
-          
-            
-          
-          1. 题目
-题目链接：P2580「于是他错误的点名开始了」 。
-题目背景
-XS中学化学竞赛组教练是一个酷爱炉石的人。
-他会一边搓炉石一边点名以至于有一天他连续点到了某个同学两次，然后正好被路过的校长发现了然后就是一顿欧拉欧拉欧拉（详情请见已结束比赛 CON900）。
-题目描述
-这之后校长任命你为特派探员，每天记录他的点名。校长会提供化学竞赛学生的人数和名单，而你需要告诉校长他有没有点错名。（为什么
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-09-01 23:51" pubdate>
-              2020-09-01
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/ACM/">ACM</a>
-            
-              <a href="/categories/ACM/%E9%A2%98%E8%A7%A3/">题解</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/ACM/">ACM</a>
-            
-              <a href="/tags/%E9%A2%98%E8%A7%A3/">题解</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/09/01/Math/Theory/%E5%9B%BE%E8%AE%BA/%E5%B9%B3%E9%9D%A2%E5%9B%BE/">平面图</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/09/01/Math/Theory/%E5%9B%BE%E8%AE%BA/%E5%B9%B3%E9%9D%A2%E5%9B%BE/">
-          
-          
-            
-          
-          1. 定义
-1.1 平面图 &amp; 非平面图
-
-
-如果能够将无向图 GGG 画在平面上使得除顶点处外无边相交，则称 GGG 为可平面图，简称平面图。
-
-
-画出的无边相交的图称作 GGG 的平面嵌入。
-
-
-无平面嵌入的图称作非平面图。
-
-
-2. 性质
-
-平面图的子图都是平面图，非平面图的母图都是非平面图。
-
-
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-09-01 22:30" pubdate>
-              2020-09-01
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Math/">Math</a>
-            
-              <a href="/categories/Math/Theory/">Theory</a>
-            
-              <a href="/categories/Math/Theory/%E5%9B%BE%E8%AE%BA/">图论</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Math/">Math</a>
-            
-              <a href="/tags/Theory/">Theory</a>
-            
-              <a href="/tags/%E5%9B%BE%E8%AE%BA/">图论</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/09/01/Math/Theory/%E5%9B%BE%E8%AE%BA/%E6%94%AF%E9%85%8D%E9%9B%86%E3%80%81%E7%8B%AC%E7%AB%8B%E9%9B%86%E3%80%81%E8%A6%86%E7%9B%96%E9%9B%86/">支配集、独立集、覆盖集</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/09/01/Math/Theory/%E5%9B%BE%E8%AE%BA/%E6%94%AF%E9%85%8D%E9%9B%86%E3%80%81%E7%8B%AC%E7%AB%8B%E9%9B%86%E3%80%81%E8%A6%86%E7%9B%96%E9%9B%86/">
-          
-          
-            
-          
-          1. 定义
-1.1 支配集
-
-
-设无向简单图 G=&lt;V,E&gt;,V∗⊆V
-G = \lt V,E \gt, V^* \subseteq V 
-G=&lt;V,E&gt;,V∗⊆V，若 ∀vi∈V−V∗,∃vj∈V∗
-\forall v_i \in V - V^*, \exists v_j \in V^*
-∀vi​∈V−V∗,∃vj​∈V∗ 使得 (vi,Vj)∈E(v_i,V_j) \i
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-09-01 22:13" pubdate>
-              2020-09-01
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Math/">Math</a>
-            
-              <a href="/categories/Math/Theory/">Theory</a>
-            
-              <a href="/categories/Math/Theory/%E5%9B%BE%E8%AE%BA/">图论</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Math/">Math</a>
-            
-              <a href="/tags/Theory/">Theory</a>
-            
-              <a href="/tags/%E5%9B%BE%E8%AE%BA/">图论</a>
-            
-              <a href="/tags/math/">math</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/09/01/Math/Modeling/%E6%8E%92%E9%98%9F%E8%AE%BA%E6%A8%A1%E5%9E%8B/">排队论模型</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/09/01/Math/Modeling/%E6%8E%92%E9%98%9F%E8%AE%BA%E6%A8%A1%E5%9E%8B/">
+        <a href="/2020/10/02/DeepLearning/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B/">
           
           
             
           
           1. 简介
-我们使用六个符号表示排队模型，在符号之间用斜线隔开，记为 X/Y/Z/A/B/C 。第一个符号 X 表示顾客到达流或顾客到达间隔时间的分布；第二个符号 Y 表示服务时间的分布；第三个符号 Z 表示服务台数目；第四个符号 A 是系统容量限制；第五个符号 B 是顾客源数目；第六个符号 C 表示的是服务规则，例如先到先服务 FCFS， 后到先服务 LCFS 等。
-2. Little（利特尔）
+深度学习网络中参数更新的优化方法主要分为两种：
+
+
+调整学习率，使得优化更稳定
+
+
+梯度估计修正，优化训练速度
+
+
+2. 常用优化方法汇总
+
+3. 原理
+上述常用方法均可以使用一下公式来进行同一描述：
+ΔWt=−ηtGt+εMtGt=ψ(∂L∂W1,⋯ ,∂L∂Wt)Mt=ϕ(∂L∂W1,⋯ ,∂L∂Wt)\begin{array}{c}
+\Delta \boldsymbol{W}_t
         </a>
       </p>
 
@@ -477,8 +288,8 @@ G=&lt;V,E&gt;,V∗⊆V，若 ∀vi∈V−V∗,∃vj∈V∗
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-09-01 21:00" pubdate>
-              2020-09-01
+            <time datetime="2020-10-02 20:01" pubdate>
+              2020-10-02
             </time>
           </div>
         
@@ -486,9 +297,9 @@ G=&lt;V,E&gt;,V∗⊆V，若 ∀vi∈V−V∗,∃vj∈V∗
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/Math/">Math</a>
+              <a href="/categories/DeepLearning/">DeepLearning</a>
             
-              <a href="/categories/Math/Modeling/">Modeling</a>
+              <a href="/categories/DeepLearning/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/">优化算法</a>
             
           </div>
         
@@ -496,9 +307,11 @@ G=&lt;V,E&gt;,V∗⊆V，若 ∀vi∈V−V∗,∃vj∈V∗
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/Math/">Math</a>
+              <a href="/tags/DeepLearning/">DeepLearning</a>
             
-              <a href="/tags/Modeling/">Modeling</a>
+              <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a>
+            
+              <a href="/tags/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/">优化算法</a>
             
           </div>
         
@@ -512,298 +325,21 @@ G=&lt;V,E&gt;,V∗⊆V，若 ∀vi∈V−V∗,∃vj∈V∗
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/08/31/Math/Theory/%E5%9B%BE%E8%AE%BA/%E6%AC%A7%E6%8B%89%E5%9B%BE/">欧拉图</a>
+        <a href="/2020/10/02/DeepLearning/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/SGD/">随机梯度下降</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/08/31/Math/Theory/%E5%9B%BE%E8%AE%BA/%E6%AC%A7%E6%8B%89%E5%9B%BE/">
-          
-          
-            
-          
-          1. 定义
-1.1 欧拉通路 &amp; 欧拉回路
-
-
-通过图（无向图或有向图）中所有边一次且仅一次行遍所有顶点的通路称作欧拉通路。
-
-
-通过图（无向图或有向图）中所有边一次且仅一次行遍所有顶点的回路称作欧拉回路。
-
-
-【注】规定平凡图是欧拉图。
-1.2 欧拉图 &amp; 半欧拉图
-
-
-具有欧拉回路的图称为欧拉图。
-
-
-具有欧拉通路而无欧拉回路的图称作半欧拉图。
-
-
-2. 性质
-
-
-无向图 GG
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-08-31 20:10" pubdate>
-              2020-08-31
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Math/">Math</a>
-            
-              <a href="/categories/Math/Theory/">Theory</a>
-            
-              <a href="/categories/Math/Theory/%E5%9B%BE%E8%AE%BA/">图论</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Math/">Math</a>
-            
-              <a href="/tags/Theory/">Theory</a>
-            
-              <a href="/tags/%E5%9B%BE%E8%AE%BA/">图论</a>
-            
-              <a href="/tags/math/">math</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/08/31/Math/Theory/%E5%9B%BE%E8%AE%BA/%E5%93%88%E5%AF%86%E9%A1%BF%E5%9B%BE/">哈密顿图</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/08/31/Math/Theory/%E5%9B%BE%E8%AE%BA/%E5%93%88%E5%AF%86%E9%A1%BF%E5%9B%BE/">
-          
-          
-            
-          
-          1. 定义
-1.1 哈密顿通路 &amp; 哈密顿回路
-
-
-经过图（无向图或有向图）中所有顶点一次且仅一次的通路称作哈密顿通路。
-
-
-经过图（无向图或有向图）中所有顶点一次且仅一次的回路称作哈密顿回路。
-
-
-1.2 哈密顿图 &amp; 半哈密顿图
-
-
-具有哈密顿回路的图称作哈密顿图。
-
-
-具有哈密顿通路但不具有哈密顿回路的图称作半哈密顿图。
-
-
-【注】规定平凡图是哈密顿图。
-2. 性质
-【注】p
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-08-31 15:16" pubdate>
-              2020-08-31
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Math/">Math</a>
-            
-              <a href="/categories/Math/Theory/">Theory</a>
-            
-              <a href="/categories/Math/Theory/%E5%9B%BE%E8%AE%BA/">图论</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Math/">Math</a>
-            
-              <a href="/tags/Theory/">Theory</a>
-            
-              <a href="/tags/%E5%9B%BE%E8%AE%BA/">图论</a>
-            
-              <a href="/tags/math/">math</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/08/30/ACM/%E9%A2%98%E8%A7%A3/P1169%E3%80%8C%E6%A3%8B%E7%9B%98%E5%88%B6%E4%BD%9C%E3%80%8D/">P1169「棋盘制作」</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/08/30/ACM/%E9%A2%98%E8%A7%A3/P1169%E3%80%8C%E6%A3%8B%E7%9B%98%E5%88%B6%E4%BD%9C%E3%80%8D/">
-          
-          
-            
-          
-          1. 题目
-题目链接：P1169「棋盘制作」 。
-题目描述
-国际象棋是世界上最古老的博弈游戏之一，和中国的围棋、象棋以及日本的将棋同享盛名。据说国际象棋起源于易经的思想，棋盘是一个 8×8 大小的黑白相间的方阵，对应八八六十四卦，黑白对应阴阳。
-而我们的主人公小Q，正是国际象棋的狂热爱好者。作为一个顶尖高手，他已不满足于普通的棋盘与规则，于是他跟他的好朋友小W决定将棋盘扩大以适应他们的新规则。
-小
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-08-30 13:28" pubdate>
-              2020-08-30
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/ACM/">ACM</a>
-            
-              <a href="/categories/ACM/%E9%A2%98%E8%A7%A3/">题解</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/ACM/">ACM</a>
-            
-              <a href="/tags/%E9%A2%98%E8%A7%A3/">题解</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/08/26/ACM/%E9%A2%98%E8%A7%A3/P4147%E3%80%8C%E7%8E%89%E8%9F%BE%E5%AE%AB%E3%80%8D/">P4147「玉蟾宫」</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/08/26/ACM/%E9%A2%98%E8%A7%A3/P4147%E3%80%8C%E7%8E%89%E8%9F%BE%E5%AE%AB%E3%80%8D/">
-          
-          
-            
-          
-          1. 题目
-题目链接：P4147「玉蟾宫」 。
-题目背景
-有一天，小猫 rainbow 和 freda 来到了湘西张家界的天门山玉蟾宫，玉蟾宫宫主蓝兔盛情地款待了它们，并赐予它们一片土地。
-题目描述
-这片土地被分成 N×MN\times MN×M 个格子，每个格子里写着 'R' 或者 'F'，R 代表这块土地被赐予了 rainbow，F 代表这块土地被赐予了 freda。
-现在 freda 要在这
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-08-26 23:24" pubdate>
-              2020-08-26
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/ACM/">ACM</a>
-            
-              <a href="/categories/ACM/%E9%A2%98%E8%A7%A3/">题解</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/ACM/">ACM</a>
-            
-              <a href="/tags/%E9%A2%98%E8%A7%A3/">题解</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/08/26/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%8D%95%E8%B0%83%E6%A0%88/%E5%8D%95%E8%B0%83%E6%A0%88/">单调栈</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/08/26/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%8D%95%E8%B0%83%E6%A0%88/%E5%8D%95%E8%B0%83%E6%A0%88/">
+        <a href="/2020/10/02/DeepLearning/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/SGD/">
           
           
             
           
           1. 简介
-单调栈是一种用来解决首递增序列问题的数据结构，其满足从栈顶元素到栈底元素单调的性质。单调栈还可以用来解决求矩形统计图中最大内矩形面积的问题，进一步可以用来求最小矩阵和问题。
-2. 概念
-
-首递增序列
-
-
-对于序列 a1,a2,⋯ ,aNa_1,a_2,\cdots,a_Na1​,a2​,⋯,aN​，定义从左往右 aia_iai​ 的首递增序列为 ab0=ai,ab1,ab2,⋯ ,ab
+梯度下降法即沿着训练集的梯度方向下降。随机梯度下降（stochastic gradient descent：SGD）按照数据生成分布抽取 mmm 个小批量（独立同分布的）样本，通过计算它们的梯度均值，从而得到梯度的无偏估计；然后随机梯度下降算法沿着随机挑选的小批量数据的梯度下降方向，能够很大程度加速梯度下降的过程。
+2. 思路
+2.1 梯度下降
+第 ttt 次迭代时：
+Wt=Wt−1−
         </a>
       </p>
 
@@ -811,8 +347,8 @@ G=&lt;V,E&gt;,V∗⊆V，若 ∀vi∈V−V∗,∃vj∈V∗
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-08-26 14:52" pubdate>
-              2020-08-26
+            <time datetime="2020-10-02 19:40" pubdate>
+              2020-10-02
             </time>
           </div>
         
@@ -820,11 +356,9 @@ G=&lt;V,E&gt;,V∗⊆V，若 ∀vi∈V−V∗,∃vj∈V∗
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/ACM/">ACM</a>
+              <a href="/categories/DeepLearning/">DeepLearning</a>
             
-              <a href="/categories/ACM/%E7%AE%97%E6%B3%95/">算法</a>
-            
-              <a href="/categories/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a>
+              <a href="/categories/DeepLearning/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/">优化算法</a>
             
           </div>
         
@@ -832,13 +366,427 @@ G=&lt;V,E&gt;,V∗⊆V，若 ∀vi∈V−V∗,∃vj∈V∗
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/ACM/">ACM</a>
+              <a href="/tags/DeepLearning/">DeepLearning</a>
             
-              <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
+              <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a>
             
-              <a href="/tags/%E7%AE%97%E6%B3%95-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">算法 数据结构</a>
+              <a href="/tags/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/">优化算法</a>
             
-              <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a>
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/10/02/DeepLearning/RNN/RNN/">RNN</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/10/02/DeepLearning/RNN/RNN/">
+          
+          
+            
+          
+          【注】参考自邱锡鹏的《神经网络与深度学习》。
+1. 简介
+循环神经网络（RNN）是一类具有短期记忆能力的神经网络。在循环神经网络中，神经元不但可以接受其他神经元的信息，也可以接受自身的信息，形成具有环路的网络结构。而前馈网络是一种静态网络，不具备记忆能力。
+
+RNN 能够用于处理时序数据的神经网络，被广泛应用于语音识别、语言模型以及自然语言生成等任务上。
+
+
+时序数据的长度一般是不固定的，而前馈神
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-10-02 14:23" pubdate>
+              2020-10-02
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/DeepLearning/">DeepLearning</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/DeepLearning/">DeepLearning</a>
+            
+              <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/10/02/DeepLearning/CNN/CNN/">CNN</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/10/02/DeepLearning/CNN/CNN/">
+          
+          
+            
+          
+          1. 简介
+CNN 是专门用于处理网格化数据的神经网络。CNN 中新增了 Convolution 层和 Pooling 层，CNN 的层的连接顺序是「Convolution-ReLU-(Pooling)」（Pooling层有时会被省略）。这可以理解为之前的“Affine-ReLU”连接被替换成了「Convolution-ReLU-(Pooling)」连接。
+2. CNN 的优势
+
+全连接层（Aff
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-10-02 14:22" pubdate>
+              2020-10-02
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/DeepLearning/">DeepLearning</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/DeepLearning/">DeepLearning</a>
+            
+              <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/10/01/Linux/Sundry/Linux%E4%B8%8B%E6%9F%A5%E7%9C%8B%E7%B3%BB%E7%BB%9F%E4%BF%A1%E6%81%AF/">Linux下查看系统信息</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/10/01/Linux/Sundry/Linux%E4%B8%8B%E6%9F%A5%E7%9C%8B%E7%B3%BB%E7%BB%9F%E4%BF%A1%E6%81%AF/">
+          
+          
+            
+          
+          1. 查看操作系统信息
+1lsb_release -a
+【注】并不是所有 Linux 发行版都自带 lsb_release 命令，如果系统上没有该命令需要手动安装 lsb-release 工具。
+2. 查看 Linux 内核版本
+1uname -r
+3. 查看显卡厂商
+1lspci | grep -i vga
+4. 查看内存容量
+1free -g/-m/-k/-b    # -g/-m/-k/b 
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-10-01 17:21" pubdate>
+              2020-10-01
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Linux/">Linux</a>
+            
+              <a href="/categories/Linux/Sundry/">Sundry</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Linux/">Linux</a>
+            
+              <a href="/tags/Sundry/">Sundry</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/10/01/Linux/Manjaro/Manjaro20.1%E4%B8%8B%E6%90%AD%E5%BB%BAPytorch%E7%8E%AF%E5%A2%83/">Manjaro20.1下搭建Pytorch环境</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/10/01/Linux/Manjaro/Manjaro20.1%E4%B8%8B%E6%90%AD%E5%BB%BAPytorch%E7%8E%AF%E5%A2%83/">
+          
+          
+            
+          
+          1. 安装 cuda 环境
+1sudo pacman -S python-pytorch-cuda
+2. 安装 pytorch 环境
+1pip install torch torchvision
+也可以用其他命令比如 conda 等，具体可以参照 pytorch 官网。
+3. 测试
+1python
+进入到 python 命令行后运行：
+12import torchtorch.cuda.is_ava
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-10-01 17:19" pubdate>
+              2020-10-01
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Linux/">Linux</a>
+            
+              <a href="/categories/Linux/Manjaro/">Manjaro</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Linux/">Linux</a>
+            
+              <a href="/tags/Manjaro/">Manjaro</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/10/01/Linux/Mint/Mint20%E4%B8%8B%E6%9F%A5%E7%9C%8Bnvidia%E6%98%BE%E5%8D%A1%E5%9E%8B%E5%8F%B7/">Mint20下查看nvidia显卡型号</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/10/01/Linux/Mint/Mint20%E4%B8%8B%E6%9F%A5%E7%9C%8Bnvidia%E6%98%BE%E5%8D%A1%E5%9E%8B%E5%8F%B7/">
+          
+          
+            
+          
+          1. 命令
+12nvidia-smi      # 显示 GPU 的实时信息nvidia-smi -L   # 列出所有可用的 NVIDIA 设备信息
+2. 参数含义
+
+GPU：GPU 编号。
+Name：GPU 型号。
+Persistence-M：持续模式的状态。持续模式虽然耗能大，但是在新的GPU应用启动时，花费的时间更少，这里显示的是off的状态。
+Fan：风扇转速，从0到100%之间变动。
+
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-10-01 17:08" pubdate>
+              2020-10-01
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Linux/">Linux</a>
+            
+              <a href="/categories/Linux/Mint/">Mint</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Linux/">Linux</a>
+            
+              <a href="/tags/Mint/">Mint</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/09/29/Math/Theory/%E7%9F%A9%E9%98%B5/%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/">基本概念</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/09/29/Math/Theory/%E7%9F%A9%E9%98%B5/%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/">
+          
+          
+            
+          
+          1. 术语
+
+方阵：行数和列数相同的矩阵。
+长方矩阵：函数和列数可能不相同的矩阵。
+Mm,nM_{m,n}Mm,n​：表示 mmm 行 nnn 列复矩阵的集合。
+MnM_nMn​：表示 nnn 阶复方阵的集合。
+Cn\mathbb{C}^nCn：表示具有 nnn 个复数分量的列向量的集合。
+Rn\mathbb{R}^nRn：表示具有 nnn 个实数分量的列向量的集合。
+diag(d1,⋯ ,dn)
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-09-29 11:01" pubdate>
+              2020-09-29
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Math/">Math</a>
+            
+              <a href="/categories/Math/Theory/">Theory</a>
+            
+              <a href="/categories/Math/Theory/%E7%9F%A9%E9%98%B5/">矩阵</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Math/">Math</a>
+            
+              <a href="/tags/Theory/">Theory</a>
+            
+              <a href="/tags/%E7%9F%A9%E9%98%B5/">矩阵</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/09/28/Python/Numpy/Numpy%E6%95%B0%E7%BB%84/Numpy%E6%95%B0%E7%BB%84/">Numpy数组</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/09/28/Python/Numpy/Numpy%E6%95%B0%E7%BB%84/Numpy%E6%95%B0%E7%BB%84/">
+          
+          
+            
+          
+          1. 概述
+
+ndarray 数组要求数据类型一致，默认数据类型为 np.float64；显式更改数据类型需要使用 dtype 关键字。
+
+2. axis 轴
+Numpy 中 axis = n 对应 ndarray 的第 nnn 层 []，从最外层的 axis = 0，逐渐往内层递增。
+3. 数组大小 &amp; 维度
+
+
+ndarray 数组维度元组 shape 为从最外层到最里层逐层的大小；从
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-09-28 14:02" pubdate>
+              2020-09-28
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Python/">Python</a>
+            
+              <a href="/categories/Python/Numpy/">Numpy</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Python/">Python</a>
+            
+              <a href="/tags/Numpy/">Numpy</a>
             
           </div>
         
@@ -850,7 +798,7 @@ G=&lt;V,E&gt;,V∗⊆V，若 ∀vi∈V−V∗,∃vj∈V∗
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/page/19/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/18/#board">18</a><a class="page-number" href="/page/19/#board">19</a><span class="page-number current">20</span><a class="page-number" href="/page/21/#board">21</a><a class="page-number" href="/page/22/#board">22</a><span class="space">&hellip;</span><a class="page-number" href="/page/38/#board">38</a><a class="extend next" rel="next" href="/page/21/#board"><i class="iconfont icon-arrowright"></i></a>
+      <a class="extend prev" rel="prev" href="/page/19/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/18/#board">18</a><a class="page-number" href="/page/19/#board">19</a><span class="page-number current">20</span><a class="page-number" href="/page/21/#board">21</a><a class="page-number" href="/page/22/#board">22</a><span class="space">&hellip;</span><a class="page-number" href="/page/42/#board">42</a><a class="extend next" rel="next" href="/page/21/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 

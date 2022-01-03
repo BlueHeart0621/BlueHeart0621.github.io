@@ -200,7 +200,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      199 字
+      535 字
     </span>
   
 
@@ -210,7 +210,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      2
+      6
        分钟
     </span>
   
@@ -255,15 +255,42 @@
 <ul>
 <li><a target="_blank" rel="noopener" href="https://wiki.archlinux.org/title/Installation_guide">官方 Wiki 文档</a></li>
 <li>博文——<a target="_blank" rel="noopener" href="https://www.viseator.com/2017/05/17/arch_install/">以官方 Wiki 的方式安装 ArchLinux</a></li>
+<li>教程——<a target="_blank" rel="noopener" href="https://archlinuxstudio.github.io/ArchLinuxTutorial/#/">Arch Linux 安装使用教程 - ArchTutorial - Arch Linux Studio</a></li>
 </ul>
-<blockquote>
+<h2 id="1-多系统-grub-菜单">1. 多系统 grub 菜单</h2>
 <p>【注】这里有一点需要注意的是，对于多系统用户，在生成 GRUB 配置文件时，如果需要自动探测其他系统，并将它们添加到启动菜单中，按照上述文档操作如果仍然无法探测到其他系统，则可以待系统安装完成后，进入系统修改 <code>/etc/default/grub</code> 文件，修改/添加以下配置：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">GRUB_DISABLE_OS_PROBER=<span class="hljs-literal">false</span>    <span class="hljs-comment"># 表明在进行 grub-mkconfig 生成启动菜单时启用 os-prober 进行自动探测（首先要安装号 os-prober 工具）</span><br></code></pre></td></tr></table></figure>
 <p>然后重新运行以下代码生成 GRUB 启动菜单：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">grub-mkconfig -o /boot/grub/grub.cfg<br></code></pre></td></tr></table></figure>
-</blockquote>
+<h2 id="2-输入法">2. 输入法</h2>
+<p>【注】按照上述教程，一般安装的输入法为 <code>fcitx</code>，但 <code>fcitx</code> 有很多问题。个人建议如果发现 <code>fcitx</code> 出现问题，可以切换成 <code>fcitx5</code>，或者一开始就安装 <code>fcitx5</code>。</p>
 <ul>
-<li>教程——<a target="_blank" rel="noopener" href="https://archlinuxstudio.github.io/ArchLinuxTutorial/#/">Arch Linux 安装使用教程 - ArchTutorial - Arch Linux Studio</a></li>
+<li><code>fcitx5</code> 是继 <code>fcitx</code> 后的新一代输入法框架。</li>
+</ul>
+<p><code>fcitx5</code> 具体的安装配置，参考官方 Wiki 教程：<a target="_blank" rel="noopener" href="https://wiki.archlinux.org/title/Fcitx5">fcitx5</a>。</p>
+<h2 id="3-内核">3. 内核</h2>
+<p>【注】按照上述教程，一般默认安装的 Linux 内核为最新的稳定版内核，但对于一些新硬件，新内核有时可能会出现驱动兼容问题，可以尝试切换 Arch Linux 官方提供的其他版本内核，然后在 grub 菜单中指定内核版本启动系统。</p>
+<p>Arch Linux 官方支持四种 Linux 内核：</p>
+<ul>
+<li>Stable：原版的Linux内核以及模块, 使用了一些补丁。</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo pacman -S linux<br></code></pre></td></tr></table></figure>
+<ul>
+<li>Hardened：更加注重安全的 Linux 内核，采用一系列加固补丁以减少内核和用户空间产生漏洞的风险。</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo pacman -S linux-hardened<br></code></pre></td></tr></table></figure>
+<ul>
+<li>Longterm：包含了长期支持的 Linux 内核和内核模块。</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo pacman -S linux-lts<br></code></pre></td></tr></table></figure>
+<ul>
+<li>Zen Kernel：一些内核黑客合作的结果，提供了适合日常使用的优秀内核。</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo pacman -S linux-zen<br></code></pre></td></tr></table></figure>
+<p>参考资料：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://wiki.archlinux.org/title/Kernel">Kernel</a></li>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/267516871">用于Arch Linux的不同类型的内核以及如何使用它们</a></li>
 </ul>
 
             </div>

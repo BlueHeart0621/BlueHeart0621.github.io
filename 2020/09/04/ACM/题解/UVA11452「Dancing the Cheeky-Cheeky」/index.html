@@ -254,18 +254,17 @@
               <h2 id="1-题目">1. 题目</h2>
 <p>题目链接：<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/UVA11452">UVA11452「Dancing the Cheeky-Cheeky」</a> 。</p>
 <h3 id="Description">Description</h3>
-<p>The Cheeky-Cheeky is a new song. They dance it in Mula, and also in Hong Kong. All the freekies<br />
-dance it, and the geek all love it. And the Cheeky-Cheeky is danced like this:</p>
+<p>The Cheeky-Cheeky is a new song. They dance it in Mula, and also in Hong Kong. All the freekies dance it, and the geek all love it. And the Cheeky-Cheeky is danced like this:</p>
 <ol>
 <li>The breikin-brokin.</li>
 <li>The meneito.</li>
 <li>The roboqueitor.</li>
 <li>The maiquel-guolkin.</li>
 </ol>
-<p>  In this problem you have to learn to dance the Cheeky-Cheeky. This dancing consists of 4 basic steps (as listed above) that are arranged into a particular sequence. Then this sequence can be repeated an arbitrary number of times.<br />
-  For example, if the sequence is ‘123’, then the Cheeky-Cheeky is danced like this: ‘12312312312312...’. But if the sequence is ‘123124’, then the steps of the dancing are ‘123124123124123...’.<br />
-  You are given some of the steps of a particular dancing. Those steps will contain between 2 (inclusive) and 3 (not inclusive) times the basic sequence. You have to continue the dancing.<br />
-  For example, if the basic sequence is ‘123’, we can have the following possibilities:</p>
+<p>In this problem you have to learn to dance the Cheeky-Cheeky. This dancing consists of <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4</mn></mrow><annotation encoding="application/x-tex">4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">4</span></span></span></span> basic steps (as listed above) that are arranged into a particular sequence. Then this sequence can be repeated an arbitrary number of times.</p>
+<p>For example, if the sequence is <code>123</code>, then the Cheeky-Cheeky is danced like this: <code>12312312312312...</code>. But if the sequence is <code>123124</code>, then the steps of the dancing are <code>123124123124123...</code>.</p>
+<p>You are given some of the steps of a particular dancing. Those steps will contain between <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn></mrow><annotation encoding="application/x-tex">2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span></span></span></span> (inclusive) and <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn></mrow><annotation encoding="application/x-tex">3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span></span></span></span> (not inclusive) times the basic sequence. You have to continue the dancing.</p>
+<p>For example, if the basic sequence is <code>123</code>, we can have the following possibilities:</p>
 <table>
 <thead>
 <tr>
@@ -289,10 +288,10 @@ dance it, and the geek all love it. And the Cheeky-Cheeky is danced like this:</
 </tbody>
 </table>
 <h3 id="Input">Input</h3>
-<p>The first line of the input contains an integer indicating the number of test cases.<br />
-Each case contains some of the first steps of a dancing. It is a single line with a list of digits (1, 2, 3 or 4) with no spaces between them. It will not have more than 2000 steps. Remember that the case contains the basic sequence twice, and possibly has some more steps (but not thrice).</p>
+<p>The first line of the input contains an integer indicating the number of test cases.</p>
+<p>Each case contains some of the first steps of a dancing. It is a single line with a list of digits (<code>1</code>, <code>2</code>, <code>3</code> or <code>4</code>) with no spaces between them. It will not have more than <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2000</mn></mrow><annotation encoding="application/x-tex">2000</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span></span></span></span> steps. Remember that the case contains the basic sequence twice, and possibly has some more steps (but not thrice).</p>
 <h3 id="Output">Output</h3>
-<p>For each test case, the output should contain the 8 following steps of the dancing, followed by three dots ‘...’.</p>
+<p>For each test case, the output should contain the <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>8</mn></mrow><annotation encoding="application/x-tex">8</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">8</span></span></span></span> following steps of the dancing, followed by three dots <code>...</code>.</p>
 <h3 id="Sample-Input">Sample Input</h3>
 <figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs dns"><span class="hljs-number">6</span><br><span class="hljs-number">123123</span><br><span class="hljs-number">1231231</span><br><span class="hljs-number">12312312</span><br><span class="hljs-number">123124123124</span><br><span class="hljs-number">12312412312412</span><br><span class="hljs-number">12312412312412312</span><br></code></pre></td></tr></table></figure>
 <h3 id="Sample-Output">Sample Output</h3>

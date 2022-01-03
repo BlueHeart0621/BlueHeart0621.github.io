@@ -261,7 +261,7 @@
 <p>在 Github 或 Gitee 上找到添加 ssh 公匙选项，到刚才保存的 ssh-key 的路径下找到对应的 .pub 文件（此为公匙可外传，另一个为私匙不可外传），打开后将内容粘贴到 Github 或 Gitee 网站添加 ssh 公匙栏中。</p>
 <h3 id="3-测试连接远程仓库网站">3. 测试连接远程仓库网站</h3>
 <p>在 git 终端输入：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">ssh -T git@github.com    //github网站 <br>ssh -T git@gitee.com    //gitee 网站 <br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">ssh -T git@github.com    //github网站 <br>ssh -T git@gitee.com     //gitee 网站 <br></code></pre></td></tr></table></figure>
 <p>如果是按默认路径保存 ssh-key，则 git 终端应该会返回以下内容：</p>
 <p><code>Hi *** ! You've successfully authenticated ***</code></p>
 <p>此时说明成功连接远程仓库，可以开始在远程仓库托管自己代码了。</p>

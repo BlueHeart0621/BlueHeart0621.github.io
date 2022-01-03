@@ -197,23 +197,19 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/10/02/DeepLearning/RNN/RNN/">RNN</a>
+        <a href="/2021/01/16/Math/Theory/%E5%88%9A%E6%80%A7%E6%96%B9%E7%A8%8B/%E5%88%9A%E6%80%A7%E6%96%B9%E7%A8%8B/">刚性方程</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/10/02/DeepLearning/RNN/RNN/">
+        <a href="/2021/01/16/Math/Theory/%E5%88%9A%E6%80%A7%E6%96%B9%E7%A8%8B/%E5%88%9A%E6%80%A7%E6%96%B9%E7%A8%8B/">
           
           
             
           
-          【注】参考自邱锡鹏的《神经网络与深度学习》。
-1. 简介
-循环神经网络（RNN）是一类具有短期记忆能力的神经网络。在循环神经网络中，神经元不但可以接受其他神经元的信息，也可以接受自身的信息，形成具有环路的网络结构。而前馈网络是一种静态网络，不具备记忆能力。
-
-RNN 能够用于处理时序数据的神经网络，被广泛应用于语音识别、语言模型以及自然语言生成等任务上。
-
-
-时序数据的长度一般是不固定的，而前馈神
+          摘自Wikipedia——刚性方程。
+1.  定义
+在数学领域中，刚性方程（stiffness equation）是指一个微分方程，其数值分析的解只有在时间间隔很小时才会稳定，只要时间间隔略大，其解就会不稳定。目前很难去精确地去定义哪些微分方程是刚性方程，然而粗略而言，若此方程式中包含使其快速变动的项，则其为刚性方程。
+在积分微分方程时，若某一区域的解曲线的变化很大，会希望在这个区域的积分间隔密一
         </a>
       </p>
 
@@ -221,300 +217,8 @@ RNN 能够用于处理时序数据的神经网络，被广泛应用于语音识�
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-10-02 14:23" pubdate>
-              2020-10-02
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/DeepLearning/">DeepLearning</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/DeepLearning/">DeepLearning</a>
-            
-              <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/10/02/DeepLearning/CNN/CNN/">CNN</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/10/02/DeepLearning/CNN/CNN/">
-          
-          
-            
-          
-          1. 简介
-CNN 是专门用于处理网格化数据的神经网络。CNN 中新增了 Convolution 层和 Pooling 层，CNN 的层的连接顺序是「Convolution-ReLU-(Pooling)」（Pooling层有时会被省略）。这可以理解为之前的“Affine-ReLU”连接被替换成了「Convolution-ReLU-(Pooling)」连接。
-2. CNN 的优势
-
-全连接层（Aff
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-10-02 14:22" pubdate>
-              2020-10-02
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/DeepLearning/">DeepLearning</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/DeepLearning/">DeepLearning</a>
-            
-              <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/10/01/Linux/Sundry/Linux%E4%B8%8B%E6%9F%A5%E7%9C%8B%E7%B3%BB%E7%BB%9F%E4%BF%A1%E6%81%AF/">Linux下查看系统信息</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/10/01/Linux/Sundry/Linux%E4%B8%8B%E6%9F%A5%E7%9C%8B%E7%B3%BB%E7%BB%9F%E4%BF%A1%E6%81%AF/">
-          
-          
-            
-          
-          1. 查看操作系统信息
-1lsb_release -a
-【注】并不是所有 Linux 发行版都自带 lsb_release 命令，如果系统上没有该命令需要手动安装 lsb-release 工具。
-2. 查看 Linux 内核版本
-1uname -r
-3. 查看显卡厂商
-1lspci | grep -i vga
-4. 查看内存容量
-1free -g/-m/-k/-b    # -g/-m/-k/b 
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-10-01 17:21" pubdate>
-              2020-10-01
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Linux/">Linux</a>
-            
-              <a href="/categories/Linux/Sundry/">Sundry</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/Sundry/">Sundry</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/10/01/Linux/Manjaro/Manjaro20.1%E4%B8%8B%E6%90%AD%E5%BB%BAPytorch%E7%8E%AF%E5%A2%83/">Manjaro20.1下搭建Pytorch环境</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/10/01/Linux/Manjaro/Manjaro20.1%E4%B8%8B%E6%90%AD%E5%BB%BAPytorch%E7%8E%AF%E5%A2%83/">
-          
-          
-            
-          
-          1. 安装 cuda 环境
-1sudo pacman -S python-pytorch-cuda
-2. 安装 pytorch 环境
-1pip install torch torchvision
-也可以用其他命令比如 conda 等，具体可以参照 pytorch 官网。
-3. 测试
-1python
-进入到 python 命令行后运行：
-12import torchtorch.cuda.is_ava
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-10-01 17:19" pubdate>
-              2020-10-01
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Linux/">Linux</a>
-            
-              <a href="/categories/Linux/Manjaro/">Manjaro</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/Manjaro/">Manjaro</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/10/01/Linux/Mint/Mint20%E4%B8%8B%E6%9F%A5%E7%9C%8Bnvidia%E6%98%BE%E5%8D%A1%E5%9E%8B%E5%8F%B7/">Mint20下查看nvidia显卡型号</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/10/01/Linux/Mint/Mint20%E4%B8%8B%E6%9F%A5%E7%9C%8Bnvidia%E6%98%BE%E5%8D%A1%E5%9E%8B%E5%8F%B7/">
-          
-          
-            
-          
-          1. 命令
-12nvidia-smi      # 显示 GPU 的实时信息nvidia-smi -L   # 列出所有可用的 NVIDIA 设备信息
-2. 参数含义
-
-GPU：GPU 编号。
-Name：GPU 型号。
-Persistence-M：持续模式的状态。持续模式虽然耗能大，但是在新的GPU应用启动时，花费的时间更少，这里显示的是off的状态。
-Fan：风扇转速，从0到100%之间变动。
-
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-10-01 17:08" pubdate>
-              2020-10-01
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Linux/">Linux</a>
-            
-              <a href="/categories/Linux/Mint/">Mint</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/Mint/">Mint</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/09/29/Math/Theory/%E7%9F%A9%E9%98%B5/%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/">基本概念</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/09/29/Math/Theory/%E7%9F%A9%E9%98%B5/%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/">
-          
-          
-            
-          
-          1. 术语
-
-方阵：行数和列数相同的矩阵。
-长方矩阵：函数和列数可能不相同的矩阵。
-Mm,nM_{m,n}Mm,n​：表示 mmm 行 nnn 列复矩阵的集合。
-MnM_nMn​：表示 nnn 阶复方阵的集合。
-Cn\mathbb{C}^nCn：表示具有 nnn 个复数分量的列向量的集合。
-Rn\mathbb{R}^nRn：表示具有 nnn 个实数分量的列向量的集合。
-diag(d1,⋯ ,dn)
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-09-29 11:01" pubdate>
-              2020-09-29
+            <time datetime="2021-01-16 18:06" pubdate>
+              2021-01-16
             </time>
           </div>
         
@@ -526,8 +230,6 @@ diag(d1,⋯ ,dn)
             
               <a href="/categories/Math/Theory/">Theory</a>
             
-              <a href="/categories/Math/Theory/%E7%9F%A9%E9%98%B5/">矩阵</a>
-            
           </div>
         
         
@@ -537,8 +239,6 @@ diag(d1,⋯ ,dn)
               <a href="/tags/Math/">Math</a>
             
               <a href="/tags/Theory/">Theory</a>
-            
-              <a href="/tags/%E7%9F%A9%E9%98%B5/">矩阵</a>
             
           </div>
         
@@ -552,25 +252,19 @@ diag(d1,⋯ ,dn)
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/09/28/Python/Numpy/Numpy%E6%95%B0%E7%BB%84/Numpy%E6%95%B0%E7%BB%84/">Numpy数组</a>
+        <a href="/2021/01/15/Python/Torch/Torch%E5%87%BD%E6%95%B0/">Torch函数</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/09/28/Python/Numpy/Numpy%E6%95%B0%E7%BB%84/Numpy%E6%95%B0%E7%BB%84/">
+        <a href="/2021/01/15/Python/Torch/Torch%E5%87%BD%E6%95%B0/">
           
           
             
           
-          1. 概述
-
-ndarray 数组要求数据类型一致，默认数据类型为 np.float64；显式更改数据类型需要使用 dtype 关键字。
-
-2. axis 轴
-Numpy 中 axis = n 对应 ndarray 的第 nnn 层 []，从最外层的 axis = 0，逐渐往内层递增。
-3. 数组大小 &amp; 维度
-
-
-ndarray 数组维度元组 shape 为从最外层到最里层逐层的大小；从
+          torch.clamp(input, min, max, out=None) → Tensor
+将 input 张量中的每个元素值截断到区间 [min, max] 中。
+torch.stack(tensors, dim=0, out=None) → Tensor
+对 tensors 沿指定维度拼接，但会额外增加一维拼接的维度，即拼接时来自于 tensors 中每个 tensor 中的拼接元素单独组
         </a>
       </p>
 
@@ -578,8 +272,8 @@ ndarray 数组维度元组 shape 为从最外层到最里层逐层的大小；�
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-09-28 14:02" pubdate>
-              2020-09-28
+            <time datetime="2021-01-15 22:44" pubdate>
+              2021-01-15
             </time>
           </div>
         
@@ -589,7 +283,7 @@ ndarray 数组维度元组 shape 为从最外层到最里层逐层的大小；�
             
               <a href="/categories/Python/">Python</a>
             
-              <a href="/categories/Python/Numpy/">Numpy</a>
+              <a href="/categories/Python/Torch/">Torch</a>
             
           </div>
         
@@ -599,7 +293,7 @@ ndarray 数组维度元组 shape 为从最外层到最里层逐层的大小；�
             
               <a href="/tags/Python/">Python</a>
             
-              <a href="/tags/Numpy/">Numpy</a>
+              <a href="/tags/Torch/">Torch</a>
             
           </div>
         
@@ -613,23 +307,43 @@ ndarray 数组维度元组 shape 为从最外层到最里层逐层的大小；�
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/09/28/DeepLearning/%E8%AF%AF%E5%B7%AE%E5%87%BD%E6%95%B0/">误差函数</a>
+        <a href="/2020/12/23/Math/Theory/%E6%95%B0%E5%AD%A6%E6%9C%AF%E8%AF%AD%E7%BC%A9%E5%86%99/">数学术语缩写</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/09/28/DeepLearning/%E8%AF%AF%E5%B7%AE%E5%87%BD%E6%95%B0/">
+        <a href="/2020/12/23/Math/Theory/%E6%95%B0%E5%AD%A6%E6%9C%AF%E8%AF%AD%E7%BC%A9%E5%86%99/">
           
           
             
           
-          1. 平方误差
+          
 
-对于单个数据来说，其平方误差为
+s.t. = such that：使得
 
-E=12∑k(yk−tk)2{\begin{array}{c}
-E = \frac{1}{2} \sum_{k} (y_k - t_k)^2
-\end{array}}E=21​∑k​(yk​−tk​)2​
-其中，yky_kyk​ 表示神经网络的输出，tkt_ktk​ 表示监督数据（ttt 采用 one-hot 编码），kkk 表示数据的维度。
+
+i.e. = id est：即
+
+
+resp. = respectively：相对地
+
+
+e.g. = for example：举例
+
+
+cf. = confer：比较
+
+
+viz. = ：不然
+
+
+Q.E.D. ：证毕
+
+
+iff = if and only if
+
+
+i.i.d. ：独立同分布
+
 
 
         </a>
@@ -639,8 +353,8 @@ E = \frac{1}{2} \sum_{k} (y_k - t_k)^2
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-09-28 11:40" pubdate>
-              2020-09-28
+            <time datetime="2020-12-23 15:32" pubdate>
+              2020-12-23
             </time>
           </div>
         
@@ -648,7 +362,9 @@ E = \frac{1}{2} \sum_{k} (y_k - t_k)^2
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/DeepLearning/">DeepLearning</a>
+              <a href="/categories/Math/">Math</a>
+            
+              <a href="/categories/Math/Theory/">Theory</a>
             
           </div>
         
@@ -656,9 +372,11 @@ E = \frac{1}{2} \sum_{k} (y_k - t_k)^2
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/DeepLearning/">DeepLearning</a>
+              <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
             
-              <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a>
+              <a href="/tags/Math/">Math</a>
+            
+              <a href="/tags/Theory/">Theory</a>
             
           </div>
         
@@ -672,21 +390,232 @@ E = \frac{1}{2} \sum_{k} (y_k - t_k)^2
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/09/27/Math/Theory/%E7%9F%A9%E9%98%B5/MoorePenrose%E4%BC%AA%E9%80%86/">MoorePenrose伪逆</a>
+        <a href="/2020/12/23/Math/Theory/%E9%9B%86%E5%90%88%E8%AE%BA/%E9%9B%86%E5%90%88%E7%9A%84%E5%A4%A7%E5%B0%8F%E5%85%B3%E7%B3%BB/">集合的大小关系</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/09/27/Math/Theory/%E7%9F%A9%E9%98%B5/MoorePenrose%E4%BC%AA%E9%80%86/">
+        <a href="/2020/12/23/Math/Theory/%E9%9B%86%E5%90%88%E8%AE%BA/%E9%9B%86%E5%90%88%E7%9A%84%E5%A4%A7%E5%B0%8F%E5%85%B3%E7%B3%BB/">
+          
+          
+            
+          
+          
+有限集：元素个数小于等于某一个自然数的集合。
+无穷集：元素个数比任何一个自然数都大的集合，包括可列/可数无穷集和不可列/不可数无穷集。
+可列/可数集：集合元素可以按照某种顺序一一列出来，包括有限集和可列/可数无穷集。
+可列/可数无穷集：集合元素可以找到与自然数集 NNN 的一一对应关系的无穷集合，比如整数集、有理数集。
+不可列/不可数集：集合元素无法无法构造与自然数集 NNN 的一一对应关系的无
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-12-23 12:46" pubdate>
+              2020-12-23
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/SetTheory/">SetTheory</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/SetTheory/">SetTheory</a>
+            
+              <a href="/tags/%E9%9B%86%E5%90%88%E8%AE%BA/">集合论</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/12/18/DistributedSystem/%E5%88%86%E5%B8%83%E5%BC%8F%E6%A1%86%E6%9E%B6%E7%B3%BB%E5%88%97%E6%96%87%E6%A1%A3/">分布式架构</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/12/18/DistributedSystem/%E5%88%86%E5%B8%83%E5%BC%8F%E6%A1%86%E6%9E%B6%E7%B3%BB%E5%88%97%E6%96%87%E6%A1%A3/">
+          
+          
+            
+          
+          【注】持续更新中……
+
+NCCL ：https://docs.nvidia.com/deeplearning/nccl/user-guide/docs/index.html（英文）
+
+
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-12-18 13:27" pubdate>
+              2020-12-18
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/DistributedSystem/">DistributedSystem</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/DistributedSystem/">DistributedSystem</a>
+            
+              <a href="/tags/%E5%88%86%E5%B8%83%E5%BC%8F/">分布式</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/12/13/Research/ML%E3%80%81CV%E6%96%B9%E5%90%91%E4%BC%9A%E8%AE%AE%E6%9C%9F%E5%88%8A%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99%E6%B1%87%E6%80%BB/">ML、CV方向会议期刊相关资料汇总</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/12/13/Research/ML%E3%80%81CV%E6%96%B9%E5%90%91%E4%BC%9A%E8%AE%AE%E6%9C%9F%E5%88%8A%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99%E6%B1%87%E6%80%BB/">
+          
+          
+            
+          
+          1. 会议
+1.1 会议检索
+
+2019 中国计算机学会推荐国际学术会议和期刊目录：https://www.ccf.org.cn/c/2019-04-25/663625.shtml
+2019 清华大学计算机学科群推荐学术会议和期刊列表：https://numbda.cs.tsinghua.edu.cn/~yuwj/TH-CPL.pdf
+2020 清华大学各院系（学科）重要国际学术会议目录：http
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-12-13 10:47" pubdate>
+              2020-12-13
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Research/">Research</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Research/">Research</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/12/12/C++/C++%E7%B3%BB%E5%88%97%E6%96%87%E6%A1%A3/">C++系列文档</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/12/12/C++/C++%E7%B3%BB%E5%88%97%E6%96%87%E6%A1%A3/">
+          
+          
+            
+          
+          【注】持续更新中……
+
+CMake ：https://cliutils.gitlab.io/modern-cmake/（英文）、https://cmake.org/cmake/help/latest/（英文）、https://pabloariasal.github.io/2018/02/19/its-time-to-do-cmake-right/（英文）
+GCC：https://gcc.gnu.o
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-12-12 11:14" pubdate>
+              2020-12-12
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/C/">C++</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/C/">C++</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/12/10/Python/Python%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83/">Python虚拟环境</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/12/10/Python/Python%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83/">
           
           
             
           
           1. 简介
-Moore-Penrose 伪逆常用于求解或简化非一致线性方程组的最小范数最小二乘解。其在实数域和复数域上都是唯一的，并且可以通过奇异值分解求得。
-2. 定义
-矩阵 AAA 的伪逆定义为
-A+=lim⁡α→0(ATA+αI)−1AT{\begin{array}{c}
-A^+ = \lim_{\alpha \rightarrow 0}(A^T A + \alpha I)^{-1} A^T
+Python 提供虚拟环境，虚拟环境是 Python 解释器的一个私有副本，在虚拟环境中可以安装私有包，而且不会影响到系统中安装的全局 Python 解释器，同时使用虚拟环境不需要管理员权限。
+2. 作用
+虚拟环境用于解决不同项目所需的 Python 解释器版本不一致以及包的混乱等问题。可以将系统全局 Python 解释器只作为创建虚拟环境的源，从而为每个程序单独创建虚拟环境，这样可以
         </a>
       </p>
 
@@ -694,8 +623,8 @@ A^+ = \lim_{\alpha \rightarrow 0}(A^T A + \alpha I)^{-1} A^T
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-09-27 22:13" pubdate>
-              2020-09-27
+            <time datetime="2020-12-10 09:30" pubdate>
+              2020-12-10
             </time>
           </div>
         
@@ -703,11 +632,7 @@ A^+ = \lim_{\alpha \rightarrow 0}(A^T A + \alpha I)^{-1} A^T
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/Math/">Math</a>
-            
-              <a href="/categories/Math/Theory/">Theory</a>
-            
-              <a href="/categories/Math/Theory/%E7%9F%A9%E9%98%B5/">矩阵</a>
+              <a href="/categories/Python/">Python</a>
             
           </div>
         
@@ -715,13 +640,7 @@ A^+ = \lim_{\alpha \rightarrow 0}(A^T A + \alpha I)^{-1} A^T
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
-            
-              <a href="/tags/Math/">Math</a>
-            
-              <a href="/tags/Theory/">Theory</a>
-            
-              <a href="/tags/%E7%9F%A9%E9%98%B5/">矩阵</a>
+              <a href="/tags/Python/">Python</a>
             
           </div>
         
@@ -735,21 +654,22 @@ A^+ = \lim_{\alpha \rightarrow 0}(A^T A + \alpha I)^{-1} A^T
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/09/27/Math/Theory/%E7%9F%A9%E9%98%B5/%E8%8C%83%E6%95%B0/">范数</a>
+        <a href="/2020/12/06/Python/Torch/Torch%E5%8D%B7%E7%A7%AF/">Torch卷积</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/09/27/Math/Theory/%E7%9F%A9%E9%98%B5/%E8%8C%83%E6%95%B0/">
+        <a href="/2020/12/06/Python/Torch/Torch%E5%8D%B7%E7%A7%AF/">
           
           
             
           
-          1. LpL_pLp​ 范数
-LpL_pLp​ 范数是向量空间中的一组范数。
-1.1 定义
-Lp(x⃗)=∣x⃗∣p=(∑i=1n∣xi∣p)1p{\begin{array}{c}
-L_p(\vec{x}) = |\vec{x}|_p = (\sum_{i=1}^n |x_i|^p)^{\frac{1}{p}}
-\end{array}}Lp​(x)=∣x∣p​=(∑i=1n​∣xi​∣p)p1​​
+          1. 2D 卷积
+1class torch.nn.Conv2d(in_channels, out_channels, kernel_size, stride=1, padding=0, dilation=1, groups=1, bias=True)
+
+输入尺度：(N,Cin,Hin,Win)
+(N,C_{in},H_{in},W_{in})
+(N,Cin​,Hin​,Win​)
+输出尺度： (N
         </a>
       </p>
 
@@ -757,8 +677,8 @@ L_p(\vec{x}) = |\vec{x}|_p = (\sum_{i=1}^n |x_i|^p)^{\frac{1}{p}}
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-09-27 19:20" pubdate>
-              2020-09-27
+            <time datetime="2020-12-06 12:03" pubdate>
+              2020-12-06
             </time>
           </div>
         
@@ -766,11 +686,9 @@ L_p(\vec{x}) = |\vec{x}|_p = (\sum_{i=1}^n |x_i|^p)^{\frac{1}{p}}
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/Math/">Math</a>
+              <a href="/categories/Python/">Python</a>
             
-              <a href="/categories/Math/Theory/">Theory</a>
-            
-              <a href="/categories/Math/Theory/%E7%9F%A9%E9%98%B5/">矩阵</a>
+              <a href="/categories/Python/Torch/">Torch</a>
             
           </div>
         
@@ -778,13 +696,68 @@ L_p(\vec{x}) = |\vec{x}|_p = (\sum_{i=1}^n |x_i|^p)^{\frac{1}{p}}
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
+              <a href="/tags/Python/">Python</a>
             
-              <a href="/tags/Math/">Math</a>
+              <a href="/tags/Torch/">Torch</a>
             
-              <a href="/tags/Theory/">Theory</a>
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/12/03/Python/Python%E7%9B%B8%E5%85%B3%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99%E6%B1%87%E6%80%BB/">Python相关学习资料汇总</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/12/03/Python/Python%E7%9B%B8%E5%85%B3%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99%E6%B1%87%E6%80%BB/">
+          
+          
             
-              <a href="/tags/%E7%9F%A9%E9%98%B5/">矩阵</a>
+          
+          以下资料按字母表顺序排列
+
+Abseil : https://abseil.io/docs/python/quickstart
+
+
+Abseil 是用于构建 Python 应用程序的 Python 库代码，主要用于处理程序的命令行输入。
+
+
+Airium : https://pypi.org/project/airium/
+
+
+Airium 是一个简单易用的 Python 库，让用户能够用 Pyt
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-12-03 16:55" pubdate>
+              2020-12-03
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Python/">Python</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Python/">Python</a>
             
           </div>
         
@@ -796,7 +769,7 @@ L_p(\vec{x}) = |\vec{x}|_p = (\sum_{i=1}^n |x_i|^p)^{\frac{1}{p}}
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/page/15/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/#board">14</a><a class="page-number" href="/page/15/#board">15</a><span class="page-number current">16</span><a class="page-number" href="/page/17/#board">17</a><a class="page-number" href="/page/18/#board">18</a><span class="space">&hellip;</span><a class="page-number" href="/page/38/#board">38</a><a class="extend next" rel="next" href="/page/17/#board"><i class="iconfont icon-arrowright"></i></a>
+      <a class="extend prev" rel="prev" href="/page/15/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/#board">14</a><a class="page-number" href="/page/15/#board">15</a><span class="page-number current">16</span><a class="page-number" href="/page/17/#board">17</a><a class="page-number" href="/page/18/#board">18</a><span class="space">&hellip;</span><a class="page-number" href="/page/42/#board">42</a><a class="extend next" rel="next" href="/page/17/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 

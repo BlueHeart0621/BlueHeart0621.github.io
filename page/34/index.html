@@ -197,28 +197,208 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4head/">LinuxShell命令head</a>
+        <a href="/2020/05/26/MatLab/MatLab%E5%B7%A5%E4%BD%9C%E5%8C%BA/">MatLab工作区</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4head/">
+        <a href="/2020/05/26/MatLab/MatLab%E5%B7%A5%E4%BD%9C%E5%8C%BA/">
           
           
             
           
-          【注】具体详解参见 man 手册。
-1. 简介
-head 命令用于在标准输出上显示每个文件起始 10 行。如果多于一个文件，则会逐个进行显示，并在每个文件显示的首部给出对应的文件名。如果没有指定文件或者指定为 -，则从标准输入上读取。
-2. 格式
-1head [OPTION]... [FILE]...
-其中，OPTION 指定选项参数，FILE 指定显示的文件。
-3. 选项
+          1. 基础工作区
+MatLab 中的基础工作区是针对当前 MatLab 窗口内的脚本代码而言的（无论是命令行窗口输入的还是 M 脚本文件中的），是所有脚本代码所共享的（即对当前 MatLab 窗口而言是唯一的），是对外可见的（即 MatLab 窗口中显示的工作区），与当前 MatLab 窗口是共存亡的。
+【注】从函数中调用脚本时，脚本使用的是调用函数的函数工作区。
+2. 函数工作区
+MatLab 
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-05-26 10:44" pubdate>
+              2020-05-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/MatLab/">MatLab</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/MatLab/">MatLab</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/05/26/MatLab/MatLab%E8%BF%90%E7%AE%97%E7%AC%A6%E4%B8%8E%E8%BF%90%E7%AE%97/">MatLab运算符与运算</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/05/26/MatLab/MatLab%E8%BF%90%E7%AE%97%E7%AC%A6%E4%B8%8E%E8%BF%90%E7%AE%97/">
+          
+          
+            
+          
+          1. 算术运算符
+MatLab 算术运算符有四则运算符和带点四则运算符。
 
 
 
-选项参数
+运算符
+运算法则
+运算符
+运算法则
+
+
+
+
+A+B
+A 与 B 相加（维度必须一致）
+A-B
+A 与 B 相减（维度必须一致）
+
+
+A*B
+A 与 B 相乘（二者之一为标量或满足矩阵相乘条件）
+A.*B
+A 与 B 相应元素相乘（维度必须一致）
+
+
+A\B
+B 与 A 相除（A 为标量或满足 A 非奇异，A\B=A−1
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-05-26 10:44" pubdate>
+              2020-05-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/MatLab/">MatLab</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/MatLab/">MatLab</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/05/26/MySQL/Deepin15.11%E9%85%8D%E7%BD%AEMySQL%E7%8E%AF%E5%A2%83/">Deepin15.11配置MySQL环境</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/05/26/MySQL/Deepin15.11%E9%85%8D%E7%BD%AEMySQL%E7%8E%AF%E5%A2%83/">
+          
+          
+            
+          
+          【注】mysql 环境配置详情请参阅 mysql 官方教程。
+1. 添加 APT Repository
+从官网上下载对应的 MySQL APT Repository 配置包，然后安装该 mysql-apt-config_x.y.z_all.deb 包（具体取决于所下载的 deb 包）。
+1sudo dpkg -i mysql-apt-config_x.y.z_all.deb
+在安装该 APT Re
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-05-26 10:44" pubdate>
+              2020-05-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/MySQL/">MySQL</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/MySQL/">MySQL</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/05/26/MySQL/MySQL%E6%8A%A5%E9%94%99/">MySQL报错</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/05/26/MySQL/MySQL%E6%8A%A5%E9%94%99/">
+          
+          
+            
+          
+          1. The MySQL server is running with the --secure-file-priv option ***
+
+问题：secure-file-priv 未配置或配置与当前使用路径冲突。secure-file-priv 参数是用来限制 mysql 下数据导入导出只能发生的路径下。
+
+
+
+
+secure-file-priv 参数值
 说明
 
+
+
+
+''
+表示 mysqld 
         </a>
       </p>
 
@@ -235,9 +415,7 @@ head 命令用于在标准输出上显示每个文件起始 10 行。如果多�
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/Linux/">Linux</a>
-            
-              <a href="/categories/Linux/Shell/">Shell</a>
+              <a href="/categories/MySQL/">MySQL</a>
             
           </div>
         
@@ -245,9 +423,7 @@ head 命令用于在标准输出上显示每个文件起始 10 行。如果多�
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/Shell/">Shell</a>
+              <a href="/tags/MySQL/">MySQL</a>
             
           </div>
         
@@ -261,21 +437,26 @@ head 命令用于在标准输出上显示每个文件起始 10 行。如果多�
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4history/">LinuxShell命令history</a>
+        <a href="/2020/05/26/MySQL/%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%B8%8B%E4%BD%BF%E7%94%A8MySQL/">命令行下使用MySQL</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4history/">
+        <a href="/2020/05/26/MySQL/%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%B8%8B%E4%BD%BF%E7%94%A8MySQL/">
           
           
             
           
-          【注】具体详解参见 help 手册。
-1. 简介
-history 内建命令用于显示或操纵历史命令列表。
-2. 格式
-123history [NUM|-c|-d [offset]]history [-a|-n|-r|-w] [FILE]history [-p|-s] ARG [ARG ...]
-其中，FILE 用于指定保存历史命令列表的文件，默认是~/.bash_history 文件。若未指定任何选
+          1. 进入 MySQL 终端
+
+指定服务器 host 和 user
+
+1mysql -h host -u user -p    # -p 选项指明输入密码
+
+匿名形式进入 MySQL 终端（host 默认为 localhost，user 默认为当前系统的 user）
+
+1mysql
+【注】linux 系统下可能需要使用超级用户权限：
+12sudo mysql -h host -u user -ps
         </a>
       </p>
 
@@ -292,9 +473,7 @@ history 内建命令用于显示或操纵历史命令列表。
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/Linux/">Linux</a>
-            
-              <a href="/categories/Linux/Shell/">Shell</a>
+              <a href="/categories/MySQL/">MySQL</a>
             
           </div>
         
@@ -302,9 +481,7 @@ history 内建命令用于显示或操纵历史命令列表。
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/Shell/">Shell</a>
+              <a href="/tags/MySQL/">MySQL</a>
             
           </div>
         
@@ -318,379 +495,19 @@ history 内建命令用于显示或操纵历史命令列表。
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4let/">LinuxShell命令let</a>
+        <a href="/2020/05/26/Net/Hosts%E6%96%87%E4%BB%B6%E4%BF%AE%E6%94%B9/">Hosts文件修改</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4let/">
-          
-          
-            
-          
-          【注】具体详解参见 help 手册。
-1. 简介
-Linux Shell 内建命令用于估算算数表达式。估算的计算以定宽的整数完成，不带溢出检测，但除 0 会报错。
-2. 格式
-1let ARG [ARG ...]
-其中，ARG 参数会被 let 作为算数表达式来进行估值。ARG 中的算术操作符列表按照优先级由高到低给出如下：
-【注】如果最后一个 ARG 估值为 0,则返回 1；否则返回 0 。
-
-
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Linux/">Linux</a>
-            
-              <a href="/categories/Linux/Shell/">Shell</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/Shell/">Shell</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4more/">LinuxShell命令more</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4more/">
-          
-          
-            
-          
-          【注】具体详解参见 man 手册。
-1. 简介
-more 是一个用于屏幕阅读的文件分页阅览过滤的 Shell 命令，一次阅览一屏幕文字，同时提供页面阅读的基于 vi 交互式命令的交互环境。
-2. 格式
-1more [OPTIONS] FILE...
-其中，OPTIONS 指定选项参数，FILE 指定阅读的文件。
-除命令行指定 OPTIONS 选项参数外，more 也同时从环境变量 MORE（选项参
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Linux/">Linux</a>
-            
-              <a href="/categories/Linux/Shell/">Shell</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/Shell/">Shell</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4ps/">LinuxShell命令ps</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4ps/">
-          
-          
-            
-          
-          【注】具体详解参见 man 手册。
-1. 简介
-ps 是 Linux 下显示瞬间进程状态的强大命令，并不动态连续显示进程状态（top 命令则是对进程进行实时监控）。
-2. 格式
-1ps [options]
-Linux 系统中使用 ps 命令支持三种不同类型的命令行选项参数：
-
-Unix 风格参数（参数前使用单破折线）
-BSD 风格参数（参数前不使用破折线）
-GNU 风格长参数（参数前加双破折线）
-
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Linux/">Linux</a>
-            
-              <a href="/categories/Linux/Shell/">Shell</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/Shell/">Shell</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4sort/">LinuxShell命令sort</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4sort/">
-          
-          
-            
-          
-          【注】具体详解参见 man 手册和 info 手册。
-1. 简介
-sort 命令用于对给定的文件中的行进行排序并写到标准输出上。如果没有给定文件或者给定的文件名为 - ，则从标准输入读取数据。
-2. 格式
-12sort [OPTION]... [FILE]...sort [OPTION]... --files0-from=F
-其中，OPTION 指定选项参数，FILE 指定文件名，--files0
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Linux/">Linux</a>
-            
-              <a href="/categories/Linux/Shell/">Shell</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/Shell/">Shell</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4tail/">LinuxShell命令tail</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4tail/">
-          
-          
-            
-          
-          【注】具体详解参见 man 手册。
-1. 简介
-tail 命令用于在标准输出上显示每个文件最后 10 行。如果多于一个文件，则会逐个进行显示，并在每个文件显示的首部给出对应的文件名。如果没有指定文件或者指定为 -，则从标准输入上读取。
-2. 格式
-1tail [OPTION]... [FILE]...
-其中，OPTION 指定选项参数，FILE 指定显示的文件。
-3. 选项
-
-
-
-选项参数
-说明
-
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Linux/">Linux</a>
-            
-              <a href="/categories/Linux/Shell/">Shell</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/Shell/">Shell</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4unset/">LinuxShell命令unset</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4unset/">
-          
-          
-            
-          
-          【注】具体详解参见 help 手册。
-1. 简介
-Linux Shell 内建命令 unset 用于取消设定 Shell 变量、函数或属性。
-【注】unset 命令不能取消设定只读变量（参见 readonly 内建命令）。
-2. 格式
-1unset [OPTION] [NAME ...]
-其中，OPTION 指定了选项参数，NAME 为指定的变量或函数。不带选项时，unset 首先尝试取消设定一个
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Linux/">Linux</a>
-            
-              <a href="/categories/Linux/Shell/">Shell</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/Shell/">Shell</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4wc/">LinuxShell命令wc</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4wc/">
+        <a href="/2020/05/26/Net/Hosts%E6%96%87%E4%BB%B6%E4%BF%AE%E6%94%B9/">
           
           
             
           
           1. 简介
-wc 命令用来统计每个文件的行、单词和字节数并输出。如果指定多个文件，则输出每个文件的总行\单词\字节数及所有文件总的行\单词\字节数；如果没有指定文件或指定文件为 - ，则从标准输入读取。
-2. 格式
-12wc [options]... [filelist]wc [options]... --files0-from=F
-其中，options 指定统计输出格式，filelist 为指定
+有时访问某些国外网站很卡（不包括无法访问的网站），很大的原因是这些网站的 CDN 的域名遭到 DNS 污染了。这时就可以选择直接访问源网站 IP ，绕过 DNS 解析，即通过修改主机 hosts 文件的方式，将域名和 IP 的对应关系直接记录下来，来加速对这些网站的访问。
+2. 原理
+主机操作系统下都有一个 hosts 文件，其作用在于将一些常用网址域名与其对应的 IP 地址建立一个关
         </a>
       </p>
 
@@ -707,9 +524,7 @@ wc 命令用来统计每个文件的行、单词和字节数并输出。如果�
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/Linux/">Linux</a>
-            
-              <a href="/categories/Linux/Shell/">Shell</a>
+              <a href="/categories/Net/">Net</a>
             
           </div>
         
@@ -717,9 +532,7 @@ wc 命令用来统计每个文件的行、单词和字节数并输出。如果�
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/Shell/">Shell</a>
+              <a href="/tags/Net/">Net</a>
             
           </div>
         
@@ -733,35 +546,20 @@ wc 命令用来统计每个文件的行、单词和字节数并输出。如果�
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%AE%9A%E6%97%B6%E5%8A%9F%E8%83%BD/">LinuxShell定时功能</a>
+        <a href="/2020/05/26/NodeJS/Mint19.1%E5%AE%89%E8%A3%85NodeJS/">Mint19.1安装NodeJS</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%AE%9A%E6%97%B6%E5%8A%9F%E8%83%BD/">
+        <a href="/2020/05/26/NodeJS/Mint19.1%E5%AE%89%E8%A3%85NodeJS/">
           
           
             
           
-          Linux 系统提供了多个在预定时间运行作业的方法：at 命令和 cron 表。
-1. at命令
-命令格式如下：
-1at [-f filename] time
-其中，time参数指定了Linux系统何时运行该作业。at命令可识别的time格式有很多种，譬如：
-
-
-
-10:30
-
-
-
-
-10:30 PM
-
-
-now、noon、midnight、teatime
-
-
-MMDDYY、MM/DD/YY、DD
+          1. 查看 NodeJS 版本
+查看最新版本的 NodeJS，见官网地址。
+2. 添加 NodeJS 源
+NodeJS 每个大版本都有相对应的源，比如 12.16.2 版本对应的源为 https://deb.nodesource.com/setup_12.x，将所需安装的 NodeJS 版本源添加到系统中：
+1curl -sL https://deb.nodesource.com/setup_12
         </a>
       </p>
 
@@ -778,9 +576,7 @@ MMDDYY、MM/DD/YY、DD
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/Linux/">Linux</a>
-            
-              <a href="/categories/Linux/Shell/">Shell</a>
+              <a href="/categories/NodeJS/">NodeJS</a>
             
           </div>
         
@@ -788,9 +584,166 @@ MMDDYY、MM/DD/YY、DD
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/Linux/">Linux</a>
+              <a href="/tags/NodeJS/">NodeJS</a>
             
-              <a href="/tags/Shell/">Shell</a>
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/05/26/Python/Python%E6%8A%A5%E9%94%99/">Python报错</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/05/26/Python/Python%E6%8A%A5%E9%94%99/">
+          
+          
+            
+          
+          1. fatal error: Python.h: 没有那个文件或目录
+
+问题：缺少 python-dev 包
+解决：安装对应包：
+
+1sudo apt install python-dev # 最好指定 python 版本，比如：python3.6-dev
+2. ERROR: Package 'pylint' requires a different Python: 2.7.15 not in 
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-05-26 10:44" pubdate>
+              2020-05-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Python/">Python</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Python/">Python</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/05/26/Python/pip%E4%B8%8B%E8%BD%BDPython%E5%BA%93%E9%80%9F%E5%BA%A6%E6%85%A2%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/">pip下载Python库速度慢解决方案</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/05/26/Python/pip%E4%B8%8B%E8%BD%BDPython%E5%BA%93%E9%80%9F%E5%BA%A6%E6%85%A2%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/">
+          
+          
+            
+          
+          1. 简介
+python 的 pip 安装包工具非常便利，但由于其默认的下载源为国外源，因此在安装 python 库的时候下载速度较慢。有时库文件过大，超出 pip 的下载时间限制，就会报错 The read operation timed out。所以我们可是手动更改 pip 的下载源为国内的镜像下载源以提升下载速度。
+2. 国内镜像源
+国内主要的 pip 镜像源有以下几个：
+1234https
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-05-26 10:44" pubdate>
+              2020-05-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Python/">Python</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Python/">Python</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/05/26/Qt/Deepin15.11%E4%B8%8BQt5.14%E6%8A%A5%E9%94%99/">Deepin15.11下Qt5.14报错</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/05/26/Qt/Deepin15.11%E4%B8%8BQt5.14%E6%8A%A5%E9%94%99/">
+          
+          
+            
+          
+          1. error: Unknown module(s) in QT: xlsx
+
+问题：Qt 找不到 qtxlsx 的 modules
+解决：手动安装 qtxlsx 模块
+
+12345git clone git@github.com:dbzhang800/QtXlsxWriter.gitcd QtXlsxWriterqmakemakemake install
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-05-26 10:44" pubdate>
+              2020-05-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Qt/">Qt</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Qt/">Qt</a>
             
           </div>
         
@@ -802,7 +755,7 @@ MMDDYY、MM/DD/YY、DD
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/page/33/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/32/#board">32</a><a class="page-number" href="/page/33/#board">33</a><span class="page-number current">34</span><a class="page-number" href="/page/35/#board">35</a><a class="page-number" href="/page/36/#board">36</a><span class="space">&hellip;</span><a class="page-number" href="/page/38/#board">38</a><a class="extend next" rel="next" href="/page/35/#board"><i class="iconfont icon-arrowright"></i></a>
+      <a class="extend prev" rel="prev" href="/page/33/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/32/#board">32</a><a class="page-number" href="/page/33/#board">33</a><span class="page-number current">34</span><a class="page-number" href="/page/35/#board">35</a><a class="page-number" href="/page/36/#board">36</a><span class="space">&hellip;</span><a class="page-number" href="/page/42/#board">42</a><a class="extend next" rel="next" href="/page/35/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 

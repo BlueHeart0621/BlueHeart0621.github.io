@@ -197,19 +197,21 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Math/Theory/%CF%80%E7%9A%84%E8%AE%A1%E7%AE%97%E5%85%AC%E5%BC%8F/">π的计算公式</a>
+        <a href="/2020/05/26/Linux/Deepin/Deepin15.11%E4%B8%8B%E8%93%9D%E7%89%99%E9%85%8D%E5%AF%B9%E5%92%8C%E8%BF%9E%E6%8E%A5/">Deepin15.11下蓝牙配对和连接</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Math/Theory/%CF%80%E7%9A%84%E8%AE%A1%E7%AE%97%E5%85%AC%E5%BC%8F/">
+        <a href="/2020/05/26/Linux/Deepin/Deepin15.11%E4%B8%8B%E8%93%9D%E7%89%99%E9%85%8D%E5%AF%B9%E5%92%8C%E8%BF%9E%E6%8E%A5/">
           
           
             
           
-          1. BBP（贝利-波尔温-普劳夫）公式
-π=∑k=0∞116k(48k+1−28k+4−18k+5−18k+6){\begin{array}{c}
-\pi = \sum_{k=0}^\infty{1 \over 16^k}({4 \over {8k + 1}} - {2 \over {8k + 4}} - {1 \over {8k + 5}} - {1 \over {8k + 6}})
-\end
+          首先确保 bluetooth, bluez, bluez-tools, rfkill 已经安装好，没有则在终端进行安装：
+1sudo apt install bluetooth bluez bluez-tools rfkill
+1. 查找蓝牙适配器
+1hciconfig
+对于系统识别到的每个蓝牙适配器，会显示出其相应信息：XXX:   Type:***，其中 XXX 为该蓝牙适配器的设备名。
+2.
         </a>
       </p>
 
@@ -226,9 +228,9 @@
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/Math/">Math</a>
+              <a href="/categories/Linux/">Linux</a>
             
-              <a href="/categories/Math/Theory/">Theory</a>
+              <a href="/categories/Linux/Deepin/">Deepin</a>
             
           </div>
         
@@ -236,9 +238,9 @@
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/Math/">Math</a>
+              <a href="/tags/Linux/">Linux</a>
             
-              <a href="/tags/Theory/">Theory</a>
+              <a href="/tags/Deepin/">Deepin</a>
             
           </div>
         
@@ -252,24 +254,82 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Net/CDN%E5%86%85%E5%AE%B9%E5%88%86%E5%8F%91%E7%BD%91%E7%BB%9C/CDN%E5%86%85%E5%AE%B9%E5%88%86%E5%8F%91%E7%BD%91%E7%BB%9C/">CDN内容分发网络</a>
+        <a href="/2020/05/26/Linux/Mint/Mint19.1%E4%B8%8Bdpkg%E6%8A%A5%E9%94%99/">Mint19.1下dpkg报错</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Net/CDN%E5%86%85%E5%AE%B9%E5%88%86%E5%8F%91%E7%BD%91%E7%BB%9C/CDN%E5%86%85%E5%AE%B9%E5%88%86%E5%8F%91%E7%BD%91%E7%BB%9C/">
+        <a href="/2020/05/26/Linux/Mint/Mint19.1%E4%B8%8Bdpkg%E6%8A%A5%E9%94%99/">
+          
+          
+            
+          
+          1. E: Sub-process /usr/bin/dpkg returned an error code (1)
+解决办法如下：
+12345678cd /var/lib/dpkgsudo mv info info_baksudo mkdir infosudo apt update &gt; /dev/null			# 若要输出信息，去除重定向符及其后内容sudo apt install -fs
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-05-26 10:44" pubdate>
+              2020-05-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Linux/">Linux</a>
+            
+              <a href="/categories/Linux/Mint/">Mint</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Linux/">Linux</a>
+            
+              <a href="/tags/Mint/">Mint</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/05/26/Linux/Mint/Mint19.1%E4%B8%8B%E4%BD%BF%E7%94%A8npm%E5%B7%A5%E5%85%B7/">Mint19.1下使用npm工具</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/05/26/Linux/Mint/Mint19.1%E4%B8%8B%E4%BD%BF%E7%94%A8npm%E5%B7%A5%E5%85%B7/">
           
           
             
           
           1. 简介
-CDN（内容分发网络）是指一种透过互联网互相连接的电脑网络系统，其利用最靠近用户的服务器，为每位用户提供高性能、可扩展性及低成本的网络内容传递。
 
-现在大部分大网站都是利用 CDN 技术来实现数据的分发，比如 Github 等网站。
-2. 组成
-CDN 网络包含的功能实体主要有：
 
-内容缓存设备：用户接入点，实现内容的边缘传播和存储。
-内容交换机：连接用户接入点的中心，对内容进行缓存负
+npm 是一个 NodeJS 平台的 JavaScript 包管理工具，它用于管理包发布、查询、安装、开发以及包之间的依赖性冲突等。
+
+
+npm 安装软件目录有两种模式，一个是全局模式、一个是局部模式（默认）。
+
+
+3. 格式
+1npm &lt;command&gt; [args]
+4. 查看帮助信息
+12345npm help helpnpm help package.jsonn
         </a>
       </p>
 
@@ -286,7 +346,9 @@ CDN 网络包含的功能实体主要有：
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/Net/">Net</a>
+              <a href="/categories/Linux/">Linux</a>
+            
+              <a href="/categories/Linux/Mint/">Mint</a>
             
           </div>
         
@@ -294,7 +356,9 @@ CDN 网络包含的功能实体主要有：
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/Net/">Net</a>
+              <a href="/tags/Linux/">Linux</a>
+            
+              <a href="/tags/Mint/">Mint</a>
             
           </div>
         
@@ -308,25 +372,24 @@ CDN 网络包含的功能实体主要有：
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Net/DNS%E5%9C%B0%E5%9D%80%E6%9B%B4%E6%8D%A2/DNS%E5%9C%B0%E5%9D%80%E6%9B%B4%E6%8D%A2/">DNS地址更换</a>
+        <a href="/2020/05/26/Linux/Mint/Mint19.1%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%92%AD%E6%94%BE%E9%9F%B3%E4%B9%90/">Mint19.1命令行播放音乐</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Net/DNS%E5%9C%B0%E5%9D%80%E6%9B%B4%E6%8D%A2/DNS%E5%9C%B0%E5%9D%80%E6%9B%B4%E6%8D%A2/">
+        <a href="/2020/05/26/Linux/Mint/Mint19.1%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%92%AD%E6%94%BE%E9%9F%B3%E4%B9%90/">
           
           
             
           
-          1. 简介
-由于网络中存在 DNS 污染和 DNS 劫持的问题，因此有时我们需要更改自己主机上默认的 DNS 服务器地址。
-2. Linux 更改 DNS 地址
-
-临时修改 DNS 地址（重启电脑后失效）
-
-直接在 /etc/resolv.conf 文件中修改 DNS 地址，格式为 nameserver x.x.x.x
-1sudo vim /etc/resolv.conf
-
-永久修改 DNS 地址
+          1. 安装必要软件包
+1sudo apt install sox libsox-fmt-all
+2. 命令行播放音乐
+安装上述软件包后，就可以在命令行中使用 play 命令
+1play [musicname].mp3
+play 命令有很多强大的功能，具体用法可以 help 一下
+1play --help
+3. 用途
+安装该功能后，就能在 bash 脚本中使用，可以实现诸如报警、提醒、定时闹钟等功能
         </a>
       </p>
 
@@ -343,7 +406,9 @@ CDN 网络包含的功能实体主要有：
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/Net/">Net</a>
+              <a href="/categories/Linux/">Linux</a>
+            
+              <a href="/categories/Linux/Mint/">Mint</a>
             
           </div>
         
@@ -351,7 +416,9 @@ CDN 网络包含的功能实体主要有：
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/Net/">Net</a>
+              <a href="/tags/Linux/">Linux</a>
+            
+              <a href="/tags/Mint/">Mint</a>
             
           </div>
         
@@ -365,21 +432,25 @@ CDN 网络包含的功能实体主要有：
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Net/DNS%E6%B1%A1%E6%9F%93%E5%92%8CDNS%E5%8A%AB%E6%8C%81/DNS%E6%B1%A1%E6%9F%93%E5%92%8CDNS%E5%8A%AB%E6%8C%81/">DNS污染和DNS劫持</a>
+        <a href="/2020/05/26/Linux/Mint/Mint19.1%E5%AE%89%E8%A3%85man%E4%B8%AD%E6%96%87%E6%89%8B%E5%86%8C/">Mint19.1安装man中文手册</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Net/DNS%E6%B1%A1%E6%9F%93%E5%92%8CDNS%E5%8A%AB%E6%8C%81/DNS%E6%B1%A1%E6%9F%93%E5%92%8CDNS%E5%8A%AB%E6%8C%81/">
+        <a href="/2020/05/26/Linux/Mint/Mint19.1%E5%AE%89%E8%A3%85man%E4%B8%AD%E6%96%87%E6%89%8B%E5%86%8C/">
           
           
             
           
-          1. DNS 污染
-DNS 污染又称 DNS 缓存投毒，通过制造一些虚假的域名服务器数据包，将域名指向不正确的 IP 地址。
+          1. 安装 man 中文软件包
+1sudo apt install manpages-zh
+2. 查询 man 中文手册安装目录
+1dpkg -L manpages-zh | less
+发现 man 中文手册安装目录为 /usr/share/man/zh_CN（简体）或 /usr/share/man/zh_TW （繁体）。
+3. 设置中英文 man 别名
 
-工作原理
+编辑 ~/.bashrc文件：
 
-由于域名查询没有任何认证机制，且通常是基于无连接不可靠的 UDP 协议，查询者只接受最先到达且格式正确的查询结果（后来的查询结果均被丢弃），因此可以通过对 UDP 的53端口上的域名查询进行 IDS 入侵检测，一旦发现相匹配的域名查询请求，就立刻伪装成目标域名
+1su
         </a>
       </p>
 
@@ -396,7 +467,9 @@ DNS 污染又称 DNS 缓存投毒，通过制造一些虚假的域名服务器�
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/Net/">Net</a>
+              <a href="/categories/Linux/">Linux</a>
+            
+              <a href="/categories/Linux/Mint/">Mint</a>
             
           </div>
         
@@ -404,7 +477,9 @@ DNS 污染又称 DNS 缓存投毒，通过制造一些虚假的域名服务器�
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/Net/">Net</a>
+              <a href="/tags/Linux/">Linux</a>
+            
+              <a href="/tags/Mint/">Mint</a>
             
           </div>
         
@@ -418,23 +493,33 @@ DNS 污染又称 DNS 缓存投毒，通过制造一些虚假的域名服务器�
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Others/%E9%A2%9C%E8%89%B2%E5%8E%9F%E7%90%86/%E9%A2%9C%E8%89%B2%E5%8E%9F%E7%90%86/">颜色原理</a>
+        <a href="/2020/05/26/Linux/Mint/Mint19.1%E6%B8%85%E9%99%A4%E7%B3%BB%E7%BB%9F%E5%9E%83%E5%9C%BE/">Mint19.1清除系统垃圾</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Others/%E9%A2%9C%E8%89%B2%E5%8E%9F%E7%90%86/%E9%A2%9C%E8%89%B2%E5%8E%9F%E7%90%86/">
+        <a href="/2020/05/26/Linux/Mint/Mint19.1%E6%B8%85%E9%99%A4%E7%B3%BB%E7%BB%9F%E5%9E%83%E5%9C%BE/">
           
           
             
           
-          1. 简介
-红、绿、蓝作为颜色三元色，通过不同比例的混合就能够产生其他各色颜色。
-2. 原理
-颜色的基本参数有三个：色相、色阶、饱和度。
-2.1 色相
-色相是用来区别区别颜色的标志，是光由于波长、频率的不同而产生的性质。色相是在光谱上自然分割的结果。
-2.2 色阶
-色阶也叫明度，是指颜色的亮度指数，由物体反射出来的光波的多少来量化。图像的色彩丰满度和精细度是由色阶决定的，最亮定义为白色、最暗定义为
+          1. 清除不再需要的软件依赖包
+1sudo apt autoremove
+2. 清除所有软件安装包
+1sudo apt clean
+3. 清除系统旧的不再使用的软件安装包
+1sudo apt autoclean
+4. 清除系统多余内核
+
+首先查看当前内核
+
+1uname -a
+
+然后查看系统所有内核
+
+1dpkg --get-selections | grep linux
+
+最后删除不需要的内核
+
         </a>
       </p>
 
@@ -451,7 +536,9 @@ DNS 污染又称 DNS 缓存投毒，通过制造一些虚假的域名服务器�
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/Others/">Others</a>
+              <a href="/categories/Linux/">Linux</a>
+            
+              <a href="/categories/Linux/Mint/">Mint</a>
             
           </div>
         
@@ -459,7 +546,9 @@ DNS 污染又称 DNS 缓存投毒，通过制造一些虚假的域名服务器�
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/Others/">Others</a>
+              <a href="/tags/Linux/">Linux</a>
+            
+              <a href="/tags/Mint/">Mint</a>
             
           </div>
         
@@ -473,26 +562,23 @@ DNS 污染又称 DNS 缓存投毒，通过制造一些虚假的域名服务器�
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/ServiceComputing/WebService%E6%89%A9%E5%B1%95/WebService%E6%89%A9%E5%B1%95/">WebService扩展</a>
+        <a href="/2020/05/26/Linux/Manjaro/Manjaro20.0%E4%B8%8B%E8%93%9D%E7%89%99%E9%85%8D%E5%AF%B9%E5%92%8C%E8%BF%9E%E6%8E%A5/">Manjaro20.0下蓝牙配对和连接</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/ServiceComputing/WebService%E6%89%A9%E5%B1%95/WebService%E6%89%A9%E5%B1%95/">
+        <a href="/2020/05/26/Linux/Manjaro/Manjaro20.0%E4%B8%8B%E8%93%9D%E7%89%99%E9%85%8D%E5%AF%B9%E5%92%8C%E8%BF%9E%E6%8E%A5/">
           
           
             
           
-          1. 服务发布和查询
-1.1 概念
-SOAP、WSDL、XML Schema 已经可以完成点到点的调用，但点到点的调用不能完全发挥面向服务的特点
-
-graph LR
-    subgraph 点到点的调用不能完全发挥面向服务的特点
-    A(SOAP);
-    B(WSDL);
-    C(XML Schema);
-    D&#123;点到点的调用&#125;;
-    A &amp; B 
+          首先确保 bluez, bluez-utils 已经安装好，否则在终端安装：
+1sudo pacman -S bluez bluez-utils
+1. 查看蓝牙服务状态
+1systemctl status bluetooth.service
+2. 启动蓝牙服务
+如果蓝牙服务未启动，则需手动启动蓝牙服务：
+1sudo systemctl start bluetooth.service
+3. 操控蓝牙
         </a>
       </p>
 
@@ -509,7 +595,9 @@ graph LR
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/ServiceComputing/">ServiceComputing</a>
+              <a href="/categories/Linux/">Linux</a>
+            
+              <a href="/categories/Linux/Manjaro/">Manjaro</a>
             
           </div>
         
@@ -517,7 +605,9 @@ graph LR
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/ServiceComputing/">ServiceComputing</a>
+              <a href="/tags/Linux/">Linux</a>
+            
+              <a href="/tags/Manjaro/">Manjaro</a>
             
           </div>
         
@@ -531,22 +621,26 @@ graph LR
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/ServiceComputing/WebService%E6%A0%B8%E5%BF%83/WebService%E6%A0%B8%E5%BF%83/">WebService核心</a>
+        <a href="/2020/05/26/Linux/Manjaro/Manjaro20.0%E5%AE%89%E8%A3%85EasyConnect/">Manjaro20.0安装EasyConnect</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/ServiceComputing/WebService%E6%A0%B8%E5%BF%83/WebService%E6%A0%B8%E5%BF%83/">
+        <a href="/2020/05/26/Linux/Manjaro/Manjaro20.0%E5%AE%89%E8%A3%85EasyConnect/">
           
           
             
           
-          1. SOAP
-1.1 概念
-SOAP 提供了一种标准的方法，使得运行在不同平台并使用不同的技术和编程语言的应用程序可以互相进行 XML 通信。从本质上来说，SOAP 并不是一个网络传输协议，它仅仅是一个信息传递的概念性框架，在实际使用时，需要绑定具体的网络传输协议和上层的应用逻辑来创建关联。
-1.2 作用
+          EasyConnect 是深信服公司新一代的 SSLVPN，支持各大操作系统平台，但 Linux 目前只支持 deb 包和 rpm 包，所以 Manjaro 安装 EasyConnect 并不友好。
+1. 安装最新版 EasyConnect
+1.1 终端安装 AUR 版本
 
+yaourt 用户
 
-SOAP 提供了基于 XML 的信息定义方式，用以在去中心化的分布环境中，提供点到点的
+1yaourt -S easyconnect
+
+yay 用户
+
+1yay -S easyconnect
         </a>
       </p>
 
@@ -563,7 +657,9 @@ SOAP 提供了基于 XML 的信息定义方式，用以在去中心化的分布�
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/ServiceComputing/">ServiceComputing</a>
+              <a href="/categories/Linux/">Linux</a>
+            
+              <a href="/categories/Linux/Manjaro/">Manjaro</a>
             
           </div>
         
@@ -571,7 +667,9 @@ SOAP 提供了基于 XML 的信息定义方式，用以在去中心化的分布�
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/ServiceComputing/">ServiceComputing</a>
+              <a href="/tags/Linux/">Linux</a>
+            
+              <a href="/tags/Manjaro/">Manjaro</a>
             
           </div>
         
@@ -585,37 +683,30 @@ SOAP 提供了基于 XML 的信息定义方式，用以在去中心化的分布�
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/ServiceComputing/XML%E5%8F%8A%E7%9B%B8%E5%85%B3%E5%8D%8F%E8%AE%AE/XML%E5%8F%8A%E7%9B%B8%E5%85%B3%E5%8D%8F%E8%AE%AE/">XML及相关协议</a>
+        <a href="/2020/05/26/Linux/Manjaro/Manjaro20.0%E5%AE%89%E8%A3%85deb%E8%BD%AF%E4%BB%B6%E5%8C%85/">Manjaro20.0安装deb软件包</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/ServiceComputing/XML%E5%8F%8A%E7%9B%B8%E5%85%B3%E5%8D%8F%E8%AE%AE/XML%E5%8F%8A%E7%9B%B8%E5%85%B3%E5%8D%8F%E8%AE%AE/">
+        <a href="/2020/05/26/Linux/Manjaro/Manjaro20.0%E5%AE%89%E8%A3%85deb%E8%BD%AF%E4%BB%B6%E5%8C%85/">
           
           
             
           
-          1. 面向服务中的信息交换和数据类型
-1.1 电子信息交换
+          由于 Manjaro 基于 ArchLinux，而 deb 软件包格式为 Debian 系统安装包格式，故 Manjaro 不能直接安装 deb 软件包，而需要借助 debtap 工具。
+1. 安装 debtap
 
-定义
-在执行领域（业务）相关功能时，各式各样、采用电子方式编码的信息，在软件单元之间的移动的过程。
-分类
+yaourt 工具
 
+1yaourt -S debtap
 
+yay 工具
 
-应用内部 - 信息在单个应用的不同部分之间移动
-应用之间 - 信息在同一个企业系统中的不同应用之间
-系统之间 - 信息在同一个企业的不同系统之间移动
-公司之间 - 信息在不同的公司之间移动
+1yay -S debtap
 
+pacaur 工具
 
-
-
-交换方式
-
-
-
-基于二进制的
+1pacaur -S debtap
+【注】三种方式任选
         </a>
       </p>
 
@@ -632,7 +723,9 @@ SOAP 提供了基于 XML 的信息定义方式，用以在去中心化的分布�
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/ServiceComputing/">ServiceComputing</a>
+              <a href="/categories/Linux/">Linux</a>
+            
+              <a href="/categories/Linux/Manjaro/">Manjaro</a>
             
           </div>
         
@@ -640,7 +733,9 @@ SOAP 提供了基于 XML 的信息定义方式，用以在去中心化的分布�
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/ServiceComputing/">ServiceComputing</a>
+              <a href="/tags/Linux/">Linux</a>
+            
+              <a href="/tags/Manjaro/">Manjaro</a>
             
           </div>
         
@@ -654,26 +749,25 @@ SOAP 提供了基于 XML 的信息定义方式，用以在去中心化的分布�
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/ServiceComputing/%E6%9C%8D%E5%8A%A1%E3%80%81%E6%9C%8D%E5%8A%A1%E7%B3%BB%E7%BB%9F%E4%B8%8E%E9%9D%A2%E5%90%91%E6%9C%8D%E5%8A%A1%E7%9A%84%E6%B3%9B%E5%9E%8B/%E6%9C%8D%E5%8A%A1%E3%80%81%E6%9C%8D%E5%8A%A1%E7%B3%BB%E7%BB%9F%E4%B8%8E%E9%9D%A2%E5%90%91%E6%9C%8D%E5%8A%A1%E7%9A%84%E6%B3%9B%E5%9E%8B/">服务、服务系统与面向服务的泛型</a>
+        <a href="/2020/05/26/Linux/Manjaro/Manjaro20.0%E5%AE%89%E8%A3%85man%E4%B8%AD%E6%96%87%E6%89%8B%E5%86%8C/">Manjaro20.0安装man中文手册</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/ServiceComputing/%E6%9C%8D%E5%8A%A1%E3%80%81%E6%9C%8D%E5%8A%A1%E7%B3%BB%E7%BB%9F%E4%B8%8E%E9%9D%A2%E5%90%91%E6%9C%8D%E5%8A%A1%E7%9A%84%E6%B3%9B%E5%9E%8B/%E6%9C%8D%E5%8A%A1%E3%80%81%E6%9C%8D%E5%8A%A1%E7%B3%BB%E7%BB%9F%E4%B8%8E%E9%9D%A2%E5%90%91%E6%9C%8D%E5%8A%A1%E7%9A%84%E6%B3%9B%E5%9E%8B/">
+        <a href="/2020/05/26/Linux/Manjaro/Manjaro20.0%E5%AE%89%E8%A3%85man%E4%B8%AD%E6%96%87%E6%89%8B%E5%86%8C/">
           
           
             
           
-          1. 服务
-1.1 定义
+          1. 安装 man 中文软件包
+1pacman -S man-pages-zh_cn   # 繁体换成 man-pages-zh_tw
+2. 查询 man 中文手册安装目录
+1pacman -Ql man-pages-zh_cn | less
+发现 man 中文手册安装目录为 /usr/share/man/zh_CN 。
+3. 设置中英文 man 别名
 
-服务是为客户（担任协同提供者）所执行的非持久的，无形的体验。
-服务是单个或一系列活动。这些活动或多或少带有无形的天然属性，通常（不是必须）在客户和服务雇员/物理资源和产品/服务提供者的系统之间的交互中所发生。它们用来提供针对客户问题的解决方案。
+编辑 ~/.bashrc文件：
 
-1.2 服务模型 vs. 制造模型
-graph LR
-subgraph 服务模型
-    A((服务客户))
-    B[前
+1sud
         </a>
       </p>
 
@@ -690,7 +784,9 @@ subgraph 服务模型
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/ServiceComputing/">ServiceComputing</a>
+              <a href="/categories/Linux/">Linux</a>
+            
+              <a href="/categories/Linux/Manjaro/">Manjaro</a>
             
           </div>
         
@@ -698,64 +794,9 @@ subgraph 服务模型
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/ServiceComputing/">ServiceComputing</a>
+              <a href="/tags/Linux/">Linux</a>
             
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/05/26/ServiceComputing/%E6%9C%8D%E5%8A%A1%E7%94%9F%E6%80%81%E7%B3%BB%E7%BB%9F%E4%B8%8E%E9%9D%A2%E5%90%91%E6%9C%8D%E5%8A%A1%E7%9A%84%E8%AE%A1%E7%AE%97/%E6%9C%8D%E5%8A%A1%E7%94%9F%E6%80%81%E7%B3%BB%E7%BB%9F%E4%B8%8E%E9%9D%A2%E5%90%91%E6%9C%8D%E5%8A%A1%E7%9A%84%E8%AE%A1%E7%AE%97/">服务生态系统与面向服务的计算</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/05/26/ServiceComputing/%E6%9C%8D%E5%8A%A1%E7%94%9F%E6%80%81%E7%B3%BB%E7%BB%9F%E4%B8%8E%E9%9D%A2%E5%90%91%E6%9C%8D%E5%8A%A1%E7%9A%84%E8%AE%A1%E7%AE%97/%E6%9C%8D%E5%8A%A1%E7%94%9F%E6%80%81%E7%B3%BB%E7%BB%9F%E4%B8%8E%E9%9D%A2%E5%90%91%E6%9C%8D%E5%8A%A1%E7%9A%84%E8%AE%A1%E7%AE%97/">
-          
-          
-            
-          
-          1. 服务生态系统
-1.1 服务组合
-
-面向服务的应用逻辑，遵循面向服务的设计原则，采用服务和服务组合加以实现。
-服务组合由多个装配在一起的服务所构成，用以提供对业务任务或过程进行实现的功能。
-由于面向服务倾向于将服务打造为无关的企业资源，即服务和它的调用者之间是无关的，一个服务可能被多个消费者程序所调用，它们能在不同服务组合中组合同一个服务。
-
-1.2 服务库存
-
-服务库存是在组织或组织的合理部
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/ServiceComputing/">ServiceComputing</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/ServiceComputing/">ServiceComputing</a>
+              <a href="/tags/Manjaro/">Manjaro</a>
             
           </div>
         
@@ -767,7 +808,7 @@ subgraph 服务模型
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/page/35/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/34/#board">34</a><a class="page-number" href="/page/35/#board">35</a><span class="page-number current">36</span><a class="page-number" href="/page/37/#board">37</a><a class="page-number" href="/page/38/#board">38</a><a class="extend next" rel="next" href="/page/37/#board"><i class="iconfont icon-arrowright"></i></a>
+      <a class="extend prev" rel="prev" href="/page/35/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/34/#board">34</a><a class="page-number" href="/page/35/#board">35</a><span class="page-number current">36</span><a class="page-number" href="/page/37/#board">37</a><a class="page-number" href="/page/38/#board">38</a><span class="space">&hellip;</span><a class="page-number" href="/page/42/#board">42</a><a class="extend next" rel="next" href="/page/37/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 

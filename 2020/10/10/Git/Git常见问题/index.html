@@ -200,7 +200,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      440 字
+      735 字
     </span>
   
 
@@ -210,7 +210,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      5
+      9
        分钟
     </span>
   
@@ -288,7 +288,27 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">git config --system core.longpaths <span class="hljs-literal">true</span><br>git config --global core.longpaths <span class="hljs-literal">true</span><br></code></pre></td></tr></table></figure>
 <p>对于由于文件名中存在非法字符，需要修改远程仓库的文件名后在重新 pull 一下。</p>
 <p>【注】windows 下的文件名要求：文件名、文件夹名不能包括的符号 <code>\、/、:、*、?、&quot;、&lt;、&gt;、|</code> 。</p>
-
+<h3 id="3-fetch-pack-unexpected-disconnect-while-reading-sideband-packet">3. <code>fetch-pack: unexpected disconnect while reading sideband packet</code></h3>
+<ul>
+<li>问题：使用 ssh 认证能连上 Gitee，但 <code>git clone</code> Gitee 上的仓库报错，git 版本及报错信息如下：</li>
+</ul>
+<figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs fortran">(base) ➜  ~ git --version                         <br>git version <span class="hljs-number">2.33</span><span class="hljs-number">.0</span><br>(base) ➜  ~ ssh -T git@gitee.com                        <br>Hi BlueHeart0621<span class="hljs-comment">! You&#x27;ve successfully authenticated, but GITEE.COM does not provide shell access.</span><br>(base) ➜  ~ git clone git@gitee.com:blueheart0621/OS.git <br>Cloning into <span class="hljs-string">&#x27;OS&#x27;</span>...<br>fetch-<span class="hljs-built_in">pack</span>: unexpected disconnect <span class="hljs-keyword">while</span> reading sideband packet<br>fatal: early EOF<br>fatal: fetch-<span class="hljs-built_in">pack</span>: invalid <span class="hljs-built_in">index</span>-<span class="hljs-built_in">pack</span> output<br></code></pre></td></tr></table></figure>
+<ul>
+<li>原因：git 版本 2.33.0 是目前最新的，它修改了 sideband 的处理方式，导致 Gitee 服务器处理 <code>git clone</code> 的 ssh 连接时有问题，Gitee 的技术人员正在努力排查中（相信不久就会解决）。</li>
+<li>解决：降低 git 的 protocol 版本：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git config --global protocol.version 1<br></code></pre></td></tr></table></figure>
+<h3 id="4-fatal-unable-to-access-xxx-server-certificate-verification-failed-CAfile-etc-ssl-certs-ca-certificates-crt-CRLfile-none">4. <code>fatal: unable to access 'xxx': server certificate verification failed. CAfile: /etc/ssl/certs/ca-certificates.crt CRLfile: none</code></h3>
+<ul>
+<li>问题：仓库网站证书有问题，无法通过验证。</li>
+</ul>
+<blockquote>
+<p>比如最近 2021 年 9 月 30 日，Let's Encrypt 组织使用的 IdentTrust DST Root CA X3 根证书过期，因此很多使用了 Let's Encrypt 签发的证书但没有及时更新证书的网站都受到了影响。</p>
+</blockquote>
+<ul>
+<li>解决：在 <code>git clone</code> 时不启用证书验证：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">GIT_SSL_NO_VERIFY=<span class="hljs-string">&quot;true&quot;</span> git <span class="hljs-built_in">clone</span> xxx<br></code></pre></td></tr></table></figure>
             </div>
             <hr>
             <div>
