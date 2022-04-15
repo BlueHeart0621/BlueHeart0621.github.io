@@ -197,21 +197,21 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4grep/">LinuxShell命令grep</a>
+        <a href="/2020/05/26/Linux/Deepin/Deepin15.11%E4%B8%8B%E8%93%9D%E7%89%99%E9%85%8D%E5%AF%B9%E5%92%8C%E8%BF%9E%E6%8E%A5/">Deepin15.11下蓝牙配对和连接</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4grep/">
+        <a href="/2020/05/26/Linux/Deepin/Deepin15.11%E4%B8%8B%E8%93%9D%E7%89%99%E9%85%8D%E5%AF%B9%E5%92%8C%E8%BF%9E%E6%8E%A5/">
           
           
             
           
-          【注】具体详解参见 man 手册。
-1. 简介
-grep 命令用来在文件中查找并输出包含匹配指定模式的字符的行。
-2. 格式
-123grep [OPTIONS] PATTERN [FILE...]grep [OPTIONS] -e PATTERN ... [FILE...]grep [OPTIONS] -f FILE ... [FILE...]
-其中，OPTIONS 为指定的选项参数，PATTER
+          首先确保 bluetooth, bluez, bluez-tools, rfkill 已经安装好，没有则在终端进行安装：
+1sudo apt install bluetooth bluez bluez-tools rfkill
+1. 查找蓝牙适配器
+1hciconfig
+对于系统识别到的每个蓝牙适配器，会显示出其相应信息：XXX:   Type:***，其中 XXX 为该蓝牙适配器的设备名。
+2.
         </a>
       </p>
 
@@ -228,9 +228,11 @@ grep 命令用来在文件中查找并输出包含匹配指定模式的字符的
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/Linux/">Linux</a>
+              <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Linux/Shell/">Shell</a>
+              <a href="/categories/Technique/Linux/">Linux</a>
+            
+              <a href="/categories/Technique/Linux/Deepin/">Deepin</a>
             
           </div>
         
@@ -238,9 +240,11 @@ grep 命令用来在文件中查找并输出包含匹配指定模式的字符的
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
+              <a href="/tags/Technique/">Technique</a>
+            
               <a href="/tags/Linux/">Linux</a>
             
-              <a href="/tags/Shell/">Shell</a>
+              <a href="/tags/Deepin/">Deepin</a>
             
           </div>
         
@@ -254,28 +258,23 @@ grep 命令用来在文件中查找并输出包含匹配指定模式的字符的
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4head/">LinuxShell命令head</a>
+        <a href="/2020/05/26/Linux/Manjaro/Manjaro20.0%E4%B8%8B%E8%93%9D%E7%89%99%E9%85%8D%E5%AF%B9%E5%92%8C%E8%BF%9E%E6%8E%A5/">Manjaro20.0下蓝牙配对和连接</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4head/">
+        <a href="/2020/05/26/Linux/Manjaro/Manjaro20.0%E4%B8%8B%E8%93%9D%E7%89%99%E9%85%8D%E5%AF%B9%E5%92%8C%E8%BF%9E%E6%8E%A5/">
           
           
             
           
-          【注】具体详解参见 man 手册。
-1. 简介
-head 命令用于在标准输出上显示每个文件起始 10 行。如果多于一个文件，则会逐个进行显示，并在每个文件显示的首部给出对应的文件名。如果没有指定文件或者指定为 -，则从标准输入上读取。
-2. 格式
-1head [OPTION]... [FILE]...
-其中，OPTION 指定选项参数，FILE 指定显示的文件。
-3. 选项
-
-
-
-选项参数
-说明
-
+          首先确保 bluez, bluez-utils 已经安装好，否则在终端安装：
+1sudo pacman -S bluez bluez-utils
+1. 查看蓝牙服务状态
+1systemctl status bluetooth.service
+2. 启动蓝牙服务
+如果蓝牙服务未启动，则需手动启动蓝牙服务：
+1sudo systemctl start bluetooth.service
+3. 操控蓝牙
         </a>
       </p>
 
@@ -292,9 +291,11 @@ head 命令用于在标准输出上显示每个文件起始 10 行。如果多�
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/Linux/">Linux</a>
+              <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Linux/Shell/">Shell</a>
+              <a href="/categories/Technique/Linux/">Linux</a>
+            
+              <a href="/categories/Technique/Linux/Manjaro/">Manjaro</a>
             
           </div>
         
@@ -302,9 +303,11 @@ head 命令用于在标准输出上显示每个文件起始 10 行。如果多�
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
+              <a href="/tags/Technique/">Technique</a>
+            
               <a href="/tags/Linux/">Linux</a>
             
-              <a href="/tags/Shell/">Shell</a>
+              <a href="/tags/Manjaro/">Manjaro</a>
             
           </div>
         
@@ -318,21 +321,26 @@ head 命令用于在标准输出上显示每个文件起始 10 行。如果多�
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4history/">LinuxShell命令history</a>
+        <a href="/2020/05/26/Linux/Manjaro/Manjaro20.0%E5%AE%89%E8%A3%85EasyConnect/">Manjaro20.0安装EasyConnect</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4history/">
+        <a href="/2020/05/26/Linux/Manjaro/Manjaro20.0%E5%AE%89%E8%A3%85EasyConnect/">
           
           
             
           
-          【注】具体详解参见 help 手册。
-1. 简介
-history 内建命令用于显示或操纵历史命令列表。
-2. 格式
-123history [NUM|-c|-d [offset]]history [-a|-n|-r|-w] [FILE]history [-p|-s] ARG [ARG ...]
-其中，FILE 用于指定保存历史命令列表的文件，默认是~/.bash_history 文件。若未指定任何选
+          EasyConnect 是深信服公司新一代的 SSLVPN，支持各大操作系统平台，但 Linux 目前只支持 deb 包和 rpm 包，所以 Manjaro 安装 EasyConnect 并不友好。
+1. 安装最新版 EasyConnect
+1.1 终端安装 AUR 版本
+
+yaourt 用户
+
+1yaourt -S easyconnect
+
+yay 用户
+
+1yay -S easyconnect
         </a>
       </p>
 
@@ -349,9 +357,11 @@ history 内建命令用于显示或操纵历史命令列表。
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/Linux/">Linux</a>
+              <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Linux/Shell/">Shell</a>
+              <a href="/categories/Technique/Linux/">Linux</a>
+            
+              <a href="/categories/Technique/Linux/Manjaro/">Manjaro</a>
             
           </div>
         
@@ -359,9 +369,11 @@ history 内建命令用于显示或操纵历史命令列表。
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
+              <a href="/tags/Technique/">Technique</a>
+            
               <a href="/tags/Linux/">Linux</a>
             
-              <a href="/tags/Shell/">Shell</a>
+              <a href="/tags/Manjaro/">Manjaro</a>
             
           </div>
         
@@ -375,24 +387,30 @@ history 内建命令用于显示或操纵历史命令列表。
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4let/">LinuxShell命令let</a>
+        <a href="/2020/05/26/Linux/Manjaro/Manjaro20.0%E5%AE%89%E8%A3%85deb%E8%BD%AF%E4%BB%B6%E5%8C%85/">Manjaro20.0安装deb软件包</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4let/">
+        <a href="/2020/05/26/Linux/Manjaro/Manjaro20.0%E5%AE%89%E8%A3%85deb%E8%BD%AF%E4%BB%B6%E5%8C%85/">
           
           
             
           
-          【注】具体详解参见 help 手册。
-1. 简介
-Linux Shell 内建命令用于估算算数表达式。估算的计算以定宽的整数完成，不带溢出检测，但除 0 会报错。
-2. 格式
-1let ARG [ARG ...]
-其中，ARG 参数会被 let 作为算数表达式来进行估值。ARG 中的算术操作符列表按照优先级由高到低给出如下：
-【注】如果最后一个 ARG 估值为 0,则返回 1；否则返回 0 。
+          由于 Manjaro 基于 ArchLinux，而 deb 软件包格式为 Debian 系统安装包格式，故 Manjaro 不能直接安装 deb 软件包，而需要借助 debtap 工具。
+1. 安装 debtap
 
+yaourt 工具
 
+1yaourt -S debtap
+
+yay 工具
+
+1yay -S debtap
+
+pacaur 工具
+
+1pacaur -S debtap
+【注】三种方式任选
         </a>
       </p>
 
@@ -409,9 +427,11 @@ Linux Shell 内建命令用于估算算数表达式。估算的计算以定宽�
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/Linux/">Linux</a>
+              <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Linux/Shell/">Shell</a>
+              <a href="/categories/Technique/Linux/">Linux</a>
+            
+              <a href="/categories/Technique/Linux/Manjaro/">Manjaro</a>
             
           </div>
         
@@ -419,9 +439,11 @@ Linux Shell 内建命令用于估算算数表达式。估算的计算以定宽�
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
+              <a href="/tags/Technique/">Technique</a>
+            
               <a href="/tags/Linux/">Linux</a>
             
-              <a href="/tags/Shell/">Shell</a>
+              <a href="/tags/Manjaro/">Manjaro</a>
             
           </div>
         
@@ -435,22 +457,25 @@ Linux Shell 内建命令用于估算算数表达式。估算的计算以定宽�
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4more/">LinuxShell命令more</a>
+        <a href="/2020/05/26/Linux/Manjaro/Manjaro20.0%E5%AE%89%E8%A3%85man%E4%B8%AD%E6%96%87%E6%89%8B%E5%86%8C/">Manjaro20.0安装man中文手册</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4more/">
+        <a href="/2020/05/26/Linux/Manjaro/Manjaro20.0%E5%AE%89%E8%A3%85man%E4%B8%AD%E6%96%87%E6%89%8B%E5%86%8C/">
           
           
             
           
-          【注】具体详解参见 man 手册。
-1. 简介
-more 是一个用于屏幕阅读的文件分页阅览过滤的 Shell 命令，一次阅览一屏幕文字，同时提供页面阅读的基于 vi 交互式命令的交互环境。
-2. 格式
-1more [OPTIONS] FILE...
-其中，OPTIONS 指定选项参数，FILE 指定阅读的文件。
-除命令行指定 OPTIONS 选项参数外，more 也同时从环境变量 MORE（选项参
+          1. 安装 man 中文软件包
+1pacman -S man-pages-zh_cn   # 繁体换成 man-pages-zh_tw
+2. 查询 man 中文手册安装目录
+1pacman -Ql man-pages-zh_cn | less
+发现 man 中文手册安装目录为 /usr/share/man/zh_CN 。
+3. 设置中英文 man 别名
+
+编辑 ~/.bashrc文件：
+
+1sud
         </a>
       </p>
 
@@ -467,9 +492,11 @@ more 是一个用于屏幕阅读的文件分页阅览过滤的 Shell 命令，�
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/Linux/">Linux</a>
+              <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Linux/Shell/">Shell</a>
+              <a href="/categories/Technique/Linux/">Linux</a>
+            
+              <a href="/categories/Technique/Linux/Manjaro/">Manjaro</a>
             
           </div>
         
@@ -477,9 +504,11 @@ more 是一个用于屏幕阅读的文件分页阅览过滤的 Shell 命令，�
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
+              <a href="/tags/Technique/">Technique</a>
+            
               <a href="/tags/Linux/">Linux</a>
             
-              <a href="/tags/Shell/">Shell</a>
+              <a href="/tags/Manjaro/">Manjaro</a>
             
           </div>
         
@@ -493,26 +522,25 @@ more 是一个用于屏幕阅读的文件分页阅览过滤的 Shell 命令，�
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4ps/">LinuxShell命令ps</a>
+        <a href="/2020/05/26/Linux/Manjaro/Manjaro20.0%E6%B7%BB%E5%8A%A0%E5%9B%BD%E5%86%85%E6%BA%90%E3%80%81%E7%A4%BE%E5%8C%BA%E6%BA%90%E3%80%81AUR%E6%BA%90/">Manjaro20.0添加国内源、社区源、AUR源</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4ps/">
+        <a href="/2020/05/26/Linux/Manjaro/Manjaro20.0%E6%B7%BB%E5%8A%A0%E5%9B%BD%E5%86%85%E6%BA%90%E3%80%81%E7%A4%BE%E5%8C%BA%E6%BA%90%E3%80%81AUR%E6%BA%90/">
           
           
             
           
-          【注】具体详解参见 man 手册。
-1. 简介
-ps 是 Linux 下显示瞬间进程状态的强大命令，并不动态连续显示进程状态（top 命令则是对进程进行实时监控）。
-2. 格式
-1ps [options]
-Linux 系统中使用 ps 命令支持三种不同类型的命令行选项参数：
+          1. 添加国内源
+1.1 备份文件
+1sudo cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak
+1.2 编辑文件
+1sudo vim /etc/pacman.d/mirrorlist
+添加的源从上到下优先级依次降低。
 
-Unix 风格参数（参数前使用单破折线）
-BSD 风格参数（参数前不使用破折线）
-GNU 风格长参数（参数前加双破折线）
+添加 Manjaro 源
 
+123456789## manjaro 稳定源# 中科大Server = https:
         </a>
       </p>
 
@@ -529,9 +557,11 @@ GNU 风格长参数（参数前加双破折线）
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/Linux/">Linux</a>
+              <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Linux/Shell/">Shell</a>
+              <a href="/categories/Technique/Linux/">Linux</a>
+            
+              <a href="/categories/Technique/Linux/Manjaro/">Manjaro</a>
             
           </div>
         
@@ -539,9 +569,11 @@ GNU 风格长参数（参数前加双破折线）
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
+              <a href="/tags/Technique/">Technique</a>
+            
               <a href="/tags/Linux/">Linux</a>
             
-              <a href="/tags/Shell/">Shell</a>
+              <a href="/tags/Manjaro/">Manjaro</a>
             
           </div>
         
@@ -555,21 +587,22 @@ GNU 风格长参数（参数前加双破折线）
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4sort/">LinuxShell命令sort</a>
+        <a href="/2020/05/26/Linux/Manjaro/Manjaro20.0%E9%85%8D%E7%BD%AETR4527%E6%89%93%E5%8D%B0%E6%9C%BA%E5%92%8C%E6%89%AB%E6%8F%8F%E4%BB%AA%E9%A9%B1%E5%8A%A8/">Manjaro20.0配置TR4527打印机和扫描仪驱动</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4sort/">
+        <a href="/2020/05/26/Linux/Manjaro/Manjaro20.0%E9%85%8D%E7%BD%AETR4527%E6%89%93%E5%8D%B0%E6%9C%BA%E5%92%8C%E6%89%AB%E6%8F%8F%E4%BB%AA%E9%A9%B1%E5%8A%A8/">
           
           
             
           
-          【注】具体详解参见 man 手册和 info 手册。
-1. 简介
-sort 命令用于对给定的文件中的行进行排序并写到标准输出上。如果没有给定文件或者给定的文件名为 - ，则从标准输入读取数据。
-2. 格式
-12sort [OPTION]... [FILE]...sort [OPTION]... --files0-from=F
-其中，OPTION 指定选项参数，FILE 指定文件名，--files0
+          【注】Manjaro 系统日常使用问题可以上 Manjaro 官方论坛上逛一逛，说不定具有解决办法。
+1. 打印机驱动
+Arch Linux AUR 源已经提供了 TR4527 打印机驱动程序 cnijfilter2，详情参见地址。
+在终端手动安装该驱动程序即可：
+1yay -S cnijfilter2
+2. 扫描仪驱动
+Arch Linux AUR 源已经提供了 TR4527 扫描仪驱动程序 s
         </a>
       </p>
 
@@ -586,9 +619,11 @@ sort 命令用于对给定的文件中的行进行排序并写到标准输出上
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/Linux/">Linux</a>
+              <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Linux/Shell/">Shell</a>
+              <a href="/categories/Technique/Linux/">Linux</a>
+            
+              <a href="/categories/Technique/Linux/Manjaro/">Manjaro</a>
             
           </div>
         
@@ -596,9 +631,11 @@ sort 命令用于对给定的文件中的行进行排序并写到标准输出上
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
+              <a href="/tags/Technique/">Technique</a>
+            
               <a href="/tags/Linux/">Linux</a>
             
-              <a href="/tags/Shell/">Shell</a>
+              <a href="/tags/Manjaro/">Manjaro</a>
             
           </div>
         
@@ -612,28 +649,18 @@ sort 命令用于对给定的文件中的行进行排序并写到标准输出上
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4tail/">LinuxShell命令tail</a>
+        <a href="/2020/05/26/Linux/Mint/Mint19.1%E4%B8%8Bdpkg%E6%8A%A5%E9%94%99/">Mint19.1下dpkg报错</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4tail/">
+        <a href="/2020/05/26/Linux/Mint/Mint19.1%E4%B8%8Bdpkg%E6%8A%A5%E9%94%99/">
           
           
             
           
-          【注】具体详解参见 man 手册。
-1. 简介
-tail 命令用于在标准输出上显示每个文件最后 10 行。如果多于一个文件，则会逐个进行显示，并在每个文件显示的首部给出对应的文件名。如果没有指定文件或者指定为 -，则从标准输入上读取。
-2. 格式
-1tail [OPTION]... [FILE]...
-其中，OPTION 指定选项参数，FILE 指定显示的文件。
-3. 选项
-
-
-
-选项参数
-说明
-
+          1. E: Sub-process /usr/bin/dpkg returned an error code (1)
+解决办法如下：
+12345678cd /var/lib/dpkgsudo mv info info_baksudo mkdir infosudo apt update &gt; /dev/null			# 若要输出信息，去除重定向符及其后内容sudo apt install -fs
         </a>
       </p>
 
@@ -650,9 +677,11 @@ tail 命令用于在标准输出上显示每个文件最后 10 行。如果多�
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/Linux/">Linux</a>
+              <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Linux/Shell/">Shell</a>
+              <a href="/categories/Technique/Linux/">Linux</a>
+            
+              <a href="/categories/Technique/Linux/Mint/">Mint</a>
             
           </div>
         
@@ -660,9 +689,11 @@ tail 命令用于在标准输出上显示每个文件最后 10 行。如果多�
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
+              <a href="/tags/Technique/">Technique</a>
+            
               <a href="/tags/Linux/">Linux</a>
             
-              <a href="/tags/Shell/">Shell</a>
+              <a href="/tags/Mint/">Mint</a>
             
           </div>
         
@@ -676,78 +707,28 @@ tail 命令用于在标准输出上显示每个文件最后 10 行。如果多�
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4unset/">LinuxShell命令unset</a>
+        <a href="/2020/05/26/Linux/Mint/Mint19.1%E4%B8%8B%E4%BD%BF%E7%94%A8npm%E5%B7%A5%E5%85%B7/">Mint19.1下使用npm工具</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4unset/">
-          
-          
-            
-          
-          【注】具体详解参见 help 手册。
-1. 简介
-Linux Shell 内建命令 unset 用于取消设定 Shell 变量、函数或属性。
-【注】unset 命令不能取消设定只读变量（参见 readonly 内建命令）。
-2. 格式
-1unset [OPTION] [NAME ...]
-其中，OPTION 指定了选项参数，NAME 为指定的变量或函数。不带选项时，unset 首先尝试取消设定一个
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Linux/">Linux</a>
-            
-              <a href="/categories/Linux/Shell/">Shell</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/Shell/">Shell</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4wc/">LinuxShell命令wc</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4wc/">
+        <a href="/2020/05/26/Linux/Mint/Mint19.1%E4%B8%8B%E4%BD%BF%E7%94%A8npm%E5%B7%A5%E5%85%B7/">
           
           
             
           
           1. 简介
-wc 命令用来统计每个文件的行、单词和字节数并输出。如果指定多个文件，则输出每个文件的总行\单词\字节数及所有文件总的行\单词\字节数；如果没有指定文件或指定文件为 - ，则从标准输入读取。
-2. 格式
-12wc [options]... [filelist]wc [options]... --files0-from=F
-其中，options 指定统计输出格式，filelist 为指定
+
+
+npm 是一个 NodeJS 平台的 JavaScript 包管理工具，它用于管理包发布、查询、安装、开发以及包之间的依赖性冲突等。
+
+
+npm 安装软件目录有两种模式，一个是全局模式、一个是局部模式（默认）。
+
+
+3. 格式
+1npm &lt;command&gt; [args]
+4. 查看帮助信息
+12345npm help helpnpm help package.jsonn
         </a>
       </p>
 
@@ -764,9 +745,11 @@ wc 命令用来统计每个文件的行、单词和字节数并输出。如果�
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/Linux/">Linux</a>
+              <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Linux/Shell/">Shell</a>
+              <a href="/categories/Technique/Linux/">Linux</a>
+            
+              <a href="/categories/Technique/Linux/Mint/">Mint</a>
             
           </div>
         
@@ -774,9 +757,75 @@ wc 命令用来统计每个文件的行、单词和字节数并输出。如果�
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
+              <a href="/tags/Technique/">Technique</a>
+            
               <a href="/tags/Linux/">Linux</a>
             
-              <a href="/tags/Shell/">Shell</a>
+              <a href="/tags/Mint/">Mint</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/05/26/Linux/Mint/Mint19.1%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%92%AD%E6%94%BE%E9%9F%B3%E4%B9%90/">Mint19.1命令行播放音乐</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/05/26/Linux/Mint/Mint19.1%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%92%AD%E6%94%BE%E9%9F%B3%E4%B9%90/">
+          
+          
+            
+          
+          1. 安装必要软件包
+1sudo apt install sox libsox-fmt-all
+2. 命令行播放音乐
+安装上述软件包后，就可以在命令行中使用 play 命令
+1play [musicname].mp3
+play 命令有很多强大的功能，具体用法可以 help 一下
+1play --help
+3. 用途
+安装该功能后，就能在 bash 脚本中使用，可以实现诸如报警、提醒、定时闹钟等功能
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-05-26 10:44" pubdate>
+              2020-05-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Linux/">Linux</a>
+            
+              <a href="/categories/Technique/Linux/Mint/">Mint</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/Linux/">Linux</a>
+            
+              <a href="/tags/Mint/">Mint</a>
             
           </div>
         
@@ -788,7 +837,7 @@ wc 命令用来统计每个文件的行、单词和字节数并输出。如果�
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/page/37/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/36/#board">36</a><a class="page-number" href="/page/37/#board">37</a><span class="page-number current">38</span><a class="page-number" href="/page/39/#board">39</a><a class="page-number" href="/page/40/#board">40</a><span class="space">&hellip;</span><a class="page-number" href="/page/42/#board">42</a><a class="extend next" rel="next" href="/page/39/#board"><i class="iconfont icon-arrowright"></i></a>
+      <a class="extend prev" rel="prev" href="/page/37/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/36/#board">36</a><a class="page-number" href="/page/37/#board">37</a><span class="page-number current">38</span><a class="page-number" href="/page/39/#board">39</a><a class="page-number" href="/page/40/#board">40</a><span class="space">&hellip;</span><a class="page-number" href="/page/44/#board">44</a><a class="extend next" rel="next" href="/page/39/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 

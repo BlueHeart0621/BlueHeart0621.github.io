@@ -197,24 +197,26 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/01/19/Math/Theory/%E6%96%B9%E5%90%91%E4%BD%99%E5%BC%A6/">方向余弦</a>
+        <a href="/2021/02/22/Research/2020-TII-Deep%20Residual%20Learning%20based%20Enhanced%20JPEG%20Compression%20in%20the%20Internet%20of%20Things/2020-TII-Deep%20Residual%20Learning%20based%20Enhanced%20JPEG%20Compression%20in%20the%20Internet%20of%20Things/">2020-TII-Deep Residual Learning based Enhanced JPEG Compression in the Internet of Things</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/01/19/Math/Theory/%E6%96%B9%E5%90%91%E4%BD%99%E5%BC%A6/">
+        <a href="/2021/02/22/Research/2020-TII-Deep%20Residual%20Learning%20based%20Enhanced%20JPEG%20Compression%20in%20the%20Internet%20of%20Things/2020-TII-Deep%20Residual%20Learning%20based%20Enhanced%20JPEG%20Compression%20in%20the%20Internet%20of%20Things/">
           
           
             
           
-          【注】参考自 Wikipedia 。
-1. 定义
-1.1 方向余弦
+          1. 摘要
+2. 正文
+2.1 JPEG
+DCT 变换后得到的 DC 系数是 IDCT 变换后得到的 8x8 块中所有像素值的变化平均值，即 DC 系数改变对于 8x8 块内的所有像素值的增减量是一样的。
 
-在解析几何里，一个向量的三个方向余弦分别是这向量与三个坐标轴之间的角度的余弦。
+即 DC 系数的改变不会影响图像块内各个像素值之间的差值。
+2.2 疑问
 
-设 v⃗=v1x⃗+v2y⃗+v3z⃗
-\vec{v} = v_1 \vec{x} + v_2 \vec{y} + v_3 \vec{z}
-v=v1​x+v2​y​+v3​z 其中，x⃗\vec{x}x、y⃗\vec{y}y​、z⃗\vec{z}z
+是否预测起到很重要作用，还是主要是 DL 模型
+
+
         </a>
       </p>
 
@@ -222,8 +224,8 @@ v=v1​x+v2​y​+v3​z 其中，x⃗\vec{x}x、y⃗\vec{y}y​、z⃗\vec{z}z
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-19 22:25" pubdate>
-              2021-01-19
+            <time datetime="2021-02-22 14:40" pubdate>
+              2021-02-22
             </time>
           </div>
         
@@ -231,9 +233,9 @@ v=v1​x+v2​y​+v3​z 其中，x⃗\vec{x}x、y⃗\vec{y}y​、z⃗\vec{z}z
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/Math/">Math</a>
+              <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Math/Theory/">Theory</a>
+              <a href="/categories/Technique/Research/">Research</a>
             
           </div>
         
@@ -241,11 +243,13 @@ v=v1​x+v2​y​+v3​z 其中，x⃗\vec{x}x、y⃗\vec{y}y​、z⃗\vec{z}z
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
+              <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Math/">Math</a>
+              <a href="/tags/Research/">Research</a>
             
-              <a href="/tags/Theory/">Theory</a>
+              <a href="/tags/CV/">CV</a>
+            
+              <a href="/tags/%E5%9B%BE%E5%83%8F%E4%BC%AA%E5%BD%B1%E5%8E%BB%E9%99%A4/">图像伪影去除</a>
             
           </div>
         
@@ -259,33 +263,19 @@ v=v1​x+v2​y​+v3​z 其中，x⃗\vec{x}x、y⃗\vec{y}y​、z⃗\vec{z}z
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/01/19/ACM/%E9%A2%98%E8%A7%A3/P2758%E3%80%8C%E7%BC%96%E8%BE%91%E8%B7%9D%E7%A6%BB%E3%80%8D/">P2758「编辑距离」</a>
+        <a href="/2021/02/11/Linux/Sundry/Linux%E4%BF%AE%E6%94%B9grub%E8%8F%9C%E5%8D%95/">Linux修改grub菜单</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/01/19/ACM/%E9%A2%98%E8%A7%A3/P2758%E3%80%8C%E7%BC%96%E8%BE%91%E8%B7%9D%E7%A6%BB%E3%80%8D/">
+        <a href="/2021/02/11/Linux/Sundry/Linux%E4%BF%AE%E6%94%B9grub%E8%8F%9C%E5%8D%95/">
           
           
             
           
-          1. 题目
-题目链接：P2758「编辑距离」 。
-题目描述
-设 AAA 和 BBB 是两个字符串。我们要用最少的字符操作次数，将字符串 AAA 转换为字符串 BBB。这里所说的字符操作共有三种：
-
-
-删除一个字符；
-
-
-插入一个字符；
-
-
-将一个字符改为另一个字符；
-
-
-！皆为小写字母！
-输入格式
-第一行为字符串 AAA；第二行为字符串 BBB；字符串 AAA 和 BBB 的长度均小于 20002
+          【注】参考自 grub 官方手册。
+1. 保留上一次 grub 菜单选项
+1.1 问题
+每次开机时，大部分 Linux 发行版的 grub 菜单都是定位在首选项位置（即当前系统选项位置）。这就导致如果我们电脑安装了多个系统，那么每次开机进入其他系统都要重新选择 grub 菜单选项。而我们一般都是一段时间固定使用一个系统，因此如果 grub 菜单能够记住上一次的菜单选项，我们平常使用就不需要手动切换
         </a>
       </p>
 
@@ -293,8 +283,8 @@ v=v1​x+v2​y​+v3​z 其中，x⃗\vec{x}x、y⃗\vec{y}y​、z⃗\vec{z}z
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-19 20:39" pubdate>
-              2021-01-19
+            <time datetime="2021-02-11 10:12" pubdate>
+              2021-02-11
             </time>
           </div>
         
@@ -302,15 +292,83 @@ v=v1​x+v2​y​+v3​z 其中，x⃗\vec{x}x、y⃗\vec{y}y​、z⃗\vec{z}z
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/ACM/">ACM</a>
+              <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/ACM/%E9%A2%98%E8%A7%A3/">题解</a>
+              <a href="/categories/Technique/Linux/">Linux</a>
+            
+              <a href="/categories/Technique/Linux/Sundry/">Sundry</a>
             
           </div>
         
         
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/Linux/">Linux</a>
+            
+              <a href="/tags/Sundry/">Sundry</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/01/26/ACM/%E9%A2%98%E8%A7%A3/P1439%E3%80%8C%E3%80%90%E6%A8%A1%E6%9D%BF%E3%80%91%E6%9C%80%E9%95%BF%E5%85%AC%E5%85%B1%E5%AD%90%E5%BA%8F%E5%88%97%E3%80%8D/">P1439「【模板】最长公共子序列」</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/01/26/ACM/%E9%A2%98%E8%A7%A3/P1439%E3%80%8C%E3%80%90%E6%A8%A1%E6%9D%BF%E3%80%91%E6%9C%80%E9%95%BF%E5%85%AC%E5%85%B1%E5%AD%90%E5%BA%8F%E5%88%97%E3%80%8D/">
+          
+          
+            
+          
+          1. 题目
+题目链接：P1439「【模板】最长公共子序列」 。
+题目描述
+给出 1,2,…,n1,2,\ldots,n1,2,…,n 的两个排列 P1P_1P1​  和 P2P_2P2​，求它们的最长公共子序列。
+输入格式
+第一行是一个数 nnn。
+接下来两行，每行为 nnn 个数，为自然数 1,2,…,n1,2,\ldots,n1,2,…,n 的一个排列。
+输出格式
+一个数，即最长公共子序列的长
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-26 01:19" pubdate>
+              2021-01-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/ACM/">ACM</a>
+            
+              <a href="/categories/Technique/ACM/%E9%A2%98%E8%A7%A3/">题解</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
             
               <a href="/tags/ACM/">ACM</a>
             
@@ -328,17 +386,28 @@ v=v1​x+v2​y​+v3​z 其中，x⃗\vec{x}x、y⃗\vec{y}y​、z⃗\vec{z}z
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/01/17/Configure/Configure%E8%84%9A%E6%9C%AC%E5%AD%A6%E4%B9%A0/">Configure脚本学习</a>
+        <a href="/2021/01/23/TeX/LaTeX/LaTeX%E4%BF%AE%E9%A5%B0%E7%AC%A6%E5%8F%B7/LaTeX%E4%BF%AE%E9%A5%B0%E7%AC%A6%E5%8F%B7/">LaTeX修饰符号</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/01/17/Configure/Configure%E8%84%9A%E6%9C%AC%E5%AD%A6%E4%B9%A0/">
+        <a href="/2021/01/23/TeX/LaTeX/LaTeX%E4%BF%AE%E9%A5%B0%E7%AC%A6%E5%8F%B7/LaTeX%E4%BF%AE%E9%A5%B0%E7%AC%A6%E5%8F%B7/">
           
           
             
           
-          1. 指定安装目录
-1./configure --prefix=...
+          【注】摘自 Scott Pakin 的 《The Comprehensive LaTeX Symbol List》 。
+
+
+
+
+
+
+
+
+
+
+
+
         </a>
       </p>
 
@@ -346,8 +415,8 @@ v=v1​x+v2​y​+v3​z 其中，x⃗\vec{x}x、y⃗\vec{y}y​、z⃗\vec{z}z
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-17 11:28" pubdate>
-              2021-01-17
+            <time datetime="2021-01-23 13:28" pubdate>
+              2021-01-23
             </time>
           </div>
         
@@ -355,7 +424,11 @@ v=v1​x+v2​y​+v3​z 其中，x⃗\vec{x}x、y⃗\vec{y}y​、z⃗\vec{z}z
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/Configure/">Configure</a>
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/TeX/">TeX</a>
+            
+              <a href="/categories/Technique/TeX/LaTeX/">LaTeX</a>
             
           </div>
         
@@ -363,7 +436,11 @@ v=v1​x+v2​y​+v3​z 其中，x⃗\vec{x}x、y⃗\vec{y}y​、z⃗\vec{z}z
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/Configure/">Configure</a>
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/TeX/">TeX</a>
+            
+              <a href="/tags/LaTeX/">LaTeX</a>
             
           </div>
         
@@ -377,28 +454,30 @@ v=v1​x+v2​y​+v3​z 其中，x⃗\vec{x}x、y⃗\vec{y}y​、z⃗\vec{z}z
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/01/17/CMake/CMake%E4%BD%BF%E7%94%A8%E5%AD%A6%E4%B9%A0/">CMake 使用学习</a>
+        <a href="/2021/01/23/TeX/LaTeX/LaTeX%E5%85%B6%E4%BB%96%E7%AC%A6%E5%8F%B7/LaTeX%E5%85%B6%E4%BB%96%E7%AC%A6%E5%8F%B7/">LaTeX其他符号</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/01/17/CMake/CMake%E4%BD%BF%E7%94%A8%E5%AD%A6%E4%B9%A0/">
+        <a href="/2021/01/23/TeX/LaTeX/LaTeX%E5%85%B6%E4%BB%96%E7%AC%A6%E5%8F%B7/LaTeX%E5%85%B6%E4%BB%96%E7%AC%A6%E5%8F%B7/">
           
           
             
           
-          1. 概述
-CMake 工具能够自动生成 Makefile 文件，减轻手写 Makefile 文件的工作量，同时减少书写 Makefile 文件产生的错误。
-2. CMake 命令
-CMake 运行主要分为两个阶段：
+          【注】摘自 Scott Pakin 的 《The Comprehensive LaTeX Symbol List》 。
 
 
-配置阶段：解析 CMakeLists.txt 文件
 
 
-生成阶段：生成构建环境
 
 
-有关 cmake 的详细参数参见 cmake --help，本文仅对其中较难理解的选项加以描述
+
+
+
+
+
+
+
+
         </a>
       </p>
 
@@ -406,8 +485,8 @@ CMake 运行主要分为两个阶段：
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-17 11:25" pubdate>
-              2021-01-17
+            <time datetime="2021-01-23 13:28" pubdate>
+              2021-01-23
             </time>
           </div>
         
@@ -415,7 +494,11 @@ CMake 运行主要分为两个阶段：
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/CMake/">CMake</a>
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/TeX/">TeX</a>
+            
+              <a href="/categories/Technique/TeX/LaTeX/">LaTeX</a>
             
           </div>
         
@@ -423,7 +506,11 @@ CMake 运行主要分为两个阶段：
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/CMake/">CMake</a>
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/TeX/">TeX</a>
+            
+              <a href="/tags/LaTeX/">LaTeX</a>
             
           </div>
         
@@ -437,28 +524,64 @@ CMake 运行主要分为两个阶段：
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/01/16/DeepLearning/Padding%E7%AD%96%E7%95%A5/Padding%E7%AD%96%E7%95%A5/">Padding策略</a>
+        <a href="/2021/01/23/TeX/LaTeX/LaTeX%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7/LaTeX%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7/">LaTeX数学符号</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/01/16/DeepLearning/Padding%E7%AD%96%E7%95%A5/Padding%E7%AD%96%E7%95%A5/">
+        <a href="/2021/01/23/TeX/LaTeX/LaTeX%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7/LaTeX%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7/">
           
           
             
           
-          1. Zero Padding
-
-均用 0 值填充。
+          【注】摘自 Scott Pakin 的 《The Comprehensive LaTeX Symbol List》 。
 
 
-2. Replicate Padding
-
-用距离最近的像素值填充。
 
 
-3. Mirror Padding
 
-关于四边界成镜像对称，关于四角成镜像对称。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -469,8 +592,8 @@ CMake 运行主要分为两个阶段：
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-16 18:08" pubdate>
-              2021-01-16
+            <time datetime="2021-01-23 13:28" pubdate>
+              2021-01-23
             </time>
           </div>
         
@@ -478,7 +601,11 @@ CMake 运行主要分为两个阶段：
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/DeepLearning/">DeepLearning</a>
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/TeX/">TeX</a>
+            
+              <a href="/categories/Technique/TeX/LaTeX/">LaTeX</a>
             
           </div>
         
@@ -486,9 +613,11 @@ CMake 运行主要分为两个阶段：
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/DeepLearning/">DeepLearning</a>
+              <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a>
+              <a href="/tags/TeX/">TeX</a>
+            
+              <a href="/tags/LaTeX/">LaTeX</a>
             
           </div>
         
@@ -502,27 +631,41 @@ CMake 运行主要分为两个阶段：
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/01/16/CSAPP/%E6%B5%AE%E7%82%B9%E6%95%B0/%E6%B5%AE%E7%82%B9%E6%95%B0/">浮点数</a>
+        <a href="/2021/01/23/TeX/LaTeX/LaTeX%E6%AD%A3%E6%96%87%E7%AC%A6%E5%8F%B7/LaTeX%E6%AD%A3%E6%96%87%E7%AC%A6%E5%8F%B7/">LaTeX正文符号</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/01/16/CSAPP/%E6%B5%AE%E7%82%B9%E6%95%B0/%E6%B5%AE%E7%82%B9%E6%95%B0/">
+        <a href="/2021/01/23/TeX/LaTeX/LaTeX%E6%AD%A3%E6%96%87%E7%AC%A6%E5%8F%B7/LaTeX%E6%AD%A3%E6%96%87%E7%AC%A6%E5%8F%B7/">
           
           
             
           
-          1. IEEE 754 标准
-IEEE 754 浮点标准用 V=(−1)s×M×2EV = (-1)^s \times M \times 2^EV=(−1)s×M×2E 的形式来表示一个数。
+          【注】摘自 Scott Pakin 的 《The Comprehensive LaTeX Symbol List》 。
 
 
 
-符号位（s）：指明数的正负，即 VVV 中的 sss。
 
 
-阶码（exp）：对浮点数加权，即 VVV 中的 EEE。
 
 
-尾数（frac）：二进制小数，即 VVV 中的 MMM，范围为 1∼2−ε1 \
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         </a>
       </p>
 
@@ -530,8 +673,8 @@ IEEE 754 浮点标准用 V=(−1)s×M×2EV = (-1)^s \times M \times 2^EV=(−1)s
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-16 18:06" pubdate>
-              2021-01-16
+            <time datetime="2021-01-23 13:28" pubdate>
+              2021-01-23
             </time>
           </div>
         
@@ -539,7 +682,11 @@ IEEE 754 浮点标准用 V=(−1)s×M×2EV = (-1)^s \times M \times 2^EV=(−1)s
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/CSAPP/">CSAPP</a>
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/TeX/">TeX</a>
+            
+              <a href="/categories/Technique/TeX/LaTeX/">LaTeX</a>
             
           </div>
         
@@ -547,7 +694,11 @@ IEEE 754 浮点标准用 V=(−1)s×M×2EV = (-1)^s \times M \times 2^EV=(−1)s
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/CSAPP/">CSAPP</a>
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/TeX/">TeX</a>
+            
+              <a href="/tags/LaTeX/">LaTeX</a>
             
           </div>
         
@@ -561,20 +712,42 @@ IEEE 754 浮点标准用 V=(−1)s×M×2EV = (-1)^s \times M \times 2^EV=(−1)s
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/01/16/Math/Modeling/PCA%E6%A8%A1%E5%9E%8B/">PCA模型</a>
+        <a href="/2021/01/23/TeX/LaTeX/LaTeX%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6%E5%92%8C%E7%AC%A6%E5%8F%B7/LaTeX%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6%E5%92%8C%E7%AC%A6%E5%8F%B7/">LaTeX特殊字符和符号</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/01/16/Math/Modeling/PCA%E6%A8%A1%E5%9E%8B/">
+        <a href="/2021/01/23/TeX/LaTeX/LaTeX%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6%E5%92%8C%E7%AC%A6%E5%8F%B7/LaTeX%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6%E5%92%8C%E7%AC%A6%E5%8F%B7/">
           
           
             
           
-          1. 简介
-主成分分析是指将数据中相关性很高的属性/变量转化成彼此相互独立或不相关的新属性/变量，利用较少的新属性/变量（主成分）去解释原来数据中的大部分属性/变量的一种降维方法。
-2. 原理
-2.1 基础思想
-以学校课程为例，用 x1,x2,⋯ ,xp{x_1,x_2,\cdots,x_p}x1​,x2​,⋯,xp​ 表示 p 门课程的成绩变量， c1,c2,⋯ ,cp{c_1,c_2,\cdo
+          1. 引号
+无论什么字体，LaTeX以一个反勾号或重音符(`)当做左引号，以一个正勾号或直立引号(')当做右引号。
+
+
+
+单引号（‘xxx’）
+`xxx' 或 ‘xxx’
+
+
+
+
+双引号（“xxx”）
+``xxx'' 或 “xxx”
+
+
+
+【注】如果出现单引号与双引号连续出现的情况，则在二者中间用 \, 分隔开。
+
+
+
+字符串示例
+LaTeX 代码
+
+
+
+
+“ ‘A’ or ‘B’ ”，he as
         </a>
       </p>
 
@@ -582,8 +755,8 @@ IEEE 754 浮点标准用 V=(−1)s×M×2EV = (-1)^s \times M \times 2^EV=(−1)s
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-16 18:06" pubdate>
-              2021-01-16
+            <time datetime="2021-01-23 13:28" pubdate>
+              2021-01-23
             </time>
           </div>
         
@@ -591,9 +764,11 @@ IEEE 754 浮点标准用 V=(−1)s×M×2EV = (-1)^s \times M \times 2^EV=(−1)s
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/Math/">Math</a>
+              <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Math/Modeling/">Modeling</a>
+              <a href="/categories/Technique/TeX/">TeX</a>
+            
+              <a href="/categories/Technique/TeX/LaTeX/">LaTeX</a>
             
           </div>
         
@@ -601,9 +776,11 @@ IEEE 754 浮点标准用 V=(−1)s×M×2EV = (-1)^s \times M \times 2^EV=(−1)s
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/Math/">Math</a>
+              <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Modeling/">Modeling</a>
+              <a href="/tags/TeX/">TeX</a>
+            
+              <a href="/tags/LaTeX/">LaTeX</a>
             
           </div>
         
@@ -617,20 +794,24 @@ IEEE 754 浮点标准用 V=(−1)s×M×2EV = (-1)^s \times M \times 2^EV=(−1)s
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/01/16/Math/Theory/%E5%87%B8%E5%87%BD%E6%95%B0%E5%8F%8A%E5%85%B6%E6%80%A7%E8%B4%A8/">凸函数及其性质</a>
+        <a href="/2021/01/23/TeX/LaTeX/LaTeX%E7%A7%91%E6%8A%80%E7%AC%A6%E5%8F%B7/LaTeX%E7%A7%91%E6%8A%80%E7%AC%A6%E5%8F%B7/">LaTeX科技符号</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/01/16/Math/Theory/%E5%87%B8%E5%87%BD%E6%95%B0%E5%8F%8A%E5%85%B6%E6%80%A7%E8%B4%A8/">
+        <a href="/2021/01/23/TeX/LaTeX/LaTeX%E7%A7%91%E6%8A%80%E7%AC%A6%E5%8F%B7/LaTeX%E7%A7%91%E6%8A%80%E7%AC%A6%E5%8F%B7/">
           
           
             
           
-          1. 定义
-1.1 上凸函数
+          【注】摘自 Scott Pakin 的 《The Comprehensive LaTeX Symbol List》 。
 
 
-如果对任意 x1x_1x1​、x2x_2x2​ 总有 f[αx1+(1−α)x2]≥αf(x1)+(1−α)f(x2)f[\alpha x_1 + (1 - \alpha )x_2] \geq \alpha f(x_1) + (1 - \alpha )f(x_2)f[αx1​+(1−α)x2​]≥αf(x1​)+(1−α)f(x2​)，其中 0≤α≤10 \leq
+
+
+
+
+
+
         </a>
       </p>
 
@@ -638,8 +819,8 @@ IEEE 754 浮点标准用 V=(−1)s×M×2EV = (-1)^s \times M \times 2^EV=(−1)s
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-16 18:06" pubdate>
-              2021-01-16
+            <time datetime="2021-01-23 13:28" pubdate>
+              2021-01-23
             </time>
           </div>
         
@@ -647,9 +828,11 @@ IEEE 754 浮点标准用 V=(−1)s×M×2EV = (-1)^s \times M \times 2^EV=(−1)s
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/Math/">Math</a>
+              <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Math/Theory/">Theory</a>
+              <a href="/categories/Technique/TeX/">TeX</a>
+            
+              <a href="/categories/Technique/TeX/LaTeX/">LaTeX</a>
             
           </div>
         
@@ -657,9 +840,11 @@ IEEE 754 浮点标准用 V=(−1)s×M×2EV = (-1)^s \times M \times 2^EV=(−1)s
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/Math/">Math</a>
+              <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Theory/">Theory</a>
+              <a href="/tags/TeX/">TeX</a>
+            
+              <a href="/tags/LaTeX/">LaTeX</a>
             
           </div>
         
@@ -673,19 +858,18 @@ IEEE 754 浮点标准用 V=(−1)s×M×2EV = (-1)^s \times M \times 2^EV=(−1)s
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/01/16/Math/Theory/%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0/">欧拉函数</a>
+        <a href="/2021/01/23/TeX/LaTeX/LaTeX%E4%B8%ADTikZ%E5%AE%8F%E5%8C%85/TikZ%E4%B8%AD%E8%8A%82%E7%82%B9%E7%BB%98%E5%88%B6%E7%9A%84%E5%BE%AA%E7%8E%AF%E9%80%89%E9%A1%B9%E9%97%AE%E9%A2%98/TikZ%E4%B8%AD%E8%8A%82%E7%82%B9%E7%BB%98%E5%88%B6%E7%9A%84%E5%BE%AA%E7%8E%AF%E9%80%89%E9%A1%B9%E9%97%AE%E9%A2%98/">TikZ中节点绘制的循环选项问题</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/01/16/Math/Theory/%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0/">
+        <a href="/2021/01/23/TeX/LaTeX/LaTeX%E4%B8%ADTikZ%E5%AE%8F%E5%8C%85/TikZ%E4%B8%AD%E8%8A%82%E7%82%B9%E7%BB%98%E5%88%B6%E7%9A%84%E5%BE%AA%E7%8E%AF%E9%80%89%E9%A1%B9%E9%97%AE%E9%A2%98/TikZ%E4%B8%AD%E8%8A%82%E7%82%B9%E7%BB%98%E5%88%B6%E7%9A%84%E5%BE%AA%E7%8E%AF%E9%80%89%E9%A1%B9%E9%97%AE%E9%A2%98/">
           
           
             
           
-          1. 欧拉函数定义
-欧拉函数 ϕ(n){\phi(n)}ϕ(n) 表示的是小于等于 nnn 且和 nnn 互质的正整数的个数。（易知 ϕ(1)=1{\phi(1) = 1}ϕ(1)=1）
-2. 欧拉函数公式
-对于任意整数 nnn，若其质因数分解结果为 n=p1k1p2k1⋯pnkn{n = p_1^{k_1}p_2^{k_1} \cdots p_n^{k_n}}n=p1k1​​p2k1​​⋯pnk
+          在 LaTeX 中使用 TikZ 宏包绘制闭合曲线时，可以在 \draw 中使用循环选项。
+1.第一种情况
+12345678910111213\documentclass&#123;article&#125;\usepackage&#123;tikz&#125;\usetikzlibrary&#123;arrows,backgrounds,calc,fit,intersections,throug
         </a>
       </p>
 
@@ -693,8 +877,8 @@ IEEE 754 浮点标准用 V=(−1)s×M×2EV = (-1)^s \times M \times 2^EV=(−1)s
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-16 18:06" pubdate>
-              2021-01-16
+            <time datetime="2021-01-23 13:28" pubdate>
+              2021-01-23
             </time>
           </div>
         
@@ -702,71 +886,13 @@ IEEE 754 浮点标准用 V=(−1)s×M×2EV = (-1)^s \times M \times 2^EV=(−1)s
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/Math/">Math</a>
+              <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Math/Theory/">Theory</a>
+              <a href="/categories/Technique/TeX/">TeX</a>
             
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
+              <a href="/categories/Technique/TeX/LaTeX/">LaTeX</a>
             
-              <a href="/tags/Math/">Math</a>
-            
-              <a href="/tags/Theory/">Theory</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/01/16/Math/Modeling/%E4%BC%A0%E6%9F%93%E7%97%85%E6%A8%A1%E5%9E%8B/%E4%BC%A0%E6%9F%93%E7%97%85%E6%A8%A1%E5%9E%8B/">传染病模型</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/01/16/Math/Modeling/%E4%BC%A0%E6%9F%93%E7%97%85%E6%A8%A1%E5%9E%8B/%E4%BC%A0%E6%9F%93%E7%97%85%E6%A8%A1%E5%9E%8B/">
-          
-          
-            
-          
-          
-
-基础定义
-
-
-将传染病范围内的人群分为以下类别：
-
-SSS(Susceptible)类：指未得病，但与感染者接触后容易收到感染的人。
-EEE(Exposed)类：指接触过感染者，但暂时没有传播的能力的人。
-III(Infectious)类：指染上传染病，具有传播能力的人。（可以传播给SSS类人员，将其变成EEE类或III类成员）
-RRR(Recovered / Removed)类：指病愈而具有
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-16 18:06" pubdate>
-              2021-01-16
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Math/">Math</a>
-            
-              <a href="/categories/Math/Modeling/">Modeling</a>
+              <a href="/categories/Technique/TeX/LaTeX/LaTeX%E4%B8%ADTikZ%E5%AE%8F%E5%8C%85/">LaTeX中TikZ宏包</a>
             
           </div>
         
@@ -774,9 +900,13 @@ RRR(Recovered / Removed)类：指病愈而具有
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/Math/">Math</a>
+              <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Modeling/">Modeling</a>
+              <a href="/tags/TeX/">TeX</a>
+            
+              <a href="/tags/LaTeX/">LaTeX</a>
+            
+              <a href="/tags/LaTeX%E4%B8%ADTikZ%E5%AE%8F%E5%8C%85/">LaTeX中TikZ宏包</a>
             
           </div>
         
@@ -788,7 +918,7 @@ RRR(Recovered / Removed)类：指病愈而具有
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/page/14/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/#board">13</a><a class="page-number" href="/page/14/#board">14</a><span class="page-number current">15</span><a class="page-number" href="/page/16/#board">16</a><a class="page-number" href="/page/17/#board">17</a><span class="space">&hellip;</span><a class="page-number" href="/page/42/#board">42</a><a class="extend next" rel="next" href="/page/16/#board"><i class="iconfont icon-arrowright"></i></a>
+      <a class="extend prev" rel="prev" href="/page/14/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/#board">13</a><a class="page-number" href="/page/14/#board">14</a><span class="page-number current">15</span><a class="page-number" href="/page/16/#board">16</a><a class="page-number" href="/page/17/#board">17</a><span class="space">&hellip;</span><a class="page-number" href="/page/44/#board">44</a><a class="extend next" rel="next" href="/page/16/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 

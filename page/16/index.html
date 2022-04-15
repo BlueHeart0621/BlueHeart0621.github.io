@@ -197,19 +197,21 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/01/16/Math/Theory/%E5%88%9A%E6%80%A7%E6%96%B9%E7%A8%8B/%E5%88%9A%E6%80%A7%E6%96%B9%E7%A8%8B/">刚性方程</a>
+        <a href="/2021/01/23/TeX/LaTeX/LaTeX%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F%E6%8E%92%E7%89%88/">LaTeX数学公式排版</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/01/16/Math/Theory/%E5%88%9A%E6%80%A7%E6%96%B9%E7%A8%8B/%E5%88%9A%E6%80%A7%E6%96%B9%E7%A8%8B/">
+        <a href="/2021/01/23/TeX/LaTeX/LaTeX%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F%E6%8E%92%E7%89%88/">
           
           
             
           
-          摘自Wikipedia——刚性方程。
-1.  定义
-在数学领域中，刚性方程（stiffness equation）是指一个微分方程，其数值分析的解只有在时间间隔很小时才会稳定，只要时间间隔略大，其解就会不稳定。目前很难去精确地去定义哪些微分方程是刚性方程，然而粗略而言，若此方程式中包含使其快速变动的项，则其为刚性方程。
-在积分微分方程时，若某一区域的解曲线的变化很大，会希望在这个区域的积分间隔密一
+          1. 公式对齐
+1234\begin&#123;aligned&#125;    x &amp; = a + &amp; b \\    c + d &amp; = &amp; y \\\end&#123;aligned&#125;
+其中，&amp; 表示的是需要对齐的位置。结果显示如下：
+x=a+bc+d=y\begin{array}{c}
+\begin{aligned}
+    x &amp;
         </a>
       </p>
 
@@ -217,8 +219,8 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-16 18:06" pubdate>
-              2021-01-16
+            <time datetime="2021-01-23 13:26" pubdate>
+              2021-01-23
             </time>
           </div>
         
@@ -226,9 +228,11 @@
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/Math/">Math</a>
+              <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Math/Theory/">Theory</a>
+              <a href="/categories/Technique/TeX/">TeX</a>
+            
+              <a href="/categories/Technique/TeX/LaTeX/">LaTeX</a>
             
           </div>
         
@@ -236,9 +240,11 @@
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/Math/">Math</a>
+              <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Theory/">Theory</a>
+              <a href="/tags/TeX/">TeX</a>
+            
+              <a href="/tags/LaTeX/">LaTeX</a>
             
           </div>
         
@@ -252,19 +258,20 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/01/15/Python/Torch/Torch%E5%87%BD%E6%95%B0/">Torch函数</a>
+        <a href="/2021/01/22/TeX/LaTeX/LaTeX%E6%96%87%E7%AB%A0%E6%8F%90%E7%BA%B2/LaTeX%E6%96%87%E7%AB%A0%E6%8F%90%E7%BA%B2/">LaTeX文章提纲</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/01/15/Python/Torch/Torch%E5%87%BD%E6%95%B0/">
+        <a href="/2021/01/22/TeX/LaTeX/LaTeX%E6%96%87%E7%AB%A0%E6%8F%90%E7%BA%B2/LaTeX%E6%96%87%E7%AB%A0%E6%8F%90%E7%BA%B2/">
           
           
             
           
-          torch.clamp(input, min, max, out=None) → Tensor
-将 input 张量中的每个元素值截断到区间 [min, max] 中。
-torch.stack(tensors, dim=0, out=None) → Tensor
-对 tensors 沿指定维度拼接，但会额外增加一维拼接的维度，即拼接时来自于 tensors 中每个 tensor 中的拼接元素单独组
+          【注】笔记来自《LaTeX入门》——刘海洋。
+1. 导言区
+在 \begin&#123;document&#125; 前面的部分称为导言区，导言区通常用来对文档的性质做一些设置，或者自定义一些命令。
+1.1 声明文档类
+12\documentclass&#123;article&#125;         # 西文短文类\documentclass[UTF8]&#123;ctexart&#125;
         </a>
       </p>
 
@@ -272,8 +279,8 @@ torch.stack(tensors, dim=0, out=None) → Tensor
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-15 22:44" pubdate>
-              2021-01-15
+            <time datetime="2021-01-22 19:50" pubdate>
+              2021-01-22
             </time>
           </div>
         
@@ -281,9 +288,11 @@ torch.stack(tensors, dim=0, out=None) → Tensor
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/Python/">Python</a>
+              <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Python/Torch/">Torch</a>
+              <a href="/categories/Technique/TeX/">TeX</a>
+            
+              <a href="/categories/Technique/TeX/LaTeX/">LaTeX</a>
             
           </div>
         
@@ -291,9 +300,11 @@ torch.stack(tensors, dim=0, out=None) → Tensor
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/Python/">Python</a>
+              <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Torch/">Torch</a>
+              <a href="/tags/TeX/">TeX</a>
+            
+              <a href="/tags/LaTeX/">LaTeX</a>
             
           </div>
         
@@ -307,45 +318,26 @@ torch.stack(tensors, dim=0, out=None) → Tensor
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/12/23/Math/Theory/%E6%95%B0%E5%AD%A6%E6%9C%AF%E8%AF%AD%E7%BC%A9%E5%86%99/">数学术语缩写</a>
+        <a href="/2021/01/22/TeX/LaTeX/LaTeX%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86/LaTeX%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86/">LaTeX相关知识</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/12/23/Math/Theory/%E6%95%B0%E5%AD%A6%E6%9C%AF%E8%AF%AD%E7%BC%A9%E5%86%99/">
+        <a href="/2021/01/22/TeX/LaTeX/LaTeX%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86/LaTeX%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86/">
           
           
             
           
-          
+          1. TeX 引擎、命令、格式
 
-s.t. = such that：使得
+TeX 引擎目前主要有四种：TeX/eTeX、pdfTeX、XeTeX、LuaTeX
+TeX 格式目前主要有三种：Plain TeX、LaTeX、ConTeXt
 
+TeX 引擎对不同的 TeX 格式提供的排版命令以及编译输出的排版文件格式如下表：
 
-i.e. = id est：即
-
-
-resp. = respectively：相对地
-
-
-e.g. = for example：举例
+2. TeX 引擎编译流程
 
 
-cf. = confer：比较
-
-
-viz. = ：不然
-
-
-Q.E.D. ：证毕
-
-
-iff = if and only if
-
-
-i.i.d. ：独立同分布
-
-
-
+早些年代电子文档格式主要是 PostScript（PS），那时主要通过 dvips 
         </a>
       </p>
 
@@ -353,8 +345,8 @@ i.i.d. ：独立同分布
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-12-23 15:32" pubdate>
-              2020-12-23
+            <time datetime="2021-01-22 10:04" pubdate>
+              2021-01-22
             </time>
           </div>
         
@@ -362,15 +354,401 @@ i.i.d. ：独立同分布
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/Math/">Math</a>
+              <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Math/Theory/">Theory</a>
+              <a href="/categories/Technique/TeX/">TeX</a>
+            
+              <a href="/categories/Technique/TeX/LaTeX/">LaTeX</a>
             
           </div>
         
         
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/TeX/">TeX</a>
+            
+              <a href="/tags/LaTeX/">LaTeX</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/01/21/TeX/LaTeX/TeXStudio%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/">TeXStudio使用技巧</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/01/21/TeX/LaTeX/TeXStudio%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/">
+          
+          
+            
+          
+          1. 正反向查找
+正反向查找是由 SyncTeX 机制实现的, 需要源代码编辑器、pdf 阅读器和 TeX 输出程序的共同参与。
+1.1 正向查找
+正向查找即根据源文件位置查找生成的 pdf 文件对应位置。
+
+在 TeXStudio 环境中，使用快捷键 Ctrl+鼠标左击 即可定位源文件中鼠标位置在 pdf 文件中的对应位置。
+
+1.2 反向查找
+反向查找即根据 pdf 文件位置查找源文件的对应位
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-21 21:14" pubdate>
+              2021-01-21
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/TeX/">TeX</a>
+            
+              <a href="/categories/Technique/TeX/LaTeX/">LaTeX</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/TeX/">TeX</a>
+            
+              <a href="/tags/LaTeX/">LaTeX</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/01/21/TeX/LaTeX/VSCode+LaTeXWorkshop%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/">VSCode+LaTeXWorkshop使用技巧</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/01/21/TeX/LaTeX/VSCode+LaTeXWorkshop%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/">
+          
+          
+            
+          
+          1. 正反向查找
+正反向查找是由 SyncTeX 机制实现的, 需要源代码编辑器、pdf 阅读器和 TeX 输出程序的共同参与。
+1.1 正向查找
+正向查找即根据源文件位置查找生成的 pdf 文件对应位置。
+
+在 VSCode+LaTeXWorkshop 环境中，使用快捷键 Ctrl+Alt+j 即可定位源文件中鼠标位置在 pdf 文件中的对应位置。
+
+1.2 反向查找
+反向查找即根据 pdf 文
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-21 21:08" pubdate>
+              2021-01-21
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/TeX/">TeX</a>
+            
+              <a href="/categories/Technique/TeX/LaTeX/">LaTeX</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/TeX/">TeX</a>
+            
+              <a href="/tags/LaTeX/">LaTeX</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/01/21/TeX/LaTeX/Manjaro20.2%E9%85%8D%E7%BD%AETexLive+VSCode%E7%9A%84LaTeX%E7%8E%AF%E5%A2%83/">Manjaro20.2配置TeXLive+VSCode的LaTeX环境</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/01/21/TeX/LaTeX/Manjaro20.2%E9%85%8D%E7%BD%AETexLive+VSCode%E7%9A%84LaTeX%E7%8E%AF%E5%A2%83/">
+          
+          
+            
+          
+          1. 安装
+1.1 安装 TeXLive
+1.1.1 从软件源安装
+在终端执行以下代码，安装 TeXLive 环境：
+12sudo pacman -S texlive-mostsudo pacman -S texlive-lang 
+【注】这样安装 TeXLive 后无法在终端使用 texdoc 工具，会报错：/usr/local/texlive/2020/texmf-dist/doc/gener
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-21 20:25" pubdate>
+              2021-01-21
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/TeX/">TeX</a>
+            
+              <a href="/categories/Technique/TeX/LaTeX/">LaTeX</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/TeX/">TeX</a>
+            
+              <a href="/tags/LaTeX/">LaTeX</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/01/21/NodeJS/npm%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85%E9%80%9F%E5%BA%A6%E6%85%A2%E9%97%AE%E9%A2%98/">npm下载安装速度慢问题</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/01/21/NodeJS/npm%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85%E9%80%9F%E5%BA%A6%E6%85%A2%E9%97%AE%E9%A2%98/">
+          
+          
+            
+          
+          1. node 下载 electron 卡住 &amp;&amp; node install.js 卡住
+
+问题：都是由于访问国外网站过慢造成
+解决：
+
+
+
+配置淘宝镜像
+修改 .npmrc 文件（windows C:\Users\username\.npmrc，Linux 在 ~/.npmrc）内容为以下内容：
+
+12registry=https://registry.npm.taobao.or
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-21 16:09" pubdate>
+              2021-01-21
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/NodeJS/">NodeJS</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/NodeJS/">NodeJS</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/01/21/TeX/LaTeX/LaTeX%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7/">LaTeX奇技淫巧</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/01/21/TeX/LaTeX/LaTeX%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7/">
+          
+          
+            
+          
+          1. 移动符号
+第一个符号位置不变，改变第二个符号相对第一个符号的位置。
+1.1 左移
+在两个符号间插入 \! 可将第二个符号逐步往左移动。每个 \! 移动 −16-\frac{1}{6}−61​ em 的距离（−-− 表示左移）。插入越多 \! ，第二个符号左移的位移就越大。
+比如：
+
+
+$\dashv \vdash$：
+⊣⊢\dashv \vdash⊣⊢
+
+
+$\dashv \! \vdash
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-21 11:46" pubdate>
+              2021-01-21
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/TeX/">TeX</a>
+            
+              <a href="/categories/Technique/TeX/LaTeX/">LaTeX</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/TeX/">TeX</a>
+            
+              <a href="/tags/LaTeX/">LaTeX</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/01/19/Math/Theory/%E6%96%B9%E5%90%91%E4%BD%99%E5%BC%A6/">方向余弦</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/01/19/Math/Theory/%E6%96%B9%E5%90%91%E4%BD%99%E5%BC%A6/">
+          
+          
+            
+          
+          【注】参考自 Wikipedia 。
+1. 定义
+1.1 方向余弦
+
+在解析几何里，一个向量的三个方向余弦分别是这向量与三个坐标轴之间的角度的余弦。
+
+设 v⃗=v1x⃗+v2y⃗+v3z⃗
+\vec{v} = v_1 \vec{x} + v_2 \vec{y} + v_3 \vec{z}
+v=v1​x+v2​y​+v3​z 其中，x⃗\vec{x}x、y⃗\vec{y}y​、z⃗\vec{z}z
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-19 22:25" pubdate>
+              2021-01-19
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Math/">Math</a>
+            
+              <a href="/categories/Technique/Math/Theory/">Theory</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
             
               <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
             
@@ -390,21 +768,33 @@ i.i.d. ：独立同分布
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/12/23/Math/Theory/%E9%9B%86%E5%90%88%E8%AE%BA/%E9%9B%86%E5%90%88%E7%9A%84%E5%A4%A7%E5%B0%8F%E5%85%B3%E7%B3%BB/">集合的大小关系</a>
+        <a href="/2021/01/19/ACM/%E9%A2%98%E8%A7%A3/P2758%E3%80%8C%E7%BC%96%E8%BE%91%E8%B7%9D%E7%A6%BB%E3%80%8D/">P2758「编辑距离」</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/12/23/Math/Theory/%E9%9B%86%E5%90%88%E8%AE%BA/%E9%9B%86%E5%90%88%E7%9A%84%E5%A4%A7%E5%B0%8F%E5%85%B3%E7%B3%BB/">
+        <a href="/2021/01/19/ACM/%E9%A2%98%E8%A7%A3/P2758%E3%80%8C%E7%BC%96%E8%BE%91%E8%B7%9D%E7%A6%BB%E3%80%8D/">
           
           
             
           
-          
-有限集：元素个数小于等于某一个自然数的集合。
-无穷集：元素个数比任何一个自然数都大的集合，包括可列/可数无穷集和不可列/不可数无穷集。
-可列/可数集：集合元素可以按照某种顺序一一列出来，包括有限集和可列/可数无穷集。
-可列/可数无穷集：集合元素可以找到与自然数集 NNN 的一一对应关系的无穷集合，比如整数集、有理数集。
-不可列/不可数集：集合元素无法无法构造与自然数集 NNN 的一一对应关系的无
+          1. 题目
+题目链接：P2758「编辑距离」 。
+题目描述
+设 AAA 和 BBB 是两个字符串。我们要用最少的字符操作次数，将字符串 AAA 转换为字符串 BBB。这里所说的字符操作共有三种：
+
+
+删除一个字符；
+
+
+插入一个字符；
+
+
+将一个字符改为另一个字符；
+
+
+！皆为小写字母！
+输入格式
+第一行为字符串 AAA；第二行为字符串 BBB；字符串 AAA 和 BBB 的长度均小于 20002
         </a>
       </p>
 
@@ -412,8 +802,8 @@ i.i.d. ：独立同分布
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-12-23 12:46" pubdate>
-              2020-12-23
+            <time datetime="2021-01-19 20:39" pubdate>
+              2021-01-19
             </time>
           </div>
         
@@ -421,7 +811,11 @@ i.i.d. ：独立同分布
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/SetTheory/">SetTheory</a>
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/ACM/">ACM</a>
+            
+              <a href="/categories/Technique/ACM/%E9%A2%98%E8%A7%A3/">题解</a>
             
           </div>
         
@@ -429,335 +823,11 @@ i.i.d. ：独立同分布
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/SetTheory/">SetTheory</a>
+              <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/%E9%9B%86%E5%90%88%E8%AE%BA/">集合论</a>
+              <a href="/tags/ACM/">ACM</a>
             
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/12/18/DistributedSystem/%E5%88%86%E5%B8%83%E5%BC%8F%E6%A1%86%E6%9E%B6%E7%B3%BB%E5%88%97%E6%96%87%E6%A1%A3/">分布式架构</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/12/18/DistributedSystem/%E5%88%86%E5%B8%83%E5%BC%8F%E6%A1%86%E6%9E%B6%E7%B3%BB%E5%88%97%E6%96%87%E6%A1%A3/">
-          
-          
-            
-          
-          【注】持续更新中……
-
-NCCL ：https://docs.nvidia.com/deeplearning/nccl/user-guide/docs/index.html（英文）
-
-
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-12-18 13:27" pubdate>
-              2020-12-18
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/DistributedSystem/">DistributedSystem</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/DistributedSystem/">DistributedSystem</a>
-            
-              <a href="/tags/%E5%88%86%E5%B8%83%E5%BC%8F/">分布式</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/12/13/Research/ML%E3%80%81CV%E6%96%B9%E5%90%91%E4%BC%9A%E8%AE%AE%E6%9C%9F%E5%88%8A%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99%E6%B1%87%E6%80%BB/">ML、CV方向会议期刊相关资料汇总</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/12/13/Research/ML%E3%80%81CV%E6%96%B9%E5%90%91%E4%BC%9A%E8%AE%AE%E6%9C%9F%E5%88%8A%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99%E6%B1%87%E6%80%BB/">
-          
-          
-            
-          
-          1. 会议
-1.1 会议检索
-
-2019 中国计算机学会推荐国际学术会议和期刊目录：https://www.ccf.org.cn/c/2019-04-25/663625.shtml
-2019 清华大学计算机学科群推荐学术会议和期刊列表：https://numbda.cs.tsinghua.edu.cn/~yuwj/TH-CPL.pdf
-2020 清华大学各院系（学科）重要国际学术会议目录：http
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-12-13 10:47" pubdate>
-              2020-12-13
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Research/">Research</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Research/">Research</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/12/12/C++/C++%E7%B3%BB%E5%88%97%E6%96%87%E6%A1%A3/">C++系列文档</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/12/12/C++/C++%E7%B3%BB%E5%88%97%E6%96%87%E6%A1%A3/">
-          
-          
-            
-          
-          【注】持续更新中……
-
-CMake ：https://cliutils.gitlab.io/modern-cmake/（英文）、https://cmake.org/cmake/help/latest/（英文）、https://pabloariasal.github.io/2018/02/19/its-time-to-do-cmake-right/（英文）
-GCC：https://gcc.gnu.o
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-12-12 11:14" pubdate>
-              2020-12-12
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/C/">C++</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/C/">C++</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/12/10/Python/Python%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83/">Python虚拟环境</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/12/10/Python/Python%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83/">
-          
-          
-            
-          
-          1. 简介
-Python 提供虚拟环境，虚拟环境是 Python 解释器的一个私有副本，在虚拟环境中可以安装私有包，而且不会影响到系统中安装的全局 Python 解释器，同时使用虚拟环境不需要管理员权限。
-2. 作用
-虚拟环境用于解决不同项目所需的 Python 解释器版本不一致以及包的混乱等问题。可以将系统全局 Python 解释器只作为创建虚拟环境的源，从而为每个程序单独创建虚拟环境，这样可以
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-12-10 09:30" pubdate>
-              2020-12-10
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Python/">Python</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Python/">Python</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/12/06/Python/Torch/Torch%E5%8D%B7%E7%A7%AF/">Torch卷积</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/12/06/Python/Torch/Torch%E5%8D%B7%E7%A7%AF/">
-          
-          
-            
-          
-          1. 2D 卷积
-1class torch.nn.Conv2d(in_channels, out_channels, kernel_size, stride=1, padding=0, dilation=1, groups=1, bias=True)
-
-输入尺度：(N,Cin,Hin,Win)
-(N,C_{in},H_{in},W_{in})
-(N,Cin​,Hin​,Win​)
-输出尺度： (N
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-12-06 12:03" pubdate>
-              2020-12-06
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Python/">Python</a>
-            
-              <a href="/categories/Python/Torch/">Torch</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Python/">Python</a>
-            
-              <a href="/tags/Torch/">Torch</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/12/03/Python/Python%E7%9B%B8%E5%85%B3%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99%E6%B1%87%E6%80%BB/">Python相关学习资料汇总</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/12/03/Python/Python%E7%9B%B8%E5%85%B3%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99%E6%B1%87%E6%80%BB/">
-          
-          
-            
-          
-          以下资料按字母表顺序排列
-
-Abseil : https://abseil.io/docs/python/quickstart
-
-
-Abseil 是用于构建 Python 应用程序的 Python 库代码，主要用于处理程序的命令行输入。
-
-
-Airium : https://pypi.org/project/airium/
-
-
-Airium 是一个简单易用的 Python 库，让用户能够用 Pyt
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-12-03 16:55" pubdate>
-              2020-12-03
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Python/">Python</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Python/">Python</a>
+              <a href="/tags/%E9%A2%98%E8%A7%A3/">题解</a>
             
           </div>
         
@@ -769,7 +839,7 @@ Airium 是一个简单易用的 Python 库，让用户能够用 Pyt
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/page/15/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/#board">14</a><a class="page-number" href="/page/15/#board">15</a><span class="page-number current">16</span><a class="page-number" href="/page/17/#board">17</a><a class="page-number" href="/page/18/#board">18</a><span class="space">&hellip;</span><a class="page-number" href="/page/42/#board">42</a><a class="extend next" rel="next" href="/page/17/#board"><i class="iconfont icon-arrowright"></i></a>
+      <a class="extend prev" rel="prev" href="/page/15/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/#board">14</a><a class="page-number" href="/page/15/#board">15</a><span class="page-number current">16</span><a class="page-number" href="/page/17/#board">17</a><a class="page-number" href="/page/18/#board">18</a><span class="space">&hellip;</span><a class="page-number" href="/page/44/#board">44</a><a class="extend next" rel="next" href="/page/17/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 

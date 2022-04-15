@@ -197,20 +197,26 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/09/08/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%A6/LCM%E4%B8%8EGCD%E7%AE%97%E6%B3%95/">LCM与GCD算法</a>
+        <a href="/2020/09/28/DeepLearning/%E8%AF%AF%E5%B7%AE%E5%87%BD%E6%95%B0/">误差函数</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/09/08/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%A6/LCM%E4%B8%8EGCD%E7%AE%97%E6%B3%95/">
+        <a href="/2020/09/28/DeepLearning/%E8%AF%AF%E5%B7%AE%E5%87%BD%E6%95%B0/">
           
           
             
           
-          LCM（最小公倍数）和 GCD（最大公因数）在做 ACM 题时经常会用到，求两个整数的 LCM 和 GCD 有两种方法。
-1. 辗转相除法（欧几里得算法）
+          1. 平方误差
 
+对于单个数据来说，其平方误差为
 
-定理：对于任意的两个整数 a,b(a≥b)a,b (a \geq b)a,b(a≥b)， 有 (a,b)=(b,a%b)(a,b) = (b, a\%b)(a,b)=(b,a%b) 。（(a,b)(a, b)(a,b) 表示 aaa 和 b
+E=12∑k(yk−tk)2\begin{array}{c}
+E = \frac{1}{2} \sum_{k} (y_k - t_k)^2
+\end{array}
+E=21​∑k​(yk​−tk​)2​
+其中，yky_kyk​ 表示神经网络的输出，tkt_ktk​ 表示监督数据（ttt 采用 one-hot 编码），kkk 表示数据的维度。
+
+对
         </a>
       </p>
 
@@ -218,8 +224,8 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-09-08 19:51" pubdate>
-              2020-09-08
+            <time datetime="2020-09-28 11:40" pubdate>
+              2020-09-28
             </time>
           </div>
         
@@ -227,17 +233,536 @@
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/ACM/">ACM</a>
+              <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/ACM/%E7%AE%97%E6%B3%95/">算法</a>
-            
-              <a href="/categories/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%A6/">数学</a>
+              <a href="/categories/Technique/DeepLearning/">DeepLearning</a>
             
           </div>
         
         
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/DeepLearning/">DeepLearning</a>
+            
+              <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/09/27/Math/Theory/%E7%9F%A9%E9%98%B5/MoorePenrose%E4%BC%AA%E9%80%86/">MoorePenrose伪逆</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/09/27/Math/Theory/%E7%9F%A9%E9%98%B5/MoorePenrose%E4%BC%AA%E9%80%86/">
+          
+          
+            
+          
+          1. 简介
+Moore-Penrose 伪逆常用于求解或简化非一致线性方程组的最小范数最小二乘解。其在实数域和复数域上都是唯一的，并且可以通过奇异值分解求得。
+2. 定义
+矩阵 AAA 的伪逆定义为
+A+=lim⁡α→0(ATA+αI)−1AT\begin{array}{c}
+A^+ = \lim_{\alpha \rightarrow 0}(A^T A + \alpha I)^{-1} A^T
+
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-09-27 22:13" pubdate>
+              2020-09-27
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Math/">Math</a>
+            
+              <a href="/categories/Technique/Math/Theory/">Theory</a>
+            
+              <a href="/categories/Technique/Math/Theory/%E7%9F%A9%E9%98%B5/">矩阵</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
+            
+              <a href="/tags/Math/">Math</a>
+            
+              <a href="/tags/Theory/">Theory</a>
+            
+              <a href="/tags/%E7%9F%A9%E9%98%B5/">矩阵</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/09/27/Math/Theory/%E7%9F%A9%E9%98%B5/%E8%8C%83%E6%95%B0/">范数</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/09/27/Math/Theory/%E7%9F%A9%E9%98%B5/%E8%8C%83%E6%95%B0/">
+          
+          
+            
+          
+          1. 向量范数
+1.1 LpL_pLp​ 范数
+LpL_pLp​ 范数是向量空间中的一组范数。
+1.1.1 定义
+Lp(x⃗)=∣x⃗∣p=(∑i=1n∣xi∣p)1p\begin{array}{c}
+L_p(\vec{x}) = |\vec{x}|_p = (\sum_{i=1}^n |x_i|^p)^{\frac{1}{p}}
+\end{array}
+Lp​(x)=∣x∣p​=(∑i=1n​∣
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-09-27 19:20" pubdate>
+              2020-09-27
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Math/">Math</a>
+            
+              <a href="/categories/Technique/Math/Theory/">Theory</a>
+            
+              <a href="/categories/Technique/Math/Theory/%E7%9F%A9%E9%98%B5/">矩阵</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
+            
+              <a href="/tags/Math/">Math</a>
+            
+              <a href="/tags/Theory/">Theory</a>
+            
+              <a href="/tags/%E7%9F%A9%E9%98%B5/">矩阵</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/09/27/Math/Theory/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/%E6%9D%A1%E4%BB%B6%E6%95%B0/">条件数</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/09/27/Math/Theory/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/%E6%9D%A1%E4%BB%B6%E6%95%B0/">
+          
+          
+            
+          
+          1. 简介
+数值分析中，函数的条件数衡量的是输入参数的微小变化可以使函数的输出值变化多少，用来测量函数输出对于输入的微小变化的敏感程度，或者说一个问题的条件数是该数量在数值计算中容易程度的衡量。一个低条件数的问题称为良置的，而高条件数的问题称为病态（非良置）的。
+2. 定义
+给定问题 fff，输入 xxx 以及用于求解问题的算法 f~\tilde{f}f~​，则绝对误差定义为
+E(f~(x))=∣
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-09-27 16:49" pubdate>
+              2020-09-27
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Math/">Math</a>
+            
+              <a href="/categories/Technique/Math/Theory/">Theory</a>
+            
+              <a href="/categories/Technique/Math/Theory/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/">数值分析</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
+            
+              <a href="/tags/Math/">Math</a>
+            
+              <a href="/tags/Theory/">Theory</a>
+            
+              <a href="/tags/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/">数值分析</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/09/27/Math/Theory/%E7%9F%A9%E9%98%B5/%E6%AD%A3%E8%B4%9F%E5%AE%9A%E7%9F%A9%E9%98%B5/">正负定矩阵</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/09/27/Math/Theory/%E7%9F%A9%E9%98%B5/%E6%AD%A3%E8%B4%9F%E5%AE%9A%E7%9F%A9%E9%98%B5/">
+          
+          
+            
+          
+          1. 正定矩阵
+1.1 定义
+
+
+在实数域下，一个 n×nn \times nn×n 的实对称矩阵 MMM 是正定的，当且仅当对于所有的非零实系数向量 zzz 都有 zTMz&gt;0z^T M z \gt 0zTMz&gt;0 。
+
+
+在复数域下，一个 n×nn \times nn×n 的埃尔米特矩阵 MMM 是正定的当且仅当对于每个非零的复向量 zzz 都有 z∗Mz&gt;0z^* M z 
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-09-27 15:57" pubdate>
+              2020-09-27
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Math/">Math</a>
+            
+              <a href="/categories/Technique/Math/Theory/">Theory</a>
+            
+              <a href="/categories/Technique/Math/Theory/%E7%9F%A9%E9%98%B5/">矩阵</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
+            
+              <a href="/tags/Math/">Math</a>
+            
+              <a href="/tags/Theory/">Theory</a>
+            
+              <a href="/tags/%E7%9F%A9%E9%98%B5/">矩阵</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/09/26/MachineLearning/%E5%B8%B8%E7%94%A8%E7%9F%A9%E9%98%B5/">常用矩阵</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/09/26/MachineLearning/%E5%B8%B8%E7%94%A8%E7%9F%A9%E9%98%B5/">
+          
+          
+            
+          
+          1. Jacobian matrix(雅可比矩阵)
+1.1 定义
+如果函数 f:Rn→Rm
+\boldsymbol{f}: \mathbb{R}^n \rightarrow \mathbb{R}^m
+f:Rn→Rm 在点 x\boldsymbol{x}x 可微，则在点 x\boldsymbol{x}x 的 Jacobian 矩阵即为该函数在该点的最佳线性逼近，也被称为向量值多变数函数 f\bold
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-09-26 22:11" pubdate>
+              2020-09-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/MachineLearning/">MachineLearning</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/MachineLearning/">MachineLearning</a>
+            
+              <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/09/26/DeepLearning/%E6%BF%80%E6%B4%BB%E5%87%BD%E6%95%B0/%E6%BF%80%E6%B4%BB%E5%87%BD%E6%95%B0/">激活函数</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/09/26/DeepLearning/%E6%BF%80%E6%B4%BB%E5%87%BD%E6%95%B0/%E6%BF%80%E6%B4%BB%E5%87%BD%E6%95%B0/">
+          
+          
+            
+          
+          常见激活函数及其导数：
+
+1. Sigmoid 函数
+【注】Sigmoid 型函数是指一类 S 型曲线函数，为两端饱和函数。常用的 Sigmoid 型函数有Logistic函数和Tanh函数。
+1.1 Logistic 函数
+
+定义：
+
+σ(x)=11+e−x\begin{array}{c}
+\sigma(x) = {1 \over 1 + e^{-x}}
+\end{array}
+σ(x)=1+e
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-09-26 20:21" pubdate>
+              2020-09-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/DeepLearning/">DeepLearning</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/DeepLearning/">DeepLearning</a>
+            
+              <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">机器学习&深度学习</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/09/26/Math/Theory/%E6%95%B0%E5%AD%97%E4%B8%96%E7%95%8C%E4%B8%AD%E5%B8%B8%E8%A7%81%E5%87%BD%E6%95%B0/">数字世界中常见函数</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/09/26/Math/Theory/%E6%95%B0%E5%AD%97%E4%B8%96%E7%95%8C%E4%B8%AD%E5%B8%B8%E8%A7%81%E5%87%BD%E6%95%B0/">
+          
+          
+            
+          
+          1. 狄利克雷函数
+英文名称为「Dirac Delta Function」。
+1.1 简介
+狄利克雷函数在除零以外的点取值均为 0，但在整个定义域上的积分为 1。δ\deltaδ 函数可以看作是在原点处无限高、无限细，但总面积为 1 的一个尖峰。
+1.2 定义
+δ(x)={+∞x=00x≠0∫−∞+∞δ(x)dx=1\begin{array}{c}
+\delta(x) = \begin{cases
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-09-26 12:23" pubdate>
+              2020-09-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Math/">Math</a>
+            
+              <a href="/categories/Technique/Math/Theory/">Theory</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
+            
+              <a href="/tags/Math/">Math</a>
+            
+              <a href="/tags/Theory/">Theory</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/09/24/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%A6/%E5%BF%AB%E9%80%9F%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/">快速傅里叶变换</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/09/24/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%A6/%E5%BF%AB%E9%80%9F%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/">
+          
+          
+            
+          
+          【注】参考自算法导论。
+1. 简介
+快速傅里叶变换（FFT）是实现离散傅里叶变换（DFT）和离散傅里叶逆变换（IDFT）的快速算法，其时间复杂度为 O(nlog⁡n)O(n \log n)O(nlogn)。DFT 在实际生活中有很多应用，比如通过离散傅里叶变换，可以将系数表示的多项式转为点值表示的多项式，从而使得多项式的乘法的复杂度由 O(n2)O(n^2)O(n2) 降为 O(n)O(n)O(n
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-09-24 10:12" pubdate>
+              2020-09-24
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/ACM/">ACM</a>
+            
+              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/">算法</a>
+            
+              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%A6/">数学</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
             
               <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
             
@@ -245,6 +770,8 @@
             
               <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
             
+              <a href="/tags/%E6%95%B0%E5%AD%A6-%E7%AE%97%E6%B3%95/">数学 算法</a>
+            
           </div>
         
       </div>
@@ -257,147 +784,21 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/09/08/ACM/%E7%AE%97%E6%B3%95/%E5%9B%BE%E8%AE%BA/%E6%A0%91/%E6%A0%91%E7%9A%84%E7%9B%B4%E5%BE%84/">树的直径</a>
+        <a href="/2020/09/23/Math/Theory/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/%E7%A6%BB%E6%95%A3%E4%BD%99%E5%BC%A6%E5%8F%98%E6%8D%A2/">离散余弦变换</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/09/08/ACM/%E7%AE%97%E6%B3%95/%E5%9B%BE%E8%AE%BA/%E6%A0%91/%E6%A0%91%E7%9A%84%E7%9B%B4%E5%BE%84/">
+        <a href="/2020/09/23/Math/Theory/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/%E7%A6%BB%E6%95%A3%E4%BD%99%E5%BC%A6%E5%8F%98%E6%8D%A2/">
           
           
             
           
           1. 简介
-树中所有简单路径的最大值即为树的直径，可以通过两次 DFS 或者树形 DP 在 O(n)O(n)O(n) 时间内求解。
-2. 思路
-2.1 两次 DFS
-
-
-首先将任意一个结点 uuu 看作是树根，然后进行 DFS 求出最远的结点 sss；则 sss 一定是树的直径的其中一个端点。
-
-
-
-证明
-  假设结点 s′s&#x27;s′ 和 t′t&#x27;t′ 之间唯一的简单路径为树的直
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-09-08 14:58" pubdate>
-              2020-09-08
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/ACM/">ACM</a>
-            
-              <a href="/categories/ACM/%E7%AE%97%E6%B3%95/">算法</a>
-            
-              <a href="/categories/ACM/%E7%AE%97%E6%B3%95/%E5%9B%BE%E8%AE%BA/">图论</a>
-            
-              <a href="/categories/ACM/%E7%AE%97%E6%B3%95/%E5%9B%BE%E8%AE%BA/%E6%A0%91/">树</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/ACM/">ACM</a>
-            
-              <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
-            
-              <a href="/tags/%E5%9B%BE%E8%AE%BA/">图论</a>
-            
-              <a href="/tags/%E6%A0%91/">树</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/09/07/ACM/%E9%A2%98%E8%A7%A3/P2014%E3%80%8C%5BCTSC1997%5D%E9%80%89%E8%AF%BE%E3%80%8D/">P2014「[CTSC1997]选课」</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/09/07/ACM/%E9%A2%98%E8%A7%A3/P2014%E3%80%8C%5BCTSC1997%5D%E9%80%89%E8%AF%BE%E3%80%8D/">
-          
-          
-            
-          
-          1. 题目
-题目链接：P2014「[CTSC1997]选课」 。
-题目描述
-在大学里每个学生，为了达到一定的学分，必须从很多课程里选择一些课程来学习，在课程里有些课程必须在某些课程之前学习，如高等数学总是在其它课程之前学习。现在有 NNN 门功课，每门课有个学分，每门课有一门或没有直接先修课（若课程 aaa 是课程 bbb 的先修课即只有学完了课程 aaa，才能学习课程 bbb）。一个学生要从这些
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-09-07 18:46" pubdate>
-              2020-09-07
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/ACM/">ACM</a>
-            
-              <a href="/categories/ACM/%E9%A2%98%E8%A7%A3/">题解</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/ACM/">ACM</a>
-            
-              <a href="/tags/%E9%A2%98%E8%A7%A3/">题解</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/09/07/ACM/%E9%A2%98%E8%A7%A3/P1352%E3%80%8C%E6%B2%A1%E6%9C%89%E4%B8%8A%E5%8F%B8%E7%9A%84%E8%88%9E%E4%BC%9A%E3%80%8D/">P1352「没有上司的舞会」</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/09/07/ACM/%E9%A2%98%E8%A7%A3/P1352%E3%80%8C%E6%B2%A1%E6%9C%89%E4%B8%8A%E5%8F%B8%E7%9A%84%E8%88%9E%E4%BC%9A%E3%80%8D/">
-          
-          
-            
-          
-          1. 题目
-题目链接：P1352「没有上司的舞会」 。
-题目描述
-某大学有 nnn 个职员，编号为 1…n1 \ldots n1…n 。
-他们之间有从属关系，也就是说他们的关系就像一棵以校长为根的树，父结点就是子结点的直接上司。
-现在有个周年庆宴会，宴会每邀请来一个职员都会增加一定的快乐指数 rir_iri​，但是呢，如果某个职员的直接上司来参加舞会了，那么这个职员就无论如何也不肯来参加舞会了。
+离散余弦变换类似于离散傅里叶变换，但是只使用实数。离散余弦变换相当于一个长度大概是它两倍的离散傅里叶变换。
+2. 定义
+离散余弦变换是一个线性的可逆函数 F:Rn→RnF: R^n \rightarrow R^nF:Rn→Rn，其中 RRR 是实数集。
+2.1 DCT-1
+fm=12(x0+(−1)mxn−1)+∑k=1n−2xkcos(πn−1mk)\begin{array}{c}
 
         </a>
       </p>
@@ -406,8 +807,8 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-09-07 14:28" pubdate>
-              2020-09-07
+            <time datetime="2020-09-23 09:05" pubdate>
+              2020-09-23
             </time>
           </div>
         
@@ -415,68 +816,13 @@
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/ACM/">ACM</a>
+              <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/ACM/%E9%A2%98%E8%A7%A3/">题解</a>
+              <a href="/categories/Technique/Math/">Math</a>
             
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
+              <a href="/categories/Technique/Math/Theory/">Theory</a>
             
-              <a href="/tags/ACM/">ACM</a>
-            
-              <a href="/tags/%E9%A2%98%E8%A7%A3/">题解</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/09/06/ACM/%E9%A2%98%E8%A7%A3/P5357%E3%80%8C%E3%80%90%E6%A8%A1%E6%9D%BF%E3%80%91AC%E8%87%AA%E5%8A%A8%E6%9C%BA%EF%BC%88%E4%BA%8C%E6%AC%A1%E5%8A%A0%E5%BC%BA%E7%89%88%EF%BC%89%E3%80%8D/">P5357「【模板】AC自动机（二次加强版）」</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/09/06/ACM/%E9%A2%98%E8%A7%A3/P5357%E3%80%8C%E3%80%90%E6%A8%A1%E6%9D%BF%E3%80%91AC%E8%87%AA%E5%8A%A8%E6%9C%BA%EF%BC%88%E4%BA%8C%E6%AC%A1%E5%8A%A0%E5%BC%BA%E7%89%88%EF%BC%89%E3%80%8D/">
-          
-          
-            
-          
-          1. 题目
-题目链接：P5357「【模板】AC自动机（二次加强版）」 。
-题目描述
-给你一个文本串 SSS 和 nnn 个模式串 T1..nT_{1..n}T1..n​，请你分别求出每个模式串 TiT_iTi​ 在 SS 中出现的次数。
-输入格式
-第一行包含一个正整数 nnn 表示模式串的个数。
-接下来 nnn 行，第 iii 行包含一个由小写英文字母构成的字符串 TiT_iTi​ 。
-最后一行包
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-09-06 22:26" pubdate>
-              2020-09-06
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/ACM/">ACM</a>
-            
-              <a href="/categories/ACM/%E9%A2%98%E8%A7%A3/">题解</a>
+              <a href="/categories/Technique/Math/Theory/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/">傅里叶变换</a>
             
           </div>
         
@@ -484,295 +830,15 @@
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/ACM/">ACM</a>
+              <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/%E9%A2%98%E8%A7%A3/">题解</a>
+              <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
             
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/09/06/ACM/%E9%A2%98%E8%A7%A3/CF1409F%E3%80%8CSubsequences%20of%20Length%20Two%E3%80%8D/">CF1409F「Subsequences of Length Two」</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/09/06/ACM/%E9%A2%98%E8%A7%A3/CF1409F%E3%80%8CSubsequences%20of%20Length%20Two%E3%80%8D/">
-          
-          
+              <a href="/tags/Math/">Math</a>
             
-          
-          1. 题目
-题目链接：CF1409F「Subsequences of Length Two」 。
-Description
-You are given two strings sss and ttt consisting of lowercase Latin letters. The length of ttt is 222 (i.e.i.e.i.e. this string consists on
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-09-06 15:41" pubdate>
-              2020-09-06
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
+              <a href="/tags/Theory/">Theory</a>
             
-              <a href="/categories/ACM/">ACM</a>
-            
-              <a href="/categories/ACM/%E9%A2%98%E8%A7%A3/">题解</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/ACM/">ACM</a>
-            
-              <a href="/tags/%E9%A2%98%E8%A7%A3/">题解</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/09/04/ACM/%E7%AE%97%E6%B3%95/%E5%AD%97%E7%AC%A6%E4%B8%B2/AC%E8%87%AA%E5%8A%A8%E6%9C%BA/">AC自动机</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/09/04/ACM/%E7%AE%97%E6%B3%95/%E5%AD%97%E7%AC%A6%E4%B8%B2/AC%E8%87%AA%E5%8A%A8%E6%9C%BA/">
-          
-          
-            
-          
-          1. 简介
-AC 自动机可以看作是字典树 + KMP，其主要构建步骤为：
-
-将所有模式串插入字典树中，构建出字典树
-BFS 字典树上所有的结点构造失配指针（同时考虑路径压缩）
-
-AC 自动机主要应用于多模式串匹配问题，即一个主串多个匹配的模式串问题。
-2. 思想
-AC 自动机基于字典树结构，将所有模式串插入字典树中，然后对字典树中的每个结点构造失配指针。AC 自动机中的失配指针与 KMP 中不同的
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-09-04 21:08" pubdate>
-              2020-09-04
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/ACM/">ACM</a>
-            
-              <a href="/categories/ACM/%E7%AE%97%E6%B3%95/">算法</a>
-            
-              <a href="/categories/ACM/%E7%AE%97%E6%B3%95/%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/ACM/">ACM</a>
-            
-              <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
-            
-              <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</a>
-            
-              <a href="/tags/%E7%AE%97%E6%B3%95-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">算法 数据结构</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/09/04/ACM/%E9%A2%98%E8%A7%A3/UVA12604%E3%80%8CCaesar%20Cipher%E3%80%8D/">UVA12604「Caesar Cipher」</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/09/04/ACM/%E9%A2%98%E8%A7%A3/UVA12604%E3%80%8CCaesar%20Cipher%E3%80%8D/">
-          
-          
-            
-          
-          1. 题目
-题目链接：UVA12604「Caesar Cipher」 。
-Description
-In cryptography, a Caesar cipher, also known as Caesar's cipher, the shift cipher, Caesar's code or Caesar shift, is one of the simplest and most widel
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-09-04 10:50" pubdate>
-              2020-09-04
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/ACM/">ACM</a>
-            
-              <a href="/categories/ACM/%E9%A2%98%E8%A7%A3/">题解</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/ACM/">ACM</a>
-            
-              <a href="/tags/%E9%A2%98%E8%A7%A3/">题解</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/09/04/ACM/%E9%A2%98%E8%A7%A3/UVA11452%E3%80%8CDancing%20the%20Cheeky-Cheeky%E3%80%8D/">UVA11452「Dancing the Cheeky-Cheeky」</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/09/04/ACM/%E9%A2%98%E8%A7%A3/UVA11452%E3%80%8CDancing%20the%20Cheeky-Cheeky%E3%80%8D/">
-          
-          
-            
-          
-          1. 题目
-题目链接：UVA11452「Dancing the Cheeky-Cheeky」 。
-Description
-The Cheeky-Cheeky is a new song. They dance it in Mula, and also in Hong Kong. All the freekies dance it, and the geek all love it. And the
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-09-04 00:36" pubdate>
-              2020-09-04
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/ACM/">ACM</a>
-            
-              <a href="/categories/ACM/%E9%A2%98%E8%A7%A3/">题解</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/ACM/">ACM</a>
-            
-              <a href="/tags/%E9%A2%98%E8%A7%A3/">题解</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/09/03/ACM/%E9%A2%98%E8%A7%A3/UVA12467%E3%80%8CSecret%20Word%E3%80%8D/">UVA12467「Secret Word」</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/09/03/ACM/%E9%A2%98%E8%A7%A3/UVA12467%E3%80%8CSecret%20Word%E3%80%8D/">
-          
-          
-            
-          
-          1. 题目
-题目链接：UVA12467「Secret Word」 。
-Description
-Alicia and Roberto like to play games. Today, Roberto is trying to guess a secret word that Alicia chose. Alicia wrote a long string SSS in a piece of pa
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-09-03 23:34" pubdate>
-              2020-09-03
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/ACM/">ACM</a>
-            
-              <a href="/categories/ACM/%E9%A2%98%E8%A7%A3/">题解</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/ACM/">ACM</a>
-            
-              <a href="/tags/%E9%A2%98%E8%A7%A3/">题解</a>
+              <a href="/tags/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/">傅里叶变换</a>
             
           </div>
         
@@ -784,7 +850,7 @@ Alicia and Roberto like to play games. Today, Roberto is trying to guess a secre
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/page/22/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/21/#board">21</a><a class="page-number" href="/page/22/#board">22</a><span class="page-number current">23</span><a class="page-number" href="/page/24/#board">24</a><a class="page-number" href="/page/25/#board">25</a><span class="space">&hellip;</span><a class="page-number" href="/page/42/#board">42</a><a class="extend next" rel="next" href="/page/24/#board"><i class="iconfont icon-arrowright"></i></a>
+      <a class="extend prev" rel="prev" href="/page/22/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/21/#board">21</a><a class="page-number" href="/page/22/#board">22</a><span class="page-number current">23</span><a class="page-number" href="/page/24/#board">24</a><a class="page-number" href="/page/25/#board">25</a><span class="space">&hellip;</span><a class="page-number" href="/page/44/#board">44</a><a class="extend next" rel="next" href="/page/24/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 

@@ -197,30 +197,74 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/07/03/CryptographyBasics/%E5%93%88%E5%B8%8C%E5%87%BD%E6%95%B0/%E5%93%88%E5%B8%8C%E5%87%BD%E6%95%B0/">哈希函数</a>
+        <a href="/2020/07/28/MarkDown/MarkDown%E7%BB%98%E5%9B%BEmermaid%E6%B5%81%E7%A8%8B%E5%9B%BEgraph/MarkDown%E7%BB%98%E5%9B%BEmermaid%E6%B5%81%E7%A8%8B%E5%9B%BEgraph/">MarkDown绘图mermaid流程图graph</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/07/03/CryptographyBasics/%E5%93%88%E5%B8%8C%E5%87%BD%E6%95%B0/%E5%93%88%E5%B8%8C%E5%87%BD%E6%95%B0/">
+        <a href="/2020/07/28/MarkDown/MarkDown%E7%BB%98%E5%9B%BEmermaid%E6%B5%81%E7%A8%8B%E5%9B%BEgraph/MarkDown%E7%BB%98%E5%9B%BEmermaid%E6%B5%81%E7%A8%8B%E5%9B%BEgraph/">
           
           
             
           
-          1. 概述
-
-加密是双向的，即明文可以通过密钥加密为密文，密文也可以通过密钥解密为明文
-哈希是单向的，即只能从明文到
-
-2. 用法
+          【注】更多详情请参阅mermaid流程图官方文档。
+1. 绘图方向
 
 
 
-3. 特性
-3.1 Arbitrary-length message to fixed-length digest
+命令
+方向
 
-3.2 抗原象 Preimage resistant (One-way property)
 
-3.3 抗第二原象 Second preimage
+
+
+TB（TD）
+从上到下
+
+
+BT
+从下到上
+
+
+RL
+从右到左
+
+
+LR
+从左到右
+
+
+
+2. 节点形状
+
+
+
+命令
+形状
+
+
+
+
+A[text]
+文本框（默认形状）
+
+
+B(text)
+圆角框
+
+
+C([text])
+体育场型框
+
+
+D[(text)]
+数据库型框
+
+
+E((text))
+圆形框
+
+
+F
         </a>
       </p>
 
@@ -228,8 +272,8 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-07-03 12:02" pubdate>
-              2020-07-03
+            <time datetime="2020-07-28 14:47" pubdate>
+              2020-07-28
             </time>
           </div>
         
@@ -237,7 +281,9 @@
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/CryptographyBasics/">CryptographyBasics</a>
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/MarkDown/">MarkDown</a>
             
           </div>
         
@@ -245,7 +291,9 @@
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/CryptographyBasics/">CryptographyBasics</a>
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/MarkDown/">MarkDown</a>
             
           </div>
         
@@ -259,25 +307,23 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/07/03/CryptographyBasics/%E7%8E%B0%E4%BB%A3%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86%E5%92%8CDataEncryptionStandard/%E7%8E%B0%E4%BB%A3%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86%E5%92%8CDataEncryptionStandard/">现代对称加密和DataEncryptionStandard</a>
+        <a href="/2020/07/28/Math/Theory/%E5%B7%AE%E5%88%86%E6%96%B9%E7%A8%8B/">差分方程</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/07/03/CryptographyBasics/%E7%8E%B0%E4%BB%A3%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86%E5%92%8CDataEncryptionStandard/%E7%8E%B0%E4%BB%A3%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86%E5%92%8CDataEncryptionStandard/">
+        <a href="/2020/07/28/Math/Theory/%E5%B7%AE%E5%88%86%E6%96%B9%E7%A8%8B/">
           
           
             
           
-          1. 现代对称加密
-1.1 P 盒（Permutation box 置换盒）
-P 盒类似于传统的置换密码，用于置换 bit 位。P 盒分三种类别：
-
-Straight P-box：输入数 = 输出数（只有该 P 盒可逆）
-Compress P-box：输入数 &gt; 输出数
-Expansion P-box：输入数 &lt; 输出数
-
-1.2 S 盒（Subtitution box 替换盒）
-S 
+          1. 差分的定义
+1.1 前向差分
+对于函数 f(x){f(x)}f(x) ，如果在等距节点：
+xk=x0+kh(k=0,1,⋯ ,n)Δf(xk)=f(xk+1)−f(xk)\begin{array}{c}
+x_k = x_0 + kh \quad (k = 0,1,\cdots,n) \\
+\Delta f(x_k) = f(x_{k+1}) - f(x_k)
+\end{array}
+xk​=
         </a>
       </p>
 
@@ -285,8 +331,8 @@ S
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-07-03 12:02" pubdate>
-              2020-07-03
+            <time datetime="2020-07-28 14:47" pubdate>
+              2020-07-28
             </time>
           </div>
         
@@ -294,7 +340,11 @@ S
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/CryptographyBasics/">CryptographyBasics</a>
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Math/">Math</a>
+            
+              <a href="/categories/Technique/Math/Theory/">Theory</a>
             
           </div>
         
@@ -302,494 +352,7 @@ S
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/CryptographyBasics/">CryptographyBasics</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/07/03/CryptographyBasics/%E7%BE%A4%E7%8E%AF%E5%9F%9F%E4%BB%A5%E5%8F%8A%E5%9F%9F%E4%B8%8A%E7%9A%84%E5%A4%9A%E9%A1%B9%E5%BC%8F%E6%93%8D%E4%BD%9C/%E7%BE%A4%E7%8E%AF%E5%9F%9F%E4%BB%A5%E5%8F%8A%E5%9F%9F%E4%B8%8A%E7%9A%84%E5%A4%9A%E9%A1%B9%E5%BC%8F%E6%93%8D%E4%BD%9C/">群环域以及域上的多项式操作</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/07/03/CryptographyBasics/%E7%BE%A4%E7%8E%AF%E5%9F%9F%E4%BB%A5%E5%8F%8A%E5%9F%9F%E4%B8%8A%E7%9A%84%E5%A4%9A%E9%A1%B9%E5%BC%8F%E6%93%8D%E4%BD%9C/%E7%BE%A4%E7%8E%AF%E5%9F%9F%E4%BB%A5%E5%8F%8A%E5%9F%9F%E4%B8%8A%E7%9A%84%E5%A4%9A%E9%A1%B9%E5%BC%8F%E6%93%8D%E4%BD%9C/">
-          
-          
-            
-          
-          1. 模运算
-1.1 ZnZ_nZn​ 上模运算的三种运算
-
-
-模加运算：(a+b) mod n=c(a+b) \ mod \ n = c(a+b) mod n=c
-模减运算：(a−b) mod n=c(a-b) \ mod \ n = c(a−b) mod n=c
-模乘运算：(a×b) mod n=c(a \times b) \ mod \ n = c(a×b) mod n=c
-
-
-1.2 Zn
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-07-03 12:02" pubdate>
-              2020-07-03
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/CryptographyBasics/">CryptographyBasics</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/CryptographyBasics/">CryptographyBasics</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/06/24/C++/C++%E8%AF%AD%E8%A8%80%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6%E6%A8%A1%E5%BC%8F/">C++语言打开文件模式</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/06/24/C++/C++%E8%AF%AD%E8%A8%80%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6%E6%A8%A1%E5%BC%8F/">
-          
-          
-            
-          
-          
-
-
-打开模式
-只可以读
-只可以写
-只可以追加
-读写兼备
-读写兼备
-读追加兼备
-
-
-
-
-文本模式
-r
-w
-a
-r+
-w+
-a+
-
-
-二进制模式
-rb
-wb
-ab
-rb+ (r+b)
-wb+ (w+b)
-ab+ (a+b)
-
-
-
-
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-06-24 09:36" pubdate>
-              2020-06-24
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/C/">C++</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/C/">C++</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/06/24/CryptographyBasics/%E5%AF%86%E7%A0%81%E5%88%86%E6%9E%90%E6%96%B9%E5%BC%8F/">密码分析方式</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/06/24/CryptographyBasics/%E5%AF%86%E7%A0%81%E5%88%86%E6%9E%90%E6%96%B9%E5%BC%8F/">
-          
-          
-            
-          
-          1. 唯密文攻击（COA）
-破译者只知道「加密算法」和「带破译的密文」。
-
-举例：实验一仿射密码的暴力破解就属于唯密文攻击。
-
-2. 已知明文攻击（KPA）
-破译者知道「加密算法」和经密钥加密形成的一个或多个「明文——密文对」。
-
-举例：希尔密码依赖唯密文攻击较难破解，但通过已知明文破解攻击则容易破解。
-
-3. 选择明文攻击（CPA）
-破译者知道「加密算法」、「选择的明文」和「对应的密文」。
-
-举
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-06-24 09:36" pubdate>
-              2020-06-24
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/CryptographyBasics/">CryptographyBasics</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/CryptographyBasics/">CryptographyBasics</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/06/24/JavaScript/JavaScript%E5%87%BD%E6%95%B0%E3%80%81%E5%AF%B9%E8%B1%A1%E5%92%8C%E4%BA%8B%E4%BB%B6/">JavaScript函数、对象和事件</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/06/24/JavaScript/JavaScript%E5%87%BD%E6%95%B0%E3%80%81%E5%AF%B9%E8%B1%A1%E5%92%8C%E4%BA%8B%E4%BB%B6/">
-          
-          
-            
-          
-          1. 函数
-
-JavaScript 函数通过 function 关键词进行定义，其后是函数名和括号 ()。
-函数名可包含字母、数字、下划线和美元符号（规则与变量名相同）。
-圆括号可包括由逗号分隔的参数，由函数执行的代码被放置在花括号 {} 中：
-
-123function name(参数 1, 参数 2, 参数 3) &#123;    要执行的代码&#125;
-
-当 JavaScript 到达 r
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-06-24 09:36" pubdate>
-              2020-06-24
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/JavaScript/">JavaScript</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/JavaScript/">JavaScript</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/06/24/JavaScript/JavaScript%E5%AD%97%E7%AC%A6%E4%B8%B2/">JavaScript字符串</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/06/24/JavaScript/JavaScript%E5%AD%97%E7%AC%A6%E4%B8%B2/">
-          
-          
-            
-          
-          1. 概述
-JavaScript 字符串是引号（单引号或双引号）中的零个或多个字符，用于存储和操作文本。
-
-对于特殊字符：'、&quot;、\ 使用时需要前置转义字符 \ 来使用。
-
-123\&#x27;\&quot;\\
-
-在字符串中换行，通过一个反斜杠即可。
-
-【注】\ 方法并不是 ECMAScript (JavaScript) 标准，某些浏览器也不允许 \ 字符之后的空格，对长字符串换行的最
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-06-24 09:36" pubdate>
-              2020-06-24
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/JavaScript/">JavaScript</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/JavaScript/">JavaScript</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/06/24/JavaScript/JavaScript%E6%95%B0%E5%80%BC/">JavaScript数值</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/06/24/JavaScript/JavaScript%E6%95%B0%E5%80%BC/">
-          
-          
-            
-          
-          1. 概述
-JavaScript 只有一种数值类型，书写数值时带不带小数点均可。超大或超小的数可通过科学计数法来写。
-
-JavaScript 数值始终是 64 位的浮点数。此格式用 64 位存储数值，其中 0 到 51 存储数字（片段），52 到 62 存储指数，63 位存储符号：
-
-
-
-
-值
-指数
-符号
-
-
-
-
-52 bits(0 - 51)
-11 bits (52 - 62)
-1 bit (6
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-06-24 09:36" pubdate>
-              2020-06-24
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/JavaScript/">JavaScript</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/JavaScript/">JavaScript</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/06/24/JavaScript/JavaScript%E6%95%B0%E7%BB%84/">JavaScript数组</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/06/24/JavaScript/JavaScript%E6%95%B0%E7%BB%84/">
-          
-          
-            
-          
-          1. 概述
-数组是一种特殊类型的对象。在 JavaScript 中对数组使用 typeof 运算符会返回 &quot;object&quot;。
-
-数组元素可以通过下表访问（非键值对数组），也可以通过键访问（键值对数组）。
-JavaScript 变量可以是对象。数组是特殊类型的对象。可以在相同数组中存放不同类型的变量：对象、函数、数组等……
-
-1.1 创建数组
-
-语法：
-
-12var array-
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-06-24 09:36" pubdate>
-              2020-06-24
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/JavaScript/">JavaScript</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/JavaScript/">JavaScript</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/06/24/Math/Theory/%E5%8D%A1%E8%BF%88%E5%85%8B%E5%B0%94%E5%87%BD%E6%95%B0/">卡迈克尔函数</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/06/24/Math/Theory/%E5%8D%A1%E8%BF%88%E5%85%8B%E5%B0%94%E5%87%BD%E6%95%B0/">
-          
-          
-            
-          
-          1. 定义
-卡迈克尔函数定义为：当 nnn 为 1、2、4、奇质数的次幂、奇质数的次幂的两倍时为欧拉函数，当 nnn 为 2、4 以外的 2 的次幂时为欧拉函数的一半。
-λ(n)={ϕ(n)    n=1,2,3,4,5,6,7,9,10,⋯12ϕ(n)    n=8,16,32,64,128,256,⋯\begin{array}{c}
-\lambda(n) = \left\{
-    \begi
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-06-24 09:36" pubdate>
-              2020-06-24
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Math/">Math</a>
-            
-              <a href="/categories/Math/Theory/">Theory</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
+              <a href="/tags/Technique/">Technique</a>
             
               <a href="/tags/Math/">Math</a>
             
@@ -801,11 +364,493 @@ JavaScript 变量可以是对象。数组是特殊类型的对象。可以在相
     </article>
   </div>
 
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/07/28/MatLab/MatLab%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/MatLab%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">MatLab数据结构</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/07/28/MatLab/MatLab%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/MatLab%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
+          
+          
+            
+          
+          MatLab数据类型主要分为逻辑类型、数值类型、字符类型、结构类型、单元数组、函数句柄、映射容器和表格类型。
+
+graph LR
+A[matrix]
+B[logical]
+C[numeric]
+D[char]
+E[struct]
+F[cell]
+G[function_handle]
+H[map]
+I[table]
+J[int8,16,32,64]
+K[uint8,16,32,64]
+L[singl
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-07-28 14:40" pubdate>
+              2020-07-28
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/MatLab/">MatLab</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/MatLab/">MatLab</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/07/25/ComputerEnglish/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%9C%AF%E8%AF%AD/">计算机术语</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/07/25/ComputerEnglish/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%9C%AF%E8%AF%AD/">
+          
+          
+            
+          
+          
+ALU : arithmetic and logic unit
+I/O : input and output devices
+CPU : central processing unit
+BIOS : basic input output system
+RAM : random access memory
+ROM : read-only memory
+DRAM : dynamic RAM
+SRAM
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-07-25 01:25" pubdate>
+              2020-07-25
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/ComputerEnglish/">ComputerEnglish</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/ComputerEnglish/">ComputerEnglish</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/07/24/CSAPP/%E7%A3%81%E7%9B%98/%E7%A3%81%E7%9B%98/">磁盘</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/07/24/CSAPP/%E7%A3%81%E7%9B%98/%E7%A3%81%E7%9B%98/">
+          
+          
+            
+          
+          1.  构造
+
+盘片（platter）：每个盘片有两面，表面覆盖着磁性记录材料。
+主轴（spindle）：使得盘片易固定的旋转速率旋转。
+磁道（track）：每个磁盘表面有一组同心圆磁道构成。
+扇区（sector）：每个磁道被划分为一组扇区，每个扇区包含相等数量的数据位（通常位 512 字节）
+间隙（gap）：扇区之间由间隙分隔开。间隙中不存储数据位，用于标识扇区的格式化位。
+柱面（cylinde
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-07-24 15:17" pubdate>
+              2020-07-24
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/CSAPP/">CSAPP</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/CSAPP/">CSAPP</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/07/20/JavaScript/JavaScript%E5%BC%82%E6%AD%A5%E6%93%8D%E4%BD%9C/">JavaScript异步操作</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/07/20/JavaScript/JavaScript%E5%BC%82%E6%AD%A5%E6%93%8D%E4%BD%9C/">
+          
+          
+            
+          
+          1. Promise.all()和Promise.race() 并行调用异步操作
+两个函数均用于并行调用多个异步操作使用
+
+All：两个异步操作都resolve之后调用then()
+
+12345678910var p1 = new Promise(function (resolve, reject) &#123;    setTimeout(resolve, 500, &#x27;P1&#x27;
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-07-20 10:43" pubdate>
+              2020-07-20
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/JavaScript/">JavaScript</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/JavaScript/">JavaScript</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/07/20/NodeJS/NodeJS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">NodeJS学习笔记</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/07/20/NodeJS/NodeJS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+          
+          
+            
+          
+          1. exports变量
+为了方便，Node为每个模块提供一个exports变量，指向module.exports。这等同在每个模块头部，有一行这样的命令。
+1var exports = module.exports;
+
+注意，不能直接将exports变量指向一个值，因为这样等于切断了exports与module.exports的联系。
+如果模块输出的是一个函数，那就不能定义在exports对象上
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-07-20 10:43" pubdate>
+              2020-07-20
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/NodeJS/">NodeJS</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/NodeJS/">NodeJS</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/07/20/NodeJS/Windows10%E4%B8%8Bnode-gyp%20rebuild%E6%8A%A5%E9%94%99/">Windows10下node-gyp rebuild报错</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/07/20/NodeJS/Windows10%E4%B8%8Bnode-gyp%20rebuild%E6%8A%A5%E9%94%99/">
+          
+          
+            
+          
+          1. 简介
+在 Windows 10 下 npm install 失败，并报错：
+12345678910111213141516gyp WARN install got an error, rolling back installgyp ERR! configure errorgyp ERR! stack Error: connect ETIMEDOUT 104.20.22.46:443gyp E
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-07-20 10:43" pubdate>
+              2020-07-20
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/NodeJS/">NodeJS</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/NodeJS/">NodeJS</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/07/17/TeX/LaTeX/Manjaro20.0%E9%85%8D%E7%BD%AETeXLive+TeXStudio%E7%9A%84LaTeX%E7%8E%AF%E5%A2%83/Manjaro20.0%E9%85%8D%E7%BD%AETeXLive+TeXStudio%E7%9A%84LaTeX%E7%8E%AF%E5%A2%83/">Manjaro20.0配置TeXLive+TeXStudio的LaTeX环境</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/07/17/TeX/LaTeX/Manjaro20.0%E9%85%8D%E7%BD%AETeXLive+TeXStudio%E7%9A%84LaTeX%E7%8E%AF%E5%A2%83/Manjaro20.0%E9%85%8D%E7%BD%AETeXLive+TeXStudio%E7%9A%84LaTeX%E7%8E%AF%E5%A2%83/">
+          
+          
+            
+          
+          1. 安装
+1.1 安装 TeXLive
+1.1.1 从软件源安装
+在终端执行以下代码，安装 TeXLive 环境：
+12sudo pacman -S texlive-mostsudo pacman -S texlive-lang 
+【注】这样安装 TeXLive 后无法在终端使用 texdoc 工具，会报错：texdoc error: No texlive.tlpdb nor shipped t
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-07-17 20:12" pubdate>
+              2020-07-17
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/TeX/">TeX</a>
+            
+              <a href="/categories/Technique/TeX/LaTeX/">LaTeX</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/TeX/">TeX</a>
+            
+              <a href="/tags/LaTeX/">LaTeX</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/07/06/ComputerArchitecture/%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/">体系结构复习笔记</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/07/06/ComputerArchitecture/%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+          
+          
+            
+          
+          1. 定律
+1.1 摩尔定律
+集成电路上可容纳的晶体管数目，大约每隔两年便会增加一倍；
+
+CMOS工艺的瓶颈使得摩尔定律逐渐失效。
+
+1.2 登纳德缩放比例定律
+每平方毫米的电路耗能几乎不变；
+
+登纳德缩放比例定律2007年开始逐渐失效，到2012年几乎完全失效；
+
+1.3 阿姆达定律
+多核并行计算机的加速受到程序中串行计算部分的限制；
+
+2. DSA 提高性能的四个原因
+
+DSA为特定领域开发了
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-07-06 17:46" pubdate>
+              2020-07-06
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/ComputerArchitecture/">ComputerArchitecture</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/ComputerArchitecture/">ComputerArchitecture</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
 
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/page/29/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/28/#board">28</a><a class="page-number" href="/page/29/#board">29</a><span class="page-number current">30</span><a class="page-number" href="/page/31/#board">31</a><a class="page-number" href="/page/32/#board">32</a><span class="space">&hellip;</span><a class="page-number" href="/page/42/#board">42</a><a class="extend next" rel="next" href="/page/31/#board"><i class="iconfont icon-arrowright"></i></a>
+      <a class="extend prev" rel="prev" href="/page/29/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/28/#board">28</a><a class="page-number" href="/page/29/#board">29</a><span class="page-number current">30</span><a class="page-number" href="/page/31/#board">31</a><a class="page-number" href="/page/32/#board">32</a><span class="space">&hellip;</span><a class="page-number" href="/page/44/#board">44</a><a class="extend next" rel="next" href="/page/31/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 

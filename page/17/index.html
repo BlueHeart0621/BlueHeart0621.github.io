@@ -197,25 +197,17 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/11/24/Make/Makefile%E4%B8%AD%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6%E5%92%8C%E5%85%B3%E9%94%AE%E5%AD%97/">Makefile中特殊字符和关键字</a>
+        <a href="/2021/01/17/Configure/Configure%E8%84%9A%E6%9C%AC%E5%AD%A6%E4%B9%A0/">Configure脚本学习</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/11/24/Make/Makefile%E4%B8%AD%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6%E5%92%8C%E5%85%B3%E9%94%AE%E5%AD%97/">
+        <a href="/2021/01/17/Configure/Configure%E8%84%9A%E6%9C%AC%E5%AD%A6%E4%B9%A0/">
           
           
             
           
-          1. 特殊字符
-
-* ：表示目标文件的名称，不包含目标文件的扩展名。
-+ ：表示所有的依赖文件，这些依赖文件之间以空格分开，按照出现的先后为顺序，其中可能包含重复的依赖文件。
-&lt; ：表示依赖项中第一个依赖文件的名称。
-? ： 依赖项中，所有目标文件时间戳晚的文件（表示修改过），依赖文件间以空格分开。
-@ ：目标项中目标文件的名称。
-^ ：依赖项中，所有不重复的依赖文件，以空格分开。
-
-2. 
+          1. 指定安装目录
+1./configure --prefix=...
         </a>
       </p>
 
@@ -223,8 +215,8 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-11-24 10:31" pubdate>
-              2020-11-24
+            <time datetime="2021-01-17 11:28" pubdate>
+              2021-01-17
             </time>
           </div>
         
@@ -232,7 +224,9 @@
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/Make/">Make</a>
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Configure/">Configure</a>
             
           </div>
         
@@ -240,7 +234,9 @@
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/Make/">Make</a>
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/Configure/">Configure</a>
             
           </div>
         
@@ -254,22 +250,28 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/11/18/NLP/%E8%AF%8D%E5%B5%8C%E5%85%A5/%E8%AF%8D%E5%B5%8C%E5%85%A5/">词嵌入</a>
+        <a href="/2021/01/17/CMake/CMake%E4%BD%BF%E7%94%A8%E5%AD%A6%E4%B9%A0/">CMake 使用学习</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/11/18/NLP/%E8%AF%8D%E5%B5%8C%E5%85%A5/%E8%AF%8D%E5%B5%8C%E5%85%A5/">
+        <a href="/2021/01/17/CMake/CMake%E4%BD%BF%E7%94%A8%E5%AD%A6%E4%B9%A0/">
           
           
             
           
-          【注】参考自李沐的《动手学深度学习》。
-1. 简介
-自然语言是一套用来表达含义的复杂系统，词是表义的基本单元。而我们要考虑是如何构造词向量来表示词。把词映射为实数域向量的技术称为词嵌入。
-2. 词嵌入
+          1. 概述
+CMake 工具能够自动生成 Makefile 文件，减轻手写 Makefile 文件的工作量，同时减少书写 Makefile 文件产生的错误。
+2. CMake 命令
+CMake 运行主要分为两个阶段：
 
-最初的词嵌入采用 one-hot 编码来生成词向量，但 one-hot 编码的词向量无法准确表达不同词之间的相似度。刻画词向量间的相似度常常使用余弦相似度：对于向量 x,y∈Rd
-\boldsym
+
+配置阶段：解析 CMakeLists.txt 文件
+
+
+生成阶段：生成构建环境
+
+
+有关 cmake 的详细参数参见 cmake --help，本文仅对其中较难理解的选项加以描述
         </a>
       </p>
 
@@ -277,8 +279,8 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-11-18 14:19" pubdate>
-              2020-11-18
+            <time datetime="2021-01-17 11:25" pubdate>
+              2021-01-17
             </time>
           </div>
         
@@ -286,7 +288,9 @@
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/NLP/">NLP</a>
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/CMake/">CMake</a>
             
           </div>
         
@@ -294,7 +298,9 @@
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/NLP/">NLP</a>
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/CMake/">CMake</a>
             
           </div>
         
@@ -308,20 +314,152 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/11/16/Linux/Shell/LinuxShell%E4%B8%8B%E5%88%86%E5%8D%B7%E5%8E%8B%E7%BC%A9%E4%B8%8E%E8%A7%A3%E5%8E%8B/">LinuxShell下分卷压缩与解压</a>
+        <a href="/2021/01/16/DeepLearning/Padding%E7%AD%96%E7%95%A5/Padding%E7%AD%96%E7%95%A5/">Padding策略</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/11/16/Linux/Shell/LinuxShell%E4%B8%8B%E5%88%86%E5%8D%B7%E5%8E%8B%E7%BC%A9%E4%B8%8E%E8%A7%A3%E5%8E%8B/">
+        <a href="/2021/01/16/DeepLearning/Padding%E7%AD%96%E7%95%A5/Padding%E7%AD%96%E7%95%A5/">
+          
+          
+            
+          
+          1. Zero Padding
+
+均用 0 值填充。
+
+
+2. Replicate Padding
+
+用距离最近的像素值填充。
+
+
+3. Mirror Padding
+
+关于四边界成镜像对称，关于四角成镜像对称。
+
+
+
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-16 18:08" pubdate>
+              2021-01-16
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/DeepLearning/">DeepLearning</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/DeepLearning/">DeepLearning</a>
+            
+              <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/01/16/CSAPP/%E6%B5%AE%E7%82%B9%E6%95%B0/%E6%B5%AE%E7%82%B9%E6%95%B0/">浮点数</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/01/16/CSAPP/%E6%B5%AE%E7%82%B9%E6%95%B0/%E6%B5%AE%E7%82%B9%E6%95%B0/">
+          
+          
+            
+          
+          1. IEEE 754 标准
+IEEE 754 浮点标准用 V=(−1)s×M×2EV = (-1)^s \times M \times 2^EV=(−1)s×M×2E 的形式来表示一个数。
+
+
+
+符号位（s）：指明数的正负，即 VVV 中的 sss。
+
+
+阶码（exp）：对浮点数加权，即 VVV 中的 EEE。
+
+
+尾数（frac）：二进制小数，即 VVV 中的 MMM，范围为 1∼2−ε1 \
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-16 18:06" pubdate>
+              2021-01-16
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/CSAPP/">CSAPP</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/CSAPP/">CSAPP</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/01/16/Math/Modeling/PCA%E6%A8%A1%E5%9E%8B/">PCA模型</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/01/16/Math/Modeling/PCA%E6%A8%A1%E5%9E%8B/">
           
           
             
           
           1. 简介
-由于网络传输有时会限制单个文件大小，所以对于大文件的传输我们需要将其分卷压缩成多个小的压缩包。在 LinuxShell 下可以使用 split &amp; cat（系统自带）命令或直接使用压缩软件 rar、zip、7z（需自行安装）命令来实现分卷压缩和解压。
-2. rar/7z 命令
-2.1 分卷压缩
-1rar/7z a -v&lt;size&gt;[b,k,m,g,...] &lt;
+主成分分析是指将数据中相关性很高的属性/变量转化成彼此相互独立或不相关的新属性/变量，利用较少的新属性/变量（主成分）去解释原来数据中的大部分属性/变量的一种降维方法。
+2. 原理
+2.1 基础思想
+以学校课程为例，用 x1,x2,⋯ ,xp{x_1,x_2,\cdots,x_p}x1​,x2​,⋯,xp​ 表示 p 门课程的成绩变量， c1,c2,⋯ ,cp{c_1,c_2,\cdo
         </a>
       </p>
 
@@ -329,8 +467,8 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-11-16 11:37" pubdate>
-              2020-11-16
+            <time datetime="2021-01-16 18:06" pubdate>
+              2021-01-16
             </time>
           </div>
         
@@ -338,9 +476,11 @@
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/Linux/">Linux</a>
+              <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Linux/Shell/">Shell</a>
+              <a href="/categories/Technique/Math/">Math</a>
+            
+              <a href="/categories/Technique/Math/Modeling/">Modeling</a>
             
           </div>
         
@@ -348,9 +488,11 @@
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/Linux/">Linux</a>
+              <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Shell/">Shell</a>
+              <a href="/tags/Math/">Math</a>
+            
+              <a href="/tags/Modeling/">Modeling</a>
             
           </div>
         
@@ -364,22 +506,20 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/11/13/Linux/Shell/BashShell%E5%AD%97%E7%AC%A6%E4%B8%B2/">BashShell字符串</a>
+        <a href="/2021/01/16/Math/Theory/%E5%87%B8%E5%87%BD%E6%95%B0%E5%8F%8A%E5%85%B6%E6%80%A7%E8%B4%A8/">凸函数及其性质</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/11/13/Linux/Shell/BashShell%E5%AD%97%E7%AC%A6%E4%B8%B2/">
+        <a href="/2021/01/16/Math/Theory/%E5%87%B8%E5%87%BD%E6%95%B0%E5%8F%8A%E5%85%B6%E6%80%A7%E8%B4%A8/">
           
           
             
           
-          1. 简介
-BashShell 字符串内置许多字符串操作，包括有字符串切割、替换、分割等。
-2. $&#123;&#125; 语法
-2.1 字符串截取
-举例来说：对于字符串 file=/dir1/dir2/dir3/my.file.txt，可以用 $&#123;&#125; 分别替换得到不同的值：
+          1. 定义
+1.1 上凸函数
 
-$&#123;file#*/&#125;：   删掉第一个 / 及其左边的字符串：dir1/dir
+
+如果对任意 x1x_1x1​、x2x_2x2​ 总有 f[αx1+(1−α)x2]≥αf(x1)+(1−α)f(x2)f[\alpha x_1 + (1 - \alpha )x_2] \geq \alpha f(x_1) + (1 - \alpha )f(x_2)f[αx1​+(1−α)x2​]≥αf(x1​)+(1−α)f(x2​)，其中 0≤α≤10 \leq
         </a>
       </p>
 
@@ -387,8 +527,8 @@ $&#123;file#*/&#125;：   删掉第一个 / 及其左边的字符串：dir1/dir
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-11-13 14:53" pubdate>
-              2020-11-13
+            <time datetime="2021-01-16 18:06" pubdate>
+              2021-01-16
             </time>
           </div>
         
@@ -396,9 +536,11 @@ $&#123;file#*/&#125;：   删掉第一个 / 及其左边的字符串：dir1/dir
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/Linux/">Linux</a>
+              <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Linux/Shell/">Shell</a>
+              <a href="/categories/Technique/Math/">Math</a>
+            
+              <a href="/categories/Technique/Math/Theory/">Theory</a>
             
           </div>
         
@@ -406,9 +548,11 @@ $&#123;file#*/&#125;：   删掉第一个 / 及其左边的字符串：dir1/dir
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/Linux/">Linux</a>
+              <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Shell/">Shell</a>
+              <a href="/tags/Math/">Math</a>
+            
+              <a href="/tags/Theory/">Theory</a>
             
           </div>
         
@@ -422,28 +566,19 @@ $&#123;file#*/&#125;：   删掉第一个 / 及其左边的字符串：dir1/dir
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/11/11/ImageCompression/JPEG%E5%8E%8B%E7%BC%A9%E5%9B%BE%E5%83%8F%E5%A2%9E%E5%BC%BA%E7%BB%BC%E8%BF%B0/JPEG%E5%8E%8B%E7%BC%A9%E5%9B%BE%E5%83%8F%E5%A2%9E%E5%BC%BA%E7%BB%BC%E8%BF%B0/">JPEG压缩图像增强综述</a>
+        <a href="/2021/01/16/Math/Theory/%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0/">欧拉函数</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/11/11/ImageCompression/JPEG%E5%8E%8B%E7%BC%A9%E5%9B%BE%E5%83%8F%E5%A2%9E%E5%BC%BA%E7%BB%BC%E8%BF%B0/JPEG%E5%8E%8B%E7%BC%A9%E5%9B%BE%E5%83%8F%E5%A2%9E%E5%BC%BA%E7%BB%BC%E8%BF%B0/">
+        <a href="/2021/01/16/Math/Theory/%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0/">
           
           
             
           
-          【注】参考自 Jiaying Liu 等的论文「A Comprehensive Benchmark for Single Image Compression Artifact Reduction」。
-1. 常用数据集
-1.1 数据集特征
-
-1.2 数据集性能
-
-2. 研究历史
-
-压缩图像增强主要分为深度学习方法和非深度学习方法。
-2.1 非深度方法
-
-2.2 深度方法
-深度方法目前主要分为两个主流
+          1. 欧拉函数定义
+欧拉函数 ϕ(n){\phi(n)}ϕ(n) 表示的是小于等于 nnn 且和 nnn 互质的正整数的个数。（易知 ϕ(1)=1{\phi(1) = 1}ϕ(1)=1）
+2. 欧拉函数公式
+对于任意整数 nnn，若其质因数分解结果为 n=p1k1p2k1⋯pnkn{n = p_1^{k_1}p_2^{k_1} \cdots p_n^{k_n}}n=p1k1​​p2k1​​⋯pnk
         </a>
       </p>
 
@@ -451,8 +586,8 @@ $&#123;file#*/&#125;：   删掉第一个 / 及其左边的字符串：dir1/dir
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-11-11 20:44" pubdate>
-              2020-11-11
+            <time datetime="2021-01-16 18:06" pubdate>
+              2021-01-16
             </time>
           </div>
         
@@ -460,7 +595,11 @@ $&#123;file#*/&#125;：   删掉第一个 / 及其左边的字符串：dir1/dir
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/ImageCompression/">ImageCompression</a>
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Math/">Math</a>
+            
+              <a href="/categories/Technique/Math/Theory/">Theory</a>
             
           </div>
         
@@ -468,7 +607,11 @@ $&#123;file#*/&#125;：   删掉第一个 / 及其左边的字符串：dir1/dir
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/ImageCompression/">ImageCompression</a>
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/Math/">Math</a>
+            
+              <a href="/tags/Theory/">Theory</a>
             
           </div>
         
@@ -482,18 +625,26 @@ $&#123;file#*/&#125;：   删掉第一个 / 及其左边的字符串：dir1/dir
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/11/10/Python/Python%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/">Python函数式编程</a>
+        <a href="/2021/01/16/Math/Modeling/%E4%BC%A0%E6%9F%93%E7%97%85%E6%A8%A1%E5%9E%8B/%E4%BC%A0%E6%9F%93%E7%97%85%E6%A8%A1%E5%9E%8B/">传染病模型</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/11/10/Python/Python%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/">
+        <a href="/2021/01/16/Math/Modeling/%E4%BC%A0%E6%9F%93%E7%97%85%E6%A8%A1%E5%9E%8B/%E4%BC%A0%E6%9F%93%E7%97%85%E6%A8%A1%E5%9E%8B/">
           
           
             
           
-          1. 装饰器（decorator）
-在代码运行期间动态增加功能的方式，称之为「装饰器」（decorator）。本质上，decorator 就是一个返回函数的高阶函数，它需要接受一个函数作为输入参数，并返回一个函数。
-12345def log(func):    def wrapper(*args, **kw):        print(&#x27;call %s():&#x27; % func.
+          
+
+基础定义
+
+
+将传染病范围内的人群分为以下类别：
+
+SSS(Susceptible)类：指未得病，但与感染者接触后容易收到感染的人。
+EEE(Exposed)类：指接触过感染者，但暂时没有传播的能力的人。
+III(Infectious)类：指染上传染病，具有传播能力的人。（可以传播给SSS类人员，将其变成EEE类或III类成员）
+RRR(Recovered / Removed)类：指病愈而具有
         </a>
       </p>
 
@@ -501,8 +652,8 @@ $&#123;file#*/&#125;：   删掉第一个 / 及其左边的字符串：dir1/dir
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-11-10 14:17" pubdate>
-              2020-11-10
+            <time datetime="2021-01-16 18:06" pubdate>
+              2021-01-16
             </time>
           </div>
         
@@ -510,266 +661,141 @@ $&#123;file#*/&#125;：   删掉第一个 / 及其左边的字符串：dir1/dir
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/Python/">Python</a>
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Math/">Math</a>
+            
+              <a href="/categories/Technique/Math/Modeling/">Modeling</a>
             
           </div>
         
         
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/Math/">Math</a>
+            
+              <a href="/tags/Modeling/">Modeling</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/01/16/Math/Theory/%E5%88%9A%E6%80%A7%E6%96%B9%E7%A8%8B/%E5%88%9A%E6%80%A7%E6%96%B9%E7%A8%8B/">刚性方程</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/01/16/Math/Theory/%E5%88%9A%E6%80%A7%E6%96%B9%E7%A8%8B/%E5%88%9A%E6%80%A7%E6%96%B9%E7%A8%8B/">
+          
+          
+            
+          
+          摘自Wikipedia——刚性方程。
+1.  定义
+在数学领域中，刚性方程（stiffness equation）是指一个微分方程，其数值分析的解只有在时间间隔很小时才会稳定，只要时间间隔略大，其解就会不稳定。目前很难去精确地去定义哪些微分方程是刚性方程，然而粗略而言，若此方程式中包含使其快速变动的项，则其为刚性方程。
+在积分微分方程时，若某一区域的解曲线的变化很大，会希望在这个区域的积分间隔密一
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-16 18:06" pubdate>
+              2021-01-16
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Math/">Math</a>
+            
+              <a href="/categories/Technique/Math/Theory/">Theory</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/Math/">Math</a>
+            
+              <a href="/tags/Theory/">Theory</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/01/15/Python/Torch/Torch%E5%87%BD%E6%95%B0/">Torch函数</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/01/15/Python/Torch/Torch%E5%87%BD%E6%95%B0/">
+          
+          
+            
+          
+          torch.clamp(input, min, max, out=None) → Tensor
+将 input 张量中的每个元素值截断到区间 [min, max] 中。
+torch.stack(tensors, dim=0, out=None) → Tensor
+对 tensors 沿指定维度拼接，但会额外增加一维拼接的维度，即拼接时来自于 tensors 中每个 tensor 中的拼接元素单独组
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-15 22:44" pubdate>
+              2021-01-15
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Python/">Python</a>
+            
+              <a href="/categories/Technique/Python/Torch/">Torch</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
             
               <a href="/tags/Python/">Python</a>
             
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/10/29/Math/Theory/%E7%9F%A9%E9%98%B5/%E5%B9%82%E7%9F%A9%E9%98%B5%E5%92%8C%E5%88%9D%E7%AD%89%E7%9F%A9%E9%98%B5%E5%87%BD%E6%95%B0/">幂矩阵和初等矩阵函数</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/10/29/Math/Theory/%E7%9F%A9%E9%98%B5/%E5%B9%82%E7%9F%A9%E9%98%B5%E5%92%8C%E5%88%9D%E7%AD%89%E7%9F%A9%E9%98%B5%E5%87%BD%E6%95%B0/">
-          
-          
-            
-          
-          1. 幂等矩阵
-1.1 定义
-若矩阵 An×n\boldsymbol{A}_{n \times n}An×n​ 满足：
-A2=AA=A\begin{array}{c}
-\boldsymbol{A}^2 = \boldsymbol{AA} = \boldsymbol{A}
-\end{array}
-A2=AA=A​
-则称矩阵 A\boldsymbol{A}A 为幂等矩阵。
-1.2 性质
-
-函数 f(s
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-10-29 14:36" pubdate>
-              2020-10-29
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Math/">Math</a>
-            
-              <a href="/categories/Math/Theory/">Theory</a>
-            
-              <a href="/categories/Math/Theory/%E7%9F%A9%E9%98%B5/">矩阵</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Math/">Math</a>
-            
-              <a href="/tags/Theory/">Theory</a>
-            
-              <a href="/tags/%E7%9F%A9%E9%98%B5/">矩阵</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/10/29/Math/Theory/%E7%9F%A9%E9%98%B5/%E7%9F%A9%E9%98%B5%E7%89%B9%E6%AE%8A%E8%BF%90%E7%AE%97/">矩阵特殊运算</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/10/29/Math/Theory/%E7%9F%A9%E9%98%B5/%E7%9F%A9%E9%98%B5%E7%89%B9%E6%AE%8A%E8%BF%90%E7%AE%97/">
-          
-          
-            
-          
-          1. 直和
-1.1 定义
-m×mm \times mm×m 矩阵 A\boldsymbol{A}A 与 n×nn \times nn×n 矩阵 B\boldsymbol{B}B 的直和记作 A⊕B
-\boldsymbol{A} \oplus \boldsymbol{B}
-A⊕B，它是一个 (m+n)×(m+n)(m+n) \times (m+n)(m+n)×(m+n) 的矩阵，定义为
-A⊕B=[A
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-10-29 11:19" pubdate>
-              2020-10-29
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Math/">Math</a>
-            
-              <a href="/categories/Math/Theory/">Theory</a>
-            
-              <a href="/categories/Math/Theory/%E7%9F%A9%E9%98%B5/">矩阵</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Math/">Math</a>
-            
-              <a href="/tags/Theory/">Theory</a>
-            
-              <a href="/tags/%E7%9F%A9%E9%98%B5/">矩阵</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/10/28/Math/Theory/%E7%9F%A9%E9%98%B5/%E5%90%91%E9%87%8F%E7%A9%BA%E9%97%B4/%E5%90%91%E9%87%8F%E7%A9%BA%E9%97%B4/">向量空间</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/10/28/Math/Theory/%E7%9F%A9%E9%98%B5/%E5%90%91%E9%87%8F%E7%A9%BA%E9%97%B4/%E5%90%91%E9%87%8F%E7%A9%BA%E9%97%B4/">
-          
-          
-            
-          
-          
-下文和标量域 K\mathbb{K}K 是指实数域 R\mathbb{R}R 或复数域 C\mathbb{C}C。
-1. 向量空间（线性空间）
-1.1 定义
-1.1.1 向量空间
-对于以向量为元素的集合 V\boldsymbol{V}V，若对于向量集合 V\boldsymbol{V}V 中的向量 x,y,w\boldsymbol{x},\boldsymbol{y},\boldsymbol{w}x
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-10-28 16:23" pubdate>
-              2020-10-28
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Math/">Math</a>
-            
-              <a href="/categories/Math/Theory/">Theory</a>
-            
-              <a href="/categories/Math/Theory/%E7%9F%A9%E9%98%B5/">矩阵</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Math/">Math</a>
-            
-              <a href="/tags/Theory/">Theory</a>
-            
-              <a href="/tags/%E7%9F%A9%E9%98%B5/">矩阵</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/10/26/Math/Theory/%E7%9F%A9%E9%98%B5/%E7%9F%A9%E9%98%B5%E5%BE%AE%E5%88%86/%E7%9F%A9%E9%98%B5%E5%BE%AE%E5%88%86/">矩阵微分</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/10/26/Math/Theory/%E7%9F%A9%E9%98%B5/%E7%9F%A9%E9%98%B5%E5%BE%AE%E5%88%86/%E7%9F%A9%E9%98%B5%E5%BE%AE%E5%88%86/">
-          
-          
-            
-          
-          独立性假设
-假定实值函数的向量变元 x=[xi]i=1m∈Rm
-\boldsymbol{x} = [x_i]_{i=1}^m \in \mathbb{R}^m
-x=[xi​]i=1m​∈Rm 或者矩阵变元 X=[xij]i=1,j=1m,n∈Rm×n
-\boldsymbol{X} = [x_{ij}]_{i=1,j=1}^{m,n} \in \mathbb{R}^{m \times n}
-X=[x
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-10-26 19:56" pubdate>
-              2020-10-26
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Math/">Math</a>
-            
-              <a href="/categories/Math/Theory/">Theory</a>
-            
-              <a href="/categories/Math/Theory/%E7%9F%A9%E9%98%B5/">矩阵</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
-            
-              <a href="/tags/Math/">Math</a>
-            
-              <a href="/tags/Theory/">Theory</a>
-            
-              <a href="/tags/%E7%9F%A9%E9%98%B5/">矩阵</a>
+              <a href="/tags/Torch/">Torch</a>
             
           </div>
         
@@ -781,7 +807,7 @@ X=[x
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/page/16/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/15/#board">15</a><a class="page-number" href="/page/16/#board">16</a><span class="page-number current">17</span><a class="page-number" href="/page/18/#board">18</a><a class="page-number" href="/page/19/#board">19</a><span class="space">&hellip;</span><a class="page-number" href="/page/42/#board">42</a><a class="extend next" rel="next" href="/page/18/#board"><i class="iconfont icon-arrowright"></i></a>
+      <a class="extend prev" rel="prev" href="/page/16/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/15/#board">15</a><a class="page-number" href="/page/16/#board">16</a><span class="page-number current">17</span><a class="page-number" href="/page/18/#board">18</a><a class="page-number" href="/page/19/#board">19</a><span class="space">&hellip;</span><a class="page-number" href="/page/44/#board">44</a><a class="extend next" rel="next" href="/page/18/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 

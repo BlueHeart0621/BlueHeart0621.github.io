@@ -197,20 +197,20 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/MatLab/MatLab%E5%B7%A5%E4%BD%9C%E5%8C%BA/">MatLab工作区</a>
+        <a href="/2020/05/26/Git/Git%E6%9C%89%E5%85%B3ssh-key%E7%9A%84%E9%85%8D%E7%BD%AE%E9%97%AE%E9%A2%98/">Git有关ssh-key的配置问题</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/MatLab/MatLab%E5%B7%A5%E4%BD%9C%E5%8C%BA/">
+        <a href="/2020/05/26/Git/Git%E6%9C%89%E5%85%B3ssh-key%E7%9A%84%E9%85%8D%E7%BD%AE%E9%97%AE%E9%A2%98/">
           
           
             
           
-          1. 基础工作区
-MatLab 中的基础工作区是针对当前 MatLab 窗口内的脚本代码而言的（无论是命令行窗口输入的还是 M 脚本文件中的），是所有脚本代码所共享的（即对当前 MatLab 窗口而言是唯一的），是对外可见的（即 MatLab 窗口中显示的工作区），与当前 MatLab 窗口是共存亡的。
-【注】从函数中调用脚本时，脚本使用的是调用函数的函数工作区。
-2. 函数工作区
-MatLab 
+          Git 配置 ssh-key 是为了识别并区分不同的主机，所以一台主机要使用 Git 进行远程仓库托管代码，首先要在本机生成 ssh-key，并配置到对应远程仓库网站（比如：Github、Gitee）。
+1. 生成 ssh-key
+在 git 终端输入：
+1ssh-keygen -t rsa -C &quot;your email&quot; 
+然后git终端会询问保存路径（建议直接 enter，
         </a>
       </p>
 
@@ -227,13 +227,492 @@ MatLab
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/MatLab/">MatLab</a>
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Git/">Git</a>
             
           </div>
         
         
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/Git/">Git</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/05/26/Go/Go%E8%AF%AD%E8%A8%80%E4%BB%A3%E7%A0%81%E9%A3%8E%E6%A0%BC/">Go语言代码风格</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/05/26/Go/Go%E8%AF%AD%E8%A8%80%E4%BB%A3%E7%A0%81%E9%A3%8E%E6%A0%BC/">
+          
+          
+            
+          
+          Go 语言对代码风格进行了强制性统一，其代码风格要求如下：
+1. Public 变量/函数必须以大写字母开头，Private 变量/函数必须以小写字母开头
+Private 函数只能在本包中使用，Public 函数可以被其他包调用。
+2. { } 书写应遵循 K&amp;R 风格
+譬如以下风格是正确的：
+123if expression &#123;    ...&#125;
+而以下风格是错误的：
+
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-05-26 10:44" pubdate>
+              2020-05-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Go/">Go</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/Go/">Go</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/05/26/Go/Go%E8%AF%AD%E8%A8%80%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">Go语言常用命令</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/05/26/Go/Go%E8%AF%AD%E8%A8%80%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
+          
+          
+            
+          
+          1. 构建项目
+在 $GOPATH/bin 目录下构建 $GOPATH/src 目录下的 XXX 文件夹所包含的项目：
+1go build XXX
+构建项目成功会在 $GOPATH/bin 目录下生成 XXX 可执行文件。
+2. 运行项目
+在终端编译运行 $GOPATH/src 目录下的 XXX 文件夹所包含的项目：
+1go run XXX
+3. 测试项目
+如果项目有提供 test 测试文件在 $
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-05-26 10:44" pubdate>
+              2020-05-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Go/">Go</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/Go/">Go</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/05/26/Go/Go%E8%AF%AD%E8%A8%80%E5%B8%B8%E7%94%A8%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/">Go语言常用环境变量</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/05/26/Go/Go%E8%AF%AD%E8%A8%80%E5%B8%B8%E7%94%A8%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/">
+          
+          
+            
+          
+          1. GOPATH
+GOPATH 环境变量用来指定开发项目所在地址。
+2. GOROOT
+GOROOT 用来指定 go 的安装路径。
+3. GO111MODULE
+GO111MODULE 环境变量用于开启或关闭 Go 语言中的模块支持，它有 off、on、auto 三个可选值，默认为 auto。
+3.1 GO111MODULE=off
+无模块支持，go 会从 $GOPATH 文件夹和 vendor
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-05-26 10:44" pubdate>
+              2020-05-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Go/">Go</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/Go/">Go</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/05/26/Go/Go%E8%AF%AD%E8%A8%80%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/">Go语言流程控制</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/05/26/Go/Go%E8%AF%AD%E8%A8%80%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/">
+          
+          
+            
+          
+          程序设计语言的流程控制语句用于设定计算执行的次序，建立程序的逻辑结构。流程控制语句主要有三个作用：
+
+选择：根据条件跳转到不同的执行序列
+循环：根据条件反复执行某段语句序列
+跳转：根据条件跳转到某执行序列
+
+Go 语言支持以下几种流程控制语句：
+
+条件语句：对应关键字为 if、else、else if
+选择语句：对应关键字为 switch、case、select
+循环语句：对应关键字为 for、r
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-05-26 10:44" pubdate>
+              2020-05-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Go/">Go</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/Go/">Go</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/05/26/Go/Mint19.1%E9%85%8D%E7%BD%AEVSCode%E7%9A%84Go%E7%8E%AF%E5%A2%83/">Mint19.1配置VSCode的Go环境</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/05/26/Go/Mint19.1%E9%85%8D%E7%BD%AEVSCode%E7%9A%84Go%E7%8E%AF%E5%A2%83/">
+          
+          
+            
+          
+          1. 下载软件包
+到 Go 语言官网地址下载 tar.gz 软件包，本人下载的软件包版本是 go1.14.2.linux-amd64.tar.gz 。
+2. 解压软件包
+将软件包解压到合适位置，本人解压到路径 /usr/local 目录下：
+1sudo tar -C /usr/local -xzf go1.14.2.linux-amd64.tar.gz
+3. 添加环境变量
+3.1 导入软件包路径
+
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-05-26 10:44" pubdate>
+              2020-05-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Go/">Go</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/Go/">Go</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/05/26/MarkDown/Atom%E6%90%AD%E5%BB%BAMarkDown%E7%8E%AF%E5%A2%83/">Atom搭建MarkDown环境</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/05/26/MarkDown/Atom%E6%90%AD%E5%BB%BAMarkDown%E7%8E%AF%E5%A2%83/">
+          
+          
+            
+          
+          1. 简介
+Atom 是 Github 专门为程序员推出的一款开源跨平台文本编辑器，基于 web 技术构建，支持多种语言开发，原生支持 git 以及 MarkDown 基础语法书写和预览。
+2. 常用快捷键
+
+Ctrl+Shift+P ：打开搜索面板
+Ctrl+Shift+M ：打开 MarkDown 实时预览（安装 markdown-preview、markdown-preview-plus 或
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-05-26 10:44" pubdate>
+              2020-05-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/MarkDown/">MarkDown</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/MarkDown/">MarkDown</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/05/26/MarkDown/VSCode%E6%90%AD%E5%BB%BAMarkDown%E7%8E%AF%E5%A2%83/">VSCode搭建MarkDown环境</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/05/26/MarkDown/VSCode%E6%90%AD%E5%BB%BAMarkDown%E7%8E%AF%E5%A2%83/">
+          
+          
+            
+          
+          VSCode 原生就支持 Markdown 语言编写，但功能比较基础。为了满足 Markdown 更多的日常使用功能，以下推荐几款非常有用的插件：
+1. Markdown Preview Enhanced（MPE）
+该插件包含许多 MarkDown 语法功能，能满足书写 MarkDown 的大部分日常需求。
+
+实时滚动预览（Ctrl+Shift+V）
+LaTex数学公式
+表格
+Code Chunk
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-05-26 10:44" pubdate>
+              2020-05-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/MarkDown/">MarkDown</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/MarkDown/">MarkDown</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/05/26/MatLab/MatLab%E4%B8%ADM%E6%96%87%E4%BB%B6/">MatLab中M文件</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/05/26/MatLab/MatLab%E4%B8%ADM%E6%96%87%E4%BB%B6/">
+          
+          
+            
+          
+          MatLab 中 M 文件有函数和脚本两种不同类型，是可以被 MatLab 直接执行的源代码文件。
+
+
+创建/编辑 M 文件：在命令行窗口运行 edit [filename1 [filename2 ...]] 命令。文件存在则编辑文件，文件不存在则先创建文件。若未指定 filename 参数，则默认创建无名的 M 文件。
+
+
+运行 M 文件：在命令行窗口下运行 run filename 命令。
+
+
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-05-26 10:44" pubdate>
+              2020-05-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/MatLab/">MatLab</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
             
               <a href="/tags/MatLab/">MatLab</a>
             
@@ -249,42 +728,19 @@ MatLab
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/MatLab/MatLab%E8%BF%90%E7%AE%97%E7%AC%A6%E4%B8%8E%E8%BF%90%E7%AE%97/">MatLab运算符与运算</a>
+        <a href="/2020/05/26/MatLab/MatLab%E5%87%BD%E6%95%B0/">MatLab函数</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/MatLab/MatLab%E8%BF%90%E7%AE%97%E7%AC%A6%E4%B8%8E%E8%BF%90%E7%AE%97/">
+        <a href="/2020/05/26/MatLab/MatLab%E5%87%BD%E6%95%B0/">
           
           
             
           
-          1. 算术运算符
-MatLab 算术运算符有四则运算符和带点四则运算符。
-
-
-
-运算符
-运算法则
-运算符
-运算法则
-
-
-
-
-A+B
-A 与 B 相加（维度必须一致）
-A-B
-A 与 B 相减（维度必须一致）
-
-
-A*B
-A 与 B 相乘（二者之一为标量或满足矩阵相乘条件）
-A.*B
-A 与 B 相应元素相乘（维度必须一致）
-
-
-A\B
-B 与 A 相除（A 为标量或满足 A 非奇异，A\B=A−1
+          1. 普通函数
+MatLab 中的普通函数是可以传递输入参数和输出参数的函数，其基本定义格式为：
+123function [y1,...,yn] = funcname(x1,...,xn)    ...end
+其中，x1,...,xn 为输入参数变量，y1,...,yn 为输出参数变量，funcname 为函数名称。MatLab 在实现对普通函数调用时，允许使用比声明变量数目少的输入输出变量，调用
         </a>
       </p>
 
@@ -301,449 +757,19 @@ B 与 A 相除（A 为标量或满足 A 非奇异，A\B=A−1
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/MatLab/">MatLab</a>
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/MatLab/">MatLab</a>
             
           </div>
         
         
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
             
               <a href="/tags/MatLab/">MatLab</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/05/26/MySQL/Deepin15.11%E9%85%8D%E7%BD%AEMySQL%E7%8E%AF%E5%A2%83/">Deepin15.11配置MySQL环境</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/05/26/MySQL/Deepin15.11%E9%85%8D%E7%BD%AEMySQL%E7%8E%AF%E5%A2%83/">
-          
-          
-            
-          
-          【注】mysql 环境配置详情请参阅 mysql 官方教程。
-1. 添加 APT Repository
-从官网上下载对应的 MySQL APT Repository 配置包，然后安装该 mysql-apt-config_x.y.z_all.deb 包（具体取决于所下载的 deb 包）。
-1sudo dpkg -i mysql-apt-config_x.y.z_all.deb
-在安装该 APT Re
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/MySQL/">MySQL</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/MySQL/">MySQL</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/05/26/MySQL/MySQL%E6%8A%A5%E9%94%99/">MySQL报错</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/05/26/MySQL/MySQL%E6%8A%A5%E9%94%99/">
-          
-          
-            
-          
-          1. The MySQL server is running with the --secure-file-priv option ***
-
-问题：secure-file-priv 未配置或配置与当前使用路径冲突。secure-file-priv 参数是用来限制 mysql 下数据导入导出只能发生的路径下。
-
-
-
-
-secure-file-priv 参数值
-说明
-
-
-
-
-''
-表示 mysqld 
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/MySQL/">MySQL</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/MySQL/">MySQL</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/05/26/MySQL/%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%B8%8B%E4%BD%BF%E7%94%A8MySQL/">命令行下使用MySQL</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/05/26/MySQL/%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%B8%8B%E4%BD%BF%E7%94%A8MySQL/">
-          
-          
-            
-          
-          1. 进入 MySQL 终端
-
-指定服务器 host 和 user
-
-1mysql -h host -u user -p    # -p 选项指明输入密码
-
-匿名形式进入 MySQL 终端（host 默认为 localhost，user 默认为当前系统的 user）
-
-1mysql
-【注】linux 系统下可能需要使用超级用户权限：
-12sudo mysql -h host -u user -ps
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/MySQL/">MySQL</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/MySQL/">MySQL</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/05/26/Net/Hosts%E6%96%87%E4%BB%B6%E4%BF%AE%E6%94%B9/">Hosts文件修改</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/05/26/Net/Hosts%E6%96%87%E4%BB%B6%E4%BF%AE%E6%94%B9/">
-          
-          
-            
-          
-          1. 简介
-有时访问某些国外网站很卡（不包括无法访问的网站），很大的原因是这些网站的 CDN 的域名遭到 DNS 污染了。这时就可以选择直接访问源网站 IP ，绕过 DNS 解析，即通过修改主机 hosts 文件的方式，将域名和 IP 的对应关系直接记录下来，来加速对这些网站的访问。
-2. 原理
-主机操作系统下都有一个 hosts 文件，其作用在于将一些常用网址域名与其对应的 IP 地址建立一个关
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Net/">Net</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Net/">Net</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/05/26/NodeJS/Mint19.1%E5%AE%89%E8%A3%85NodeJS/">Mint19.1安装NodeJS</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/05/26/NodeJS/Mint19.1%E5%AE%89%E8%A3%85NodeJS/">
-          
-          
-            
-          
-          1. 查看 NodeJS 版本
-查看最新版本的 NodeJS，见官网地址。
-2. 添加 NodeJS 源
-NodeJS 每个大版本都有相对应的源，比如 12.16.2 版本对应的源为 https://deb.nodesource.com/setup_12.x，将所需安装的 NodeJS 版本源添加到系统中：
-1curl -sL https://deb.nodesource.com/setup_12
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/NodeJS/">NodeJS</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/NodeJS/">NodeJS</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/05/26/Python/Python%E6%8A%A5%E9%94%99/">Python报错</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/05/26/Python/Python%E6%8A%A5%E9%94%99/">
-          
-          
-            
-          
-          1. fatal error: Python.h: 没有那个文件或目录
-
-问题：缺少 python-dev 包
-解决：安装对应包：
-
-1sudo apt install python-dev # 最好指定 python 版本，比如：python3.6-dev
-2. ERROR: Package 'pylint' requires a different Python: 2.7.15 not in 
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Python/">Python</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Python/">Python</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/05/26/Python/pip%E4%B8%8B%E8%BD%BDPython%E5%BA%93%E9%80%9F%E5%BA%A6%E6%85%A2%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/">pip下载Python库速度慢解决方案</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/05/26/Python/pip%E4%B8%8B%E8%BD%BDPython%E5%BA%93%E9%80%9F%E5%BA%A6%E6%85%A2%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/">
-          
-          
-            
-          
-          1. 简介
-python 的 pip 安装包工具非常便利，但由于其默认的下载源为国外源，因此在安装 python 库的时候下载速度较慢。有时库文件过大，超出 pip 的下载时间限制，就会报错 The read operation timed out。所以我们可是手动更改 pip 的下载源为国内的镜像下载源以提升下载速度。
-2. 国内镜像源
-国内主要的 pip 镜像源有以下几个：
-1234https
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Python/">Python</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Python/">Python</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/05/26/Qt/Deepin15.11%E4%B8%8BQt5.14%E6%8A%A5%E9%94%99/">Deepin15.11下Qt5.14报错</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/05/26/Qt/Deepin15.11%E4%B8%8BQt5.14%E6%8A%A5%E9%94%99/">
-          
-          
-            
-          
-          1. error: Unknown module(s) in QT: xlsx
-
-问题：Qt 找不到 qtxlsx 的 modules
-解决：手动安装 qtxlsx 模块
-
-12345git clone git@github.com:dbzhang800/QtXlsxWriter.gitcd QtXlsxWriterqmakemakemake install
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Qt/">Qt</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Qt/">Qt</a>
             
           </div>
         
@@ -755,7 +781,7 @@ python 的 pip 安装包工具非常便利，但由于其默认的下载源为�
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/page/33/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/32/#board">32</a><a class="page-number" href="/page/33/#board">33</a><span class="page-number current">34</span><a class="page-number" href="/page/35/#board">35</a><a class="page-number" href="/page/36/#board">36</a><span class="space">&hellip;</span><a class="page-number" href="/page/42/#board">42</a><a class="extend next" rel="next" href="/page/35/#board"><i class="iconfont icon-arrowright"></i></a>
+      <a class="extend prev" rel="prev" href="/page/33/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/32/#board">32</a><a class="page-number" href="/page/33/#board">33</a><span class="page-number current">34</span><a class="page-number" href="/page/35/#board">35</a><a class="page-number" href="/page/36/#board">36</a><span class="space">&hellip;</span><a class="page-number" href="/page/44/#board">44</a><a class="extend next" rel="next" href="/page/35/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 

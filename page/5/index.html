@@ -197,19 +197,52 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/08/08/Linux/ArchLinux/ArchLinux%E4%B8%8B%E8%93%9D%E7%89%99%E9%97%AE%E9%A2%98/">ArchLinux下蓝牙问题</a>
+        <a href="/2021/08/17/Tools/Aria2/Aria2%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99%E6%B1%87%E6%80%BB/">Aria2相关资料汇总</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/08/08/Linux/ArchLinux/ArchLinux%E4%B8%8B%E8%93%9D%E7%89%99%E9%97%AE%E9%A2%98/">
+        <a href="/2021/08/17/Tools/Aria2/Aria2%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99%E6%B1%87%E6%80%BB/">
           
           
             
           
-          1. bluetoothctl No default controller available
+          1. Aria2
+1.1 官方系列
 
-问题：蓝牙驱动正常，且蓝牙服务状态也正常（systemctl status bluetooth.service），bluetoothctl 命令进入蓝牙控制终端，输入 scan 命令时报错：bluetoothctl No default controller available。
-原因：对于较新的 L
+源码仓库
+官方主页
+官方文档
+
+1.2 第三方系列
+
+P3TERX 的配置方案
+
+
+
+Aria2 配置文件仓库
+Aria2 配置文件说明
+
+
+2. Aria2 GUI 前端
+2.1 AriaNg
+
+源码仓库
+使用手册
+
+2.2 Aria2Ng
+
+源码仓库
+使用手册
+
+2.3 Yaaw
+
+源码仓库
+
+2.4 WebUI-Aria2
+
+源码仓库
+
+2.5 Pers
         </a>
       </p>
 
@@ -217,8 +250,8 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-08-08 10:55" pubdate>
-              2021-08-08
+            <time datetime="2021-08-17 10:32" pubdate>
+              2021-08-17
             </time>
           </div>
         
@@ -226,15 +259,204 @@
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/Linux/">Linux</a>
+              <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Linux/ArchLinux/">ArchLinux</a>
+              <a href="/categories/Technique/Tools/">Tools</a>
+            
+              <a href="/categories/Technique/Tools/Aria2/">Aria2</a>
             
           </div>
         
         
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/Tools/">Tools</a>
+            
+              <a href="/tags/Aria2/">Aria2</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/08/16/Tools/XDM/XDM%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/">XDM常见问题</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/08/16/Tools/XDM/XDM%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/">
+          
+          
+            
+          
+          1. An older version of XDM is already running.
+
+问题：XDM 下载软件无法正常打开，一打开就报错：An older version of XDM is already running 。
+原因：XDM 所在目录下的 download.txt 文件损坏。
+解决：
+
+
+
+关闭 XDM 进程。
+
+12ps aux | grep java_pid    # 
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-08-16 18:23" pubdate>
+              2021-08-16
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Tools/">Tools</a>
+            
+              <a href="/categories/Technique/Tools/XDM/">XDM</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/Tools/">Tools</a>
+            
+              <a href="/tags/XDM/">XDM</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/08/16/VSCode/VSCode%E8%AE%BE%E7%BD%AE%E4%B8%AD%E8%8B%B1%E6%B7%B7%E5%90%88%E7%AD%89%E5%AE%BD%E5%AD%97%E4%BD%93/">VSCode设置中英混合等宽字体</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/08/16/VSCode/VSCode%E8%AE%BE%E7%BD%AE%E4%B8%AD%E8%8B%B1%E6%B7%B7%E5%90%88%E7%AD%89%E5%AE%BD%E5%AD%97%E4%BD%93/">
+          
+          
+            
+          
+          1. 缘由
+VSCode 中的 alt+shift 快捷键能够同时操作多列，但其前提是被操作的部分要完全对齐，这就要求 VSCode 编缉器使用的字体得是等宽的。
+2. 配置
+2.1 字体
+
+如果只是单纯使用英文或中文，则使用常见的等宽字体即可，比如 Monospace。
+如果有中英文混合使用，则常见的等宽字体就无法保证中英文之间也能很好地对齐。因为中文汉字是全角字符，而英文字符是半角字符。系统上
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-08-16 16:09" pubdate>
+              2021-08-16
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/VSCode/">VSCode</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/VSCode/">VSCode</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/08/16/Linux/ArchLinux/ArchLinux%E4%B8%8B%E9%85%8D%E7%BD%AEaria2/">ArchLinux下配置aria2</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/08/16/Linux/ArchLinux/ArchLinux%E4%B8%8B%E9%85%8D%E7%BD%AEaria2/">
+          
+          
+            
+          
+          1. 简介
+aria2 是一个轻量级、支持多种协议的命令行下载工具。它支持的协议包括 HTTP(S)、FTP、BitTorrent、Metalink 等。aria2 工具可以并发地进行下载，同时还支持分片与续传，自动替换慢的线程等。
+2. 安装
+1sudo pacman -S aria2            # 安装好后可使用 aria2c 命令
+3. 配置
+aria2 安装完后需要进行复杂的配
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-08-16 16:06" pubdate>
+              2021-08-16
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Linux/">Linux</a>
+            
+              <a href="/categories/Technique/Linux/ArchLinux/">ArchLinux</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
             
               <a href="/tags/Linux/">Linux</a>
             
@@ -252,397 +474,17 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/08/04/DrivingLicense/%E6%B1%BD%E8%BD%A6%E6%A0%87%E5%BF%97%E5%A4%A7%E5%85%A8/">汽车标志大全</a>
+        <a href="/2021/08/12/InputMethod/%E5%8F%8C%E6%8B%BC%E8%BE%93%E5%85%A5%E6%B3%95/%E5%8F%8C%E6%8B%BC%E8%BE%93%E5%85%A5%E6%B3%95/">双拼输入法</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/08/04/DrivingLicense/%E6%B1%BD%E8%BD%A6%E6%A0%87%E5%BF%97%E5%A4%A7%E5%85%A8/">
-          
-          
-            
-          
-          车内功能按键
-
-  
-    
-      
-        
-          
-            
-          
-          
-            
-          
-          
-            
-          
-          
-            
-          
-        
-        
-          
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-08-04 02:11" pubdate>
-              2021-08-04
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/DrivingLicense/">DrivingLicense</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/DrivingLicense/">DrivingLicense</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/08/04/DrivingLicense/%E4%BA%A4%E9%80%9A%E6%A0%87%E5%BF%97%E5%A4%A7%E5%85%A8/">交通标志大全</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/08/04/DrivingLicense/%E4%BA%A4%E9%80%9A%E6%A0%87%E5%BF%97%E5%A4%A7%E5%85%A8/">
-          
-          
-            
-          
-          指示标线
-
-  
-    
-      
-        
-          
-            
-          
-          
-            
-          
-          
-            
-          
-          
-            
-          
-        
-        
-          
- 
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-08-04 02:11" pubdate>
-              2021-08-04
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/DrivingLicense/">DrivingLicense</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/DrivingLicense/">DrivingLicense</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/08/03/JavaScript/JS%E7%9B%B8%E5%85%B3%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99%E6%B1%87%E6%80%BB/">JS相关学习资料汇总</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/08/03/JavaScript/JS%E7%9B%B8%E5%85%B3%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99%E6%B1%87%E6%80%BB/">
-          
-          
-            
-          
-          1. JavaScript
-
-官方资料
-
-2. NodeJS
-
-中文官方文档
-英文官方文档
-
-3. EJS
-
-官方网址
-
-3. TypeScript
-
-官方手册
-TypeScript 开发 VSCode 插件
-
-4. Vue
-
-官方网址
-
-5. React
-
-官方网址
-
-6. NunJucks
-
-官方地址
-
-
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-08-03 12:00" pubdate>
-              2021-08-03
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/JavaScript/">JavaScript</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/JavaScript/">JavaScript</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/07/30/DrivingLicense/%E5%B0%8F%E8%BD%A6%E7%A7%91%E7%9B%AE%E4%B8%80%E8%80%83%E8%AF%95%E7%9F%A5%E8%AF%86/%E5%B0%8F%E8%BD%A6%E7%A7%91%E7%9B%AE%E4%B8%80%E8%80%83%E8%AF%95%E7%9F%A5%E8%AF%86/">小车科目一考试知识</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/07/30/DrivingLicense/%E5%B0%8F%E8%BD%A6%E7%A7%91%E7%9B%AE%E4%B8%80%E8%80%83%E8%AF%95%E7%9F%A5%E8%AF%86/%E5%B0%8F%E8%BD%A6%E7%A7%91%E7%9B%AE%E4%B8%80%E8%80%83%E8%AF%95%E7%9F%A5%E8%AF%86/">
-          
-          
-            
-          
-          1. 让车停车
-1.1 让车
-
-右转让左转，转弯让直行，直行左让右。
-
-1.2 停车
-机动车在道路上临时停车应当遵守下列规定：
-（一）在设有禁停标志、标线的路段，在机动车道与非机动车道、人行道之间设有隔离设施的路段以及人行横道、施工地段，不得停车；
-（二）交叉路口、铁路道口、急转弯、宽度不足 4 米的窄路、桥梁、陡坡、隧道以及距离上述地点 50 米以内的路段，不得停车；
-（三）公共汽车站、急救站、
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-07-30 10:08" pubdate>
-              2021-07-30
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/DrivingLicense/">DrivingLicense</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/DrivingLicense/">DrivingLicense</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/07/25/DeepLearning/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99%E6%B1%87%E6%80%BB/">深度学习资料汇总</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/07/25/DeepLearning/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99%E6%B1%87%E6%80%BB/">
-          
-          
-            
-          
-          1. 课程
-1.1 马里兰大学的「深度学习基石」
-最近在看这门课，感觉讲的挺好的。这门课程的主页是：CMSC828W。这门课已经将课程视频公开到 youtube 上了，不过也有人将其搬运到 b 站上了，没有魔法的同学可以上 b 站看（b 站网址）。
-1.2 李宏毅老师的「深度学习与自然语言处理」
-李宏毅老师这几年讲了一系列机器学习和深度学习的课程，反响都很不错，可以去李宏毅老师课程主页上看看。李宏
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-07-25 16:33" pubdate>
-              2021-07-25
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/DeepLearning/">DeepLearning</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/DeepLearning/">DeepLearning</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/07/25/MachineLearning/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99%E6%B1%87%E6%80%BB/">机器学习资料汇总</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/07/25/MachineLearning/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99%E6%B1%87%E6%80%BB/">
-          
-          
-            
-          
-          1. 课程
-1.1 吴恩达老师的「机器学习」
-吴恩达老师的《机器学习》课程可以说是最火的机器学习课程之一，讲的很浅显易懂，深受大家的喜爱。吴恩达老师的《机器学习》课程主要在 coursera 上公开，具体可以参考吴恩达老师的主页。很多视频平台也都有搬运，比如 b 站，毕竟国内访问 coursera 还是有点慢。
-1.2 李宏毅老师的「机器学习」
-李宏毅老师这几年讲了一系列机器学习和深度学习的课程，
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-07-25 16:18" pubdate>
-              2021-07-25
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/MachineLearning/">MachineLearning</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/MachineLearning/">MachineLearning</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/07/18/Math/Theory/%E4%B8%8D%E7%AD%89%E5%BC%8F/%E5%9D%87%E5%80%BC%E4%B8%8D%E7%AD%89%E5%BC%8F/">均值不等式</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/07/18/Math/Theory/%E4%B8%8D%E7%AD%89%E5%BC%8F/%E5%9D%87%E5%80%BC%E4%B8%8D%E7%AD%89%E5%BC%8F/">
+        <a href="/2021/08/12/InputMethod/%E5%8F%8C%E6%8B%BC%E8%BE%93%E5%85%A5%E6%B3%95/%E5%8F%8C%E6%8B%BC%E8%BE%93%E5%85%A5%E6%B3%95/">
           
           
             
           
           1. 简介
-均值不等式（inequality of arithmetic and geometric means，简称 AM-GM 不等式）是数学中常用的基本不等式之一。
-2. 表述
-2.1 算术均值
-对于 nnn 个实数 x1,x2,⋯ ,xn∈Rx_1,x_2,\cdots,x_n \in \mathbb{R}x1​,x2​,⋯,xn​∈R，它们的算术均值定义为
-x1+x2+⋯+xnn\beg
+「全拼输入法」即我们平常系统上默认的拼音输入法，它将字的拼音拆分成一个个的字母，然后用键盘一个个输入。当字母的拼音字母很多时，全拼输入法就比较耗时间。为此，「双拼输入法」被提出。它和 「全拼输入法」的不同之处在于，它将一个字的拼音拆分成「声母」和「韵母」两个部分，而非一个个的字母。然后再将所有声母和韵母映射到键盘上，从而保证每个字只需敲击两次键盘即可完成拼音输入，提高了拼音打字的速度。
         </a>
       </p>
 
@@ -650,8 +492,8 @@ x1+x2+⋯+xnn\beg
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-07-18 18:41" pubdate>
-              2021-07-18
+            <time datetime="2021-08-12 11:29" pubdate>
+              2021-08-12
             </time>
           </div>
         
@@ -659,11 +501,9 @@ x1+x2+⋯+xnn\beg
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/Math/">Math</a>
+              <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Math/Theory/">Theory</a>
-            
-              <a href="/categories/Math/Theory/%E4%B8%8D%E7%AD%89%E5%BC%8F/">不等式</a>
+              <a href="/categories/Technique/InputMethod/">InputMethod</a>
             
           </div>
         
@@ -671,11 +511,9 @@ x1+x2+⋯+xnn\beg
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/Math/">Math</a>
+              <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Theory/">Theory</a>
-            
-              <a href="/tags/%E4%B8%8D%E7%AD%89%E5%BC%8F/">不等式</a>
+              <a href="/tags/InputMethod/">InputMethod</a>
             
           </div>
         
@@ -689,19 +527,34 @@ x1+x2+⋯+xnn\beg
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/07/18/Math/Theory/%E4%B8%8D%E7%AD%89%E5%BC%8F/%E9%9C%8D%E5%A4%AB%E4%B8%81%E5%BC%95%E7%90%86/">霍夫丁引理</a>
+        <a href="/2021/08/12/InputMethod/%E4%BA%94%E7%AC%94%E8%BE%93%E5%85%A5%E6%B3%95/%E4%BA%94%E7%AC%94%E8%BE%93%E5%85%A5%E6%B3%95/">五笔输入法</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/07/18/Math/Theory/%E4%B8%8D%E7%AD%89%E5%BC%8F/%E9%9C%8D%E5%A4%AB%E4%B8%81%E5%BC%95%E7%90%86/">
+        <a href="/2021/08/12/InputMethod/%E4%BA%94%E7%AC%94%E8%BE%93%E5%85%A5%E6%B3%95/%E4%BA%94%E7%AC%94%E8%BE%93%E5%85%A5%E6%B3%95/">
           
           
             
           
           1. 简介
-在概率论中，霍夫丁引理是一个不等式，它限制了任何有界随机变量的矩生成函数。
-2. 定义
-设 X\boldsymbol{X}X 是具有期望值 E(X)=ηE(\boldsymbol{X}) = \etaE(X)=η 的任一实值随机变量，使得 a≤X≤ba \leq \boldsymbol{X} \leq ba≤X≤b 依概率 111 成立，则对任意 λ∈R\lambda \in \bol
+新世纪五笔是最新版的五笔输入法，它相较于前两版的五笔输入法（即 86 版和 98 版）拆字更加规范。
+2. 键盘图
+
+3. 字根助记表格
+
+4. 编码流程
+
+4.1 䃼码码元
+新世纪五笔中有四个䃼码码元：礻、衤、犭、飠。它们作为字根时需要两个编码，即「主码」+「副码」；它们作为成字时至少需要四个编码，即「主码」+「副码」+「首笔」+ 「末笔」。
+
+
+
+䃼码码元
+字根编码
+成字编码
+
+
+
         </a>
       </p>
 
@@ -709,8 +562,8 @@ x1+x2+⋯+xnn\beg
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-07-18 16:27" pubdate>
-              2021-07-18
+            <time datetime="2021-08-12 09:53" pubdate>
+              2021-08-12
             </time>
           </div>
         
@@ -718,11 +571,9 @@ x1+x2+⋯+xnn\beg
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/Math/">Math</a>
+              <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Math/Theory/">Theory</a>
-            
-              <a href="/categories/Math/Theory/%E4%B8%8D%E7%AD%89%E5%BC%8F/">不等式</a>
+              <a href="/categories/Technique/InputMethod/">InputMethod</a>
             
           </div>
         
@@ -730,11 +581,9 @@ x1+x2+⋯+xnn\beg
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/Math/">Math</a>
+              <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Theory/">Theory</a>
-            
-              <a href="/tags/%E4%B8%8D%E7%AD%89%E5%BC%8F/">不等式</a>
+              <a href="/tags/InputMethod/">InputMethod</a>
             
           </div>
         
@@ -748,19 +597,19 @@ x1+x2+⋯+xnn\beg
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/07/18/Math/Theory/%E4%B8%8D%E7%AD%89%E5%BC%8F/%E9%9C%8D%E5%A4%AB%E4%B8%81%E4%B8%8D%E7%AD%89%E5%BC%8F/">霍夫丁不等式</a>
+        <a href="/2021/08/11/Linux/ArchLinux/ArchLinux%E4%B8%8B%E5%BC%80%E5%90%AFMagicSysRq%E7%BB%84%E5%90%88%E9%94%AE/">ArchLinux下开启MagicSysRq组合键</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/07/18/Math/Theory/%E4%B8%8D%E7%AD%89%E5%BC%8F/%E9%9C%8D%E5%A4%AB%E4%B8%81%E4%B8%8D%E7%AD%89%E5%BC%8F/">
+        <a href="/2021/08/11/Linux/ArchLinux/ArchLinux%E4%B8%8B%E5%BC%80%E5%90%AFMagicSysRq%E7%BB%84%E5%90%88%E9%94%AE/">
           
           
             
           
           1. 简介
-在概率论中，霍夫丁不等式（Hoeffding's Inequality）给出了有界独立随机变量之和偏离其均值超过一定数量的概率上界。霍夫不等式是切比雪夫界的推广，同时又是吾妻不等式和McDiarmid不等式（还没给出标准的中文翻译2333）。霍夫丁不等式是机器学习的基础理论。
-2. 定义
-假设 X1,X2,⋯ ,XN\boldsymbol{X}_1,\boldsymbol{X}_2,\
+Magic SysRq 组合键是一串能直接与 Linux 内核沟通的组合键，允许使用者就算在系统进入死循环濒临崩溃时，直接呼叫系统底层将数据写入档案系统或重新开机，避免尚未写入档案系统与硬盘的数据在开机后消失。在 Linux 系统中，推荐尽量使用 Magic SysRq 组合键而不是直接硬关机。
+
+常见 Linux 发行版比如 Debian 系发行版，都默认开启了 Magic SysR
         </a>
       </p>
 
@@ -768,8 +617,8 @@ x1+x2+⋯+xnn\beg
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-07-18 11:57" pubdate>
-              2021-07-18
+            <time datetime="2021-08-11 12:47" pubdate>
+              2021-08-11
             </time>
           </div>
         
@@ -777,11 +626,11 @@ x1+x2+⋯+xnn\beg
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/Math/">Math</a>
+              <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Math/Theory/">Theory</a>
+              <a href="/categories/Technique/Linux/">Linux</a>
             
-              <a href="/categories/Math/Theory/%E4%B8%8D%E7%AD%89%E5%BC%8F/">不等式</a>
+              <a href="/categories/Technique/Linux/ArchLinux/">ArchLinux</a>
             
           </div>
         
@@ -789,11 +638,203 @@ x1+x2+⋯+xnn\beg
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/Math/">Math</a>
+              <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Theory/">Theory</a>
+              <a href="/tags/Linux/">Linux</a>
             
-              <a href="/tags/%E4%B8%8D%E7%AD%89%E5%BC%8F/">不等式</a>
+              <a href="/tags/ArchLinux/">ArchLinux</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/08/09/Linux/Sundry/Linux%E4%B8%8B%E4%BB%8EPDF%E6%96%87%E4%BB%B6%E4%B8%AD%E6%8F%90%E5%8F%96%E5%9B%BE%E7%89%87/">Linux下从PDF文件中提取图片</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/08/09/Linux/Sundry/Linux%E4%B8%8B%E4%BB%8EPDF%E6%96%87%E4%BB%B6%E4%B8%AD%E6%8F%90%E5%8F%96%E5%9B%BE%E7%89%87/">
+          
+          
+            
+          
+          1. pdfimages
+PDF 其实本质上是一个文件包，比如某些 PDF 文件中有插图，这些插图都包含在这个 PDF 文件包中。Linux 下可以使用 pdfimages 命令来从 PDF 文件中提取图片文件。如果你的 Linux 发行版上没有该命令，需要安装 poppler-utils 软件。pdfimages 命令的语法格式如下：
+1pdfimages -f &lt;sn&gt; -l &l
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-08-09 16:38" pubdate>
+              2021-08-09
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Linux/">Linux</a>
+            
+              <a href="/categories/Technique/Linux/Sundry/">Sundry</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/Linux/">Linux</a>
+            
+              <a href="/tags/Sundry/">Sundry</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/08/08/Linux/Sundry/Linux%E4%B8%8BPDF%E8%BD%AC%E5%9B%BE%E7%89%87/">Linux下PDF转图片</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/08/08/Linux/Sundry/Linux%E4%B8%8BPDF%E8%BD%AC%E5%9B%BE%E7%89%87/">
+          
+          
+            
+          
+          1. Inkscape
+Inkscape 作为一款强大的矢量设计软件，也能用来将 PDF 文件转为图片，主要用于在转换为图片时对原 PDF 页面进行一定调整。
+【注】Inkscape 有个缺点，即每次只能处理一个 PDF 页面，不能同时将整个 PDF 文档导入 Inkscape。
+1.1 GUI 操作
+Inkscape 可以直接打开 PDF 的页面进行操作，然后可以导出成各种格式的图片。有关 In
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-08-08 17:08" pubdate>
+              2021-08-08
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Linux/">Linux</a>
+            
+              <a href="/categories/Technique/Linux/Sundry/">Sundry</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/Linux/">Linux</a>
+            
+              <a href="/tags/Sundry/">Sundry</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/08/08/Tools/Gimp/Gimp%E5%BF%AB%E6%8D%B7%E9%94%AE/Gimp%E5%BF%AB%E6%8D%B7%E9%94%AE/">Gimp快捷键</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/08/08/Tools/Gimp/Gimp%E5%BF%AB%E6%8D%B7%E9%94%AE/Gimp%E5%BF%AB%E6%8D%B7%E9%94%AE/">
+          
+          
+            
+          
+          1. 常用
+1.1 Linux
+
+
+
+1.2 Windows
+
+
+
+1.3 MacOS
+
+
+
+2. 补充
+Gimp 的所有快捷键可以通过点击 「Edit」-&gt;「Keyboard Shortcuts」调出。
+
+shift + 鼠标左键：首次点击右侧栏下方的「眼睛」图标，则仅可见当前点击的图层，其他所有图层隐蔽；第二次点击，所有图层又恢复可见。
+
+
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-08-08 16:35" pubdate>
+              2021-08-08
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Tools/">Tools</a>
+            
+              <a href="/categories/Technique/Tools/Gimp/">Gimp</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/Tools/">Tools</a>
+            
+              <a href="/tags/Gimp/">Gimp</a>
             
           </div>
         
@@ -805,7 +846,7 @@ x1+x2+⋯+xnn\beg
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/page/4/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/#board">3</a><a class="page-number" href="/page/4/#board">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/#board">6</a><a class="page-number" href="/page/7/#board">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/42/#board">42</a><a class="extend next" rel="next" href="/page/6/#board"><i class="iconfont icon-arrowright"></i></a>
+      <a class="extend prev" rel="prev" href="/page/4/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/#board">3</a><a class="page-number" href="/page/4/#board">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/#board">6</a><a class="page-number" href="/page/7/#board">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/44/#board">44</a><a class="extend next" rel="next" href="/page/6/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 

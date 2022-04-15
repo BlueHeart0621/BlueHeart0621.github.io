@@ -197,19 +197,24 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/09/03/ACM/%E9%A2%98%E8%A7%A3/UVA455%E3%80%8CPeriodic%20Strings%E3%80%8D/">UVA455「Periodic Strings」</a>
+        <a href="/2020/09/21/Math/Theory/%E6%9F%AF%E8%A5%BF%E4%B8%BB%E5%80%BC%E7%A7%AF%E5%88%86/">柯西主值积分</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/09/03/ACM/%E9%A2%98%E8%A7%A3/UVA455%E3%80%8CPeriodic%20Strings%E3%80%8D/">
+        <a href="/2020/09/21/Math/Theory/%E6%9F%AF%E8%A5%BF%E4%B8%BB%E5%80%BC%E7%A7%AF%E5%88%86/">
           
           
             
           
-          1. 题目
-题目链接：UVA455「Periodic Strings」 。
-Description
-A character string is said to have period kkk if it can be formed by concatenating one or more repetitions of another string of length kkk. For exampl
+          1. 简介
+柯西主值积分是以特殊方式定义的反常积分，其值又称为柯西主值。
+2. 定义
+2.1 第一类反常积分（无穷积分）
+
+设函数 f(x)f(x)f(x) 在 (−∞,+∞)(-\infty,+\infty)(−∞,+∞) 上连续且可积，则定义第一类反常积分：
+
+∫−∞+∞f(x)dx=lim⁡u→−∞∫ucf(x)dx+lim⁡v→+∞∫cvf(x)dx\begin{array}{c}
+\in
         </a>
       </p>
 
@@ -217,8 +222,8 @@ A character string is said to have period kkk if it can be formed by concatenati
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-09-03 22:50" pubdate>
-              2020-09-03
+            <time datetime="2020-09-21 21:22" pubdate>
+              2020-09-21
             </time>
           </div>
         
@@ -226,9 +231,11 @@ A character string is said to have period kkk if it can be formed by concatenati
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/ACM/">ACM</a>
+              <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/ACM/%E9%A2%98%E8%A7%A3/">题解</a>
+              <a href="/categories/Technique/Math/">Math</a>
+            
+              <a href="/categories/Technique/Math/Theory/">Theory</a>
             
           </div>
         
@@ -236,9 +243,13 @@ A character string is said to have period kkk if it can be formed by concatenati
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/ACM/">ACM</a>
+              <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/%E9%A2%98%E8%A7%A3/">题解</a>
+              <a href="/tags/Math/">Math</a>
+            
+              <a href="/tags/Theory/">Theory</a>
+            
+              <a href="/tags/%E6%95%B0%E5%AD%A6%E7%90%86%E8%AE%BA/">数学理论</a>
             
           </div>
         
@@ -252,24 +263,213 @@ A character string is said to have period kkk if it can be formed by concatenati
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/09/03/ACM/%E7%AE%97%E6%B3%95/%E5%AD%97%E7%AC%A6%E4%B8%B2/%E5%89%8D%E7%BC%80%E5%87%BD%E6%95%B0/">前缀函数</a>
+        <a href="/2020/09/20/ACM/%E7%AE%97%E6%B3%95/%E6%9F%A5%E6%89%BE/%E6%95%B0%E7%BB%84%E4%B8%AD%E7%AC%ACK%E5%B0%8F%E7%9A%84%E6%95%B0/">数组中第K小的数</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/09/03/ACM/%E7%AE%97%E6%B3%95/%E5%AD%97%E7%AC%A6%E4%B8%B2/%E5%89%8D%E7%BC%80%E5%87%BD%E6%95%B0/">
+        <a href="/2020/09/20/ACM/%E7%AE%97%E6%B3%95/%E6%9F%A5%E6%89%BE/%E6%95%B0%E7%BB%84%E4%B8%AD%E7%AC%ACK%E5%B0%8F%E7%9A%84%E6%95%B0/">
           
           
             
           
-          1. 定义
-1.1 前缀 &amp; 真前缀
-前缀是指从串首开始到某个位置 iii 结束的一个特殊子串。字符串 SSS 的以 iii 结尾的前缀表示为
-prefix(S,i)=S[0..i]\begin{array}{c}
-prefix(S,i) = S[0..i]
+          1. 简介
+查找一个序列中的最大/最小值时间复杂度均为 O(N)O(N)O(N)，而查询一个序列中第 K(K=0⋯N−1)K(K = 0 \cdots N-1)K(K=0⋯N−1) 大的数时间复杂度最坏情况下即为排序的最好时间复杂度 O(Nlog⁡N)O(N \log N)O(NlogN)（只考虑比较排序），但利用快排的 PartitionPartitionPartition 思想也可以达到期望 
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-09-20 21:46" pubdate>
+              2020-09-20
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/ACM/">ACM</a>
+            
+              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/">算法</a>
+            
+              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/%E6%9F%A5%E6%89%BE/">查找</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/ACM/">ACM</a>
+            
+              <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
+            
+              <a href="/tags/%E6%9F%A5%E6%89%BE/">查找</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/09/19/ACM/%E7%AE%97%E6%B3%95/%E5%85%B6%E4%BB%96/%E7%AE%97%E6%B3%95%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/%E7%AE%97%E6%B3%95%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/">算法时间复杂度</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/09/19/ACM/%E7%AE%97%E6%B3%95/%E5%85%B6%E4%BB%96/%E7%AE%97%E6%B3%95%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/%E7%AE%97%E6%B3%95%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/">
+          
+          
+            
+          
+          1. 简介
+算法的时间复杂度是指在问题规模为 NNN 时整个算法执行的基本语句单元次数，记为 T(N)T(N)T(N) 。
+2. 分类
+在算法时间复杂度分析中，常用 log⁡−log⁡ plot\log-\log \ plotlog−log plot 图去衡量算法时间复杂度，该图横坐标为 log⁡N\log NlogN（NNN 为问题规模），纵坐标为 log⁡T\log TlogT（TTT 为时间
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-09-19 19:50" pubdate>
+              2020-09-19
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/ACM/">ACM</a>
+            
+              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/">算法</a>
+            
+              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/%E5%85%B6%E4%BB%96/">其他</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/ACM/">ACM</a>
+            
+              <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
+            
+              <a href="/tags/%E5%85%B6%E4%BB%96/">其他</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/09/17/ACM/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/">快速排序</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/09/17/ACM/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/">
+          
+          
+            
+          
+          【注】参考自教材「算法导论」。
+1. 简介
+快速排序是一种被广泛运用的排序算法，虽然其最坏情况下的时间复杂度为 O(n2)O(n^2)O(n2)，但其平均时间复杂度为 (nlog⁡2n)(n\log_2 n)(nlog2​n)，而且其常数因子非常小，所以实际情况下跑的很快。快速排序是不稳定的、原址的排序算法。
+【注】实际上只要保证快排的每一层枢轴左右两边的序列大小的划分比不超过某一常数比（即与序列
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-09-17 22:34" pubdate>
+              2020-09-17
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/ACM/">ACM</a>
+            
+              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/">算法</a>
+            
+              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/">排序</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/ACM/">ACM</a>
+            
+              <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
+            
+              <a href="/tags/%E6%8E%92%E5%BA%8F/">排序</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/09/15/Math/Theory/%E6%A6%82%E7%8E%87%E8%AE%BA/%E5%B8%B8%E8%A7%81%E5%88%86%E5%B8%83/">常见分布</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/09/15/Math/Theory/%E6%A6%82%E7%8E%87%E8%AE%BA/%E5%B8%B8%E8%A7%81%E5%88%86%E5%B8%83/">
+          
+          
+            
+          
+          1. 离散分布
+设 q=1−pq = 1 - pq=1−p 。
+1.1 0-1 分布（伯努利分布）
+P(X=1)=pP(X=0)=q\begin{array}{c}
+P(X = 1) = p \\
+P(X = 0) = q
 \end{array}
-prefix(S,i)=S[0..i]​
-真前缀指除了 SSS 本身的 SSS 的前缀。
-1.2 后缀 &a
+P(X=1)=pP(X=0)=q​
+1.2 二项分布（n 重伯努利分布）
+P(X=k)=Cnkpkqn−k\begin{array}{c}
+P(X = 
         </a>
       </p>
 
@@ -277,8 +477,8 @@ prefix(S,i)=S[0..i]​
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-09-03 16:05" pubdate>
-              2020-09-03
+            <time datetime="2020-09-15 11:27" pubdate>
+              2020-09-15
             </time>
           </div>
         
@@ -286,11 +486,9 @@ prefix(S,i)=S[0..i]​
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/ACM/">ACM</a>
+              <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/ACM/%E7%AE%97%E6%B3%95/">算法</a>
-            
-              <a href="/categories/ACM/%E7%AE%97%E6%B3%95/%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</a>
+              <a href="/categories/Technique/ProbabilityTheory/">ProbabilityTheory</a>
             
           </div>
         
@@ -298,11 +496,11 @@ prefix(S,i)=S[0..i]​
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/ACM/">ACM</a>
+              <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
+              <a href="/tags/ProbabilityTheory/">ProbabilityTheory</a>
             
-              <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</a>
+              <a href="/tags/%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/">概率论与数理统计</a>
             
           </div>
         
@@ -316,21 +514,29 @@ prefix(S,i)=S[0..i]​
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/09/03/ACM/%E7%AE%97%E6%B3%95/%E5%AD%97%E7%AC%A6%E4%B8%B2/KMP/">KMP</a>
+        <a href="/2020/09/14/MachineLearning/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%A6%82%E8%BF%B0/">机器学习概述</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/09/03/ACM/%E7%AE%97%E6%B3%95/%E5%AD%97%E7%AC%A6%E4%B8%B2/KMP/">
+        <a href="/2020/09/14/MachineLearning/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%A6%82%E8%BF%B0/">
           
           
             
           
-          1. 简介
-KMP 算法是一种优秀的字符串模式匹配算法，相对于暴力匹配方法来说，其改进在于：每当一趟匹配过程出现字符比较不相等时，不需回溯主串的 iii 指针，而是利用已经得到的「部分匹配」的结果将模式串向右「滑动」尽可能远的一段距离后（即回溯模式串的 jjj 指针），继续进行比较。
-2. 实现
+          1. 定义
+假设用 PPP 来评估计算机程序在某任务类 TTT 上的性能，若一个程序通过利用经验 EEE 在 TTT 中的任务上获得了性能改善，我们就说关于 TTT 和 PPP，该程序对 EEE 进行了学习。
+2. 分类
+
+机械学习
+示教学习
+类比学习
+归纳学习（主流技术，涵盖监督学习、无监督学习等，相当于「从样例中学习」）
+
+3. 归纳学习
+3.1 符号主义
 
 
-设模式串为 p1p2⋯pmp_1 p_2 \cdots p_mp1​p2​⋯pm​，主串为 s1s
+决策树：经典的决策树学习以信息论
         </a>
       </p>
 
@@ -338,8 +544,8 @@ KMP 算法是一种优秀的字符串模式匹配算法，相对于暴力匹配�
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-09-03 09:56" pubdate>
-              2020-09-03
+            <time datetime="2020-09-14 22:32" pubdate>
+              2020-09-14
             </time>
           </div>
         
@@ -347,11 +553,9 @@ KMP 算法是一种优秀的字符串模式匹配算法，相对于暴力匹配�
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/ACM/">ACM</a>
+              <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/ACM/%E7%AE%97%E6%B3%95/">算法</a>
-            
-              <a href="/categories/ACM/%E7%AE%97%E6%B3%95/%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</a>
+              <a href="/categories/Technique/MachineLearning/">MachineLearning</a>
             
           </div>
         
@@ -359,11 +563,11 @@ KMP 算法是一种优秀的字符串模式匹配算法，相对于暴力匹配�
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/ACM/">ACM</a>
+              <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
+              <a href="/tags/MachineLearning/">MachineLearning</a>
             
-              <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</a>
+              <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</a>
             
           </div>
         
@@ -377,86 +581,19 @@ KMP 算法是一种优秀的字符串模式匹配算法，相对于暴力匹配�
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/09/02/ACM/%E7%AE%97%E6%B3%95/%E5%AD%97%E7%AC%A6%E4%B8%B2/%E5%AD%97%E5%85%B8%E6%A0%91/%E5%AD%97%E5%85%B8%E6%A0%91/">字典树</a>
+        <a href="/2020/09/12/ACM/%E9%A2%98%E8%A7%A3/UVA437%E3%80%8CThe%20Tower%20of%20Babylon%E3%80%8D/">UVA437「The Tower of Babylon」</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/09/02/ACM/%E7%AE%97%E6%B3%95/%E5%AD%97%E7%AC%A6%E4%B8%B2/%E5%AD%97%E5%85%B8%E6%A0%91/%E5%AD%97%E5%85%B8%E6%A0%91/">
-          
-          
-            
-          
-          1. 简介
-字典树（Trie）用边来代表字母，从根结点到树上某一结点的路径就代表了一个字符串。
-
-2. 实现
-
-由于字典树中的字符串都是从根结点开始，于是我们可以通过标记字符串的终止结点来记录已经插入字典树中的字符串。
-我们用 δ(u,c)\delta(u,c)δ(u,c) 表示结点 uuu 的 ccc 字符指向的下一结点，即在结点 uuu 代表的字符串后面添加一个字符 ccc 形成的字符串的结点
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-09-02 09:27" pubdate>
-              2020-09-02
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/ACM/">ACM</a>
-            
-              <a href="/categories/ACM/%E7%AE%97%E6%B3%95/">算法</a>
-            
-              <a href="/categories/ACM/%E7%AE%97%E6%B3%95/%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/ACM/">ACM</a>
-            
-              <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
-            
-              <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</a>
-            
-              <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E7%AE%97%E6%B3%95/">数据结构 算法</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/09/01/ACM/%E9%A2%98%E8%A7%A3/P2580%E3%80%8C%E4%BA%8E%E6%98%AF%E4%BB%96%E9%94%99%E8%AF%AF%E7%9A%84%E7%82%B9%E5%90%8D%E5%BC%80%E5%A7%8B%E4%BA%86%E3%80%8D/">P2580「于是他错误的点名开始了」</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/09/01/ACM/%E9%A2%98%E8%A7%A3/P2580%E3%80%8C%E4%BA%8E%E6%98%AF%E4%BB%96%E9%94%99%E8%AF%AF%E7%9A%84%E7%82%B9%E5%90%8D%E5%BC%80%E5%A7%8B%E4%BA%86%E3%80%8D/">
+        <a href="/2020/09/12/ACM/%E9%A2%98%E8%A7%A3/UVA437%E3%80%8CThe%20Tower%20of%20Babylon%E3%80%8D/">
           
           
             
           
           1. 题目
-题目链接：P2580「于是他错误的点名开始了」 。
-题目背景
-XS中学化学竞赛组教练是一个酷爱炉石的人。
-他会一边搓炉石一边点名以至于有一天他连续点到了某个同学两次，然后正好被路过的校长发现了然后就是一顿欧拉欧拉欧拉（详情请见已结束比赛 CON900）。
-题目描述
-这之后校长任命你为特派探员，每天记录他的点名。校长会提供化学竞赛学生的人数和名单，而你需要告诉校长他有没有点错名。（为什么
+题目链接：UVA437「The Tower of Babylon」 。
+Description
+Perhaps you have heard of the legend of the Tower of Babylon. Nowadays many details of this tale have been forgotten. So now, in line with the edu
         </a>
       </p>
 
@@ -464,8 +601,8 @@ XS中学化学竞赛组教练是一个酷爱炉石的人。
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-09-01 23:51" pubdate>
-              2020-09-01
+            <time datetime="2020-09-12 11:51" pubdate>
+              2020-09-12
             </time>
           </div>
         
@@ -473,15 +610,19 @@ XS中学化学竞赛组教练是一个酷爱炉石的人。
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/ACM/">ACM</a>
+              <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/ACM/%E9%A2%98%E8%A7%A3/">题解</a>
+              <a href="/categories/Technique/ACM/">ACM</a>
+            
+              <a href="/categories/Technique/ACM/%E9%A2%98%E8%A7%A3/">题解</a>
             
           </div>
         
         
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
             
               <a href="/tags/ACM/">ACM</a>
             
@@ -499,33 +640,19 @@ XS中学化学竞赛组教练是一个酷爱炉石的人。
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/09/01/Math/Theory/%E5%9B%BE%E8%AE%BA/%E5%B9%B3%E9%9D%A2%E5%9B%BE/">平面图</a>
+        <a href="/2020/09/10/ACM/%E9%A2%98%E8%A7%A3/CF1407D%E3%80%8CDiscrete%20Centrifugal%20Jumps%E3%80%8D/">CF1407D「Discrete Centrifugal Jumps」</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/09/01/Math/Theory/%E5%9B%BE%E8%AE%BA/%E5%B9%B3%E9%9D%A2%E5%9B%BE/">
+        <a href="/2020/09/10/ACM/%E9%A2%98%E8%A7%A3/CF1407D%E3%80%8CDiscrete%20Centrifugal%20Jumps%E3%80%8D/">
           
           
             
           
-          1. 定义
-1.1 平面图 &amp; 非平面图
-
-
-如果能够将无向图 GGG 画在平面上使得除顶点处外无边相交，则称 GGG 为可平面图，简称平面图。
-
-
-画出的无边相交的图称作 GGG 的平面嵌入。
-
-
-无平面嵌入的图称作非平面图。
-
-
-2. 性质
-
-平面图的子图都是平面图，非平面图的母图都是非平面图。
-
-
+          1. 题目
+题目链接：CF1407D「Discrete Centrifugal Jumps」 。
+Description
+There are nnn beautiful skyscrapers in New York, the height of the iii-th one is hih_ihi​. Today some villains have set on fire first n−1n-
         </a>
       </p>
 
@@ -533,8 +660,8 @@ XS中学化学竞赛组教练是一个酷爱炉石的人。
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-09-01 22:30" pubdate>
-              2020-09-01
+            <time datetime="2020-09-10 13:21" pubdate>
+              2020-09-10
             </time>
           </div>
         
@@ -542,11 +669,11 @@ XS中学化学竞赛组教练是一个酷爱炉石的人。
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/Math/">Math</a>
+              <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Math/Theory/">Theory</a>
+              <a href="/categories/Technique/ACM/">ACM</a>
             
-              <a href="/categories/Math/Theory/%E5%9B%BE%E8%AE%BA/">图论</a>
+              <a href="/categories/Technique/ACM/%E9%A2%98%E8%A7%A3/">题解</a>
             
           </div>
         
@@ -554,11 +681,11 @@ XS中学化学竞赛组教练是一个酷爱炉石的人。
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/Math/">Math</a>
+              <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Theory/">Theory</a>
+              <a href="/tags/ACM/">ACM</a>
             
-              <a href="/tags/%E5%9B%BE%E8%AE%BA/">图论</a>
+              <a href="/tags/%E9%A2%98%E8%A7%A3/">题解</a>
             
           </div>
         
@@ -572,24 +699,19 @@ XS中学化学竞赛组教练是一个酷爱炉石的人。
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/09/01/Math/Theory/%E5%9B%BE%E8%AE%BA/%E6%94%AF%E9%85%8D%E9%9B%86%E3%80%81%E7%8B%AC%E7%AB%8B%E9%9B%86%E3%80%81%E8%A6%86%E7%9B%96%E9%9B%86/">支配集、独立集、覆盖集</a>
+        <a href="/2020/09/09/ACM/%E9%A2%98%E8%A7%A3/CF991F%E3%80%8CTree%20Destruction%E3%80%8D/">CF991F「Tree Destruction」</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/09/01/Math/Theory/%E5%9B%BE%E8%AE%BA/%E6%94%AF%E9%85%8D%E9%9B%86%E3%80%81%E7%8B%AC%E7%AB%8B%E9%9B%86%E3%80%81%E8%A6%86%E7%9B%96%E9%9B%86/">
+        <a href="/2020/09/09/ACM/%E9%A2%98%E8%A7%A3/CF991F%E3%80%8CTree%20Destruction%E3%80%8D/">
           
           
             
           
-          1. 定义
-1.1 支配集
-
-
-设无向简单图 G=&lt;V,E&gt;,V∗⊆V
-G = \lt V,E \gt, V^* \subseteq V 
-G=&lt;V,E&gt;,V∗⊆V，若 ∀vi∈V−V∗,∃vj∈V∗
-\forall v_i \in V - V^*, \exists v_j \in V^*
-∀vi​∈V−V∗,∃vj​∈V∗ 使得 (vi,Vj)∈E(v_i,V_j) \i
+          1. 题目
+题目链接：CF991F「Tree Destruction」 。
+Description
+You are given an unweighted tree with nnn vertices. Then n−1n - 1n−1 following operations are applied to the tree. A single operation consists of the 
         </a>
       </p>
 
@@ -597,8 +719,8 @@ G=&lt;V,E&gt;,V∗⊆V，若 ∀vi∈V−V∗,∃vj∈V∗
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-09-01 22:13" pubdate>
-              2020-09-01
+            <time datetime="2020-09-09 15:19" pubdate>
+              2020-09-09
             </time>
           </div>
         
@@ -606,11 +728,11 @@ G=&lt;V,E&gt;,V∗⊆V，若 ∀vi∈V−V∗,∃vj∈V∗
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/Math/">Math</a>
+              <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Math/Theory/">Theory</a>
+              <a href="/categories/Technique/ACM/">ACM</a>
             
-              <a href="/categories/Math/Theory/%E5%9B%BE%E8%AE%BA/">图论</a>
+              <a href="/categories/Technique/ACM/%E9%A2%98%E8%A7%A3/">题解</a>
             
           </div>
         
@@ -618,13 +740,11 @@ G=&lt;V,E&gt;,V∗⊆V，若 ∀vi∈V−V∗,∃vj∈V∗
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/Math/">Math</a>
+              <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Theory/">Theory</a>
+              <a href="/tags/ACM/">ACM</a>
             
-              <a href="/tags/%E5%9B%BE%E8%AE%BA/">图论</a>
-            
-              <a href="/tags/math/">math</a>
+              <a href="/tags/%E9%A2%98%E8%A7%A3/">题解</a>
             
           </div>
         
@@ -638,18 +758,20 @@ G=&lt;V,E&gt;,V∗⊆V，若 ∀vi∈V−V∗,∃vj∈V∗
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/09/01/Math/Modeling/%E6%8E%92%E9%98%9F%E8%AE%BA%E6%A8%A1%E5%9E%8B/">排队论模型</a>
+        <a href="/2020/09/08/ACM/%E9%A2%98%E8%A7%A3/CF1405D%E3%80%8CTree%20Tag%E3%80%8D/">CF1405D「Tree Tag」</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/09/01/Math/Modeling/%E6%8E%92%E9%98%9F%E8%AE%BA%E6%A8%A1%E5%9E%8B/">
+        <a href="/2020/09/08/ACM/%E9%A2%98%E8%A7%A3/CF1405D%E3%80%8CTree%20Tag%E3%80%8D/">
           
           
             
           
-          1. 简介
-我们使用六个符号表示排队模型，在符号之间用斜线隔开，记为 X/Y/Z/A/B/C 。第一个符号 X 表示顾客到达流或顾客到达间隔时间的分布；第二个符号 Y 表示服务时间的分布；第三个符号 Z 表示服务台数目；第四个符号 A 是系统容量限制；第五个符号 B 是顾客源数目；第六个符号 C 表示的是服务规则，例如先到先服务 FCFS， 后到先服务 LCFS 等。
-2. Little（利特尔）
+          1. 题目
+题目链接：CF1405D「Tree Tag」 。
+DESCRIPTION
+Alice and Bob are playing a fun game of tree tag.
+The game is played on a tree of nnn vertices numbered from 111 to nnn. Recall that a tree on nnn vertices i
         </a>
       </p>
 
@@ -657,8 +779,8 @@ G=&lt;V,E&gt;,V∗⊆V，若 ∀vi∈V−V∗,∃vj∈V∗
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-09-01 21:00" pubdate>
-              2020-09-01
+            <time datetime="2020-09-08 19:58" pubdate>
+              2020-09-08
             </time>
           </div>
         
@@ -666,86 +788,11 @@ G=&lt;V,E&gt;,V∗⊆V，若 ∀vi∈V−V∗,∃vj∈V∗
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/Math/">Math</a>
+              <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Math/Modeling/">Modeling</a>
+              <a href="/categories/Technique/ACM/">ACM</a>
             
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Math/">Math</a>
-            
-              <a href="/tags/Modeling/">Modeling</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/08/31/Math/Theory/%E5%9B%BE%E8%AE%BA/%E6%AC%A7%E6%8B%89%E5%9B%BE/">欧拉图</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/08/31/Math/Theory/%E5%9B%BE%E8%AE%BA/%E6%AC%A7%E6%8B%89%E5%9B%BE/">
-          
-          
-            
-          
-          1. 定义
-1.1 欧拉通路 &amp; 欧拉回路
-
-
-通过图（无向图或有向图）中所有边一次且仅一次行遍所有顶点的通路称作欧拉通路。
-
-
-通过图（无向图或有向图）中所有边一次且仅一次行遍所有顶点的回路称作欧拉回路。
-
-
-【注】规定平凡图是欧拉图。
-1.2 欧拉图 &amp; 半欧拉图
-
-
-具有欧拉回路的图称为欧拉图。
-
-
-具有欧拉通路而无欧拉回路的图称作半欧拉图。
-
-
-2. 性质
-
-
-无向图 GG
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-08-31 20:10" pubdate>
-              2020-08-31
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Math/">Math</a>
-            
-              <a href="/categories/Math/Theory/">Theory</a>
-            
-              <a href="/categories/Math/Theory/%E5%9B%BE%E8%AE%BA/">图论</a>
+              <a href="/categories/Technique/ACM/%E9%A2%98%E8%A7%A3/">题解</a>
             
           </div>
         
@@ -753,92 +800,11 @@ G=&lt;V,E&gt;,V∗⊆V，若 ∀vi∈V−V∗,∃vj∈V∗
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/Math/">Math</a>
+              <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Theory/">Theory</a>
+              <a href="/tags/ACM/">ACM</a>
             
-              <a href="/tags/%E5%9B%BE%E8%AE%BA/">图论</a>
-            
-              <a href="/tags/math/">math</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/08/31/Math/Theory/%E5%9B%BE%E8%AE%BA/%E5%93%88%E5%AF%86%E9%A1%BF%E5%9B%BE/">哈密顿图</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/08/31/Math/Theory/%E5%9B%BE%E8%AE%BA/%E5%93%88%E5%AF%86%E9%A1%BF%E5%9B%BE/">
-          
-          
-            
-          
-          1. 定义
-1.1 哈密顿通路 &amp; 哈密顿回路
-
-
-经过图（无向图或有向图）中所有顶点一次且仅一次的通路称作哈密顿通路。
-
-
-经过图（无向图或有向图）中所有顶点一次且仅一次的回路称作哈密顿回路。
-
-
-1.2 哈密顿图 &amp; 半哈密顿图
-
-
-具有哈密顿回路的图称作哈密顿图。
-
-
-具有哈密顿通路但不具有哈密顿回路的图称作半哈密顿图。
-
-
-【注】规定平凡图是哈密顿图。
-2. 性质
-【注】p
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-08-31 15:16" pubdate>
-              2020-08-31
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Math/">Math</a>
-            
-              <a href="/categories/Math/Theory/">Theory</a>
-            
-              <a href="/categories/Math/Theory/%E5%9B%BE%E8%AE%BA/">图论</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Math/">Math</a>
-            
-              <a href="/tags/Theory/">Theory</a>
-            
-              <a href="/tags/%E5%9B%BE%E8%AE%BA/">图论</a>
-            
-              <a href="/tags/math/">math</a>
+              <a href="/tags/%E9%A2%98%E8%A7%A3/">题解</a>
             
           </div>
         
@@ -850,7 +816,7 @@ G=&lt;V,E&gt;,V∗⊆V，若 ∀vi∈V−V∗,∃vj∈V∗
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/page/23/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/22/#board">22</a><a class="page-number" href="/page/23/#board">23</a><span class="page-number current">24</span><a class="page-number" href="/page/25/#board">25</a><a class="page-number" href="/page/26/#board">26</a><span class="space">&hellip;</span><a class="page-number" href="/page/42/#board">42</a><a class="extend next" rel="next" href="/page/25/#board"><i class="iconfont icon-arrowright"></i></a>
+      <a class="extend prev" rel="prev" href="/page/23/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/22/#board">22</a><a class="page-number" href="/page/23/#board">23</a><span class="page-number current">24</span><a class="page-number" href="/page/25/#board">25</a><a class="page-number" href="/page/26/#board">26</a><span class="space">&hellip;</span><a class="page-number" href="/page/44/#board">44</a><a class="extend next" rel="next" href="/page/25/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 
