@@ -62,7 +62,7 @@
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
-<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
 </head>
 
 
@@ -258,7 +258,7 @@
 <li><code>__LINE__</code>：数字格式，指示当前处理的代码行号。</li>
 <li><code>#line</code>：用来修改当前行的下一行的行号，即下一行的 <code>__LINE__</code> 由 <code>#line</code> 所指定的数字开始。</li>
 </ul>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>	<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Line: %d\n&quot;</span>, __LINE__);		<span class="hljs-comment">// 5</span><br>	<span class="hljs-meta">#<span class="hljs-meta-keyword">line</span> 100</span><br>	<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Line: %d\n&quot;</span>, __LINE__);	 	<span class="hljs-comment">// 100</span><br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>	<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Line: %d\n&quot;</span>, __LINE__);		<span class="hljs-comment">// 5</span><br>	<span class="hljs-meta">#<span class="hljs-keyword">line</span> 100</span><br>	<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Line: %d\n&quot;</span>, __LINE__);	 	<span class="hljs-comment">// 100</span><br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
 <p>【注】<code>__FILE__</code> 和 <code>__LINE__</code> 宏主要用于错误处理，可以很方便地定位错误位置。</p>
 <ul>
 <li>C99 引入了 <code>__func__</code>，它和 GCC 提供的 <code>__FUNCTION__</code> 功能类似，二者都是字符串格式，指示当前处理的函数名。</li>

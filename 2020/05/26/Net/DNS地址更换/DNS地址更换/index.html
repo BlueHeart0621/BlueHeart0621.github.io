@@ -62,7 +62,7 @@
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
-<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
 </head>
 
 
@@ -271,12 +271,12 @@
 接着使用如下命令刷新系统 DNS 地址：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo resolvconf -u<br></code></pre></td></tr></table></figure>
 <p>判断系统 DNS 地址是否已更新，可以通过查看此种更改前后 <code>/etc/resolv.conf</code> 文件内容：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">cat /etc/resolv.conf<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cat</span> /etc/resolv.conf<br></code></pre></td></tr></table></figure>
 <h2 id="3-Windows-更改-DNS-地址">3. Windows 更改 DNS 地址</h2>
 <p>依次打开【网络和共享中心】-&gt;【更改适配器设置】，选择需要更换 DNS 的网络，右键【属性】，在网络选项卡下方双击【Internet 协议版本 4(TCP/IPv4)】进入其属性面板，然后到【常规】选项卡，选中【使用下面的 DNS 服务器地址】，就可以在右侧设置新 DNS 地址了。</p>
 <p><img src="/img/Net/DNS%E5%9C%B0%E5%9D%80%E6%9B%B4%E6%8D%A2/Windows%E4%BF%AE%E6%94%B9DNS.png" srcset="/image/loading.gif" lazyload alt="Windows修改DNS" /><br />
 修改完后可手动刷新下 DNS 缓存：</p>
-<figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs dos"><span class="hljs-built_in">ipconfig</span> /flushdns<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ipconfig /flushdns<br></code></pre></td></tr></table></figure>
 <h2 id="附录">附录</h2>
 <ul>
 <li>公共 DNS 服务器地址</li>

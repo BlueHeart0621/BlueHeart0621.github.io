@@ -46,7 +46,7 @@
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
-<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
 </head>
 
 
@@ -197,19 +197,26 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/01/10/Research/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/">论文笔记</a>
+        <a href="/2021/01/16/Math/Modeling/%E4%BC%A0%E6%9F%93%E7%97%85%E6%A8%A1%E5%9E%8B/%E4%BC%A0%E6%9F%93%E7%97%85%E6%A8%A1%E5%9E%8B/">传染病模型</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/01/10/Research/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/">
+        <a href="/2021/01/16/Math/Modeling/%E4%BC%A0%E6%9F%93%E7%97%85%E6%A8%A1%E5%9E%8B/%E4%BC%A0%E6%9F%93%E7%97%85%E6%A8%A1%E5%9E%8B/">
           
           
             
           
-          1. Learning Continuous Image Representation with Local Implicit Image Function
+          
 
-首先利用 SOTA 的超分网络中的 Encoder 部分得到 Feature Map，然后利用 LIIF（本质为 MLP）将 Feature Map 超分到任意分辨率。
-Local Implicit Image Function（LIIF）
+基础定义
+
+
+将传染病范围内的人群分为以下类别：
+
+SSS(Susceptible)类：指未得病，但与感染者接触后容易收到感染的人。
+EEE(Exposed)类：指接触过感染者，但暂时没有传播的能力的人。
+III(Infectious)类：指染上传染病，具有传播能力的人。（可以传播给SSS类人员，将其变成EEE类或III类成员）
+RRR(Recovered / Removed)类：指病愈而具有
         </a>
       </p>
 
@@ -217,8 +224,8 @@ Local Implicit Image Function（LIIF）
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-10 11:12" pubdate>
-              2021-01-10
+            <time datetime="2021-01-16 18:06" pubdate>
+              2021-01-16
             </time>
           </div>
         
@@ -228,7 +235,9 @@ Local Implicit Image Function（LIIF）
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/Research/">Research</a>
+              <a href="/categories/Technique/Math/">Math</a>
+            
+              <a href="/categories/Technique/Math/Modeling/">Modeling</a>
             
           </div>
         
@@ -238,7 +247,9 @@ Local Implicit Image Function（LIIF）
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Research/">Research</a>
+              <a href="/tags/Math/">Math</a>
+            
+              <a href="/tags/Modeling/">Modeling</a>
             
           </div>
         
@@ -252,18 +263,19 @@ Local Implicit Image Function（LIIF）
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/12/31/Research/AdversarialNetwork/AdversarialNetwork/">AdversarialNetwork</a>
+        <a href="/2021/01/16/Math/Theory/%E5%88%9A%E6%80%A7%E6%96%B9%E7%A8%8B/%E5%88%9A%E6%80%A7%E6%96%B9%E7%A8%8B/">刚性方程</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/12/31/Research/AdversarialNetwork/AdversarialNetwork/">
+        <a href="/2021/01/16/Math/Theory/%E5%88%9A%E6%80%A7%E6%96%B9%E7%A8%8B/%E5%88%9A%E6%80%A7%E6%96%B9%E7%A8%8B/">
           
           
             
           
-          1. 对抗样本迁移性问题
-
-
+          摘自Wikipedia——刚性方程。
+1.  定义
+在数学领域中，刚性方程（stiffness equation）是指一个微分方程，其数值分析的解只有在时间间隔很小时才会稳定，只要时间间隔略大，其解就会不稳定。目前很难去精确地去定义哪些微分方程是刚性方程，然而粗略而言，若此方程式中包含使其快速变动的项，则其为刚性方程。
+在积分微分方程时，若某一区域的解曲线的变化很大，会希望在这个区域的积分间隔密一
         </a>
       </p>
 
@@ -271,8 +283,8 @@ Local Implicit Image Function（LIIF）
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-12-31 17:01" pubdate>
-              2020-12-31
+            <time datetime="2021-01-16 18:06" pubdate>
+              2021-01-16
             </time>
           </div>
         
@@ -282,7 +294,9 @@ Local Implicit Image Function（LIIF）
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/Research/">Research</a>
+              <a href="/categories/Technique/Math/">Math</a>
+            
+              <a href="/categories/Technique/Math/Theory/">Theory</a>
             
           </div>
         
@@ -292,7 +306,135 @@ Local Implicit Image Function（LIIF）
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Research/">Research</a>
+              <a href="/tags/Math/">Math</a>
+            
+              <a href="/tags/Theory/">Theory</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/01/16/System/CSAPP/%E6%B5%AE%E7%82%B9%E6%95%B0/%E6%B5%AE%E7%82%B9%E6%95%B0/">浮点数</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/01/16/System/CSAPP/%E6%B5%AE%E7%82%B9%E6%95%B0/%E6%B5%AE%E7%82%B9%E6%95%B0/">
+          
+          
+            
+          
+          1. IEEE 754 标准
+IEEE 754 浮点标准用 V=(−1)s×M×2EV = (-1)^s \times M \times 2^EV=(−1)s×M×2E 的形式来表示一个数。
+
+
+
+符号位（s）：指明数的正负，即 VVV 中的 sss。
+
+
+阶码（exp）：对浮点数加权，即 VVV 中的 EEE。
+
+
+尾数（frac）：二进制小数，即 VVV 中的 MMM，范围为 1∼2−ε1 \
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-16 18:06" pubdate>
+              2021-01-16
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/System/">System</a>
+            
+              <a href="/categories/Technique/System/CSAPP/">CSAPP</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/System/">System</a>
+            
+              <a href="/tags/CSAPP/">CSAPP</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/01/15/Python/Torch/Torch%E5%87%BD%E6%95%B0/">Torch函数</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/01/15/Python/Torch/Torch%E5%87%BD%E6%95%B0/">
+          
+          
+            
+          
+          torch.clamp(input, min, max, out=None) → Tensor
+将 input 张量中的每个元素值截断到区间 [min, max] 中。
+torch.stack(tensors, dim=0, out=None) → Tensor
+对 tensors 沿指定维度拼接，但会额外增加一维拼接的维度，即拼接时来自于 tensors 中每个 tensor 中的拼接元素单独组
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-15 22:44" pubdate>
+              2021-01-15
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Python/">Python</a>
+            
+              <a href="/categories/Technique/Python/Torch/">Torch</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/Python/">Python</a>
+            
+              <a href="/tags/Torch/">Torch</a>
             
           </div>
         
@@ -375,11 +517,11 @@ i.i.d. ：独立同分布
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
-            
               <a href="/tags/Math/">Math</a>
             
               <a href="/tags/Theory/">Theory</a>
+            
+              <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
             
           </div>
         
@@ -426,7 +568,11 @@ i.i.d. ：独立同分布
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/SetTheory/">SetTheory</a>
+              <a href="/categories/Technique/Math/">Math</a>
+            
+              <a href="/categories/Technique/Math/Theory/">Theory</a>
+            
+              <a href="/categories/Technique/Math/Theory/%E9%9B%86%E5%90%88%E8%AE%BA/">集合论</a>
             
           </div>
         
@@ -436,7 +582,9 @@ i.i.d. ：独立同分布
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/SetTheory/">SetTheory</a>
+              <a href="/tags/Math/">Math</a>
+            
+              <a href="/tags/Theory/">Theory</a>
             
               <a href="/tags/%E9%9B%86%E5%90%88%E8%AE%BA/">集合论</a>
             
@@ -452,11 +600,11 @@ i.i.d. ：独立同分布
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/12/18/DistributedSystem/%E5%88%86%E5%B8%83%E5%BC%8F%E6%A1%86%E6%9E%B6%E7%B3%BB%E5%88%97%E6%96%87%E6%A1%A3/">分布式架构</a>
+        <a href="/2020/12/18/System/DistributedSystem/%E5%88%86%E5%B8%83%E5%BC%8F%E6%A1%86%E6%9E%B6%E7%B3%BB%E5%88%97%E6%96%87%E6%A1%A3/">分布式架构</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/12/18/DistributedSystem/%E5%88%86%E5%B8%83%E5%BC%8F%E6%A1%86%E6%9E%B6%E7%B3%BB%E5%88%97%E6%96%87%E6%A1%A3/">
+        <a href="/2020/12/18/System/DistributedSystem/%E5%88%86%E5%B8%83%E5%BC%8F%E6%A1%86%E6%9E%B6%E7%B3%BB%E5%88%97%E6%96%87%E6%A1%A3/">
           
           
             
@@ -484,7 +632,9 @@ NCCL ：https://docs.nvidia.com/deeplearning/nccl/user-guide/docs/index.html（�
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/DistributedSystem/">DistributedSystem</a>
+              <a href="/categories/Technique/System/">System</a>
+            
+              <a href="/categories/Technique/System/DistributedSystem/">DistributedSystem</a>
             
           </div>
         
@@ -493,67 +643,10 @@ NCCL ：https://docs.nvidia.com/deeplearning/nccl/user-guide/docs/index.html（�
             <i class="iconfont icon-tags"></i>
             
               <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/System/">System</a>
             
               <a href="/tags/DistributedSystem/">DistributedSystem</a>
-            
-              <a href="/tags/%E5%88%86%E5%B8%83%E5%BC%8F/">分布式</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/12/13/Research/ML%E3%80%81CV%E6%96%B9%E5%90%91%E4%BC%9A%E8%AE%AE%E6%9C%9F%E5%88%8A%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99%E6%B1%87%E6%80%BB/">ML、CV方向会议期刊相关资料汇总</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/12/13/Research/ML%E3%80%81CV%E6%96%B9%E5%90%91%E4%BC%9A%E8%AE%AE%E6%9C%9F%E5%88%8A%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99%E6%B1%87%E6%80%BB/">
-          
-          
-            
-          
-          1. 会议
-1.1 会议检索
-
-2019 中国计算机学会推荐国际学术会议和期刊目录：https://www.ccf.org.cn/c/2019-04-25/663625.shtml
-2019 清华大学计算机学科群推荐学术会议和期刊列表：https://numbda.cs.tsinghua.edu.cn/~yuwj/TH-CPL.pdf
-2020 清华大学各院系（学科）重要国际学术会议目录：http
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-12-13 10:47" pubdate>
-              2020-12-13
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/Research/">Research</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/Research/">Research</a>
             
           </div>
         
@@ -579,7 +672,7 @@ NCCL ：https://docs.nvidia.com/deeplearning/nccl/user-guide/docs/index.html（�
           【注】持续更新中……
 
 CMake ：https://cliutils.gitlab.io/modern-cmake/（英文）、https://cmake.org/cmake/help/latest/（英文）、https://pabloariasal.github.io/2018/02/19/its-time-to-do-cmake-right/（英文）
-GCC：https://gcc.gnu.o
+Make：https://seisman.
         </a>
       </p>
 
@@ -726,69 +819,6 @@ Python 提供虚拟环境，虚拟环境是 Python 解释器的一个私有副�
               <a href="/tags/Python/">Python</a>
             
               <a href="/tags/Torch/">Torch</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/12/03/Python/Python%E7%9B%B8%E5%85%B3%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99%E6%B1%87%E6%80%BB/">Python相关学习资料汇总</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/12/03/Python/Python%E7%9B%B8%E5%85%B3%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99%E6%B1%87%E6%80%BB/">
-          
-          
-            
-          
-          以下资料按字母表顺序排列
-
-Abseil : https://abseil.io/docs/python/quickstart
-
-
-Abseil 是用于构建 Python 应用程序的 Python 库代码，主要用于处理程序的命令行输入。
-
-
-Airium : https://pypi.org/project/airium/
-
-
-Airium 是一个简单易用的 Python 库，让用户能够用 Pyt
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-12-03 16:55" pubdate>
-              2020-12-03
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/Python/">Python</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/Python/">Python</a>
             
           </div>
         

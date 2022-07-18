@@ -62,7 +62,7 @@
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
-<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
 </head>
 
 
@@ -253,7 +253,7 @@
             <div class="markdown-body">
               <h2 id="1-添加国内源">1. 添加国内源</h2>
 <h3 id="1-1-备份文件">1.1 备份文件</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo <span class="hljs-built_in">cp</span> /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak<br></code></pre></td></tr></table></figure>
 <h3 id="1-2-编辑文件">1.2 编辑文件</h3>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo vim /etc/pacman.d/mirrorlist<br></code></pre></td></tr></table></figure>
 <p>添加的源从上到下优先级依次降低。</p>
@@ -269,13 +269,13 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo pacman-mirrors -c China -g<br></code></pre></td></tr></table></figure>
 <h2 id="2-添加社区源">2. 添加社区源</h2>
 <h3 id="2-1-备份文件">2.1 备份文件</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo cp /etc/pacman.conf /etc/pacman.conf.bak<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo <span class="hljs-built_in">cp</span> /etc/pacman.conf /etc/pacman.conf.bak<br></code></pre></td></tr></table></figure>
 <h3 id="2-2-编辑文件">2.2 编辑文件</h3>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo vim /etc/pacman.conf<br></code></pre></td></tr></table></figure>
 <ul>
 <li>添加国内镜像（只能选一个，以下以清华源为例）</li>
 </ul>
-<figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs vala">[archlinuxcn]<br>SigLevel = Optional TrustAll<br><span class="hljs-meta"># 官方源</span><br><span class="hljs-meta">#Server   = http://repo.archlinuxcn.org/$arch</span><br><span class="hljs-meta"># 清华源</span><br>Server = https:<span class="hljs-comment">//mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch</span><br><span class="hljs-meta"># 中科大源</span><br><span class="hljs-meta">#Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch</span><br><span class="hljs-meta"># 163 源</span><br><span class="hljs-meta">#Server = http://mirrors.163.com/archlinux-cn/$arch</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs shell">[archlinuxcn]<br>SigLevel = Optional TrustAll<br><span class="hljs-meta prompt_"># </span><span class="language-bash">官方源</span><br><span class="hljs-meta prompt_">#</span><span class="language-bash">Server   = http://repo.archlinuxcn.org/<span class="hljs-variable">$arch</span></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">清华源</span><br>Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch<br><span class="hljs-meta prompt_"># </span><span class="language-bash">中科大源</span><br><span class="hljs-meta prompt_">#</span><span class="language-bash">Server = https://mirrors.ustc.edu.cn/archlinuxcn/<span class="hljs-variable">$arch</span></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">163 源</span><br><span class="hljs-meta prompt_">#</span><span class="language-bash">Server = http://mirrors.163.com/archlinux-cn/<span class="hljs-variable">$arch</span></span><br></code></pre></td></tr></table></figure>
 <h2 id="3-更新源-导入-GPG-Key">3. 更新源 &amp; 导入 GPG Key</h2>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo pacman -Syy &amp;&amp; sudo pacman -S archlinuxcn-keyring<br></code></pre></td></tr></table></figure>
 <h2 id="4-添加-AUR-源">4. 添加 AUR 源</h2>
@@ -285,7 +285,7 @@
 <ul>
 <li>备份文件</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo cp /etc/yaourtrc /etc/yaourtrc.bak<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo <span class="hljs-built_in">cp</span> /etc/yaourtrc /etc/yaourtrc.bak<br></code></pre></td></tr></table></figure>
 <ul>
 <li>编辑文件</li>
 </ul>

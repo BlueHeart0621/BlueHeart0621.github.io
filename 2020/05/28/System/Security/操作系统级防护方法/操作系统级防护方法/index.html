@@ -1,0 +1,1054 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/image/self/portrait.jpg">
+  <link rel="icon" href="/image/self/portrait.jpg">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="一个记录各种笔记的小匣子^-^">
+  <meta name="author" content="BlueHeart0621">
+  <meta name="keywords" content="頑張れ">
+  
+    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script> <script src="/live2d-widget/autoload.js" type="text/javascript"></script> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
+  
+  <title>操作系统级防护方法 - お前はどこまで見えている</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"blueheart0621.github.io","root":"/","version":"1.8.9","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":"§"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/image/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":"c194cf0c8cbc33bfb846ba1329537d81","google":"G-SXJN0942X9","gtag":"G-D3DEHLLP3W","tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"A24MlA4oV7hlze3uNQiXDAIi-MdYXbMMI","app_key":"3moFK5Ao3TD4rjA1HCmPTSm6","server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>お前はどこまで見えている</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/image/covers/%E5%9B%9B%E6%9C%88%E6%98%AF%E4%BD%A0%E7%9A%84%E8%B0%8E%E8%A8%80-1.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="操作系统级防护方法">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2020-05-28 08:30" pubdate>
+        2020年5月28日 早上
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      4.1k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      45
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- LeanCloud 统计文章PV -->
+      <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="leancloud-page-views"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">操作系统级防护方法</h1>
+            
+            <div class="markdown-body">
+              <h2 id="1-操作系统安全问题">1. 操作系统安全问题</h2>
+<h3 id="1-1-计算机感染恶意软件或被入侵">1.1 计算机感染恶意软件或被入侵</h3>
+<ul>
+<li>运行了恶意代码（email 附件, 下载并执行了 trojan 木马, 运行了受感染的硬盘）</li>
+<li>运行了有 bug 的 daemon 程序（ftpd, httpd）</li>
+<li>运行了有 bug 的客户端程序（web 浏览器, mail 客户端）</li>
+<li>读取了有病毒和 bug 的文件</li>
+<li>配置错误（弱口令，guest 帐户，DEBUG options，不正确的访问控制配置，etc）</li>
+</ul>
+<h3 id="1-2-原因">1.2 原因</h3>
+<ul>
+<li>软件有漏洞（内存错误：缓冲区溢出、栈溢出、……）</li>
+<li>漏洞会被利用</li>
+<li>尽管有多层防御机制，但也会遭到破坏（没有一个安全机制是坚不可摧的）</li>
+<li>安全问题的发生多是因为访问控制不当</li>
+</ul>
+<h3 id="1-3-UNIX-访问控制的一些问题">1.3 UNIX 访问控制的一些问题</h3>
+<ul>
+<li>设计系统时仅考虑单机上的用户共享系统, 未考虑网络攻击和软件 bug</li>
+<li>粗粒度：访问控制时取决于 user id；但该一个 user 可能运行多个程序（一些程序是不可信的），这些程序以同样的权限运行，如果每个程序拥有各自有限的权限会提高安全性</li>
+<li>root 功能太强大</li>
+</ul>
+<h3 id="1-4-解决方法">1.4 解决方法</h3>
+<ul>
+<li>虚拟化限制</li>
+</ul>
+<blockquote>
+<ol>
+<li>限制进程在有限空间内，不影响其它进程</li>
+<li>三种虚拟化技术</li>
+</ol>
+</blockquote>
+<ul>
+<li>细粒度的、基于进程的强制访问控制（Mandatory Access Control）</li>
+</ul>
+<blockquote>
+<p>目的是更好的实现最小特权: 分配一个程序其需要的权限，不同于按用户进行权限划分</p>
+</blockquote>
+<ul>
+<li>root 权限分开</li>
+</ul>
+<h2 id="2-虚拟化限制方法">2. 虚拟化限制方法</h2>
+<h3 id="2-1-操作系统级虚拟化">2.1 操作系统级虚拟化</h3>
+<p>运行在单核下, 单操作系统上运行多个虚拟服务；服务提供者可以利用较低的代价提供主机服务。</p>
+<blockquote>
+<ol>
+<li>优点：性能高，建立和管理比较容易</li>
+<li>缺点：所有服务在单操作系统上，虚拟服务可能打破虚拟限制破坏操作系统</li>
+</ol>
+</blockquote>
+<ul>
+<li>chroot 系统调用：<br />
+改变当前进程和子进程到指定路径下的“根”目录，新的“根”目录（常称 jail）受真正的 root 的文件系统约束</li>
+</ul>
+<blockquote>
+<ol>
+<li>一般的目录架构：</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash">/ <br>/bin <br>/sbin <br>/usr/bin <br>/home <br></code></pre></td></tr></table></figure>
+<ol start="2">
+<li>chroot 的目录架构：</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash">/hell/ <br>/hell/bin <br>/hell/sbin<br>/hell/usr/bin <br>/hell/home  <br></code></pre></td></tr></table></figure>
+<ol start="3">
+<li>chroot 的作用</li>
+</ol>
+<blockquote>
+<ul>
+<li>限制被 chroot 的使用者所能执行的程序，如 SetUid 的程序，或是会造成 Load 的 Compiler 等等</li>
+<li>防止使用者存取某些特定文件，如 /etc/passwd</li>
+<li>防止入侵者 /bin/rm -rf /</li>
+<li>提供 Guest 服务</li>
+<li>增进系统的安全</li>
+<li>为一个运行的进程创建一个临时的 root 目录，并在新建的 root 目录中放入有限的应用</li>
+</ul>
+</blockquote>
+<ol start="4">
+<li>chroot 的优点</li>
+</ol>
+<blockquote>
+<ul>
+<li>增加了系统的安全性，限制了用户的权力：在经过 chroot 之后，在新根下将访问不到旧系统的根目录结构和文件，这样就增强了系统的安全性</li>
+<li>建立一个与原系统隔离的系统目录结构，方便用户的开发：使用 chroot 后，系统读取的是新根下的目录和文件，这是一个与原系统根下文件不相关的目录结构。在这个新的环境中，可以用来测试软件的静态编译以及一些与系统不相关的独立开发程序</li>
+<li>切换系统的根目录位置，引导 Linux 系统启动以及急救系统等：chroot 的作用就是切换系统的根位置，而这个作用最为明显的是在系统初始引导磁盘的处理过程中使用，从初始 RAM 磁盘 (initrd) 切换系统的根位置并执行真正的 init。另外，当系统出现一些问题时，我们也可以使用 chroot 来切换到一个临时的系统</li>
+</ul>
+</blockquote>
+<ol start="5">
+<li>chroot 的缺点</li>
+</ol>
+<blockquote>
+<ul>
+<li>仅 root 用户可运行 chroot：应防止用户将一个 setuid 程序(如, 一个假的 /etc/passwd 文件)放入一个特殊编制的 chroot 环境以避免受骗而获得高权限</li>
+<li>chroot 并非在所有系统上都完全安全：因为是 root 权限下的 chroot 环境，一旦攻破 chroot 会影响 root 安全</li>
+<li>chroot 环境也会影响其它进程和网络空间</li>
+<li>chroot 不能限制 I/O、带宽, 磁盘空间、CPU 时间等资源</li>
+</ul>
+</blockquote>
+<ol start="6">
+<li>chroot 的一些原则</li>
+</ol>
+<blockquote>
+<ul>
+<li>在chroot环境下以 non-root user 运行</li>
+<li>正确的 &quot;放弃&quot; 权限</li>
+</ul>
+<blockquote>
+<ol>
+<li>程序利用 saved uid 在 non-root user 和 root 用户切换</li>
+<li>利用无歧义函数 setresuid() seteuid(), setreuid()</li>
+</ol>
+</blockquote>
+<ul>
+<li>利用 chdir 显式进入 jail</li>
+<li>在 jail 环境中内容尽量少</li>
+<li>尽可能让 root 管理 jailed 文件</li>
+<li>限制 jail 内文件和目录的权限</li>
+<li>建立权限设置脚本</li>
+<li>不要在 jail 环境存放 /etc/passwd 文件</li>
+</ul>
+<blockquote>
+<ol>
+<li>/etc/passwd 跟 $CHROOT/etc/passwd 相同：被攻击者有机会得到 root 的 encrypted password；要保持 /etc/passwd 及 $CHROOT/etc/passwd 的同步性是个大问题</li>
+<li>/etc/passwd 跟 $CHROOT/etc/passwd 不同：可以把 $CHROOT/etc/passwd 中的重要人物（如 root）的密码拿掉，然后以比较复杂的方法修改 /usr/bin/login</li>
+</ol>
+</blockquote>
+<ul>
+<li>在建立 jail 环境前关闭文件描述符（在创建 jail 时，已打开的文件描述符能够通过 dup 被复制）</li>
+<li>chroot 配置了网络服务后，外部需要查看 chroot 环境的配置文件，从外部连接配置文件：<code>ln -s /chroot/named/etc/named.conf /etc/named.conf</code>（尽量让 root 管理配置文件，保持配置文件一致）</li>
+</ul>
+</blockquote>
+</blockquote>
+<ul>
+<li>FreeBSD 系统下 Jail</li>
+</ul>
+<blockquote>
+<ol>
+<li>
+<p>Jail 提供分散化的管理（partitioning）, 与虚拟机相似</p>
+</li>
+<li>
+<p>Jail 内的限制因素</p>
+</li>
+</ol>
+<blockquote>
+<ul>
+<li>访问文件名空间时仅受限于 jail 内部</li>
+<li>可限制绑定在指定 IP 地址下的网络资源</li>
+<li>使用系统资源、执行特权操作能力大大减少</li>
+<li>仅能与 jail 内其它进程交互</li>
+</ul>
+</blockquote>
+<ol start="3">
+<li>FreeBSD jail 的三个目标</li>
+</ol>
+<blockquote>
+<ul>
+<li>虚拟化: 每个 jail 是一个运行于单机的虚拟环境 ，拥有自己的文件、进程、用户、超级用户。在 jail 内部看起来和真实系统一样</li>
+<li>安全: 每个 jail 和其他部分无关联，破坏其他部分比较困难</li>
+<li>容易授权: 因为 jail 是受限环境, 管理员授权后对整个系统影响不大</li>
+</ul>
+</blockquote>
+<ol start="4">
+<li>FreeBSD jail 缺点</li>
+</ol>
+<blockquote>
+<ul>
+<li>FreeBSD jail 并不是真正的虚拟化，不同于虚拟机，不能运行不同的操作内核版本，利用原操作系统内核进行上级配置<br />
+所有虚拟服务共享同一内核，可利用操作系统的bugs 和安全漏洞进行攻击<br />
+没有聚簇和进程迁移能力, 主机内核和主机系统的单点失效影响所有虚拟服务</li>
+</ul>
+</blockquote>
+<ol start="5">
+<li>FreeBSD jail 安全</li>
+</ol>
+<blockquote>
+<ul>
+<li>FreeBSD jails 可有效增加服务安全性，因为jail 环境和其它部分是分离的</li>
+<li>在网络管理方面，安全性相比 chroot 要高很多</li>
+<li>对FreeBSD jail的限制：</li>
+</ul>
+<blockquote>
+<ol>
+<li>Jail 间进程不能互相干扰（ps 只能查看 jail 内进程）</li>
+<li>禁止访问和加载模块以防修改正在运行的内核. 禁止修改多数 sysctrls 配置和安全级别</li>
+<li>禁止修改网络配置, 包括接口和 IP 地址、禁止访问路由表。jail 仅能绑定指定 IP 地址，不可以修改防火墙规则</li>
+<li>禁止 Mounting、unmounting 文件系统。不能访问 Jail 外的目录</li>
+</ol>
+</blockquote>
+</blockquote>
+<ol start="6">
+<li>FreeBSD jail 优点</li>
+</ol>
+<blockquote>
+<ul>
+<li>可在不同 jail 中安装不同的 daemon</li>
+<li>jail 内管理员授权方便</li>
+</ul>
+<blockquote>
+<ol>
+<li>jail内的超级用户具有有限特权 (如，不能修改防火墙规则)</li>
+<li>很难越过jail环境，很难获得jail外系统环境信息</li>
+</ol>
+</blockquote>
+</blockquote>
+</blockquote>
+<h3 id="2-2-虚拟机">2.2 虚拟机</h3>
+<p>在用户进程中模拟硬件（模拟软件运行在主机 OS上，guest OS 运行在模拟软件上）</p>
+<ul>
+<li>优点：不修改 OS，可直接运行多个 guest OS</li>
+<li>缺点：性能差</li>
+</ul>
+<h3 id="2-3-虚拟指令集">2.3 虚拟指令集</h3>
+<ul>
+<li>
+<p>无主机 OS, 一个小型的虚拟指令集运行在硬件上, 修改 guest OSes 后在上面运行</p>
+</li>
+<li>
+<p>能使不同和不兼容的 OS 运行在同一台计算机上</p>
+</li>
+<li>
+<p>优点：比虚拟机性能高；比操作系统级虚拟化支持多 OSes</p>
+</li>
+<li>
+<p>缺点：每个 guest OS 需修改后才能运行（新 OS 版本需要打补丁）</p>
+</li>
+</ul>
+<h2 id="3-root-权限划分">3. root 权限划分</h2>
+<h3 id="3-1-POSIX-Linux-内核能力">3.1 POSIX/Linux 内核能力</h3>
+<ul>
+<li>Linux 内核将 root 权限分为多种能力</li>
+</ul>
+<blockquote>
+<ol>
+<li><strong>CAP_CHOWN 0</strong> ：允许改变文件的所有权</li>
+<li><strong>CAP_DAC_OVERRIDE 1</strong> ：忽略对文件的所有 DAC 访问限制</li>
+<li><strong>CAP_DAC_READ_SEARCH 2</strong> ：忽略文件读及目录搜索的 DAC 访问限制</li>
+<li><strong>CAP_FOWNER 3</strong> ：忽略文件属主 ID 必须和进程用户 ID 相匹配的限制（最后操作的UID会覆盖文件的先前的UID）</li>
+<li><strong>CAP_FSETID 4</strong> ：允许设置文件 setuid 位</li>
+<li><strong>CAP_KILL 5</strong> ：允许对不属于自己的进程发送信号</li>
+<li><strong>CAP_SETGID 6</strong> ：允许改变组ID</li>
+<li><strong>CAP_SETUID 7</strong> ：允许改变进程的用户 ID</li>
+<li><strong>CAP_SETPCAP 8</strong> ：允许向其他进程转移能力以及删除其他进程的能力</li>
+<li><strong>CAP_LINUX_IMMUTABLE 9</strong> ：允许修改文件的 IMMUTABLE（不可修改）和 APPEND（只添加）属性标志</li>
+<li><strong>CAP_NET_BIND_SERVICE 10</strong> ：允许绑定到 1024 以下的 TCP/UDP sockets 和 32 以下的 ATM VCIs</li>
+<li><strong>CAP_NET_BROADCAST 11</strong> ：允许广播，监听多播</li>
+<li><strong>CAP_NET_ADMIN 12</strong> ：允许执行网络管理任务</li>
+<li><strong>CAP_NET_RAW 13</strong> ：允许使用原始套接字</li>
+<li><strong>CAP_IPC_LOCK 14</strong> ：允许锁定共享内存片段</li>
+<li><strong>CAP_IPC_OWNER 15</strong> ：忽略 IPC 所有权检查</li>
+<li><strong>CAP_SYS_MODULE 16</strong> ：允许插入和删除内核模块</li>
+<li><strong>CAP_SYS_RAWIO 17</strong> ：允许直接访问 /devport，/dev/mem，/dev/kmem 及原始块设备</li>
+<li><strong>CAP_SYS_CHROOT 18</strong> ：允许使用 chroot() 系统调用</li>
+<li><strong>CAP_SYS_PTRACE 19</strong> ：允许跟踪任何进程</li>
+<li><strong>CAP_SYS_PACCT 20</strong> ：允许执行进程的 BSD 式审计</li>
+<li><strong>CAP_SYS_ADMIN 21</strong> ：允许执行系统管理任务，如加载或卸载文件系统、设置磁盘配额等</li>
+<li><strong>CAP_SYS_BOOT 22</strong> ：允许重新启动系统</li>
+<li><strong>CAP_SYS_NICE 23</strong> ：允许提升优先级及设置其他进程的优先级</li>
+<li><strong>CAP_SYS_RESOURCE 24</strong> ：忽略资源限制</li>
+<li><strong>CAP_SYS_TIME 25</strong> ：允许改变系统时钟</li>
+<li><strong>CAP_SYS_TTY_CONFIG 26</strong> ：允许配置TTY设备</li>
+<li><strong>CAP_MKNOD 27</strong> ：允许使用 mknod() 系统调用</li>
+<li><strong>CAP_LEASE 28</strong> ：允许修改文件锁的 FL_LEASE 标志</li>
+</ol>
+</blockquote>
+<ul>
+<li>实现能力集要求：</li>
+</ul>
+<blockquote>
+<ol>
+<li>对所有特权操作，内核必须检查进程的能力位是否 effective</li>
+<li>内核提供相应的系统调用，进程获得或改变能力集</li>
+<li>文件系统应支持可执行文件与相应的能力集相对应，使得可执行文件运行时获得对应的能力</li>
+</ol>
+</blockquote>
+<ul>
+<li>进程的能力表示：每个进程有三个能力集</li>
+</ul>
+<blockquote>
+<ol>
+<li><strong>effective</strong> ：进程进行某个特权操作时，操作系统检查 cap_effective 的对应位是否有效，而不再是检查进程的有效 UID 是否为0</li>
+<li><strong>permitted</strong> ：表示进程能够使用的能力，这些能力是被进程自己临时放弃的， cap_effective 是 cap_permitted 的一个子集</li>
+<li><strong>inheritable</strong> ：加载新进程时可继承的能力</li>
+</ol>
+</blockquote>
+<ul>
+<li>可执行文件的能力表示：可执行文件的能力集如下</li>
+</ul>
+<blockquote>
+<ol>
+<li><strong>allowed(inheritable)</strong> ：可继承的能力</li>
+<li><strong>forced(permitted)</strong> ：可获得的能力</li>
+<li><strong>transfer(effective)</strong> ：从 permitted 转化为 effective 的能力</li>
+</ol>
+</blockquote>
+<ul>
+<li>
+<p>能力边界集：能力边界集（capability bounding set）是系统中所有进程允许保留的能力</p>
+</li>
+<li>
+<p>系统调用接口：系统调用 capset 和 capget 设置和获得进程能力</p>
+</li>
+<li>
+<p>内核中能力的安全作用</p>
+</li>
+</ul>
+<blockquote>
+<ol>
+<li>程序可以使用 root 的部分特权，而不需要该程序 setuid root ：程序的 forced 能力位置 1 即可</li>
+<li>系统引导时删除部分能力，会保护系统</li>
+</ol>
+<blockquote>
+<p>保护系统工具和日志的完整性</p>
+<ul>
+<li>CAP_LINUX_IMMUTABLE 能力，允许修改文件的 IMMUTABLE 和 APPEND 属性标志</li>
+<li>去除 CAP_LINUX_IMMUTABLE 能力，攻击者不能删除其攻击轨迹、不能安装后门工具、系统日志文件为 append-only、系统工具不被删除和修改</li>
+</ul>
+</blockquote>
+</blockquote>
+<h3 id="3-2-FreeBSD-安全级">3.2 FreeBSD 安全级</h3>
+<ul>
+<li>安全模式</li>
+</ul>
+<blockquote>
+<p><strong>-1</strong> : Permanently insecure mode<br />
+<strong>0</strong> : Insecure mode<br />
+<strong>1</strong> : Secure mode<br />
+<strong>2</strong> : Highly secure mode<br />
+<strong>3</strong> : Network secure mode</p>
+</blockquote>
+<ul>
+<li>在内核中执行安全级</li>
+</ul>
+<blockquote>
+<ol>
+<li>当安全级 &gt; 0，内核限制执行某些操作；superuser 也不能执行限制操作</li>
+<li>不能降低正在运行系统的安全级</li>
+<li>要降低安全级, 需要修改 /etc/rc.conf 中的安全级配置并需重启</li>
+</ol>
+</blockquote>
+<ul>
+<li>FreeBSD FAQ的安全级警告</li>
+</ul>
+<blockquote>
+<ol>
+<li>安全级并非坚不可摧; 也有很多缺陷. 经常导致安全问题</li>
+<li>一个最大的安全问题： 在系统引导时设置所有文件的安全级，设置安全级后安全级才能起作用。当攻击者在设置安全级之前能够执行代码,则所有后续保护都失效。</li>
+</ol>
+</blockquote>
+<h2 id="4-细粒度的强制访问控制">4. 细粒度的强制访问控制</h2>
+<h3 id="4-1-细粒度访问控制思想">4.1 细粒度访问控制思想</h3>
+<ul>
+<li>每个进程, 都有相应的策略控制该进程可以做什么</li>
+</ul>
+<blockquote>
+<ol>
+<li>不同于自主访问控制，自主访问控制权限取决于 user id</li>
+<li>具体指明其能力，访问具体文件的权限</li>
+</ol>
+</blockquote>
+<ul>
+<li>控制策略的执行时间</li>
+</ul>
+<blockquote>
+<ol>
+<li>加载二进制代码时</li>
+<li>进程获得数据时</li>
+</ol>
+</blockquote>
+<ul>
+<li>困难性</li>
+</ul>
+<blockquote>
+<p>如何指定策略</p>
+</blockquote>
+<h3 id="4-2-细粒度访问控制工具">4.2 细粒度访问控制工具</h3>
+<ul>
+<li>Systrace</li>
+<li>Linux的入侵检测系统 (LIDS)</li>
+</ul>
+<h3 id="4-3-安全增强的-Linux-SELinux">4.3 安全增强的 Linux (SELinux)</h3>
+<ul>
+<li>SELinux提供了比传统的UNIX权限更好的访问控制</li>
+</ul>
+<blockquote>
+<ol>
+<li>管理员可以只允许一个应用程序添加记录到一个日志文件，但不允许其修改或者删除该日志文件的内容</li>
+<li>一个应用程序可以被允许在一个文件夹中建立文件和向其写入数据，但不能删除文件：这种特性是没有SELinux的普通的Linux内核所不能做到的</li>
+<li>网络应用程序可以绑定到其需要的端口上（如 BIND 的 53 端口），但不能绑定其它端口</li>
+</ol>
+</blockquote>
+<ul>
+<li>域-类型</li>
+</ul>
+<blockquote>
+<ol>
+<li>模型意味着在安全域中运行着的每一个进程和每一个资源（一般文件、目录文件和套接字等）都有一个与之相联系的“类型”（type）</li>
+<li>在域-类型上建立了一系列规则，这些规则列出了某个域可以在每一个类型上执行的所有动作</li>
+</ol>
+</blockquote>
+<ul>
+<li>进程的上下文组成</li>
+</ul>
+<blockquote>
+<p>SELinux 的系统中，每一个进程的上下文都包含三个组成部分：一个ID（identity），一个角色（role）和一个域（domain）</p>
+<ul>
+<li>ID：用户,进程的所有者，系统进程 ID(system_u) ，未知用户进程 ID(user_u)</li>
+<li>角色用来判断某个处于此角色的ID可以进入哪些域，还用来防止某个处于此角色的ID进入其它不该进入的域（比如，user_r 角色就不允许进入 sysadm_t）</li>
+<li>一个安全上下文可以像 identity:role:domain（可用 ps 和 ls 查看）</li>
+</ul>
+</blockquote>
+<h3 id="4-4-SELinux-细粒度访问控制">4.4 SELinux 细粒度访问控制</h3>
+<ul>
+<li>类型强制访问控制——TE(type enforce)</li>
+</ul>
+<blockquote>
+<ol>
+<li>
+<p>所有访问都必须明确授权，SELinux 默认不允许任何访问，不管 Linux 用户/组 ID 是什么。即在 SELinux 中，没有默认的超级用户</p>
+</li>
+<li>
+<p>与标准 Linux 中的 root 不一样，通过指定主体类型（即域）和客体类型使用 allow 规则授予访问权限</p>
+</li>
+<li>
+<p>allow规则由四部分组成：</p>
+</li>
+</ol>
+<blockquote>
+<ul>
+<li>源类型（Source type(s)）：尝试访问的进程的域类型</li>
+<li>目标类型（Target type(s)）：被进程访问的客体的类型</li>
+<li>客体类别（Object class(es)）：指定允许访问的客体的类型</li>
+<li>许可（Permission(s)）：象征目标类型允许源类型访问客体类型的访问种类</li>
+</ul>
+</blockquote>
+<ol start="4">
+<li>allow user_t bin_t : file {read execute getattr}</li>
+</ol>
+<blockquote>
+<ul>
+<li>源类型（或主体类型或域）user_t</li>
+<li>目标类型（或客体类型）bin_t</li>
+<li>标识符file是定义在策略中的客体类别名称</li>
+<li>大括号中包括的许可是文件客体类别有效许可</li>
+</ul>
+</blockquote>
+<ol start="5">
+<li>举例：</li>
+</ol>
+<blockquote>
+<ul>
+<li>passwd 程序是可信任的，修改存储经过加密的密码的影子密码文件（/etc/shadow）</li>
+</ul>
+<blockquote>
+<p>强制访问控制：确保只有passwd程序（或类似的受信任的程序）可以访问shadow文件，不管运行程序的用户是谁</p>
+</blockquote>
+<ul>
+<li>查看文件域属性：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># ls -Z /etc/shadow</span><br>-r----  root   root  system_u:object_r:shadow_t  shadow <br></code></pre></td></tr></table></figure>
+<ul>
+<li>查看进程域属性：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># ps -aZ</span><br>joe:user_r:passwd_t   16532 pts/0    00:00:00 passwd<br></code></pre></td></tr></table></figure>
+<ul>
+<li>allow 规则：授予 passwd 进程的域类型（passwd_t）访问 shadow 的文件类型（shadow_t），允许进程移动并创建一个新的 shadow 密码文件</li>
+<li>普通用户修改密码过程<br />
+<img src="/img/System/Security/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%BA%A7%E9%98%B2%E6%8A%A4%E6%96%B9%E6%B3%95/%E6%99%AE%E9%80%9A%E7%94%A8%E6%88%B7%E4%BF%AE%E6%94%B9%E5%AF%86%E7%A0%81%E8%BF%87%E7%A8%8B.png" srcset="/image/loading.gif" lazyload alt="普通用户修改密码过程" /></li>
+</ul>
+</blockquote>
+</blockquote>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/Technique/">Technique</a>
+                    
+                      <a class="hover-with-bg" href="/categories/Technique/System/">System</a>
+                    
+                      <a class="hover-with-bg" href="/categories/Technique/System/Security/">Security</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Technique/">Technique</a>
+                    
+                      <a class="hover-with-bg" href="/tags/System/">System</a>
+                    
+                      <a class="hover-with-bg" href="/tags/Security/">Security</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/05/29/Linux/Manjaro/Manjaro20.0%E6%97%A0%E6%B3%95%E4%BD%BF%E7%94%A8%E6%B7%B1%E5%BA%A6%E6%88%AA%E5%B1%8F%E9%97%AE%E9%A2%98/Manjaro20.0%E6%97%A0%E6%B3%95%E4%BD%BF%E7%94%A8%E6%B7%B1%E5%BA%A6%E6%88%AA%E5%B1%8F%E9%97%AE%E9%A2%98/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Manjaro20.0无法使用深度截屏问题</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/05/26/Linux/Manjaro/Manjaro20.0%E4%B8%8BDeepin-WeChat%E6%97%A0%E6%B3%95%E5%90%AF%E5%8A%A8%E5%8E%9F%E5%9B%A0/">
+                        <span class="hidden-mobile">Manjaro20.0下Deepin-WeChat无法启动原因</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="waline"></div>
+  <script type="text/javascript">
+    Fluid.utils.lazyComments('waline', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js', function () {
+        new Waline({
+          el: "#waline",
+          placeholder: "都看到这里了，留个脚印再走呗~",
+          path: window.location.pathname,
+          avatar: "retro",
+          visitor: true,
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: true,
+          serverURL: "https://waline-one-beta.vercel.app/",
+          avatarCDN: "https://gravatar.loli.net/avatar/",
+          avatarForce: false,
+          requiredMeta: [],
+          emoji: ["https://cdn.jsdelivr.net/gh/hotarugali/Emoji@bilibili_tv_gif/waline/bilibili_tv_gif","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@bilibiliHotKey/waline/bilibiliHotKey","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@bilibili2233/waline/bilibili2233","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@smallshake/waline/smallshake","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@alu/waline/alu","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@QQ/waline/QQ","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@Tieba-New/waline/Tieba-New","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@weibo/waline/weibo"],
+          // emojiMaps: ,
+          login: "enable",
+          dark: 'html[data-user-color-scheme="dark"]',
+        });
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the
+    <a target="_blank" href="https://waline.js.org" rel="nofollow noopener noopener">comments powered by Waline.</a>
+  </noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+      <div class="col-lg-7 mx-auto nopadding-x-md">
+        <div class="container custom mx-auto">
+          <script src="https://myhkw.cn/api/player/161389264877" id="myhk" key="161389264877" m="1"></script>
+        </div>
+      </div>
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+
+  <script defer src="/js/leancloud.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- KaTeX -->
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" />
+  
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/mermaid@8.8.3/dist/mermaid.min.js" ></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({"theme":"default"});
+    }
+  </script>
+
+
+
+
+  
+    <!-- Baidu Analytics -->
+    <script defer>
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?c194cf0c8cbc33bfb846ba1329537d81";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  
+    <!-- Google Analytics -->
+    <script defer>
+      window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) };
+      ga.l = +new Date;
+      ga('create', 'G-SXJN0942X9', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+  
+
+  
+    <!-- Google gtag.js -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D3DEHLLP3W"></script>
+    <script defer>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-D3DEHLLP3W');
+    </script>
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

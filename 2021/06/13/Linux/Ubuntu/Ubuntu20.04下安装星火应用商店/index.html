@@ -62,7 +62,7 @@
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
-<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
 </head>
 
 
@@ -266,7 +266,7 @@
 </ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo vim /etc/apt/sources.list.d/appstore.list<br></code></pre></td></tr></table></figure>
 <p>在其中添加以下 Deepin20 应用商店源：</p>
-<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs vim"><span class="hljs-keyword">deb</span> http<span class="hljs-variable">s:</span>//community-store-packages.deepin.<span class="hljs-keyword">com</span>/appstore eagle appstore<br></code></pre></td></tr></table></figure>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">deb https:<span class="hljs-regexp">//</span>community-store-packages.deepin.com/appstore eagle appstore<br></code></pre></td></tr></table></figure>
 <ul>
 <li>添加以上软件源对应的 GPG 验证文件<br />
 由于 Deepin20 的软件源目前仍无法在公钥服务器 <code>keyserver.ubuntu.com</code> 上查找到，因此无法使用以下命令直接添加：</li>

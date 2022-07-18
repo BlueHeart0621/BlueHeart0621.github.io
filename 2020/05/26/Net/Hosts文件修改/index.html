@@ -62,7 +62,7 @@
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
-<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
 </head>
 
 
@@ -256,7 +256,7 @@
 <h2 id="2-原理">2. 原理</h2>
 <p>主机操作系统下都有一个 hosts 文件，其作用在于将一些常用网址域名与其对应的 IP 地址建立一个关联数据库，这样当主机访问这些常用网站域名时就不用再进行 DNS 解析。</p>
 <p>hosts 文件采用以下行格式来记录域名 — IP 的关联信息：</p>
-<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">IP</span> DNS<span class="hljs-number">1</span> DNS<span class="hljs-number">2</span> ...<br></code></pre></td></tr></table></figure>
+<figure class="highlight gams"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs gams"><span class="hljs-function"><span class="hljs-title">IP</span></span> DNS1 DNS2 ...<br></code></pre></td></tr></table></figure>
 <p>其中，IP 为 IPv4 或 IPv6 地址，DNS1～N 对应 N 个域名，即允许 1 个 IP 地址对应 1 个或多个 DNS 。</p>
 <p>可以使用编辑器直接打开 hosts 文件，修改其中的内容。</p>
 <h2 id="3-作用">3. 作用</h2>
@@ -286,7 +286,7 @@
 以下是本人当前查询到 github 众多域名对应的 IP 地址。</p>
 <figure class="highlight accesslog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs accesslog"><span class="hljs-number">199.232.5.194</span> github.global.ssl.fastly.net<br><span class="hljs-number">140.82.113.4</span> github.com<br><span class="hljs-number">185.199.108.153</span> assets-cdn.github.com<br><span class="hljs-number">185.199.108.153</span> documentcloud.github.com<br><span class="hljs-number">140.82.113.20</span> gist.github.com<br><span class="hljs-number">185.199.108.154</span> help.github.com<br><span class="hljs-number">192.30.253.121</span> nodeload.github.com<br><span class="hljs-number">199.232.28.133</span> raw.github.com<br><span class="hljs-number">52.87.114.63</span> status.github.com<br><span class="hljs-number">140.82.113.17</span> training.github.com<br><span class="hljs-number">192.30.253.112</span> www.github.com<br><span class="hljs-number">199.232.5.194</span> github.global.ssl.fastly.net<br><span class="hljs-number">199.232.68.133</span> avatars0.githubusercontent.com<br><span class="hljs-number">199.232.28.133</span> avatars1.githubusercontent.com<br><span class="hljs-number">192.30.253.120</span> codeload.github.com <br></code></pre></td></tr></table></figure>
 <p>其实通常只要绑定以下几个常见域名就可以了：</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs stylus">codeload<span class="hljs-selector-class">.github</span>.com<br>github.com<br>github<span class="hljs-selector-class">.global</span><span class="hljs-selector-class">.ssl</span><span class="hljs-selector-class">.fastly</span>.net<br>s3<span class="hljs-selector-class">.amazonaws</span>.com<br>github-cloud<span class="hljs-selector-class">.s3</span><span class="hljs-selector-class">.amazonaws</span>.com<br></code></pre></td></tr></table></figure>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs stylus">codeload<span class="hljs-selector-class">.github</span><span class="hljs-selector-class">.com</span><br>github<span class="hljs-selector-class">.com</span><br>github<span class="hljs-selector-class">.global</span><span class="hljs-selector-class">.ssl</span><span class="hljs-selector-class">.fastly</span><span class="hljs-selector-class">.net</span><br>s3<span class="hljs-selector-class">.amazonaws</span><span class="hljs-selector-class">.com</span><br>github-cloud<span class="hljs-selector-class">.s3</span><span class="hljs-selector-class">.amazonaws</span>.com<br></code></pre></td></tr></table></figure>
             </div>
             <hr>
             <div>

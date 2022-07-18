@@ -62,7 +62,7 @@
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
-<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
 </head>
 
 
@@ -253,11 +253,11 @@
             <div class="markdown-body">
               <h2 id="1-格式">1. 格式</h2>
 <p>Rust 代码中函数定义的基本语法格式如下：</p>
-<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs rust"><span class="hljs-function"><span class="hljs-keyword">fn</span> </span>&lt;function&gt;(&lt;parameters&gt;) &#123;<br>	<span class="hljs-comment">// 函数体</span><br>	...<br>&#125;<br></code></pre></td></tr></table></figure>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs rust"><span class="hljs-keyword">fn</span> &lt;function&gt;(&lt;parameters&gt;) &#123;<br>	<span class="hljs-comment">// 函数体</span><br>	...<br>&#125;<br></code></pre></td></tr></table></figure>
 <p>其中，<code>fn</code> 为函数声明关键字，<code>&lt;function&gt;</code> 为函数名，<code>&lt;parameters&gt;</code> 为参数列表，<code>&#123;&#125;</code> 用于指定函数体的开始和结束。和大多数编程语言一样，Rust 中 <code>main</code> 函数也是程序的入口点。</p>
 <h2 id="2-参数">2. 参数</h2>
 <p>Rust 函数可以定义输入参数列表 <code>&lt;parameters&gt;</code>。在 <code>&lt;parameters&gt;</code> 中，必须声明每个参数的类型，多个参数用 <code>,</code> 分隔。</p>
-<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs rust"><span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">example</span></span>(x: <span class="hljs-built_in">i32</span>, y: <span class="hljs-built_in">i32</span>) &#123;<br>	<span class="hljs-built_in">println!</span>(<span class="hljs-string">&quot;The value of x is: &#123;&#125;&quot;</span>, x);<br>    <span class="hljs-built_in">println!</span>(<span class="hljs-string">&quot;The value of y is: &#123;&#125;&quot;</span>, y);<br>&#125;<br></code></pre></td></tr></table></figure>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs rust"><span class="hljs-keyword">fn</span> <span class="hljs-title function_">example</span>(x: <span class="hljs-type">i32</span>, y: <span class="hljs-type">i32</span>) &#123;<br>	<span class="hljs-built_in">println!</span>(<span class="hljs-string">&quot;The value of x is: &#123;&#125;&quot;</span>, x);<br>    <span class="hljs-built_in">println!</span>(<span class="hljs-string">&quot;The value of y is: &#123;&#125;&quot;</span>, y);<br>&#125;<br></code></pre></td></tr></table></figure>
 <h2 id="3-函数体">3. 函数体</h2>
 <p>函数体由一系列的语句和一个可选的结尾表达式构成。</p>
 <ul>
@@ -265,14 +265,14 @@
 <li>表达式（Expressions）计算并产生一个值。</li>
 </ul>
 <p>在 Rust 中，<strong>语句的结尾有分号，表达式的结尾没有分号</strong>。如果在表达式的结尾加上分号，它就变成了语句，而语句不会返回值。</p>
-<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs rust"><span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">example</span></span>() &#123;<br>    <span class="hljs-keyword">let</span> x = <span class="hljs-number">5</span>;<br><br>    <span class="hljs-keyword">let</span> y = &#123;<br>        <span class="hljs-keyword">let</span> x = <span class="hljs-number">3</span>;	<span class="hljs-comment">// 语句，不会返回值</span><br>        x + <span class="hljs-number">1</span>		<span class="hljs-comment">// 表达式，会返回值</span><br>    &#125;;<br>	<span class="hljs-comment">// 因此 y 的值为 4</span><br>    <span class="hljs-built_in">println!</span>(<span class="hljs-string">&quot;The value of y is: &#123;&#125;&quot;</span>, y);<br>&#125;<br></code></pre></td></tr></table></figure>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs rust"><span class="hljs-keyword">fn</span> <span class="hljs-title function_">example</span>() &#123;<br>    <span class="hljs-keyword">let</span> <span class="hljs-variable">x</span> = <span class="hljs-number">5</span>;<br><br>    <span class="hljs-keyword">let</span> <span class="hljs-variable">y</span> = &#123;<br>        <span class="hljs-keyword">let</span> <span class="hljs-variable">x</span> = <span class="hljs-number">3</span>;	<span class="hljs-comment">// 语句，不会返回值</span><br>        x + <span class="hljs-number">1</span>		<span class="hljs-comment">// 表达式，会返回值</span><br>    &#125;;<br>	<span class="hljs-comment">// 因此 y 的值为 4</span><br>    <span class="hljs-built_in">println!</span>(<span class="hljs-string">&quot;The value of y is: &#123;&#125;&quot;</span>, y);<br>&#125;<br></code></pre></td></tr></table></figure>
 <h2 id="4-返回值">4. 返回值</h2>
 <p>同其他语言一样，Rust 函数可以向调用它的代码返回值。Rust 中并不对返回值命名，但需要在箭头 <code>-&gt;</code> 后声明它的类型。</p>
 <ul>
 <li>在 Rust 函数中，函数的返回值等同于函数最后一个表达式的值。</li>
 <li>使用 <code>return</code> 关键字和指定值，可以在函数中提前返回。</li>
 </ul>
-<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs rust"><span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">example</span></span>() -&gt; <span class="hljs-built_in">i32</span> &#123;<br>    <span class="hljs-number">5</span><br>&#125;<br></code></pre></td></tr></table></figure>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs rust"><span class="hljs-keyword">fn</span> <span class="hljs-title function_">example</span>() <span class="hljs-punctuation">-&gt;</span> <span class="hljs-type">i32</span> &#123;<br>    <span class="hljs-number">5</span><br>&#125;<br></code></pre></td></tr></table></figure>
 
             </div>
             <hr>

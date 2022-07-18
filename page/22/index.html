@@ -46,7 +46,7 @@
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
-<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
 </head>
 
 
@@ -190,6 +190,72 @@
               <div class="col-12 col-md-10 m-auto">
                 
 
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/10/02/DeepLearning/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/Adam/">Adam</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/10/02/DeepLearning/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/Adam/">
+          
+          
+            
+          
+          1. 简介
+Adam 算法可以看作动量法和 RMSprop 算法的结合，不但使用动量作为参数更新方向，而且可以自适应调整学习率。
+2. 原理
+第 ttt 次迭代时：
+
+一方面计算梯度平方的指数加权平均：
+
+Gt=β2Gt−1+(1−β2)∂L∂Wt−1⊙∂L∂Wt−1\begin{array}{c}
+\boldsymbol{G}_t = \beta_2 \boldsymbol{G}_{t-1} +
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-10-02 20:01" pubdate>
+              2020-10-02
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/DeepLearning/">DeepLearning</a>
+            
+              <a href="/categories/Technique/DeepLearning/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/">优化算法</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/DeepLearning/">DeepLearning</a>
+            
+              <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a>
+            
+              <a href="/tags/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/">优化算法</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
 
   <div class="row mx-auto index-card">
     
@@ -515,6 +581,76 @@ CNN 是专门用于处理网格化数据的神经网络。CNN 中新增了 Convo
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
+        <a href="/2020/10/02/DeepLearning/%E6%AD%A3%E5%88%99%E5%8C%96/">正则化</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/10/02/DeepLearning/%E6%AD%A3%E5%88%99%E5%8C%96/">
+          
+          
+            
+          
+          1. 定义
+在机器学习中，许多策略被显式设计来减少测试误差（可能会增大训练误差为代价），这些策略被统称为正则化。常用的正则化方法简介如下表：
+
+
+
+正则化方法
+简介
+
+
+
+
+正则化项
+通过在经验损失上加上模型参数向量的罚项来防止模型过拟合，常用的有 L1L_1L1​ 和 L2L_2L2​ 范数。
+
+
+Dropout
+通过随机 Mask 掉隐藏层的神经元，使得训练过程中实际训练了一堆的子网络，而最终
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-10-02 13:13" pubdate>
+              2020-10-02
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/DeepLearning/">DeepLearning</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/DeepLearning/">DeepLearning</a>
+            
+              <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
         <a href="/2020/10/01/Linux/Sundry/Linux%E4%B8%8B%E6%9F%A5%E7%9C%8B%E7%B3%BB%E7%BB%9F%E4%BF%A1%E6%81%AF/">Linux下查看系统信息</a>
       </h1>
 
@@ -694,162 +830,6 @@ Fan：风扇转速，从0到100%之间变动。
               <a href="/tags/Linux/">Linux</a>
             
               <a href="/tags/Mint/">Mint</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/09/29/Math/Theory/%E7%9F%A9%E9%98%B5/%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/">基本概念</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/09/29/Math/Theory/%E7%9F%A9%E9%98%B5/%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/">
-          
-          
-            
-          
-          1. 术语
-
-
-
-概念/符号
-含义
-
-
-
-
-方阵
-行数和列数相同的矩阵
-
-
-长方矩阵
-函数和列数可能不相同的矩阵
-
-
-C\mathbb{C}C
-复数域
-
-
-R\mathbb{R}R
-实数域
-
-
-Sn\mathbb{S}^nSn
-nnn 阶对称阵全集
-
-
-diag(d1,⋯ ,dn)\mathrm{diag}(d_1,\cdots,d_n)diag(d1​,⋯,dn​)
-表示对角元素为 d1,⋯ ,
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-09-29 11:01" pubdate>
-              2020-09-29
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/Math/">Math</a>
-            
-              <a href="/categories/Technique/Math/Theory/">Theory</a>
-            
-              <a href="/categories/Technique/Math/Theory/%E7%9F%A9%E9%98%B5/">矩阵</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/Math/">Math</a>
-            
-              <a href="/tags/Theory/">Theory</a>
-            
-              <a href="/tags/%E7%9F%A9%E9%98%B5/">矩阵</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/09/28/Python/Numpy/Numpy%E6%95%B0%E7%BB%84/Numpy%E6%95%B0%E7%BB%84/">Numpy数组</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/09/28/Python/Numpy/Numpy%E6%95%B0%E7%BB%84/Numpy%E6%95%B0%E7%BB%84/">
-          
-          
-            
-          
-          1. 概述
-
-ndarray 数组要求数据类型一致，默认数据类型为 np.float64；显式更改数据类型需要使用 dtype 关键字。
-
-2. axis 轴
-Numpy 中 axis = n 对应 ndarray 的第 nnn 层 []，从最外层的 axis = 0，逐渐往内层递增。
-3. 数组大小 &amp; 维度
-
-
-ndarray 数组维度元组 shape 为从最外层到最里层逐层的大小；从
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-09-28 14:02" pubdate>
-              2020-09-28
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/Python/">Python</a>
-            
-              <a href="/categories/Technique/Python/Numpy/">Numpy</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/Python/">Python</a>
-            
-              <a href="/tags/Numpy/">Numpy</a>
             
           </div>
         

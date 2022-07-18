@@ -62,7 +62,7 @@
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
-<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
 </head>
 
 
@@ -261,7 +261,7 @@
 <ul>
 <li>语法：</li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> array-name = [item1, item2, ...];<br><span class="hljs-keyword">var</span> cars = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Array</span>(<span class="hljs-string">&quot;Saab&quot;</span>, <span class="hljs-string">&quot;Volvo&quot;</span>, <span class="hljs-string">&quot;BMW&quot;</span>);<br></code></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> array-name = [item1, item2, ...];<br><span class="hljs-keyword">var</span> cars = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Array</span>(<span class="hljs-string">&quot;Saab&quot;</span>, <span class="hljs-string">&quot;Volvo&quot;</span>, <span class="hljs-string">&quot;BMW&quot;</span>);<br></code></pre></td></tr></table></figure>
 <h3 id="1-2-访问数组元素">1.2 访问数组元素</h3>
 <ul>
 <li>通过引用索引号（下标号）来引用某个数组元素。</li>
@@ -271,7 +271,7 @@
 <li>向数组添加新元素的最佳方法是使用 push() 方法。</li>
 <li>也可以使用下标直接向数组添加新元素（若添加索引高出数组当前长度范围，则会在数组中未赋值的下标位置创建未定义的“洞”）：</li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> fruits = [<span class="hljs-string">&quot;Banana&quot;</span>, <span class="hljs-string">&quot;Orange&quot;</span>, <span class="hljs-string">&quot;Apple&quot;</span>, <span class="hljs-string">&quot;Mango&quot;</span>];<br>fruits[fruits.length] = <span class="hljs-string">&quot;Lemon&quot;</span>;     <span class="hljs-comment">// 向 fruits 添加一个新元素 (Lemon)</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> fruits = [<span class="hljs-string">&quot;Banana&quot;</span>, <span class="hljs-string">&quot;Orange&quot;</span>, <span class="hljs-string">&quot;Apple&quot;</span>, <span class="hljs-string">&quot;Mango&quot;</span>];<br>fruits[fruits.<span class="hljs-property">length</span>] = <span class="hljs-string">&quot;Lemon&quot;</span>;     <span class="hljs-comment">// 向 fruits 添加一个新元素 (Lemon)</span><br></code></pre></td></tr></table></figure>
 <h3 id="1-4-数组和对象的区别">1.4 数组和对象的区别</h3>
 <ul>
 <li>在 JavaScript 中，数组使用数字索引。</li>
@@ -292,7 +292,7 @@
 <li><strong>unshift()</strong> ：方法（在开头）向数组添加新元素，并“反向位移”旧元素。unshift() 方法返回新数组的长度。</li>
 <li><strong>splice()</strong> ：方法可用于向数组添加新项。splice() 方法返回一个包含已删除项的数组。</li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> fruits = [<span class="hljs-string">&quot;Banana&quot;</span>, <span class="hljs-string">&quot;Orange&quot;</span>, <span class="hljs-string">&quot;Apple&quot;</span>, <span class="hljs-string">&quot;Mango&quot;</span>];<br>fruits.splice(<span class="hljs-number">2</span>, <span class="hljs-number">0</span>, <span class="hljs-string">&quot;Lemon&quot;</span>, <span class="hljs-string">&quot;Kiwi&quot;</span>);<br></code></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> fruits = [<span class="hljs-string">&quot;Banana&quot;</span>, <span class="hljs-string">&quot;Orange&quot;</span>, <span class="hljs-string">&quot;Apple&quot;</span>, <span class="hljs-string">&quot;Mango&quot;</span>];<br>fruits.<span class="hljs-title function_">splice</span>(<span class="hljs-number">2</span>, <span class="hljs-number">0</span>, <span class="hljs-string">&quot;Lemon&quot;</span>, <span class="hljs-string">&quot;Kiwi&quot;</span>);<br></code></pre></td></tr></table></figure>
 <p>其中，第一个参数（2）定义了应添加新元素的位置（拼接）；第二个参数（0）定义应删除多少元素；其余参数（“Lemon”，“Kiwi”）定义要添加的新元素。<br />
 【注】其余参数可省略。</p>
 <ul>
@@ -305,18 +305,18 @@
 <ul>
 <li><strong>sort()</strong> ：方法以字母顺序对数组进行排序。sort() 可以接受自定义的比较函数来定义自己的排序顺序。</li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> points = [<span class="hljs-number">40</span>, <span class="hljs-number">100</span>, <span class="hljs-number">1</span>, <span class="hljs-number">5</span>, <span class="hljs-number">25</span>, <span class="hljs-number">10</span>];<br>points.sort(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">a, b</span>)</span>&#123;<span class="hljs-keyword">return</span> b - a&#125;); <br></code></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> points = [<span class="hljs-number">40</span>, <span class="hljs-number">100</span>, <span class="hljs-number">1</span>, <span class="hljs-number">5</span>, <span class="hljs-number">25</span>, <span class="hljs-number">10</span>];<br>points.<span class="hljs-title function_">sort</span>(<span class="hljs-keyword">function</span>(<span class="hljs-params">a, b</span>)&#123;<span class="hljs-keyword">return</span> b - a&#125;); <br></code></pre></td></tr></table></figure>
 <ul>
 <li><strong>reverse()</strong> ：方法反转数组中的元素。</li>
 <li><strong>Math.max.apply()</strong> ：来查找数组中的最大值。</li>
 <li><strong>Math.min.apply()</strong> ：来查找数组中的最低值。</li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">myArrayMax</span>(<span class="hljs-params">arr</span>) </span>&#123;<br>    <span class="hljs-keyword">return</span> <span class="hljs-built_in">Math</span>.max.apply(<span class="hljs-literal">null</span>, arr);<br>&#125;<br><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">myArrayMin</span>(<span class="hljs-params">arr</span>) </span>&#123;<br>    <span class="hljs-keyword">return</span> <span class="hljs-built_in">Math</span>.min.apply(<span class="hljs-literal">null</span>, arr);<br>&#125;<br></code></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">myArrayMax</span>(<span class="hljs-params">arr</span>) &#123;<br>    <span class="hljs-keyword">return</span> <span class="hljs-title class_">Math</span>.<span class="hljs-property">max</span>.<span class="hljs-title function_">apply</span>(<span class="hljs-literal">null</span>, arr);<br>&#125;<br><span class="hljs-keyword">function</span> <span class="hljs-title function_">myArrayMin</span>(<span class="hljs-params">arr</span>) &#123;<br>    <span class="hljs-keyword">return</span> <span class="hljs-title class_">Math</span>.<span class="hljs-property">min</span>.<span class="hljs-title function_">apply</span>(<span class="hljs-literal">null</span>, arr);<br>&#125;<br></code></pre></td></tr></table></figure>
 <h3 id="【注】以下方法老版本浏览器（比如-Internet-Explorer-8-或更早的版本）不支持。">【注】以下方法老版本浏览器（比如 Internet Explorer 8 或更早的版本）不支持。</h3>
 <ul>
 <li><strong>forEach()</strong> ：方法为每个数组元素调用一次函数（回调函数）。</li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> txt = <span class="hljs-string">&quot;&quot;</span>;<br><span class="hljs-keyword">var</span> numbers = [<span class="hljs-number">45</span>, <span class="hljs-number">4</span>, <span class="hljs-number">9</span>, <span class="hljs-number">16</span>, <span class="hljs-number">25</span>];<br>numbers.forEach(myFunction);<br><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">myFunction</span>(<span class="hljs-params">value, index, array</span>) </span>&#123;<br>  txt = txt + value + <span class="hljs-string">&quot;&lt;br&gt;&quot;</span>; <br>&#125;<br></code></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> txt = <span class="hljs-string">&quot;&quot;</span>;<br><span class="hljs-keyword">var</span> numbers = [<span class="hljs-number">45</span>, <span class="hljs-number">4</span>, <span class="hljs-number">9</span>, <span class="hljs-number">16</span>, <span class="hljs-number">25</span>];<br>numbers.<span class="hljs-title function_">forEach</span>(myFunction);<br><span class="hljs-keyword">function</span> <span class="hljs-title function_">myFunction</span>(<span class="hljs-params">value, index, array</span>) &#123;<br>  txt = txt + value + <span class="hljs-string">&quot;&lt;br&gt;&quot;</span>; <br>&#125;<br></code></pre></td></tr></table></figure>
 <p>该函数接受 3 个参数：</p>
 <blockquote>
 <ol>
@@ -334,7 +334,7 @@
 <li>map() 方法不会更改原始数组。</li>
 </ol>
 </blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> numbers1 = [<span class="hljs-number">45</span>, <span class="hljs-number">4</span>, <span class="hljs-number">9</span>, <span class="hljs-number">16</span>, <span class="hljs-number">25</span>];<br><span class="hljs-keyword">var</span> numbers2 = numbers1.map(myFunction);<br><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">myFunction</span>(<span class="hljs-params">value, index, array</span>) </span>&#123;<br>  <span class="hljs-keyword">return</span> value * <span class="hljs-number">2</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> numbers1 = [<span class="hljs-number">45</span>, <span class="hljs-number">4</span>, <span class="hljs-number">9</span>, <span class="hljs-number">16</span>, <span class="hljs-number">25</span>];<br><span class="hljs-keyword">var</span> numbers2 = numbers1.<span class="hljs-title function_">map</span>(myFunction);<br><span class="hljs-keyword">function</span> <span class="hljs-title function_">myFunction</span>(<span class="hljs-params">value, index, array</span>) &#123;<br>  <span class="hljs-keyword">return</span> value * <span class="hljs-number">2</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
 <p>该函数接受 3 个参数（当回调函数仅使用 value 参数时，可以省略索引和数组参数）：</p>
 <blockquote>
 <ol>
@@ -346,7 +346,7 @@
 <ul>
 <li><strong>filter()</strong> ：方法创建一个包含通过测试的数组元素的新数组。</li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> numbers = [<span class="hljs-number">45</span>, <span class="hljs-number">4</span>, <span class="hljs-number">9</span>, <span class="hljs-number">16</span>, <span class="hljs-number">25</span>];<br><span class="hljs-keyword">var</span> over18 = numbers.filter(myFunction);<br><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">myFunction</span>(<span class="hljs-params">value, index, array</span>) </span>&#123;<br>  <span class="hljs-keyword">return</span> value &gt; <span class="hljs-number">18</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> numbers = [<span class="hljs-number">45</span>, <span class="hljs-number">4</span>, <span class="hljs-number">9</span>, <span class="hljs-number">16</span>, <span class="hljs-number">25</span>];<br><span class="hljs-keyword">var</span> over18 = numbers.<span class="hljs-title function_">filter</span>(myFunction);<br><span class="hljs-keyword">function</span> <span class="hljs-title function_">myFunction</span>(<span class="hljs-params">value, index, array</span>) &#123;<br>  <span class="hljs-keyword">return</span> value &gt; <span class="hljs-number">18</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
 <p>该函数接受 3 个参数（当回调函数仅使用 value 参数时，可以省略索引和数组参数）：</p>
 <blockquote>
 <ol>
@@ -365,7 +365,7 @@
 <li>reduce() 方法能够接受一个初始值。</li>
 </ol>
 </blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> numbers1 = [<span class="hljs-number">45</span>, <span class="hljs-number">4</span>, <span class="hljs-number">9</span>, <span class="hljs-number">16</span>, <span class="hljs-number">25</span>];<br><span class="hljs-keyword">var</span> sum = numbers1.reduce(myFunction, <span class="hljs-number">100</span>);<br><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">myFunction</span>(<span class="hljs-params">total, value</span>) </span>&#123;<br>  <span class="hljs-keyword">return</span> total + value;<br>&#125;<br></code></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> numbers1 = [<span class="hljs-number">45</span>, <span class="hljs-number">4</span>, <span class="hljs-number">9</span>, <span class="hljs-number">16</span>, <span class="hljs-number">25</span>];<br><span class="hljs-keyword">var</span> sum = numbers1.<span class="hljs-title function_">reduce</span>(myFunction, <span class="hljs-number">100</span>);<br><span class="hljs-keyword">function</span> <span class="hljs-title function_">myFunction</span>(<span class="hljs-params">total, value</span>) &#123;<br>  <span class="hljs-keyword">return</span> total + value;<br>&#125;<br></code></pre></td></tr></table></figure>
 <p>此函数接受 4 个参数：</p>
 <blockquote>
 <ol>
@@ -385,7 +385,7 @@
 <li>reduceRight() 方法能够接受一个初始值。</li>
 </ol>
 </blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> numbers1 = [<span class="hljs-number">45</span>, <span class="hljs-number">4</span>, <span class="hljs-number">9</span>, <span class="hljs-number">16</span>, <span class="hljs-number">25</span>];<br><span class="hljs-keyword">var</span> sum = numbers1.reduceRight(myFunction);<br><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">myFunction</span>(<span class="hljs-params">total, value, index, array</span>) </span>&#123;<br>  <span class="hljs-keyword">return</span> total + value;<br>&#125;<br></code></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> numbers1 = [<span class="hljs-number">45</span>, <span class="hljs-number">4</span>, <span class="hljs-number">9</span>, <span class="hljs-number">16</span>, <span class="hljs-number">25</span>];<br><span class="hljs-keyword">var</span> sum = numbers1.<span class="hljs-title function_">reduceRight</span>(myFunction);<br><span class="hljs-keyword">function</span> <span class="hljs-title function_">myFunction</span>(<span class="hljs-params">total, value, index, array</span>) &#123;<br>  <span class="hljs-keyword">return</span> total + value;<br>&#125;<br></code></pre></td></tr></table></figure>
 <p>此函数接受 4 个参数：</p>
 <blockquote>
 <ol>
@@ -398,7 +398,7 @@
 <ul>
 <li><strong>every()</strong> ：方法检查所有数组值是否通过测试。</li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> numbers = [<span class="hljs-number">45</span>, <span class="hljs-number">4</span>, <span class="hljs-number">9</span>, <span class="hljs-number">16</span>, <span class="hljs-number">25</span>];<br><span class="hljs-keyword">var</span> allOver18 = numbers.every(myFunction);<br><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">myFunction</span>(<span class="hljs-params">value</span>) </span>&#123;<br>  <span class="hljs-keyword">return</span> value &gt; <span class="hljs-number">18</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> numbers = [<span class="hljs-number">45</span>, <span class="hljs-number">4</span>, <span class="hljs-number">9</span>, <span class="hljs-number">16</span>, <span class="hljs-number">25</span>];<br><span class="hljs-keyword">var</span> allOver18 = numbers.<span class="hljs-title function_">every</span>(myFunction);<br><span class="hljs-keyword">function</span> <span class="hljs-title function_">myFunction</span>(<span class="hljs-params">value</span>) &#123;<br>  <span class="hljs-keyword">return</span> value &gt; <span class="hljs-number">18</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
 <p>此函数接受 3 个参数：</p>
 <blockquote>
 <ol>
@@ -410,7 +410,7 @@
 <ul>
 <li><strong>some()</strong> ：方法检查某些数组值是否通过了测试。</li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> numbers = [<span class="hljs-number">45</span>, <span class="hljs-number">4</span>, <span class="hljs-number">9</span>, <span class="hljs-number">16</span>, <span class="hljs-number">25</span>];<br><span class="hljs-keyword">var</span> someOver18 = numbers.some(myFunction);<br><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">myFunction</span>(<span class="hljs-params">value, index, array</span>) </span>&#123;<br>  <span class="hljs-keyword">return</span> value &gt; <span class="hljs-number">18</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> numbers = [<span class="hljs-number">45</span>, <span class="hljs-number">4</span>, <span class="hljs-number">9</span>, <span class="hljs-number">16</span>, <span class="hljs-number">25</span>];<br><span class="hljs-keyword">var</span> someOver18 = numbers.<span class="hljs-title function_">some</span>(myFunction);<br><span class="hljs-keyword">function</span> <span class="hljs-title function_">myFunction</span>(<span class="hljs-params">value, index, array</span>) &#123;<br>  <span class="hljs-keyword">return</span> value &gt; <span class="hljs-number">18</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
 <p>此函数接受 3 个参数：</p>
 <blockquote>
 <ol>
@@ -423,7 +423,7 @@
 <li><strong>indexOf()</strong> ：方法在数组中搜索元素值并返回其位置。</li>
 </ul>
 <p>语法格式：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript">array.indexOf(item, start)<br></code></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript">array.<span class="hljs-title function_">indexOf</span>(item, start)<br></code></pre></td></tr></table></figure>
 <table>
 <thead>
 <tr>
@@ -442,7 +442,7 @@
 <li><strong>lastIndexOf()</strong> ：与 indexOf() 类似，但是从数组结尾开始搜索。<br />
 语法格式：</li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript">array.lastIndexOf(item, start)<br></code></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript">array.<span class="hljs-title function_">lastIndexOf</span>(item, start)<br></code></pre></td></tr></table></figure>
 <table>
 <thead>
 <tr>
@@ -460,7 +460,7 @@
 <ul>
 <li><strong>find()</strong> ：方法返回通过测试函数的第一个数组元素的值。</li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> numbers = [<span class="hljs-number">4</span>, <span class="hljs-number">9</span>, <span class="hljs-number">16</span>, <span class="hljs-number">25</span>, <span class="hljs-number">29</span>];<br><span class="hljs-keyword">var</span> first = numbers.find(myFunction);<br><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">myFunction</span>(<span class="hljs-params">value, index, array</span>) </span>&#123;<br>  <span class="hljs-keyword">return</span> value &gt; <span class="hljs-number">18</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> numbers = [<span class="hljs-number">4</span>, <span class="hljs-number">9</span>, <span class="hljs-number">16</span>, <span class="hljs-number">25</span>, <span class="hljs-number">29</span>];<br><span class="hljs-keyword">var</span> first = numbers.<span class="hljs-title function_">find</span>(myFunction);<br><span class="hljs-keyword">function</span> <span class="hljs-title function_">myFunction</span>(<span class="hljs-params">value, index, array</span>) &#123;<br>  <span class="hljs-keyword">return</span> value &gt; <span class="hljs-number">18</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
 <p>此函数接受 3 个参数：</p>
 <blockquote>
 <ol>
@@ -472,7 +472,7 @@
 <ul>
 <li><strong>findIndex()</strong> ：方法返回通过测试函数的第一个数组元素的索引。</li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> numbers = [<span class="hljs-number">4</span>, <span class="hljs-number">9</span>, <span class="hljs-number">16</span>, <span class="hljs-number">25</span>, <span class="hljs-number">29</span>];<br><span class="hljs-keyword">var</span> first = numbers.findIndex(myFunction);<br><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">myFunction</span>(<span class="hljs-params">value, index, array</span>) </span>&#123;<br>  <span class="hljs-keyword">return</span> value &gt; <span class="hljs-number">18</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> numbers = [<span class="hljs-number">4</span>, <span class="hljs-number">9</span>, <span class="hljs-number">16</span>, <span class="hljs-number">25</span>, <span class="hljs-number">29</span>];<br><span class="hljs-keyword">var</span> first = numbers.<span class="hljs-title function_">findIndex</span>(myFunction);<br><span class="hljs-keyword">function</span> <span class="hljs-title function_">myFunction</span>(<span class="hljs-params">value, index, array</span>) &#123;<br>  <span class="hljs-keyword">return</span> value &gt; <span class="hljs-number">18</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
 <p>此函数接受 3 个参数：</p>
 <blockquote>
 <ol>

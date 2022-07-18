@@ -46,7 +46,7 @@
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
-<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
 </head>
 
 
@@ -190,6 +190,139 @@
               <div class="col-12 col-md-10 m-auto">
                 
 
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/05/26/MatLab/MatLab%E5%8F%96%E6%95%B4%E5%87%BD%E6%95%B0/">MatLab取整函数</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/05/26/MatLab/MatLab%E5%8F%96%E6%95%B4%E5%87%BD%E6%95%B0/">
+          
+          
+            
+          
+          MatLab默认的数值类型为双精度 double 型，而 double / single 类型数据在转为整型时常常需要取整，MatLab提供了以下四种取整函数。
+
+
+
+函数
+说明
+举例
+
+
+
+
+floor
+向下取整
+floor(1.5)=1floor(-1.5)=-2
+
+
+ceil
+向上取整
+ceil(1.5)=2ceil(-1.5)=-1
+
+
+round
+取整到最近的整数（若小数部分为0.5，则
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-05-26 10:44" pubdate>
+              2020-05-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/MatLab/">MatLab</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/MatLab/">MatLab</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/05/26/MatLab/MatLab%E5%8F%98%E9%87%8F/">MatLab变量</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/05/26/MatLab/MatLab%E5%8F%98%E9%87%8F/">
+          
+          
+            
+          
+          1. 变量命名
+在 MatLab 中，变量不需预先声明就可直接进行赋值操作。变量命名遵循以下规则：
+
+变量名和函数名对字母大小写敏感
+变量名和函数名必须以字母为开端，其后可以是字母、数字和下划线
+不能使用 MatLab 关键字作为变量名和函数名（可使用 iskeywords 函数查看 MatLab 中所有的关键字）
+变量名和函数名最多可包含 63 个字符，超过部分被截断忽略
+避免使用函数名作为变量
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-05-26 10:44" pubdate>
+              2020-05-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/MatLab/">MatLab</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/MatLab/">MatLab</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
 
   <div class="row mx-auto index-card">
     
@@ -671,119 +804,6 @@ NodeJS 每个大版本都有相对应的源，比如 12.16.2 版本对应的源�
               <a href="/tags/Technique/">Technique</a>
             
               <a href="/tags/Python/">Python</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/05/26/Python/pip%E4%B8%8B%E8%BD%BDPython%E5%BA%93%E9%80%9F%E5%BA%A6%E6%85%A2%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/">pip下载Python库速度慢解决方案</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/05/26/Python/pip%E4%B8%8B%E8%BD%BDPython%E5%BA%93%E9%80%9F%E5%BA%A6%E6%85%A2%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/">
-          
-          
-            
-          
-          1. 简介
-python 的 pip 安装包工具非常便利，但由于其默认的下载源为国外源，因此在安装 python 库的时候下载速度较慢。有时库文件过大，超出 pip 的下载时间限制，就会报错 The read operation timed out。所以我们可是手动更改 pip 的下载源为国内的镜像下载源以提升下载速度。
-2. 国内镜像源
-国内主要的 pip 镜像源有以下几个：
-1234https
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/Python/">Python</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/Python/">Python</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/05/26/Qt/Deepin15.11%E4%B8%8BQt5.14%E6%8A%A5%E9%94%99/">Deepin15.11下Qt5.14报错</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/05/26/Qt/Deepin15.11%E4%B8%8BQt5.14%E6%8A%A5%E9%94%99/">
-          
-          
-            
-          
-          1. error: Unknown module(s) in QT: xlsx
-
-问题：Qt 找不到 qtxlsx 的 modules
-解决：手动安装 qtxlsx 模块
-
-12345git clone git@github.com:dbzhang800/QtXlsxWriter.gitcd QtXlsxWriterqmakemakemake install
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/Qt/">Qt</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/Qt/">Qt</a>
             
           </div>
         

@@ -46,7 +46,7 @@
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
-<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
 </head>
 
 
@@ -197,21 +197,76 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2022/03/05/Docker/Linux%E6%99%AE%E9%80%9A%E7%94%A8%E6%88%B7%E4%BD%BF%E7%94%A8Docker/">Linux普通用户使用Docker</a>
+        <a href="/2022/07/16/VSCode/VSCode%E6%8F%92%E4%BB%B6Remote-SSH%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/">VSCode插件Remote-SSH相关问题</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2022/03/05/Docker/Linux%E6%99%AE%E9%80%9A%E7%94%A8%E6%88%B7%E4%BD%BF%E7%94%A8Docker/">
+        <a href="/2022/07/16/VSCode/VSCode%E6%8F%92%E4%BB%B6Remote-SSH%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/">
+          
+          
+            
+          
+          1. Windows 下报错：Permissions for 'xxx/.ssh/id_rsa' are too open.
+
+问题：当前用户 .ssh 目录下私钥权限太开放了；
+解决：找到当前用户目录下 .ssh/id_rsa 文件，鼠标右键-&gt;属性-&gt;安全，然后编缉「组或用户名」，将除当前用户、SYSTEM 和管理员用户之外的其它用户都删除即可。
+
+
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2022-07-16 15:00" pubdate>
+              2022-07-16
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/VSCode/">VSCode</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/VSCode/">VSCode</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2022/06/20/ChannelCoding/%E5%BE%AA%E7%8E%AF%E7%A0%81/">循环码</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2022/06/20/ChannelCoding/%E5%BE%AA%E7%8E%AF%E7%A0%81/">
           
           
             
           
           1. 简介
-Docker 是一款开源的应用容器引擎，让开发者可以打包他们的应用以及依赖包到一个可移植的镜像中，然后发布到任何流行的 Linux 或 Windows 操作系统的机器上，也可以实现虚拟化。容器是完全使用沙箱机制，相互之间不会有任何接口。
-
-以上摘自**《百度百科——Docker》**
-
-Docker 为开发者带来了极大便利性，因此被广泛使用于工作学习中。然而，Docker 默认只有拥于
+循环码是一类非常重要的线性码，其不仅在理论上有很好的代数结构，而且其编码和译码都可以很容易地利用线性移位寄存器来实现。一些重要的码，比如二元汉明码及其对偶码都等价于循环码。
+2. 定义
+设 C⊆V(n,q)C \subseteq V(n, q)C⊆V(n,q) 是一个线性码。如果 CCC 的任意一个码字的循环移位还是一个码字，即当 a0a1⋯an−1∈Ca_0 a_1 \cdots a
         </a>
       </p>
 
@@ -219,8 +274,8 @@ Docker 为开发者带来了极大便利性，因此被广泛使用于工作学�
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2022-03-05 10:51" pubdate>
-              2022-03-05
+            <time datetime="2022-06-20 17:08" pubdate>
+              2022-06-20
             </time>
           </div>
         
@@ -230,7 +285,7 @@ Docker 为开发者带来了极大便利性，因此被广泛使用于工作学�
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/Docker/">Docker</a>
+              <a href="/categories/Technique/ChannelCoding/">ChannelCoding</a>
             
           </div>
         
@@ -240,7 +295,7 @@ Docker 为开发者带来了极大便利性，因此被广泛使用于工作学�
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Docker/">Docker</a>
+              <a href="/tags/ChannelCoding/">ChannelCoding</a>
             
           </div>
         
@@ -254,22 +309,17 @@ Docker 为开发者带来了极大便利性，因此被广泛使用于工作学�
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2022/03/03/Browser/Chrome/Chrome%E6%B8%85%E9%99%A4DNS%E7%BC%93%E5%AD%98/">Chrome清除DNS缓存</a>
+        <a href="/2022/06/20/ChannelCoding/%E6%88%88%E8%8E%B1%E7%A0%81/">戈莱码</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2022/03/03/Browser/Chrome/Chrome%E6%B8%85%E9%99%A4DNS%E7%BC%93%E5%AD%98/">
+        <a href="/2022/06/20/ChannelCoding/%E6%88%88%E8%8E%B1%E7%A0%81/">
           
           
             
           
           1. 简介
-当域名解析的 IP 发生变化（DNS 服务器已经刷新）时，如果想立即获取变化而不关闭 Chrome，则可以手动清除一下浏览器的 DNS 缓存。
-
-Chrome 的 DNS 缓存好像是存在内存中的，所以直接关闭 Chrome 也能达到清除 DNS 缓存的目的。
-
-2. 清除 DNS 缓存
-在 Chrome 中输入 chrome://net-internals/#dns，在弹出的页面中点击
+194919491949 年，Marcel Golay 给出了四个线性码，分别记为 G23,G24,G11,G12G_{23}, G_{24}, G_{11}, G_{12}G23​,G24​,G11​,G12​，现在称这四个线性码为戈莱码。G23G_{23}G23​ 和 G24G_{24}G24​ 为二元线性码，G11G_{11}G11​ 和 G12G_{12}G12​ 是三元线性码
         </a>
       </p>
 
@@ -277,8 +327,8 @@ Chrome 的 DNS 缓存好像是存在内存中的，所以直接关闭 Chrome 也
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2022-03-03 11:47" pubdate>
-              2022-03-03
+            <time datetime="2022-06-20 00:03" pubdate>
+              2022-06-20
             </time>
           </div>
         
@@ -288,9 +338,7 @@ Chrome 的 DNS 缓存好像是存在内存中的，所以直接关闭 Chrome 也
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/Browser/">Browser</a>
-            
-              <a href="/categories/Technique/Browser/Chrome/">Chrome</a>
+              <a href="/categories/Technique/ChannelCoding/">ChannelCoding</a>
             
           </div>
         
@@ -300,9 +348,7 @@ Chrome 的 DNS 缓存好像是存在内存中的，所以直接关闭 Chrome 也
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Browser/">Browser</a>
-            
-              <a href="/tags/Chrome/">Chrome</a>
+              <a href="/tags/ChannelCoding/">ChannelCoding</a>
             
           </div>
         
@@ -316,17 +362,22 @@ Chrome 的 DNS 缓存好像是存在内存中的，所以直接关闭 Chrome 也
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2022/03/01/Linux/CentOS/CentOS7%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BAXray/">CentOS7服务器搭建Xray</a>
+        <a href="/2022/06/19/ChannelCoding/%E6%B1%89%E6%98%8E%E7%A0%81/">汉明码</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2022/03/01/Linux/CentOS/CentOS7%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BAXray/">
+        <a href="/2022/06/19/ChannelCoding/%E6%B1%89%E6%98%8E%E7%A0%81/">
           
           
             
           
           1. 简介
-不同于桌面系统，服务器系统更便重于稳定性和可靠性。鉴于 CentOS 是目前使用最广泛的 Linux 服务器系统之一，本人也在自己的 VPS 上安装了 CentOS。虽然不幸的是， CentOS 官方在 2021 年底已经宣布停止维护 CentOS 8，但目前并不影响我们当下继续使用 CentOS 7，CentOS 7 的维护周期到 2024 年才截止。有关 Xray 的介绍可以参见「
+汉明码是一种完备的线性码，具有很多很好的性质，而且其译码方法也非常简洁高效。
+2. 汉明码
+2.1 二元汉明码
+
+
+定义一：设 rrr 是一个正整数，设 H\boldsymbol{H}H 是一个 r×(2r−1)r \times (2^r - 1)r×(2r−1) 阶矩阵，其列向量由 V(r,2)V(r, 2)V(r,2) 中的所有不同的非零向量组成。以 H\boldsymbol{H}
         </a>
       </p>
 
@@ -334,8 +385,8 @@ Chrome 的 DNS 缓存好像是存在内存中的，所以直接关闭 Chrome 也
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2022-03-01 00:19" pubdate>
-              2022-03-01
+            <time datetime="2022-06-19 12:58" pubdate>
+              2022-06-19
             </time>
           </div>
         
@@ -345,9 +396,7 @@ Chrome 的 DNS 缓存好像是存在内存中的，所以直接关闭 Chrome 也
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/Linux/">Linux</a>
-            
-              <a href="/categories/Technique/Linux/CentOS/">CentOS</a>
+              <a href="/categories/Technique/ChannelCoding/">ChannelCoding</a>
             
           </div>
         
@@ -357,9 +406,7 @@ Chrome 的 DNS 缓存好像是存在内存中的，所以直接关闭 Chrome 也
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/CentOS/">CentOS</a>
+              <a href="/tags/ChannelCoding/">ChannelCoding</a>
             
           </div>
         
@@ -373,29 +420,22 @@ Chrome 的 DNS 缓存好像是存在内存中的，所以直接关闭 Chrome 也
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2022/02/21/GPS/GPS%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/">GPS相关资料</a>
+        <a href="/2022/06/17/ChannelCoding/%E7%BC%96%E7%A0%81%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%80/">编码理论基础</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2022/02/21/GPS/GPS%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/">
+        <a href="/2022/06/17/ChannelCoding/%E7%BC%96%E7%A0%81%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%80/">
           
           
             
           
-          1. 相关博文
-
-GPS(英文原版)、GPS(中译版)
-
-2. 相关课程
-
-GPS MOOC (Massive Open Online Course)
-
-3. 相关书籍
-
-Global Positioning System: Signals, Measurements, and Performance Revised Second Edition
+          1. 码的定义
 
 
-我的博客即将同步至腾讯云+社区，邀请大家一同入
+定义一：设 AAA 是一个有限集合，称之为字母表。AAA 中元素构成的有限序列称为字或串。一个字中的元素的个数称为字长。
+
+
+定义二：设 AAA 是一个字母表。AAA 上所有字的集合记为 A∗A^*A∗。A∗A^*A∗ 中包含一个长度的零的特殊字，称之为空字，记为 ε\varepsilonε。对 A∗A^*A∗ 中的任意两个字 xxx 和 yyy，将 yyy 排在 xxx 后面
         </a>
       </p>
 
@@ -403,8 +443,8 @@ Global Positioning System: Signals, Measurements, and Performance Revised Second
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2022-02-21 15:37" pubdate>
-              2022-02-21
+            <time datetime="2022-06-17 22:01" pubdate>
+              2022-06-17
             </time>
           </div>
         
@@ -414,7 +454,7 @@ Global Positioning System: Signals, Measurements, and Performance Revised Second
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/GPS/">GPS</a>
+              <a href="/categories/Technique/ChannelCoding/">ChannelCoding</a>
             
           </div>
         
@@ -424,7 +464,7 @@ Global Positioning System: Signals, Measurements, and Performance Revised Second
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/GPS/">GPS</a>
+              <a href="/tags/ChannelCoding/">ChannelCoding</a>
             
           </div>
         
@@ -438,22 +478,20 @@ Global Positioning System: Signals, Measurements, and Performance Revised Second
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2022/02/20/Linux/Sundry/Linux%E7%B3%BB%E7%BB%9F%E8%BF%81%E7%A7%BB/">Linux系统迁移</a>
+        <a href="/2022/06/17/ChannelCoding/%E7%BA%BF%E6%80%A7%E7%A0%81/">线性码</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2022/02/20/Linux/Sundry/Linux%E7%B3%BB%E7%BB%9F%E8%BF%81%E7%A7%BB/">
+        <a href="/2022/06/17/ChannelCoding/%E7%BA%BF%E6%80%A7%E7%A0%81/">
           
           
             
           
           1. 简介
-Linux 系统迁移系统相对于 Windows 来说还是简单许多，使用 Linux 系统自带的 dd 命令即可。
-2. 系统迁移
-2.1 创建分区表
-如果是一块新硬盘，则首先要为这个新硬盘创建分区表（不是则可以跳过该步）。分区表类型有 MBR 和 GPT 两种，具体使用哪种要看个人的电脑配置。
+线性码是一类非常重要的分组码，是讨论各种码的基础。线性码的编码方案和译码方案都非常简单。许多特殊的线性码都具有非常好的性质，绝大多数的已知好码都是线性码。
+2. 线性码
 
-进入电脑的 BIOS，查看电脑是否支持 UEFI 启动，如果支持则说明兼容 GPT 分区的
+定义一：如果 C⊆V(n,q)C \subseteq V(n, q)C⊆V(n,q) 是 V(n,q)V(n, q)V(n,q) 的一个子空间，则称 CCC 为一个 qqq 元线性码。如果 CCC 是 V(n,q)V
         </a>
       </p>
 
@@ -461,8 +499,8 @@ Linux 系统迁移系统相对于 Windows 来说还是简单许多，使用 Linu
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2022-02-20 23:12" pubdate>
-              2022-02-20
+            <time datetime="2022-06-17 22:00" pubdate>
+              2022-06-17
             </time>
           </div>
         
@@ -472,9 +510,7 @@ Linux 系统迁移系统相对于 Windows 来说还是简单许多，使用 Linu
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/Linux/">Linux</a>
-            
-              <a href="/categories/Technique/Linux/Sundry/">Sundry</a>
+              <a href="/categories/Technique/ChannelCoding/">ChannelCoding</a>
             
           </div>
         
@@ -484,9 +520,7 @@ Linux 系统迁移系统相对于 Windows 来说还是简单许多，使用 Linu
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/Sundry/">Sundry</a>
+              <a href="/tags/ChannelCoding/">ChannelCoding</a>
             
           </div>
         
@@ -500,19 +534,28 @@ Linux 系统迁移系统相对于 Windows 来说还是简单许多，使用 Linu
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2022/02/20/Printer/Canon/TR4527%E8%BE%93%E7%A8%BF%E5%99%A8%E6%81%A2%E5%A4%8D%E8%BF%9B%E7%BA%B8/">TR4527输稿器恢复进纸</a>
+        <a href="/2022/06/02/Python/Python%E5%8C%85%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7/">Python包构建工具</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2022/02/20/Printer/Canon/TR4527%E8%BE%93%E7%A8%BF%E5%99%A8%E6%81%A2%E5%A4%8D%E8%BF%9B%E7%BA%B8/">
+        <a href="/2022/06/02/Python/Python%E5%8C%85%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7/">
           
           
             
           
           1. 简介
-前年买的佳能的 TR4527 打印机，今年回家使用发现，输稿器突然无法使用了。虽然打开输稿器放入纸张会有「嘀」的一声，但按「复印」按钮后打印机始终提示「从玻璃盖板上放纸」，不管设置什么都不管用。最后发现重置一下系统的配置即可，这估计是这款打印机的系统 Bug。
-2. 重置配置
-启动打印机，选择【设置】-&gt;【设备设置】-&gt;【重置设置】-&gt;【设置数据】-&gt;【是】，对
+Python 官方也提供了关于打包 Python 包的文档：
+
+Packaging Python Projects
+
+相对于官方提供的打包方式，一些第三方打包工具更加方便，比如 Poetry 等。
+2. Poetry
+
+源码仓库
+官方文档
+
+
+Poetry 在构建 Python 包解决依赖时，可能需要下载依赖包。Poetry 默认是从 PyPI 官网下载，在国内由于众所周知的原因，下载
         </a>
       </p>
 
@@ -520,8 +563,8 @@ Linux 系统迁移系统相对于 Windows 来说还是简单许多，使用 Linu
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2022-02-20 19:45" pubdate>
-              2022-02-20
+            <time datetime="2022-06-02 14:20" pubdate>
+              2022-06-02
             </time>
           </div>
         
@@ -531,9 +574,7 @@ Linux 系统迁移系统相对于 Windows 来说还是简单许多，使用 Linu
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/Printer/">Printer</a>
-            
-              <a href="/categories/Technique/Printer/Canon/">Canon</a>
+              <a href="/categories/Technique/Python/">Python</a>
             
           </div>
         
@@ -543,9 +584,7 @@ Linux 系统迁移系统相对于 Windows 来说还是简单许多，使用 Linu
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Printer/">Printer</a>
-            
-              <a href="/tags/Canon/">Canon</a>
+              <a href="/tags/Python/">Python</a>
             
           </div>
         
@@ -559,17 +598,19 @@ Linux 系统迁移系统相对于 Windows 来说还是简单许多，使用 Linu
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2022/02/19/Windows/Windows%E7%B3%BB%E7%BB%9F%E8%BF%81%E7%A7%BB/">Windows系统迁移</a>
+        <a href="/2022/06/02/C++/Linux%E4%B8%8B%E4%BD%BF%E7%94%A8VSCode%E9%85%8D%E7%BD%AEC++%E8%B0%83%E8%AF%95%E7%8E%AF%E5%A2%83/Linux%E4%B8%8B%E4%BD%BF%E7%94%A8VSCode%E9%85%8D%E7%BD%AEC++%E8%B0%83%E8%AF%95%E7%8E%AF%E5%A2%83/">Linux下使用VSCode配置C++调试环境</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2022/02/19/Windows/Windows%E7%B3%BB%E7%BB%9F%E8%BF%81%E7%A7%BB/">
+        <a href="/2022/06/02/C++/Linux%E4%B8%8B%E4%BD%BF%E7%94%A8VSCode%E9%85%8D%E7%BD%AEC++%E8%B0%83%E8%AF%95%E7%8E%AF%E5%A2%83/Linux%E4%B8%8B%E4%BD%BF%E7%94%A8VSCode%E9%85%8D%E7%BD%AEC++%E8%B0%83%E8%AF%95%E7%8E%AF%E5%A2%83/">
           
           
             
           
           1. 简介
-当我们为电脑更换硬盘时（比如更换大一点的硬盘或将 HDD 更换为 SSD），往往需要考虑原硬盘上的系统和数据怎么办。重装系统是一个选择，但重装系统后还要重装系统上的软件，还要迁移数据，费时又费力。另一个方法是迁移系统，这样既不用重装系统也不用重装软件，且系统上的数据还全部保存了下来。然而 Windows 系统自身并没有提供系统迁移的工具，不像 Linux 提供了 dd 命令可以用来直接
+最近我意识到，调试是一个非常有用的手段。我记得我们当初学习 C++ 语言时，都是使用一个 IDE（比如 CodeBlocks、Dev-C++） 来进行编程和调试；然而随着学习的深入，我发现很多 Debug 工作直接用 printf 就能完成，还是自己接触的工作太少太简单，于是就没太学习调试这方面的知识；直到我开始尝试阅读一个比较大的项目源码。
+
+一个大的项目源码，往往包含一堆的源代码、
         </a>
       </p>
 
@@ -577,8 +618,8 @@ Linux 系统迁移系统相对于 Windows 来说还是简单许多，使用 Linu
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2022-02-19 16:50" pubdate>
-              2022-02-19
+            <time datetime="2022-06-02 13:13" pubdate>
+              2022-06-02
             </time>
           </div>
         
@@ -588,7 +629,7 @@ Linux 系统迁移系统相对于 Windows 来说还是简单许多，使用 Linu
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/Windows/">Windows</a>
+              <a href="/categories/Technique/C/">C++</a>
             
           </div>
         
@@ -598,7 +639,7 @@ Linux 系统迁移系统相对于 Windows 来说还是简单许多，使用 Linu
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Windows/">Windows</a>
+              <a href="/tags/C/">C++</a>
             
           </div>
         
@@ -612,17 +653,23 @@ Linux 系统迁移系统相对于 Windows 来说还是简单许多，使用 Linu
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2022/02/19/Net/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/">内网穿透</a>
+        <a href="/2022/05/31/CMake/CMake%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99%E6%B1%87%E6%80%BB/">CMake相关资料汇总</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2022/02/19/Net/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/">
+        <a href="/2022/05/31/CMake/CMake%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99%E6%B1%87%E6%80%BB/">
           
           
             
           
-          1. 简介
-一般的校园网/企业网往往都设置有防火墙，在内网可以访问外网，但在外网却无法访问内网。比如校园的服务器，当我们在校外时，只能通过学校的 VPN 访问校园网。然而，这个 VPN 一来可能不稳定，二来往往只有 Windows 平台有（气抖冷），对于 Linux 用户极其不友好。在朋友的推荐下，我使用了 ZeroTier 这款跨平台的虚拟局域网构建工具，使用它能够进行内网穿透，使得外网也能访问
+          【注】持续更新中……
+
+CMake 官方文档
+An Introduction to Modern CMake
+It's Time To Do CMake Right
+CMake 入门实战
+
+
         </a>
       </p>
 
@@ -630,8 +677,8 @@ Linux 系统迁移系统相对于 Windows 来说还是简单许多，使用 Linu
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2022-02-19 10:41" pubdate>
-              2022-02-19
+            <time datetime="2022-05-31 15:54" pubdate>
+              2022-05-31
             </time>
           </div>
         
@@ -641,7 +688,7 @@ Linux 系统迁移系统相对于 Windows 来说还是简单许多，使用 Linu
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/Net/">Net</a>
+              <a href="/categories/Technique/CMake/">CMake</a>
             
           </div>
         
@@ -651,7 +698,7 @@ Linux 系统迁移系统相对于 Windows 来说还是简单许多，使用 Linu
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Net/">Net</a>
+              <a href="/tags/CMake/">CMake</a>
             
           </div>
         
@@ -665,68 +712,20 @@ Linux 系统迁移系统相对于 Windows 来说还是简单许多，使用 Linu
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2022/01/13/Windows/Windows%E4%B8%8B%E6%96%87%E4%BB%B6%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83/">Windows下文件命名规范</a>
+        <a href="/2022/05/31/Make/Make%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99%E6%B1%87%E6%80%BB/">Make相关资料汇总</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2022/01/13/Windows/Windows%E4%B8%8B%E6%96%87%E4%BB%B6%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83/">
+        <a href="/2022/05/31/Make/Make%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99%E6%B1%87%E6%80%BB/">
           
           
             
           
-          1. 保留字符
-Windows 系统下以下保留字符不能出现在文件名中：
+          【注】持续更新中……
+
+跟我一起写Makefile
 
 
-
-保留字符
-说明
-
-
-
-
-&lt;
-英文小于号
-
-
-&gt;
-英文大于号
-
-
-:
-英文冒号
-
-
-&quot;
-英文双引号
-
-
-/
-英文正斜杠
-
-
-\
-英文反斜杠
-
-
-|
-英文竖线
-
-
-?
-英文问号
-
-
-*
-英文星号
-
-
-ASCII NUL
-数值为零的 ASCII 字符
-
-
-
-有关 Windows 系统下文件命名规则详情见命
         </a>
       </p>
 
@@ -734,8 +733,8 @@ ASCII NUL
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2022-01-13 21:34" pubdate>
-              2022-01-13
+            <time datetime="2022-05-31 15:50" pubdate>
+              2022-05-31
             </time>
           </div>
         
@@ -745,7 +744,7 @@ ASCII NUL
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/Windows/">Windows</a>
+              <a href="/categories/Technique/Make/">Make</a>
             
           </div>
         
@@ -755,73 +754,7 @@ ASCII NUL
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Windows/">Windows</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/12/15/Net/%E6%9C%BA%E5%9C%BA%E7%9B%B8%E5%85%B3%E8%B5%84%E6%BA%90%E6%B1%87%E6%80%BB/">机场相关资源汇总</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/12/15/Net/%E6%9C%BA%E5%9C%BA%E7%9B%B8%E5%85%B3%E8%B5%84%E6%BA%90%E6%B1%87%E6%80%BB/">
-          
-          
-            
-          
-          1. 简介
-由于众所周知的原因，机场已经是我们平时科研/工作/学习乃至生活中不可或缺的重要工具。虽说最好是能有属于自己的机场，但是由于资金/时间的限制，并不是所有人都能拥有自己的私人机场。况且，就算有自己的私人机场，也无法保证万无一失。因此，本文汇总了一些机场相关的资源，以备不时之需。
-2. 相关资源汇总
-
-
-机场推荐 - 猫梦博客
-
-
-毒奶博客
-
-
-ssrandv2rayandss
-
-
-3. 免
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-12-15 19:07" pubdate>
-              2021-12-15
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/Net/">Net</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/Net/">Net</a>
+              <a href="/tags/Make/">Make</a>
             
           </div>
         

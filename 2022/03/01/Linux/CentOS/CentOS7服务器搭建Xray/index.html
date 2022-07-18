@@ -62,7 +62,7 @@
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
-<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
 </head>
 
 
@@ -313,7 +313,7 @@
 </li>
 <li>
 <p>最后安装证书和密钥到服务器上：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">mkdir /etc/xray			<span class="hljs-comment"># 创建目录用于保存证书和密钥</span><br>~/.acme.sh/acme.sh --installcert -d mydomain.me --fullchainpath /etc/xray/xray.crt --keypath /etc/xray/xray.key --ecc<br><span class="hljs-comment"># -d 指定域名，mydomain.me 即你服务器绑定的域名</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">mkdir</span> /etc/xray			<span class="hljs-comment"># 创建目录用于保存证书和密钥</span><br>~/.acme.sh/acme.sh --installcert -d mydomain.me --fullchainpath /etc/xray/xray.crt --keypath /etc/xray/xray.key --ecc<br><span class="hljs-comment"># -d 指定域名，mydomain.me 即你服务器绑定的域名</span><br></code></pre></td></tr></table></figure>
 </li>
 </ul>
 <p>安装完证书和密钥后，记住它们所在的位置：</p>

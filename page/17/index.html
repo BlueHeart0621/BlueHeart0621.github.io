@@ -46,7 +46,7 @@
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
-<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
 </head>
 
 
@@ -197,6 +197,212 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
+        <a href="/2021/01/21/TeX/LaTeX/LaTeX%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7/">LaTeX奇技淫巧</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/01/21/TeX/LaTeX/LaTeX%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7/">
+          
+          
+            
+          
+          1. 移动符号
+第一个符号位置不变，改变第二个符号相对第一个符号的位置。
+1.1 左移
+在两个符号间插入 \! 可将第二个符号逐步往左移动。每个 \! 移动 −16-\frac{1}{6}−61​ em 的距离（−-− 表示左移）。插入越多 \! ，第二个符号左移的位移就越大。
+比如：
+
+
+$\dashv \vdash$：
+⊣⊢\dashv \vdash⊣⊢
+
+
+$\dashv \! \vdash
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-21 11:46" pubdate>
+              2021-01-21
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/TeX/">TeX</a>
+            
+              <a href="/categories/Technique/TeX/LaTeX/">LaTeX</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/TeX/">TeX</a>
+            
+              <a href="/tags/LaTeX/">LaTeX</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/01/19/Math/Theory/%E6%96%B9%E5%90%91%E4%BD%99%E5%BC%A6/">方向余弦</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/01/19/Math/Theory/%E6%96%B9%E5%90%91%E4%BD%99%E5%BC%A6/">
+          
+          
+            
+          
+          【注】参考自 Wikipedia 。
+1. 定义
+1.1 方向余弦
+
+在解析几何里，一个向量的三个方向余弦分别是这向量与三个坐标轴之间的角度的余弦。
+
+设 v⃗=v1x⃗+v2y⃗+v3z⃗
+\vec{v} = v_1 \vec{x} + v_2 \vec{y} + v_3 \vec{z}
+v=v1​x+v2​y​+v3​z 其中，x⃗\vec{x}x、y⃗\vec{y}y​、z⃗\vec{z}z
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-19 22:25" pubdate>
+              2021-01-19
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Math/">Math</a>
+            
+              <a href="/categories/Technique/Math/Theory/">Theory</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/Math/">Math</a>
+            
+              <a href="/tags/Theory/">Theory</a>
+            
+              <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/01/19/ACM/%E9%A2%98%E8%A7%A3/P2758%E3%80%8C%E7%BC%96%E8%BE%91%E8%B7%9D%E7%A6%BB%E3%80%8D/">P2758「编辑距离」</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/01/19/ACM/%E9%A2%98%E8%A7%A3/P2758%E3%80%8C%E7%BC%96%E8%BE%91%E8%B7%9D%E7%A6%BB%E3%80%8D/">
+          
+          
+            
+          
+          1. 题目
+题目链接：P2758「编辑距离」 。
+题目描述
+设 AAA 和 BBB 是两个字符串。我们要用最少的字符操作次数，将字符串 AAA 转换为字符串 BBB。这里所说的字符操作共有三种：
+
+
+删除一个字符；
+
+
+插入一个字符；
+
+
+将一个字符改为另一个字符；
+
+
+！皆为小写字母！
+输入格式
+第一行为字符串 AAA；第二行为字符串 BBB；字符串 AAA 和 BBB 的长度均小于 20002
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-19 20:39" pubdate>
+              2021-01-19
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/ACM/">ACM</a>
+            
+              <a href="/categories/Technique/ACM/%E9%A2%98%E8%A7%A3/">题解</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/ACM/">ACM</a>
+            
+              <a href="/tags/%E9%A2%98%E8%A7%A3/">题解</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
         <a href="/2021/01/17/Configure/Configure%E8%84%9A%E6%9C%AC%E5%AD%A6%E4%B9%A0/">Configure脚本学习</a>
       </h1>
 
@@ -208,6 +414,7 @@
           
           1. 指定安装目录
 1./configure --prefix=...
+
         </a>
       </p>
 
@@ -383,27 +590,42 @@ CMake 运行主要分为两个阶段：
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/01/16/CSAPP/%E6%B5%AE%E7%82%B9%E6%95%B0/%E6%B5%AE%E7%82%B9%E6%95%B0/">浮点数</a>
+        <a href="/2021/01/16/InformationTheory/%E4%BF%A1%E6%81%AF%E7%9A%84%E7%BB%9F%E8%AE%A1%E5%BA%A6%E9%87%8F/%E4%BF%A1%E6%81%AF%E7%9A%84%E7%BB%9F%E8%AE%A1%E5%BA%A6%E9%87%8F/">信息的统计度量</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/01/16/CSAPP/%E6%B5%AE%E7%82%B9%E6%95%B0/%E6%B5%AE%E7%82%B9%E6%95%B0/">
+        <a href="/2021/01/16/InformationTheory/%E4%BF%A1%E6%81%AF%E7%9A%84%E7%BB%9F%E8%AE%A1%E5%BA%A6%E9%87%8F/%E4%BF%A1%E6%81%AF%E7%9A%84%E7%BB%9F%E8%AE%A1%E5%BA%A6%E9%87%8F/">
           
           
             
           
-          1. IEEE 754 标准
-IEEE 754 浮点标准用 V=(−1)s×M×2EV = (-1)^s \times M \times 2^EV=(−1)s×M×2E 的形式来表示一个数。
+          符号约定
 
 
 
-符号位（s）：指明数的正负，即 VVV 中的 sss。
+符号
+说明
 
 
-阶码（exp）：对浮点数加权，即 VVV 中的 EEE。
 
 
-尾数（frac）：二进制小数，即 VVV 中的 MMM，范围为 1∼2−ε1 \
+X,Y,⋯X, Y, \cdotsX,Y,⋯
+随机事件集合/随机变量
+
+
+x,y,⋯x, y, \cdotsx,y,⋯
+随机事件集合中的元素/随机变量的取值
+
+
+p(x)p(x)p(x)
+随机事件发生的概率
+
+
+p(x∣y)p(x \vert y)p(x∣y)
+随机事件发生的条件概率
+
+
+p(xy),p(x,y)p(x y), p(x, y)p(xy),p(x,
         </a>
       </p>
 
@@ -422,7 +644,7 @@ IEEE 754 浮点标准用 V=(−1)s×M×2EV = (-1)^s \times M \times 2^EV=(−1)s
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/CSAPP/">CSAPP</a>
+              <a href="/categories/Technique/InformationTheory/">InformationTheory</a>
             
           </div>
         
@@ -432,7 +654,7 @@ IEEE 754 浮点标准用 V=(−1)s×M×2EV = (-1)^s \times M \times 2^EV=(−1)s
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/CSAPP/">CSAPP</a>
+              <a href="/tags/InformationTheory/">InformationTheory</a>
             
           </div>
         
@@ -612,190 +834,6 @@ IEEE 754 浮点标准用 V=(−1)s×M×2EV = (-1)^s \times M \times 2^EV=(−1)s
               <a href="/tags/Math/">Math</a>
             
               <a href="/tags/Theory/">Theory</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/01/16/Math/Modeling/%E4%BC%A0%E6%9F%93%E7%97%85%E6%A8%A1%E5%9E%8B/%E4%BC%A0%E6%9F%93%E7%97%85%E6%A8%A1%E5%9E%8B/">传染病模型</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/01/16/Math/Modeling/%E4%BC%A0%E6%9F%93%E7%97%85%E6%A8%A1%E5%9E%8B/%E4%BC%A0%E6%9F%93%E7%97%85%E6%A8%A1%E5%9E%8B/">
-          
-          
-            
-          
-          
-
-基础定义
-
-
-将传染病范围内的人群分为以下类别：
-
-SSS(Susceptible)类：指未得病，但与感染者接触后容易收到感染的人。
-EEE(Exposed)类：指接触过感染者，但暂时没有传播的能力的人。
-III(Infectious)类：指染上传染病，具有传播能力的人。（可以传播给SSS类人员，将其变成EEE类或III类成员）
-RRR(Recovered / Removed)类：指病愈而具有
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-16 18:06" pubdate>
-              2021-01-16
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/Math/">Math</a>
-            
-              <a href="/categories/Technique/Math/Modeling/">Modeling</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/Math/">Math</a>
-            
-              <a href="/tags/Modeling/">Modeling</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/01/16/Math/Theory/%E5%88%9A%E6%80%A7%E6%96%B9%E7%A8%8B/%E5%88%9A%E6%80%A7%E6%96%B9%E7%A8%8B/">刚性方程</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/01/16/Math/Theory/%E5%88%9A%E6%80%A7%E6%96%B9%E7%A8%8B/%E5%88%9A%E6%80%A7%E6%96%B9%E7%A8%8B/">
-          
-          
-            
-          
-          摘自Wikipedia——刚性方程。
-1.  定义
-在数学领域中，刚性方程（stiffness equation）是指一个微分方程，其数值分析的解只有在时间间隔很小时才会稳定，只要时间间隔略大，其解就会不稳定。目前很难去精确地去定义哪些微分方程是刚性方程，然而粗略而言，若此方程式中包含使其快速变动的项，则其为刚性方程。
-在积分微分方程时，若某一区域的解曲线的变化很大，会希望在这个区域的积分间隔密一
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-16 18:06" pubdate>
-              2021-01-16
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/Math/">Math</a>
-            
-              <a href="/categories/Technique/Math/Theory/">Theory</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/Math/">Math</a>
-            
-              <a href="/tags/Theory/">Theory</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/01/15/Python/Torch/Torch%E5%87%BD%E6%95%B0/">Torch函数</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/01/15/Python/Torch/Torch%E5%87%BD%E6%95%B0/">
-          
-          
-            
-          
-          torch.clamp(input, min, max, out=None) → Tensor
-将 input 张量中的每个元素值截断到区间 [min, max] 中。
-torch.stack(tensors, dim=0, out=None) → Tensor
-对 tensors 沿指定维度拼接，但会额外增加一维拼接的维度，即拼接时来自于 tensors 中每个 tensor 中的拼接元素单独组
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-15 22:44" pubdate>
-              2021-01-15
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/Python/">Python</a>
-            
-              <a href="/categories/Technique/Python/Torch/">Torch</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/Python/">Python</a>
-            
-              <a href="/tags/Torch/">Torch</a>
             
           </div>
         

@@ -62,7 +62,7 @@
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
-<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
 </head>
 
 
@@ -276,7 +276,7 @@
 <ul>
 <li>查看本地主机是否生成了 ssh-key，如果文件夹不存在或者没有 <code>id_rsa</code> 和 <code>id_rsa.pub</code> ，说明未生成 ssh-key ：</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ls ~/.ssh<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">ls</span> ~/.ssh<br></code></pre></td></tr></table></figure>
 <ul>
 <li>如果本地主机未生成 ssh-key，则手动生成：</li>
 </ul>
@@ -294,10 +294,10 @@
 <h2 id="4-操纵远程主机">4. 操纵远程主机</h2>
 <h3 id="4-1-复制文件到远程主机">4.1 复制文件到远程主机</h3>
 <p>在本地主机终端下，使用 <code>scp</code> 命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">scp filename user@host:dstpath  <span class="hljs-comment"># 复制文件，filename 为本地文件全局路径，dstpath 为复制到远程主机的目标路径</span><br>scp -r dirname user@host:dstpath    <span class="hljs-comment"># 复制文件夹，dirname 为本地文件夹全局路径，dstpath 为复制到远程主机的目标路径</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">scp filename user@host:dstpath  <span class="hljs-comment"># 复制文件，filename 为本地文件全局路径，dstpath 为复制到远程主机的目标路径</span><br>scp -r <span class="hljs-built_in">dirname</span> user@host:dstpath    <span class="hljs-comment"># 复制文件夹，dirname 为本地文件夹全局路径，dstpath 为复制到远程主机的目标路径</span><br></code></pre></td></tr></table></figure>
 <h3 id="4-2-从远程主机拷贝文件">4.2 从远程主机拷贝文件</h3>
 <p>在本地主机终端下，使用 <code>scp</code> 命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">scp user@host:filename dstpath  <span class="hljs-comment"># 拷贝文件，filename 为远程主机文件全局路径，dstpath 为拷贝到本地主机的目标路径</span><br>scp -r user@host:dirname dstpath    <span class="hljs-comment"># 拷贝文件夹，dirname 为远程主机文件夹全局路径，dstpath 为复制到本地主机的目标路径</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">scp user@host:filename dstpath  <span class="hljs-comment"># 拷贝文件，filename 为远程主机文件全局路径，dstpath 为拷贝到本地主机的目标路径</span><br>scp -r user@host:<span class="hljs-built_in">dirname</span> dstpath    <span class="hljs-comment"># 拷贝文件夹，dirname 为远程主机文件夹全局路径，dstpath 为复制到本地主机的目标路径</span><br></code></pre></td></tr></table></figure>
 <h3 id="4-3-退出远程登录">4.3 退出远程登录</h3>
 <p>在登录远程主机终端下使用 <code>Ctrl + D</code> 或者 <code>exit</code>。</p>
 
@@ -342,9 +342,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2020/05/26/VSCode/VSCode%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/VSCode%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/">
+                      <a href="/2020/05/26/ComputerVision/Color/%E9%A2%9C%E8%89%B2%E5%8E%9F%E7%90%86/%E9%A2%9C%E8%89%B2%E5%8E%9F%E7%90%86/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">VSCode常用快捷键</span>
+                        <span class="hidden-mobile">颜色原理</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     

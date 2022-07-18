@@ -46,7 +46,7 @@
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
-<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
 </head>
 
 
@@ -197,18 +197,24 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/05/03/Linux/Sundry/Linux%E4%B8%8B%E5%90%88%E5%B9%B6PDF/">Linux下合并PDF</a>
+        <a href="/2021/07/05/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4stat/">LinuxShell命令stat</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/05/03/Linux/Sundry/Linux%E4%B8%8B%E5%90%88%E5%B9%B6PDF/">
+        <a href="/2021/07/05/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4stat/">
           
           
             
           
-          1. pdfunite
-Linux 下可以使用 pdfunite 命令来合并多个 PDF 文件。如果你的 Linux 发行版上没有该命令，需要安装 poppler-utils（Debian 系）或 poppler（Arch 系）软件。pdfunite 命令的语法格式如下：
-1pdfunite &lt;PDF-sourcefile-1&gt;..&lt;PDF-sourcefile-n&gt; &l
+          1. 简介
+众所周知，Linux 下一切皆文件。当我们想要去查看某个文件的具体信息时，可以使用 stat 命令进行查看。
+2. 格式
+1stat filename [filename...]
+以 stat /home 为例，以下为我电脑的输出结果：
+
+中文显示
+
+12345678  文件：/home  大小：4096            块：8          IO 块：4096   目录设备
         </a>
       </p>
 
@@ -216,8 +222,152 @@ Linux 下可以使用 pdfunite 命令来合并多个 PDF 文件。如果你的 L
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-05-03 17:17" pubdate>
-              2021-05-03
+            <time datetime="2021-07-05 17:56" pubdate>
+              2021-07-05
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Linux/">Linux</a>
+            
+              <a href="/categories/Technique/Linux/Shell/">Shell</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/Linux/">Linux</a>
+            
+              <a href="/tags/Shell/">Shell</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/07/05/Linux/Shell/LinuxShell%E4%B8%8B%E6%96%87%E4%BB%B6%E5%A4%A7%E5%B0%8F%E5%8D%95%E4%BD%8D/">LinuxShell下文件大小单位</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/07/05/Linux/Shell/LinuxShell%E4%B8%8B%E6%96%87%E4%BB%B6%E5%A4%A7%E5%B0%8F%E5%8D%95%E4%BD%8D/">
+          
+          
+            
+          
+          1. 简介
+Linux Shell 下很多命令在打印文件大小信息时，默认使用的是字节作为单位。但为了方便用户使用，往往这些命令提供选项参数 -B[SIZE] 或 --block-size=SIZE 给用户来指定文件大小的单位，比如 ls、df、du 命令等。
+2. 文件大小单位
+Linux Shell 下可选的文件大小单位参数 SIZE 如下表所示：
+
+
+
+单位
+说明
+
+
+
+
+K、k、KB、kB、
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-07-05 16:17" pubdate>
+              2021-07-05
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Linux/">Linux</a>
+            
+              <a href="/categories/Technique/Linux/Shell/">Shell</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/Linux/">Linux</a>
+            
+              <a href="/tags/Shell/">Shell</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/06/13/Linux/Sundry/Linux%E7%B3%BB%E7%BB%9F%E5%90%84%E5%8F%91%E8%A1%8C%E7%89%88%E7%94%A8%E6%88%B7%E6%96%87%E6%A1%A3/">Linux系统各发行版用户文档</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/06/13/Linux/Sundry/Linux%E7%B3%BB%E7%BB%9F%E5%90%84%E5%8F%91%E8%A1%8C%E7%89%88%E7%94%A8%E6%88%B7%E6%96%87%E6%A1%A3/">
+          
+          
+            
+          
+          1. 发行版
+Linux 所有发行版可参见：DistroWatch.com。
+2. 用户文档
+
+Debian
+Ubuntu
+Deepin
+Manjaro
+LinuxMint
+RedHat
+CentOS
+
+
+CentOS 是 RedHat 的社区版，因此技术文档可以参考 RedHat。
+
+
+ArchLinux
+
+
+ArchLinux 官方的 Wiki 非常优秀（吹爆~），基本上大部分用户所需要的文档
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-06-13 14:32" pubdate>
+              2021-06-13
             </time>
           </div>
         
@@ -255,18 +405,17 @@ Linux 下可以使用 pdfunite 命令来合并多个 PDF 文件。如果你的 L
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/05/03/Linux/Sundry/Linux%E4%B8%8B%E5%9B%BE%E7%89%87%E8%BD%ACPDF/">Linux下图片转PDF</a>
+        <a href="/2021/06/13/Linux/Ubuntu/Ubuntu20.04%E4%B8%8B%E5%AE%89%E8%A3%85%E6%98%9F%E7%81%AB%E5%BA%94%E7%94%A8%E5%95%86%E5%BA%97/">Ubuntu20.04下安装星火应用商店</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/05/03/Linux/Sundry/Linux%E4%B8%8B%E5%9B%BE%E7%89%87%E8%BD%ACPDF/">
+        <a href="/2021/06/13/Linux/Ubuntu/Ubuntu20.04%E4%B8%8B%E5%AE%89%E8%A3%85%E6%98%9F%E7%81%AB%E5%BA%94%E7%94%A8%E5%95%86%E5%BA%97/">
           
           
             
           
-          1. img2pdf
-Linux 下可以使用 img2pdf 工具来将图片转为 PDF 文件。如果你的 Linux 发行版上没有安装 img2pdf，可以使用包管理器（Ubuntu 上的 apt、ArchLinux 上的 pacman 等）手动安装，或者直接使用 pip 进行安装 pip install img2pdf。img2pdf 的基本语法格式如下：
-1img2pdf &lt;IMG-sou
+          1. 简介
+星火应用商店是国内一款开源的 Debian 系应用商店，其中整合了许多优秀的 Linux 软件和 Wine 适配良好的软件，和 Deepin 应用商店相辅相成，旨在构建一个良好的 Linux 应用生态。由于 Deepin 应用商店在其他 Debian 系统上的适配不是很好，比如 Ubuntu 系统，因此星火应用商店对于非 Deepin 的 Debian 系用户提供了一个很好的选择。为星
         </a>
       </p>
 
@@ -274,8 +423,8 @@ Linux 下可以使用 img2pdf 工具来将图片转为 PDF 文件。如果你的
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-05-03 17:17" pubdate>
-              2021-05-03
+            <time datetime="2021-06-13 13:35" pubdate>
+              2021-06-13
             </time>
           </div>
         
@@ -287,7 +436,7 @@ Linux 下可以使用 img2pdf 工具来将图片转为 PDF 文件。如果你的
             
               <a href="/categories/Technique/Linux/">Linux</a>
             
-              <a href="/categories/Technique/Linux/Sundry/">Sundry</a>
+              <a href="/categories/Technique/Linux/Ubuntu/">Ubuntu</a>
             
           </div>
         
@@ -299,7 +448,7 @@ Linux 下可以使用 img2pdf 工具来将图片转为 PDF 文件。如果你的
             
               <a href="/tags/Linux/">Linux</a>
             
-              <a href="/tags/Sundry/">Sundry</a>
+              <a href="/tags/Ubuntu/">Ubuntu</a>
             
           </div>
         
@@ -313,27 +462,23 @@ Linux 下可以使用 img2pdf 工具来将图片转为 PDF 文件。如果你的
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/04/28/Linux/Sundry/Linux%E4%B8%8Bnvidia-smi%E6%8A%A5%E9%94%99/">Linux下nvidia-smi报错</a>
+        <a href="/2021/06/12/Linux/Ubuntu/Ubuntu20.04%E4%B8%8Bapt%E6%8A%A5%E9%94%99/">Ubuntu20.04下apt报错</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/04/28/Linux/Sundry/Linux%E4%B8%8Bnvidia-smi%E6%8A%A5%E9%94%99/">
+        <a href="/2021/06/12/Linux/Ubuntu/Ubuntu20.04%E4%B8%8Bapt%E6%8A%A5%E9%94%99/">
           
           
             
           
-          1. Failed to initialize NVML: driver/library version mismatch
+          1. 目标 xxx 在 /etc/apt/sources.list:yy 和 /etc/apt/sources.list:zz 中被配置了多次
 
-问题：服务器更新 N 卡驱动版本之后，内核中的 N 卡驱动模块没有更新。
-解决：有两种方式解决
+问题：/etc/apt/sources.list 同时启用了多个镜像源。
+解决：注释掉 /etc/apt/sources.list 中多余的镜像源，只保留其中一个即可。
 
-重启服务器。
-让内核重新载入 N 卡驱动模块：
+2. 由于没有公匙，无法验证下列签名: NO_PUBKEY xxx
 
-12sudo rmmod nvidianvidia-smi
-
-
-2. NVIDIA-SMI has failed becaus
+问题：GPG
         </a>
       </p>
 
@@ -341,8 +486,8 @@ Linux 下可以使用 img2pdf 工具来将图片转为 PDF 文件。如果你的
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-04-28 16:55" pubdate>
-              2021-04-28
+            <time datetime="2021-06-12 20:27" pubdate>
+              2021-06-12
             </time>
           </div>
         
@@ -354,7 +499,7 @@ Linux 下可以使用 img2pdf 工具来将图片转为 PDF 文件。如果你的
             
               <a href="/categories/Technique/Linux/">Linux</a>
             
-              <a href="/categories/Technique/Linux/Sundry/">Sundry</a>
+              <a href="/categories/Technique/Linux/Ubuntu/">Ubuntu</a>
             
           </div>
         
@@ -366,7 +511,7 @@ Linux 下可以使用 img2pdf 工具来将图片转为 PDF 文件。如果你的
             
               <a href="/tags/Linux/">Linux</a>
             
-              <a href="/tags/Sundry/">Sundry</a>
+              <a href="/tags/Ubuntu/">Ubuntu</a>
             
           </div>
         
@@ -380,20 +525,19 @@ Linux 下可以使用 img2pdf 工具来将图片转为 PDF 文件。如果你的
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/04/22/ImageMoment/%E5%9B%BE%E5%83%8F%E7%9F%A9%E6%A6%82%E8%BF%B0/">图像矩概述</a>
+        <a href="/2021/06/12/Linux/Ubuntu/Ubuntu20.04%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E7%BD%91%E7%BB%9C%E9%97%AE%E9%A2%98/">Ubuntu20.04中遇到的网络问题</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/04/22/ImageMoment/%E5%9B%BE%E5%83%8F%E7%9F%A9%E6%A6%82%E8%BF%B0/">
+        <a href="/2021/06/12/Linux/Ubuntu/Ubuntu20.04%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E7%BD%91%E7%BB%9C%E9%97%AE%E9%A2%98/">
           
           
             
           
-          1. 概述
-矩函数在图像分析中有着广泛的应用，如模式识别、目标分类、目标识别与方位估计、图像编码和重构等。一个从一幅数字图像中计算出来的矩集，通常描述了该图像形状的全局特征，并提供大量的关于该图像不同类型的几何特性信息。
+          1. 已连上有线/无线，网络未开代理，却无法访问网络
 
-一个概率密度函数的零阶、一阶、二阶矩分别表示其全概率、数学期望和方差。
-零阶到三阶矩用于描述总体水平上的图像特征，而更高阶矩则含有更好的图像细节，但通常对噪声更加敏感，可以变换
+缘由：我之前在 Ubuntu20.04 开过网络代理服务，当时访问网络正常。但今天突然把代理一关发现怎么都上不了网了，Ping 网络时报错名称解析服务失败，而奇怪的是一开代理又可以访问网络了。
+解决：最终发现是 Ubuntu20.04 的网络名称解析服务即 systemd-resolved.service 未开启，因此导致无法由域名解析到 I
         </a>
       </p>
 
@@ -401,8 +545,8 @@ Linux 下可以使用 img2pdf 工具来将图片转为 PDF 文件。如果你的
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-04-22 16:29" pubdate>
-              2021-04-22
+            <time datetime="2021-06-12 19:39" pubdate>
+              2021-06-12
             </time>
           </div>
         
@@ -412,7 +556,9 @@ Linux 下可以使用 img2pdf 工具来将图片转为 PDF 文件。如果你的
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/ImageMoment/">ImageMoment</a>
+              <a href="/categories/Technique/Linux/">Linux</a>
+            
+              <a href="/categories/Technique/Linux/Ubuntu/">Ubuntu</a>
             
           </div>
         
@@ -422,7 +568,9 @@ Linux 下可以使用 img2pdf 工具来将图片转为 PDF 文件。如果你的
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/ImageMoment/">ImageMoment</a>
+              <a href="/tags/Linux/">Linux</a>
+            
+              <a href="/tags/Ubuntu/">Ubuntu</a>
             
           </div>
         
@@ -436,19 +584,17 @@ Linux 下可以使用 img2pdf 工具来将图片转为 PDF 文件。如果你的
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/04/22/Rust/Rust%E5%B8%B8%E8%A7%81%E9%9B%86%E5%90%88/">Rust常见集合</a>
+        <a href="/2021/06/12/Linux/Ubuntu/Ubuntu20.04%E4%B8%8BMAC%E5%9C%B0%E5%9D%80%E9%9A%8F%E6%9C%BA%E5%8C%96/">Ubuntu20.04下MAC地址随机化</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/04/22/Rust/Rust%E5%B8%B8%E8%A7%81%E9%9B%86%E5%90%88/">
+        <a href="/2021/06/12/Linux/Ubuntu/Ubuntu20.04%E4%B8%8BMAC%E5%9C%B0%E5%9D%80%E9%9A%8F%E6%9C%BA%E5%8C%96/">
           
           
             
           
           1. 简介
-Rust 标准库中包含一系列被称为「集合」（collections）的非常有用的数据结构。不同于内建的数组和元组类型，这些集合指向的数据是储存在堆上的，这意味着数据的数量不必在编译时就已知，并且还可以随着程序的运行增长或缩小。
-2. 向量（vector）
-vector 的数据类型为Vec&lt;T&gt;，它允许我们在一个单独的数据结构中储存多于一个的值，它在内存中彼此相邻地排列所有的
+由于之前的挖矿操作（具体原因参见 Manjaro21.0 下 MAC 地址随机化，导致我电脑无线网卡的 MAC 地址对应的 IP 被路由器限制了。而我的电脑上又装了多个操作系统，因此需要每个操作系统都配置 MAC 地址随机化（突然觉得有点麻烦，下次再也不敢了555）。总体而言，在 Ubuntu20.04 上配置 MAC 地址随机化和 Manjaro21.0 下 MAC 地址随机化 差不
         </a>
       </p>
 
@@ -456,8 +602,8 @@ vector 的数据类型为Vec&lt;T&gt;，它允许我们在一个单独的数据�
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-04-22 11:40" pubdate>
-              2021-04-22
+            <time datetime="2021-06-12 15:29" pubdate>
+              2021-06-12
             </time>
           </div>
         
@@ -467,7 +613,9 @@ vector 的数据类型为Vec&lt;T&gt;，它允许我们在一个单独的数据�
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/Rust/">Rust</a>
+              <a href="/categories/Technique/Linux/">Linux</a>
+            
+              <a href="/categories/Technique/Linux/Ubuntu/">Ubuntu</a>
             
           </div>
         
@@ -477,7 +625,9 @@ vector 的数据类型为Vec&lt;T&gt;，它允许我们在一个单独的数据�
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Rust/">Rust</a>
+              <a href="/tags/Linux/">Linux</a>
+            
+              <a href="/tags/Ubuntu/">Ubuntu</a>
             
           </div>
         
@@ -491,22 +641,26 @@ vector 的数据类型为Vec&lt;T&gt;，它允许我们在一个单独的数据�
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/04/21/Rust/Rust%E6%A8%A1%E5%9D%97%E7%B3%BB%E7%BB%9F/">Rust模块系统</a>
+        <a href="/2021/06/12/PHP/Manjaro21.0%E6%90%AD%E5%BB%BALAMP%E7%8E%AF%E5%A2%83/">Manjaro21.0搭建LAMP环境</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/04/21/Rust/Rust%E6%A8%A1%E5%9D%97%E7%B3%BB%E7%BB%9F/">
+        <a href="/2021/06/12/PHP/Manjaro21.0%E6%90%AD%E5%BB%BALAMP%E7%8E%AF%E5%A2%83/">
           
           
             
           
           1. 简介
-Rust 的模块系统用来管理代码的组织，包括哪些内容可以被公开，哪些内容作为私有部分，以及程序每个作用域中的名字等。模块系统包括：
+LAMP 即 Linux+Apache+Mysql+PHP 的简称。
+2. 安装 Apache+Mysql+PHP
+1yay -S apache mysql php php-apache
+3. 配置 Apache
 
-包（Packages）：Cargo 的一个功能，允许构建、测试和分享 crate。
-crate：一个模块的树形结构，它形成了库或二进制项目。
-模块（Modules）和 use： 允许你控制作用域和路径的私有性。
-路径（path）：一个命名例如结构体、函数
+打开配置文件
+
+1sudo vim /etc/httpd/conf/httpd.conf
+
+修改 DocumentRoot 字段后的路径为自定义的 Web Server 根
         </a>
       </p>
 
@@ -514,8 +668,8 @@ crate：一个模块的树形结构，它形成了库或二进制项目。
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-04-21 21:59" pubdate>
-              2021-04-21
+            <time datetime="2021-06-12 09:24" pubdate>
+              2021-06-12
             </time>
           </div>
         
@@ -525,7 +679,7 @@ crate：一个模块的树形结构，它形成了库或二进制项目。
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/Rust/">Rust</a>
+              <a href="/categories/Technique/PHP/">PHP</a>
             
           </div>
         
@@ -535,7 +689,7 @@ crate：一个模块的树形结构，它形成了库或二进制项目。
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Rust/">Rust</a>
+              <a href="/tags/PHP/">PHP</a>
             
           </div>
         
@@ -549,25 +703,22 @@ crate：一个模块的树形结构，它形成了库或二进制项目。
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/04/21/Rust/Rust%E6%96%B9%E6%B3%95%E5%92%8C%E5%85%B3%E8%81%94%E5%87%BD%E6%95%B0/">Rust方法和关联函数</a>
+        <a href="/2021/06/04/C++/C%E8%AF%AD%E8%A8%80%E5%90%84%E7%89%88%E6%9C%AC%E5%AF%B9%E6%AF%94/C%E8%AF%AD%E8%A8%80%E5%90%84%E7%89%88%E6%9C%AC%E5%AF%B9%E6%AF%94/">C语言各版本对比</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/04/21/Rust/Rust%E6%96%B9%E6%B3%95%E5%92%8C%E5%85%B3%E8%81%94%E5%87%BD%E6%95%B0/">
+        <a href="/2021/06/04/C++/C%E8%AF%AD%E8%A8%80%E5%90%84%E7%89%88%E6%9C%AC%E5%AF%B9%E6%AF%94/C%E8%AF%AD%E8%A8%80%E5%90%84%E7%89%88%E6%9C%AC%E5%AF%B9%E6%AF%94/">
           
           
             
           
-          1. 方法
-1.1 简介
+          
+附录
+参考资料：
 
-方法与函数类似：它们使用 fn 关键字和名称声明，可以拥有参数和返回值，同时包含在某处调用该方法时会执行的代码。
-不过方法与函数是不同的，方法是在结构体（或者枚举、trait 对象）的上下文中被定义的。
-为了使方法位于指定结构体的上下文中，需要将方法放置在该结构体的 impl 块中。
-方法的第一个参数总是 self，它代表调用该方法的结构体实例。
+C语言的各种版本：C89，AMD1，C99，C11
 
-1.2 格式
-定义一
+
         </a>
       </p>
 
@@ -575,8 +726,8 @@ crate：一个模块的树形结构，它形成了库或二进制项目。
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-04-21 19:19" pubdate>
-              2021-04-21
+            <time datetime="2021-06-04 15:57" pubdate>
+              2021-06-04
             </time>
           </div>
         
@@ -586,7 +737,7 @@ crate：一个模块的树形结构，它形成了库或二进制项目。
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/Rust/">Rust</a>
+              <a href="/categories/Technique/C/">C++</a>
             
           </div>
         
@@ -596,7 +747,7 @@ crate：一个模块的树形结构，它形成了库或二进制项目。
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Rust/">Rust</a>
+              <a href="/tags/C/">C++</a>
             
           </div>
         
@@ -610,21 +761,23 @@ crate：一个模块的树形结构，它形成了库或二进制项目。
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/04/19/Rust/Rust%E6%89%80%E6%9C%89%E6%9D%83/Rust%E6%89%80%E6%9C%89%E6%9D%83/">Rust所有权</a>
+        <a href="/2021/06/04/C++/C++%E5%86%85%E7%BD%AE%E5%AE%8F%E5%AE%9A%E4%B9%89/">C++内置宏定义</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/04/19/Rust/Rust%E6%89%80%E6%9C%89%E6%9D%83/Rust%E6%89%80%E6%9C%89%E6%9D%83/">
+        <a href="/2021/06/04/C++/C++%E5%86%85%E7%BD%AE%E5%AE%8F%E5%AE%9A%E4%B9%89/">
           
           
             
           
-          1. 简介
-所有运行的程序都必须管理其使用计算机内存的方式。一些语言中具有垃圾回收机制，在程序运行时不断地寻找不再使用的内存；在另一些语言中，程序员必须亲自分配和释放内存。Rust 则选择了第三种方式：通过所有权系统管理内存，编译器在编译时会根据一系列的规则进行检查。在运行时，所有权系统的任何功能都不会减慢程序。
-2. 所有权规则
+          1. 标准内置宏定义
+标准内置宏定义是由相关的语言标准定义的，因此对于实现了这些语言标准的编译器来说都是可使用的。
 
-Rust 中每一个值都有一个被称为「所有者」的变量。
-值在任一时
+__FILE__：字符串格式，指示当前处理的文件路径。
+__LINE__：数字格式，指示当前处理的代码行号。
+#line：用来修改当前行的下一行的行号，即下一行的 __LINE__ 由 #line 所指定的数字开始。
+
+123456789#include&lt;stdio.h&gt
         </a>
       </p>
 
@@ -632,8 +785,8 @@ Rust 中每一个值都有一个被称为「所有者」的变量。
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-04-19 15:14" pubdate>
-              2021-04-19
+            <time datetime="2021-06-04 14:53" pubdate>
+              2021-06-04
             </time>
           </div>
         
@@ -643,7 +796,7 @@ Rust 中每一个值都有一个被称为「所有者」的变量。
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/Rust/">Rust</a>
+              <a href="/categories/Technique/C/">C++</a>
             
           </div>
         
@@ -653,119 +806,7 @@ Rust 中每一个值都有一个被称为「所有者」的变量。
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Rust/">Rust</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/04/19/Rust/Rust%E6%8E%A7%E5%88%B6%E6%B5%81/">Rust控制流</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/04/19/Rust/Rust%E6%8E%A7%E5%88%B6%E6%B5%81/">
-          
-          
-            
-          
-          1. 条件结构
-Rust 中主要的条件结构为 if 表达式。
-1.1 if 表达式
-if 表达式的基本语法格式如下：
-123456789if &lt;condition1&gt; &#123;	...&#125; else if &lt;condition2&gt; &#123;	...&#125; else if &lt;conditionn&gt; &#123;	...&#125; else 
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-04-19 14:11" pubdate>
-              2021-04-19
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/Rust/">Rust</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/Rust/">Rust</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/04/19/Rust/Rust%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86/">Rust错误处理</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/04/19/Rust/Rust%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86/">
-          
-          
-            
-          
-          1. 简介
-在很多情况下，Rust 要求你承认出错的可能性，并在编译代码之前就采取行动。这些要求使得程序更为健壮，它们确保了你会在将代码部署到生产环境之前就发现错误并正确地处理它们！Rust 将错误组合成两个主要类别：「可恢复错误」（recoverable）和「不可恢复错误」（unrecoverable）。
-
-可恢复错误通常代表向用户报告错误和重试操作是合理的情况，比如未找到文件。
-不可恢复错误通
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-04-19 14:08" pubdate>
-              2021-04-19
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/Rust/">Rust</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/Rust/">Rust</a>
+              <a href="/tags/C/">C++</a>
             
           </div>
         

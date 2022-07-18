@@ -46,7 +46,7 @@
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
-<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
 </head>
 
 
@@ -190,6 +190,74 @@
               <div class="col-12 col-md-10 m-auto">
                 
 
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/09/23/Math/Theory/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/%E7%A6%BB%E6%95%A3%E4%BD%99%E5%BC%A6%E5%8F%98%E6%8D%A2/">离散余弦变换</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/09/23/Math/Theory/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/%E7%A6%BB%E6%95%A3%E4%BD%99%E5%BC%A6%E5%8F%98%E6%8D%A2/">
+          
+          
+            
+          
+          1. 简介
+离散余弦变换类似于离散傅里叶变换，但是只使用实数。离散余弦变换相当于一个长度大概是它两倍的离散傅里叶变换。
+2. 定义
+离散余弦变换是一个线性的可逆函数 F:Rn→RnF: R^n \rightarrow R^nF:Rn→Rn，其中 RRR 是实数集。
+2.1 DCT-1
+fm=12(x0+(−1)mxn−1)+∑k=1n−2xkcos(πn−1mk)\begin{array}{c}
+
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-09-23 09:05" pubdate>
+              2020-09-23
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Math/">Math</a>
+            
+              <a href="/categories/Technique/Math/Theory/">Theory</a>
+            
+              <a href="/categories/Technique/Math/Theory/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/">傅里叶变换</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/Math/">Math</a>
+            
+              <a href="/tags/Theory/">Theory</a>
+            
+              <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
+            
+              <a href="/tags/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/">傅里叶变换</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
 
   <div class="row mx-auto index-card">
     
@@ -459,17 +527,31 @@
           
             
           
-          1. 离散分布
-设 q=1−pq = 1 - pq=1−p 。
-1.1 0-1 分布（伯努利分布）
-P(X=1)=pP(X=0)=q\begin{array}{c}
-P(X = 1) = p \\
-P(X = 0) = q
-\end{array}
-P(X=1)=pP(X=0)=q​
-1.2 二项分布（n 重伯努利分布）
-P(X=k)=Cnkpkqn−k\begin{array}{c}
-P(X = 
+          
+XXX 表示随机变量/向量，其余小写黑体表示向量，大写黑体表示矩阵。
+
+1. 离散分布
+记 q=1−pq = 1 - pq=1−p。
+
+
+
+概率分布
+记法
+累积分布函数
+均值
+方差
+
+
+
+
+0-1 分布（伯努利分布）
+X∼B(1,p)X \sim B(1, p)X∼B(1,p)
+$$P(X = 1) = p \P(X = 0) = q$$
+ppp
+pqpqpq
+
+
+二项分布（nnn 重伯努利分布
         </a>
       </p>
 
@@ -488,7 +570,11 @@ P(X =
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/ProbabilityTheory/">ProbabilityTheory</a>
+              <a href="/categories/Technique/Math/">Math</a>
+            
+              <a href="/categories/Technique/Math/Theory/">Theory</a>
+            
+              <a href="/categories/Technique/Math/Theory/%E6%A6%82%E7%8E%87%E8%AE%BA/">概率论</a>
             
           </div>
         
@@ -498,9 +584,70 @@ P(X =
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/ProbabilityTheory/">ProbabilityTheory</a>
+              <a href="/tags/Math/">Math</a>
             
-              <a href="/tags/%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/">概率论与数理统计</a>
+              <a href="/tags/Theory/">Theory</a>
+            
+              <a href="/tags/%E6%A6%82%E7%8E%87%E8%AE%BA/">概率论</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/09/14/StatisticalLearning/%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/">概述</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/09/14/StatisticalLearning/%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/">
+          
+          
+            
+          
+          1. 定义
+监督学习方法可以为生成方法和判别方法，所学到的模型分别称为生成模型和判别模型。
+
+
+生成方法由数据学习联合概率分布 P(X,Y)P(X, Y)P(X,Y)，然后求出条件概率分布 P(Y∣X)P(Y | X)P(Y∣X) 作为预测的模型，即生成模型：
+P(Y∣X)=P(X,Y)P(X)P(Y | X) = \frac{P(X, Y)}{P(X)}
+P(Y∣X)=P(X)P(X,Y)​
+生
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-09-14 22:45" pubdate>
+              2020-09-14
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/StatisticalLearning/">StatisticalLearning</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/StatisticalLearning/">StatisticalLearning</a>
             
           </div>
         
@@ -662,125 +809,6 @@ There are nnn beautiful skyscrapers in New York, the height of the iii-th one is
             <i class="iconfont icon-date"></i>
             <time datetime="2020-09-10 13:21" pubdate>
               2020-09-10
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/ACM/">ACM</a>
-            
-              <a href="/categories/Technique/ACM/%E9%A2%98%E8%A7%A3/">题解</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/ACM/">ACM</a>
-            
-              <a href="/tags/%E9%A2%98%E8%A7%A3/">题解</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/09/09/ACM/%E9%A2%98%E8%A7%A3/CF991F%E3%80%8CTree%20Destruction%E3%80%8D/">CF991F「Tree Destruction」</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/09/09/ACM/%E9%A2%98%E8%A7%A3/CF991F%E3%80%8CTree%20Destruction%E3%80%8D/">
-          
-          
-            
-          
-          1. 题目
-题目链接：CF991F「Tree Destruction」 。
-Description
-You are given an unweighted tree with nnn vertices. Then n−1n - 1n−1 following operations are applied to the tree. A single operation consists of the 
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-09-09 15:19" pubdate>
-              2020-09-09
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/ACM/">ACM</a>
-            
-              <a href="/categories/Technique/ACM/%E9%A2%98%E8%A7%A3/">题解</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/ACM/">ACM</a>
-            
-              <a href="/tags/%E9%A2%98%E8%A7%A3/">题解</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/09/08/ACM/%E9%A2%98%E8%A7%A3/CF1405D%E3%80%8CTree%20Tag%E3%80%8D/">CF1405D「Tree Tag」</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/09/08/ACM/%E9%A2%98%E8%A7%A3/CF1405D%E3%80%8CTree%20Tag%E3%80%8D/">
-          
-          
-            
-          
-          1. 题目
-题目链接：CF1405D「Tree Tag」 。
-DESCRIPTION
-Alice and Bob are playing a fun game of tree tag.
-The game is played on a tree of nnn vertices numbered from 111 to nnn. Recall that a tree on nnn vertices i
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-09-08 19:58" pubdate>
-              2020-09-08
             </time>
           </div>
         

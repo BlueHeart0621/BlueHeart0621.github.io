@@ -62,7 +62,7 @@
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
-<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
 </head>
 
 
@@ -260,7 +260,7 @@
 </ul>
 <h2 id="2-实现">2. 实现</h2>
 <p>在 <code>/etc/NetworkManager/conf.d</code> 目录下添加一个配置文件 <code>wifi_rand_mac.conf</code>（文件名可自定义），然后在其中填入以下配置信息：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs bash">[device-mac-randomization]<br><span class="hljs-comment"># 扫描 wifi 时随机化 MAC</span><br>wifi.scan-rand-mac-address=yes 		<span class="hljs-comment"># no</span><br> <br>[connection-mac-randomization]<br><span class="hljs-comment"># 每次通过有线连接时随机化 MAC</span><br>ethernet.cloned-mac-address=random	<span class="hljs-comment"># stable</span><br><span class="hljs-comment"># 每次通过无线连接时随机化 MAC</span><br>wifi.cloned-mac-address=random		<span class="hljs-comment"># stable</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs bash">[device-mac-randomization]<br><span class="hljs-comment"># 扫描 wifi 时随机化 MAC</span><br>wifi.scan-rand-mac-address=<span class="hljs-built_in">yes</span> 		<span class="hljs-comment"># no</span><br> <br>[connection-mac-randomization]<br><span class="hljs-comment"># 每次通过有线连接时随机化 MAC</span><br>ethernet.cloned-mac-address=random	<span class="hljs-comment"># stable</span><br><span class="hljs-comment"># 每次通过无线连接时随机化 MAC</span><br>wifi.cloned-mac-address=random		<span class="hljs-comment"># stable</span><br></code></pre></td></tr></table></figure>
 <p>如果不想随机化其中一项，可将对应值改为其后的注释值。最后重启一下网络服务：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo systemctl restart NetworkManager<br></code></pre></td></tr></table></figure>
 <h2 id="3-附录">3. 附录</h2>

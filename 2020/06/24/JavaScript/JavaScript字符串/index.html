@@ -62,7 +62,7 @@
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
-<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
 </head>
 
 
@@ -264,7 +264,7 @@
 <ul>
 <li>字符串可以是对象，但最好不要把字符串创建为对象，它会拖慢执行速度。</li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> firstName = <span class="hljs-string">&quot;Bill&quot;</span>              <span class="hljs-comment">// 字面方式</span><br><span class="hljs-keyword">var</span> firstName = <span class="hljs-keyword">new</span> <span class="hljs-built_in">String</span>(<span class="hljs-string">&quot;Bill&quot;</span>)  <span class="hljs-comment">// 对象方式</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> firstName = <span class="hljs-string">&quot;Bill&quot;</span>              <span class="hljs-comment">// 字面方式</span><br><span class="hljs-keyword">var</span> firstName = <span class="hljs-keyword">new</span> <span class="hljs-title class_">String</span>(<span class="hljs-string">&quot;Bill&quot;</span>)  <span class="hljs-comment">// 对象方式</span><br></code></pre></td></tr></table></figure>
 <blockquote>
 <ol>
 <li>当使用 == 相等运算符时，相等字符串是相等的。</li>
@@ -324,7 +324,7 @@
 <li>默认地，replace() 只替换首个匹配。</li>
 <li>默认地，replace() 对大小写敏感（如需执行大小写不敏感的替换，请使用正则表达式 /i（大小写不敏感））。</li>
 </ol>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> n = str.replace(<span class="hljs-regexp">/MICROSOFT/i</span>, <span class="hljs-string">&quot;W3School&quot;</span>);<br></code></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> n = str.<span class="hljs-title function_">replace</span>(<span class="hljs-regexp">/MICROSOFT/i</span>, <span class="hljs-string">&quot;W3School&quot;</span>);<br></code></pre></td></tr></table></figure>
 <p>【注】注意正则表达式不带引号。</p>
 </blockquote>
 <h3 id="3-5-连接字符串">3.5 连接字符串</h3>
@@ -334,7 +334,7 @@
 <blockquote>
 <p>concat() 方法可用于代替加运算符。</p>
 </blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> text1 = <span class="hljs-string">&quot;Hello&quot;</span>;<br><span class="hljs-keyword">var</span> text2 = <span class="hljs-string">&quot;World&quot;</span>;<br>text3 = text1.concat(<span class="hljs-string">&quot; &quot;</span>,text2);<br></code></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> text1 = <span class="hljs-string">&quot;Hello&quot;</span>;<br><span class="hljs-keyword">var</span> text2 = <span class="hljs-string">&quot;World&quot;</span>;<br>text3 = text1.<span class="hljs-title function_">concat</span>(<span class="hljs-string">&quot; &quot;</span>,text2);<br></code></pre></td></tr></table></figure>
 <h3 id="3-6-转换为大写和小写">3.6 转换为大写和小写</h3>
 <ul>
 <li>通过 toUpperCase() 把字符串转换为大写。</li>
@@ -345,7 +345,7 @@
 <ul>
 <li>split() 将字符串转换为数组。</li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> txt = <span class="hljs-string">&quot;a,b,c,d,e&quot;</span>;   <span class="hljs-comment">// 字符串</span><br>txt.split(<span class="hljs-string">&quot;,&quot;</span>);          <span class="hljs-comment">// 用逗号分隔</span><br>txt.split(<span class="hljs-string">&quot; &quot;</span>);          <span class="hljs-comment">// 用空格分隔</span><br>txt.split(<span class="hljs-string">&quot;|&quot;</span>);          <span class="hljs-comment">// 用竖线分隔</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> txt = <span class="hljs-string">&quot;a,b,c,d,e&quot;</span>;   <span class="hljs-comment">// 字符串</span><br>txt.<span class="hljs-title function_">split</span>(<span class="hljs-string">&quot;,&quot;</span>);          <span class="hljs-comment">// 用逗号分隔</span><br>txt.<span class="hljs-title function_">split</span>(<span class="hljs-string">&quot; &quot;</span>);          <span class="hljs-comment">// 用空格分隔</span><br>txt.<span class="hljs-title function_">split</span>(<span class="hljs-string">&quot;|&quot;</span>);          <span class="hljs-comment">// 用竖线分隔</span><br></code></pre></td></tr></table></figure>
 <h3 id="3-7-其他方法">3.7 其他方法</h3>
 <ul>
 <li><strong>trim()</strong> ：方法删除字符串两端的空白符。</li>

@@ -62,7 +62,7 @@
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
-<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
 </head>
 
 
@@ -263,7 +263,7 @@
 <h2 id="2-环境变量">2. 环境变量</h2>
 <h3 id="2-1-全局环境变量">2.1 全局环境变量</h3>
 <p>查看全局变量可以使用 <code>env</code> 或 <code>printenv</code> 命令。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">env                 <span class="hljs-comment"># 查看所有全局变量</span><br>printenv            <span class="hljs-comment"># 查看所有全局变量</span><br>printenv &lt;variable&gt; <span class="hljs-comment"># 查看单个全局变量 &lt;variable&gt;</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">env</span>                 <span class="hljs-comment"># 查看所有全局变量</span><br><span class="hljs-built_in">printenv</span>            <span class="hljs-comment"># 查看所有全局变量</span><br><span class="hljs-built_in">printenv</span> &lt;variable&gt; <span class="hljs-comment"># 查看单个全局变量 &lt;variable&gt;</span><br></code></pre></td></tr></table></figure>
 <p>【注】<code>env</code> 和 <code>printenv</code> 只会输出全局变量，而且也不会对输出的全局变量进行排序。</p>
 <h3 id="2-2-局部环境变量">2.2 局部环境变量</h3>
 <p>局部环境变量只能在定义它们的进程中可见。查看局部变量的列表有些复杂，Linux 系统并没有一个只显示局部环境变量的命令。可以使用 <code>set</code> 命令显示某个特定进程设置的所有环境变量，包括系统局部变量、系统全局变量和用户自定义环境变量。</p>
@@ -833,7 +833,7 @@
 <ul>
 <li>首先定义脚本文件 <code>test.sh</code>：</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-meta">#!/bin/bash</span><br><br>main()<br>&#123;<br>   <span class="hljs-built_in">echo</span> <span class="hljs-string">&#x27;MAIN sees &#x27;</span> <span class="hljs-variable">$#</span> <span class="hljs-string">&#x27; args&#x27;</span><br>&#125;<br><br>main $*<br>main <span class="hljs-variable">$@</span><br><br>main <span class="hljs-string">&quot;$*&quot;</span><br>main <span class="hljs-string">&quot;<span class="hljs-variable">$@</span>&quot;</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-meta">#!/bin/bash</span><br><br><span class="hljs-function"><span class="hljs-title">main</span></span>()<br>&#123;<br>   <span class="hljs-built_in">echo</span> <span class="hljs-string">&#x27;MAIN sees &#x27;</span> <span class="hljs-variable">$#</span> <span class="hljs-string">&#x27; args&#x27;</span><br>&#125;<br><br>main $*<br>main <span class="hljs-variable">$@</span><br><br>main <span class="hljs-string">&quot;$*&quot;</span><br>main <span class="hljs-string">&quot;<span class="hljs-variable">$@</span>&quot;</span><br></code></pre></td></tr></table></figure>
 <ul>
 <li>然后运行该脚本文件：</li>
 </ul>
@@ -951,7 +951,7 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2021/04/06/ImageCompression/XBM%E6%A0%BC%E5%BC%8F/">
+                      <a href="/2021/04/06/Compression/Image/XBM%E6%A0%BC%E5%BC%8F/">
                         <span class="hidden-mobile">XBM格式</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>

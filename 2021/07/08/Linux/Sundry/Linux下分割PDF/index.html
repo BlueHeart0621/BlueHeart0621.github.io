@@ -62,7 +62,7 @@
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
-<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
 </head>
 
 
@@ -257,7 +257,7 @@
 <p>其中 <code>&lt;sn&gt;</code> 为起始页号，<code>&lt;en&gt;</code> 为终止页号，<code>&lt;PDF-sourcefile&gt;</code> 为指定的输入文件名，<code>&lt;PDF-destfile&gt;</code> 为输出文件名。</p>
 <h2 id="2-PDFtk">2. PDFtk</h2>
 <p><a target="_blank" rel="noopener" href="https://www.pdflabs.com/tools/pdftk-server/">PDFtk</a> 是一款跨平台的命令行 PDF 编辑软件，它提供 PDF 文档分割、合并、加解密、翻转页面、等诸多功能。如果你的 Linux 发行版上没有 <code>pdftk</code> 命令，需要手动安装 PDFtk 软件。<code>pdftk</code> 分割 PDF 的示例如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">pdftk 123.pdf cat 1-45 output out1_45.pdf			        <span class="hljs-comment"># 从单个 PDF 文件中提取指定范围页面</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">pdftk 123.pdf <span class="hljs-built_in">cat</span> 1-45 output out1_45.pdf			        <span class="hljs-comment"># 从单个 PDF 文件中提取指定范围页面</span><br></code></pre></td></tr></table></figure>
 <p>其中，<code>cat</code> 选项后接分割的页码范围，<code>output</code> 选项后接输出文件名。</p>
 <p>【注】<code>pdftk</code> 的其他功能示例参见<a target="_blank" rel="noopener" href="https://www.pdflabs.com/docs/pdftk-cli-examples/">官方示例</a>。</p>
 

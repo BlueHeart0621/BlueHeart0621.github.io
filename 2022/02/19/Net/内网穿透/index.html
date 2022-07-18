@@ -62,7 +62,7 @@
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
-<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
 </head>
 
 
@@ -200,7 +200,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      655 字
+      665 字
     </span>
   
 
@@ -278,7 +278,7 @@
 <p>这样加入到虚拟局域网的设备之间即可使用 SSH 等直接登录，再也不需要 VPN 啦～</p>
 <h3 id="2-2-SSH-跳板">2.2 SSH 跳板</h3>
 <p>如果你有多个校园服务器帐号，且它们之间是可以相互访问的。此时如果把每个服务器都加入到虚拟局域网，则会有些麻烦。更好的做法是使用 SSH 的跳板功能，将其中一台校园服务器当做跳板，通过它来访问其它校园服务器：</p>
-<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs crmsh"><span class="hljs-comment"># 跳板机名称，可以随便取</span><br>Host JumpMachine<br>  <span class="hljs-comment"># 跳板机 IP，用 ZeroTier 分配给跳板机的 IP</span><br>  HostName <span class="hljs-number">1.1</span>.<span class="hljs-number">1.1</span><br>  <span class="hljs-comment"># 登入的用户名</span><br>  <span class="hljs-keyword">User</span> <span class="hljs-title">username</span><br><br><span class="hljs-comment"># 目标机名称，可以随便取</span><br>Host TargetMachine<br>  <span class="hljs-comment"># 目标机 IP，用真实的校园服务器 IP</span><br>  HostName <span class="hljs-number">1.1</span>.<span class="hljs-number">1.1</span><br>  <span class="hljs-comment"># 登入的用户名，</span><br>  <span class="hljs-keyword">User</span> <span class="hljs-title">username</span><br>  <span class="hljs-comment"># 跳转代码，JumpMachine 为前面跳板机的名称</span><br>  ProxyCommand ssh -W %h:%p JumpMachine<br></code></pre></td></tr></table></figure>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs crmsh"><span class="hljs-comment"># 跳板机名称，可以随便取</span><br>Host JumpMachine<br>  <span class="hljs-comment"># 跳板机 IP，用 ZeroTier 分配给跳板机的 IP</span><br>  HostName <span class="hljs-number">1.1</span>.<span class="hljs-number">1.1</span><br>  <span class="hljs-comment"># 登入的用户名</span><br>  <span class="hljs-keyword">User</span> <span class="hljs-title">username</span><br>  <span class="hljs-comment"># 端口号</span><br>  Port <span class="hljs-number">22</span><br><br><span class="hljs-comment"># 目标机名称，可以随便取</span><br>Host TargetMachine<br>  <span class="hljs-comment"># 目标机 IP，用真实的校园服务器 IP</span><br>  HostName <span class="hljs-number">1.1</span>.<span class="hljs-number">1.1</span><br>  <span class="hljs-comment"># 登入的用户名</span><br>  <span class="hljs-keyword">User</span> <span class="hljs-title">username</span><br>  <span class="hljs-comment"># 端口号</span><br>  Port <span class="hljs-number">22</span><br>  <span class="hljs-comment"># 跳转代码，JumpMachine 为前面跳板机的名称</span><br>  ProxyCommand ssh -W %h:%p JumpMachine<br></code></pre></td></tr></table></figure>
 <p>设置成功后，就可以登录到 <code>TargetMachine</code> 服务器啦～不过麻烦的是要输入两次密码，可以将当前设备的 SSH 公有证书上传到 <code>JumpMachine</code>，这样可以减少一次密码输入的次数嗷。如果完全不想输入密码，可以将当前设备的 SSH 公有证书同时上传到 <code>JumpMachine</code> 和 <code>TargetMachine</code>。</p>
 <h2 id="附录">附录</h2>
 <ul>

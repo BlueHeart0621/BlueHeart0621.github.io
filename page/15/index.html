@@ -46,7 +46,7 @@
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
-<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
 </head>
 
 
@@ -197,24 +197,96 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/02/22/Research/2020-TII-Deep%20Residual%20Learning%20based%20Enhanced%20JPEG%20Compression%20in%20the%20Internet%20of%20Things/2020-TII-Deep%20Residual%20Learning%20based%20Enhanced%20JPEG%20Compression%20in%20the%20Internet%20of%20Things/">2020-TII-Deep Residual Learning based Enhanced JPEG Compression in the Internet of Things</a>
+        <a href="/2021/02/28/System/OperationSystem/%E5%A4%9A%E7%B3%BB%E7%BB%9F%E5%85%B1%E4%BA%AB%E8%93%9D%E7%89%99%E8%AE%BE%E5%A4%87/">多系统共享蓝牙设备</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/02/22/Research/2020-TII-Deep%20Residual%20Learning%20based%20Enhanced%20JPEG%20Compression%20in%20the%20Internet%20of%20Things/2020-TII-Deep%20Residual%20Learning%20based%20Enhanced%20JPEG%20Compression%20in%20the%20Internet%20of%20Things/">
+        <a href="/2021/02/28/System/OperationSystem/%E5%A4%9A%E7%B3%BB%E7%BB%9F%E5%85%B1%E4%BA%AB%E8%93%9D%E7%89%99%E8%AE%BE%E5%A4%87/">
           
           
             
           
-          1. 摘要
-2. 正文
-2.1 JPEG
-DCT 变换后得到的 DC 系数是 IDCT 变换后得到的 8x8 块中所有像素值的变化平均值，即 DC 系数改变对于 8x8 块内的所有像素值的增减量是一样的。
+          1. 简介
+当我们在一台电脑上安装了多个操作系统，且电脑只有一个蓝牙适配器时，如果此时使用蓝牙设备（比如蓝牙鼠标），且希望切换系统时能自动连接，则会发现问题：
 
-即 DC 系数的改变不会影响图像块内各个像素值之间的差值。
-2.2 疑问
+如果在当前系统配对后，然后跑到另一个系统下配对，再回到当前系统下会发现蓝牙无法自动连接，只能删除配对并再次配对。然而这样导致的结果就是在另一个系统下同样无法自动连接。
+如此往复，永远无法实现能够在两个操作系统共享蓝牙设备。
 
-是否预测起到很重要作用，还是主要是 DL 模型
+这种情况下你
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-02-28 23:03" pubdate>
+              2021-02-28
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/System/">System</a>
+            
+              <a href="/categories/Technique/System/OperationSystem/">OperationSystem</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/System/">System</a>
+            
+              <a href="/tags/OperationSystem/">OperationSystem</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/02/28/Linux/Shell/LinuxShell%E5%A4%9A%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/">LinuxShell多命令执行</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/02/28/Linux/Shell/LinuxShell%E5%A4%9A%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/">
+          
+          
+            
+          
+          在 Linux 终端下，一行多命令顺序执行主要有三种方式，其基本格式和区别如下：
+
+
+
+多命令执行符
+基本格式
+作用
+
+
+
+
+;
+command1 ; command2
+多个命令按照先后顺序执行，命令之间没有逻辑制约关系
+
+
+&amp;&amp;
+command1 &amp;&amp; command2
+两个命令为逻辑与制约关系，只有当 command1 执行正确后，command2 才会执行
 
 
         </a>
@@ -224,7 +296,131 @@ DCT 变换后得到的 DC 系数是 IDCT 变换后得到的 8x8 块中所有像�
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-02-22 14:40" pubdate>
+            <time datetime="2021-02-28 22:49" pubdate>
+              2021-02-28
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Linux/">Linux</a>
+            
+              <a href="/categories/Technique/Linux/Shell/">Shell</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/Linux/">Linux</a>
+            
+              <a href="/tags/Shell/">Shell</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/02/25/Python/Matplotlib/Matplotlib%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/">Matplotlib常见问题</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/02/25/Python/Matplotlib/Matplotlib%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/">
+          
+          
+            
+          
+          1. 显示中文乱码
+
+问题：matplotlib 在系统上没有找到对应的中文字体。
+解决：
+
+
+在代码中手动指定系统上的中文字体。
+1234567import matplotlib as mplimport matplotlib.pyplot as pltfrom matplotlib.font_manager import FontPropertieszhfont = mpl.font_mana
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-02-25 17:59" pubdate>
+              2021-02-25
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Python/">Python</a>
+            
+              <a href="/categories/Technique/Python/Matplotlib/">Matplotlib</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/Python/">Python</a>
+            
+              <a href="/tags/Matplotlib/">Matplotlib</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/02/22/Linux/Sundry/Linux%E4%B8%8B%E6%9F%A5%E7%9C%8B%E5%B7%A5%E5%85%B7%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3/">Linux下查看工具官方文档</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/02/22/Linux/Sundry/Linux%E4%B8%8B%E6%9F%A5%E7%9C%8B%E5%B7%A5%E5%85%B7%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3/">
+          
+          
+            
+          
+          1. 简介
+Linux 系统包含大量开源工具，大部分开源工具在安装时都自带手册，而手册又分为使用手册、技术手册和帮助文档等。
+2. 使用手册
+Linux 下非内建工具的使用手册一般都集成在 man 或 info 工具中，内建工具的使用手册集成在 help 工具。查看工具 xxx 的使用手册直接在终端运行以下命令中对应的那个即可：
+123man xxxinfo xxxhelp xxx
+3. 技术手册
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-02-22 18:57" pubdate>
               2021-02-22
             </time>
           </div>
@@ -235,7 +431,9 @@ DCT 变换后得到的 DC 系数是 IDCT 变换后得到的 8x8 块中所有像�
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/Research/">Research</a>
+              <a href="/categories/Technique/Linux/">Linux</a>
+            
+              <a href="/categories/Technique/Linux/Sundry/">Sundry</a>
             
           </div>
         
@@ -245,11 +443,9 @@ DCT 变换后得到的 DC 系数是 IDCT 变换后得到的 8x8 块中所有像�
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Research/">Research</a>
+              <a href="/tags/Linux/">Linux</a>
             
-              <a href="/tags/CV/">CV</a>
-            
-              <a href="/tags/%E5%9B%BE%E5%83%8F%E4%BC%AA%E5%BD%B1%E5%8E%BB%E9%99%A4/">图像伪影去除</a>
+              <a href="/tags/Sundry/">Sundry</a>
             
           </div>
         
@@ -699,214 +895,6 @@ DCT 变换后得到的 DC 系数是 IDCT 变换后得到的 8x8 块中所有像�
               <a href="/tags/TeX/">TeX</a>
             
               <a href="/tags/LaTeX/">LaTeX</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/01/23/TeX/LaTeX/LaTeX%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6%E5%92%8C%E7%AC%A6%E5%8F%B7/LaTeX%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6%E5%92%8C%E7%AC%A6%E5%8F%B7/">LaTeX特殊字符和符号</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/01/23/TeX/LaTeX/LaTeX%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6%E5%92%8C%E7%AC%A6%E5%8F%B7/LaTeX%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6%E5%92%8C%E7%AC%A6%E5%8F%B7/">
-          
-          
-            
-          
-          1. 引号
-无论什么字体，LaTeX以一个反勾号或重音符(`)当做左引号，以一个正勾号或直立引号(')当做右引号。
-
-
-
-单引号（‘xxx’）
-`xxx' 或 ‘xxx’
-
-
-
-
-双引号（“xxx”）
-``xxx'' 或 “xxx”
-
-
-
-【注】如果出现单引号与双引号连续出现的情况，则在二者中间用 \, 分隔开。
-
-
-
-字符串示例
-LaTeX 代码
-
-
-
-
-“ ‘A’ or ‘B’ ”，he as
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-23 13:28" pubdate>
-              2021-01-23
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/TeX/">TeX</a>
-            
-              <a href="/categories/Technique/TeX/LaTeX/">LaTeX</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/TeX/">TeX</a>
-            
-              <a href="/tags/LaTeX/">LaTeX</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/01/23/TeX/LaTeX/LaTeX%E7%A7%91%E6%8A%80%E7%AC%A6%E5%8F%B7/LaTeX%E7%A7%91%E6%8A%80%E7%AC%A6%E5%8F%B7/">LaTeX科技符号</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/01/23/TeX/LaTeX/LaTeX%E7%A7%91%E6%8A%80%E7%AC%A6%E5%8F%B7/LaTeX%E7%A7%91%E6%8A%80%E7%AC%A6%E5%8F%B7/">
-          
-          
-            
-          
-          【注】摘自 Scott Pakin 的 《The Comprehensive LaTeX Symbol List》 。
-
-
-
-
-
-
-
-
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-23 13:28" pubdate>
-              2021-01-23
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/TeX/">TeX</a>
-            
-              <a href="/categories/Technique/TeX/LaTeX/">LaTeX</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/TeX/">TeX</a>
-            
-              <a href="/tags/LaTeX/">LaTeX</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/01/23/TeX/LaTeX/LaTeX%E4%B8%ADTikZ%E5%AE%8F%E5%8C%85/TikZ%E4%B8%AD%E8%8A%82%E7%82%B9%E7%BB%98%E5%88%B6%E7%9A%84%E5%BE%AA%E7%8E%AF%E9%80%89%E9%A1%B9%E9%97%AE%E9%A2%98/TikZ%E4%B8%AD%E8%8A%82%E7%82%B9%E7%BB%98%E5%88%B6%E7%9A%84%E5%BE%AA%E7%8E%AF%E9%80%89%E9%A1%B9%E9%97%AE%E9%A2%98/">TikZ中节点绘制的循环选项问题</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/01/23/TeX/LaTeX/LaTeX%E4%B8%ADTikZ%E5%AE%8F%E5%8C%85/TikZ%E4%B8%AD%E8%8A%82%E7%82%B9%E7%BB%98%E5%88%B6%E7%9A%84%E5%BE%AA%E7%8E%AF%E9%80%89%E9%A1%B9%E9%97%AE%E9%A2%98/TikZ%E4%B8%AD%E8%8A%82%E7%82%B9%E7%BB%98%E5%88%B6%E7%9A%84%E5%BE%AA%E7%8E%AF%E9%80%89%E9%A1%B9%E9%97%AE%E9%A2%98/">
-          
-          
-            
-          
-          在 LaTeX 中使用 TikZ 宏包绘制闭合曲线时，可以在 \draw 中使用循环选项。
-1.第一种情况
-12345678910111213\documentclass&#123;article&#125;\usepackage&#123;tikz&#125;\usetikzlibrary&#123;arrows,backgrounds,calc,fit,intersections,throug
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-23 13:28" pubdate>
-              2021-01-23
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/TeX/">TeX</a>
-            
-              <a href="/categories/Technique/TeX/LaTeX/">LaTeX</a>
-            
-              <a href="/categories/Technique/TeX/LaTeX/LaTeX%E4%B8%ADTikZ%E5%AE%8F%E5%8C%85/">LaTeX中TikZ宏包</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/TeX/">TeX</a>
-            
-              <a href="/tags/LaTeX/">LaTeX</a>
-            
-              <a href="/tags/LaTeX%E4%B8%ADTikZ%E5%AE%8F%E5%8C%85/">LaTeX中TikZ宏包</a>
             
           </div>
         

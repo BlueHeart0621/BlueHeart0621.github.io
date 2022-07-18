@@ -62,7 +62,7 @@
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
-<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
 </head>
 
 
@@ -255,11 +255,11 @@
 <p>到 Go 语言<a target="_blank" rel="noopener" href="https://golang.org/dl/">官网地址</a>下载 tar.gz 软件包，本人下载的软件包版本是 <code>go1.14.2.linux-amd64.tar.gz</code> 。</p>
 <h2 id="2-解压软件包">2. 解压软件包</h2>
 <p>将软件包解压到合适位置，本人解压到路径 <code>/usr/local</code> 目录下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo tar -C /usr/<span class="hljs-built_in">local</span> -xzf go1.14.2.linux-amd64.tar.gz<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo tar -C /usr/local -xzf go1.14.2.linux-amd64.tar.gz<br></code></pre></td></tr></table></figure>
 <h2 id="3-添加环境变量">3. 添加环境变量</h2>
 <h3 id="3-1-导入软件包路径">3.1 导入软件包路径</h3>
 <p>若配置该 Go 开发环境是针对整个系统的，则修改 <code>/etc/profile</code> 文件，在文件尾部添加以下代码，使之前下载的软件包解压路径添加到环境变量 <code>$PATH</code> 中；若配置该 Go 开发环境是针对当前用户的，则修改 <code>$HOME/.bashrc</code> 文件，在文件尾部添加以下代码，使之前下载的软件包解压路径添加到环境变量 <code>$PATH</code> 中；此外还需追加个人项目路径到环境变量 <code>$GOPATH</code> 中（用于后续进行 go 语言开发）。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">export</span> PATH=/usr/<span class="hljs-built_in">local</span>/go/bin:<span class="hljs-variable">$PATH</span>			<span class="hljs-comment"># 该路径用于指明 go 编译器程序位置</span><br><span class="hljs-built_in">export</span> GOPATH=<span class="hljs-variable">$HOME</span>/go:<span class="hljs-variable">$GOPATH</span>				<span class="hljs-comment"># 该路径用于指明个人项目工作区位置（具体项目路径可自行配置） </span><br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">export</span> PATH=/usr/local/go/bin:<span class="hljs-variable">$PATH</span>			<span class="hljs-comment"># 该路径用于指明 go 编译器程序位置</span><br><span class="hljs-built_in">export</span> GOPATH=<span class="hljs-variable">$HOME</span>/go:<span class="hljs-variable">$GOPATH</span>				<span class="hljs-comment"># 该路径用于指明个人项目工作区位置（具体项目路径可自行配置） </span><br></code></pre></td></tr></table></figure>
 <h3 id="3-2-刷新环境变量">3.2 刷新环境变量</h3>
 <ul>
 <li>若修改的是 <code>/etc/profile</code> 文件，则使用 source 命令刷新该文件：</li>
@@ -283,7 +283,7 @@
 <ol>
 <li>方法一：在终端下执行以下代码：</li>
 </ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">go env -w GOPROXY=https://goproxy.cn,direct<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">go <span class="hljs-built_in">env</span> -w GOPROXY=https://goproxy.cn,direct<br></code></pre></td></tr></table></figure>
 <ol start="2">
 <li>方法二：修改 <code>/etc/profile</code> 或 <code>/$HOME/.bashrc</code> 文件，追加以下代码并 <code>source</code> 刷新对应配置文件（同步骤 <strong>3</strong>）：</li>
 </ol>
@@ -302,9 +302,9 @@
 <ul>
 <li>在 <code>src</code> 子文件夹中创建项目依赖文件目录 <code>simplemath</code>，在该目录下一次创建 <code>add.go</code>、<code>add_test.go</code>、<code>sqrt.go</code>、<code>sqrt_test.go</code> 文件，其内容分别如下：</li>
 </ul>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs go"><span class="hljs-comment">// add.go</span><br><span class="hljs-keyword">package</span> simplemath<br><br><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">Add</span><span class="hljs-params">(a <span class="hljs-keyword">int</span>, b <span class="hljs-keyword">int</span>)</span> <span class="hljs-title">int</span></span> &#123;<br>	<span class="hljs-keyword">return</span> a + b<br>&#125;<br></code></pre></td></tr></table></figure>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs go"><span class="hljs-comment">// add.go</span><br><span class="hljs-keyword">package</span> simplemath<br><br><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">Add</span><span class="hljs-params">(a <span class="hljs-type">int</span>, b <span class="hljs-type">int</span>)</span></span> <span class="hljs-type">int</span> &#123;<br>	<span class="hljs-keyword">return</span> a + b<br>&#125;<br></code></pre></td></tr></table></figure>
 <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs go"><span class="hljs-comment">// add_test.go</span><br><span class="hljs-keyword">package</span> simplemath<br><span class="hljs-keyword">import</span> <span class="hljs-string">&quot;testing&quot;</span><br><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">TestAdd1</span><span class="hljs-params">(t *testing.T)</span></span> &#123;<br>    r := Add(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>)<br>    <span class="hljs-keyword">if</span> r != <span class="hljs-number">3</span> &#123;<br>        t.Errorf(<span class="hljs-string">&quot;Add(1, 2) failed. Got %d, expected 3.&quot;</span>, r)<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs go"><span class="hljs-comment">// sqrt.go</span><br><span class="hljs-keyword">package</span> simplemath<br><span class="hljs-keyword">import</span> <span class="hljs-string">&quot;math&quot;</span><br><br><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">Sqrt</span><span class="hljs-params">(i <span class="hljs-keyword">int</span>)</span> <span class="hljs-title">int</span></span> &#123;<br>	v := math.Sqrt(<span class="hljs-keyword">float64</span>(i))<br>	<span class="hljs-keyword">return</span> <span class="hljs-keyword">int</span>(v)<br>&#125;<br></code></pre></td></tr></table></figure>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs go"><span class="hljs-comment">// sqrt.go</span><br><span class="hljs-keyword">package</span> simplemath<br><span class="hljs-keyword">import</span> <span class="hljs-string">&quot;math&quot;</span><br><br><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">Sqrt</span><span class="hljs-params">(i <span class="hljs-type">int</span>)</span></span> <span class="hljs-type">int</span> &#123;<br>	v := math.Sqrt(<span class="hljs-type">float64</span>(i))<br>	<span class="hljs-keyword">return</span> <span class="hljs-type">int</span>(v)<br>&#125;<br></code></pre></td></tr></table></figure>
 <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs go"><span class="hljs-comment">// sqrt_test.go</span><br><span class="hljs-keyword">package</span> simplemath<br><span class="hljs-keyword">import</span> <span class="hljs-string">&quot;testing&quot;</span><br><br><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">TestSqrt1</span><span class="hljs-params">(t *testing.T)</span></span> &#123;<br>	v := Sqrt(<span class="hljs-number">16</span>)<br>	<span class="hljs-keyword">if</span> v != <span class="hljs-number">4</span> &#123;<br>		t.Errorf(<span class="hljs-string">&quot;Sqrt(16) failed. Got %v, expected 4.&quot;</span>, v)<br>	&#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 <ul>
 <li>然后在 VSCode 下直接点击运行，若显示可执行程序 <strong>calc</strong> 的 Usage 信息说明项目编译运行成功</li>
@@ -316,6 +316,7 @@
 <li>此外，也可以在终端运行项目中的 test 文件来测试项目依赖文件中的主要函数是否正确：</li>
 </ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">go <span class="hljs-built_in">test</span> simplemath<br></code></pre></td></tr></table></figure>
+
             </div>
             <hr>
             <div>
@@ -363,8 +364,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2020/05/26/MarkDown/Atom%E6%90%AD%E5%BB%BAMarkDown%E7%8E%AF%E5%A2%83/">
-                        <span class="hidden-mobile">Atom搭建MarkDown环境</span>
+                      <a href="/2020/05/26/MachineLearning/%E8%A7%84%E8%8C%83%E5%8C%96%E3%80%81%E5%BD%92%E4%B8%80%E5%8C%96%E3%80%81%E6%A0%87%E5%87%86%E5%8C%96%E3%80%81%E4%B8%AD%E5%BF%83%E5%8C%96/">
+                        <span class="hidden-mobile">规范化、归一化、标准化、中心化</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

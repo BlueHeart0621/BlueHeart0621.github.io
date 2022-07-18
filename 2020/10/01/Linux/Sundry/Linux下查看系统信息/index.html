@@ -62,7 +62,7 @@
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
-<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
 </head>
 
 
@@ -255,7 +255,7 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">lsb_release -a<br></code></pre></td></tr></table></figure>
 <p>【注】并不是所有 Linux 发行版都自带 <code>lsb_release</code> 命令，如果系统上没有该命令需要手动安装 <code>lsb-release</code> 工具。</p>
 <h3 id="2-查看-Linux-内核版本">2. 查看 Linux 内核版本</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">uname -r<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">uname</span> -r<br></code></pre></td></tr></table></figure>
 <h3 id="3-查看显卡厂商">3. 查看显卡厂商</h3>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">lspci | grep -i vga<br></code></pre></td></tr></table></figure>
 <h3 id="4-查看内存容量">4. 查看内存容量</h3>
@@ -278,17 +278,17 @@
 <p><code>screenfetch</code> 工具支持的查询信息有：</p>
 </li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">distro host kernel uptime pkgs shell res de wm wmtheme gtk disk cpu gpu mem<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">distro host kernel <span class="hljs-built_in">uptime</span> pkgs shell res de wm wmtheme gtk disk cpu gpu mem<br></code></pre></td></tr></table></figure>
 <p>【注】有些发行版可能没有预安装 <code>screenfetch</code> 工具，需要自行安装。更多参数设置查看 <code>screenfetch --help</code>。</p>
 <h3 id="8-查看系统更新日志">8. 查看系统更新日志</h3>
 <ul>
 <li>对于 Debian 系的 Linux 发行版来说，系统更新日志记录在 <code>/var/log/apt/history.log</code> 文件中：</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">less /var/<span class="hljs-built_in">log</span>/apt/history.log<br><span class="hljs-comment"># 进入到 less 中后 Shift + g 即可跳转到最新的更新日志（即日志末尾）</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">less /var/log/apt/history.log<br><span class="hljs-comment"># 进入到 less 中后 Shift + g 即可跳转到最新的更新日志（即日志末尾）</span><br></code></pre></td></tr></table></figure>
 <ul>
 <li>对于 Arch 系的 Linux 发行版来说，系统更新日志记录在 <code>/var/log/pacman.log</code> 文件中：</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">less /var/<span class="hljs-built_in">log</span>/pacman.log<br><span class="hljs-comment"># 进入到 less 中后 Shift + g 即可跳转到最新的更新日志（即日志末尾）</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">less /var/log/pacman.log<br><span class="hljs-comment"># 进入到 less 中后 Shift + g 即可跳转到最新的更新日志（即日志末尾）</span><br></code></pre></td></tr></table></figure>
             </div>
             <hr>
             <div>
@@ -330,9 +330,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2020/10/02/DeepLearning/CNN/CNN/">
+                      <a href="/2020/10/02/DeepLearning/%E6%AD%A3%E5%88%99%E5%8C%96/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">CNN</span>
+                        <span class="hidden-mobile">正则化</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     

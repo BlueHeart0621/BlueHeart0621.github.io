@@ -46,7 +46,7 @@
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
-<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
 </head>
 
 
@@ -190,6 +190,63 @@
               <div class="col-12 col-md-10 m-auto">
                 
 
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/10/13/Python/Ubuntu16.04%E4%B8%8A%E6%90%AD%E5%BB%BAVSCode+Python%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83/">Ubuntu16.04上搭建VSCode+Python虚拟环境</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/10/13/Python/Ubuntu16.04%E4%B8%8A%E6%90%AD%E5%BB%BAVSCode+Python%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83/">
+          
+          
+            
+          
+          1. 安装 virtualenv 包
+1pip install virtualenv  # 或者 pip3（具体看个人需要搭建的环境）
+2. 建立存放虚拟文件的文件夹
+1mkdir venv
+3. 创建虚拟环境
+1virtualenv --system-site-packages venv  # --system-site-packages 参数表示拷贝系统 python 环境的 packages
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-10-13 00:46" pubdate>
+              2020-10-13
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Python/">Python</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/Python/">Python</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
 
   <div class="row mx-auto index-card">
     
@@ -368,11 +425,11 @@ mpq​=ζ
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
-            
               <a href="/tags/Math/">Math</a>
             
               <a href="/tags/Theory/">Theory</a>
+            
+              <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
             
               <a href="/tags/%E5%9B%BE%E5%83%8F%E7%9F%A9/">图像矩</a>
             
@@ -725,72 +782,6 @@ W^t=Wt−1+αΔWt−1Wt=Wt^−η∂L∂W^t\begin{array}{c}
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
             <time datetime="2020-10-02 20:12" pubdate>
-              2020-10-02
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/DeepLearning/">DeepLearning</a>
-            
-              <a href="/categories/Technique/DeepLearning/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/">优化算法</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/DeepLearning/">DeepLearning</a>
-            
-              <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a>
-            
-              <a href="/tags/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/">优化算法</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/10/02/DeepLearning/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/Adam/">Adam</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/10/02/DeepLearning/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/Adam/">
-          
-          
-            
-          
-          1. 简介
-Adam 算法可以看作动量法和 RMSprop 算法的结合，不但使用动量作为参数更新方向，而且可以自适应调整学习率。
-2. 原理
-第 ttt 次迭代时：
-
-一方面计算梯度平方的指数加权平均：
-
-Gt=β2Gt−1+(1−β2)∂L∂Wt−1⊙∂L∂Wt−1\begin{array}{c}
-\boldsymbol{G}_t = \beta_2 \boldsymbol{G}_{t-1} +
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-10-02 20:01" pubdate>
               2020-10-02
             </time>
           </div>

@@ -62,7 +62,7 @@
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
-<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
 </head>
 
 
@@ -253,9 +253,9 @@
             <div class="markdown-body">
               <h2 id="1-装饰器（decorator）">1. 装饰器（decorator）</h2>
 <p>在代码运行期间动态增加功能的方式，称之为「装饰器」（decorator）。本质上，decorator 就是一个返回函数的高阶函数，它需要接受一个函数作为输入参数，并返回一个函数。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">log</span>(<span class="hljs-params">func</span>):</span><br>    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">wrapper</span>(<span class="hljs-params">*args, **kw</span>):</span><br>        print(<span class="hljs-string">&#x27;call %s():&#x27;</span> % func.__name__)<br>        <span class="hljs-keyword">return</span> func(*args, **kw)<br>    <span class="hljs-keyword">return</span> wrapper<br></code></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">log</span>(<span class="hljs-params">func</span>):<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">wrapper</span>(<span class="hljs-params">*args, **kw</span>):<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;call %s():&#x27;</span> % func.__name__)<br>        <span class="hljs-keyword">return</span> func(*args, **kw)<br>    <span class="hljs-keyword">return</span> wrapper<br></code></pre></td></tr></table></figure>
 <p>上面的 <code>log</code> 就是一个 decorator。Python 的 @ 语法可以把 decorator 置于函数的定义处：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-meta">@log</span><br><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">now</span>():</span><br>    print(<span class="hljs-string">&#x27;2015-3-25&#x27;</span>)<br></code></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-meta">@log</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">now</span>():<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;2015-3-25&#x27;</span>)<br></code></pre></td></tr></table></figure>
 <p>此时调用 <code>now</code> 函数，会在运行 <code>now</code> 前运行 <code>log(now)</code> 打印日志。</p>
 <h2 id="2-偏函数">2. 偏函数</h2>
 <p><code>functools.partial</code> 的作用就是，把一个函数的某些参数给固定住（也就是设置默认值），返回一个新的函数，调用这个新函数会更简单。</p>
@@ -297,7 +297,7 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2020/11/11/ImageCompression/JPEG%E5%8E%8B%E7%BC%A9%E5%9B%BE%E5%83%8F%E5%A2%9E%E5%BC%BA%E7%BB%BC%E8%BF%B0/JPEG%E5%8E%8B%E7%BC%A9%E5%9B%BE%E5%83%8F%E5%A2%9E%E5%BC%BA%E7%BB%BC%E8%BF%B0/">
+                      <a href="/2020/11/11/Compression/Image/JPEG%E5%8E%8B%E7%BC%A9%E5%9B%BE%E5%83%8F%E5%A2%9E%E5%BC%BA%E7%BB%BC%E8%BF%B0/JPEG%E5%8E%8B%E7%BC%A9%E5%9B%BE%E5%83%8F%E5%A2%9E%E5%BC%BA%E7%BB%BC%E8%BF%B0/">
                         <i class="iconfont icon-arrowleft"></i>
                         <span class="hidden-mobile">JPEG压缩图像增强综述</span>
                         <span class="visible-mobile">上一篇</span>

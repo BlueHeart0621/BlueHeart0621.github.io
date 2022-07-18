@@ -62,7 +62,7 @@
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
-<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
 </head>
 
 
@@ -303,11 +303,11 @@
 <ul>
 <li>创建交换文件</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 创建一个 512 MB 的交换文件</span><br>sudo dd <span class="hljs-keyword">if</span>=/dev/zero of=/swapfile bs=1M count=512 status=progress<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 创建一个 512 MB 的交换文件</span><br>sudo <span class="hljs-built_in">dd</span> <span class="hljs-keyword">if</span>=/dev/zero of=/swapfile bs=1M count=512 status=progress<br></code></pre></td></tr></table></figure>
 <ul>
 <li>为交换文件设置权限</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 设置 600 权限是为了防止交换文件全局可读</span><br><span class="hljs-comment"># 交换文件全局可读是一个巨大的本地漏洞</span><br>sudo chmod 600 /swapfile<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 设置 600 权限是为了防止交换文件全局可读</span><br><span class="hljs-comment"># 交换文件全局可读是一个巨大的本地漏洞</span><br>sudo <span class="hljs-built_in">chmod</span> 600 /swapfile<br></code></pre></td></tr></table></figure>
 <ul>
 <li>格式化交换文件</li>
 </ul>
@@ -336,7 +336,7 @@
 <p>然后，如果 <code>/etc/fstab/</code> 中有对应条目，需要注释/删除掉：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># /etc/fstab</span><br><span class="hljs-comment"># /swapfile none swap defaults 0 0</span><br></code></pre></td></tr></table></figure>
 <p>最后，如果确定交换文件 <code>/swapfile</code> 不再使用，也可以删除：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo rm -f /swapfile<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo <span class="hljs-built_in">rm</span> -f /swapfile<br></code></pre></td></tr></table></figure>
 </blockquote>
 <h3 id="3-2-自动方式">3.2 自动方式</h3>
 <p>Linux 内核提供了两个内核模块用于压缩缓存页，再将压缩后的缓存页换入内存/交换空间，从而提高内存/交换空间的利用率。由于其需要先对缓存页进行压，因此会占用更多 CPU 资源，降低一些响应性能。</p>
@@ -379,7 +379,7 @@
 <h3 id="4-2-查看-zramX-设备状态">4.2 查看 zramX 设备状态</h3>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">systemctl status systemd-zram-setup@zramX.service   <span class="hljs-comment"># X 为编号</span><br></code></pre></td></tr></table></figure>
 <h3 id="4-3-查看-zramX-设备支持的压缩算法">4.3 查看 zramX 设备支持的压缩算法</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">cat /sys/block/zramX/comp_algorithm<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cat</span> /sys/block/zramX/comp_algorithm<br></code></pre></td></tr></table></figure>
 <p>【注】目录 <code>/sys/block/zramX</code> 下存储了很多 zramX 设备的信息，除了 <code>comp_algorithm</code> 外，还有很多其它的信息文件。每个信息文件及其描述的信息参见：<a target="_blank" rel="noopener" href="https://www.kernel.org/doc/Documentation/ABI/testing/sysfs-block-zram">sysfs-block-zram</a>。</p>
 <h2 id="附录">附录</h2>
 <p>参考资料：</p>

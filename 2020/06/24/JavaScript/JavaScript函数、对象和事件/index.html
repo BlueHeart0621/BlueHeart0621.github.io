@@ -62,7 +62,7 @@
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
-<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
 </head>
 
 
@@ -257,24 +257,24 @@
 <li>函数名可包含字母、数字、下划线和美元符号（规则与变量名相同）。</li>
 <li>圆括号可包括由逗号分隔的参数，由函数执行的代码被放置在花括号 {} 中：</li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">name</span>(<span class="hljs-params">参数 <span class="hljs-number">1</span>, 参数 <span class="hljs-number">2</span>, 参数 <span class="hljs-number">3</span></span>) </span>&#123;<br>    要执行的代码<br>&#125;<br></code></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">name</span>(<span class="hljs-params">参数 <span class="hljs-number">1</span>, 参数 <span class="hljs-number">2</span>, 参数 <span class="hljs-number">3</span></span>) &#123;<br>    要执行的代码<br>&#125;<br></code></pre></td></tr></table></figure>
 <ul>
 <li>当 JavaScript 到达 return 语句，函数将停止执行。</li>
 <li>不使用 () 访问函数将返回函数声明而不是函数结果。name 引用的是函数对象，而 name() 引用的是函数结果。可以将函数对象赋值给变量（变量的值是函数定义）。</li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">toCelsius</span>(<span class="hljs-params">fahrenheit</span>) </span>&#123;<br>    <span class="hljs-keyword">return</span> (<span class="hljs-number">5</span>/<span class="hljs-number">9</span>) * (fahrenheit-<span class="hljs-number">32</span>);<br>&#125; <br><span class="hljs-keyword">var</span> x = toCelsius;      <span class="hljs-comment">// function toCelsius(fahrenheit) &#123; return (5/9) * (fahrenheit-32); &#125;</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">toCelsius</span>(<span class="hljs-params">fahrenheit</span>) &#123;<br>    <span class="hljs-keyword">return</span> (<span class="hljs-number">5</span>/<span class="hljs-number">9</span>) * (fahrenheit-<span class="hljs-number">32</span>);<br>&#125; <br><span class="hljs-keyword">var</span> x = toCelsius;      <span class="hljs-comment">// function toCelsius(fahrenheit) &#123; return (5/9) * (fahrenheit-32); &#125;</span><br></code></pre></td></tr></table></figure>
 <h2 id="2-对象">2. 对象</h2>
 <ul>
 <li>JavaScript 对象也是变量，但是对象包含很多值。JavaScript 对象是被命名值的容器。</li>
 <li>值以名称:值对的方式来书写（名称和值由冒号分隔），名称:值对被称为属性。</li>
 <li>对象也可以有方法，方法是在对象上执行的动作。方法以函数定义被存储在属性中。方法实际上是以属性值的形式存储的函数定义。</li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> person = &#123;<br>  firstName: <span class="hljs-string">&quot;Bill&quot;</span>,<br>  lastName : <span class="hljs-string">&quot;Gates&quot;</span>,<br>  id       : <span class="hljs-number">678</span>,<br>  fullName : <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>&#123;<br>    <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>.firstName + <span class="hljs-string">&quot; &quot;</span> + <span class="hljs-built_in">this</span>.lastName;<br>  &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> person = &#123;<br>  <span class="hljs-attr">firstName</span>: <span class="hljs-string">&quot;Bill&quot;</span>,<br>  lastName : <span class="hljs-string">&quot;Gates&quot;</span>,<br>  id       : <span class="hljs-number">678</span>,<br>  fullName : <span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) &#123;<br>    <span class="hljs-keyword">return</span> <span class="hljs-variable language_">this</span>.<span class="hljs-property">firstName</span> + <span class="hljs-string">&quot; &quot;</span> + <span class="hljs-variable language_">this</span>.<span class="hljs-property">lastName</span>;<br>  &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
 <ul>
 <li>在函数定义中，this 引用该函数的「拥有者」。</li>
 <li>可以以两种方式访问对象属性：</li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs javascript">objectName.propertyName<br>objectName[<span class="hljs-string">&quot;propertyName&quot;</span>]<br></code></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs javascript">objectName.<span class="hljs-property">propertyName</span><br>objectName[<span class="hljs-string">&quot;propertyName&quot;</span>]<br></code></pre></td></tr></table></figure>
 <h2 id="3-事件">3. 事件</h2>
 <ul>
 <li>HTML 事件可以是浏览器或用户做的某些事情，比如：</li>

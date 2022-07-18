@@ -62,7 +62,7 @@
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
-<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
 </head>
 
 
@@ -745,7 +745,7 @@
 <li>举例</li>
 </ul>
 <p>按照父进程 ID 排序显示进程信息：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ps --sort ppid --format pid,ppid,tty,cmd<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ps --<span class="hljs-built_in">sort</span> ppid --format pid,ppid,<span class="hljs-built_in">tty</span>,cmd<br></code></pre></td></tr></table></figure>
 <p>本人终端显示结果如下：</p>
 <figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs apache">  <span class="hljs-attribute">PID</span>  PPID TT       CMD<br><span class="hljs-attribute">12429</span>  <span class="hljs-number">3080</span> pts/<span class="hljs-number">4</span>    bash<br><span class="hljs-attribute">18446</span> <span class="hljs-number">12429</span> pts/<span class="hljs-number">4</span>    ps --sort ppid --format pid,ppid,tty,cmd<br></code></pre></td></tr></table></figure>
 <h2 id="4-详解">4. 详解</h2>
@@ -1007,7 +1007,7 @@
 <ul>
 <li>格式</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">[-]o/O key1[=rename1|:width1][[[,| ][key2[=rename2|:width1]]...]<br>--sort [+|-]key1[,[+|-]key2[,...]]<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">[-]o/O key1[=rename1|:width1][[[,| ][key2[=rename2|:width1]]...]<br>--<span class="hljs-built_in">sort</span> [+|-]key1[,[+|-]key2[,...]]<br></code></pre></td></tr></table></figure>
 <p>其中，<code>keyn</code> 为指定格式描述符，<code>renamen</code> 为重命名输出列名，<code>widthn</code> 为指定输出列宽度，<code>+</code> 表示顺序而 <code>-</code> 表示逆序。</p>
 <ul>
 <li>常用格式描述符列表</li>
@@ -1162,7 +1162,7 @@
 <li>举例</li>
 </ul>
 <p>按照自定义格式 <code>pid,ppid,pgrp,comm</code> 显示指定字段的进程信息：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ps -o pid,ppid,pgrp,comm<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ps -o pid,ppid,pgrp,<span class="hljs-built_in">comm</span><br></code></pre></td></tr></table></figure>
 <p>本人终端显示结果如下：</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-string">PID</span>  <span class="hljs-string">PPID</span>    <span class="hljs-string">PGRP</span>    <span class="hljs-string">COMMAND</span><br><span class="hljs-number">6776  </span><span class="hljs-number">13466</span>   <span class="hljs-number">6776     </span><span class="hljs-string">bash</span><br><span class="hljs-number">6858  </span><span class="hljs-number">2307    </span><span class="hljs-number">6851    </span><span class="hljs-string">python3</span><br><span class="hljs-number">9412  </span><span class="hljs-number">6776    </span><span class="hljs-number">9412    </span><span class="hljs-string">ps</span><br></code></pre></td></tr></table></figure>
 <h2 id="5-常用参数组合">5. 常用参数组合</h2>
@@ -1174,6 +1174,7 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">ps -eLf<br>ps axms<br></code></pre></td></tr></table></figure>
 <h3 id="5-4-获取安全信息">5.4 获取安全信息</h3>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">ps -eM<br>ps -axZ<br></code></pre></td></tr></table></figure>
+
             </div>
             <hr>
             <div>

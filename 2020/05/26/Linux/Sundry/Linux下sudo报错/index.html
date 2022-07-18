@@ -62,7 +62,7 @@
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
-<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
 </head>
 
 
@@ -272,7 +272,8 @@
 <ol start="2">
 <li>查看 <code>/etc/sudoers</code> 文件中的 <code>$secure_path</code> 变量，该变量包含的所有目录下的程序命令都可以被 sudo 查看到，于是我们就可以创建程序命令 XXX 的软连接到 <code>$secure_path</code> 变量包含的任意目录下，比如在目录 <code>/usr/local/bin</code> 下创建 XXX 的软链接：</li>
 </ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo ln -s path_of_XXX /usr/<span class="hljs-built_in">local</span>/bin     <span class="hljs-comment"># path_of_XXX 为程序命令 XXX 的路径</span><br></code></pre></td></tr></table></figure></blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo <span class="hljs-built_in">ln</span> -s path_of_XXX /usr/local/bin     <span class="hljs-comment"># path_of_XXX 为程序命令 XXX 的路径</span><br></code></pre></td></tr></table></figure>
+</blockquote>
 
             </div>
             <hr>

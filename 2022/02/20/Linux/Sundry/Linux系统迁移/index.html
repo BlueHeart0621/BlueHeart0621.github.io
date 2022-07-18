@@ -62,7 +62,7 @@
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
-<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
 </head>
 
 
@@ -280,7 +280,7 @@
 <ul>
 <li>
 <p>具体为先用 U 盘制作一个 Linux Live 系统，然后启动到 Live 系统中，使用 Live 系统中的 <code>dd</code> 命令将原有系统拷贝到新硬盘划分的分区中去。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo dd <span class="hljs-keyword">if</span>=/dev/sdXY of=/dev/sdUW bs=4M<br><span class="hljs-comment"># /dev/sdXY 为原系统分区</span><br><span class="hljs-comment"># /dev/sdUW 为新系统分区</span><br><span class="hljs-comment"># bs 指定拷贝的数据单元大小</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo <span class="hljs-built_in">dd</span> <span class="hljs-keyword">if</span>=/dev/sdXY of=/dev/sdUW bs=4M<br><span class="hljs-comment"># /dev/sdXY 为原系统分区</span><br><span class="hljs-comment"># /dev/sdUW 为新系统分区</span><br><span class="hljs-comment"># bs 指定拷贝的数据单元大小</span><br></code></pre></td></tr></table></figure>
 </li>
 <li>
 <p>然后进入旧的 Linux 系统，执行以下命令来生成迁移系统的引导项：</p>

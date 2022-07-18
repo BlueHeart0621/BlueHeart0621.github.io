@@ -62,7 +62,7 @@
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
-<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
 </head>
 
 
@@ -334,7 +334,7 @@
 <li>使用 sed 从命令脚本文件中读取命令来将数据中的 X、Y、Z 依次替换为 x、y、z：</li>
 </ul>
 <p>（1）创建一个包含以下 sed 命令的脚本文件 <strong>script.sed</strong> ：</p>
-<figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs dts">s/X<span class="hljs-meta-keyword">/x/</span>g<br>s/Y<span class="hljs-meta-keyword">/y/</span>g<br>s/Z<span class="hljs-meta-keyword">/z/</span>g<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">s/X/x/g<br>s/Y/y/g<br>s/Z/z/g<br></code></pre></td></tr></table></figure>
 <p>（2）然后使用 sed 读取该脚本文件来处理数据：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;XYZZYX&quot;</span> | sed -f script.sed<br></code></pre></td></tr></table></figure>
 <p>（3）显示结果如下：</p>

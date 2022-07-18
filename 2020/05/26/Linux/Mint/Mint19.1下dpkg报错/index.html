@@ -62,7 +62,7 @@
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
-<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
 </head>
 
 
@@ -253,13 +253,13 @@
             <div class="markdown-body">
               <h3 id="1-E-Sub-process-usr-bin-dpkg-returned-an-error-code-1">1. E: Sub-process /usr/bin/dpkg returned an error code (1)</h3>
 <p>解决办法如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> /var/lib/dpkg<br>sudo mv info info_bak<br>sudo mkdir info<br>sudo apt update &gt; /dev/null			<span class="hljs-comment"># 若要输出信息，去除重定向符及其后内容</span><br>sudo apt install -f<br>sudo mv info/* info_bak/ &gt; /dev/null<br>sudo rm -r info<br>sudo mv info_bak info<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> /var/lib/dpkg<br>sudo <span class="hljs-built_in">mv</span> info info_bak<br>sudo <span class="hljs-built_in">mkdir</span> info<br>sudo apt update &gt; /dev/null			<span class="hljs-comment"># 若要输出信息，去除重定向符及其后内容</span><br>sudo apt install -f<br>sudo <span class="hljs-built_in">mv</span> info/* info_bak/ &gt; /dev/null<br>sudo <span class="hljs-built_in">rm</span> -r info<br>sudo <span class="hljs-built_in">mv</span> info_bak info<br></code></pre></td></tr></table></figure>
 <p>【注】建议将上述代码封装成脚本执行，以备重复使用，避免稍有不慎写错代码导致信息丢失的情况。</p>
 <h3 id="2-dpkg-警告-无法找到软件包-XXX-的文件名列表文件，现假定该软件包目前没有任何文件被安装在系统里。">2. dpkg: 警告: 无法找到软件包 XXX 的文件名列表文件，现假定该软件包目前没有任何文件被安装在系统里。</h3>
 <p>目前的解决办法就是重新安装对应软件包：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo apt reinstall xxx<br></code></pre></td></tr></table></figure>
 <p>如果过多此类警告，可以一键重新安装所有软件（需要花费大量时间）：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo apt-get --reinstall install `dpkg --get-selections | grep <span class="hljs-string">&#x27;[[:space:]]install&#x27;</span> | cut -f1`<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo apt-get --reinstall install `dpkg --get-selections | grep <span class="hljs-string">&#x27;[[:space:]]install&#x27;</span> | <span class="hljs-built_in">cut</span> -f1`<br></code></pre></td></tr></table></figure>
 <p>【注】命令详解请查看 cut 命令 。</p>
 <h3 id="3-dpkg-处理归档-XXX-deb-时出错：正在试图覆盖-……-它同时被包含于软件包-……-在处理时有错误发生：……">3. dpkg: 处理归档 XXX.deb 时出错：正在试图覆盖 …… 它同时被包含于软件包 …… 在处理时有错误发生：……</h3>
 <p>解决办法是让 <code>dpkg</code> 强制覆盖对应文件，对应的命令如下：</p>

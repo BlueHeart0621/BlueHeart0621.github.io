@@ -62,7 +62,7 @@
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
-<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
 </head>
 
 
@@ -388,7 +388,7 @@
 <ol>
 <li>在默认名称空间的作用域内，可以使用 QName 来定义隶属于其他名称空间的元素</li>
 </ol>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs xml">&lt;book<br>  xmlns = &#x27;http://www.library.com/books&#x27;<br>  xmlns:amazon = &#x27;http://www.amazon.com/products&#x27;&gt;<br>      ···<br>      <span class="hljs-tag">&lt;<span class="hljs-name">amazon:skuNo</span>&gt;</span>A25<span class="hljs-tag">&lt;/<span class="hljs-name">amazon:skuNo</span>&gt;</span><br>      ···<br><span class="hljs-tag">&lt;/<span class="hljs-name">book</span>&gt;</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">book</span></span><br><span class="hljs-tag">  <span class="hljs-attr">xmlns</span> = <span class="hljs-string">&#x27;http://www.library.com/books&#x27;</span></span><br><span class="hljs-tag">  <span class="hljs-attr">xmlns:amazon</span> = <span class="hljs-string">&#x27;http://www.amazon.com/products&#x27;</span>&gt;</span><br>      ···<br>      <span class="hljs-tag">&lt;<span class="hljs-name">amazon:skuNo</span>&gt;</span>A25<span class="hljs-tag">&lt;/<span class="hljs-name">amazon:skuNo</span>&gt;</span><br>      ···<br><span class="hljs-tag">&lt;/<span class="hljs-name">book</span>&gt;</span><br></code></pre></td></tr></table></figure>
 <ol start="2">
 <li>默认名称空间不作用于属性，如不适用 QName ，默认情况下，属性没有名称空间</li>
 <li>使用 <code>xmlns = &quot;&quot;</code> 定义没有名称空间的元素</li>

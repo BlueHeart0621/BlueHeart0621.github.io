@@ -62,7 +62,7 @@
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
-<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
 </head>
 
 
@@ -271,11 +271,11 @@
 <h2 id="4-split-cat">4. split &amp; cat</h2>
 <p><code>split</code> 命令使用来分割文件的强大工具，它不仅可以用来分割压缩包，也能用来分割一般的文件；<code>cat</code> 命令用来合并 <code>split</code> 分割的文件。</p>
 <h3 id="4-1-分割压缩包">4.1 分割压缩包</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">split -b&lt;size&gt;[b,k,m,g,...] &lt;压缩卷名&gt;<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">split</span> -b&lt;size&gt;[b,k,m,g,...] &lt;压缩卷名&gt;<br></code></pre></td></tr></table></figure>
 <p><code>split</code> 分割后形成的小文件自动命名为 <code>x00 x01 x02 …… </code> 或 <code>xaa xab xac …… </code> 。</p>
 <h3 id="4-2-合并压缩包">4.2 合并压缩包</h3>
 <p>将 <code>split</code> 分割形成的 <code>x*</code> 小文件合并为原来的压缩卷：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">cat x* &gt; &lt;压缩卷名&gt;<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cat</span> x* &gt; &lt;压缩卷名&gt;<br></code></pre></td></tr></table></figure>
             </div>
             <hr>
             <div>

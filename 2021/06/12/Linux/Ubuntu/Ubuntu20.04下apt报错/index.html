@@ -62,7 +62,7 @@
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
-<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
 </head>
 
 
@@ -296,7 +296,7 @@
 <li>软件源服务器证书过期。</li>
 </ol>
 <p>这种情况下我们个人一般就心有余而力不足了，只能修改本地配置不进行证书核验：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;Acquire &#123; https::Verify-Peer false &#125;&quot;</span> | sudo tee /etc/apt/apt.conf.d/99verify-peer.conf<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;Acquire &#123; https::Verify-Peer false &#125;&quot;</span> | sudo <span class="hljs-built_in">tee</span> /etc/apt/apt.conf.d/99verify-peer.conf<br></code></pre></td></tr></table></figure>
 </blockquote>
 <p>【注】2021 年 9 月 30 日，Let's Encrypt 组织使用的 IdentTrust DST Root CA X3 根证书过期，因此很多使用了 Let's Encrypt 签发的证书但没有及时更新证书的网站都受到了影响。</p>
 

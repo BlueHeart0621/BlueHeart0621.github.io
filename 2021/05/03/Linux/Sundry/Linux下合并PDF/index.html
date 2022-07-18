@@ -62,7 +62,7 @@
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
-<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
 </head>
 
 
@@ -258,7 +258,7 @@
 <p>【注】源文件的路径名可以使用通配符，比如使用 <code>*</code> 来匹配目录下所有的 PDF 文件路径名，此时将根据它们的路径名按照字母表顺序来进行合并。如果需要其他的排序规则，可以结合 Linux 下的 <code>sort</code> 命令来自定义顺序。<code>sort</code> 详细介绍参见 <code>sort --help</code>。</p>
 <h2 id="2-PDFtk">2. PDFtk</h2>
 <p><a target="_blank" rel="noopener" href="https://www.pdflabs.com/tools/pdftk-server/">PDFtk</a> 是一款跨平台的命令行 PDF 编辑软件，它提供 PDF 文档分割、合并、加解密、翻转页面、等诸多功能。如果你的 Linux 发行版上没有 <code>pdftk</code> 命令，需要手动安装 PDFtk 软件。<code>pdftk</code> 合并 PDF 的示例如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">pdftk 1.pdf 2.pdf 3.pdf cat output 123.pdf						<span class="hljs-comment"># 拼接多个 PDF 文件</span><br>pdftk A=1.pdf B=2.pdf C=3.pdf cat A1-2 B2-3 C3 output abc.pdf	<span class="hljs-comment"># 从多个 PDF 文件中提取页面进行拼接</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">pdftk 1.pdf 2.pdf 3.pdf <span class="hljs-built_in">cat</span> output 123.pdf						<span class="hljs-comment"># 拼接多个 PDF 文件</span><br>pdftk A=1.pdf B=2.pdf C=3.pdf <span class="hljs-built_in">cat</span> A1-2 B2-3 C3 output abc.pdf	<span class="hljs-comment"># 从多个 PDF 文件中提取页面进行拼接</span><br></code></pre></td></tr></table></figure>
 <p>【注】<code>pdftk</code> 的其他功能示例参见<a target="_blank" rel="noopener" href="https://www.pdflabs.com/docs/pdftk-cli-examples/">官方示例</a>。</p>
 
             </div>

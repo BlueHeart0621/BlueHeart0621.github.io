@@ -62,7 +62,7 @@
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
-<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
 </head>
 
 
@@ -265,7 +265,7 @@
 </ul>
 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs php">DocumentRoot <span class="hljs-string">&quot;xxx&quot;</span>	<span class="hljs-comment"># xxx 为自定义的 Web Server 根目录</span><br>&lt;<span class="hljs-built_in">Directory</span> <span class="hljs-string">&quot;xxx&quot;</span>&gt;<br>	<span class="hljs-comment"># ...</span><br>&lt;/<span class="hljs-built_in">Directory</span>&gt;<br></code></pre></td></tr></table></figure>
 <p>【注】对于自定义的 <code>xxx</code> 路径，需要确保每一级路径对于第三方用户都有访问权限。比如，如果 Web Server 根目录设为 <code>/home/username/php</code>，为了方便则可以设置 <code>/home/username/</code> 和 <code>/home/username/php</code> 的访问权限为 <code>777</code>：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo chmod 777 /home/username<br>sudo chmod 777 /home/username/php<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo <span class="hljs-built_in">chmod</span> 777 /home/username<br>sudo <span class="hljs-built_in">chmod</span> 777 /home/username/php<br></code></pre></td></tr></table></figure>
 <ul>
 <li>启动并查看 Apache</li>
 </ul>
@@ -287,7 +287,7 @@
 <ul>
 <li>初始化 Mysql 数据目录</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">mysqld --initialize --user=mysql --basedir=/usr/<span class="hljs-built_in">local</span> --datadir=/var/lib/mysql<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">mysqld --initialize --user=mysql --basedir=/usr/local --datadir=/var/lib/mysql<br></code></pre></td></tr></table></figure>
 <ul>
 <li>启动 Mysql 服务</li>
 </ul>

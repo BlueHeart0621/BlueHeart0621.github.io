@@ -62,7 +62,7 @@
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
-<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
 </head>
 
 
@@ -255,7 +255,7 @@
 <p>Deepin-Wine 已经升级到第 5 版，对国内一些 Windows 应用兼容性也更好，希望深度越做越好（<s>虽然 Linux 原版要更好，但奈何大多数国内软件厂家都不做 Linux 版应用</s>）。</p>
 <h2 id="2-更新">2. 更新</h2>
 <p>假设 Linux 系统上已经安装了 <code>deepin-wine5</code> 和一些 wine 版的软件，比如 Tim 和 WeChat。如果要更新这些应用（直接在软件里更新是显然不成的），需要先到官网下载对应安装包，然后运行下面代码就能够实现 wine 版软件的更新：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">env WINEPREFIX=<span class="hljs-string">&quot;<span class="hljs-variable">$HOME</span>/.deepinwine/Spark-TIM/&quot;</span> deepin-wine5 TIM.xxx.exe<br>env WINEPREFIX=<span class="hljs-string">&quot;<span class="hljs-variable">$HOME</span>/.deepinwine/Deepin-WeChat/&quot;</span> deepin-wine5 WeChatSetup.exe<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">env</span> WINEPREFIX=<span class="hljs-string">&quot;<span class="hljs-variable">$HOME</span>/.deepinwine/Spark-TIM/&quot;</span> deepin-wine5 TIM.xxx.exe<br><span class="hljs-built_in">env</span> WINEPREFIX=<span class="hljs-string">&quot;<span class="hljs-variable">$HOME</span>/.deepinwine/Deepin-WeChat/&quot;</span> deepin-wine5 WeChatSetup.exe<br></code></pre></td></tr></table></figure>
 <p>其中，<code>WINEPREFIX</code> 是用来指定原 wine 版应用的路径的。</p>
 <h2 id="附录">附录</h2>
 <p>参考资料：</p>
