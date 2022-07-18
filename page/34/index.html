@@ -309,23 +309,24 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Go/Go%E8%AF%AD%E8%A8%80%E4%BB%A3%E7%A0%81%E9%A3%8E%E6%A0%BC/">Go语言代码风格</a>
+        <a href="/2020/05/26/Go/Go%E8%AF%AD%E8%A8%80%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">Go语言常用命令</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Go/Go%E8%AF%AD%E8%A8%80%E4%BB%A3%E7%A0%81%E9%A3%8E%E6%A0%BC/">
+        <a href="/2020/05/26/Go/Go%E8%AF%AD%E8%A8%80%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
           
           
             
           
-          Go 语言对代码风格进行了强制性统一，其代码风格要求如下：
-1. Public 变量/函数必须以大写字母开头，Private 变量/函数必须以小写字母开头
-Private 函数只能在本包中使用，Public 函数可以被其他包调用。
-2. { } 书写应遵循 K&amp;R 风格
-譬如以下风格是正确的：
-123if expression &#123;    ...&#125;
-而以下风格是错误的：
-
+          1. 构建项目
+在 $GOPATH/bin 目录下构建 $GOPATH/src 目录下的 XXX 文件夹所包含的项目：
+1go build XXX
+构建项目成功会在 $GOPATH/bin 目录下生成 XXX 可执行文件。
+2. 运行项目
+在终端编译运行 $GOPATH/src 目录下的 XXX 文件夹所包含的项目：
+1go run XXX
+3. 测试项目
+如果项目有提供 test 测试文件在 $
         </a>
       </p>
 
@@ -368,24 +369,23 @@ Private 函数只能在本包中使用，Public 函数可以被其他包调用�
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Go/Go%E8%AF%AD%E8%A8%80%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">Go语言常用命令</a>
+        <a href="/2020/05/26/Go/Go%E8%AF%AD%E8%A8%80%E4%BB%A3%E7%A0%81%E9%A3%8E%E6%A0%BC/">Go语言代码风格</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Go/Go%E8%AF%AD%E8%A8%80%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
+        <a href="/2020/05/26/Go/Go%E8%AF%AD%E8%A8%80%E4%BB%A3%E7%A0%81%E9%A3%8E%E6%A0%BC/">
           
           
             
           
-          1. 构建项目
-在 $GOPATH/bin 目录下构建 $GOPATH/src 目录下的 XXX 文件夹所包含的项目：
-1go build XXX
-构建项目成功会在 $GOPATH/bin 目录下生成 XXX 可执行文件。
-2. 运行项目
-在终端编译运行 $GOPATH/src 目录下的 XXX 文件夹所包含的项目：
-1go run XXX
-3. 测试项目
-如果项目有提供 test 测试文件在 $
+          Go 语言对代码风格进行了强制性统一，其代码风格要求如下：
+1. Public 变量/函数必须以大写字母开头，Private 变量/函数必须以小写字母开头
+Private 函数只能在本包中使用，Public 函数可以被其他包调用。
+2. { } 书写应遵循 K&amp;R 风格
+譬如以下风格是正确的：
+123if expression &#123;    ...&#125;
+而以下风格是错误的：
+
         </a>
       </p>
 
