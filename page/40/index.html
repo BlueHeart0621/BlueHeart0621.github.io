@@ -18,7 +18,7 @@
   <meta name="author" content="BlueHeart0621">
   <meta name="keywords" content="頑張れ">
   
-    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script> <script src="/live2d-widget/autoload.js" type="text/javascript"></script> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/> <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script> <script src="/live2d-widget/autoload.js" type="text/javascript"></script> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
   
   <title>お前はどこまで見えている</title>
 
@@ -398,30 +398,28 @@ Weakness ：因为各组加密是独立的
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/07/03/Technique/CryptographyBasics/%E5%93%88%E5%B8%8C%E5%87%BD%E6%95%B0/%E5%93%88%E5%B8%8C%E5%87%BD%E6%95%B0/">哈希函数</a>
+        <a href="/2020/07/03/Technique/CryptographyBasics/%E5%8F%A4%E5%85%B8%E5%AF%86%E7%A0%81%E5%AD%A6%E6%A6%82%E8%BF%B0/%E5%8F%A4%E5%85%B8%E5%AF%86%E7%A0%81%E5%AD%A6%E6%A6%82%E8%BF%B0/">古典密码学概述</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/07/03/Technique/CryptographyBasics/%E5%93%88%E5%B8%8C%E5%87%BD%E6%95%B0/%E5%93%88%E5%B8%8C%E5%87%BD%E6%95%B0/">
+        <a href="/2020/07/03/Technique/CryptographyBasics/%E5%8F%A4%E5%85%B8%E5%AF%86%E7%A0%81%E5%AD%A6%E6%A6%82%E8%BF%B0/%E5%8F%A4%E5%85%B8%E5%AF%86%E7%A0%81%E5%AD%A6%E6%A6%82%E8%BF%B0/">
           
           
             
           
-          1. 概述
+          1. 隐写术 Steganography
+隐写术是指首先用传统加密算法对数据进行加密，然后用某种方法将加密后的数据修改为一个伪装文本。
+2. 替换密码 Substitution cipher
+对数据中的每个字符用另一个字符进行替换。
 
-加密是双向的，即明文可以通过密钥加密为密文，密文也可以通过密钥解密为明文
-哈希是单向的，即只能从明文到
-
-2. 用法
+替换密码依赖与固定的替换结构
+对于字母表中的每一个字母的替换都是固定的
 
 
+【注】
 
-3. 特性
-3.1 Arbitrary-length message to fixed-length digest
-
-3.2 抗原象 Preimage resistant (One-way property)
-
-3.3 抗第二原象 Second preimage
+一次替换一个字符显然会在密文中留下太多的明文结构
+如果已知明文的性质/结构，则
         </a>
       </p>
 
@@ -464,28 +462,30 @@ Weakness ：因为各组加密是独立的
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/07/03/Technique/CryptographyBasics/%E5%8F%A4%E5%85%B8%E5%AF%86%E7%A0%81%E5%AD%A6%E6%A6%82%E8%BF%B0/%E5%8F%A4%E5%85%B8%E5%AF%86%E7%A0%81%E5%AD%A6%E6%A6%82%E8%BF%B0/">古典密码学概述</a>
+        <a href="/2020/07/03/Technique/CryptographyBasics/%E5%93%88%E5%B8%8C%E5%87%BD%E6%95%B0/%E5%93%88%E5%B8%8C%E5%87%BD%E6%95%B0/">哈希函数</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/07/03/Technique/CryptographyBasics/%E5%8F%A4%E5%85%B8%E5%AF%86%E7%A0%81%E5%AD%A6%E6%A6%82%E8%BF%B0/%E5%8F%A4%E5%85%B8%E5%AF%86%E7%A0%81%E5%AD%A6%E6%A6%82%E8%BF%B0/">
+        <a href="/2020/07/03/Technique/CryptographyBasics/%E5%93%88%E5%B8%8C%E5%87%BD%E6%95%B0/%E5%93%88%E5%B8%8C%E5%87%BD%E6%95%B0/">
           
           
             
           
-          1. 隐写术 Steganography
-隐写术是指首先用传统加密算法对数据进行加密，然后用某种方法将加密后的数据修改为一个伪装文本。
-2. 替换密码 Substitution cipher
-对数据中的每个字符用另一个字符进行替换。
+          1. 概述
 
-替换密码依赖与固定的替换结构
-对于字母表中的每一个字母的替换都是固定的
+加密是双向的，即明文可以通过密钥加密为密文，密文也可以通过密钥解密为明文
+哈希是单向的，即只能从明文到
+
+2. 用法
 
 
-【注】
 
-一次替换一个字符显然会在密文中留下太多的明文结构
-如果已知明文的性质/结构，则
+3. 特性
+3.1 Arbitrary-length message to fixed-length digest
+
+3.2 抗原象 Preimage resistant (One-way property)
+
+3.3 抗第二原象 Second preimage
         </a>
       </p>
 
@@ -937,6 +937,7 @@ JavaScript 数值始终是 64 位的浮点数。此格式用 64 位存储数值�
 
 
 
+<!--  -->
 
 
 

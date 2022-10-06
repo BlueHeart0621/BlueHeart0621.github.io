@@ -65,6 +65,12 @@ Fluid.plugins = {
         <a class="fancybox fancybox.image" href="${imageLink}"
           itemscope itemtype="http://schema.org/ImageObject" itemprop="url"></a>`
       ).parent('a');
+      var scale = 5
+      var data_width = scale * $image['0'].naturalWidth
+      var data_height = scale * $image['0'].naturalHeight
+      $imageWrapLink.attr('data-width', data_width)
+      $imageWrapLink.attr('data-height', data_height)
+      // $imageWrapLink.attr('data-fancybox', 'gallery')
       if ($image.is('.group-image-container img')) {
         $imageWrapLink.attr('data-fancybox', 'group').attr('rel', 'group');
       } else {

@@ -18,7 +18,7 @@
   <meta name="author" content="BlueHeart0621">
   <meta name="keywords" content="頑張れ">
   
-    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script> <script src="/live2d-widget/autoload.js" type="text/javascript"></script> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/> <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script> <script src="/live2d-widget/autoload.js" type="text/javascript"></script> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
   
   <title>お前はどこまで見えている</title>
 
@@ -446,18 +446,24 @@ sed 默认不会直接修改源文件，而是将读入的数据先复制到模�
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Technique/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4%E6%A6%82%E8%BF%B0/LinuxShell%E5%91%BD%E4%BB%A4%E6%A6%82%E8%BF%B0/">LinuxShell命令概述</a>
+        <a href="/2020/05/26/Technique/Linux/Shell/LinuxShell%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/LinuxShell%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">LinuxShell正则表达式</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Technique/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4%E6%A6%82%E8%BF%B0/LinuxShell%E5%91%BD%E4%BB%A4%E6%A6%82%E8%BF%B0/">
+        <a href="/2020/05/26/Technique/Linux/Shell/LinuxShell%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/LinuxShell%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">
           
           
             
           
           1. 简介
-1.1 概述
-Linux Shell 中包含大量的命令，提供了许许多多强大的功能。Shell 命令分为内建命令和外部命令；如果需要查看不同命令的帮助，对于内建命令，可以使用 Shell 的一个内建命令 help 来查询帮助信息；对于外置命令，可以使用 Shell 的外部命令 man 或 info（更详细）来查询帮助信息。判断某个命令是内建命令还是外部命令可以使用 Shell 的一个内建
+正则表达式在处理数据时非常有用，它凭借强大的模式匹配功能，能够用来精确地过滤文本数据，提取有用的数据信息。
+
+graph LR
+A[数据流 ]--&gt; B&#123;正则表达式&#125;
+B --&gt; C[匹配数据]
+B --&gt; D[滤出数据]
+
+正则表达式是通过正则表达式引擎实现的，正则表达式引擎负责解释正则表达式模式并使用这些模式进行文本数据匹配。在Linux中，主
         </a>
       </p>
 
@@ -504,24 +510,18 @@ Linux Shell 中包含大量的命令，提供了许许多多强大的功能。Sh
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Technique/Linux/Shell/LinuxShell%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/LinuxShell%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">LinuxShell正则表达式</a>
+        <a href="/2020/05/26/Technique/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4%E6%A6%82%E8%BF%B0/LinuxShell%E5%91%BD%E4%BB%A4%E6%A6%82%E8%BF%B0/">LinuxShell命令概述</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Technique/Linux/Shell/LinuxShell%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/LinuxShell%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">
+        <a href="/2020/05/26/Technique/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4%E6%A6%82%E8%BF%B0/LinuxShell%E5%91%BD%E4%BB%A4%E6%A6%82%E8%BF%B0/">
           
           
             
           
           1. 简介
-正则表达式在处理数据时非常有用，它凭借强大的模式匹配功能，能够用来精确地过滤文本数据，提取有用的数据信息。
-
-graph LR
-A[数据流 ]--&gt; B&#123;正则表达式&#125;
-B --&gt; C[匹配数据]
-B --&gt; D[滤出数据]
-
-正则表达式是通过正则表达式引擎实现的，正则表达式引擎负责解释正则表达式模式并使用这些模式进行文本数据匹配。在Linux中，主
+1.1 概述
+Linux Shell 中包含大量的命令，提供了许许多多强大的功能。Shell 命令分为内建命令和外部命令；如果需要查看不同命令的帮助，对于内建命令，可以使用 Shell 的一个内建命令 help 来查询帮助信息；对于外置命令，可以使用 Shell 的外部命令 man 或 info（更详细）来查询帮助信息。判断某个命令是内建命令还是外部命令可以使用 Shell 的一个内建
         </a>
       </p>
 
@@ -946,6 +946,7 @@ SystemTap 是一个诊断 Linux 系统性能或功能问题的开源软件。它
 
 
 
+<!--  -->
 
 
 

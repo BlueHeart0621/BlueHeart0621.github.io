@@ -18,7 +18,7 @@
   <meta name="author" content="BlueHeart0621">
   <meta name="keywords" content="頑張れ">
   
-    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script> <script src="/live2d-widget/autoload.js" type="text/javascript"></script> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/> <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script> <script src="/live2d-widget/autoload.js" type="text/javascript"></script> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
   
   <title>お前はどこまで見えている</title>
 
@@ -375,26 +375,22 @@ DNS 污染又称 DNS 缓存投毒，通过制造一些虚假的域名服务器�
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Technique/ServiceComputing/WebService%E6%89%A9%E5%B1%95/WebService%E6%89%A9%E5%B1%95/">WebService扩展</a>
+        <a href="/2020/05/26/Technique/ServiceComputing/WebService%E6%A0%B8%E5%BF%83/WebService%E6%A0%B8%E5%BF%83/">WebService核心</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Technique/ServiceComputing/WebService%E6%89%A9%E5%B1%95/WebService%E6%89%A9%E5%B1%95/">
+        <a href="/2020/05/26/Technique/ServiceComputing/WebService%E6%A0%B8%E5%BF%83/WebService%E6%A0%B8%E5%BF%83/">
           
           
             
           
-          1. 服务发布和查询
+          1. SOAP
 1.1 概念
-SOAP、WSDL、XML Schema 已经可以完成点到点的调用，但点到点的调用不能完全发挥面向服务的特点
+SOAP 提供了一种标准的方法，使得运行在不同平台并使用不同的技术和编程语言的应用程序可以互相进行 XML 通信。从本质上来说，SOAP 并不是一个网络传输协议，它仅仅是一个信息传递的概念性框架，在实际使用时，需要绑定具体的网络传输协议和上层的应用逻辑来创建关联。
+1.2 作用
 
-graph LR
-    subgraph 点到点的调用不能完全发挥面向服务的特点
-    A(SOAP);
-    B(WSDL);
-    C(XML Schema);
-    D&#123;点到点的调用&#125;;
-    A &amp; B 
+
+SOAP 提供了基于 XML 的信息定义方式，用以在去中心化的分布环境中，提供点到点的
         </a>
       </p>
 
@@ -437,22 +433,26 @@ graph LR
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Technique/ServiceComputing/WebService%E6%A0%B8%E5%BF%83/WebService%E6%A0%B8%E5%BF%83/">WebService核心</a>
+        <a href="/2020/05/26/Technique/ServiceComputing/WebService%E6%89%A9%E5%B1%95/WebService%E6%89%A9%E5%B1%95/">WebService扩展</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Technique/ServiceComputing/WebService%E6%A0%B8%E5%BF%83/WebService%E6%A0%B8%E5%BF%83/">
+        <a href="/2020/05/26/Technique/ServiceComputing/WebService%E6%89%A9%E5%B1%95/WebService%E6%89%A9%E5%B1%95/">
           
           
             
           
-          1. SOAP
+          1. 服务发布和查询
 1.1 概念
-SOAP 提供了一种标准的方法，使得运行在不同平台并使用不同的技术和编程语言的应用程序可以互相进行 XML 通信。从本质上来说，SOAP 并不是一个网络传输协议，它仅仅是一个信息传递的概念性框架，在实际使用时，需要绑定具体的网络传输协议和上层的应用逻辑来创建关联。
-1.2 作用
+SOAP、WSDL、XML Schema 已经可以完成点到点的调用，但点到点的调用不能完全发挥面向服务的特点
 
-
-SOAP 提供了基于 XML 的信息定义方式，用以在去中心化的分布环境中，提供点到点的
+graph LR
+    subgraph 点到点的调用不能完全发挥面向服务的特点
+    A(SOAP);
+    B(WSDL);
+    C(XML Schema);
+    D&#123;点到点的调用&#125;;
+    A &amp; B 
         </a>
       </p>
 
@@ -630,40 +630,25 @@ subgraph 服务模型
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Technique/ServiceComputing/%E6%9C%8D%E5%8A%A1%E7%94%9F%E6%80%81%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%9E%84%E5%BB%BA/%E6%9C%8D%E5%8A%A1%E7%94%9F%E6%80%81%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%9E%84%E5%BB%BA/">服务生态系统的构建</a>
+        <a href="/2020/05/26/Technique/ServiceComputing/%E6%9C%8D%E5%8A%A1%E7%94%9F%E6%80%81%E7%B3%BB%E7%BB%9F%E4%B8%8E%E9%9D%A2%E5%90%91%E6%9C%8D%E5%8A%A1%E7%9A%84%E8%AE%A1%E7%AE%97/%E6%9C%8D%E5%8A%A1%E7%94%9F%E6%80%81%E7%B3%BB%E7%BB%9F%E4%B8%8E%E9%9D%A2%E5%90%91%E6%9C%8D%E5%8A%A1%E7%9A%84%E8%AE%A1%E7%AE%97/">服务生态系统与面向服务的计算</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Technique/ServiceComputing/%E6%9C%8D%E5%8A%A1%E7%94%9F%E6%80%81%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%9E%84%E5%BB%BA/%E6%9C%8D%E5%8A%A1%E7%94%9F%E6%80%81%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%9E%84%E5%BB%BA/">
+        <a href="/2020/05/26/Technique/ServiceComputing/%E6%9C%8D%E5%8A%A1%E7%94%9F%E6%80%81%E7%B3%BB%E7%BB%9F%E4%B8%8E%E9%9D%A2%E5%90%91%E6%9C%8D%E5%8A%A1%E7%9A%84%E8%AE%A1%E7%AE%97/%E6%9C%8D%E5%8A%A1%E7%94%9F%E6%80%81%E7%B3%BB%E7%BB%9F%E4%B8%8E%E9%9D%A2%E5%90%91%E6%9C%8D%E5%8A%A1%E7%9A%84%E8%AE%A1%E7%AE%97/">
           
           
             
           
-          1. 服务生命周期
-1.1 基本阶段
+          1. 服务生态系统
+1.1 服务组合
 
-面向服务的分析
-面向服务的设计
-服务的开发
-服务的测试
-服务的部署
-服务的管理
+面向服务的应用逻辑，遵循面向服务的设计原则，采用服务和服务组合加以实现。
+服务组合由多个装配在一起的服务所构成，用以提供对业务任务或过程进行实现的功能。
+由于面向服务倾向于将服务打造为无关的企业资源，即服务和它的调用者之间是无关的，一个服务可能被多个消费者程序所调用，它们能在不同服务组合中组合同一个服务。
 
-1.2 业务逻辑/应用逻辑
+1.2 服务库存
 
-业务逻辑源自于企业业务领域，也无需求的文档化实现
-
-
-
-一般被构造为表达这些需求的流程
-包括任何相关的约束、依赖及外部影响
-
-
-
-应用逻辑是组织成不同技术解决方案的业务逻辑的自动化实现
-
-
-【注】业务逻辑和应用逻辑可以认为是针对同一个问题在不同层级
+服务库存是在组织或组织的合理部
         </a>
       </p>
 
@@ -706,25 +691,40 @@ subgraph 服务模型
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Technique/ServiceComputing/%E6%9C%8D%E5%8A%A1%E7%94%9F%E6%80%81%E7%B3%BB%E7%BB%9F%E4%B8%8E%E9%9D%A2%E5%90%91%E6%9C%8D%E5%8A%A1%E7%9A%84%E8%AE%A1%E7%AE%97/%E6%9C%8D%E5%8A%A1%E7%94%9F%E6%80%81%E7%B3%BB%E7%BB%9F%E4%B8%8E%E9%9D%A2%E5%90%91%E6%9C%8D%E5%8A%A1%E7%9A%84%E8%AE%A1%E7%AE%97/">服务生态系统与面向服务的计算</a>
+        <a href="/2020/05/26/Technique/ServiceComputing/%E6%9C%8D%E5%8A%A1%E7%94%9F%E6%80%81%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%9E%84%E5%BB%BA/%E6%9C%8D%E5%8A%A1%E7%94%9F%E6%80%81%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%9E%84%E5%BB%BA/">服务生态系统的构建</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Technique/ServiceComputing/%E6%9C%8D%E5%8A%A1%E7%94%9F%E6%80%81%E7%B3%BB%E7%BB%9F%E4%B8%8E%E9%9D%A2%E5%90%91%E6%9C%8D%E5%8A%A1%E7%9A%84%E8%AE%A1%E7%AE%97/%E6%9C%8D%E5%8A%A1%E7%94%9F%E6%80%81%E7%B3%BB%E7%BB%9F%E4%B8%8E%E9%9D%A2%E5%90%91%E6%9C%8D%E5%8A%A1%E7%9A%84%E8%AE%A1%E7%AE%97/">
+        <a href="/2020/05/26/Technique/ServiceComputing/%E6%9C%8D%E5%8A%A1%E7%94%9F%E6%80%81%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%9E%84%E5%BB%BA/%E6%9C%8D%E5%8A%A1%E7%94%9F%E6%80%81%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%9E%84%E5%BB%BA/">
           
           
             
           
-          1. 服务生态系统
-1.1 服务组合
+          1. 服务生命周期
+1.1 基本阶段
 
-面向服务的应用逻辑，遵循面向服务的设计原则，采用服务和服务组合加以实现。
-服务组合由多个装配在一起的服务所构成，用以提供对业务任务或过程进行实现的功能。
-由于面向服务倾向于将服务打造为无关的企业资源，即服务和它的调用者之间是无关的，一个服务可能被多个消费者程序所调用，它们能在不同服务组合中组合同一个服务。
+面向服务的分析
+面向服务的设计
+服务的开发
+服务的测试
+服务的部署
+服务的管理
 
-1.2 服务库存
+1.2 业务逻辑/应用逻辑
 
-服务库存是在组织或组织的合理部
+业务逻辑源自于企业业务领域，也无需求的文档化实现
+
+
+
+一般被构造为表达这些需求的流程
+包括任何相关的约束、依赖及外部影响
+
+
+
+应用逻辑是组织成不同技术解决方案的业务逻辑的自动化实现
+
+
+【注】业务逻辑和应用逻辑可以认为是针对同一个问题在不同层级
         </a>
       </p>
 
@@ -939,6 +939,7 @@ Schema 被单独设计和实现，与
 
 
 
+<!--  -->
 
 
 
