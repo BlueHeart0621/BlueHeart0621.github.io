@@ -18,7 +18,7 @@
   <meta name="author" content="BlueHeart0621">
   <meta name="keywords" content="頑張れ">
   
-    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script> <script src="/live2d-widget/autoload.js" type="text/javascript"></script> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script> <script src="/live2d-widget/autoload.js" type="text/javascript"></script> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/> <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
   
   <title>お前はどこまで見えている</title>
 
@@ -197,21 +197,20 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/04/03/TeX/LaTeX/LaTeX%E8%89%B2%E5%BD%A9/">LaTeX色彩</a>
+        <a href="/2021/07/15/Technique/Linux/ArchLinux/ArchLinux%E4%B8%8B%E8%A7%A3%E5%86%B3deepinwine%E8%BD%AF%E4%BB%B6%E4%B8%AD%E6%96%87%E9%BB%91%E6%A1%86%E9%97%AE%E9%A2%98/">ArchLinux下解决deepinwine软件中文黑框问题</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/04/03/TeX/LaTeX/LaTeX%E8%89%B2%E5%BD%A9/">
+        <a href="/2021/07/15/Technique/Linux/ArchLinux/ArchLinux%E4%B8%8B%E8%A7%A3%E5%86%B3deepinwine%E8%BD%AF%E4%BB%B6%E4%B8%AD%E6%96%87%E9%BB%91%E6%A1%86%E9%97%AE%E9%A2%98/">
           
           
             
           
-          【注】笔记来自《LaTeX入门》——刘海洋。
-1. 简介
-原始的 TeX 引擎不支持彩色，有关彩色的功能都是由输出 PS、PDF 格式的 TeX 引擎或驱动提供的，有关命令是在绘图相关的扩展宏包中定义的。基本的彩色支持工具是 color 宏包，它是 LaTeX 的基本组件，graphics 工具包的一部分。
-2. 基础
-2.1 预定义颜色
-在标准的 color 宏包中只有几种原色是预定义的，分别是
+          1. 简介
+随着 deepinwine 的不断完善，类似中文显示等问题也在逐渐减少，目前最新的 deepinwine 应用，如 com.qq.tim.spark 等中文都显示正常，相信到后面这类问题就会完全消失。给 deepin 团队打 call ！！！
+2. 中文显示黑框
+目前遇到两种情况下中文显示黑框，一种是英文环境下中文显示黑框，但中文环境下正常；另一种是中文环境下中文也显示为黑框。
+2.1
         </a>
       </p>
 
@@ -219,8 +218,8 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-04-03 23:41" pubdate>
-              2021-04-03
+            <time datetime="2021-07-15 18:39" pubdate>
+              2021-07-15
             </time>
           </div>
         
@@ -230,9 +229,9 @@
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/TeX/">TeX</a>
+              <a href="/categories/Technique/Linux/">Linux</a>
             
-              <a href="/categories/Technique/TeX/LaTeX/">LaTeX</a>
+              <a href="/categories/Technique/Linux/ArchLinux/">ArchLinux</a>
             
           </div>
         
@@ -242,9 +241,9 @@
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/TeX/">TeX</a>
+              <a href="/tags/Linux/">Linux</a>
             
-              <a href="/tags/LaTeX/">LaTeX</a>
+              <a href="/tags/ArchLinux/">ArchLinux</a>
             
           </div>
         
@@ -258,21 +257,23 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/04/03/TeX/LaTeX/LaTeX%E6%A0%87%E9%A2%98%E6%8E%A7%E5%88%B6/">LaTeX标题控制</a>
+        <a href="/2021/07/15/Technique/Linux/ArchLinux/ArchLinux%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/">ArchLinux安装使用教程</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/04/03/TeX/LaTeX/LaTeX%E6%A0%87%E9%A2%98%E6%8E%A7%E5%88%B6/">
+        <a href="/2021/07/15/Technique/Linux/ArchLinux/ArchLinux%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/">
           
           
             
           
-          【注】笔记来自《LaTeX入门》——刘海洋。详细参数可参见 LaTeX 官方文档：
-1texdoc caption
-1. 简介
-在设计文档时，我们经常需要修改浮动体标题的字体、间距、对齐方式等格式，然而 LaTeX 内核及标准文档并没有提供直接修改浮动标题格式的命令，这时就可以使用 caption 宏包来完成相关的设置。
-2. 格式选项
-使用 caption 宏包设置标题格式是通过一系列键值对形式
+          ArchLinux 安装参考：
+
+官方 Wiki 文档
+博文——以官方 Wiki 的方式安装 ArchLinux
+教程——Arch Linux 安装使用教程 - ArchTutorial - Arch Linux Studio
+
+1. 多系统 grub 菜单
+【注】这里有一点需要注意的是，对于多系统用户，在生成 GRUB 配置文件时，如果需要自动探测其他系统，并将它们添加到启动菜单中，按照上述文档
         </a>
       </p>
 
@@ -280,8 +281,8 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-04-03 10:41" pubdate>
-              2021-04-03
+            <time datetime="2021-07-15 18:35" pubdate>
+              2021-07-15
             </time>
           </div>
         
@@ -291,9 +292,9 @@
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/TeX/">TeX</a>
+              <a href="/categories/Technique/Linux/">Linux</a>
             
-              <a href="/categories/Technique/TeX/LaTeX/">LaTeX</a>
+              <a href="/categories/Technique/Linux/ArchLinux/">ArchLinux</a>
             
           </div>
         
@@ -303,9 +304,9 @@
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/TeX/">TeX</a>
+              <a href="/tags/Linux/">Linux</a>
             
-              <a href="/tags/LaTeX/">LaTeX</a>
+              <a href="/tags/ArchLinux/">ArchLinux</a>
             
           </div>
         
@@ -319,21 +320,24 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/03/30/TeX/LaTeX/LaTeX%E6%B5%AE%E5%8A%A8%E4%BD%93/">LaTeX浮动体</a>
+        <a href="/2021/07/15/Technique/Linux/Sundry/Linux%E5%90%84%E6%A1%8C%E9%9D%A2%E7%94%A8%E6%88%B7%E6%96%87%E6%A1%A3/">Linux各桌面用户文档</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/03/30/TeX/LaTeX/LaTeX%E6%B5%AE%E5%8A%A8%E4%BD%93/">
+        <a href="/2021/07/15/Technique/Linux/Sundry/Linux%E5%90%84%E6%A1%8C%E9%9D%A2%E7%94%A8%E6%88%B7%E6%96%87%E6%A1%A3/">
           
           
             
           
-          【注】笔记来自《LaTeX入门》——刘海洋。
-1. 简介
-图片或表格通常都占有较大的一块，直接放在文档常常会造成分页的困难，即前一页放不下，放在后一页又会造成很大的留白。其他一些大块的内容也可能有类似的问题，比如程序算法、大型公式和不宜断开的特殊形状段落。LaTeX 中通过引入浮动体来解决这类问题。
+          
+KDE 桌面
+Gnome 桌面
+Xfce 桌面
+DDE 桌面
+Cinnamon 桌面
+MATE 桌面
 
 
-「浮动体」是一个活动的盒子，它可以把内容放在距离浮动体代码前后不远的地方，通常就是浮动体代码所
         </a>
       </p>
 
@@ -341,8 +345,8 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-03-30 19:21" pubdate>
-              2021-03-30
+            <time datetime="2021-07-15 18:35" pubdate>
+              2021-07-15
             </time>
           </div>
         
@@ -352,9 +356,9 @@
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/TeX/">TeX</a>
+              <a href="/categories/Technique/Linux/">Linux</a>
             
-              <a href="/categories/Technique/TeX/LaTeX/">LaTeX</a>
+              <a href="/categories/Technique/Linux/Sundry/">Sundry</a>
             
           </div>
         
@@ -364,9 +368,9 @@
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/TeX/">TeX</a>
+              <a href="/tags/Linux/">Linux</a>
             
-              <a href="/tags/LaTeX/">LaTeX</a>
+              <a href="/tags/Sundry/">Sundry</a>
             
           </div>
         
@@ -380,38 +384,352 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/03/29/TeX/LaTeX/LaTeX%E6%8F%92%E5%9B%BE/">LaTeX插图</a>
+        <a href="/2021/07/08/Technique/Linux/Sundry/Linux%E4%B8%8B%E5%88%86%E5%89%B2PDF/">Linux下分割PDF</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/03/29/TeX/LaTeX/LaTeX%E6%8F%92%E5%9B%BE/">
+        <a href="/2021/07/08/Technique/Linux/Sundry/Linux%E4%B8%8B%E5%88%86%E5%89%B2PDF/">
           
           
             
           
-          【注】笔记来自《LaTeX入门》——刘海洋。
-1. 简介
-插图功能是利用 TeX 的特定编译程序提供的机制实现的，不同的编译程序支持不同的图形方式。不同 LaTeX 编译程序对应的插图格式如下表所示：
+          1. pdfseparate
+Linux 下可以使用 pdfseparate 命令来分割 PDF 文件。如果你的 Linux 发行版上没有该命令，需要安装 poppler-utils（Debian 系）或 poppler（Arch 系）软件。pdfunite 命令的语法格式如下：
+1pdfunite -f &lt;sn&gt; -l &lt;en&gt; &lt;PDF-sourcefile&gt
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-07-08 22:52" pubdate>
+              2021-07-08
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Linux/">Linux</a>
+            
+              <a href="/categories/Technique/Linux/Sundry/">Sundry</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/Linux/">Linux</a>
+            
+              <a href="/tags/Sundry/">Sundry</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/07/07/Technique/Net/%E7%BD%91%E7%BB%9C%E4%BB%A3%E7%90%86%E7%9B%B8%E5%85%B3%E5%B7%A5%E5%85%B7/">网络代理相关工具</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/07/07/Technique/Net/%E7%BD%91%E7%BB%9C%E4%BB%A3%E7%90%86%E7%9B%B8%E5%85%B3%E5%B7%A5%E5%85%B7/">
+          
+          
+            
+          
+          【注】佛曰：不可说。
+1. 核心工具
 
 
 
-TeX 引擎命令
-图形驱动
-支持的格式
+内核
+框架
+支持协议
+
+
+
+
+V2ray
+Project V
+Socks5/SS/Trojan/VLESS/VMess
+
+
+Xray
+Project X
+Socks5/SS/Trojan/VLESS/VMess
+
+
+Trojan
+Trojan
+Trojan
+
+
+Trojan-go
+Trojan-go
+Trojan-go
+
+
+
+Xray 相比于 V2ray
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-07-07 15:18" pubdate>
+              2021-07-07
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Net/">Net</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/Net/">Net</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/07/07/Technique/Linux/CentOS/CentOS%E6%9F%A5%E7%9C%8B%E7%B3%BB%E7%BB%9F%E4%BF%A1%E6%81%AF/">CentOS查看系统信息</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/07/07/Technique/Linux/CentOS/CentOS%E6%9F%A5%E7%9C%8B%E7%B3%BB%E7%BB%9F%E4%BF%A1%E6%81%AF/">
+          
+          
+            
+          
+          1. 查看内核版本
+1uname -a
+2. 查看系统版本号
+1cat /etc/redhat-release
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-07-07 14:33" pubdate>
+              2021-07-07
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Linux/">Linux</a>
+            
+              <a href="/categories/Technique/Linux/CentOS/">CentOS</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/Linux/">Linux</a>
+            
+              <a href="/tags/CentOS/">CentOS</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/07/07/Technique/Linux/CentOS/CentOS7%E9%98%B2%E7%81%AB%E5%A2%99%E7%AE%A1%E7%90%86/">CentOS7防火墙管理</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/07/07/Technique/Linux/CentOS/CentOS7%E9%98%B2%E7%81%AB%E5%A2%99%E7%AE%A1%E7%90%86/">
+          
+          
+            
+          
+          1. 简介
+在 CentOS7.9 下，对于防火墙服务本身，使用系统 systemctl 工具来进行管理。而对于防火墙的使用，使用自带 firewall-cmd 工具来进行管理，firewall-cmd 工具可以很方便地管理主机端口、协议服务等。本文主要介绍 firewall-cmd 常用的一些选项，更多细节参考附录中的参考资料以及 firewall-cmd 的帮助手册：firewall-cmd 
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-07-07 12:01" pubdate>
+              2021-07-07
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Linux/">Linux</a>
+            
+              <a href="/categories/Technique/Linux/CentOS/">CentOS</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/Linux/">Linux</a>
+            
+              <a href="/tags/CentOS/">CentOS</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/07/05/Technique/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4stat/">LinuxShell命令stat</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/07/05/Technique/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4stat/">
+          
+          
+            
+          
+          1. 简介
+众所周知，Linux 下一切皆文件。当我们想要去查看某个文件的具体信息时，可以使用 stat 命令进行查看。
+2. 格式
+1stat filename [filename...]
+以 stat /home 为例，以下为我电脑的输出结果：
+
+中文显示
+
+12345678  文件：/home  大小：4096            块：8          IO 块：4096   目录设备
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-07-05 17:56" pubdate>
+              2021-07-05
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Linux/">Linux</a>
+            
+              <a href="/categories/Technique/Linux/Shell/">Shell</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/Linux/">Linux</a>
+            
+              <a href="/tags/Shell/">Shell</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/07/05/Technique/Linux/Shell/LinuxShell%E4%B8%8B%E6%96%87%E4%BB%B6%E5%A4%A7%E5%B0%8F%E5%8D%95%E4%BD%8D/">LinuxShell下文件大小单位</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/07/05/Technique/Linux/Shell/LinuxShell%E4%B8%8B%E6%96%87%E4%BB%B6%E5%A4%A7%E5%B0%8F%E5%8D%95%E4%BD%8D/">
+          
+          
+            
+          
+          1. 简介
+Linux Shell 下很多命令在打印文件大小信息时，默认使用的是字节作为单位。但为了方便用户使用，往往这些命令提供选项参数 -B[SIZE] 或 --block-size=SIZE 给用户来指定文件大小的单位，比如 ls、df、du 命令等。
+2. 文件大小单位
+Linux Shell 下可选的文件大小单位参数 SIZE 如下表所示：
+
+
+
+单位
 说明
 
 
 
 
-latex
-Dvips
-EPS
-MiKTeX 还部分支持 PNG 和 JPEG
-
-
-latex
-DVIPDFMx
-EPS,PDF,PNG,
+K、k、KB、kB、
         </a>
       </p>
 
@@ -419,268 +737,8 @@ EPS,PDF,PNG,
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-03-29 14:22" pubdate>
-              2021-03-29
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/TeX/">TeX</a>
-            
-              <a href="/categories/Technique/TeX/LaTeX/">LaTeX</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/TeX/">TeX</a>
-            
-              <a href="/tags/LaTeX/">LaTeX</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/03/26/TeX/LaTeX/LaTeX%E5%B9%BB%E7%81%AF%E7%89%87%E6%8F%90%E7%BA%B2/LaTeX%E5%B9%BB%E7%81%AF%E7%89%87%E6%8F%90%E7%BA%B2/">LaTeX幻灯片提纲</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/03/26/TeX/LaTeX/LaTeX%E5%B9%BB%E7%81%AF%E7%89%87%E6%8F%90%E7%BA%B2/LaTeX%E5%B9%BB%E7%81%AF%E7%89%87%E6%8F%90%E7%BA%B2/">
-          
-          
-            
-          
-          【注】笔记来自《LaTeX入门》——刘海洋。更多细节内容可以参考官方用户手册。
-1texdoc beamer
-1. 简介
-由于现代的 LaTeX 系统主要以 pdf 文件为输出方式，因此它可以用来生成各种专门的电子文档，诸如书籍、文章、幻灯片等。
-1.1 工具
-LaTeX 中专门用来制作幻灯片的工具有很多，诸如：
-
-beamer 文档类
-powerdot 文档类
-prosper 文档类
-pdfsl
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-03-26 20:49" pubdate>
-              2021-03-26
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/TeX/">TeX</a>
-            
-              <a href="/categories/Technique/TeX/LaTeX/">LaTeX</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/TeX/">TeX</a>
-            
-              <a href="/tags/LaTeX/">LaTeX</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/03/17/Math/Theory/%E7%9F%A9%E9%98%B5/%E7%A8%80%E7%96%8F%E7%9F%A9%E9%98%B5%E5%AD%98%E5%82%A8%E6%A0%BC%E5%BC%8F/%E7%A8%80%E7%96%8F%E7%9F%A9%E9%98%B5%E5%AD%98%E5%82%A8%E6%A0%BC%E5%BC%8F/">稀疏矩阵存储格式</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/03/17/Math/Theory/%E7%9F%A9%E9%98%B5/%E7%A8%80%E7%96%8F%E7%9F%A9%E9%98%B5%E5%AD%98%E5%82%A8%E6%A0%BC%E5%BC%8F/%E7%A8%80%E7%96%8F%E7%9F%A9%E9%98%B5%E5%AD%98%E5%82%A8%E6%A0%BC%E5%BC%8F/">
-          
-          
-            
-          
-          1. 简介
-稀疏矩阵是指矩阵中大多数元素为 000 的矩阵。多数情况下，实际问题中的大规模矩阵基本上都是稀疏矩阵，而且很多稀疏矩阵的稀疏度在 90%90\%90% 甚至 99%99\%99% 以上。
-2. 存储格式
-相较于一般的矩阵存储格式，即保存矩阵所有元素，稀疏矩阵由于其高度的稀疏性，因此需要更高效的存储格式。
-2.1 Coordinate(COO)
-
-每个非 000 元素使用一个三元组来表示
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-03-17 21:50" pubdate>
-              2021-03-17
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/Math/">Math</a>
-            
-              <a href="/categories/Technique/Math/Theory/">Theory</a>
-            
-              <a href="/categories/Technique/Math/Theory/%E7%9F%A9%E9%98%B5/">矩阵</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/Math/">Math</a>
-            
-              <a href="/tags/Theory/">Theory</a>
-            
-              <a href="/tags/%E7%9F%A9%E9%98%B5/">矩阵</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/03/08/Tools/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7%E5%90%88%E9%9B%86/">实用工具合集</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/03/08/Tools/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7%E5%90%88%E9%9B%86/">
-          
-          
-            
-          
-          1. When2Meet
-When2Meet 是一个用来规划集体空闲时间段的实时网页工具，使用它可以很方便地统计大家的空闲时间段。
-2. PDF24
-PDF24 提供了很多关于 PDF 的工具，诸如「PDF 分割」、「PDF 合并」、「PDF 转图像」、「图像转 PDF」等。它不仅提供网页版工具，还提供可下载到本地的离线工具。
-3. FlameShot
-FlameShot 是一款优秀的跨平台截屏工
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-03-08 14:51" pubdate>
-              2021-03-08
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/Tools/">Tools</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/Tools/">Tools</a>
-            
-              <a href="/tags/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7/">实用工具</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/03/04/Linux/Manjaro/Manjaro20.2%E4%B8%8BVMWare%E6%8A%A5%E9%94%99/">Manjaro20.2下VMWare报错</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/03/04/Linux/Manjaro/Manjaro20.2%E4%B8%8BVMWare%E6%8A%A5%E9%94%99/">
-          
-          
-            
-          
-          1. Could not open /dev/vmmon: ???. Please make sure that the kernel module 'vmmon' is loaded.
-
-原因：丢失内核 headers
-解决：
-
-
-
-先查看系统内核版本
-
-1uname -r
-
-安装对应版本的 linux-headers（个人 headers 版本为 5.11）
-
-1sudo pacman -S 
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-03-04 16:53" pubdate>
-              2021-03-04
+            <time datetime="2021-07-05 16:17" pubdate>
+              2021-07-05
             </time>
           </div>
         
@@ -692,7 +750,7 @@ FlameShot 是一款优秀的跨平台截屏工
             
               <a href="/categories/Technique/Linux/">Linux</a>
             
-              <a href="/categories/Technique/Linux/Manjaro/">Manjaro</a>
+              <a href="/categories/Technique/Linux/Shell/">Shell</a>
             
           </div>
         
@@ -704,9 +762,7 @@ FlameShot 是一款优秀的跨平台截屏工
             
               <a href="/tags/Linux/">Linux</a>
             
-              <a href="/tags/Manjaro/">Manjaro</a>
-            
-              <a href="/tags/VMWare/">VMWare</a>
+              <a href="/tags/Shell/">Shell</a>
             
           </div>
         
@@ -720,20 +776,35 @@ FlameShot 是一款优秀的跨平台截屏工
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/03/02/Linux/Ubuntu/Ubuntu20.04%E5%BC%80%E6%9C%BA%E8%BF%90%E8%A1%8C%E8%87%AA%E5%AE%9A%E4%B9%89%E8%84%9A%E6%9C%AC/">Ubuntu20.04开机运行自定义脚本</a>
+        <a href="/2021/06/13/Technique/Linux/Sundry/Linux%E7%B3%BB%E7%BB%9F%E5%90%84%E5%8F%91%E8%A1%8C%E7%89%88%E7%94%A8%E6%88%B7%E6%96%87%E6%A1%A3/">Linux系统各发行版用户文档</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/03/02/Linux/Ubuntu/Ubuntu20.04%E5%BC%80%E6%9C%BA%E8%BF%90%E8%A1%8C%E8%87%AA%E5%AE%9A%E4%B9%89%E8%84%9A%E6%9C%AC/">
+        <a href="/2021/06/13/Technique/Linux/Sundry/Linux%E7%B3%BB%E7%BB%9F%E5%90%84%E5%8F%91%E8%A1%8C%E7%89%88%E7%94%A8%E6%88%B7%E6%96%87%E6%A1%A3/">
           
           
             
           
-          1. 简介
-基于 Debian 的 Linux 系统默认支持 rc-local.service 服务，这个服务主要用来在系统启动时运行用户自定义的脚本命令等。
-2. 配置
-要想使用 rc-local.service 服务在系统启动时运行用户自定义的脚本命令，首先需要在 /etc 目录下创建 rc.local 文件（若已创建则跳过创建）并修改可执行权限，然后设置该服务开机自启：
-123sudo to
+          1. 发行版
+Linux 所有发行版可参见：DistroWatch.com。
+2. 用户文档
+
+Debian
+Ubuntu
+Deepin
+Manjaro
+LinuxMint
+RedHat
+CentOS
+
+
+CentOS 是 RedHat 的社区版，因此技术文档可以参考 RedHat。
+
+
+ArchLinux
+
+
+ArchLinux 官方的 Wiki 非常优秀（吹爆~），基本上大部分用户所需要的文档
         </a>
       </p>
 
@@ -741,8 +812,8 @@ FlameShot 是一款优秀的跨平台截屏工
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-03-02 15:20" pubdate>
-              2021-03-02
+            <time datetime="2021-06-13 14:32" pubdate>
+              2021-06-13
             </time>
           </div>
         
@@ -754,7 +825,7 @@ FlameShot 是一款优秀的跨平台截屏工
             
               <a href="/categories/Technique/Linux/">Linux</a>
             
-              <a href="/categories/Technique/Linux/Ubuntu/">Ubuntu</a>
+              <a href="/categories/Technique/Linux/Sundry/">Sundry</a>
             
           </div>
         
@@ -766,67 +837,7 @@ FlameShot 是一款优秀的跨平台截屏工
             
               <a href="/tags/Linux/">Linux</a>
             
-              <a href="/tags/Ubuntu/">Ubuntu</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/03/02/Linux/Manjaro/Manjaro20.2%E5%BC%80%E6%9C%BA%E8%BF%90%E8%A1%8C%E8%87%AA%E5%AE%9A%E4%B9%89%E8%84%9A%E6%9C%AC/">Manjaro20.2开机运行自定义脚本</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/03/02/Linux/Manjaro/Manjaro20.2%E5%BC%80%E6%9C%BA%E8%BF%90%E8%A1%8C%E8%87%AA%E5%AE%9A%E4%B9%89%E8%84%9A%E6%9C%AC/">
-          
-          
-            
-          
-          1. 简介
-Manjaro 是一款 Arch Linux 发行版，不同于基于 Debian 的 Linux 系统，Manjaro 并不默认支持 rc-local.service 服务，这个服务主要用来在系统启动时运行用户自定义的脚本命令等。
-2. 安装
-虽然 Arch Linux 没有默认支持 rc-local.service 服务，但是我们可以手动安装这个服务并设置开机启动：
-12sudo pa
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-03-02 14:32" pubdate>
-              2021-03-02
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/Linux/">Linux</a>
-            
-              <a href="/categories/Technique/Linux/Manjaro/">Manjaro</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/Manjaro/">Manjaro</a>
+              <a href="/tags/Sundry/">Sundry</a>
             
           </div>
         
@@ -838,7 +849,7 @@ Manjaro 是一款 Arch Linux 发行版，不同于基于 Debian 的 Linux 系统
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/page/13/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/#board">12</a><a class="page-number" href="/page/13/#board">13</a><span class="page-number current">14</span><a class="page-number" href="/page/15/#board">15</a><a class="page-number" href="/page/16/#board">16</a><span class="space">&hellip;</span><a class="page-number" href="/page/44/#board">44</a><a class="extend next" rel="next" href="/page/15/#board"><i class="iconfont icon-arrowright"></i></a>
+      <a class="extend prev" rel="prev" href="/page/13/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/#board">12</a><a class="page-number" href="/page/13/#board">13</a><span class="page-number current">14</span><a class="page-number" href="/page/15/#board">15</a><a class="page-number" href="/page/16/#board">16</a><span class="space">&hellip;</span><a class="page-number" href="/page/53/#board">53</a><a class="extend next" rel="next" href="/page/15/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 

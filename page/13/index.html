@@ -18,7 +18,7 @@
   <meta name="author" content="BlueHeart0621">
   <meta name="keywords" content="頑張れ">
   
-    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script> <script src="/live2d-widget/autoload.js" type="text/javascript"></script> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script> <script src="/live2d-widget/autoload.js" type="text/javascript"></script> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/> <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
   
   <title>お前はどこまで見えている</title>
 
@@ -197,19 +197,20 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/04/17/Linux/Sundry/Linux%E4%B8%8B%E6%9B%B4%E6%96%B0Deepin-Wine5%E8%BD%AF%E4%BB%B6/">Linux下更新Deepin-Wine5软件</a>
+        <a href="/2021/07/18/Technique/Math/Theory/%E4%B8%8D%E7%AD%89%E5%BC%8F/%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E4%B8%8D%E7%AD%89%E5%BC%8F/">马尔可夫不等式</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/04/17/Linux/Sundry/Linux%E4%B8%8B%E6%9B%B4%E6%96%B0Deepin-Wine5%E8%BD%AF%E4%BB%B6/">
+        <a href="/2021/07/18/Technique/Math/Theory/%E4%B8%8D%E7%AD%89%E5%BC%8F/%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E4%B8%8D%E7%AD%89%E5%BC%8F/">
           
           
             
           
           1. 简介
-Deepin-Wine 已经升级到第 5 版，对国内一些 Windows 应用兼容性也更好，希望深度越做越好（虽然 Linux 原版要更好，但奈何大多数国内软件厂家都不做 Linux 版应用）。
-2. 更新
-假设 Linux 系统上已经安装了 deepin-wine5 和一些 wine 版的软件，比如 Tim 和 WeChat。如果要更新这些应用（直接在软件里更新是显然不成的），需要先
+在概率论中，马尔可夫不等式（Markov's Inequality）给出了随机变量大于等于某正数的概率上界。马尔可夫不等式把概率关联到数学期望，给出了随机变量累计分布函数一个宽泛但仍有用的上界。
+2. 定义
+假设 X\boldsymbol{X}X 是一个非负的随机变量，常数 a&gt;0a \gt 0a&gt;0，则有以下马尔可夫不等式：
+P(X≥a)≤E(X)a\begin{arra
         </a>
       </p>
 
@@ -217,8 +218,309 @@ Deepin-Wine 已经升级到第 5 版，对国内一些 Windows 应用兼容性�
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-04-17 16:40" pubdate>
-              2021-04-17
+            <time datetime="2021-07-18 11:56" pubdate>
+              2021-07-18
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Math/">Math</a>
+            
+              <a href="/categories/Technique/Math/Theory/">Theory</a>
+            
+              <a href="/categories/Technique/Math/Theory/%E4%B8%8D%E7%AD%89%E5%BC%8F/">不等式</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/Math/">Math</a>
+            
+              <a href="/tags/Theory/">Theory</a>
+            
+              <a href="/tags/%E4%B8%8D%E7%AD%89%E5%BC%8F/">不等式</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/07/18/Technique/StatisticalLearning/%E6%B3%9B%E5%8C%96%E8%83%BD%E5%8A%9B/">泛化能力</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/07/18/Technique/StatisticalLearning/%E6%B3%9B%E5%8C%96%E8%83%BD%E5%8A%9B/">
+          
+          
+            
+          
+          【注】学习笔记参考自《统计学习方法第二版》——李航。
+1. 简介
+学习方法的泛化能力是指由该方法学习到的模型对未知数据的预测能力，是学习方法本质上重要的性质。现实中采用最多的办法是通过测试误差来评价学习方法的泛化能力，但这种评价是依赖于测试数据集的。因为测试数据集是有限的，很有可能由此得到的评价结果是不可靠的。
+2. 泛化误差
+假设学习到的模型为 f^\hat{f}f^​，那么用这个模型对未知数据
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-07-18 10:49" pubdate>
+              2021-07-18
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/StatisticalLearning/">StatisticalLearning</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/StatisticalLearning/">StatisticalLearning</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/07/17/Technique/StatisticalLearning/%E6%AD%A3%E5%88%99%E5%8C%96%E4%B8%8E%E4%BA%A4%E5%8F%89%E9%AA%8C%E8%AF%81/%E6%AD%A3%E5%88%99%E5%8C%96%E4%B8%8E%E4%BA%A4%E5%8F%89%E9%AA%8C%E8%AF%81/">正则化与交叉验证</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/07/17/Technique/StatisticalLearning/%E6%AD%A3%E5%88%99%E5%8C%96%E4%B8%8E%E4%BA%A4%E5%8F%89%E9%AA%8C%E8%AF%81/%E6%AD%A3%E5%88%99%E5%8C%96%E4%B8%8E%E4%BA%A4%E5%8F%89%E9%AA%8C%E8%AF%81/">
+          
+          
+            
+          
+          【注】学习笔记参考自《统计学习方法第二版》——李航。
+1. 简介
+对于一般的统计模型来说，下图描述了训练误差和测试误差与模型的复杂度之间的关系：
+
+当模型的复杂度增大时，训练误差会逐渐减小并趋向于 000，而测试误差会先减小，达到最小值后增大；当选择的模型复杂度过大时，过拟合现象就会出现。因此，在学习时就要防止过拟合，进行最优的模型选择，即选择复杂度适当的模型，以达到使测试误差最小的学习目的。常用
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-07-17 20:54" pubdate>
+              2021-07-17
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/StatisticalLearning/">StatisticalLearning</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/StatisticalLearning/">StatisticalLearning</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/07/17/Technique/StatisticalLearning/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/">统计学习方法</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/07/17/Technique/StatisticalLearning/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/">
+          
+          
+            
+          
+          【注】学习笔记参考自《统计学习方法第二版》——李航。
+1. 简介
+统计学习方法由三要素构成，即：方法=模型+策略+算法。
+2. 模型
+统计学习首要考虑的问题是学习什么样的模型。在监督学习中，模型就是所有要学习的条件概率分布或决策函数。模型的假设空间包含所有可能的条件概率分布或决策函数。
+
+假设空间用 F\mathcal{F}F 表示，可以定义为决策函数的集合：
+
+F={f∣Y=fθ(X),θ∈Rn
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-07-17 18:25" pubdate>
+              2021-07-17
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/StatisticalLearning/">StatisticalLearning</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/StatisticalLearning/">StatisticalLearning</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/07/17/Technique/StatisticalLearning/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%A6%82%E8%BF%B0/">统计学习概述</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/07/17/Technique/StatisticalLearning/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%A6%82%E8%BF%B0/">
+          
+          
+            
+          
+          【注】学习笔记参考自《统计学习方法第二版》——李航。
+1. 定义
+统计学习是关于计算机基于数据构建概率统计模型并运用模型对数据进行预测与分析的一门学科，统计学习也称为统计机器学习。
+
+赫尔伯特・西蒙曾对「学习」给出以下定义：“如果一个系统能够通过执行某个过程改进它的性能，这就是学习。”
+
+按照这一观点，统计学习就是计算机系统通过运用数据及统计方法提高系统性能的机器学习。
+2. 特点
+
+统计学习以计
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-07-17 16:03" pubdate>
+              2021-07-17
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/StatisticalLearning/">StatisticalLearning</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/StatisticalLearning/">StatisticalLearning</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/07/16/Technique/Linux/Sundry/Linux%E4%B8%8B%E5%90%84%E7%A7%8D%E5%AE%89%E8%A3%85%E5%8C%85%E6%89%93%E5%8C%85%E5%B7%A5%E5%85%B7/">Linux下各种安装包打包工具</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/07/16/Technique/Linux/Sundry/Linux%E4%B8%8B%E5%90%84%E7%A7%8D%E5%AE%89%E8%A3%85%E5%8C%85%E6%89%93%E5%8C%85%E5%B7%A5%E5%85%B7/">
+          
+          
+            
+          
+          1. Deb 包
+Deb 包是 Debian 系 Linux 发行版的软件包格式。
+1.1 Debreate
+
+官网
+文档
+仓库
+
+
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-07-16 19:48" pubdate>
+              2021-07-16
             </time>
           </div>
         
@@ -256,30 +558,18 @@ Deepin-Wine 已经升级到第 5 版，对国内一些 Windows 应用兼容性�
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/04/17/TeX/LaTeX/LaTeX%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99%E6%B1%87%E6%80%BB/">LaTeX学习资料汇总</a>
+        <a href="/2021/07/16/Technique/Linux/KaliLinux/KaliLinux%E4%B8%8B%E5%AE%89%E8%A3%85deepinwine%E8%BD%AF%E4%BB%B6/">KaliLinux下安装deepinwine软件</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/04/17/TeX/LaTeX/LaTeX%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99%E6%B1%87%E6%80%BB/">
+        <a href="/2021/07/16/Technique/Linux/KaliLinux/KaliLinux%E4%B8%8B%E5%AE%89%E8%A3%85deepinwine%E8%BD%AF%E4%BB%B6/">
           
           
             
           
-          1. 学习资料
-1.1 在线学习资料
-
-Learn LaTeX.org
-CTex.org
-
-1.2 本地学习资料
-
-texdoc 工具
-
-2. 学习论坛
-
-tex stack exchange
-
-
+          1. 简介
+Deepin 团队开发的一系列基于 deepinwine 的国产软件越来越好用，但多数 Linux 发行版并不支持直接安装，目前已知除了 Deepin 系统本身外，仅有 Arch 系的 Linux 发行版依靠 AUR 源可直接进行安装，Debian 系的其他 Linux 发行版均无法直接安装。目前有几种比较好的解决方案：星火应用商店、deepin-wine.i-m.dev。
+2. 星火
         </a>
       </p>
 
@@ -287,136 +577,8 @@ tex stack exchange
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-04-17 16:20" pubdate>
-              2021-04-17
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/TeX/">TeX</a>
-            
-              <a href="/categories/Technique/TeX/LaTeX/">LaTeX</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/TeX/">TeX</a>
-            
-              <a href="/tags/LaTeX/">LaTeX</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/04/17/MarkDown/MarkDown%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99%E6%B1%87%E6%80%BB/">MarkDown学习资料汇总</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/04/17/MarkDown/MarkDown%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99%E6%B1%87%E6%80%BB/">
-          
-          
-            
-          
-          
-Learning-Markdown (Markdown 入门参考)
-
-
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-04-17 13:08" pubdate>
-              2021-04-17
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/MarkDown/">MarkDown</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/MarkDown/">MarkDown</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/04/17/Linux/Sundry/Linux%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99%E6%B1%87%E6%80%BB/">Linux学习资料汇总</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/04/17/Linux/Sundry/Linux%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99%E6%B1%87%E6%80%BB/">
-          
-          
-            
-          
-          1. 在线学习资料
-1.1 Bash Shell
-
-bash-manual
-Advanced Bash-Scripting Guide
-
-1.2 鸟哥的 Linux 私房菜
-
-鸟哥的 Linux 私房菜（简体中文）分站
-鸟哥的 Linux 私房菜（繁体中文）主站
-
-1.3 Linux Kernel
-
-Linux Kernel 源码
-Linux Kernel 文档
-
-1.4 ArchWiki
-Arc
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-04-17 12:34" pubdate>
-              2021-04-17
+            <time datetime="2021-07-16 19:15" pubdate>
+              2021-07-16
             </time>
           </div>
         
@@ -428,7 +590,7 @@ Arc
             
               <a href="/categories/Technique/Linux/">Linux</a>
             
-              <a href="/categories/Technique/Linux/Sundry/">Sundry</a>
+              <a href="/categories/Technique/Linux/KaliLinux/">KaliLinux</a>
             
           </div>
         
@@ -440,7 +602,7 @@ Arc
             
               <a href="/tags/Linux/">Linux</a>
             
-              <a href="/tags/Sundry/">Sundry</a>
+              <a href="/tags/KaliLinux/">KaliLinux</a>
             
           </div>
         
@@ -454,21 +616,23 @@ Arc
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/04/16/Linux/Shell/LinuxShell%E8%87%AA%E5%8A%A8%E4%BA%A4%E4%BA%92/">LinuxShell自动交互</a>
+        <a href="/2021/07/16/Technique/Linux/ArchLinux/ArchLinux%E4%B8%8BVSCode%E6%97%A0%E6%B3%95%E8%81%94%E7%BD%91%E4%B8%8B%E8%BD%BD%E6%89%A9%E5%B1%95/">ArchLinux下VSCode无法联网下载扩展</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/04/16/Linux/Shell/LinuxShell%E8%87%AA%E5%8A%A8%E4%BA%A4%E4%BA%92/">
+        <a href="/2021/07/16/Technique/Linux/ArchLinux/ArchLinux%E4%B8%8BVSCode%E6%97%A0%E6%B3%95%E8%81%94%E7%BD%91%E4%B8%8B%E8%BD%BD%E6%89%A9%E5%B1%95/">
           
           
             
           
           1. 简介
-Linux Shell 的自动交互在很多场景下会使用到，比如我们需要批量运行一些需要输入参数进行交互的命令时，此时 Shell 的自动交互就能将我们从重复无聊的手动交互中解放出来。
-2. 方法
-以下我们通过 ssh-keygen 命令生成密钥来举例说明各个方法的使用。
-2.1 内联输入重定向符
-内联输入重定向符是一种输入重定向符，该输入重定向符用于从命令行中指定用于输入重定向的数据，因
+VSCode 作为「宇宙最强编辑器」，在日常生活办公中自然不可或缺。VSCode 目前有好几个版本，分别是 Code-OSS、Visual-Studio-Code 以及 VSCodium，它们的区别是：
+
+Code-OSS 是通过官方源码编译的开源版本。
+Visual-Studio-Code 是微软官方版本，专有软件。
+VSCodium 是社区驱动的完全开源版本。
+
+至于它们具体的功能
         </a>
       </p>
 
@@ -476,8 +640,8 @@ Linux Shell 的自动交互在很多场景下会使用到，比如我们需要�
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-04-16 20:34" pubdate>
-              2021-04-16
+            <time datetime="2021-07-16 14:31" pubdate>
+              2021-07-16
             </time>
           </div>
         
@@ -489,7 +653,7 @@ Linux Shell 的自动交互在很多场景下会使用到，比如我们需要�
             
               <a href="/categories/Technique/Linux/">Linux</a>
             
-              <a href="/categories/Technique/Linux/Shell/">Shell</a>
+              <a href="/categories/Technique/Linux/ArchLinux/">ArchLinux</a>
             
           </div>
         
@@ -501,7 +665,7 @@ Linux Shell 的自动交互在很多场景下会使用到，比如我们需要�
             
               <a href="/tags/Linux/">Linux</a>
             
-              <a href="/tags/Shell/">Shell</a>
+              <a href="/tags/ArchLinux/">ArchLinux</a>
             
           </div>
         
@@ -515,21 +679,20 @@ Linux Shell 的自动交互在很多场景下会使用到，比如我们需要�
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/04/16/Linux/Manjaro/Manjaro21.0%E4%B8%8BKDE5%E6%A1%8C%E9%9D%A2%E8%AE%BE%E7%BD%AE%E6%A1%8C%E9%9D%A2%E5%A3%81%E7%BA%B8/">Manjaro21.0下KDE5桌面设置桌面壁纸</a>
+        <a href="/2021/07/15/Technique/Linux/ArchLinux/ArchLinux%E4%B8%8Bzsh%E9%85%8D%E7%BD%AE/">ArchLinux下zsh配置</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/04/16/Linux/Manjaro/Manjaro21.0%E4%B8%8BKDE5%E6%A1%8C%E9%9D%A2%E8%AE%BE%E7%BD%AE%E6%A1%8C%E9%9D%A2%E5%A3%81%E7%BA%B8/">
+        <a href="/2021/07/15/Technique/Linux/ArchLinux/ArchLinux%E4%B8%8Bzsh%E9%85%8D%E7%BD%AE/">
           
           
             
           
-          1. 缘由
-本来 Manjaro 的 KDE 桌面是可以直接在「系统设置」中直接 GUI 直接更换桌面壁纸的，但我发现每次系统进行滚动更新后，原先的壁纸设置就消失了，需要重新设置。本着不愿动鼠标的念头，不如写个脚本来实现吧（本质还是懒）。然而这个似乎不是简单的事情，好在 StackOverflow 在手，知识全有（白嫖真香）。
-2. 代码
-2.1 单张壁纸固定
-固定显示某张图片作为桌面壁纸。
-12
+          1. 简介
+zsh 是一款优秀的 Shell 脚本解释器，其基于 Bourne Shell 作出了大量改进，同时加入了 bash、ksh 和 tcsh 的一些功能。
+2. 配置
+Oh My Zsh 用户社区收集了 zsh 大量的第三方插件，并推出了 oh-my-zsh 框架用于管理 zsh 插件。因此对 zsh 进行配置之前，首先安装该框架：
+123# 以下安装方式选一种即可sh -c &quot
         </a>
       </p>
 
@@ -537,8 +700,8 @@ Linux Shell 的自动交互在很多场景下会使用到，比如我们需要�
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-04-16 18:25" pubdate>
-              2021-04-16
+            <time datetime="2021-07-15 18:40" pubdate>
+              2021-07-15
             </time>
           </div>
         
@@ -550,7 +713,7 @@ Linux Shell 的自动交互在很多场景下会使用到，比如我们需要�
             
               <a href="/categories/Technique/Linux/">Linux</a>
             
-              <a href="/categories/Technique/Linux/Manjaro/">Manjaro</a>
+              <a href="/categories/Technique/Linux/ArchLinux/">ArchLinux</a>
             
           </div>
         
@@ -562,7 +725,7 @@ Linux Shell 的自动交互在很多场景下会使用到，比如我们需要�
             
               <a href="/tags/Linux/">Linux</a>
             
-              <a href="/tags/Manjaro/">Manjaro</a>
+              <a href="/tags/ArchLinux/">ArchLinux</a>
             
           </div>
         
@@ -576,23 +739,23 @@ Linux Shell 的自动交互在很多场景下会使用到，比如我们需要�
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/04/15/Linux/Shell/BashShell%E5%8F%98%E9%87%8F/">BashShell变量</a>
+        <a href="/2021/07/15/Technique/Linux/ArchLinux/ArchLinux%E4%B8%8Bbash%E9%85%8D%E7%BD%AE/">ArchLinux下bash配置</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/04/15/Linux/Shell/BashShell%E5%8F%98%E9%87%8F/">
+        <a href="/2021/07/15/Technique/Linux/ArchLinux/ArchLinux%E4%B8%8Bbash%E9%85%8D%E7%BD%AE/">
           
           
             
           
           1. 简介
-Bash Shell 使用「环境变量」来存储有关 Shell 会话和工作环境的信息。环境变量分为两类：
-
-全局环境变量：全局环境变量对于所有 Shell 会话和所生成的子 Shell 、孩子 Shell 都是可见的。
-局部环境变量：局部环境变量只对创建它们的 Shell 和子 Shell 可见。
-本地环境变量：本地环境变量只能在定义它们的函数内部以及子函数中可见。
-
-【注】有关子 Sh
+由于 ArchLinux 保持系统最简的原则，因此系统自带的 bash 只有最基本的功能。
+2. 配置
+2.1 自动补全
+默认的 bash 按下 tab 键只会补全命令、文件名和变量。如果需要更多的补全，比如 pacman -S 安装软件包时的补全，则需要安装 bash-completion 软件包：
+1sudo pacman -S bash-completion
+2.2 其他
+bas
         </a>
       </p>
 
@@ -600,8 +763,8 @@ Bash Shell 使用「环境变量」来存储有关 Shell 会话和工作环境�
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-04-15 11:21" pubdate>
-              2021-04-15
+            <time datetime="2021-07-15 18:40" pubdate>
+              2021-07-15
             </time>
           </div>
         
@@ -613,7 +776,7 @@ Bash Shell 使用「环境变量」来存储有关 Shell 会话和工作环境�
             
               <a href="/categories/Technique/Linux/">Linux</a>
             
-              <a href="/categories/Technique/Linux/Shell/">Shell</a>
+              <a href="/categories/Technique/Linux/ArchLinux/">ArchLinux</a>
             
           </div>
         
@@ -625,191 +788,7 @@ Bash Shell 使用「环境变量」来存储有关 Shell 会话和工作环境�
             
               <a href="/tags/Linux/">Linux</a>
             
-              <a href="/tags/Shell/">Shell</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/04/06/Compression/Image/XBM%E6%A0%BC%E5%BC%8F/">XBM格式</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/04/06/Compression/Image/XBM%E6%A0%BC%E5%BC%8F/">
-          
-          
-            
-          
-          1. 简介
-XBM 是一种最简单的一种图像格式，不像其他图像格式那样最终存储的二进制数据，XBM 图像格式存的是 C 源码。XBM 格式基本只在 X Windows 系统上使用，只支持两种颜色。相较于 BMP 格式，XBM 格式更像是 BMP 图像在 Windows 下的 icon 文件。
-【注】XBM 格式在 X Windows 环境外几乎很少用到。
-2. 格式
-2.1 详解
-XBM 图像格式示
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-04-06 16:42" pubdate>
-              2021-04-06
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/Compression/">Compression</a>
-            
-              <a href="/categories/Technique/Compression/Image/">Image</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/Compression/">Compression</a>
-            
-              <a href="/tags/Image/">Image</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/04/06/Compression/Image/BMP%E6%A0%BC%E5%BC%8F/BMP%E6%A0%BC%E5%BC%8F/">BMP格式</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/04/06/Compression/Image/BMP%E6%A0%BC%E5%BC%8F/BMP%E6%A0%BC%E5%BC%8F/">
-          
-          
-            
-          
-          1. 简介
-BMP 格式是 Windows 下最简单的图像存储格式，它支持图像以每像素 1,4,8,16,24,321,4,8,16,24,321,4,8,16,24,32 比特表示。BMP 格式也支持 4,84,84,8 比特每像素的游程算法压缩图像。
-2. 格式
-BMP 文件基本结构如下：
-
-其详细结构如下：
-
-2.1 File Header
-BMP 文件中的 File Header 包含一个
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-04-06 12:28" pubdate>
-              2021-04-06
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/Compression/">Compression</a>
-            
-              <a href="/categories/Technique/Compression/Image/">Image</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/Compression/">Compression</a>
-            
-              <a href="/tags/Image/">Image</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/04/05/Compression/Image/%E5%87%8F%E8%89%B2%E7%AE%97%E6%B3%95/">减色算法</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/04/05/Compression/Image/%E5%87%8F%E8%89%B2%E7%AE%97%E6%B3%95/">
-          
-          
-            
-          
-          1. 简介
-减色算法（ColorQuantization）是一种应用在色彩空间中用于减少图像离散色彩值的一类算法，旨在通过减少图像的离散色彩值从而减少了每个色彩值的表示比特数。一方面达到压缩图像的效果，另一方面使得一些以固定有限比特数表示像素的显示设备也能显示每个像素更多表示比特的图像。
-2. 中位切割算法
-中位切割算法（Median Cut）是最知名、应用最广泛的减色算法，常见的图像处理软件如 
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-04-05 23:49" pubdate>
-              2021-04-05
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/Compression/">Compression</a>
-            
-              <a href="/categories/Technique/Compression/Image/">Image</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/Compression/">Compression</a>
-            
-              <a href="/tags/Image/">Image</a>
+              <a href="/tags/ArchLinux/">ArchLinux</a>
             
           </div>
         
@@ -821,7 +800,7 @@ BMP 文件中的 File Header 包含一个
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/page/12/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/#board">11</a><a class="page-number" href="/page/12/#board">12</a><span class="page-number current">13</span><a class="page-number" href="/page/14/#board">14</a><a class="page-number" href="/page/15/#board">15</a><span class="space">&hellip;</span><a class="page-number" href="/page/44/#board">44</a><a class="extend next" rel="next" href="/page/14/#board"><i class="iconfont icon-arrowright"></i></a>
+      <a class="extend prev" rel="prev" href="/page/12/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/#board">11</a><a class="page-number" href="/page/12/#board">12</a><span class="page-number current">13</span><a class="page-number" href="/page/14/#board">14</a><a class="page-number" href="/page/15/#board">15</a><span class="space">&hellip;</span><a class="page-number" href="/page/53/#board">53</a><a class="extend next" rel="next" href="/page/14/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 

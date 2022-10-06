@@ -1,0 +1,936 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/image/self/portrait.jpg">
+  <link rel="icon" href="/image/self/portrait.jpg">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="一个记录各种笔记的小匣子^-^">
+  <meta name="author" content="hotarugali">
+  <meta name="keywords" content="頑張れ">
+  
+    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script> <script src="/live2d-widget/autoload.js" type="text/javascript"></script> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/> <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+  
+  <title>LinuxShell命令stat - お前はどこまで見えている</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"blueheart0621.github.io","root":"/","version":"1.8.9","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":"§"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/image/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":"c194cf0c8cbc33bfb846ba1329537d81","google":"G-SXJN0942X9","gtag":"G-D3DEHLLP3W","tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"A24MlA4oV7hlze3uNQiXDAIi-MdYXbMMI","app_key":"3moFK5Ao3TD4rjA1HCmPTSm6","server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>お前はどこまで見えている</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/image/covers/%E5%9B%9B%E6%9C%88%E6%98%AF%E4%BD%A0%E7%9A%84%E8%B0%8E%E8%A8%80-1.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="LinuxShell命令stat">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-07-05 17:56" pubdate>
+        2021年7月5日 下午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.7k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      20
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- LeanCloud 统计文章PV -->
+      <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="leancloud-page-views"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">LinuxShell命令stat</h1>
+            
+            <div class="markdown-body">
+              <h2 id="1-简介">1. 简介</h2>
+<p>众所周知，Linux 下一切皆文件。当我们想要去查看某个文件的具体信息时，可以使用 <code>stat</code> 命令进行查看。</p>
+<h2 id="2-格式">2. 格式</h2>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">stat</span> filename [filename...]<br></code></pre></td></tr></table></figure>
+<p>以 <code>stat /home</code> 为例，以下为我电脑的输出结果：</p>
+<ul>
+<li>中文显示</li>
+</ul>
+<figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs subunit">  文件：/home<br>  大小：4096            块：8          IO 块：4096   目录<br>设备：815h/2069d        Inode：15204353    硬链接：5<br>权限：(0755/drwxr-xr-x)  Uid：(    0/    root)   Gid：(    0/    root)<br>最近访问：2021<span class="hljs-string">-06</span><span class="hljs-string">-12</span> 15:24:19.791590697 <span class="hljs-string">+0800</span><br>最近更改：2021<span class="hljs-string">-01</span><span class="hljs-string">-14</span> 13:22:37.236297689 <span class="hljs-string">+0800</span><br>最近改动：2021<span class="hljs-string">-01</span><span class="hljs-string">-14</span> 13:22:37.236297689 <span class="hljs-string">+0800</span><br>创建时间：2020<span class="hljs-string">-04</span><span class="hljs-string">-12</span> 02:04:12.604134012 <span class="hljs-string">+0800</span><br></code></pre></td></tr></table></figure>
+<ul>
+<li>英文显示</li>
+</ul>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs apache">  <span class="hljs-attribute">File</span>: /home<br>  <span class="hljs-attribute">Size</span>: <span class="hljs-number">4096</span>            Blocks: <span class="hljs-number">8</span>          IO Block: <span class="hljs-number">4096</span>   directory<br><span class="hljs-attribute">Device</span>: <span class="hljs-number">815</span>h/<span class="hljs-number">2069</span>d      Inode: <span class="hljs-number">15204353</span>    Links: <span class="hljs-number">5</span><br><span class="hljs-attribute">Access</span>: (<span class="hljs-number">0755</span>/drwxr-xr-x)  Uid: (    <span class="hljs-number">0</span>/    root)   Gid: (    <span class="hljs-number">0</span>/    root)<br><span class="hljs-attribute">Access</span>: <span class="hljs-number">2021</span>-<span class="hljs-number">06</span>-<span class="hljs-number">12</span> <span class="hljs-number">15</span>:<span class="hljs-number">24</span>:<span class="hljs-number">19</span>.<span class="hljs-number">791590697</span> +<span class="hljs-number">0800</span><br><span class="hljs-attribute">Modify</span>: <span class="hljs-number">2021</span>-<span class="hljs-number">01</span>-<span class="hljs-number">14</span> <span class="hljs-number">13</span>:<span class="hljs-number">22</span>:<span class="hljs-number">37</span>.<span class="hljs-number">236297689</span> +<span class="hljs-number">0800</span><br><span class="hljs-attribute">Change</span>: <span class="hljs-number">2021</span>-<span class="hljs-number">01</span>-<span class="hljs-number">14</span> <span class="hljs-number">13</span>:<span class="hljs-number">22</span>:<span class="hljs-number">37</span>.<span class="hljs-number">236297689</span> +<span class="hljs-number">0800</span><br> <span class="hljs-attribute">Birth</span>: <span class="hljs-number">2020</span>-<span class="hljs-number">04</span>-<span class="hljs-number">12</span> <span class="hljs-number">02</span>:<span class="hljs-number">04</span>:<span class="hljs-number">12</span>.<span class="hljs-number">604134012</span> +<span class="hljs-number">0800</span><br></code></pre></td></tr></table></figure>
+<p>可以看到，<code>stat</code> 命令能够查询到文件的信息有：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">字段</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">File</td>
+<td style="text-align:left">文件名</td>
+</tr>
+<tr>
+<td style="text-align:left">Size</td>
+<td style="text-align:left">文件大小</td>
+</tr>
+<tr>
+<td style="text-align:left">Blocks</td>
+<td style="text-align:left">文件占用的物理磁盘块数目</td>
+</tr>
+<tr>
+<td style="text-align:left">IO Block</td>
+<td style="text-align:left">文件系统进行 IO 操作的块大小</td>
+</tr>
+<tr>
+<td style="text-align:left">directory/regular file/symbolic link</td>
+<td style="text-align:left">文件类型</td>
+</tr>
+<tr>
+<td style="text-align:left">Device</td>
+<td style="text-align:left">设备编号</td>
+</tr>
+<tr>
+<td style="text-align:left">Inode</td>
+<td style="text-align:left">文件 Inode 号</td>
+</tr>
+<tr>
+<td style="text-align:left">Links</td>
+<td style="text-align:left">当前文件的硬链接数</td>
+</tr>
+<tr>
+<td style="text-align:left">Access</td>
+<td style="text-align:left">文件的权限</td>
+</tr>
+<tr>
+<td style="text-align:left">Uid</td>
+<td style="text-align:left">文件的 uid，表示文件的所有者</td>
+</tr>
+<tr>
+<td style="text-align:left">Gid</td>
+<td style="text-align:left">文件的 gid，表示文件的所有组</td>
+</tr>
+<tr>
+<td style="text-align:left">Access</td>
+<td style="text-align:left">文件的最近访问时间</td>
+</tr>
+<tr>
+<td style="text-align:left">Modify</td>
+<td style="text-align:left">文件的最近更改时间</td>
+</tr>
+<tr>
+<td style="text-align:left">Change</td>
+<td style="text-align:left">文件的最近改动时间</td>
+</tr>
+<tr>
+<td style="text-align:left">Birth</td>
+<td style="text-align:left">文件的创建时间</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2-1-块信息">2.1 块信息</h3>
+<ul>
+<li>Blocks 表示的是文件实际占用的物理磁盘块个数，磁盘块大小固定为 512 字节。</li>
+<li>IO Block 表示文件系统实际进行 IO 操作时，每次读写的块大小。因此 IO Block 因不同的文件系统而异，本人电脑为 ext4，故 IO Block 固定为 4096。</li>
+</ul>
+<h3 id="2-2-设备编号">2.2 设备编号</h3>
+<ul>
+<li>文件的设备编号占两个字节，第一个字节为设备主编号，第二个字节为设备从编号。</li>
+</ul>
+<p>以上述例子为例，<code>815h</code> 表示十六进制结果，即 <code>0x0815</code>；<code>2069d</code> 表示十进制结果。<code>0x0815</code> 中，<code>0x08</code> 表示设备主编号，一般取决于设备类型，对于磁盘分区等块设备，一般主编号就是 <code>0x08</code>；<code>0x15</code> 表示设备从编号，这里就是表示此系统上的第 <code>0x15</code> 个块设备。可以查看 <code>ls -l /dev/block</code>，按照字母顺序排序，其中第 <code>0x15</code> 个设备便是本系统的磁盘分区。</p>
+<p>【注】<code>/dev</code> 目录下除了包含块设备，也还有其他类型的设备，比如 CPU 设备等。</p>
+<h3 id="2-3-硬链接数">2.3 硬链接数</h3>
+<p>文件的硬链接数表示访问到该文件的方式数目，普通文件的硬链接数一般为 1，目录文件的硬链接数至少为 2。</p>
+<ul>
+<li>因为目录下默认包含 <code>.</code> 目录，通过 <code>cd .</code> 可以访问到该目录，因此至少为 2。</li>
+<li>每增加一个子目录，父目录的硬链接数就加 1，因为子目录下可以通过 <code>cd ..</code> 访问父目录。</li>
+</ul>
+<h3 id="2-4-文件时间信息">2.4 文件时间信息</h3>
+<ul>
+<li>Access Time：简写为 atime，表示文件的最后访问时间。当文件被访问时，该时间被更新。</li>
+<li>Modify Time：简写为 mtime，表示文件的最后修改时间。当文件的数据内容被修改时，该时间被更新。</li>
+<li>Change Time：简写为 ctime，表示文件的最后更改时间。当文件的属性状态被修改时，该时间被更新。文件的属性状态即其 Inode 中的属性字段，当文件所有者、访问权限、文件内容发生改变时，文件的属性状态都会被更新。</li>
+<li>Birth Time：简写为 btime，表示文件的创建时间。一旦文件创建，该时间就固定不变。</li>
+</ul>
+<h2 id="3-选项">3. 选项</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">选项</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>-L</code>、<code>--dereference</code></td>
+<td style="text-align:left">显示符号链接所指向文件的信息</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>-f</code>、<code>--file-system</code></td>
+<td style="text-align:left">展示文件系统的状态信息而不是文件的状态信息</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>-c</code>、<code>--format=FORMAT</code></td>
+<td style="text-align:left">指定格式输出文件的某些状态信息</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>-t</code>、<code>--terse</code></td>
+<td style="text-align:left">以简洁形式输出文件的状态信息</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>--cached=MODE</code></td>
+<td style="text-align:left">使用属性信息缓存的方式</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>--printf=FORMAT</code></td>
+<td style="text-align:left">类似 <code>--format</code> 选项，结尾无换行符，可以使用转义字符实现换行等操作</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><code>MODE</code> 取值范围：<code>always</code>、<code>never</code>、<code>default</code>。<code>always</code> 表示如果存在缓存信息则使用缓存信息；<code>never</code> 表示不使用缓存信息，并将最新属性信息同步到缓存；<code>default</code> 表示默认方式，取决于文件系统。</li>
+<li><code>FORMAT</code> 选项对于文件和文件系统的取值是不同的：</li>
+</ul>
+<blockquote>
+<ol>
+<li>对于文件，<code>FORMAT</code> 可选选项如下表所示：</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">文件信息输出格式</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>%a</code></td>
+<td style="text-align:left">八进制格式的文件权限</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>%A</code></td>
+<td style="text-align:left">可读形式的文件权限</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>%b</code></td>
+<td style="text-align:left">文件占用的磁盘块数</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>%B</code></td>
+<td style="text-align:left">磁盘块的字节大小</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>%C</code></td>
+<td style="text-align:left">如果存在，则表示文件的 SELinux 安全上下文</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>%d</code></td>
+<td style="text-align:left">十进制的设备编号</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>%D</code></td>
+<td style="text-align:left">十六进制的设备编号</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>%f</code></td>
+<td style="text-align:left">十六进制表示的 Raw 模式（文件类型 + 文件权限）</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>%F</code></td>
+<td style="text-align:left">文件类型</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>%g</code></td>
+<td style="text-align:left">文件所有组 ID</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>%G</code></td>
+<td style="text-align:left">文件所有组名称</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>%h</code></td>
+<td style="text-align:left">文件硬链接数</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>%i</code></td>
+<td style="text-align:left">文件 Inode 号</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>%m</code></td>
+<td style="text-align:left">文件所在分区的挂载点</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>%n</code></td>
+<td style="text-align:left">文件名称</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>%N</code></td>
+<td style="text-align:left">符号链接所链接到的文件名称</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>%o</code></td>
+<td style="text-align:left">IO 块的字节大小</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>%s</code></td>
+<td style="text-align:left">文件的实际字节大小</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>%t</code></td>
+<td style="text-align:left">十六进制的主设备类型号</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>%T</code></td>
+<td style="text-align:left">十六进制的从设备类型号</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>%u</code></td>
+<td style="text-align:left">文件所有者 ID</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>%U</code></td>
+<td style="text-align:left">文件所有者名称</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>%w</code></td>
+<td style="text-align:left">文件的创建时区</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>%W</code></td>
+<td style="text-align:left">文件的创建时间（自 Epoch 开始的秒数）</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>%x</code></td>
+<td style="text-align:left">文件的最后访问时区</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>%X</code></td>
+<td style="text-align:left">文件的最后访问时间（自 Epoch 开始的秒数）</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>%y</code></td>
+<td style="text-align:left">文件的最后修改时区</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>%Y</code></td>
+<td style="text-align:left">文件的最后修改时间（自 Epoch 开始的秒数）</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>%z</code></td>
+<td style="text-align:left">文件的最后更改时区</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>%Z</code></td>
+<td style="text-align:left">文件的最后更改时间（自 Epoch 开始的秒数）</td>
+</tr>
+</tbody>
+</table>
+<p>【注】文件信息的简洁模式等价于输出格式：<code>%n %s %b %f %u %g %D %i %h %t %T %X %Y %Z %W %o</code>。</p>
+<ol start="2">
+<li>对于文件系统，<code>FORMAT</code> 可选选项如下表所示：</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">文件系统信息输出格式</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>%a</code></td>
+<td style="text-align:left">普通用户可用的空闲块数</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>%f</code></td>
+<td style="text-align:left">文件系统可用的空闲块数</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>%b</code></td>
+<td style="text-align:left">文件系统的全部块数</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>%c</code></td>
+<td style="text-align:left">文件系统的全部文件节点数</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>%d</code></td>
+<td style="text-align:left">文件系统的空闲文件节点数</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>%i</code></td>
+<td style="text-align:left">十六进制表示的文件系统 ID</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>%l</code></td>
+<td style="text-align:left">文件名的最大长度</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>%n</code></td>
+<td style="text-align:left">文件名</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>%s</code></td>
+<td style="text-align:left">块大小（用于更快的传输）</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>%S</code></td>
+<td style="text-align:left">基本块大小（用于块计数）</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>%t</code></td>
+<td style="text-align:left">十六进制表示的文件系统类型</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>%T</code></td>
+<td style="text-align:left">文件系统类型</td>
+</tr>
+</tbody>
+</table>
+<p>【注】文件系统信息的简洁模式等价于输出格式：<code>%n %i %l %t %s %S %b %f %a %c %d</code>。</p>
+</blockquote>
+<h2 id="附录">附录</h2>
+<p>参考资料：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://unix.stackexchange.com/questions/39716/what-is-raw-mode-in-hex-from-stat-output">What is “raw mode in hex” from stat output?</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.tiger-computing.co.uk/the-stat-command/">The stat command</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.gnu.org/software/coreutils/manual/html_node/stat-invocation.html">stat: Report file or file system status</a></li>
+</ul>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/Technique/">Technique</a>
+                    
+                      <a class="hover-with-bg" href="/categories/Technique/Linux/">Linux</a>
+                    
+                      <a class="hover-with-bg" href="/categories/Technique/Linux/Shell/">Shell</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Technique/">Technique</a>
+                    
+                      <a class="hover-with-bg" href="/tags/Linux/">Linux</a>
+                    
+                      <a class="hover-with-bg" href="/tags/Shell/">Shell</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2021/07/07/Technique/Linux/CentOS/CentOS7%E9%98%B2%E7%81%AB%E5%A2%99%E7%AE%A1%E7%90%86/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">CentOS7防火墙管理</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/07/05/Technique/Linux/Shell/LinuxShell%E4%B8%8B%E6%96%87%E4%BB%B6%E5%A4%A7%E5%B0%8F%E5%8D%95%E4%BD%8D/">
+                        <span class="hidden-mobile">LinuxShell下文件大小单位</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="waline"></div>
+  <script type="text/javascript">
+    Fluid.utils.lazyComments('waline', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js', function () {
+        new Waline({
+          el: "#waline",
+          placeholder: "都看到这里了，留个脚印再走呗~",
+          path: window.location.pathname,
+          avatar: "retro",
+          visitor: true,
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: true,
+          serverURL: "https://waline-one-beta.vercel.app/",
+          avatarCDN: "https://gravatar.loli.net/avatar/",
+          avatarForce: false,
+          requiredMeta: [],
+          emoji: ["https://cdn.jsdelivr.net/gh/hotarugali/Emoji@bilibili_tv_gif/waline/bilibili_tv_gif","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@bilibiliHotKey/waline/bilibiliHotKey","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@bilibili2233/waline/bilibili2233","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@smallshake/waline/smallshake","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@alu/waline/alu","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@QQ/waline/QQ","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@Tieba-New/waline/Tieba-New","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@weibo/waline/weibo"],
+          // emojiMaps: ,
+          login: "enable",
+          dark: 'html[data-user-color-scheme="dark"]',
+        });
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the
+    <a target="_blank" href="https://waline.js.org" rel="nofollow noopener noopener">comments powered by Waline.</a>
+  </noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+      <div class="col-lg-7 mx-auto nopadding-x-md">
+        <div class="container custom mx-auto">
+          <script src="https://myhkw.cn/api/player/161389264877" id="myhk" key="161389264877" m="1"></script>
+        </div>
+      </div>
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+
+  <script defer src="/js/leancloud.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- KaTeX -->
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" />
+  
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/mermaid@8.8.3/dist/mermaid.min.js" ></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({"theme":"default"});
+    }
+  </script>
+
+
+
+
+  
+    <!-- Baidu Analytics -->
+    <script defer>
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?c194cf0c8cbc33bfb846ba1329537d81";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  
+    <!-- Google Analytics -->
+    <script defer>
+      window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) };
+      ga.l = +new Date;
+      ga('create', 'G-SXJN0942X9', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+  
+
+  
+    <!-- Google gtag.js -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D3DEHLLP3W"></script>
+    <script defer>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-D3DEHLLP3W');
+    </script>
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

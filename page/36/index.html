@@ -18,7 +18,7 @@
   <meta name="author" content="BlueHeart0621">
   <meta name="keywords" content="頑張れ">
   
-    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script> <script src="/live2d-widget/autoload.js" type="text/javascript"></script> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script> <script src="/live2d-widget/autoload.js" type="text/javascript"></script> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/> <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
   
   <title>お前はどこまで見えている</title>
 
@@ -197,38 +197,21 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/MatLab/MatLab%E5%8F%96%E6%95%B4%E5%87%BD%E6%95%B0/">MatLab取整函数</a>
+        <a href="/2020/08/18/Technique/ACM/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/%E8%AE%A1%E6%95%B0%E6%8E%92%E5%BA%8F/">计数排序</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/MatLab/MatLab%E5%8F%96%E6%95%B4%E5%87%BD%E6%95%B0/">
+        <a href="/2020/08/18/Technique/ACM/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/%E8%AE%A1%E6%95%B0%E6%8E%92%E5%BA%8F/">
           
           
             
           
-          MatLab默认的数值类型为双精度 double 型，而 double / single 类型数据在转为整型时常常需要取整，MatLab提供了以下四种取整函数。
-
-
-
-函数
-说明
-举例
-
-
-
-
-floor
-向下取整
-floor(1.5)=1floor(-1.5)=-2
-
-
-ceil
-向上取整
-ceil(1.5)=2ceil(-1.5)=-1
-
-
-round
-取整到最近的整数（若小数部分为0.5，则
+          【注】参考自教材「算法导论」。
+1. 简介
+计数排序属于非比较排序算法类，故其时间复杂度不受比较排序算法时间复杂度下界的限制，可以达到 O(n+k)O(n+k)O(n+k) 。其中，kkk 为待排序序列的排序关键字的最大范围。
+计数排序是稳定的、非原址的。
+2. 思想
+计数排序假设 nnn 个输入元素中的每一个的排序关键字都是在 0 到 kkk 区间（左闭右开）内的一个整数。对每一个输入元素 xx
         </a>
       </p>
 
@@ -236,8 +219,8 @@ round
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
+            <time datetime="2020-08-18 19:05" pubdate>
+              2020-08-18
             </time>
           </div>
         
@@ -247,7 +230,11 @@ round
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/MatLab/">MatLab</a>
+              <a href="/categories/Technique/ACM/">ACM</a>
+            
+              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/">算法</a>
+            
+              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/">排序</a>
             
           </div>
         
@@ -257,7 +244,11 @@ round
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/MatLab/">MatLab</a>
+              <a href="/tags/ACM/">ACM</a>
+            
+              <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
+            
+              <a href="/tags/%E6%8E%92%E5%BA%8F/">排序</a>
             
           </div>
         
@@ -271,23 +262,32 @@ round
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/MatLab/MatLab%E5%8F%98%E9%87%8F/">MatLab变量</a>
+        <a href="/2020/08/18/Technique/ACM/%E7%AE%97%E6%B3%95/%E5%9B%BE%E8%AE%BA/%E6%A0%91/%E6%A0%91%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">树基础知识</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/MatLab/MatLab%E5%8F%98%E9%87%8F/">
+        <a href="/2020/08/18/Technique/ACM/%E7%AE%97%E6%B3%95/%E5%9B%BE%E8%AE%BA/%E6%A0%91/%E6%A0%91%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
           
           
             
           
-          1. 变量命名
-在 MatLab 中，变量不需预先声明就可直接进行赋值操作。变量命名遵循以下规则：
+          【注】参考自教材「算法导论」。
+1. 自由树
+1.1 定义
+自由树是一个连通的、无环的无向图，简称树。
+【注】一个可能不连通的、无环的无向图称为森林。
+1.2 概念
 
-变量名和函数名对字母大小写敏感
-变量名和函数名必须以字母为开端，其后可以是字母、数字和下划线
-不能使用 MatLab 关键字作为变量名和函数名（可使用 iskeywords 函数查看 MatLab 中所有的关键字）
-变量名和函数名最多可包含 63 个字符，超过部分被截断忽略
-避免使用函数名作为变量
+结点的度：自由树中节点的度和无向图中的一样，即相邻结点的个数。
+
+1.3 性质
+
+令 G=(V,E)G = (V,E)G=(V,E) 是一个无向图，则下面的描述是等价的：
+
+
+
+GGG 是自由树。
+GGG 中任何两结点由唯一简单路径
         </a>
       </p>
 
@@ -295,8 +295,8 @@ round
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
+            <time datetime="2020-08-18 19:05" pubdate>
+              2020-08-18
             </time>
           </div>
         
@@ -306,7 +306,13 @@ round
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/MatLab/">MatLab</a>
+              <a href="/categories/Technique/ACM/">ACM</a>
+            
+              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/">算法</a>
+            
+              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/%E5%9B%BE%E8%AE%BA/">图论</a>
+            
+              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/%E5%9B%BE%E8%AE%BA/%E6%A0%91/">树</a>
             
           </div>
         
@@ -316,7 +322,15 @@ round
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/MatLab/">MatLab</a>
+              <a href="/tags/ACM/">ACM</a>
+            
+              <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
+            
+              <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a>
+            
+              <a href="/tags/%E5%9B%BE%E8%AE%BA/">图论</a>
+            
+              <a href="/tags/%E6%A0%91/">树</a>
             
           </div>
         
@@ -330,20 +344,19 @@ round
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/MatLab/MatLab%E5%B7%A5%E4%BD%9C%E5%8C%BA/">MatLab工作区</a>
+        <a href="/2020/08/18/Technique/ACM/%E9%A2%98%E8%A7%A3/PAT%E3%80%8C1004%20To%20Buy%20or%20Not%20to%20Buy%20-%20Hard%20Version%20(35%E5%88%86)%E3%80%8D/">PAT「1004 To Buy or Not to Buy - Hard Version (35分)」</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/MatLab/MatLab%E5%B7%A5%E4%BD%9C%E5%8C%BA/">
+        <a href="/2020/08/18/Technique/ACM/%E9%A2%98%E8%A7%A3/PAT%E3%80%8C1004%20To%20Buy%20or%20Not%20to%20Buy%20-%20Hard%20Version%20(35%E5%88%86)%E3%80%8D/">
           
           
             
           
-          1. 基础工作区
-MatLab 中的基础工作区是针对当前 MatLab 窗口内的脚本代码而言的（无论是命令行窗口输入的还是 M 脚本文件中的），是所有脚本代码所共享的（即对当前 MatLab 窗口而言是唯一的），是对外可见的（即 MatLab 窗口中显示的工作区），与当前 MatLab 窗口是共存亡的。
-【注】从函数中调用脚本时，脚本使用的是调用函数的函数工作区。
-2. 函数工作区
-MatLab 
+          1. 题目
+题目链接：PAT「1004 To Buy or Not to Buy - Hard Version (35分)」 。
+Description
+Eva would like to make a string of beads with her favorite colors so she went to a small shop to buy some beads. There were
         </a>
       </p>
 
@@ -351,8 +364,8 @@ MatLab
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
+            <time datetime="2020-08-18 11:06" pubdate>
+              2020-08-18
             </time>
           </div>
         
@@ -362,7 +375,9 @@ MatLab
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/MatLab/">MatLab</a>
+              <a href="/categories/Technique/ACM/">ACM</a>
+            
+              <a href="/categories/Technique/ACM/%E9%A2%98%E8%A7%A3/">题解</a>
             
           </div>
         
@@ -372,7 +387,9 @@ MatLab
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/MatLab/">MatLab</a>
+              <a href="/tags/ACM/">ACM</a>
+            
+              <a href="/tags/%E9%A2%98%E8%A7%A3/">题解</a>
             
           </div>
         
@@ -386,42 +403,22 @@ MatLab
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/MatLab/MatLab%E8%BF%90%E7%AE%97%E7%AC%A6%E4%B8%8E%E8%BF%90%E7%AE%97/">MatLab运算符与运算</a>
+        <a href="/2020/08/14/ACM/%E7%AE%97%E6%B3%95/%E5%87%B8%E5%8C%85%E7%AE%97%E6%B3%95/">凸包算法</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/MatLab/MatLab%E8%BF%90%E7%AE%97%E7%AC%A6%E4%B8%8E%E8%BF%90%E7%AE%97/">
+        <a href="/2020/08/14/ACM/%E7%AE%97%E6%B3%95/%E5%87%B8%E5%8C%85%E7%AE%97%E6%B3%95/">
           
           
             
           
-          1. 算术运算符
-MatLab 算术运算符有四则运算符和带点四则运算符。
+          凸包类型的题算法主要有三种：JarvisMarch 算法、Graham 算法和 Andrew 算法，这三种算法时间性能上递增。
+1. JarvisMarch 算法
+1.1 思想
+纵坐标最小然后横坐标最小的点一定是凸包上的点， 我们将其记为 p0{p_0}p0​，从 p0{p_0}p0​ 开始，按逆时针的方向，逐个找凸包上的点，每前进一步找到一个点，所以叫作步进法。
 
-
-
-运算符
-运算法则
-运算符
-运算法则
-
-
-
-
-A+B
-A 与 B 相加（维度必须一致）
-A-B
-A 与 B 相减（维度必须一致）
-
-
-A*B
-A 与 B 相乘（二者之一为标量或满足矩阵相乘条件）
-A.*B
-A 与 B 相应元素相乘（维度必须一致）
-
-
-A\B
-B 与 A 相除（A 为标量或满足 A 非奇异，A\B=A−1
+选取下一个点的方法：
+假设已找
         </a>
       </p>
 
@@ -429,8 +426,8 @@ B 与 A 相除（A 为标量或满足 A 非奇异，A\B=A−1
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
+            <time datetime="2020-08-14 21:19" pubdate>
+              2020-08-14
             </time>
           </div>
         
@@ -440,7 +437,9 @@ B 与 A 相除（A 为标量或满足 A 非奇异，A\B=A−1
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/MatLab/">MatLab</a>
+              <a href="/categories/Technique/ACM/">ACM</a>
+            
+              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/">算法</a>
             
           </div>
         
@@ -450,7 +449,9 @@ B 与 A 相除（A 为标量或满足 A 非奇异，A\B=A−1
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/MatLab/">MatLab</a>
+              <a href="/tags/ACM/">ACM</a>
+            
+              <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
             
           </div>
         
@@ -464,20 +465,24 @@ B 与 A 相除（A 为标量或满足 A 非奇异，A\B=A−1
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/MySQL/Deepin15.11%E9%85%8D%E7%BD%AEMySQL%E7%8E%AF%E5%A2%83/">Deepin15.11配置MySQL环境</a>
+        <a href="/2020/08/14/ACM/%E7%AE%97%E6%B3%95/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/LCS%E3%80%81LIS%E3%80%81LICS%E7%AE%97%E6%B3%95/">LCS、LIS、LICS算法</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/MySQL/Deepin15.11%E9%85%8D%E7%BD%AEMySQL%E7%8E%AF%E5%A2%83/">
+        <a href="/2020/08/14/ACM/%E7%AE%97%E6%B3%95/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/LCS%E3%80%81LIS%E3%80%81LICS%E7%AE%97%E6%B3%95/">
           
           
             
           
-          【注】mysql 环境配置详情请参阅 mysql 官方教程。
-1. 添加 APT Repository
-从官网上下载对应的 MySQL APT Repository 配置包，然后安装该 mysql-apt-config_x.y.z_all.deb 包（具体取决于所下载的 deb 包）。
-1sudo dpkg -i mysql-apt-config_x.y.z_all.deb
-在安装该 APT Re
+          概念
+首先，要理解子串和子序列的含义：
+
+子串：来源于原序列连续的一段。
+子序列：来源于原序列中元素相对顺序不变的一段，不要求元素连续。
+
+1. LCS\mathrm{LCS}LCS（最长公共子序列）
+1.1 转移方程
+给定两个序列 AAA、BBB，设 C[i,j]C[i, j]C[i,j] 为 LCS(Ai,Bj)\mathrm{LCS}(A_i, B_j)LCS(Ai​,Bj​) 的长度，其中
         </a>
       </p>
 
@@ -485,8 +490,8 @@ B 与 A 相除（A 为标量或满足 A 非奇异，A\B=A−1
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
+            <time datetime="2020-08-14 21:19" pubdate>
+              2020-08-14
             </time>
           </div>
         
@@ -496,7 +501,11 @@ B 与 A 相除（A 为标量或满足 A 非奇异，A\B=A−1
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/MySQL/">MySQL</a>
+              <a href="/categories/Technique/ACM/">ACM</a>
+            
+              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/">算法</a>
+            
+              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">动态规划</a>
             
           </div>
         
@@ -506,7 +515,11 @@ B 与 A 相除（A 为标量或满足 A 非奇异，A\B=A−1
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/MySQL/">MySQL</a>
+              <a href="/tags/ACM/">ACM</a>
+            
+              <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
+            
+              <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">动态规划</a>
             
           </div>
         
@@ -520,147 +533,24 @@ B 与 A 相除（A 为标量或满足 A 非奇异，A\B=A−1
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/MySQL/MySQL%E6%8A%A5%E9%94%99/">MySQL报错</a>
+        <a href="/2020/08/14/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%A6/BSGS%E7%AE%97%E6%B3%95/">BSGS算法</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/MySQL/MySQL%E6%8A%A5%E9%94%99/">
-          
-          
-            
-          
-          1. The MySQL server is running with the --secure-file-priv option ***
-
-问题：secure-file-priv 未配置或配置与当前使用路径冲突。secure-file-priv 参数是用来限制 mysql 下数据导入导出只能发生的路径下。
-
-
-
-
-secure-file-priv 参数值
-说明
-
-
-
-
-''
-表示 mysqld 
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/MySQL/">MySQL</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/MySQL/">MySQL</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/05/26/MySQL/%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%B8%8B%E4%BD%BF%E7%94%A8MySQL/">命令行下使用MySQL</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/05/26/MySQL/%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%B8%8B%E4%BD%BF%E7%94%A8MySQL/">
-          
-          
-            
-          
-          1. 进入 MySQL 终端
-
-指定服务器 host 和 user
-
-1mysql -h host -u user -p    # -p 选项指明输入密码
-
-匿名形式进入 MySQL 终端（host 默认为 localhost，user 默认为当前系统的 user）
-
-1mysql
-【注】linux 系统下可能需要使用超级用户权限：
-12sudo mysql -h host -u user -ps
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/MySQL/">MySQL</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/MySQL/">MySQL</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/05/26/Net/Hosts%E6%96%87%E4%BB%B6%E4%BF%AE%E6%94%B9/">Hosts文件修改</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/05/26/Net/Hosts%E6%96%87%E4%BB%B6%E4%BF%AE%E6%94%B9/">
+        <a href="/2020/08/14/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%A6/BSGS%E7%AE%97%E6%B3%95/">
           
           
             
           
           1. 简介
-有时访问某些国外网站很卡（不包括无法访问的网站），很大的原因是这些网站的 CDN 的域名遭到 DNS 污染了。这时就可以选择直接访问源网站 IP ，绕过 DNS 解析，即通过修改主机 hosts 文件的方式，将域名和 IP 的对应关系直接记录下来，来加速对这些网站的访问。
-2. 原理
-主机操作系统下都有一个 hosts 文件，其作用在于将一些常用网址域名与其对应的 IP 地址建立一个关
+BSGS 算法也称为大小步算法，主要用来解决
+Ax≡Bmod  p\begin{array}{c}
+A^x \equiv B \mod{p}
+\end{array}
+Ax≡Bmodp​
+的问题，其中 ppp 为质数。
+2. 算法
+令 x=i⋅m−jx = i \cdot m -jx=i⋅m−j，其中 m=⌈p ⌉m = \lceil \sqrt{p} \,\rceilm=⌈p​⌉。此时
         </a>
       </p>
 
@@ -668,8 +558,8 @@ secure-file-priv 参数值
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
+            <time datetime="2020-08-14 21:19" pubdate>
+              2020-08-14
             </time>
           </div>
         
@@ -679,7 +569,11 @@ secure-file-priv 参数值
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/Net/">Net</a>
+              <a href="/categories/Technique/ACM/">ACM</a>
+            
+              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/">算法</a>
+            
+              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%A6/">数学</a>
             
           </div>
         
@@ -689,7 +583,11 @@ secure-file-priv 参数值
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Net/">Net</a>
+              <a href="/tags/ACM/">ACM</a>
+            
+              <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
+            
+              <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
             
           </div>
         
@@ -703,20 +601,17 @@ secure-file-priv 参数值
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/NodeJS/Mint19.1%E5%AE%89%E8%A3%85NodeJS/">Mint19.1安装NodeJS</a>
+        <a href="/2020/08/14/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%A6/%E4%BA%8C%E7%BB%B4%E5%87%A0%E4%BD%95%E5%9F%BA%E7%A1%80/">二维几何基础</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/NodeJS/Mint19.1%E5%AE%89%E8%A3%85NodeJS/">
+        <a href="/2020/08/14/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%A6/%E4%BA%8C%E7%BB%B4%E5%87%A0%E4%BD%95%E5%9F%BA%E7%A1%80/">
           
           
             
           
-          1. 查看 NodeJS 版本
-查看最新版本的 NodeJS，见官网地址。
-2. 添加 NodeJS 源
-NodeJS 每个大版本都有相对应的源，比如 12.16.2 版本对应的源为 https://deb.nodesource.com/setup_12.x，将所需安装的 NodeJS 版本源添加到系统中：
-1curl -sL https://deb.nodesource.com/setup_12
+          1. 点、线、凸边形
+123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
         </a>
       </p>
 
@@ -724,8 +619,8 @@ NodeJS 每个大版本都有相对应的源，比如 12.16.2 版本对应的源�
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
+            <time datetime="2020-08-14 21:19" pubdate>
+              2020-08-14
             </time>
           </div>
         
@@ -735,7 +630,11 @@ NodeJS 每个大版本都有相对应的源，比如 12.16.2 版本对应的源�
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/NodeJS/">NodeJS</a>
+              <a href="/categories/Technique/ACM/">ACM</a>
+            
+              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/">算法</a>
+            
+              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%A6/">数学</a>
             
           </div>
         
@@ -745,7 +644,11 @@ NodeJS 每个大版本都有相对应的源，比如 12.16.2 版本对应的源�
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/NodeJS/">NodeJS</a>
+              <a href="/tags/ACM/">ACM</a>
+            
+              <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
+            
+              <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
             
           </div>
         
@@ -759,22 +662,20 @@ NodeJS 每个大版本都有相对应的源，比如 12.16.2 版本对应的源�
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Python/Python%E6%8A%A5%E9%94%99/">Python报错</a>
+        <a href="/2020/08/14/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%A6/%E7%9F%A9%E9%98%B5%E6%A0%91%E5%AE%9A%E7%90%86/">矩阵树定理</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Python/Python%E6%8A%A5%E9%94%99/">
+        <a href="/2020/08/14/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%A6/%E7%9F%A9%E9%98%B5%E6%A0%91%E5%AE%9A%E7%90%86/">
           
           
             
           
-          1. fatal error: Python.h: 没有那个文件或目录
+          1. 思想
+矩阵树定理：对于一个无向图 GGG，它的生成树个数等于其基尔霍夫矩阵任何一个 N−1N - 1N−1 阶主子式的行列式的绝对值。
 
-问题：缺少 python-dev 包
-解决：安装对应包：
-
-1sudo apt install python-dev # 最好指定 python 版本，比如：python3.6-dev
-2. ERROR: Package 'pylint' requires a different Python: 2.7.15 not in 
+度数矩阵 DDD：是一个 N×NN \times NN×N 的矩阵，其中 D[i][j]=0(i≠j)D[i][j]=0 (i \neq j)D[i][j]=0(i=j)，D[i][i]=iD[i][i]=iD[i][i]=i 号点的度数。
+邻接矩阵 A
         </a>
       </p>
 
@@ -782,8 +683,8 @@ NodeJS 每个大版本都有相对应的源，比如 12.16.2 版本对应的源�
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
+            <time datetime="2020-08-14 21:19" pubdate>
+              2020-08-14
             </time>
           </div>
         
@@ -793,7 +694,11 @@ NodeJS 每个大版本都有相对应的源，比如 12.16.2 版本对应的源�
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/Python/">Python</a>
+              <a href="/categories/Technique/ACM/">ACM</a>
+            
+              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/">算法</a>
+            
+              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%A6/">数学</a>
             
           </div>
         
@@ -803,7 +708,141 @@ NodeJS 每个大版本都有相对应的源，比如 12.16.2 版本对应的源�
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Python/">Python</a>
+              <a href="/tags/ACM/">ACM</a>
+            
+              <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
+            
+              <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/08/14/Technique/ACM/%E7%AE%97%E6%B3%95/%E5%87%B8%E5%8C%85%E7%AE%97%E6%B3%95/">凸包算法</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/08/14/Technique/ACM/%E7%AE%97%E6%B3%95/%E5%87%B8%E5%8C%85%E7%AE%97%E6%B3%95/">
+          
+          
+            
+          
+          凸包类型的题算法主要有三种：JarvisMarch 算法、Graham 算法和 Andrew 算法，这三种算法时间性能上递增。
+1. JarvisMarch 算法
+1.1 思想
+纵坐标最小然后横坐标最小的点一定是凸包上的点， 我们将其记为 p0{p_0}p0​，从 p0{p_0}p0​ 开始，按逆时针的方向，逐个找凸包上的点，每前进一步找到一个点，所以叫作步进法。
+
+选取下一个点的方法：
+假设已找
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-08-14 21:19" pubdate>
+              2020-08-14
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/ACM/">ACM</a>
+            
+              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/">算法</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/ACM/">ACM</a>
+            
+              <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/08/14/Technique/ACM/%E7%AE%97%E6%B3%95/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/LCS%E3%80%81LIS%E3%80%81LICS%E7%AE%97%E6%B3%95/">LCS、LIS、LICS算法</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/08/14/Technique/ACM/%E7%AE%97%E6%B3%95/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/LCS%E3%80%81LIS%E3%80%81LICS%E7%AE%97%E6%B3%95/">
+          
+          
+            
+          
+          概念
+首先，要理解子串和子序列的含义：
+
+子串：来源于原序列连续的一段。
+子序列：来源于原序列中元素相对顺序不变的一段，不要求元素连续。
+
+1. LCS\mathrm{LCS}LCS（最长公共子序列）
+1.1 转移方程
+给定两个序列 AAA、BBB，设 C[i,j]C[i, j]C[i,j] 为 LCS(Ai,Bj)\mathrm{LCS}(A_i, B_j)LCS(Ai​,Bj​) 的长度，其中
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-08-14 21:19" pubdate>
+              2020-08-14
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/ACM/">ACM</a>
+            
+              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/">算法</a>
+            
+              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">动态规划</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/ACM/">ACM</a>
+            
+              <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
+            
+              <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">动态规划</a>
             
           </div>
         
@@ -815,7 +854,7 @@ NodeJS 每个大版本都有相对应的源，比如 12.16.2 版本对应的源�
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/page/35/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/34/#board">34</a><a class="page-number" href="/page/35/#board">35</a><span class="page-number current">36</span><a class="page-number" href="/page/37/#board">37</a><a class="page-number" href="/page/38/#board">38</a><span class="space">&hellip;</span><a class="page-number" href="/page/44/#board">44</a><a class="extend next" rel="next" href="/page/37/#board"><i class="iconfont icon-arrowright"></i></a>
+      <a class="extend prev" rel="prev" href="/page/35/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/34/#board">34</a><a class="page-number" href="/page/35/#board">35</a><span class="page-number current">36</span><a class="page-number" href="/page/37/#board">37</a><a class="page-number" href="/page/38/#board">38</a><span class="space">&hellip;</span><a class="page-number" href="/page/53/#board">53</a><a class="extend next" rel="next" href="/page/37/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 

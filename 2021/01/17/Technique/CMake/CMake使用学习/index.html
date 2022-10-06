@@ -1,0 +1,738 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/image/self/portrait.jpg">
+  <link rel="icon" href="/image/self/portrait.jpg">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="一个记录各种笔记的小匣子^-^">
+  <meta name="author" content="hotarugali">
+  <meta name="keywords" content="頑張れ">
+  
+    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script> <script src="/live2d-widget/autoload.js" type="text/javascript"></script> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/> <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+  
+  <title>CMake 使用学习 - お前はどこまで見えている</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"blueheart0621.github.io","root":"/","version":"1.8.9","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":"§"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/image/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":"c194cf0c8cbc33bfb846ba1329537d81","google":"G-SXJN0942X9","gtag":"G-D3DEHLLP3W","tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"A24MlA4oV7hlze3uNQiXDAIi-MdYXbMMI","app_key":"3moFK5Ao3TD4rjA1HCmPTSm6","server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>お前はどこまで見えている</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/image/covers/%E5%9B%9B%E6%9C%88%E6%98%AF%E4%BD%A0%E7%9A%84%E8%B0%8E%E8%A8%80-1.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="CMake 使用学习">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-01-17 11:25" pubdate>
+        2021年1月17日 上午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.9k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      26
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- LeanCloud 统计文章PV -->
+      <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="leancloud-page-views"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">CMake 使用学习</h1>
+            
+            <div class="markdown-body">
+              <h2 id="1-概述">1. 概述</h2>
+<p>CMake 工具能够自动生成 Makefile 文件，减轻手写 Makefile 文件的工作量，同时减少书写 Makefile 文件产生的错误。</p>
+<h2 id="2-CMake-命令">2. CMake 命令</h2>
+<p>CMake 运行主要分为两个阶段：</p>
+<ul>
+<li>
+<p>配置阶段：解析 CMakeLists.txt 文件</p>
+</li>
+<li>
+<p>生成阶段：生成构建环境</p>
+</li>
+</ul>
+<p>有关 <code>cmake</code> 的详细参数参见 <code>cmake --help</code>，本文仅对其中较难理解的选项加以描述。</p>
+<h3 id="2-1-缓存选项">2.1 缓存选项</h3>
+<p>CMake 支持缓存选项。在 CMake 中，如果一个变量被标记为「缓存」，则 <code>cmake</code> 的时候会将其写入到 CMakeCache.txt 文件中。当 <code>cmake</code> 命令寻找变量时，它会首先去 CMakeCache.txt 文件中寻找。<code>cmake</code> 创建缓存选项的格式如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">cmake -D &lt;var&gt;[:&lt;<span class="hljs-built_in">type</span>&gt;]=&lt;value&gt;     <span class="hljs-comment"># &lt;var&gt;[:&lt;type&gt;]=&lt;value&gt; 具体参见下文「CMakeCache.txt 编写」</span><br></code></pre></td></tr></table></figure>
+<h3 id="2-2-常用选项">2.2 常用选项</h3>
+<ul>
+<li>
+<p><code>-DCMAKE_BUILD_TYPE=</code> ：指定编译软件的版本格式，取值为 <code>Release</code>、<code>RelWithDebInfo</code>、<code>Debug</code> 等。</p>
+</li>
+<li>
+<p><code>-DCMAKE_INSTALL_PREFIX=</code> :指定需要安装的软件路径，默认为安装路径为 <code>/usr/local</code>（默认系统安装）。</p>
+</li>
+</ul>
+<blockquote>
+<p>仅用户安装一般指定安装路径为 <code>~/.local</code>，当然也可以随用户自定义。</p>
+</blockquote>
+<ul>
+<li><code>-DBUILD_SHARED_LIBS=</code> ：<code>DBUILD_SHARED_LIBS</code> 是一个全局的 flag，为 <code>bool</code> 类型，取值为 <code>ON</code> 或 <code>OFF</code>（默认为 <code>ON</code>）。其作用是：</li>
+</ul>
+<blockquote>
+<p>如果 <code>DBUILD_SHARED_LIBS</code> 设定为 <code>ON</code>，则 CMakeLists.txt 中所有的 <code>add_library()</code> 创建的库都默认为共享库而不是静态库，除非 <code>add_library()</code> 中有显式地指定编译为静态库。反之则为静态库。</p>
+</blockquote>
+<ul>
+<li><code>-DBUILD_TESTING=</code> ：<code>DBUILD_TESTING</code> 是一个全局的 flag，为 <code>bool</code> 类型，取值为 <code>ON</code> 或 <code>OFF</code>（默认为 <code>ON</code>）。其作用是：</li>
+</ul>
+<blockquote>
+<p>当使用 CTest 模块时，<code>DBUILD_TESTING</code> 用来控制是否使能 testing。</p>
+</blockquote>
+<ul>
+<li><code>--trace</code> ：用于详细输出 <code>cmake</code> 的每一行信息。</li>
+</ul>
+<blockquote>
+<p><code>--trace-source=&lt;file&gt;</code> ：将 <code>cmake</code> 输出的所有信息都保存在 <code>file</code> 文件中。</p>
+</blockquote>
+<h2 id="3-CMakeLists-txt-编写">3. CMakeLists.txt 编写</h2>
+<h3 id="3-1-设定编译器">3.1 设定编译器</h3>
+<p>在运行 CMake 前首先需要指定 CC、CXX 编译器，否则 CMake 将使用系统默认的 CC、CXX 编译器。可以在 bash shell 中临时设定：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">CC=/usr/bin/gcc<br>CXX=/usr/bin/g++<br></code></pre></td></tr></table></figure>
+<p>也可以在 CMakeLists.txt 文件中设定：</p>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs cmake"><span class="hljs-keyword">set</span>(CMAKE_C_COMPILER <span class="hljs-string">&quot;/usr/bin/gcc&quot;</span>)<br><span class="hljs-keyword">set</span>(CMAKE_CXX_COMPILER <span class="hljs-string">&quot;/usr/bin/g++&quot;</span>)<br></code></pre></td></tr></table></figure>
+<h3 id="3-2-添加-CMake-最小要求版本">3.2 添加 CMake 最小要求版本</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">cmake_minimum_required(VERSION 3.1)<br></code></pre></td></tr></table></figure>
+<h3 id="3-3-添加项目信息">3.3 添加项目信息</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">project(MyProject   VERSION 1.0         <span class="hljs-comment"># 项目版本</span><br>                    DESCRIPTION <span class="hljs-string">&quot;xxx&quot;</span>   <span class="hljs-comment"># 项目描述</span><br>                    LANGUAGES CXX)      <span class="hljs-comment"># 项目语言</span><br></code></pre></td></tr></table></figure>
+<p>CMake 支持的语言有：<code>C , CXX , Fortran , ASM , CUDA (CMake 3.8+), CSharp (3.8+), and SWIFT (CMake 3.15+experimental)</code>。默认为 <code>C</code> 和 <code>CXX</code> 。</p>
+<h3 id="3-4-生成文件">3.4 生成文件</h3>
+<ul>
+<li>生成目标文件</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">add_executable(one two.cpp three.h)<br></code></pre></td></tr></table></figure>
+<p>one 既是生成的可执行文件名称，也是 CMake 创建的目标文件的名称。one 后面紧跟着项目的源文件，比如这里示例的 two.cpp three.h 都是源文件。</p>
+<ul>
+<li>生成库文件</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">add_library(onelib STATIC twolib.cpp threelib.h)<br></code></pre></td></tr></table></figure>
+<p>可选的库文件类型有：<code>STATIC、SHARED、MODULE</code> 。</p>
+<h3 id="3-5-为目标文件添加内容">3.5 为目标文件添加内容</h3>
+<p>【注】可以为<strong>目标文件</strong>添加这些内容：</p>
+<blockquote>
+<p>include directories, linked libraries (or linked targets), compile options, compile definitions, compile features, and more.</p>
+</blockquote>
+<ul>
+<li>为目标文件添加 include 路径</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">target_include_directories(one PUBLIC include)<br></code></pre></td></tr></table></figure>
+<p><code>PUBLIC/PRIVATE/INTERFACE</code> 用来指定「是/否/仅需要时」影响其他依赖于当前目标文件 one 的目标文件。</p>
+<ul>
+<li>为目标文件添加链接库</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">target_link_libraries(one -lcrypt -lcap)<br></code></pre></td></tr></table></figure>
+<p>one 是 CMake 创建的目标文件的名称。</p>
+<h3 id="3-6-设定变量、缓存项、属性">3.6 设定变量、缓存项、属性</h3>
+<p>【注】访问一个名为 <code>VARIABLE</code> 的局部变量使用 <code>$&#123;VARIABLE&#125;</code>，访问一个名为 <code>VARIABLE</code> 的环境变量使用 <code>$ENV&#123;VARIABLE&#125;</code>。</p>
+<ul>
+<li>设定局部变量</li>
+</ul>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cmake"><span class="hljs-keyword">set</span>(MY_VARIABLE <span class="hljs-string">&quot;value&quot;</span>)<br></code></pre></td></tr></table></figure>
+<p>局部变量的值还可以是列表：</p>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs cmake"><span class="hljs-keyword">set</span>(MY_VARIABLE <span class="hljs-string">&quot;one&quot;</span> <span class="hljs-string">&quot;two&quot;</span>)<br><span class="hljs-keyword">set</span>(MY_VARIABLE <span class="hljs-string">&quot;one;two&quot;</span>)<br></code></pre></td></tr></table></figure>
+<p>上述两条语句等价，因为变量的列表值在内部存储时就是使用 &quot;;&quot; 分隔的。可以添加 <code>PARENT_SCOPE</code> 关键字指定将变量的作用域往外跳一级。</p>
+<ul>
+<li>设定缓存变量</li>
+</ul>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs cmake"><span class="hljs-keyword">set</span>(MY_CACHE_VARIABLE <span class="hljs-string">&quot;VALUE&quot;</span> CACHE <span class="hljs-keyword">STRING</span> <span class="hljs-string">&quot;Description&quot;</span>)       <span class="hljs-comment"># 不会覆盖已存在的变量</span><br><span class="hljs-keyword">set</span>(MY_CACHE_VARIABLE <span class="hljs-string">&quot;VALUE&quot;</span> CACHE <span class="hljs-keyword">STRING</span> <span class="hljs-string">&quot;Description&quot;</span> FORCE) <span class="hljs-comment"># 会覆盖已存在的变量</span><br></code></pre></td></tr></table></figure>
+<ul>
+<li>修改命令行参数变量</li>
+</ul>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cmake"><span class="hljs-keyword">option</span>(MY_OPTION <span class="hljs-string">&quot;This is settable from the command line&quot;</span> <span class="hljs-keyword">OFF</span>)  <span class="hljs-comment"># 此处假定 MY_OPTION 为 bool 值</span><br></code></pre></td></tr></table></figure>
+<ul>
+<li>设定环境变量</li>
+</ul>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cmake"><span class="hljs-keyword">set</span>(ENV&#123;variable_name&#125; value)<br></code></pre></td></tr></table></figure>
+<ul>
+<li>设定属性 &amp; 访问属性<br />
+属性可以看作是依附于某一项（比如目录、目标文件等）的全局变量。</li>
+</ul>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs cmake"><span class="hljs-keyword">set_property</span>(<span class="hljs-keyword">TARGET</span> TargetName[TargetName1...] PROPERTY CXX_STANDARD <span class="hljs-number">11</span>)                <span class="hljs-comment"># 可以为多个 targets/files/tests 设置属性</span><br><span class="hljs-keyword">set_target_properties</span>(TargetName[TargetName1...] PROPERTIES CXX_STANDARD <span class="hljs-number">11</span>)            <span class="hljs-comment"># 仅用于为 targets 设置属性</span><br><span class="hljs-keyword">get_property</span>(ResultVariable <span class="hljs-keyword">TARGET</span> TargetName[TargetName1...] PROPERTY CXX_STANDARD)    <span class="hljs-comment"># 获取 targets 的属性值并保存在 ResultVariable 中</span><br></code></pre></td></tr></table></figure>
+<h3 id="3-7-if-语句块">3.7 if 语句块</h3>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs cmake"><br><span class="hljs-comment">## 第一种格式</span><br><span class="hljs-keyword">if</span>(variable)<br>    <span class="hljs-comment"># If variable is `ON`, `YES`, `TRUE`, `Y`, or non zero number</span><br><span class="hljs-keyword">else</span>()<br>    <span class="hljs-comment"># If variable is `0`, `OFF`, `NO`, `FALSE`, `N`, `IGNORE`, `NOTFOUND`, `&quot;&quot;`, or ends in `-NOTFOUND`</span><br><span class="hljs-keyword">endif</span>()<br><span class="hljs-comment"># If variable does not expand to one of the above, CMake will expand it then try again</span><br><br><span class="hljs-comment">## 第二种格式</span><br><span class="hljs-keyword">if</span>(<span class="hljs-string">&quot;$&#123;variable&#125;&quot;</span>)<br>    <span class="hljs-comment"># True if variable is not false-like</span><br><span class="hljs-keyword">else</span>()<br>    <span class="hljs-comment"># Note that undefined variables would be `&quot;&quot;` thus false</span><br><span class="hljs-keyword">endif</span>()<br></code></pre></td></tr></table></figure>
+<p>if 语句块中可以包含的关键字有：</p>
+<ul>
+<li>
+<p>一元：NOT、TARGET、EXISTS(file)、DEFINED 等</p>
+</li>
+<li>
+<p>二元：STREQUAL、AND、OR、MATCHES(regular expression)、VERSION_LESS、VERSION_LESS_EQUAL 等</p>
+</li>
+<li>
+<p>括号：()</p>
+</li>
+</ul>
+<h3 id="3-8-生成表达式">3.8 生成表达式</h3>
+<ul>
+<li>
+<p><code>$&lt;KEYWORD&gt;</code> ：计算 KEYWORD 的值</p>
+</li>
+<li>
+<p><code>$&lt;KEYWORD:value&gt;</code> ：根据 KEYWORD 的值来控制整个表达式的值，KEYWORD = 1 时表达式值为 value，KEYWORD = 0 时表达式值为空字符串。</p>
+</li>
+</ul>
+<p>常用的生成表达式有 <code>BUILD_INTERFACE</code> 和 <code>INSTALL_INTERFACE</code> 生成表达式。</p>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs cmake"><span class="hljs-keyword">target_include_directories</span>(<br>    MyTarget<br>    PUBLIC<br>    $&lt;BUILD_INTERFACE:<span class="hljs-variable">$&#123;CMAKE_CURRENT_SOURCE_DIR&#125;</span>/<span class="hljs-keyword">include</span>&gt;<br>    $&lt;INSTALL_INTERFACE:<span class="hljs-keyword">include</span>&gt;<br>)<br></code></pre></td></tr></table></figure>
+<blockquote>
+<p>BUILD_INTERFACE 表达式包装的构建需求只被在同一个构建系统下，或者使用 export() 指令导出的目标上使用。INSTALL_INTERFACE 表达式包装的构建需求只被用在使用 install(EXPORT) 指令安装和导出的目标上：</p>
+</blockquote>
+<h3 id="3-9-函数和宏">3.9 函数和宏</h3>
+<p>函数和宏的唯一区别在于作用域，函数有作用域但宏没有。</p>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs cmake"><br><span class="hljs-comment">## 函数举例</span><br><span class="hljs-keyword">function</span>(SIMPLE REQUIRED_ARG)<br>    <span class="hljs-keyword">message</span>(STATUS <span class="hljs-string">&quot;Simple arguments: $&#123;REQUIRED_ARG&#125;, followed by $&#123;ARGV&#125;&quot;</span>)<br>    <span class="hljs-keyword">set</span>(<span class="hljs-variable">$&#123;REQUIRED_ARG&#125;</span> <span class="hljs-string">&quot;From SIMPLE&quot;</span> PARENT_SCOPE)<br><span class="hljs-keyword">endfunction</span>()<br><br><span class="hljs-comment">## 宏举例</span><br><span class="hljs-keyword">macro</span>(SIMPLE REQUIRED_ARG)<br>    <span class="hljs-keyword">message</span>(STATUS <span class="hljs-string">&quot;Simple arguments: $&#123;REQUIRED_ARG&#125;, followed by $&#123;ARGV&#125;&quot;</span>)<br>    <span class="hljs-keyword">set</span>(<span class="hljs-variable">$&#123;REQUIRED_ARG&#125;</span> <span class="hljs-string">&quot;From SIMPLE&quot;</span> PARENT_SCOPE)<br><span class="hljs-keyword">endmacro</span>()<br></code></pre></td></tr></table></figure>
+<p>CMake 中有一个参数接收模块：cmake_parse_arguments()，用来定义函数/宏需要接收的参数。</p>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs cmake"><br><span class="hljs-comment">## 定义函数</span><br><span class="hljs-keyword">function</span>(COMPLEX)<br>    <span class="hljs-keyword">cmake_parse_arguments</span>(<br>        COMPLEX_PREFIX<br>        <span class="hljs-string">&quot;SINGLE;ANOTHER&quot;</span><br>        <span class="hljs-string">&quot;ONE_VALUE;ALSO_ONE_VALUE&quot;</span><br>        <span class="hljs-string">&quot;MULTI_VALUES&quot;</span><br>        <span class="hljs-variable">$&#123;ARGN&#125;</span><br>    )<br>    ……<br><span class="hljs-keyword">endfunction</span>()<br><br><span class="hljs-comment">## 调用函数</span><br>complex(SINGLE ONE_VALUE value MULTI_VALUES some other values)<br></code></pre></td></tr></table></figure>
+<p>上文调用函数后可以发现：</p>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs cmake">COMPLEX_PREFIX_SINGLE = <span class="hljs-keyword">TRUE</span><br>COMPLEX_PREFIX_ANOTHER = <span class="hljs-keyword">FALSE</span><br>COMPLEX_PREFIX_ONE_VALUE = <span class="hljs-string">&quot;value&quot;</span><br>COMPLEX_PREFIX_ALSO_ONE_VALUE = &lt;UNDEFINED&gt;<br>COMPLEX_PREFIX_MULTI_VALUES = <span class="hljs-string">&quot;some;other;values&quot;</span><br></code></pre></td></tr></table></figure>
+<p>如果函数/宏调用时传入了 cmake_parse_arguments() 未指定的其他参数，则其内容均保存在 <code>COMPLEX_PREFIX_UNPARSED_ARGUMENTS</code> 变量中。</p>
+<h2 id="4-CMakeCache-txt-编写">4. CMakeCache.txt 编写</h2>
+<p>CMakeCache.txt 文件本是由 <code>cmake</code> 命令默认生成的，但其内容是可以修改的。CMakeCache.txt 文件主要保存的是 <code>cmake</code> 过程中需要使用的环境变量，当 <code>cmake</code> 命令寻找变量时，它会首先去 CMakeCache.txt 文件中寻找。</p>
+<h3 id="4-1-内容条目">4.1 内容条目</h3>
+<p>随便看一个 CMakeCache.txt 文件就会发现，其文首给出了该文件的作用和内容条目格式：</p>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs cmake"><span class="hljs-comment"># This is the CMakeCache file.</span><br><span class="hljs-comment"># For build in directory: xxx/build</span><br><span class="hljs-comment"># It was generated by CMake: yyy/cmake</span><br><span class="hljs-comment"># You can edit this file to change values found and used by cmake.</span><br><span class="hljs-comment"># If you do not want to change any of the values, simply exit the editor.</span><br><span class="hljs-comment"># If you do want to change a value, simply edit, save, and exit the editor.</span><br><span class="hljs-comment"># The syntax for the file is as follows:</span><br><span class="hljs-comment"># KEY:TYPE=VALUE</span><br><span class="hljs-comment"># KEY is the name of a variable in the cache.</span><br><span class="hljs-comment"># TYPE is a hint to GUIs for the type of VALUE, DO NOT EDIT TYPE!.</span><br><span class="hljs-comment"># VALUE is the current value for the KEY.</span><br></code></pre></td></tr></table></figure>
+<p>简单来说，CMakeCache.txt 文件就是一条条环境变量的键(包含类型）值对条目组成的，而条目的具体格式如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">KEY:TYPE=VALUE<br></code></pre></td></tr></table></figure>
+<h2 id="5-注释">5. 注释</h2>
+<p>在可编写的 CMake 文件（CMakeLists、CMakeCache.txt等）中，其注释规则都是一样的。</p>
+<h3 id="5-1-单行注释">5.1 单行注释</h3>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cmake"><span class="hljs-comment"># 要注释的单行内容</span><br></code></pre></td></tr></table></figure>
+<h3 id="5-2-多行注释">5.2 多行注释</h3>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs cmake"><span class="hljs-comment">#[[</span><br>要注释的多行内容<br>]]<br></code></pre></td></tr></table></figure>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/Technique/">Technique</a>
+                    
+                      <a class="hover-with-bg" href="/categories/Technique/CMake/">CMake</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Technique/">Technique</a>
+                    
+                      <a class="hover-with-bg" href="/tags/CMake/">CMake</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2021/01/17/Technique/Configure/Configure%E8%84%9A%E6%9C%AC%E5%AD%A6%E4%B9%A0/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Configure脚本学习</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/01/16/Technique/DeepLearning/Padding%E7%AD%96%E7%95%A5/Padding%E7%AD%96%E7%95%A5/">
+                        <span class="hidden-mobile">Padding策略</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="waline"></div>
+  <script type="text/javascript">
+    Fluid.utils.lazyComments('waline', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js', function () {
+        new Waline({
+          el: "#waline",
+          placeholder: "都看到这里了，留个脚印再走呗~",
+          path: window.location.pathname,
+          avatar: "retro",
+          visitor: true,
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: true,
+          serverURL: "https://waline-one-beta.vercel.app/",
+          avatarCDN: "https://gravatar.loli.net/avatar/",
+          avatarForce: false,
+          requiredMeta: [],
+          emoji: ["https://cdn.jsdelivr.net/gh/hotarugali/Emoji@bilibili_tv_gif/waline/bilibili_tv_gif","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@bilibiliHotKey/waline/bilibiliHotKey","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@bilibili2233/waline/bilibili2233","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@smallshake/waline/smallshake","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@alu/waline/alu","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@QQ/waline/QQ","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@Tieba-New/waline/Tieba-New","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@weibo/waline/weibo"],
+          // emojiMaps: ,
+          login: "enable",
+          dark: 'html[data-user-color-scheme="dark"]',
+        });
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the
+    <a target="_blank" href="https://waline.js.org" rel="nofollow noopener noopener">comments powered by Waline.</a>
+  </noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+      <div class="col-lg-7 mx-auto nopadding-x-md">
+        <div class="container custom mx-auto">
+          <script src="https://myhkw.cn/api/player/161389264877" id="myhk" key="161389264877" m="1"></script>
+        </div>
+      </div>
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+
+  <script defer src="/js/leancloud.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- KaTeX -->
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" />
+  
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/mermaid@8.8.3/dist/mermaid.min.js" ></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({"theme":"default"});
+    }
+  </script>
+
+
+
+
+  
+    <!-- Baidu Analytics -->
+    <script defer>
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?c194cf0c8cbc33bfb846ba1329537d81";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  
+    <!-- Google Analytics -->
+    <script defer>
+      window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) };
+      ga.l = +new Date;
+      ga('create', 'G-SXJN0942X9', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+  
+
+  
+    <!-- Google gtag.js -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D3DEHLLP3W"></script>
+    <script defer>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-D3DEHLLP3W');
+    </script>
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

@@ -18,7 +18,7 @@
   <meta name="author" content="BlueHeart0621">
   <meta name="keywords" content="頑張れ">
   
-    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script> <script src="/live2d-widget/autoload.js" type="text/javascript"></script> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script> <script src="/live2d-widget/autoload.js" type="text/javascript"></script> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/> <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
   
   <title>お前はどこまで見えている</title>
 
@@ -197,47 +197,20 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/09/29/Math/Theory/%E7%9F%A9%E9%98%B5/%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/">基本概念</a>
+        <a href="/2021/01/16/Technique/Math/Theory/%E5%87%B8%E5%87%BD%E6%95%B0%E5%8F%8A%E5%85%B6%E6%80%A7%E8%B4%A8/">凸函数及其性质</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/09/29/Math/Theory/%E7%9F%A9%E9%98%B5/%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/">
+        <a href="/2021/01/16/Technique/Math/Theory/%E5%87%B8%E5%87%BD%E6%95%B0%E5%8F%8A%E5%85%B6%E6%80%A7%E8%B4%A8/">
           
           
             
           
-          1. 术语
+          1. 定义
+1.1 上凸函数
 
 
-
-概念/符号
-含义
-
-
-
-
-方阵
-行数和列数相同的矩阵
-
-
-长方矩阵
-函数和列数可能不相同的矩阵
-
-
-C\mathbb{C}C
-复数域
-
-
-R\mathbb{R}R
-实数域
-
-
-Sn\mathbb{S}^nSn
-nnn 阶对称阵全集
-
-
-diag(d1,⋯ ,dn)\mathrm{diag}(d_1,\cdots,d_n)diag(d1​,⋯,dn​)
-表示对角元素为 d1,⋯ ,
+如果对任意 x1x_1x1​、x2x_2x2​ 总有 f[αx1+(1−α)x2]≥αf(x1)+(1−α)f(x2)f[\alpha x_1 + (1 - \alpha )x_2] \geq \alpha f(x_1) + (1 - \alpha )f(x_2)f[αx1​+(1−α)x2​]≥αf(x1​)+(1−α)f(x2​)，其中 0≤α≤10 \leq
         </a>
       </p>
 
@@ -245,8 +218,8 @@ diag(d1,⋯ ,dn)\mathrm{diag}(d_1,\cdots,d_n)diag(d1​,⋯,dn​)
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-09-29 11:01" pubdate>
-              2020-09-29
+            <time datetime="2021-01-16 18:06" pubdate>
+              2021-01-16
             </time>
           </div>
         
@@ -260,8 +233,6 @@ diag(d1,⋯ ,dn)\mathrm{diag}(d_1,\cdots,d_n)diag(d1​,⋯,dn​)
             
               <a href="/categories/Technique/Math/Theory/">Theory</a>
             
-              <a href="/categories/Technique/Math/Theory/%E7%9F%A9%E9%98%B5/">矩阵</a>
-            
           </div>
         
         
@@ -273,8 +244,6 @@ diag(d1,⋯ ,dn)\mathrm{diag}(d_1,\cdots,d_n)diag(d1​,⋯,dn​)
               <a href="/tags/Math/">Math</a>
             
               <a href="/tags/Theory/">Theory</a>
-            
-              <a href="/tags/%E7%9F%A9%E9%98%B5/">矩阵</a>
             
           </div>
         
@@ -288,25 +257,19 @@ diag(d1,⋯ ,dn)\mathrm{diag}(d_1,\cdots,d_n)diag(d1​,⋯,dn​)
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/09/28/Python/Numpy/Numpy%E6%95%B0%E7%BB%84/Numpy%E6%95%B0%E7%BB%84/">Numpy数组</a>
+        <a href="/2021/01/16/Technique/Math/Theory/%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0/">欧拉函数</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/09/28/Python/Numpy/Numpy%E6%95%B0%E7%BB%84/Numpy%E6%95%B0%E7%BB%84/">
+        <a href="/2021/01/16/Technique/Math/Theory/%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0/">
           
           
             
           
-          1. 概述
-
-ndarray 数组要求数据类型一致，默认数据类型为 np.float64；显式更改数据类型需要使用 dtype 关键字。
-
-2. axis 轴
-Numpy 中 axis = n 对应 ndarray 的第 nnn 层 []，从最外层的 axis = 0，逐渐往内层递增。
-3. 数组大小 &amp; 维度
-
-
-ndarray 数组维度元组 shape 为从最外层到最里层逐层的大小；从
+          1. 欧拉函数定义
+欧拉函数 ϕ(n){\phi(n)}ϕ(n) 表示的是小于等于 nnn 且和 nnn 互质的正整数的个数。（易知 ϕ(1)=1{\phi(1) = 1}ϕ(1)=1）
+2. 欧拉函数公式
+对于任意整数 nnn，若其质因数分解结果为 n=p1k1p2k1⋯pnkn{n = p_1^{k_1}p_2^{k_1} \cdots p_n^{k_n}}n=p1k1​​p2k1​​⋯pnk
         </a>
       </p>
 
@@ -314,8 +277,259 @@ ndarray 数组维度元组 shape 为从最外层到最里层逐层的大小；�
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-09-28 14:02" pubdate>
-              2020-09-28
+            <time datetime="2021-01-16 18:06" pubdate>
+              2021-01-16
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Math/">Math</a>
+            
+              <a href="/categories/Technique/Math/Theory/">Theory</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/Math/">Math</a>
+            
+              <a href="/tags/Theory/">Theory</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/01/16/Technique/Math/Modeling/%E4%BC%A0%E6%9F%93%E7%97%85%E6%A8%A1%E5%9E%8B/%E4%BC%A0%E6%9F%93%E7%97%85%E6%A8%A1%E5%9E%8B/">传染病模型</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/01/16/Technique/Math/Modeling/%E4%BC%A0%E6%9F%93%E7%97%85%E6%A8%A1%E5%9E%8B/%E4%BC%A0%E6%9F%93%E7%97%85%E6%A8%A1%E5%9E%8B/">
+          
+          
+            
+          
+          
+
+基础定义
+
+
+将传染病范围内的人群分为以下类别：
+
+SSS(Susceptible)类：指未得病，但与感染者接触后容易收到感染的人。
+EEE(Exposed)类：指接触过感染者，但暂时没有传播的能力的人。
+III(Infectious)类：指染上传染病，具有传播能力的人。（可以传播给SSS类人员，将其变成EEE类或III类成员）
+RRR(Recovered / Removed)类：指病愈而具有
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-16 18:06" pubdate>
+              2021-01-16
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Math/">Math</a>
+            
+              <a href="/categories/Technique/Math/Modeling/">Modeling</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/Math/">Math</a>
+            
+              <a href="/tags/Modeling/">Modeling</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/01/16/Technique/Math/Theory/%E5%88%9A%E6%80%A7%E6%96%B9%E7%A8%8B/%E5%88%9A%E6%80%A7%E6%96%B9%E7%A8%8B/">刚性方程</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/01/16/Technique/Math/Theory/%E5%88%9A%E6%80%A7%E6%96%B9%E7%A8%8B/%E5%88%9A%E6%80%A7%E6%96%B9%E7%A8%8B/">
+          
+          
+            
+          
+          摘自Wikipedia——刚性方程。
+1.  定义
+在数学领域中，刚性方程（stiffness equation）是指一个微分方程，其数值分析的解只有在时间间隔很小时才会稳定，只要时间间隔略大，其解就会不稳定。目前很难去精确地去定义哪些微分方程是刚性方程，然而粗略而言，若此方程式中包含使其快速变动的项，则其为刚性方程。
+在积分微分方程时，若某一区域的解曲线的变化很大，会希望在这个区域的积分间隔密一
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-16 18:06" pubdate>
+              2021-01-16
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Math/">Math</a>
+            
+              <a href="/categories/Technique/Math/Theory/">Theory</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/Math/">Math</a>
+            
+              <a href="/tags/Theory/">Theory</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/01/16/Technique/System/CSAPP/%E6%B5%AE%E7%82%B9%E6%95%B0/%E6%B5%AE%E7%82%B9%E6%95%B0/">浮点数</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/01/16/Technique/System/CSAPP/%E6%B5%AE%E7%82%B9%E6%95%B0/%E6%B5%AE%E7%82%B9%E6%95%B0/">
+          
+          
+            
+          
+          1. IEEE 754 标准
+IEEE 754 浮点标准用 V=(−1)s×M×2EV = (-1)^s \times M \times 2^EV=(−1)s×M×2E 的形式来表示一个数。
+
+
+
+符号位（s）：指明数的正负，即 VVV 中的 sss。
+
+
+阶码（exp）：对浮点数加权，即 VVV 中的 EEE。
+
+
+尾数（frac）：二进制小数，即 VVV 中的 MMM，范围为 1∼2−ε1 \
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-16 18:06" pubdate>
+              2021-01-16
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/System/">System</a>
+            
+              <a href="/categories/Technique/System/CSAPP/">CSAPP</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/System/">System</a>
+            
+              <a href="/tags/CSAPP/">CSAPP</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/01/15/Technique/Python/PyTorch/PyTorch%E5%87%BD%E6%95%B0/">PyTorch函数</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/01/15/Technique/Python/PyTorch/PyTorch%E5%87%BD%E6%95%B0/">
+          
+          
+            
+          
+          torch.clamp(input, min, max, out=None) → Tensor
+将 input 张量中的每个元素值截断到区间 [min, max] 中。
+torch.stack(tensors, dim=0, out=None) → Tensor
+对 tensors 沿指定维度拼接，但会额外增加一维拼接的维度，即拼接时来自于 tensors 中每个 tensor 中的拼接元素单独组
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-15 22:44" pubdate>
+              2021-01-15
             </time>
           </div>
         
@@ -327,7 +541,7 @@ ndarray 数组维度元组 shape 为从最外层到最里层逐层的大小；�
             
               <a href="/categories/Technique/Python/">Python</a>
             
-              <a href="/categories/Technique/Python/Numpy/">Numpy</a>
+              <a href="/categories/Technique/Python/PyTorch/">PyTorch</a>
             
           </div>
         
@@ -339,7 +553,7 @@ ndarray 数组维度元组 shape 为从最外层到最里层逐层的大小；�
             
               <a href="/tags/Python/">Python</a>
             
-              <a href="/tags/Numpy/">Numpy</a>
+              <a href="/tags/PyTorch/">PyTorch</a>
             
           </div>
         
@@ -353,26 +567,20 @@ ndarray 数组维度元组 shape 为从最外层到最里层逐层的大小；�
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/09/28/DeepLearning/%E8%AF%AF%E5%B7%AE%E5%87%BD%E6%95%B0/">误差函数</a>
+        <a href="/2021/01/01/Technique/Python/PyTorch/PyTorch%E9%97%AE%E9%A2%98%E7%B3%BB%E5%88%97/">PyTorch问题系列</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/09/28/DeepLearning/%E8%AF%AF%E5%B7%AE%E5%87%BD%E6%95%B0/">
+        <a href="/2021/01/01/Technique/Python/PyTorch/PyTorch%E9%97%AE%E9%A2%98%E7%B3%BB%E5%88%97/">
           
           
             
           
-          1. 平方误差
+          1. CUDA error: CUBLAS_STATUS_ALLOC_FAILED when calling cublasCreate(handle)
 
-对于单个数据来说，其平方误差为
+解决方法：GPU 上运行出错一般很难定位，因此可以转为在 CPU 上运行，然后根据具体指出的问题进行修改。
 
-E=12∑k(yk−tk)2\begin{array}{c}
-E = \frac{1}{2} \sum_{k} (y_k - t_k)^2
-\end{array}
-E=21​∑k​(yk​−tk​)2​
-其中，yky_kyk​ 表示神经网络的输出，tkt_ktk​ 表示监督数据（ttt 采用 one-hot 编码），kkk 表示数据的维度。
 
-对
         </a>
       </p>
 
@@ -380,8 +588,8 @@ E=21​∑k​(yk​−tk​)2​
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-09-28 11:40" pubdate>
-              2020-09-28
+            <time datetime="2021-01-01 21:38" pubdate>
+              2021-01-01
             </time>
           </div>
         
@@ -391,7 +599,9 @@ E=21​∑k​(yk​−tk​)2​
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/DeepLearning/">DeepLearning</a>
+              <a href="/categories/Technique/Python/">Python</a>
+            
+              <a href="/categories/Technique/Python/PyTorch/">PyTorch</a>
             
           </div>
         
@@ -401,9 +611,9 @@ E=21​∑k​(yk​−tk​)2​
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/DeepLearning/">DeepLearning</a>
+              <a href="/tags/Python/">Python</a>
             
-              <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a>
+              <a href="/tags/PyTorch/">PyTorch</a>
             
           </div>
         
@@ -417,21 +627,44 @@ E=21​∑k​(yk​−tk​)2​
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/09/27/Math/Theory/%E7%9F%A9%E9%98%B5/MoorePenrose%E4%BC%AA%E9%80%86/">MoorePenrose伪逆</a>
+        <a href="/2020/12/23/Technique/Math/Theory/%E6%95%B0%E5%AD%A6%E6%9C%AF%E8%AF%AD%E7%BC%A9%E5%86%99/">数学术语缩写</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/09/27/Math/Theory/%E7%9F%A9%E9%98%B5/MoorePenrose%E4%BC%AA%E9%80%86/">
+        <a href="/2020/12/23/Technique/Math/Theory/%E6%95%B0%E5%AD%A6%E6%9C%AF%E8%AF%AD%E7%BC%A9%E5%86%99/">
           
           
             
           
-          1. 简介
-Moore-Penrose 伪逆常用于求解或简化非一致线性方程组的最小范数最小二乘解。其在实数域和复数域上都是唯一的，并且可以通过奇异值分解求得。
-2. 定义
-矩阵 AAA 的伪逆定义为
-A+=lim⁡α→0(ATA+αI)−1AT\begin{array}{c}
-A^+ = \lim_{\alpha \rightarrow 0}(A^T A + \alpha I)^{-1} A^T
+          
+
+s.t. = such that：使得
+
+
+i.e. = id est：即
+
+
+resp. = respectively：相对地
+
+
+e.g. = for example：举例
+
+
+cf. = confer：比较
+
+
+viz. = ：不然
+
+
+Q.E.D. ：证毕
+
+
+iff = if and only if
+
+
+i.i.d. ：独立同分布
+
+
 
         </a>
       </p>
@@ -440,345 +673,8 @@ A^+ = \lim_{\alpha \rightarrow 0}(A^T A + \alpha I)^{-1} A^T
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-09-27 22:13" pubdate>
-              2020-09-27
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/Math/">Math</a>
-            
-              <a href="/categories/Technique/Math/Theory/">Theory</a>
-            
-              <a href="/categories/Technique/Math/Theory/%E7%9F%A9%E9%98%B5/">矩阵</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/Math/">Math</a>
-            
-              <a href="/tags/Theory/">Theory</a>
-            
-              <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
-            
-              <a href="/tags/%E7%9F%A9%E9%98%B5/">矩阵</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/09/27/Math/Theory/%E7%9F%A9%E9%98%B5/%E8%8C%83%E6%95%B0/">范数</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/09/27/Math/Theory/%E7%9F%A9%E9%98%B5/%E8%8C%83%E6%95%B0/">
-          
-          
-            
-          
-          1. 向量范数
-1.1 LpL_pLp​ 范数
-LpL_pLp​ 范数是向量空间中的一组范数。
-1.1.1 定义
-Lp(x⃗)=∣x⃗∣p=(∑i=1n∣xi∣p)1p\begin{array}{c}
-L_p(\vec{x}) = |\vec{x}|_p = (\sum_{i=1}^n |x_i|^p)^{\frac{1}{p}}
-\end{array}
-Lp​(x)=∣x∣p​=(∑i=1n​∣
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-09-27 19:20" pubdate>
-              2020-09-27
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/Math/">Math</a>
-            
-              <a href="/categories/Technique/Math/Theory/">Theory</a>
-            
-              <a href="/categories/Technique/Math/Theory/%E7%9F%A9%E9%98%B5/">矩阵</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/Math/">Math</a>
-            
-              <a href="/tags/Theory/">Theory</a>
-            
-              <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
-            
-              <a href="/tags/%E7%9F%A9%E9%98%B5/">矩阵</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/09/27/Math/Theory/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/%E6%9D%A1%E4%BB%B6%E6%95%B0/">条件数</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/09/27/Math/Theory/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/%E6%9D%A1%E4%BB%B6%E6%95%B0/">
-          
-          
-            
-          
-          1. 简介
-数值分析中，函数的条件数衡量的是输入参数的微小变化可以使函数的输出值变化多少，用来测量函数输出对于输入的微小变化的敏感程度，或者说一个问题的条件数是该数量在数值计算中容易程度的衡量。一个低条件数的问题称为良置的，而高条件数的问题称为病态（非良置）的。
-2. 定义
-给定问题 fff，输入 xxx 以及用于求解问题的算法 f~\tilde{f}f~​，则绝对误差定义为
-E(f~(x))=∣
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-09-27 16:49" pubdate>
-              2020-09-27
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/Math/">Math</a>
-            
-              <a href="/categories/Technique/Math/Theory/">Theory</a>
-            
-              <a href="/categories/Technique/Math/Theory/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/">数值分析</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/Math/">Math</a>
-            
-              <a href="/tags/Theory/">Theory</a>
-            
-              <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
-            
-              <a href="/tags/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/">数值分析</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/09/27/Math/Theory/%E7%9F%A9%E9%98%B5/%E6%AD%A3%E8%B4%9F%E5%AE%9A%E7%9F%A9%E9%98%B5/">正负定矩阵</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/09/27/Math/Theory/%E7%9F%A9%E9%98%B5/%E6%AD%A3%E8%B4%9F%E5%AE%9A%E7%9F%A9%E9%98%B5/">
-          
-          
-            
-          
-          1. 正定矩阵
-1.1 定义
-
-
-在实数域下，一个 n×nn \times nn×n 的实对称矩阵 MMM 是正定的，当且仅当对于所有的非零实系数向量 zzz 都有 zTMz&gt;0z^T M z \gt 0zTMz&gt;0 。
-
-
-在复数域下，一个 n×nn \times nn×n 的埃尔米特矩阵 MMM 是正定的当且仅当对于每个非零的复向量 zzz 都有 z∗Mz&gt;0z^* M z 
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-09-27 15:57" pubdate>
-              2020-09-27
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/Math/">Math</a>
-            
-              <a href="/categories/Technique/Math/Theory/">Theory</a>
-            
-              <a href="/categories/Technique/Math/Theory/%E7%9F%A9%E9%98%B5/">矩阵</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/Math/">Math</a>
-            
-              <a href="/tags/Theory/">Theory</a>
-            
-              <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
-            
-              <a href="/tags/%E7%9F%A9%E9%98%B5/">矩阵</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/09/26/DeepLearning/%E6%BF%80%E6%B4%BB%E5%87%BD%E6%95%B0/%E6%BF%80%E6%B4%BB%E5%87%BD%E6%95%B0/">激活函数</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/09/26/DeepLearning/%E6%BF%80%E6%B4%BB%E5%87%BD%E6%95%B0/%E6%BF%80%E6%B4%BB%E5%87%BD%E6%95%B0/">
-          
-          
-            
-          
-          常见激活函数及其导数：
-
-1. Sigmoid 函数
-【注】Sigmoid 型函数是指一类 S 型曲线函数，为两端饱和函数。常用的 Sigmoid 型函数有Logistic函数和Tanh函数。
-1.1 Logistic 函数
-
-定义：
-
-σ(x)=11+e−x\begin{array}{c}
-\sigma(x) = {1 \over 1 + e^{-x}}
-\end{array}
-σ(x)=1+e
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-09-26 20:21" pubdate>
-              2020-09-26
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/DeepLearning/">DeepLearning</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/DeepLearning/">DeepLearning</a>
-            
-              <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">机器学习&深度学习</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/09/26/Math/Theory/%E6%95%B0%E5%AD%97%E4%B8%96%E7%95%8C%E4%B8%AD%E5%B8%B8%E8%A7%81%E5%87%BD%E6%95%B0/">数字世界中常见函数</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/09/26/Math/Theory/%E6%95%B0%E5%AD%97%E4%B8%96%E7%95%8C%E4%B8%AD%E5%B8%B8%E8%A7%81%E5%87%BD%E6%95%B0/">
-          
-          
-            
-          
-          1. 狄利克雷函数
-英文名称为「Dirac Delta Function」。
-1.1 简介
-狄利克雷函数在除零以外的点取值均为 0，但在整个定义域上的积分为 1。δ\deltaδ 函数可以看作是在原点处无限高、无限细，但总面积为 1 的一个尖峰。
-1.2 定义
-δ(x)={+∞x=00x≠0∫−∞+∞δ(x)dx=1\begin{array}{c}
-\delta(x) = \begin{cases
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-09-26 12:23" pubdate>
-              2020-09-26
+            <time datetime="2020-12-23 15:32" pubdate>
+              2020-12-23
             </time>
           </div>
         
@@ -800,11 +696,11 @@ E(f~(x))=∣
             
               <a href="/tags/Technique/">Technique</a>
             
+              <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
+            
               <a href="/tags/Math/">Math</a>
             
               <a href="/tags/Theory/">Theory</a>
-            
-              <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
             
           </div>
         
@@ -818,18 +714,21 @@ E(f~(x))=∣
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/09/24/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%A6/%E5%BF%AB%E9%80%9F%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/">快速傅里叶变换</a>
+        <a href="/2020/12/23/Technique/Math/Theory/%E9%9B%86%E5%90%88%E8%AE%BA/%E9%9B%86%E5%90%88%E7%9A%84%E5%A4%A7%E5%B0%8F%E5%85%B3%E7%B3%BB/">集合的大小关系</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/09/24/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%A6/%E5%BF%AB%E9%80%9F%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/">
+        <a href="/2020/12/23/Technique/Math/Theory/%E9%9B%86%E5%90%88%E8%AE%BA/%E9%9B%86%E5%90%88%E7%9A%84%E5%A4%A7%E5%B0%8F%E5%85%B3%E7%B3%BB/">
           
           
             
           
-          【注】参考自算法导论。
-1. 简介
-快速傅里叶变换（FFT）是实现离散傅里叶变换（DFT）和离散傅里叶逆变换（IDFT）的快速算法，其时间复杂度为 O(nlog⁡n)O(n \log n)O(nlogn)。DFT 在实际生活中有很多应用，比如通过离散傅里叶变换，可以将系数表示的多项式转为点值表示的多项式，从而使得多项式的乘法的复杂度由 O(n2)O(n^2)O(n2) 降为 O(n)O(n)O(n
+          
+有限集：元素个数小于等于某一个自然数的集合。
+无穷集：元素个数比任何一个自然数都大的集合，包括可列/可数无穷集和不可列/不可数无穷集。
+可列/可数集：集合元素可以按照某种顺序一一列出来，包括有限集和可列/可数无穷集。
+可列/可数无穷集：集合元素可以找到与自然数集 NNN 的一一对应关系的无穷集合，比如整数集、有理数集。
+不可列/不可数集：集合元素无法无法构造与自然数集 NNN 的一一对应关系的无
         </a>
       </p>
 
@@ -837,8 +736,8 @@ E(f~(x))=∣
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-09-24 10:12" pubdate>
-              2020-09-24
+            <time datetime="2020-12-23 12:46" pubdate>
+              2020-12-23
             </time>
           </div>
         
@@ -848,11 +747,11 @@ E(f~(x))=∣
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/ACM/">ACM</a>
+              <a href="/categories/Technique/Math/">Math</a>
             
-              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/">算法</a>
+              <a href="/categories/Technique/Math/Theory/">Theory</a>
             
-              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%A6/">数学</a>
+              <a href="/categories/Technique/Math/Theory/%E9%9B%86%E5%90%88%E8%AE%BA/">集合论</a>
             
           </div>
         
@@ -862,13 +761,71 @@ E(f~(x))=∣
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/ACM/">ACM</a>
+              <a href="/tags/Math/">Math</a>
             
-              <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
+              <a href="/tags/Theory/">Theory</a>
             
-              <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
+              <a href="/tags/%E9%9B%86%E5%90%88%E8%AE%BA/">集合论</a>
             
-              <a href="/tags/%E6%95%B0%E5%AD%A6-%E7%AE%97%E6%B3%95/">数学 算法</a>
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/12/18/Technique/System/DistributedSystem/%E5%88%86%E5%B8%83%E5%BC%8F%E6%A1%86%E6%9E%B6%E7%B3%BB%E5%88%97%E6%96%87%E6%A1%A3/">分布式架构</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/12/18/Technique/System/DistributedSystem/%E5%88%86%E5%B8%83%E5%BC%8F%E6%A1%86%E6%9E%B6%E7%B3%BB%E5%88%97%E6%96%87%E6%A1%A3/">
+          
+          
+            
+          
+          【注】持续更新中……
+
+NCCL ：https://docs.nvidia.com/deeplearning/nccl/user-guide/docs/index.html（英文）
+
+
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-12-18 13:27" pubdate>
+              2020-12-18
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/System/">System</a>
+            
+              <a href="/categories/Technique/System/DistributedSystem/">DistributedSystem</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/System/">System</a>
+            
+              <a href="/tags/DistributedSystem/">DistributedSystem</a>
             
           </div>
         
@@ -880,7 +837,7 @@ E(f~(x))=∣
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/page/22/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/21/#board">21</a><a class="page-number" href="/page/22/#board">22</a><span class="page-number current">23</span><a class="page-number" href="/page/24/#board">24</a><a class="page-number" href="/page/25/#board">25</a><span class="space">&hellip;</span><a class="page-number" href="/page/44/#board">44</a><a class="extend next" rel="next" href="/page/24/#board"><i class="iconfont icon-arrowright"></i></a>
+      <a class="extend prev" rel="prev" href="/page/22/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/21/#board">21</a><a class="page-number" href="/page/22/#board">22</a><span class="page-number current">23</span><a class="page-number" href="/page/24/#board">24</a><a class="page-number" href="/page/25/#board">25</a><span class="space">&hellip;</span><a class="page-number" href="/page/53/#board">53</a><a class="extend next" rel="next" href="/page/24/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 

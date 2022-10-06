@@ -18,7 +18,7 @@
   <meta name="author" content="BlueHeart0621">
   <meta name="keywords" content="頑張れ">
   
-    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script> <script src="/live2d-widget/autoload.js" type="text/javascript"></script> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script> <script src="/live2d-widget/autoload.js" type="text/javascript"></script> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/> <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
   
   <title>お前はどこまで見えている</title>
 
@@ -197,24 +197,37 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/MatLab/MatLab%E4%B8%ADM%E6%96%87%E4%BB%B6/">MatLab中M文件</a>
+        <a href="/2020/08/21/ACM/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E6%A6%82%E8%BF%B0/">排序算法概述</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/MatLab/MatLab%E4%B8%ADM%E6%96%87%E4%BB%B6/">
+        <a href="/2020/08/21/ACM/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E6%A6%82%E8%BF%B0/">
           
           
             
           
-          MatLab 中 M 文件有函数和脚本两种不同类型，是可以被 MatLab 直接执行的源代码文件。
+          1. 概念
+1.1 原址
+如果输入数组中仅有常数个元素需要在排序过程中存储在数组之外，则成排序算法是原址的。
+1.2 稳定
+在输入数组中，存在多个具有相同的关键字的元素，若经过排序，这些元素的相对次序保持不变，则称这种排序算法是稳定的，否则称为不稳定的。
+2. 算法
+2.1 比较排序
 
 
-创建/编辑 M 文件：在命令行窗口运行 edit [filename1 [filename2 ...]] 命令。文件存在则编辑文件，文件不存在则先创建文件。若未指定 filename 参数，则默认创建无名的 M 文件。
+
+排序方法
+平均时间复杂度
+最坏时间复杂度
+最好时间复杂度
+空间复杂度
+稳定性
 
 
-运行 M 文件：在命令行窗口下运行 run filename 命令。
 
 
+插入排序
+O(n2)O
         </a>
       </p>
 
@@ -222,8 +235,8 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
+            <time datetime="2020-08-21 23:50" pubdate>
+              2020-08-21
             </time>
           </div>
         
@@ -233,7 +246,11 @@
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/MatLab/">MatLab</a>
+              <a href="/categories/Technique/ACM/">ACM</a>
+            
+              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/">算法</a>
+            
+              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/">排序</a>
             
           </div>
         
@@ -243,7 +260,11 @@
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/MatLab/">MatLab</a>
+              <a href="/tags/ACM/">ACM</a>
+            
+              <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
+            
+              <a href="/tags/%E6%8E%92%E5%BA%8F/">排序</a>
             
           </div>
         
@@ -257,19 +278,37 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/MatLab/MatLab%E5%87%BD%E6%95%B0/">MatLab函数</a>
+        <a href="/2020/08/21/Technique/ACM/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E6%A6%82%E8%BF%B0/">排序算法概述</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/MatLab/MatLab%E5%87%BD%E6%95%B0/">
+        <a href="/2020/08/21/Technique/ACM/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E6%A6%82%E8%BF%B0/">
           
           
             
           
-          1. 普通函数
-MatLab 中的普通函数是可以传递输入参数和输出参数的函数，其基本定义格式为：
-123function [y1,...,yn] = funcname(x1,...,xn)    ...end
-其中，x1,...,xn 为输入参数变量，y1,...,yn 为输出参数变量，funcname 为函数名称。MatLab 在实现对普通函数调用时，允许使用比声明变量数目少的输入输出变量，调用
+          1. 概念
+1.1 原址
+如果输入数组中仅有常数个元素需要在排序过程中存储在数组之外，则成排序算法是原址的。
+1.2 稳定
+在输入数组中，存在多个具有相同的关键字的元素，若经过排序，这些元素的相对次序保持不变，则称这种排序算法是稳定的，否则称为不稳定的。
+2. 算法
+2.1 比较排序
+
+
+
+排序方法
+平均时间复杂度
+最坏时间复杂度
+最好时间复杂度
+空间复杂度
+稳定性
+
+
+
+
+插入排序
+O(n2)O
         </a>
       </p>
 
@@ -277,8 +316,8 @@ MatLab 中的普通函数是可以传递输入参数和输出参数的函数，�
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
+            <time datetime="2020-08-21 23:50" pubdate>
+              2020-08-21
             </time>
           </div>
         
@@ -288,7 +327,11 @@ MatLab 中的普通函数是可以传递输入参数和输出参数的函数，�
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/MatLab/">MatLab</a>
+              <a href="/categories/Technique/ACM/">ACM</a>
+            
+              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/">算法</a>
+            
+              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/">排序</a>
             
           </div>
         
@@ -298,7 +341,11 @@ MatLab 中的普通函数是可以传递输入参数和输出参数的函数，�
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/MatLab/">MatLab</a>
+              <a href="/tags/ACM/">ACM</a>
+            
+              <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
+            
+              <a href="/tags/%E6%8E%92%E5%BA%8F/">排序</a>
             
           </div>
         
@@ -312,21 +359,19 @@ MatLab 中的普通函数是可以传递输入参数和输出参数的函数，�
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/MatLab/MatLab%E5%87%BD%E6%95%B0interp1%E3%80%81interp2%E3%80%81interp3%E3%80%81interpn/">MatLab函数interp1、interp2、interp3、interpn</a>
+        <a href="/2020/08/20/Technique/ACM/%E9%A2%98%E8%A7%A3/PAT%E3%80%8C1005%20Programming%20Pattern%20(35%E5%88%86)%E3%80%8D/">PAT「1005 Programming Pattern (35分)」</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/MatLab/MatLab%E5%87%BD%E6%95%B0interp1%E3%80%81interp2%E3%80%81interp3%E3%80%81interpn/">
+        <a href="/2020/08/20/Technique/ACM/%E9%A2%98%E8%A7%A3/PAT%E3%80%8C1005%20Programming%20Pattern%20(35%E5%88%86)%E3%80%8D/">
           
           
             
           
-          【注】详情请参阅 MatLab help 文档。
-1. interp1
-1.1 作用
-对一元函数数据进行插值，得到指定自变量值对应插值函数值。
-1.2 语法
-1234567vq = interp1(x,v,xq)vq = interp1(x,v,xq,method)vq = interp1(x,v,xq,method,extrapolation)vq = interp1(v,xq)vq = int
+          1. 题目
+题目链接：PAT「1005 Programming Pattern (35分)」 。
+Description
+Programmers often have a preference among program constructs. For example, some may prefer if(0==a), while others may prefer if(!a). Analyz
         </a>
       </p>
 
@@ -334,8 +379,8 @@ MatLab 中的普通函数是可以传递输入参数和输出参数的函数，�
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
+            <time datetime="2020-08-20 23:32" pubdate>
+              2020-08-20
             </time>
           </div>
         
@@ -345,7 +390,9 @@ MatLab 中的普通函数是可以传递输入参数和输出参数的函数，�
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/MatLab/">MatLab</a>
+              <a href="/categories/Technique/ACM/">ACM</a>
+            
+              <a href="/categories/Technique/ACM/%E9%A2%98%E8%A7%A3/">题解</a>
             
           </div>
         
@@ -355,7 +402,9 @@ MatLab 中的普通函数是可以传递输入参数和输出参数的函数，�
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/MatLab/">MatLab</a>
+              <a href="/tags/ACM/">ACM</a>
+            
+              <a href="/tags/%E9%A2%98%E8%A7%A3/">题解</a>
             
           </div>
         
@@ -369,21 +418,21 @@ MatLab 中的普通函数是可以传递输入参数和输出参数的函数，�
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/MatLab/MatLab%E5%87%BD%E6%95%B0datetime%E3%80%81datenum%E3%80%81datevec%E3%80%81datestr/">MatLab函数datetime、datenum、datevec、datestr</a>
+        <a href="/2020/08/19/Technique/C++/%E6%9C%AF%E8%AF%AD/">术语</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/MatLab/MatLab%E5%87%BD%E6%95%B0datetime%E3%80%81datenum%E3%80%81datevec%E3%80%81datestr/">
+        <a href="/2020/08/19/Technique/C++/%E6%9C%AF%E8%AF%AD/">
           
           
             
           
-          【注】详情请参阅 MatLab help 文档。
-1. datetime 函数
-1.1 作用
-datetime 用来创建表示时间点的数组（数组元素类型为 datetime）。
-1.2 语法
-12345678910t = datetimet = datetime(relativeDay)t = datetime(DateString)t = datetime(DateStrings,&#x27;In
+          
+GP：Generic Programming
+OO：Object Oriented
+STL：Standard Template Library
+
+
         </a>
       </p>
 
@@ -391,8 +440,8 @@ datetime 用来创建表示时间点的数组（数组元素类型为 datetime�
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
+            <time datetime="2020-08-19 20:10" pubdate>
+              2020-08-19
             </time>
           </div>
         
@@ -402,7 +451,7 @@ datetime 用来创建表示时间点的数组（数组元素类型为 datetime�
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/MatLab/">MatLab</a>
+              <a href="/categories/Technique/C/">C++</a>
             
           </div>
         
@@ -412,7 +461,7 @@ datetime 用来创建表示时间点的数组（数组元素类型为 datetime�
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/MatLab/">MatLab</a>
+              <a href="/tags/C/">C++</a>
             
           </div>
         
@@ -426,20 +475,18 @@ datetime 用来创建表示时间点的数组（数组元素类型为 datetime�
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/MatLab/MatLab%E5%87%BD%E6%95%B0legend/">MatLab函数legend</a>
+        <a href="/2020/08/18/ACM/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F/">基数排序</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/MatLab/MatLab%E5%87%BD%E6%95%B0legend/">
+        <a href="/2020/08/18/ACM/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F/">
           
           
             
           
-          【注】详情请参阅 MatLab help 文档。
+          【注】参考自教材「算法导论」。
 1. 简介
-legend 函数可以在 MatLab 的坐标区按曲线的绘制顺序添加对应曲线的图例。
-2. 格式
-1234567891011legendlegend(label1,···,labelN)legend(labels)legend(subset,___)legend(target,___)legend(___,Name,Value)lege
+基数排序属于非比较排序算法类，故其时间复杂度不受比较排序算法时间复杂度下界的限制。基数排序对排序关键字的最低数位到最高数位中的每一数位采用其他排序算法进行排序。基数排序时间复杂度可以达到 O(d(n+k))O(d(n+k))O(d(n+k))（这中情况下对每一数位采用的排序算法为计数排序）。其中，kkk 为待排序序列的排序关键字每一数位的最大范围，ddd
         </a>
       </p>
 
@@ -447,8 +494,8 @@ legend 函数可以在 MatLab 的坐标区按曲线的绘制顺序添加对应�
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
+            <time datetime="2020-08-18 19:05" pubdate>
+              2020-08-18
             </time>
           </div>
         
@@ -458,7 +505,11 @@ legend 函数可以在 MatLab 的坐标区按曲线的绘制顺序添加对应�
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/MatLab/">MatLab</a>
+              <a href="/categories/Technique/ACM/">ACM</a>
+            
+              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/">算法</a>
+            
+              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/">排序</a>
             
           </div>
         
@@ -468,7 +519,11 @@ legend 函数可以在 MatLab 的坐标区按曲线的绘制顺序添加对应�
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/MatLab/">MatLab</a>
+              <a href="/tags/ACM/">ACM</a>
+            
+              <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
+            
+              <a href="/tags/%E6%8E%92%E5%BA%8F/">排序</a>
             
           </div>
         
@@ -482,25 +537,28 @@ legend 函数可以在 MatLab 的坐标区按曲线的绘制顺序添加对应�
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/MatLab/MatLab%E5%87%BD%E6%95%B0meshgrid%E3%80%81ndgrid/">MatLab函数meshgrid、ndgrid</a>
+        <a href="/2020/08/18/ACM/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/%E5%A0%86%E6%8E%92%E5%BA%8F%E4%B8%8E%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97/">堆排序与优先队列</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/MatLab/MatLab%E5%87%BD%E6%95%B0meshgrid%E3%80%81ndgrid/">
+        <a href="/2020/08/18/ACM/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/%E5%A0%86%E6%8E%92%E5%BA%8F%E4%B8%8E%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97/">
           
           
             
           
-          【注】详情请参阅 MatLab help 文档。
-1. meshgrid
-1.1 作用
-meshgrid 函数用于生成二维或三维网络坐标。
-1.2 语法
-1234[X,Y] = meshgrid(x,y)[X,Y] = meshgrid(x)[X,Y,Z] = meshgrid(x,y,z)[X,Y,Z] = meshgrid(x)
+          【注】参考自教材「算法导论」。
+1. 堆
+1.1 定义
+（二叉）堆物理上是一个数组，逻辑上是一棵完全二叉树，树上的每一个结点对应数组中的一个元素。
+设表示堆的数组 AAA，其包含两个属性：
 
 
-[X,Y] = meshgrid(x,y)
-基于 x、y 坐
+A.lengthA.lengthA.length 给出数组元素的个数。
+A.heapsizeA.heapsizeA.heapsize 给出有多少个堆元素存储在该数组中。
+
+
+1.2 性质
+从根结点编号为 1
         </a>
       </p>
 
@@ -508,8 +566,8 @@ meshgrid 函数用于生成二维或三维网络坐标。
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
+            <time datetime="2020-08-18 19:05" pubdate>
+              2020-08-18
             </time>
           </div>
         
@@ -519,7 +577,11 @@ meshgrid 函数用于生成二维或三维网络坐标。
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/MatLab/">MatLab</a>
+              <a href="/categories/Technique/ACM/">ACM</a>
+            
+              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/">算法</a>
+            
+              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/">排序</a>
             
           </div>
         
@@ -529,7 +591,13 @@ meshgrid 函数用于生成二维或三维网络坐标。
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/MatLab/">MatLab</a>
+              <a href="/tags/ACM/">ACM</a>
+            
+              <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
+            
+              <a href="/tags/%E6%8E%92%E5%BA%8F/">排序</a>
+            
+              <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a>
             
           </div>
         
@@ -543,81 +611,21 @@ meshgrid 函数用于生成二维或三维网络坐标。
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/MatLab/MatLab%E5%87%BD%E6%95%B0rand%E3%80%81randi%E3%80%81randn%E3%80%81rng/">MatLab函数rand、randi、randn、rng</a>
+        <a href="/2020/08/18/ACM/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/%E8%AE%A1%E6%95%B0%E6%8E%92%E5%BA%8F/">计数排序</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/MatLab/MatLab%E5%87%BD%E6%95%B0rand%E3%80%81randi%E3%80%81randn%E3%80%81rng/">
+        <a href="/2020/08/18/ACM/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/%E8%AE%A1%E6%95%B0%E6%8E%92%E5%BA%8F/">
           
           
             
           
-          【注】详情请参阅 MatLab help 文档。
-1. rand 函数
-1.1 作用
-rand 函数用于生成在区间 (0,1) 均匀分布的随机数。
-1.2 语法
-123456X = rand    % 返回一个均匀分布的随机数X = rand(n) % 返回一个均匀分布的随机数矩阵（n x n）X = rand(sz1,...,szN)   % 返回由均匀分布的随机数组成的 sz1 x ... x
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/MatLab/">MatLab</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/MatLab/">MatLab</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/05/26/MatLab/MatLab%E5%87%BD%E6%95%B0repmat/">MatLab函数repmat</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/05/26/MatLab/MatLab%E5%87%BD%E6%95%B0repmat/">
-          
-          
-            
-          
-          【注】详情请参阅 MatLab help 文档。
+          【注】参考自教材「算法导论」。
 1. 简介
-repmat函数可以用来创建重复元素的矩阵，元素可以是MatLab的任何单个数据类型（double、char、cell、struct 等）值，也可以是矩阵。
-2. 格式
-123B = repmat(A,n)B = repmat(A,r1,...,rN)B = repmat(A,r)
-
-
-第一种格式
-B为行、列维度均包含n个A的副本的矩阵
+计数排序属于非比较排序算法类，故其时间复杂度不受比较排序算法时间复杂度下界的限制，可以达到 O(n+k)O(n+k)O(n+k) 。其中，kkk 为待排序序列的排序关键字的最大范围。
+计数排序是稳定的、非原址的。
+2. 思想
+计数排序假设 nnn 个输入元素中的每一个的排序关键字都是在 0 到 kkk 区间（左闭右开）内的一个整数。对每一个输入元素 xx
         </a>
       </p>
 
@@ -625,8 +633,8 @@ B为行、列维度均包含n个A的副本的矩阵
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
+            <time datetime="2020-08-18 19:05" pubdate>
+              2020-08-18
             </time>
           </div>
         
@@ -636,7 +644,11 @@ B为行、列维度均包含n个A的副本的矩阵
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/MatLab/">MatLab</a>
+              <a href="/categories/Technique/ACM/">ACM</a>
+            
+              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/">算法</a>
+            
+              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/">排序</a>
             
           </div>
         
@@ -646,7 +658,11 @@ B为行、列维度均包含n个A的副本的矩阵
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/MatLab/">MatLab</a>
+              <a href="/tags/ACM/">ACM</a>
+            
+              <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
+            
+              <a href="/tags/%E6%8E%92%E5%BA%8F/">排序</a>
             
           </div>
         
@@ -660,28 +676,32 @@ B为行、列维度均包含n个A的副本的矩阵
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/MatLab/MatLab%E5%87%BD%E6%95%B0sort%E3%80%81issorted%E3%80%81sortrows%E3%80%81issortedrows/">MatLab函数sort、issorted、sortrows、issortedrows</a>
+        <a href="/2020/08/18/ACM/%E7%AE%97%E6%B3%95/%E5%9B%BE%E8%AE%BA/%E6%A0%91/%E6%A0%91%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">树基础知识</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/MatLab/MatLab%E5%87%BD%E6%95%B0sort%E3%80%81issorted%E3%80%81sortrows%E3%80%81issortedrows/">
+        <a href="/2020/08/18/ACM/%E7%AE%97%E6%B3%95/%E5%9B%BE%E8%AE%BA/%E6%A0%91/%E6%A0%91%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
           
           
             
           
-          【注】详情请参阅 MatLab help 文档。
-1. sort 函数
-1.1 作用
-sort 函数对数组元素进行排序。
-1.2 语法
-12345B = sort(A)B = sort(A,dim)B = sort(___,direction)B = sort(___,Name,Value)[B,I] = sort(___)
+          【注】参考自教材「算法导论」。
+1. 自由树
+1.1 定义
+自由树是一个连通的、无环的无向图，简称树。
+【注】一个可能不连通的、无环的无向图称为森林。
+1.2 概念
 
-B = sort(A)
-按升序对 A 的元素进行排序。
+结点的度：自由树中节点的度和无向图中的一样，即相邻结点的个数。
+
+1.3 性质
+
+令 G=(V,E)G = (V,E)G=(V,E) 是一个无向图，则下面的描述是等价的：
 
 
 
-如果 A
+GGG 是自由树。
+GGG 中任何两结点由唯一简单路径
         </a>
       </p>
 
@@ -689,8 +709,8 @@ B = sort(A)
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
+            <time datetime="2020-08-18 19:05" pubdate>
+              2020-08-18
             </time>
           </div>
         
@@ -700,7 +720,13 @@ B = sort(A)
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/MatLab/">MatLab</a>
+              <a href="/categories/Technique/ACM/">ACM</a>
+            
+              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/">算法</a>
+            
+              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/%E5%9B%BE%E8%AE%BA/">图论</a>
+            
+              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/%E5%9B%BE%E8%AE%BA/%E6%A0%91/">树</a>
             
           </div>
         
@@ -710,7 +736,15 @@ B = sort(A)
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/MatLab/">MatLab</a>
+              <a href="/tags/ACM/">ACM</a>
+            
+              <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
+            
+              <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a>
+            
+              <a href="/tags/%E5%9B%BE%E8%AE%BA/">图论</a>
+            
+              <a href="/tags/%E6%A0%91/">树</a>
             
           </div>
         
@@ -724,22 +758,18 @@ B = sort(A)
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/MatLab/MatLab%E5%87%BD%E6%95%B0xlsread%E3%80%81xlswrite%E3%80%81xlsfinfo/">MatLab函数xlsread、xlswrite、xlsfinfo</a>
+        <a href="/2020/08/18/Technique/ACM/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F/">基数排序</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/MatLab/MatLab%E5%87%BD%E6%95%B0xlsread%E3%80%81xlswrite%E3%80%81xlsfinfo/">
+        <a href="/2020/08/18/Technique/ACM/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F/">
           
           
             
           
-          【注】详情请参阅 MatLab help 文档。
-1. xlsread 函数
-1.1 作用
-读取 XLS、XLSX、XLSM、XLTX 和 XLTM 电子表格文件。
-【注】xlsread 仅读取 7 位 ASCII 字符，不支持非相邻范围。
-1.2 语法
-12345678data = xlsread(filename)data = xlsread(filename,sheet)data = xls
+          【注】参考自教材「算法导论」。
+1. 简介
+基数排序属于非比较排序算法类，故其时间复杂度不受比较排序算法时间复杂度下界的限制。基数排序对排序关键字的最低数位到最高数位中的每一数位采用其他排序算法进行排序。基数排序时间复杂度可以达到 O(d(n+k))O(d(n+k))O(d(n+k))（这中情况下对每一数位采用的排序算法为计数排序）。其中，kkk 为待排序序列的排序关键字每一数位的最大范围，ddd
         </a>
       </p>
 
@@ -747,8 +777,8 @@ B = sort(A)
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
+            <time datetime="2020-08-18 19:05" pubdate>
+              2020-08-18
             </time>
           </div>
         
@@ -758,7 +788,11 @@ B = sort(A)
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/MatLab/">MatLab</a>
+              <a href="/categories/Technique/ACM/">ACM</a>
+            
+              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/">算法</a>
+            
+              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/">排序</a>
             
           </div>
         
@@ -768,7 +802,85 @@ B = sort(A)
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/MatLab/">MatLab</a>
+              <a href="/tags/ACM/">ACM</a>
+            
+              <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
+            
+              <a href="/tags/%E6%8E%92%E5%BA%8F/">排序</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/08/18/Technique/ACM/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/%E5%A0%86%E6%8E%92%E5%BA%8F%E4%B8%8E%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97/">堆排序与优先队列</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/08/18/Technique/ACM/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/%E5%A0%86%E6%8E%92%E5%BA%8F%E4%B8%8E%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97/">
+          
+          
+            
+          
+          【注】参考自教材「算法导论」。
+1. 堆
+1.1 定义
+（二叉）堆物理上是一个数组，逻辑上是一棵完全二叉树，树上的每一个结点对应数组中的一个元素。
+设表示堆的数组 AAA，其包含两个属性：
+
+
+A.lengthA.lengthA.length 给出数组元素的个数。
+A.heapsizeA.heapsizeA.heapsize 给出有多少个堆元素存储在该数组中。
+
+
+1.2 性质
+从根结点编号为 1
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-08-18 19:05" pubdate>
+              2020-08-18
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/ACM/">ACM</a>
+            
+              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/">算法</a>
+            
+              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/">排序</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/ACM/">ACM</a>
+            
+              <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
+            
+              <a href="/tags/%E6%8E%92%E5%BA%8F/">排序</a>
+            
+              <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a>
             
           </div>
         
@@ -780,7 +892,7 @@ B = sort(A)
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/page/34/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/33/#board">33</a><a class="page-number" href="/page/34/#board">34</a><span class="page-number current">35</span><a class="page-number" href="/page/36/#board">36</a><a class="page-number" href="/page/37/#board">37</a><span class="space">&hellip;</span><a class="page-number" href="/page/44/#board">44</a><a class="extend next" rel="next" href="/page/36/#board"><i class="iconfont icon-arrowright"></i></a>
+      <a class="extend prev" rel="prev" href="/page/34/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/33/#board">33</a><a class="page-number" href="/page/34/#board">34</a><span class="page-number current">35</span><a class="page-number" href="/page/36/#board">36</a><a class="page-number" href="/page/37/#board">37</a><span class="space">&hellip;</span><a class="page-number" href="/page/53/#board">53</a><a class="extend next" rel="next" href="/page/36/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 

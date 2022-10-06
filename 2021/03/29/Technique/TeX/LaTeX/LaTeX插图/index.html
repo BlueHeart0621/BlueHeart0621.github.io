@@ -1,0 +1,734 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/image/self/portrait.jpg">
+  <link rel="icon" href="/image/self/portrait.jpg">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="一个记录各种笔记的小匣子^-^">
+  <meta name="author" content="hotarugali">
+  <meta name="keywords" content="頑張れ">
+  
+    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script> <script src="/live2d-widget/autoload.js" type="text/javascript"></script> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/> <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+  
+  <title>LaTeX插图 - お前はどこまで見えている</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"blueheart0621.github.io","root":"/","version":"1.8.9","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":"§"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/image/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":"c194cf0c8cbc33bfb846ba1329537d81","google":"G-SXJN0942X9","gtag":"G-D3DEHLLP3W","tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"A24MlA4oV7hlze3uNQiXDAIi-MdYXbMMI","app_key":"3moFK5Ao3TD4rjA1HCmPTSm6","server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>お前はどこまで見えている</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/image/covers/%E5%9B%9B%E6%9C%88%E6%98%AF%E4%BD%A0%E7%9A%84%E8%B0%8E%E8%A8%80-1.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="LaTeX插图">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-03-29 14:22" pubdate>
+        2021年3月29日 下午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      4.5k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      52
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- LeanCloud 统计文章PV -->
+      <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="leancloud-page-views"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">LaTeX插图</h1>
+            
+            <div class="markdown-body">
+              <p>【注】笔记来自《LaTeX入门》——刘海洋。</p>
+<h2 id="1-简介">1. 简介</h2>
+<p>插图功能是利用 TeX 的特定编译程序提供的机制实现的，不同的编译程序支持不同的图形方式。不同 LaTeX 编译程序对应的插图格式如下表所示：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">TeX 引擎命令</th>
+<th style="text-align:center">图形驱动</th>
+<th style="text-align:center">支持的格式</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>latex</code></td>
+<td style="text-align:center">Dvips</td>
+<td style="text-align:center">EPS</td>
+<td style="text-align:left">MiKTeX 还部分支持 PNG 和 JPEG</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>latex</code></td>
+<td style="text-align:center">DVIPDFMx</td>
+<td style="text-align:center">EPS,PDF,PNG,JPEG</td>
+<td style="text-align:left">PDF、PNG、JPEG 需要使用 extractbb 程序生成 <code>.xbb</code> 文件</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>pdflatex</code></td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>−</mo></mrow><annotation encoding="application/x-tex">-</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord">−</span></span></span></span></td>
+<td style="text-align:center">MPS、PDF、PNG、JPEG</td>
+<td style="text-align:left">MPS 是 METAPOST 的输出格式，TeXLive 2010 以后还能自动将 EPS 转换为 PDF 文件产插入</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>xelatex</code></td>
+<td style="text-align:center">xdvipdfmx</td>
+<td style="text-align:center">EPS、PDF、PNG、JPEG、BMP</td>
+<td style="text-align:left">驱动是自动调用的，MAC 系统下的旧驱动 xdv2pdf 还支持其他一些格式</td>
+</tr>
+</tbody>
+</table>
+<p>由上表可知，除非使用传统的 Dvips 程序作为图形驱动，一般编译程序支持的图形格式都有好几种，实际插入图形格式也就有不同的选择。对于 pdfLaTeX、XeLaTeX 这些现代的常用编译程序来说，PDF、PNG、JPEG 这三种格式是更为常用的，它们的用途也各自不同：</p>
+<ul>
+<li>PDF图片通常用来作为矢量图形的标准格式。矢量图形可以以任意比例放缩而不影响输出效果，在表现固定图案或数据产生的图形时很有优势。在以前 LaTeX 更多使用 EPS 格式的矢量图形，不过由于现在支持输出 PDF 的作图软件变得更加普及，而且 PDF 格式的文件通常比相同内容的 EPS 图形体积小，功能（如透明色）也更多。一般的矢量图设计软件（如 Illustrator、CorelDraw、Inkscape）、专业数学软件（如 MatLab、Maple、Mathematica）、计算或作图语言（如 R、GNUplot）、图论或流程图工具（如 Visio、Dia、Graphviz）、物理化学或工程图工具（如 JaxoDraw、ChemDraw、AutoCAD）等，都可以保存或打印为 PDF 格式的图片共 LaTeX 使用。</li>
+<li>PNG 图片是无损压缩的像素图格式。通常用来显示计算机制作的非自然图形，如复杂数据可视化结果。一般能输出矢量图的软件也都可以输出 PNG 格式的像素图，也有一些科技作图软件不支持矢量图的。通常数据可视化的图形最好使用矢量图格式，不多对于一些特殊情形，如逐点产生的动力系统图像、3D CG 图，还是更适合使用 PNG 格式。</li>
+<li>JPEG 图片是有损压缩的像素图格式。通常用作照片的格式。计算机产生的非自然图像最好不要使用这种有损压缩格式。</li>
+</ul>
+<h2 id="2-基础">2. 基础</h2>
+<p>在 LaTeX 中，插图是由 <code>graphics</code> 或 <code>graphicx</code> 宏包所使用的 <code>\includegraphics</code> 命令完成的。<code>graphics</code> 宏包和 <code>graphicx</code> 宏包在功能上并没有什么差别。<code>graphicx</code> 宏包支持 <code>&lt;项目&gt;=&lt;值&gt;</code> 的语法，使用起来更为方便，功能也更为强大。</p>
+<p><code>graphicx</code> 宏包可以使用 <code>draft</code> 和 <code>final</code> 选项，用来表示是否实际插图。当宏包使用 <code>draft</code> 选项，或是文档使用全局的 <code>draft</code> 选项时，<code>\includegraphics</code> 命令并不会实际插入图形，而只是得到一个与图形大小相同的带有文件名的方框，这个选项对于未完成的草稿可以在一定程度上加快编译，并减小文件大小。当文档完成时，就可以更改 <code>draft</code> 选项为 <code>final</code> 选项，得到最终的文档。</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-keyword">\usepackage</span>[draft]&#123;graphicx&#125;<br><span class="hljs-comment">% 导言区</span><br><span class="hljs-comment">% ……</span><br><span class="hljs-keyword">\includegraphics</span>&#123;picture&#125;<br></code></pre></td></tr></table></figure>
+<p><code>graphicx</code> 宏包还有一个特别有用的命令 <code>\graphicspath</code>，它可以指定图形文件的搜索目录列表，不同的目录用分组隔开：</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-keyword">\graphicspath</span>&#123;&#123;figures/&#125;&#125;           <span class="hljs-comment">% 指定图片路径</span><br><span class="hljs-keyword">\graphicspath</span>&#123;&#123;pdf/&#125;&#123;png/&#125;&#123;jpg/&#125;&#125;   <span class="hljs-comment">% 指定不同类型图片路径</span><br></code></pre></td></tr></table></figure>
+<h3 id="2-1-格式">2.1 格式</h3>
+<p>插图的核心命令是 <code>\includegraphics</code>，其语法格式为：</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-keyword">\includegraphics</span>[&lt;选项&gt;]&#123;&lt;文件名&gt;&#125;<br></code></pre></td></tr></table></figure>
+<p>其中，<code>&lt;文件名&gt;</code> 是图形文件的文件名，一般的扩展名可以省略不写，LaTeX 会自动查找它支持的文件格式，为了明确也可以加上扩展名。</p>
+<h3 id="2-2-大小、位置">2.2 大小、位置</h3>
+<p>插入的图形一般都有一个自然比例，对于 EPS、PDF 图形就是制作的尺寸，对于 JPG、PNG、BMP 等像素图的尺寸则是点阵数除以图形打印度（一般用每英寸点数 DPI 表示）。可以给 <code>\includegraphics</code> 命令加一些可选项来调整图形的大小、位置等：</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-keyword">\includegraphics</span>[width=2em]&#123;picture&#125;    <span class="hljs-comment">% 宽度</span><br><span class="hljs-keyword">\includegraphics</span>[height=1cm]&#123;picture&#125;   <span class="hljs-comment">% 高度</span><br><span class="hljs-keyword">\includegraphics</span>[scale=0.5]&#123;picture&#125;    <span class="hljs-comment">% 缩放比例</span><br></code></pre></td></tr></table></figure>
+<h3 id="2-3-旋转">2.3 旋转</h3>
+<p>使用 <code>angle</code> 选项可以让图形逆时针旋转一定角度，旋转中心可以用 <code>origin</code> 选项确定。<code>origin</code> 的值可以用字符 <code>l,r,c,t,b,B</code> 中的一个或两个，分别表示左、右、中、上、下和基线（默认值为 <code>lb</code>）。</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-keyword">\includegraphics</span>[angle=90]&#123;picture&#125;             <span class="hljs-comment">% 以左下角为原点逆时针旋转 90 度</span><br><span class="hljs-keyword">\includegraphics</span>[angle=-45,origin=c]&#123;picture&#125;   <span class="hljs-comment">% 以中心点为原点顺时针旋转 45 度</span><br></code></pre></td></tr></table></figure>
+<p>插入图形的基线就在图片的底部，因而图片盒子的深度为零。但图片旋转时，基线和深度会随 <code>origin</code> 不同而变化，此时要对图片进行放缩，就要用 <code>totalheight</code> 代替 <code>height</code> 选项，表示规定图片深度和高度之和：</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-keyword">\includegraphics</span>[angle=90,origin=b,totalheight=1.5cm]&#123;picture&#125;<br></code></pre></td></tr></table></figure>
+<h3 id="2-4-其他">2.4 其他</h3>
+<p><code>includegraphics</code> 除了以上介绍的参数选项外，还有一些其他的参数选项，诸如：</p>
+<ul>
+<li><code>draft</code>、<code>final</code>：同宏包选项相同，仅针对当前插图</li>
+<li><code>keepaspectratio</code>：布尔值，决定缩放时是否保持图片原有的长宽比。如果只设置了 <code>width</code>、<code>height</code> 或 <code>totalheight</code> 中的一个，则默认为真。</li>
+</ul>
+<p>对于更多的参数选项，可参见 <code>graphicx</code> 宏包官方文档。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">texdoc graphicx<br></code></pre></td></tr></table></figure>
+<h2 id="3-进阶">3. 进阶</h2>
+<h3 id="3-1-几何变换">3.1 几何变换</h3>
+<p><code>graphicx/graphics</code> 宏包不仅提供了插图的功能，也提供了对任意对象（即盒子）进行几何变换的功能。除了平移，TeX 本身并没有几何变换的功能，这些功能同样是依赖具体的编译程序。</p>
+<ul>
+<li><code>\scalebox</code> 命令用来按比例对内容进行放缩，其语法格式为：</li>
+</ul>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-keyword">\scalebox</span>&#123;&lt;水平因子&gt;&#125;[&lt;垂直因子&gt;]&#123;&lt;内容&gt;&#125;   <span class="hljs-comment">% &lt;垂直因子&gt; 省略时，与 &lt;水平因子&gt; 相同。</span><br></code></pre></td></tr></table></figure>
+<ul>
+<li><code>\reflectbox</code> 命令用来对内容做水平镜像反射，其语法格式为：</li>
+</ul>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-keyword">\reflectbox</span>&#123;&lt;内容&gt;&#125;     <span class="hljs-comment">% 相当于 \scalebox&#123;-1&#125;[-1]&#123;&lt;内容&gt;&#125;</span><br></code></pre></td></tr></table></figure>
+<ul>
+<li><code>\resizebox</code> 命令用来把内容放缩到指定的宽度和高度，其语法格式为：</li>
+</ul>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-keyword">\resizebox</span>&#123;&lt;宽度&gt;&#125;&#123;&lt;高度&gt;&#125;&#123;&lt;内容&gt;&#125;  <span class="hljs-comment">% &lt;宽度&gt; 和 &lt;高度&gt; 可以使用 ! 表示按比例随另一个分量放缩</span><br></code></pre></td></tr></table></figure>
+<ul>
+<li>
+<p><code>\resizebox*</code> 命令和 <code>\resizebox</code> 功能相同，只是第二个参数表示盒子高度和深度之和。</p>
+</li>
+<li>
+<p><code>\rotatebox</code> 命令用来对内容进行旋转，其语法格式为：</p>
+</li>
+</ul>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-keyword">\rotatebox</span>[&lt;选项&gt;]&#123;&lt;角度&gt;&#125;&#123;&lt;内容&gt;&#125;  <span class="hljs-comment">% &lt;选项&gt; 是 graphicx 宏包才有</span><br></code></pre></td></tr></table></figure>
+<p><code>\rotatebox</code> 命令在选项中可以使用 <code>origin</code> 选项表示旋转原点，值与 <code>\includegraphics</code> 中的选项相同，使用 <code>lrctbB</code> 中的一个或两个；也可以使用 <code>x=2mm,y=5mm</code> 这样的选项准确指定旋转原点。此外，还可以使用 <code>units</code> 选项，其表示旋转的单位，默认值为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>1</mn><mo>∘</mo></msup></mrow><annotation encoding="application/x-tex">1^\circ</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.674115em;vertical-align:0em;"></span><span class="mord"><span class="mord">1</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.674115em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">∘</span></span></span></span></span></span></span></span></span></span></span>，设置 <code>units=6.283185</code> 就相当于使用弧度制。</p>
+<p>【注】<code>graphicx</code> 宏包并不提供错切变换的功能，如有需要，可以使用 <code>PSTricks</code>、<code>tikz</code> 等绘图宏包。</p>
+<h3 id="3-2-页面旋转">3.2 页面旋转</h3>
+<p>在 LaTeX 中，不仅可以对盒子进行旋转，也可以对整个页面的内容进行旋转。<code>lscape</code> 宏包的 <code>landscape</code> 环境就可以把整个页面逆时针旋转 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>9</mn><msup><mn>0</mn><mo>∘</mo></msup></mrow><annotation encoding="application/x-tex">90^\circ</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.674115em;vertical-align:0em;"></span><span class="mord">9</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.674115em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">∘</span></span></span></span></span></span></span></span></span></span></span>：</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-keyword">\usepackage</span>&#123;lscape&#125;<br><span class="hljs-comment">% 导言区</span><br><span class="hljs-comment">% ……</span><br><span class="hljs-keyword">\begin</span>&#123;landscape&#125;<br>    <span class="hljs-keyword">\subsection</span>&#123;页面旋转&#125;<br>    ……<br><span class="hljs-keyword">\end</span>&#123;landscape&#125;<br></code></pre></td></tr></table></figure>
+<p>在生成 PDF 文件的情况下，可以使用 <code>pdflscape</code> 宏包代替 <code>lscape</code> 宏包，它可以在旋转页面的同时，让输出的 PDF 文件的页面在阅读器中显示时同时顺时针旋转 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>9</mn><msup><mn>0</mn><mo>∘</mo></msup></mrow><annotation encoding="application/x-tex">90^\circ</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.674115em;vertical-align:0em;"></span><span class="mord">9</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.674115em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">∘</span></span></span></span></span></span></span></span></span></span></span>。</p>
+<p><code>landscape</code> 环境旋转的页面不会影响版心外面页眉页脚的输出，它通常用来表示过宽的内容，如大幅的图片或宽大的表格。不过，<code>landscape</code> 环境会在前后造成额外的分页，这对于只想单纯插入一张图片的情形往往并不适合。理想的办法是产生旋转的浮动环境，可以使用 <code>rotfloat</code> 宏包提供的 <code>sidewapsfigure</code> 来插入浮动的图形，同时不会影响浮动页前后的内容。<code>rotfloat</code> 宏包基于 <code>rotating</code> 宏包和 <code>float</code> 宏包，它会将所有浮动环境增加一个 <code>sideways</code> 开头的旋转环境（比如表格有 <code>sidewapstable</code> 环境）。</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-keyword">\usepackage</span>&#123;rotfloat&#125;<br><span class="hljs-keyword">\begin</span>&#123;sidewaysfigure&#125;[p]<br>    <span class="hljs-keyword">\centering</span><br>    <span class="hljs-keyword">\includegraphics</span>[width=7in]&#123;figure&#125;<br>    <span class="hljs-keyword">\caption</span>&#123;这是一张旋转的图片&#125;<br><span class="hljs-keyword">\end</span>&#123;sidewaysfigure&#125;<br></code></pre></td></tr></table></figure>
+<p>此外，可以给 <code>rotfloat</code> 宏包加上旋转方向选项（默认逆时针旋转）：</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-keyword">\usepackage</span>[figureleft]&#123;rotfloat&#125;   <span class="hljs-comment">% 顺时针旋转</span><br><span class="hljs-keyword">\usepackage</span>[figureright]&#123;rotfloat&#125;  <span class="hljs-comment">% 逆时针旋转</span><br></code></pre></td></tr></table></figure>
+<h3 id="3-3-浮动体">3.3 浮动体</h3>
+<p>详情参见 <a href="/2021/03/30/Technique/TeX/LaTeX/LaTeX%E6%B5%AE%E5%8A%A8%E4%BD%93">LaTeX浮动体</a>。</p>
+<h3 id="3-4-标题控制">3.4 标题控制</h3>
+<p>详情参见 <a href="/2021/04/03/Technique/TeX/LaTeX/LaTeX%E6%A0%87%E9%A2%98%E6%8E%A7%E5%88%B6">LaTeX标题控制</a>。</p>
+<h3 id="3-5-并排与子图">3.5 并排与子图</h3>
+<p>在实际中，经常需要把好几个图表并列放在一起输出。由于 LaTeX 的浮动环境并不对环境内容加以限制，所以可以直接把多个图表放在一个浮动体里。又因为 <code>tabular</code> 环境生成的表格和 <code>\includegraphics</code> 插入的图形都是一个大盒子，因此可以直接并排放在一起。</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-keyword">\begin</span>&#123;figure&#125;<br>    <span class="hljs-keyword">\centering</span><br>    <span class="hljs-keyword">\caption</span>&#123;并排的图片&#125;<br>    <span class="hljs-keyword">\includegraphics</span>&#123;picture1&#125;<br>    <span class="hljs-keyword">\includegraphics</span>&#123;picture2&#125;<br><span class="hljs-keyword">\end</span>&#123;figure&#125;<br></code></pre></td></tr></table></figure>
+<p>如果是和一段文字并排放在一起，则可以使用 <code>\parbox</code> 命令或 <code>minipage</code> 环境生成一个子段盒子：</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-keyword">\begin</span>&#123;figure&#125;<br>    <span class="hljs-keyword">\centering</span><br>    <span class="hljs-keyword">\includegraphics</span>&#123;picture&#125;<br>    <span class="hljs-keyword">\qquad</span><br>    <span class="hljs-keyword">\parbox</span>[b]&#123;0.4<span class="hljs-keyword">\textwidth</span>&#125;&#123;这是一段和图片并排的文字内容。&#125;<br>    <span class="hljs-keyword">\caption</span>&#123;picture&#125;<br><span class="hljs-keyword">\end</span>&#123;figure&#125;<br></code></pre></td></tr></table></figure>
+<p>使用并排的图表或文字时，需要注意其对齐方式。</p>
+<ul>
+<li><code>tabular</code> 环境和 <code>\parbox</code> 生成的子段盒子，默认都是在盒子中央对齐，盒子的基准点是中线左端。</li>
+<li><code>\includegraphics</code> 插入的图形其基准点在左下角。</li>
+</ul>
+<p>因此上面例子中 <code>\parbox</code> 使用了 <code>b</code> 选项使文字与前面的图形对齐，即「底部对齐」。如果需要让插入垂直「居中对齐」，则可以把它放进子段盒子中。对于「顶部对齐」，需要注意的是如果直接把插图放进 <code>t</code> 选项的子段盒子中，并不能使图片在顶部对齐，这是因为 <code>t</code> 选项只能让第一行按基线对齐；此时可以在盒子中先使用 <code>\vspace&#123;0pt&#125;</code> 增加一个高度为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span> 的空行，然后按这个空行对齐。</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-keyword">\begin</span>&#123;figure&#125;<br>    <span class="hljs-keyword">\centering</span><br>    <span class="hljs-keyword">\parbox</span>[t]&#123;0.4<span class="hljs-keyword">\textwidth</span>&#125;&#123;<br>        <span class="hljs-keyword">\vspace</span>&#123;0pt&#125;<br>        <span class="hljs-keyword">\includegraphics</span>&#123;picture&#125;<br>    &#125;<br>    <span class="hljs-keyword">\qquad</span><br>    <span class="hljs-keyword">\parbox</span>[t]&#123;0.4<span class="hljs-keyword">\textwidth</span>&#125;&#123;<br>        <span class="hljs-keyword">\vspace</span>&#123;0pt&#125;    <br>        这是一段和图片并排的文字内容。<br>    &#125;<br><span class="hljs-keyword">\end</span>&#123;figure&#125;<br></code></pre></td></tr></table></figure>
+<h3 id="3-6-文字绕排">3.6 文字绕排</h3>
+<p>对于小幅的图表，使用绕排的方式可以得到更为紧凑的页面，在篇幅紧张或注重行文的场合，效果往往比浮动环境更有吸引力。由于 TeX 固有的限制，文字绕排的效果还无法做到尽善尽美，对绕排图表的位置、形状、使用都有一些限制。因此在使用绕排工具时，往往需要仔细的调整，或者另寻它途。</p>
+<ul>
+<li>在 TeX 内部，绕排工具都是使用 <code>\parshape</code> 命令的功能配合复杂的盒子操作与计算完成的，这也是为什么在列表环境中无法正常使用绕排功能（因为列表项也是由 <code>\parshape</code> 实现的）。</li>
+<li>可以使用 <code>\parshape</code> 命令产生复杂形状的绕排效果，下面所介绍的 <code>picinpar</code>、<code>wrapfig</code> 和 <code>floatflt</code> 宏包都只能产生矩形的空洞，而 <code>shapepar</code> 和 <code>cutwin</code> 宏包则部分实现了复杂绕排的功能。</li>
+</ul>
+<h4 id="3-6-1-picinpar-宏包">3.6.1 <code>picinpar</code> 宏包</h4>
+<p><code>picinpar</code> 宏包提供了 <code>\figwindow</code> 和 <code>\tabwindow</code> 来实现绕排功能。它们的语法格式如下：</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-comment">% 下面四个参数都是必选的</span><br><span class="hljs-keyword">\begin</span>&#123;figwindow&#125;[&lt;下降行数&gt;,&lt;水平位置&gt;,&lt;图内容&gt;,&lt;图标题&gt;]<br>    &lt;绕排文字&gt;<br><span class="hljs-keyword">\end</span>&#123;figwindow&#125;<br><span class="hljs-keyword">\begin</span>&#123;tabwindow&#125;[&lt;下降行数&gt;,&lt;水平位置&gt;,&lt;表内容&gt;,&lt;表标题&gt;]<br>    &lt;绕排文字&gt;<br><span class="hljs-keyword">\end</span>&#123;tabwindow&#125;<br></code></pre></td></tr></table></figure>
+<p><code>figwindow</code> 和 <code>tabwindow</code> 环境会在 <code>&lt;绕排文字&gt;</code> 的段落中开一个窗口，用来放置图表。图表的位置由前两个参数确定，<code>&lt;下降行数&gt;</code> 是一个整数，确定被绕排图表的垂直位置，图表将在这么多行文字下方显示；<code>&lt;水平位置&gt;</code> 可以是 <code>l,c,r</code>，表示窗口开在段落左、中、右的位置。后面两个参数分别是图表的内容和标题。标题可以留空，但需要保留标题前的逗号，此时就没有标题和编号。如果标题的编号需要引用，可以把标签放在标题内。</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-comment">% 导言区</span><br><span class="hljs-keyword">\usepackage</span>&#123;picinpar&#125;<br><span class="hljs-comment">% ……</span><br><span class="hljs-keyword">\begin</span>&#123;figwindow&#125;[2,c,<span class="hljs-keyword">\includegraphics</span>&#123;picture&#125;,picture<span class="hljs-keyword">\label</span>&#123;fig:picture&#125;]<br><span class="hljs-keyword">\lipsum</span>*[1]     <span class="hljs-comment">% 该命令产生足够长的虚拟文本段落，需要使用 lipsum 宏包</span><br></code></pre></td></tr></table></figure>
+<p><code>picinpar</code> 能够自动计算图表内容的大小，在环境中文本段落指定的位置开窗口放置此图表。不过，<code>picinpar</code> 也有一个缺点，即它要求环境中的段落在页面上必须有足够的空白，如果段落文字恰好在一页的末尾，就会在页面上留下大片的空白，这与使用 <code>float</code> 提供的不浮动的图表环境（<code>H</code> 选项）是一样的。此外，<code>picinpar</code> 在图表外面加的间距很小，不方便调整，<code>figwindow</code> 与 <code>tabwindow</code> 环境的语法也与一般的 LaTeX 环境不同。当图形大小或环境中文本内容在页面中位置不合适时，<code>picinpar</code> 偶尔还会造成错误的段落形状，需要在使用中小心调整。</p>
+<h4 id="3-6-2-wrapfig-宏包">3.6.2 <code>wrapfig</code> 宏包</h4>
+<p><code>wrapfig</code> 宏包提供了 <code>wrapfigure</code> 和 <code>wraptable</code> 环境，在语法格式上更接近标准的 <code>figure</code> 和 <code>table</code> 环境：</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-comment">% 中括号参数是可选的</span><br><span class="hljs-keyword">\begin</span>&#123;wrapfigure&#125;[&lt;行数&gt;]&#123;&lt;位置&gt;&#125;[&lt;外伸长度&gt;]&#123;&lt;宽度&gt;&#125;<br>    &lt;图内容&gt;<br><span class="hljs-keyword">\end</span>&#123;wrapfigure&#125;<br><span class="hljs-keyword">\begin</span>&#123;wraptable&#125;[&lt;行数&gt;]&#123;&lt;位置&gt;&#125;[&lt;外伸长度&gt;]&#123;&lt;宽度&gt;&#125;<br>    &lt;表内容&gt;<br><span class="hljs-keyword">\end</span>&#123;wraptable&#125;<br></code></pre></td></tr></table></figure>
+<p>在使用时，<code>&lt;图内容&gt;</code> 及 <code>&lt;表内容&gt;</code> 与普通 <code>figure</code>、<code>table</code> 环境的内容相同，可以是任意代码产生的图表，也可以使用 <code>\caption</code> 命令生成标题。在环境后面的段落内容江辉沿图表绕排。在这里，<code>&lt;位置&gt;</code> 参数不区分大小写，可以是 <code>l,r</code>，即左右两侧；也可以用 <code>o,i</code>，表示双页页面的装订内侧和外侧。<code>&lt;宽度&gt;</code> 则指定图表环境所占用的宽度。可选的 <code>&lt;行数&gt;</code> 可以指定图表占用的行数，如果留空则会按照内容高度自动计算（不过自动计算的结果有时偏大）。<code>&lt;外伸长度&gt;</code> 如果大于 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span> pt，则图表会向左右侧面伸出版心指定的长度，产生特殊的效果。</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-comment">% 导言区</span><br><span class="hljs-keyword">\usepackage</span>&#123;wrapfig&#125;<br><span class="hljs-comment">% ……</span><br><span class="hljs-keyword">\begin</span>&#123;wraptable&#125;[4]&#123;r&#125;[1.5cm]&#123;4.5cm&#125;<br>    <span class="hljs-keyword">\centering</span><br>    <span class="hljs-keyword">\caption</span>&#123;向右伸出的绕排表格&#125;<span class="hljs-keyword">\label</span>&#123;tag:wraptable&#125;<br>    <span class="hljs-keyword">\begin</span>&#123;tabular&#125;&#123;|c|c|c|c|&#125;<br>        <span class="hljs-keyword">\hline</span><br>        甲 <span class="hljs-built_in">&amp;</span> 乙 <span class="hljs-built_in">&amp;</span> 丙 <span class="hljs-built_in">&amp;</span> 丁 <span class="hljs-keyword">\\</span><br>        <span class="hljs-keyword">\hline</span><br>    <span class="hljs-keyword">\end</span>&#123;tabular&#125;<br><span class="hljs-keyword">\end</span>&#123;wraptable&#125;<br></code></pre></td></tr></table></figure>
+<p><code>wrapfig</code> 在使用时可以不必指定把多少文字包含进绕排的范围，但它同样也有与 <code>picinpar</code> 类似的问题，即本页中剩下的空间必须足够放下被绕排的图表，否则也将造成难看的分页。在功能上，<code>wrapfig</code> 可以让图伸出版心之外，不过不能把图表放在中间或跳过前几行，因而与 <code>picinpar</code> 有互补的效果。</p>
+<h4 id="3-6-3-floatflt-宏包">3.6.3 <code>floatflt</code> 宏包</h4>
+<p><code>floatflt</code> 宏包与 <code>wrapfig</code> 类似，它提供了 <code>floatingfigure</code> 和 <code>floatingtable</code> 的浮动环境，可以把浮动体放在一段开头的左侧或右侧。<code>floatflt</code> 的独特功能是提供了 <code>\fltitem</code> 命令，试图解决与列表环境共用时产生的问题。</p>
+<h4 id="3-6-4-shapepar-宏包">3.6.4 <code>shapepar</code> 宏包</h4>
+<p><code>shapepar</code> 宏包的 <code>\cutout</code> 命令部分实现了复杂形状绕排功能，其基本语法格式为：</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-keyword">\cutout</span>&#123;&lt;side&gt;&#125;(&lt;h<span class="hljs-built_in">_</span>offset&gt;,&lt;v<span class="hljs-built_in">_</span>offset&gt;)&lt;settings&gt; <span class="hljs-keyword">\shapepar</span> &lt;文字内容&gt;<br></code></pre></td></tr></table></figure>
+<p>其中，必选的 <code>&lt;side&gt;</code> 参数只能为 <code>l,r</code>。图表的默认的位置为盒子的中心位置，可选的 <code>&lt;h_offset&gt;</code>、<code>&lt;v_offset&gt;</code> 分别表示图表由默认位置上在水平、垂直方向上的偏移，正值分别表示往右、下偏移，负值分别表示往左、上。</p>
+<p><code>shapepar</code> 宏包提供了许多预定义的绕排形状，详细参见官方文档：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">texdoc shapepar<br></code></pre></td></tr></table></figure>
+<h4 id="3-6-5-cutwin-宏包">3.6.5 <code>cutwin</code> 宏包</h4>
+<p><code>cutwin</code> 宏包也提供了类似 <code>picinpar</code>、<code>wrapfig</code> 的绕排功能，同时与 <code>shapepar</code> 一样还支持自定义挖洞的形状。虽然没有 <code>shaperpar</code> 一样丰富的预定义形状，不过在处理绕排时其语法相对自然。<code>cutwin</code> 与 <code>shapepar</code> 宏包有命名冲突，具体用法参见官方文档：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">texdoc cutwin<br></code></pre></td></tr></table></figure>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/Technique/">Technique</a>
+                    
+                      <a class="hover-with-bg" href="/categories/Technique/TeX/">TeX</a>
+                    
+                      <a class="hover-with-bg" href="/categories/Technique/TeX/LaTeX/">LaTeX</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Technique/">Technique</a>
+                    
+                      <a class="hover-with-bg" href="/tags/TeX/">TeX</a>
+                    
+                      <a class="hover-with-bg" href="/tags/LaTeX/">LaTeX</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2021/03/30/Technique/TeX/LaTeX/LaTeX%E6%B5%AE%E5%8A%A8%E4%BD%93/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">LaTeX浮动体</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/03/26/Technique/TeX/LaTeX/LaTeX%E5%B9%BB%E7%81%AF%E7%89%87%E6%8F%90%E7%BA%B2/LaTeX%E5%B9%BB%E7%81%AF%E7%89%87%E6%8F%90%E7%BA%B2/">
+                        <span class="hidden-mobile">LaTeX幻灯片提纲</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="waline"></div>
+  <script type="text/javascript">
+    Fluid.utils.lazyComments('waline', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js', function () {
+        new Waline({
+          el: "#waline",
+          placeholder: "都看到这里了，留个脚印再走呗~",
+          path: window.location.pathname,
+          avatar: "retro",
+          visitor: true,
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: true,
+          serverURL: "https://waline-one-beta.vercel.app/",
+          avatarCDN: "https://gravatar.loli.net/avatar/",
+          avatarForce: false,
+          requiredMeta: [],
+          emoji: ["https://cdn.jsdelivr.net/gh/hotarugali/Emoji@bilibili_tv_gif/waline/bilibili_tv_gif","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@bilibiliHotKey/waline/bilibiliHotKey","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@bilibili2233/waline/bilibili2233","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@smallshake/waline/smallshake","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@alu/waline/alu","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@QQ/waline/QQ","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@Tieba-New/waline/Tieba-New","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@weibo/waline/weibo"],
+          // emojiMaps: ,
+          login: "enable",
+          dark: 'html[data-user-color-scheme="dark"]',
+        });
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the
+    <a target="_blank" href="https://waline.js.org" rel="nofollow noopener noopener">comments powered by Waline.</a>
+  </noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+      <div class="col-lg-7 mx-auto nopadding-x-md">
+        <div class="container custom mx-auto">
+          <script src="https://myhkw.cn/api/player/161389264877" id="myhk" key="161389264877" m="1"></script>
+        </div>
+      </div>
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+
+  <script defer src="/js/leancloud.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- KaTeX -->
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" />
+  
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/mermaid@8.8.3/dist/mermaid.min.js" ></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({"theme":"default"});
+    }
+  </script>
+
+
+
+
+  
+    <!-- Baidu Analytics -->
+    <script defer>
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?c194cf0c8cbc33bfb846ba1329537d81";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  
+    <!-- Google Analytics -->
+    <script defer>
+      window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) };
+      ga.l = +new Date;
+      ga('create', 'G-SXJN0942X9', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+  
+
+  
+    <!-- Google gtag.js -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D3DEHLLP3W"></script>
+    <script defer>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-D3DEHLLP3W');
+    </script>
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

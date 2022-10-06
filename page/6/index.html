@@ -18,7 +18,7 @@
   <meta name="author" content="BlueHeart0621">
   <meta name="keywords" content="頑張れ">
   
-    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script> <script src="/live2d-widget/autoload.js" type="text/javascript"></script> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script> <script src="/live2d-widget/autoload.js" type="text/javascript"></script> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/> <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
   
   <title>お前はどこまで見えている</title>
 
@@ -197,19 +197,17 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/08/21/Linux/ArchLinux/ArchLinux%E4%B8%8B%E8%AE%BE%E7%BD%AE%E4%BA%A4%E6%8D%A2%E7%A9%BA%E9%97%B4/">ArchLinux下设置交换空间</a>
+        <a href="/2022/03/01/Technique/Linux/CentOS/CentOS7%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BAXray/">CentOS7服务器搭建Xray</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/08/21/Linux/ArchLinux/ArchLinux%E4%B8%8B%E8%AE%BE%E7%BD%AE%E4%BA%A4%E6%8D%A2%E7%A9%BA%E9%97%B4/">
+        <a href="/2022/03/01/Technique/Linux/CentOS/CentOS7%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BAXray/">
           
           
             
           
           1. 简介
-Linux 将物理内存分为内存段，叫做页面。交换是指内存页面被复制到预先设定好的硬盘空间（叫做交换空间）的过程，目的是释放这份内存页面。物理内存和交换空间的总大小是可用的虚拟内存的总量。
-1.1 交换空间
-交换空间通常是一个磁盘分区（交换分区），但是也可以是一个文件（交换文件）。用户可以在安装 Arch Linux 的时候创建交换空间，或者在安装后的任何时间建立交换空间。交换空间可用于
+不同于桌面系统，服务器系统更便重于稳定性和可靠性。鉴于 CentOS 是目前使用最广泛的 Linux 服务器系统之一，本人也在自己的 VPS 上安装了 CentOS。虽然不幸的是， CentOS 官方在 2021 年底已经宣布停止维护 CentOS 8，但目前并不影响我们当下继续使用 CentOS 7，CentOS 7 的维护周期到 2024 年才截止。有关 Xray 的介绍可以参见「
         </a>
       </p>
 
@@ -217,8 +215,8 @@ Linux 将物理内存分为内存段，叫做页面。交换是指内存页面�
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-08-21 22:48" pubdate>
-              2021-08-21
+            <time datetime="2022-03-01 00:19" pubdate>
+              2022-03-01
             </time>
           </div>
         
@@ -230,7 +228,7 @@ Linux 将物理内存分为内存段，叫做页面。交换是指内存页面�
             
               <a href="/categories/Technique/Linux/">Linux</a>
             
-              <a href="/categories/Technique/Linux/ArchLinux/">ArchLinux</a>
+              <a href="/categories/Technique/Linux/CentOS/">CentOS</a>
             
           </div>
         
@@ -242,7 +240,7 @@ Linux 将物理内存分为内存段，叫做页面。交换是指内存页面�
             
               <a href="/tags/Linux/">Linux</a>
             
-              <a href="/tags/ArchLinux/">ArchLinux</a>
+              <a href="/tags/CentOS/">CentOS</a>
             
           </div>
         
@@ -256,41 +254,29 @@ Linux 将物理内存分为内存段，叫做页面。交换是指内存页面�
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/08/18/Tools/Zsh/Zsh%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99%E6%B1%87%E6%80%BB/">Zsh相关资料汇总</a>
+        <a href="/2022/02/21/Technique/GPS/GPS%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/">GPS相关资料</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/08/18/Tools/Zsh/Zsh%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99%E6%B1%87%E6%80%BB/">
+        <a href="/2022/02/21/Technique/GPS/GPS%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/">
           
           
             
           
-          1. Zsh
+          1. 相关博文
 
-官方源码
-官网链接
+GPS(英文原版)、GPS(中译版)
 
-2. Zsh 插件
+2. 相关课程
 
-Zsh 插件列表及介绍：Awesome-Zsh-Plugins
+GPS MOOC (Massive Open Online Course)
 
-为了更便于管理插件，Zsh 有好几款插件管理器，诸如 Oh-My-Zsh、Antigen、Zplug、Prezto 等。
-2.1 Oh-My-Zsh
+3. 相关书籍
 
-官方源码
-官网链接
-插件列表
+Global Positioning System: Signals, Measurements, and Performance Revised Second Edition
 
-2.2 Antigen
 
-官方源码
-官网链接
-
-2.3 Zplug
-
-官方源码
-
-2.4 
+我的博客即将同步至腾讯云+社区，邀请大家一同入
         </a>
       </p>
 
@@ -298,8 +284,8 @@ Zsh 插件列表及介绍：Awesome-Zsh-Plugins
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-08-18 12:18" pubdate>
-              2021-08-18
+            <time datetime="2022-02-21 15:37" pubdate>
+              2022-02-21
             </time>
           </div>
         
@@ -309,9 +295,7 @@ Zsh 插件列表及介绍：Awesome-Zsh-Plugins
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/Tools/">Tools</a>
-            
-              <a href="/categories/Technique/Tools/Zsh/">Zsh</a>
+              <a href="/categories/Technique/GPS/">GPS</a>
             
           </div>
         
@@ -321,9 +305,7 @@ Zsh 插件列表及介绍：Awesome-Zsh-Plugins
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Tools/">Tools</a>
-            
-              <a href="/tags/Zsh/">Zsh</a>
+              <a href="/tags/GPS/">GPS</a>
             
           </div>
         
@@ -337,362 +319,22 @@ Zsh 插件列表及介绍：Awesome-Zsh-Plugins
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/08/18/Tools/Tmux/Tmux%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99%E6%B1%87%E6%80%BB/">Tmux相关资料汇总</a>
+        <a href="/2022/02/20/Technique/Linux/Sundry/Linux%E7%B3%BB%E7%BB%9F%E8%BF%81%E7%A7%BB/">Linux系统迁移</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/08/18/Tools/Tmux/Tmux%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99%E6%B1%87%E6%80%BB/">
-          
-          
-            
-          
-          1. Tmux
-
-官方源码
-Tmux 使用教程
-
-2. Tmux 插件
-
-Tmux 插件管理器——tpm
-Tmux 插件列表
-
-Tmux 插件配置方案 ~/.tmux.conf 推荐：
-1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950# --------------
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-08-18 11:18" pubdate>
-              2021-08-18
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/Tools/">Tools</a>
-            
-              <a href="/categories/Technique/Tools/Tmux/">Tmux</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/Tools/">Tools</a>
-            
-              <a href="/tags/Tmux/">Tmux</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/08/18/Browser/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%AE%9E%E7%94%A8%E6%8F%92%E4%BB%B6%E9%9B%86%E5%90%88/">浏览器实用插件集合</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/08/18/Browser/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%AE%9E%E7%94%A8%E6%8F%92%E4%BB%B6%E9%9B%86%E5%90%88/">
-          
-          
-            
-          
-          1. Surfingkeys
-Surfingkeys 插件实在是 Vim 爱好者的福音，它能够让我们以 Vim 的方式用键盘来操作浏览器，而不再依赖鼠标。它目前支持 Chrome、Firefox 以及 Edge 浏览器。
-
-Vimium 插件功能和 Surfingkeys 类似，而且似乎还更强大。
-
-2. FeHelper
-FeHelper 是一款 Web 开发者助手插件，其内部集成了许多实用的 
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-08-18 11:17" pubdate>
-              2021-08-18
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/Browser/">Browser</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/Browser/">Browser</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/08/17/Tools/Aria2/Aria2%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99%E6%B1%87%E6%80%BB/">Aria2相关资料汇总</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/08/17/Tools/Aria2/Aria2%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99%E6%B1%87%E6%80%BB/">
-          
-          
-            
-          
-          1. Aria2
-1.1 官方系列
-
-源码仓库
-官方主页
-官方文档
-
-1.2 第三方系列
-
-P3TERX 的配置方案
-
-
-
-Aria2 配置文件仓库
-Aria2 配置文件说明
-
-
-2. Aria2 GUI 前端
-2.1 AriaNg
-
-源码仓库
-使用手册
-
-2.2 Aria2Ng
-
-源码仓库
-使用手册
-
-2.3 Yaaw
-
-源码仓库
-
-2.4 WebUI-Aria2
-
-源码仓库
-
-2.5 Pers
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-08-17 10:32" pubdate>
-              2021-08-17
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/Tools/">Tools</a>
-            
-              <a href="/categories/Technique/Tools/Aria2/">Aria2</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/Tools/">Tools</a>
-            
-              <a href="/tags/Aria2/">Aria2</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/08/16/Tools/XDM/XDM%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/">XDM常见问题</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/08/16/Tools/XDM/XDM%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/">
-          
-          
-            
-          
-          1. An older version of XDM is already running.
-
-问题：XDM 下载软件无法正常打开，一打开就报错：An older version of XDM is already running 。
-原因：XDM 所在目录下的 download.txt 文件损坏。
-解决：
-
-
-
-关闭 XDM 进程。
-
-12ps aux | grep java_pid    # 
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-08-16 18:23" pubdate>
-              2021-08-16
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/Tools/">Tools</a>
-            
-              <a href="/categories/Technique/Tools/XDM/">XDM</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/Tools/">Tools</a>
-            
-              <a href="/tags/XDM/">XDM</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/08/16/VSCode/VSCode%E8%AE%BE%E7%BD%AE%E4%B8%AD%E8%8B%B1%E6%B7%B7%E5%90%88%E7%AD%89%E5%AE%BD%E5%AD%97%E4%BD%93/">VSCode设置中英混合等宽字体</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/08/16/VSCode/VSCode%E8%AE%BE%E7%BD%AE%E4%B8%AD%E8%8B%B1%E6%B7%B7%E5%90%88%E7%AD%89%E5%AE%BD%E5%AD%97%E4%BD%93/">
-          
-          
-            
-          
-          1. 缘由
-VSCode 中的 alt+shift 快捷键能够同时操作多列，但其前提是被操作的部分要完全对齐，这就要求 VSCode 编缉器使用的字体得是等宽的。
-2. 配置
-2.1 字体
-
-如果只是单纯使用英文或中文，则使用常见的等宽字体即可，比如 Monospace。
-如果有中英文混合使用，则常见的等宽字体就无法保证中英文之间也能很好地对齐。因为中文汉字是全角字符，而英文字符是半角字符。系统上
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-08-16 16:09" pubdate>
-              2021-08-16
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/VSCode/">VSCode</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/VSCode/">VSCode</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/08/16/Linux/ArchLinux/ArchLinux%E4%B8%8B%E9%85%8D%E7%BD%AEaria2/">ArchLinux下配置aria2</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/08/16/Linux/ArchLinux/ArchLinux%E4%B8%8B%E9%85%8D%E7%BD%AEaria2/">
+        <a href="/2022/02/20/Technique/Linux/Sundry/Linux%E7%B3%BB%E7%BB%9F%E8%BF%81%E7%A7%BB/">
           
           
             
           
           1. 简介
-aria2 是一个轻量级、支持多种协议的命令行下载工具。它支持的协议包括 HTTP(S)、FTP、BitTorrent、Metalink 等。aria2 工具可以并发地进行下载，同时还支持分片与续传，自动替换慢的线程等。
-2. 安装
-1sudo pacman -S aria2            # 安装好后可使用 aria2c 命令
-3. 配置
-aria2 安装完后需要进行复杂的配
+Linux 系统迁移系统相对于 Windows 来说还是简单许多，使用 Linux 系统自带的 dd 命令即可。
+2. 系统迁移
+2.1 创建分区表
+如果是一块新硬盘，则首先要为这个新硬盘创建分区表（不是则可以跳过该步）。分区表类型有 MBR 和 GPT 两种，具体使用哪种要看个人的电脑配置。
+
+进入电脑的 BIOS，查看电脑是否支持 UEFI 启动，如果支持则说明兼容 GPT 分区的
         </a>
       </p>
 
@@ -700,8 +342,8 @@ aria2 安装完后需要进行复杂的配
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-08-16 16:06" pubdate>
-              2021-08-16
+            <time datetime="2022-02-20 23:12" pubdate>
+              2022-02-20
             </time>
           </div>
         
@@ -713,7 +355,7 @@ aria2 安装完后需要进行复杂的配
             
               <a href="/categories/Technique/Linux/">Linux</a>
             
-              <a href="/categories/Technique/Linux/ArchLinux/">ArchLinux</a>
+              <a href="/categories/Technique/Linux/Sundry/">Sundry</a>
             
           </div>
         
@@ -725,7 +367,7 @@ aria2 安装完后需要进行复杂的配
             
               <a href="/tags/Linux/">Linux</a>
             
-              <a href="/tags/ArchLinux/">ArchLinux</a>
+              <a href="/tags/Sundry/">Sundry</a>
             
           </div>
         
@@ -739,17 +381,19 @@ aria2 安装完后需要进行复杂的配
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/08/12/InputMethod/%E5%8F%8C%E6%8B%BC%E8%BE%93%E5%85%A5%E6%B3%95/%E5%8F%8C%E6%8B%BC%E8%BE%93%E5%85%A5%E6%B3%95/">双拼输入法</a>
+        <a href="/2022/02/20/Technique/Printer/Canon/TR4527%E8%BE%93%E7%A8%BF%E5%99%A8%E6%81%A2%E5%A4%8D%E8%BF%9B%E7%BA%B8/">TR4527输稿器恢复进纸</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/08/12/InputMethod/%E5%8F%8C%E6%8B%BC%E8%BE%93%E5%85%A5%E6%B3%95/%E5%8F%8C%E6%8B%BC%E8%BE%93%E5%85%A5%E6%B3%95/">
+        <a href="/2022/02/20/Technique/Printer/Canon/TR4527%E8%BE%93%E7%A8%BF%E5%99%A8%E6%81%A2%E5%A4%8D%E8%BF%9B%E7%BA%B8/">
           
           
             
           
           1. 简介
-「全拼输入法」即我们平常系统上默认的拼音输入法，它将字的拼音拆分成一个个的字母，然后用键盘一个个输入。当字母的拼音字母很多时，全拼输入法就比较耗时间。为此，「双拼输入法」被提出。它和 「全拼输入法」的不同之处在于，它将一个字的拼音拆分成「声母」和「韵母」两个部分，而非一个个的字母。然后再将所有声母和韵母映射到键盘上，从而保证每个字只需敲击两次键盘即可完成拼音输入，提高了拼音打字的速度。
+前年买的佳能的 TR4527 打印机，今年回家使用发现，输稿器突然无法使用了。虽然打开输稿器放入纸张会有「嘀」的一声，但按「复印」按钮后打印机始终提示「从玻璃盖板上放纸」，不管设置什么都不管用。最后发现重置一下系统的配置即可，这估计是这款打印机的系统 Bug。
+2. 重置配置
+启动打印机，选择【设置】-&gt;【设备设置】-&gt;【重置设置】-&gt;【设置数据】-&gt;【是】，对
         </a>
       </p>
 
@@ -757,8 +401,8 @@ aria2 安装完后需要进行复杂的配
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-08-12 11:29" pubdate>
-              2021-08-12
+            <time datetime="2022-02-20 19:45" pubdate>
+              2022-02-20
             </time>
           </div>
         
@@ -768,7 +412,9 @@ aria2 安装完后需要进行复杂的配
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/InputMethod/">InputMethod</a>
+              <a href="/categories/Technique/Printer/">Printer</a>
+            
+              <a href="/categories/Technique/Printer/Canon/">Canon</a>
             
           </div>
         
@@ -778,7 +424,9 @@ aria2 安装完后需要进行复杂的配
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/InputMethod/">InputMethod</a>
+              <a href="/tags/Printer/">Printer</a>
+            
+              <a href="/tags/Canon/">Canon</a>
             
           </div>
         
@@ -792,34 +440,59 @@ aria2 安装完后需要进行复杂的配
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/08/12/InputMethod/%E4%BA%94%E7%AC%94%E8%BE%93%E5%85%A5%E6%B3%95/%E4%BA%94%E7%AC%94%E8%BE%93%E5%85%A5%E6%B3%95/">五笔输入法</a>
+        <a href="/2022/02/19/Life/%E7%88%B1%E5%A5%BD/%E7%BA%B8%E6%A8%A1/%E7%BA%B8%E6%A8%A1%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/">纸模相关资料</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/08/12/InputMethod/%E4%BA%94%E7%AC%94%E8%BE%93%E5%85%A5%E6%B3%95/%E4%BA%94%E7%AC%94%E8%BE%93%E5%85%A5%E6%B3%95/">
+        <a href="/2022/02/19/Life/%E7%88%B1%E5%A5%BD/%E7%BA%B8%E6%A8%A1/%E7%BA%B8%E6%A8%A1%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/">
           
           
             
           
-          1. 简介
-新世纪五笔是最新版的五笔输入法，它相较于前两版的五笔输入法（即 86 版和 98 版）拆字更加规范。
-2. 键盘图
-
-3. 字根助记表格
-
-4. 编码流程
-
-4.1 䃼码码元
-新世纪五笔中有四个䃼码码元：礻、衤、犭、飠。它们作为字根时需要两个编码，即「主码」+「副码」；它们作为成字时至少需要四个编码，即「主码」+「副码」+「首笔」+ 「末笔」。
+          网址汇总
 
 
 
-䃼码码元
-字根编码
-成字编码
+网站
+说明
 
 
 
+
+篁竹水声
+中国火箭纸模系列
+
+
+Leo Cherkashyn
+苏联系统火箭纸模
+
+
+AXM
+美国航天飞机、SpaceX 系列纸模
+
+
+NASA
+NASA 发布的 DIY 纸模
+
+
+Canon
+佳能为推销其下提供的简单纸模
+
+
+Gulavaw.tw
+台湾纸模论坛
+
+
+CM 纸模网
+国内纸模论坛
+
+
+Epson
+日本公司 Epson 推出的赛车纸模
+
+
+纸模吧
+国内
         </a>
       </p>
 
@@ -827,8 +500,65 @@ aria2 安装完后需要进行复杂的配
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-08-12 09:53" pubdate>
-              2021-08-12
+            <time datetime="2022-02-19 21:27" pubdate>
+              2022-02-19
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Life/">Life</a>
+            
+              <a href="/categories/Life/%E7%88%B1%E5%A5%BD/">爱好</a>
+            
+              <a href="/categories/Life/%E7%88%B1%E5%A5%BD/%E8%88%AA%E6%A8%A1/">航模</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Life/">Life</a>
+            
+              <a href="/tags/%E7%88%B1%E5%A5%BD/">爱好</a>
+            
+              <a href="/tags/%E8%88%AA%E6%A8%A1/">航模</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2022/02/19/Technique/Windows/Windows%E7%B3%BB%E7%BB%9F%E8%BF%81%E7%A7%BB/">Windows系统迁移</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2022/02/19/Technique/Windows/Windows%E7%B3%BB%E7%BB%9F%E8%BF%81%E7%A7%BB/">
+          
+          
+            
+          
+          1. 简介
+当我们为电脑更换硬盘时（比如更换大一点的硬盘或将 HDD 更换为 SSD），往往需要考虑原硬盘上的系统和数据怎么办。重装系统是一个选择，但重装系统后还要重装系统上的软件，还要迁移数据，费时又费力。另一个方法是迁移系统，这样既不用重装系统也不用重装软件，且系统上的数据还全部保存了下来。然而 Windows 系统自身并没有提供系统迁移的工具，不像 Linux 提供了 dd 命令可以用来直接
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2022-02-19 16:50" pubdate>
+              2022-02-19
             </time>
           </div>
         
@@ -838,7 +568,7 @@ aria2 安装完后需要进行复杂的配
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/InputMethod/">InputMethod</a>
+              <a href="/categories/Technique/Windows/">Windows</a>
             
           </div>
         
@@ -848,7 +578,222 @@ aria2 安装完后需要进行复杂的配
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/InputMethod/">InputMethod</a>
+              <a href="/tags/Windows/">Windows</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2022/02/19/Technique/Net/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/">内网穿透</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2022/02/19/Technique/Net/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/">
+          
+          
+            
+          
+          1. 简介
+一般的校园网/企业网往往都设置有防火墙，在内网可以访问外网，但在外网却无法访问内网。比如校园的服务器，当我们在校外时，只能通过学校的 VPN 访问校园网。然而，这个 VPN 一来可能不稳定，二来往往只有 Windows 平台有（气抖冷），对于 Linux 用户极其不友好。在朋友的推荐下，我使用了 ZeroTier 这款跨平台的虚拟局域网构建工具，使用它能够进行内网穿透，使得外网也能访问
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2022-02-19 10:41" pubdate>
+              2022-02-19
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Net/">Net</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/Net/">Net</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2022/02/18/Game/PSP/PSP%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/">PSP相关资料</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2022/02/18/Game/PSP/PSP%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/">
+          
+          
+            
+          
+          
+PSP Secrets
+
+
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2022-02-18 11:18" pubdate>
+              2022-02-18
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Game/">Game</a>
+            
+              <a href="/categories/Game/PSP/">PSP</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Game/">Game</a>
+            
+              <a href="/tags/PSP/">PSP</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2022/02/18/Game/Tools/%E5%AE%9E%E7%94%A8%E6%B8%B8%E6%88%8F%E5%B7%A5%E5%85%B7%E5%90%88%E9%9B%86/">实用游戏工具合集</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2022/02/18/Game/Tools/%E5%AE%9E%E7%94%A8%E6%B8%B8%E6%88%8F%E5%B7%A5%E5%85%B7%E5%90%88%E9%9B%86/">
+          
+          
+            
+          
+          PPSSPP
+PPSSPP 是一款优秀的开源多平台 PSP 模拟器，其提供内置的 Pro Adhoc 服务器用于联机对战，且能使用手柄进行游戏！
+
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2022-02-18 08:43" pubdate>
+              2022-02-18
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Game/">Game</a>
+            
+              <a href="/categories/Game/Tools/">Tools</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Game/">Game</a>
+            
+              <a href="/tags/Tools/">Tools</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2022/02/18/Game/MonsterHunter/MHP3%E5%9C%A8PPSSPP%E4%B8%8A%E7%9A%84%E8%81%94%E6%9C%BA%E7%8E%A9%E6%B3%95/">MHP3在PPSSPP上的联机玩法</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2022/02/18/Game/MonsterHunter/MHP3%E5%9C%A8PPSSPP%E4%B8%8A%E7%9A%84%E8%81%94%E6%9C%BA%E7%8E%A9%E6%B3%95/">
+          
+          
+            
+          
+          1. 简介
+MHP3 是 CAPCOM 公司针对 PSP 平台开发的一款 ARPG 游戏，于 2010 年 12 月 1 日发行。MHP3 也是我首个玩的怪物猎人游戏，个人觉得这个游戏做得非常不错，虽然它的画质在现在看来太低，但其给人的游戏体验丝毫不差。为了重温经典，特别是多人联机对战（以前我都是玩的单机），我选择了 PPSSPP 这款模拟器。PPSSPP 开源且跨平台，支持联机作战，游戏进度数据
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2022-02-18 08:35" pubdate>
+              2022-02-18
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Game/">Game</a>
+            
+              <a href="/categories/Game/MonsterHunter/">MonsterHunter</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Game/">Game</a>
+            
+              <a href="/tags/MonsterHunter/">MonsterHunter</a>
             
           </div>
         
@@ -860,7 +805,7 @@ aria2 安装完后需要进行复杂的配
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/page/5/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/#board">4</a><a class="page-number" href="/page/5/#board">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/#board">7</a><a class="page-number" href="/page/8/#board">8</a><span class="space">&hellip;</span><a class="page-number" href="/page/44/#board">44</a><a class="extend next" rel="next" href="/page/7/#board"><i class="iconfont icon-arrowright"></i></a>
+      <a class="extend prev" rel="prev" href="/page/5/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/#board">4</a><a class="page-number" href="/page/5/#board">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/#board">7</a><a class="page-number" href="/page/8/#board">8</a><span class="space">&hellip;</span><a class="page-number" href="/page/53/#board">53</a><a class="extend next" rel="next" href="/page/7/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 

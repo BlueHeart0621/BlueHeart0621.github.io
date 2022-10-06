@@ -18,7 +18,7 @@
   <meta name="author" content="BlueHeart0621">
   <meta name="keywords" content="頑張れ">
   
-    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script> <script src="/live2d-widget/autoload.js" type="text/javascript"></script> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script> <script src="/live2d-widget/autoload.js" type="text/javascript"></script> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/> <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
   
   <title>お前はどこまで見えている</title>
 
@@ -197,20 +197,26 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Linux/Shell/LinuxShell%E7%88%B6%E5%AD%90%E5%85%B3%E7%B3%BB%E6%A6%82%E8%BF%B0/">LinuxShell父子关系概述</a>
+        <a href="/2020/06/24/JavaScript/JavaScript%E6%95%B0%E7%BB%84/">JavaScript数组</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Linux/Shell/LinuxShell%E7%88%B6%E5%AD%90%E5%85%B3%E7%B3%BB%E6%A6%82%E8%BF%B0/">
+        <a href="/2020/06/24/JavaScript/JavaScript%E6%95%B0%E7%BB%84/">
           
           
             
           
-          1. 父 Shell
-父 Shell 是用于登录某个远程主机或虚拟控制器终端或在 GUI 中运行终端仿真器时所启动的默认的交互式 Shell 。
+          1. 概述
+数组是一种特殊类型的对象。在 JavaScript 中对数组使用 typeof 运算符会返回 &quot;object&quot;。
 
-Linux Shell 中在当前 Shell 执行脚本文件的方式有：
-12source script             # 在当前 Shell 执行 script 文件. script                  # 在当前 Shell 执
+数组元素可以通过下表访问（非键值对数组），也可以通过键访问（键值对数组）。
+JavaScript 变量可以是对象。数组是特殊类型的对象。可以在相同数组中存放不同类型的变量：对象、函数、数组等……
+
+1.1 创建数组
+
+语法：
+
+12var array-
         </a>
       </p>
 
@@ -218,8 +224,8 @@ Linux Shell 中在当前 Shell 执行脚本文件的方式有：
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
+            <time datetime="2020-06-24 09:36" pubdate>
+              2020-06-24
             </time>
           </div>
         
@@ -229,9 +235,7 @@ Linux Shell 中在当前 Shell 执行脚本文件的方式有：
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/Linux/">Linux</a>
-            
-              <a href="/categories/Technique/Linux/Shell/">Shell</a>
+              <a href="/categories/Technique/JavaScript/">JavaScript</a>
             
           </div>
         
@@ -241,9 +245,7 @@ Linux Shell 中在当前 Shell 执行脚本文件的方式有：
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/Shell/">Shell</a>
+              <a href="/tags/JavaScript/">JavaScript</a>
             
           </div>
         
@@ -257,24 +259,49 @@ Linux Shell 中在当前 Shell 执行脚本文件的方式有：
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Linux/Shell/LinuxShell%E9%87%8D%E5%AE%9A%E5%90%91%E5%92%8C%E7%AE%A1%E9%81%93/">LinuxShell重定向和管道</a>
+        <a href="/2020/06/24/Technique/C++/C++%E8%AF%AD%E8%A8%80%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6%E6%A8%A1%E5%BC%8F/">C++语言打开文件模式</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Linux/Shell/LinuxShell%E9%87%8D%E5%AE%9A%E5%90%91%E5%92%8C%E7%AE%A1%E9%81%93/">
+        <a href="/2020/06/24/Technique/C++/C++%E8%AF%AD%E8%A8%80%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6%E6%A8%A1%E5%BC%8F/">
           
           
             
           
-          Linux Shell 提供重定向符用于重定向命令的输入和输出，提供管道符用于将一个命令的输出重定向作为另一个命令的输入。
-【注】在终端命令上，重定向符总是指向数据流动的方向。
-1. 输出重定向
-1.1 输出重定向符 &gt;
-1command &gt; outputfile
-&gt; 重定向符用于把 command 命令的输出结果重定向输入到指定的 outputfile 文件中。
+          
 
 
-如果 ou
+打开模式
+只可以读
+只可以写
+只可以追加
+读写兼备
+读写兼备
+读追加兼备
+
+
+
+
+文本模式
+r
+w
+a
+r+
+w+
+a+
+
+
+二进制模式
+rb
+wb
+ab
+rb+ (r+b)
+wb+ (w+b)
+ab+ (a+b)
+
+
+
+
         </a>
       </p>
 
@@ -282,8 +309,8 @@ Linux Shell 中在当前 Shell 执行脚本文件的方式有：
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
+            <time datetime="2020-06-24 09:36" pubdate>
+              2020-06-24
             </time>
           </div>
         
@@ -293,9 +320,7 @@ Linux Shell 中在当前 Shell 执行脚本文件的方式有：
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/Linux/">Linux</a>
-            
-              <a href="/categories/Technique/Linux/Shell/">Shell</a>
+              <a href="/categories/Technique/C/">C++</a>
             
           </div>
         
@@ -305,9 +330,7 @@ Linux Shell 中在当前 Shell 执行脚本文件的方式有：
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/Shell/">Shell</a>
+              <a href="/tags/C/">C++</a>
             
           </div>
         
@@ -321,19 +344,29 @@ Linux Shell 中在当前 Shell 执行脚本文件的方式有：
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Linux/Sundry/Linux%E4%B8%8Bfcitx%E9%85%8D%E7%BD%AE%E4%B8%AD%E6%96%87%E6%A0%87%E7%82%B9/">Linux下fcitx配置中文标点</a>
+        <a href="/2020/06/24/Technique/CryptographyBasics/%E5%AF%86%E7%A0%81%E5%88%86%E6%9E%90%E6%96%B9%E5%BC%8F/">密码分析方式</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Linux/Sundry/Linux%E4%B8%8Bfcitx%E9%85%8D%E7%BD%AE%E4%B8%AD%E6%96%87%E6%A0%87%E7%82%B9/">
+        <a href="/2020/06/24/Technique/CryptographyBasics/%E5%AF%86%E7%A0%81%E5%88%86%E6%9E%90%E6%96%B9%E5%BC%8F/">
           
           
             
           
-          Linux 系统环境下使用中文输入法往往是令人头疼的一件事。使用 fcitx 成功安装了中文输入法后，却发现中文标点和日常使用不一致。这是由于系统设定的全角标点映射集不符合我们期望，于是乎我们可以撸起袖子定制属于自己的个性化中文标点映射集。
+          1. 唯密文攻击（COA）
+破译者只知道「加密算法」和「带破译的密文」。
 
-查看 /usr/share/fcitx/data/punc.mb.zh_CN 文件
-本人系统上目前的全角标点映射集如下（第一列是键盘符号，每个键盘符号可以对
+举例：实验一仿射密码的暴力破解就属于唯密文攻击。
+
+2. 已知明文攻击（KPA）
+破译者知道「加密算法」和经密钥加密形成的一个或多个「明文——密文对」。
+
+举例：希尔密码依赖唯密文攻击较难破解，但通过已知明文破解攻击则容易破解。
+
+3. 选择明文攻击（CPA）
+破译者知道「加密算法」、「选择的明文」和「对应的密文」。
+
+举
         </a>
       </p>
 
@@ -341,8 +374,8 @@ Linux Shell 中在当前 Shell 执行脚本文件的方式有：
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
+            <time datetime="2020-06-24 09:36" pubdate>
+              2020-06-24
             </time>
           </div>
         
@@ -352,9 +385,7 @@ Linux Shell 中在当前 Shell 执行脚本文件的方式有：
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/Linux/">Linux</a>
-            
-              <a href="/categories/Technique/Linux/Sundry/">Sundry</a>
+              <a href="/categories/Technique/CryptographyBasics/">CryptographyBasics</a>
             
           </div>
         
@@ -364,9 +395,7 @@ Linux Shell 中在当前 Shell 执行脚本文件的方式有：
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/Sundry/">Sundry</a>
+              <a href="/tags/CryptographyBasics/">CryptographyBasics</a>
             
           </div>
         
@@ -380,23 +409,24 @@ Linux Shell 中在当前 Shell 执行脚本文件的方式有：
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Linux/Sundry/Linux%E4%B8%8Bsudo%E6%8A%A5%E9%94%99/">Linux下sudo报错</a>
+        <a href="/2020/06/24/Technique/JavaScript/JavaScript%E5%87%BD%E6%95%B0%E3%80%81%E5%AF%B9%E8%B1%A1%E5%92%8C%E4%BA%8B%E4%BB%B6/">JavaScript函数、对象和事件</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Linux/Sundry/Linux%E4%B8%8Bsudo%E6%8A%A5%E9%94%99/">
+        <a href="/2020/06/24/Technique/JavaScript/JavaScript%E5%87%BD%E6%95%B0%E3%80%81%E5%AF%B9%E8%B1%A1%E5%92%8C%E4%BA%8B%E4%BB%B6/">
           
           
             
           
-          1. sudo: XXX: command not found
-其中，XXX 是所运行的程序命令。
+          1. 函数
 
+JavaScript 函数通过 function 关键词进行定义，其后是函数名和括号 ()。
+函数名可包含字母、数字、下划线和美元符号（规则与变量名相同）。
+圆括号可包括由逗号分隔的参数，由函数执行的代码被放置在花括号 {} 中：
 
-问题：直接运行 XXX 程序命令时没有问题，但加上超级权限 sudo 就报错 command not found 。
+123function name(参数 1, 参数 2, 参数 3) &#123;    要执行的代码&#125;
 
-
-原因：使用 sudo 命令时，使用的配置文件是 /etc/sudoers，查找可运行程序命令由 /etc/sudoers 文件中的 $secure_path 环境变量指定，所
+当 JavaScript 到达 r
         </a>
       </p>
 
@@ -404,8 +434,8 @@ Linux Shell 中在当前 Shell 执行脚本文件的方式有：
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
+            <time datetime="2020-06-24 09:36" pubdate>
+              2020-06-24
             </time>
           </div>
         
@@ -415,9 +445,7 @@ Linux Shell 中在当前 Shell 执行脚本文件的方式有：
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/Linux/">Linux</a>
-            
-              <a href="/categories/Technique/Linux/Sundry/">Sundry</a>
+              <a href="/categories/Technique/JavaScript/">JavaScript</a>
             
           </div>
         
@@ -427,9 +455,7 @@ Linux Shell 中在当前 Shell 执行脚本文件的方式有：
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/Sundry/">Sundry</a>
+              <a href="/tags/JavaScript/">JavaScript</a>
             
           </div>
         
@@ -443,23 +469,25 @@ Linux Shell 中在当前 Shell 执行脚本文件的方式有：
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Linux/Sundry/Linux%E4%B8%8B%E4%BD%BF%E7%94%A8%E6%89%93%E5%8D%B0%E6%9C%BA/">Linux下使用打印机</a>
+        <a href="/2020/06/24/Technique/JavaScript/JavaScript%E5%AD%97%E7%AC%A6%E4%B8%B2/">JavaScript字符串</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Linux/Sundry/Linux%E4%B8%8B%E4%BD%BF%E7%94%A8%E6%89%93%E5%8D%B0%E6%9C%BA/">
+        <a href="/2020/06/24/Technique/JavaScript/JavaScript%E5%AD%97%E7%AC%A6%E4%B8%B2/">
           
           
             
           
-          1. 查看打印机守护进程状态
-1systemctl status cups.service
-如果打印机守护进程没有开启，则需要先启动：
-1systemctl start cups.service
-2. 查看 CPUs 守护进程状态
-在浏览器输入 http://localhost:631，会弹出打印机的管理界面。
-3. 查看 USB 是否连上打印机
-打开 /dev/usb 文件夹，如果有 lpn 文
+          1. 概述
+JavaScript 字符串是引号（单引号或双引号）中的零个或多个字符，用于存储和操作文本。
+
+对于特殊字符：'、&quot;、\ 使用时需要前置转义字符 \ 来使用。
+
+123\&#x27;\&quot;\\
+
+在字符串中换行，通过一个反斜杠即可。
+
+【注】\ 方法并不是 ECMAScript (JavaScript) 标准，某些浏览器也不允许 \ 字符之后的空格，对长字符串换行的最
         </a>
       </p>
 
@@ -467,8 +495,8 @@ Linux Shell 中在当前 Shell 执行脚本文件的方式有：
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
+            <time datetime="2020-06-24 09:36" pubdate>
+              2020-06-24
             </time>
           </div>
         
@@ -478,9 +506,7 @@ Linux Shell 中在当前 Shell 执行脚本文件的方式有：
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/Linux/">Linux</a>
-            
-              <a href="/categories/Technique/Linux/Sundry/">Sundry</a>
+              <a href="/categories/Technique/JavaScript/">JavaScript</a>
             
           </div>
         
@@ -490,9 +516,7 @@ Linux Shell 中在当前 Shell 执行脚本文件的方式有：
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/Sundry/">Sundry</a>
+              <a href="/tags/JavaScript/">JavaScript</a>
             
           </div>
         
@@ -506,24 +530,33 @@ Linux Shell 中在当前 Shell 执行脚本文件的方式有：
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Linux/Ubuntu/Ubuntu18.04%E6%9B%B4%E6%8D%A2%E5%9B%BD%E5%86%85%E6%BA%90/">Ubuntu18.04更换国内源</a>
+        <a href="/2020/06/24/Technique/JavaScript/JavaScript%E6%95%B0%E5%80%BC/">JavaScript数值</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Linux/Ubuntu/Ubuntu18.04%E6%9B%B4%E6%8D%A2%E5%9B%BD%E5%86%85%E6%BA%90/">
+        <a href="/2020/06/24/Technique/JavaScript/JavaScript%E6%95%B0%E5%80%BC/">
           
           
             
           
-          1. 备份原来的源文件 /etc/apt/sources.list
-1sudo mv /etc/apt/sources.list /etc/apt/sources.list.bk
-2. 新建文件 /etc/apt/sources.list
-1sudo vim /etc/apt/sources.list
-3. 将国内源粘贴复制进去
+          1. 概述
+JavaScript 只有一种数值类型，书写数值时带不带小数点均可。超大或超小的数可通过科学计数法来写。
 
-阿里源
+JavaScript 数值始终是 64 位的浮点数。此格式用 64 位存储数值，其中 0 到 51 存储数字（片段），52 到 62 存储指数，63 位存储符号：
 
-123456789101112deb http://mi
+
+
+
+值
+指数
+符号
+
+
+
+
+52 bits(0 - 51)
+11 bits (52 - 62)
+1 bit (6
         </a>
       </p>
 
@@ -531,8 +564,8 @@ Linux Shell 中在当前 Shell 执行脚本文件的方式有：
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
+            <time datetime="2020-06-24 09:36" pubdate>
+              2020-06-24
             </time>
           </div>
         
@@ -542,9 +575,7 @@ Linux Shell 中在当前 Shell 执行脚本文件的方式有：
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/Linux/">Linux</a>
-            
-              <a href="/categories/Technique/Linux/Ubuntu/">Ubuntu</a>
+              <a href="/categories/Technique/JavaScript/">JavaScript</a>
             
           </div>
         
@@ -554,9 +585,7 @@ Linux Shell 中在当前 Shell 执行脚本文件的方式有：
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/Ubuntu/">Ubuntu</a>
+              <a href="/tags/JavaScript/">JavaScript</a>
             
           </div>
         
@@ -570,24 +599,26 @@ Linux Shell 中在当前 Shell 执行脚本文件的方式有：
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Linux/Ubuntu/Ubuntu20.04%E6%9B%B4%E6%8D%A2%E5%9B%BD%E5%86%85%E6%BA%90/">Ubuntu20.04更换国内源</a>
+        <a href="/2020/06/24/Technique/JavaScript/JavaScript%E6%95%B0%E7%BB%84/">JavaScript数组</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Linux/Ubuntu/Ubuntu20.04%E6%9B%B4%E6%8D%A2%E5%9B%BD%E5%86%85%E6%BA%90/">
+        <a href="/2020/06/24/Technique/JavaScript/JavaScript%E6%95%B0%E7%BB%84/">
           
           
             
           
-          1. 备份原来的源文件 /etc/apt/sources.list
-1sudo mv /etc/apt/sources.list /etc/apt/sources.list.bk
-2. 新建文件 /etc/apt/sources.list
-1sudo vim /etc/apt/sources.list
-3. 将国内源粘贴复制进去
+          1. 概述
+数组是一种特殊类型的对象。在 JavaScript 中对数组使用 typeof 运算符会返回 &quot;object&quot;。
 
-清华源
+数组元素可以通过下表访问（非键值对数组），也可以通过键访问（键值对数组）。
+JavaScript 变量可以是对象。数组是特殊类型的对象。可以在相同数组中存放不同类型的变量：对象、函数、数组等……
 
-12345678910111213# 默认注释了源码镜像
+1.1 创建数组
+
+语法：
+
+12var array-
         </a>
       </p>
 
@@ -595,8 +626,8 @@ Linux Shell 中在当前 Shell 执行脚本文件的方式有：
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
+            <time datetime="2020-06-24 09:36" pubdate>
+              2020-06-24
             </time>
           </div>
         
@@ -606,9 +637,7 @@ Linux Shell 中在当前 Shell 执行脚本文件的方式有：
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/Linux/">Linux</a>
-            
-              <a href="/categories/Technique/Linux/Ubuntu/">Ubuntu</a>
+              <a href="/categories/Technique/JavaScript/">JavaScript</a>
             
           </div>
         
@@ -618,9 +647,7 @@ Linux Shell 中在当前 Shell 执行脚本文件的方式有：
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/Ubuntu/">Ubuntu</a>
+              <a href="/tags/JavaScript/">JavaScript</a>
             
           </div>
         
@@ -634,22 +661,20 @@ Linux Shell 中在当前 Shell 执行脚本文件的方式有：
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/MarkDown/MarkDown%E9%AB%98%E7%BA%A7%E6%8A%80%E5%B7%A7/MarkDown%E9%AB%98%E7%BA%A7%E6%8A%80%E5%B7%A7/">MarkDown高级技巧</a>
+        <a href="/2020/06/24/Technique/Math/Theory/%E5%8D%A1%E8%BF%88%E5%85%8B%E5%B0%94%E5%87%BD%E6%95%B0/">卡迈克尔函数</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/MarkDown/MarkDown%E9%AB%98%E7%BA%A7%E6%8A%80%E5%B7%A7/MarkDown%E9%AB%98%E7%BA%A7%E6%8A%80%E5%B7%A7/">
+        <a href="/2020/06/24/Technique/Math/Theory/%E5%8D%A1%E8%BF%88%E5%85%8B%E5%B0%94%E5%87%BD%E6%95%B0/">
           
           
             
           
-          1. MarkDown绘图
-
-添加属性：属性用 &#123;&#125; 括起来。
-比如 mermaid 居中（左对齐/右对齐同理）属性：（flow 等同理）
-
-12```mermaid &#123;align=&quot;center&quot;&#125;       xxxxxx
-1234## 2. MarkDown代码块中插入代码块即在代码块中再次引用代码块，产生以下效果：```markd
+          1. 定义
+卡迈克尔函数定义为：当 nnn 为 1、2、4、奇质数的次幂、奇质数的次幂的两倍时为欧拉函数，当 nnn 为 2、4 以外的 2 的次幂时为欧拉函数的一半。
+λ(n)={ϕ(n)    n=1,2,3,4,5,6,7,9,10,⋯12ϕ(n)    n=8,16,32,64,128,256,⋯\begin{array}{c}
+\lambda(n) = \left\{
+    \begi
         </a>
       </p>
 
@@ -657,8 +682,8 @@ Linux Shell 中在当前 Shell 执行脚本文件的方式有：
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
+            <time datetime="2020-06-24 09:36" pubdate>
+              2020-06-24
             </time>
           </div>
         
@@ -668,7 +693,9 @@ Linux Shell 中在当前 Shell 执行脚本文件的方式有：
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/MarkDown/">MarkDown</a>
+              <a href="/categories/Technique/Math/">Math</a>
+            
+              <a href="/categories/Technique/Math/Theory/">Theory</a>
             
           </div>
         
@@ -678,7 +705,9 @@ Linux Shell 中在当前 Shell 执行脚本文件的方式有：
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/MarkDown/">MarkDown</a>
+              <a href="/tags/Math/">Math</a>
+            
+              <a href="/tags/Theory/">Theory</a>
             
           </div>
         
@@ -692,21 +721,22 @@ Linux Shell 中在当前 Shell 执行脚本文件的方式有：
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/MatLab/MatLab%E5%87%BD%E6%95%B0ylabel%E3%80%81ylim%E3%80%81yticks%E3%80%81yticklabels%E3%80%81ytickformat/MatLab%E5%87%BD%E6%95%B0ylabel%E3%80%81ylim%E3%80%81yticks%E3%80%81yticklabels%E3%80%81ytickformat/">MatLab函数ylabel、ylim、yticks、yticklabels、ytickformat</a>
+        <a href="/2020/06/24/Technique/Math/Theory/%E8%B4%B9%E9%A9%AC%E5%B0%8F%E5%AE%9A%E7%90%86/">费马小定理</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/MatLab/MatLab%E5%87%BD%E6%95%B0ylabel%E3%80%81ylim%E3%80%81yticks%E3%80%81yticklabels%E3%80%81ytickformat/MatLab%E5%87%BD%E6%95%B0ylabel%E3%80%81ylim%E3%80%81yticks%E3%80%81yticklabels%E3%80%81ytickformat/">
+        <a href="/2020/06/24/Technique/Math/Theory/%E8%B4%B9%E9%A9%AC%E5%B0%8F%E5%AE%9A%E7%90%86/">
           
           
             
           
-          【注】x、z 轴对应函数同理；具体函数详解在 MatLab 中使用命令 help func 查阅。
-1. ylabel 函数
-1.1 作用
-为 y 轴添加标签。
-1.2 语法
-1234ylabel(text) % 为 gca 命令返回的当前坐标区或者图形的 y 轴添加标签ylabel(target,text) % 向 target 指定的坐标区或图形添加标签ylabel(___,Name,Valu
+          1. 定义
+假如 a{\displaystyle a}a 是一个整数，p{\displaystyle p}p是一个质数，那么 ap−a{\displaystyle a^{p}-a}ap−a 是 ppp 的倍数，可以表示为
+ap≡a  (mod  p)\begin{array}{c}
+a^p \equiv a \,\, (mod \,\, p)
+\end{array}
+ap≡a(modp)​
+如果 
         </a>
       </p>
 
@@ -714,8 +744,8 @@ Linux Shell 中在当前 Shell 执行脚本文件的方式有：
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
+            <time datetime="2020-06-24 09:36" pubdate>
+              2020-06-24
             </time>
           </div>
         
@@ -725,7 +755,9 @@ Linux Shell 中在当前 Shell 执行脚本文件的方式有：
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/MatLab/">MatLab</a>
+              <a href="/categories/Technique/Math/">Math</a>
+            
+              <a href="/categories/Technique/Math/Theory/">Theory</a>
             
           </div>
         
@@ -735,7 +767,9 @@ Linux Shell 中在当前 Shell 执行脚本文件的方式有：
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/MatLab/">MatLab</a>
+              <a href="/tags/Math/">Math</a>
+            
+              <a href="/tags/Theory/">Theory</a>
             
           </div>
         
@@ -749,24 +783,17 @@ Linux Shell 中在当前 Shell 执行脚本文件的方式有：
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/MatLab/MatLab%E5%87%BD%E6%95%B0yyaxis/MatLab%E5%87%BD%E6%95%B0yyaxis/">MatLab函数yyaxis</a>
+        <a href="/2020/06/24/Technique/Web/HTML/HTML%E6%A0%87%E7%AD%BE%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C/">HTML标签参考手册</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/MatLab/MatLab%E5%87%BD%E6%95%B0yyaxis/MatLab%E5%87%BD%E6%95%B0yyaxis/">
+        <a href="/2020/06/24/Technique/Web/HTML/HTML%E6%A0%87%E7%AD%BE%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C/">
           
           
             
           
-          【注】详情请参阅 MatLab help 文档。
-1. 简介
-yyaxis 函数可以创建具有两个 y 轴的坐标图。
-2. 格式
-123yyaxis leftyyaxis rightyyaxis(ax,___)
-
-
-yyaxis left
-激活当前坐标区中与左侧 y 轴关联的一侧，后续图形命令的目标均为左侧 y 轴。如果当前坐标区中没有两个 y 轴，此命令将添加第二个 y 轴。如果没有坐标区，此命令
+          HTML Basic Document
+12345678&lt;html&gt;    &lt;head&gt;        &lt;title&gt;Document name goes here&lt;/title&gt;    &lt;/head&gt;    &lt;body&gt;        Visible text goes here    &lt;/body&gt;&lt;/h
         </a>
       </p>
 
@@ -774,8 +801,8 @@ yyaxis left
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
+            <time datetime="2020-06-24 09:36" pubdate>
+              2020-06-24
             </time>
           </div>
         
@@ -785,7 +812,9 @@ yyaxis left
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/MatLab/">MatLab</a>
+              <a href="/categories/Technique/Web/">Web</a>
+            
+              <a href="/categories/Technique/Web/HTML/">HTML</a>
             
           </div>
         
@@ -795,7 +824,9 @@ yyaxis left
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/MatLab/">MatLab</a>
+              <a href="/tags/Web/">Web</a>
+            
+              <a href="/tags/HTML/">HTML</a>
             
           </div>
         
@@ -807,7 +838,7 @@ yyaxis left
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/page/40/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/39/#board">39</a><a class="page-number" href="/page/40/#board">40</a><span class="page-number current">41</span><a class="page-number" href="/page/42/#board">42</a><a class="page-number" href="/page/43/#board">43</a><a class="page-number" href="/page/44/#board">44</a><a class="extend next" rel="next" href="/page/42/#board"><i class="iconfont icon-arrowright"></i></a>
+      <a class="extend prev" rel="prev" href="/page/40/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/39/#board">39</a><a class="page-number" href="/page/40/#board">40</a><span class="page-number current">41</span><a class="page-number" href="/page/42/#board">42</a><a class="page-number" href="/page/43/#board">43</a><span class="space">&hellip;</span><a class="page-number" href="/page/53/#board">53</a><a class="extend next" rel="next" href="/page/42/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 

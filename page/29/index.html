@@ -18,7 +18,7 @@
   <meta name="author" content="BlueHeart0621">
   <meta name="keywords" content="頑張れ">
   
-    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script> <script src="/live2d-widget/autoload.js" type="text/javascript"></script> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script> <script src="/live2d-widget/autoload.js" type="text/javascript"></script> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/> <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
   
   <title>お前はどこまで見えている</title>
 
@@ -197,24 +197,23 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/08/14/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%A6/BSGS%E7%AE%97%E6%B3%95/">BSGS算法</a>
+        <a href="/2020/09/27/Technique/Math/Theory/%E7%9F%A9%E9%98%B5/%E8%8C%83%E6%95%B0/">范数</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/08/14/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%A6/BSGS%E7%AE%97%E6%B3%95/">
+        <a href="/2020/09/27/Technique/Math/Theory/%E7%9F%A9%E9%98%B5/%E8%8C%83%E6%95%B0/">
           
           
             
           
-          1. 简介
-BSGS 算法也称为大小步算法，主要用来解决
-Ax≡Bmod  p\begin{array}{c}
-A^x \equiv B \mod{p}
+          1. 向量范数
+1.1 LpL_pLp​ 范数
+LpL_pLp​ 范数是向量空间中的一组范数。
+1.1.1 定义
+Lp(x⃗)=∣x⃗∣p=(∑i=1n∣xi∣p)1p\begin{array}{c}
+L_p(\vec{x}) = |\vec{x}|_p = (\sum_{i=1}^n |x_i|^p)^{\frac{1}{p}}
 \end{array}
-Ax≡Bmodp​
-的问题，其中 ppp 为质数。
-2. 算法
-令 x=i⋅m−jx = i \cdot m -jx=i⋅m−j，其中 m=⌈p ⌉m = \lceil \sqrt{p} \,\rceilm=⌈p​⌉。此时
+Lp​(x)=∣x∣p​=(∑i=1n​∣
         </a>
       </p>
 
@@ -222,8 +221,8 @@ Ax≡Bmodp​
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-08-14 21:19" pubdate>
-              2020-08-14
+            <time datetime="2020-09-27 19:20" pubdate>
+              2020-09-27
             </time>
           </div>
         
@@ -233,11 +232,11 @@ Ax≡Bmodp​
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/ACM/">ACM</a>
+              <a href="/categories/Technique/Math/">Math</a>
             
-              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/">算法</a>
+              <a href="/categories/Technique/Math/Theory/">Theory</a>
             
-              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%A6/">数学</a>
+              <a href="/categories/Technique/Math/Theory/%E7%9F%A9%E9%98%B5/">矩阵</a>
             
           </div>
         
@@ -247,11 +246,13 @@ Ax≡Bmodp​
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/ACM/">ACM</a>
-            
-              <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
-            
               <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
+            
+              <a href="/tags/Math/">Math</a>
+            
+              <a href="/tags/Theory/">Theory</a>
+            
+              <a href="/tags/%E7%9F%A9%E9%98%B5/">矩阵</a>
             
           </div>
         
@@ -265,153 +266,20 @@ Ax≡Bmodp​
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/08/14/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%A6/%E4%BA%8C%E7%BB%B4%E5%87%A0%E4%BD%95%E5%9F%BA%E7%A1%80/">二维几何基础</a>
+        <a href="/2020/09/27/Technique/Math/Theory/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/%E6%9D%A1%E4%BB%B6%E6%95%B0/">条件数</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/08/14/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%A6/%E4%BA%8C%E7%BB%B4%E5%87%A0%E4%BD%95%E5%9F%BA%E7%A1%80/">
-          
-          
-            
-          
-          1. 点、线、凸边形
-123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-08-14 21:19" pubdate>
-              2020-08-14
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/ACM/">ACM</a>
-            
-              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/">算法</a>
-            
-              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%A6/">数学</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/ACM/">ACM</a>
-            
-              <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
-            
-              <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/08/14/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%A6/%E7%9F%A9%E9%98%B5%E6%A0%91%E5%AE%9A%E7%90%86/">矩阵树定理</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/08/14/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%A6/%E7%9F%A9%E9%98%B5%E6%A0%91%E5%AE%9A%E7%90%86/">
-          
-          
-            
-          
-          1. 思想
-矩阵树定理：对于一个无向图 GGG，它的生成树个数等于其基尔霍夫矩阵任何一个 N−1N - 1N−1 阶主子式的行列式的绝对值。
-
-度数矩阵 DDD：是一个 N×NN \times NN×N 的矩阵，其中 D[i][j]=0(i≠j)D[i][j]=0 (i \neq j)D[i][j]=0(i=j)，D[i][i]=iD[i][i]=iD[i][i]=i 号点的度数。
-邻接矩阵 A
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-08-14 21:19" pubdate>
-              2020-08-14
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/ACM/">ACM</a>
-            
-              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/">算法</a>
-            
-              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%A6/">数学</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/ACM/">ACM</a>
-            
-              <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
-            
-              <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/08/14/ACM/%E7%AE%97%E6%B3%95/%E5%9B%BE%E8%AE%BA/%E7%BD%91%E7%BB%9C%E6%B5%81/%E6%9C%80%E5%A4%A7%E6%B5%81/">最大流</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/08/14/ACM/%E7%AE%97%E6%B3%95/%E5%9B%BE%E8%AE%BA/%E7%BD%91%E7%BB%9C%E6%B5%81/%E6%9C%80%E5%A4%A7%E6%B5%81/">
+        <a href="/2020/09/27/Technique/Math/Theory/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/%E6%9D%A1%E4%BB%B6%E6%95%B0/">
           
           
             
           
           1. 简介
-最大流算法主要分为两大类，一类为增广路算法，一类为预流推进算法。最大流算法解决的是在有向网路图 G=(V,E)
-G = (V,E)
-G=(V,E) 中计算从源点 sss 到汇点 ttt 的最大流量问题，以及最小割容量问题。
-
-最小割最大流定理
-s−ts-ts−t 最大流的值等于 s−ts-ts−t 的最小割容量。
-
-2. 增广路算法
-
-
-剩余容量
-剩余容量 cf(u,v)=c(u,v)
+数值分析中，函数的条件数衡量的是输入参数的微小变化可以使函数的输出值变化多少，用来测量函数输出对于输入的微小变化的敏感程度，或者说一个问题的条件数是该数量在数值计算中容易程度的衡量。一个低条件数的问题称为良置的，而高条件数的问题称为病态（非良置）的。
+2. 定义
+给定问题 fff，输入 xxx 以及用于求解问题的算法 f~\tilde{f}f~​，则绝对误差定义为
+E(f~(x))=∣
         </a>
       </p>
 
@@ -419,8 +287,270 @@ s−ts-ts−t 最大流的值等于 s−ts-ts−t 的最小割容量。
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-08-14 21:18" pubdate>
-              2020-08-14
+            <time datetime="2020-09-27 16:49" pubdate>
+              2020-09-27
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Math/">Math</a>
+            
+              <a href="/categories/Technique/Math/Theory/">Theory</a>
+            
+              <a href="/categories/Technique/Math/Theory/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/">数值分析</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
+            
+              <a href="/tags/Math/">Math</a>
+            
+              <a href="/tags/Theory/">Theory</a>
+            
+              <a href="/tags/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/">数值分析</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/09/27/Technique/Math/Theory/%E7%9F%A9%E9%98%B5/%E6%AD%A3%E8%B4%9F%E5%AE%9A%E7%9F%A9%E9%98%B5/">正负定矩阵</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/09/27/Technique/Math/Theory/%E7%9F%A9%E9%98%B5/%E6%AD%A3%E8%B4%9F%E5%AE%9A%E7%9F%A9%E9%98%B5/">
+          
+          
+            
+          
+          1. 正定矩阵
+1.1 定义
+
+
+在实数域下，一个 n×nn \times nn×n 的实对称矩阵 MMM 是正定的，当且仅当对于所有的非零实系数向量 zzz 都有 zTMz&gt;0z^T M z \gt 0zTMz&gt;0 。
+
+
+在复数域下，一个 n×nn \times nn×n 的埃尔米特矩阵 MMM 是正定的当且仅当对于每个非零的复向量 zzz 都有 z∗Mz&gt;0z^* M z 
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-09-27 15:57" pubdate>
+              2020-09-27
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Math/">Math</a>
+            
+              <a href="/categories/Technique/Math/Theory/">Theory</a>
+            
+              <a href="/categories/Technique/Math/Theory/%E7%9F%A9%E9%98%B5/">矩阵</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
+            
+              <a href="/tags/Math/">Math</a>
+            
+              <a href="/tags/Theory/">Theory</a>
+            
+              <a href="/tags/%E7%9F%A9%E9%98%B5/">矩阵</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/09/26/Technique/DeepLearning/%E6%BF%80%E6%B4%BB%E5%87%BD%E6%95%B0/%E6%BF%80%E6%B4%BB%E5%87%BD%E6%95%B0/">激活函数</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/09/26/Technique/DeepLearning/%E6%BF%80%E6%B4%BB%E5%87%BD%E6%95%B0/%E6%BF%80%E6%B4%BB%E5%87%BD%E6%95%B0/">
+          
+          
+            
+          
+          常见激活函数及其导数：
+
+1. Sigmoid 函数
+【注】Sigmoid 型函数是指一类 S 型曲线函数，为两端饱和函数。常用的 Sigmoid 型函数有Logistic函数和Tanh函数。
+1.1 Logistic 函数
+
+定义：
+
+σ(x)=11+e−x\begin{array}{c}
+\sigma(x) = {1 \over 1 + e^{-x}}
+\end{array}
+σ(x)=1+e
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-09-26 20:21" pubdate>
+              2020-09-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/DeepLearning/">DeepLearning</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/DeepLearning/">DeepLearning</a>
+            
+              <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">机器学习&深度学习</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/09/26/Technique/Math/Theory/%E6%95%B0%E5%AD%97%E4%B8%96%E7%95%8C%E4%B8%AD%E5%B8%B8%E8%A7%81%E5%87%BD%E6%95%B0/">数字世界中常见函数</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/09/26/Technique/Math/Theory/%E6%95%B0%E5%AD%97%E4%B8%96%E7%95%8C%E4%B8%AD%E5%B8%B8%E8%A7%81%E5%87%BD%E6%95%B0/">
+          
+          
+            
+          
+          1. 狄利克雷函数
+英文名称为「Dirac Delta Function」。
+1.1 简介
+狄利克雷函数在除零以外的点取值均为 0，但在整个定义域上的积分为 1。δ\deltaδ 函数可以看作是在原点处无限高、无限细，但总面积为 1 的一个尖峰。
+1.2 定义
+δ(x)={+∞x=00x≠0∫−∞+∞δ(x)dx=1\begin{array}{c}
+\delta(x) = \begin{cases
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-09-26 12:23" pubdate>
+              2020-09-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Math/">Math</a>
+            
+              <a href="/categories/Technique/Math/Theory/">Theory</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
+            
+              <a href="/tags/Math/">Math</a>
+            
+              <a href="/tags/Theory/">Theory</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/09/24/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%A6/%E5%BF%AB%E9%80%9F%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/">快速傅里叶变换</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/09/24/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%A6/%E5%BF%AB%E9%80%9F%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/">
+          
+          
+            
+          
+          【注】参考自算法导论。
+1. 简介
+快速傅里叶变换（FFT）是实现离散傅里叶变换（DFT）和离散傅里叶逆变换（IDFT）的快速算法，其时间复杂度为 O(nlog⁡n)O(n \log n)O(nlogn)。DFT 在实际生活中有很多应用，比如通过离散傅里叶变换，可以将系数表示的多项式转为点值表示的多项式，从而使得多项式的乘法的复杂度由 O(n2)O(n^2)O(n2) 降为 O(n)O(n)O(n
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-09-24 10:12" pubdate>
+              2020-09-24
             </time>
           </div>
         
@@ -434,9 +564,7 @@ s−ts-ts−t 最大流的值等于 s−ts-ts−t 的最小割容量。
             
               <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/">算法</a>
             
-              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/%E5%9B%BE%E8%AE%BA/">图论</a>
-            
-              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/%E5%9B%BE%E8%AE%BA/%E7%BD%91%E7%BB%9C%E6%B5%81/">网络流</a>
+              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%A6/">数学</a>
             
           </div>
         
@@ -450,11 +578,9 @@ s−ts-ts−t 最大流的值等于 s−ts-ts−t 的最小割容量。
             
               <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
             
-              <a href="/tags/%E5%9B%BE%E8%AE%BA/">图论</a>
+              <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
             
-              <a href="/tags/%E7%BD%91%E7%BB%9C%E6%B5%81/">网络流</a>
-            
-              <a href="/tags/%E7%BD%91%E7%BB%9C%E6%B5%81%E7%AE%97%E6%B3%95/">网络流算法</a>
+              <a href="/tags/%E6%95%B0%E5%AD%A6-%E7%AE%97%E6%B3%95/">数学 算法</a>
             
           </div>
         
@@ -468,19 +594,18 @@ s−ts-ts−t 最大流的值等于 s−ts-ts−t 的最小割容量。
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/08/14/ACM/%E9%A2%98%E8%A7%A3/PAT%E3%80%8C1003%20Universal%20Travel%20Sites%20(35%E5%88%86)%E3%80%8D/">PAT「1003 Universal Travel Sites (35分)」</a>
+        <a href="/2020/09/24/Technique/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%A6/%E5%BF%AB%E9%80%9F%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/">快速傅里叶变换</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/08/14/ACM/%E9%A2%98%E8%A7%A3/PAT%E3%80%8C1003%20Universal%20Travel%20Sites%20(35%E5%88%86)%E3%80%8D/">
+        <a href="/2020/09/24/Technique/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%A6/%E5%BF%AB%E9%80%9F%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/">
           
           
             
           
-          1. 题目
-题目链接：PAT「1003 Universal Travel Sites (35分)」 。
-Description
-After finishing her tour around the Earth, CYLL is now planning a universal travel sites development project. After a careful investigat
+          【注】参考自算法导论。
+1. 简介
+快速傅里叶变换（FFT）是实现离散傅里叶变换（DFT）和离散傅里叶逆变换（IDFT）的快速算法，其时间复杂度为 O(nlog⁡n)O(n \log n)O(nlogn)。DFT 在实际生活中有很多应用，比如通过离散傅里叶变换，可以将系数表示的多项式转为点值表示的多项式，从而使得多项式的乘法的复杂度由 O(n2)O(n^2)O(n2) 降为 O(n)O(n)O(n
         </a>
       </p>
 
@@ -488,8 +613,8 @@ After finishing her tour around the Earth, CYLL is now planning a universal trav
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-08-14 20:18" pubdate>
-              2020-08-14
+            <time datetime="2020-09-24 10:12" pubdate>
+              2020-09-24
             </time>
           </div>
         
@@ -501,7 +626,9 @@ After finishing her tour around the Earth, CYLL is now planning a universal trav
             
               <a href="/categories/Technique/ACM/">ACM</a>
             
-              <a href="/categories/Technique/ACM/%E9%A2%98%E8%A7%A3/">题解</a>
+              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/">算法</a>
+            
+              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%A6/">数学</a>
             
           </div>
         
@@ -513,7 +640,11 @@ After finishing her tour around the Earth, CYLL is now planning a universal trav
             
               <a href="/tags/ACM/">ACM</a>
             
-              <a href="/tags/%E9%A2%98%E8%A7%A3/">题解</a>
+              <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
+            
+              <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
+            
+              <a href="/tags/%E6%95%B0%E5%AD%A6-%E7%AE%97%E6%B3%95/">数学 算法</a>
             
           </div>
         
@@ -527,139 +658,22 @@ After finishing her tour around the Earth, CYLL is now planning a universal trav
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/08/14/ACM/%E9%A2%98%E8%A7%A3/PAT%E3%80%8C1002%20Business%20(35%E5%88%86)%E3%80%8D/">PAT「1002 Business (35分)」</a>
+        <a href="/2020/09/23/Technique/Math/Theory/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/%E7%A6%BB%E6%95%A3%E4%BD%99%E5%BC%A6%E5%8F%98%E6%8D%A2/">离散余弦变换</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/08/14/ACM/%E9%A2%98%E8%A7%A3/PAT%E3%80%8C1002%20Business%20(35%E5%88%86)%E3%80%8D/">
-          
-          
-            
-          
-          1. 题目
-题目链接：PAT「1002 Business (35分)」 。
-Description
-As the manager of your company, you have to carefully consider, for each project, the time taken to finish it, the deadline, and the profit you can ga
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-08-14 18:19" pubdate>
-              2020-08-14
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/ACM/">ACM</a>
-            
-              <a href="/categories/Technique/ACM/%E9%A2%98%E8%A7%A3/">题解</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/ACM/">ACM</a>
-            
-              <a href="/tags/%E9%A2%98%E8%A7%A3/">题解</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/08/14/ACM/%E9%A2%98%E8%A7%A3/PAT%E3%80%8C1001%20Battle%20Over%20Cities%20-%20Hard%20Version%20(35%E5%88%86)%E3%80%8D/">PAT「1001 Battle Over Cities - Hard Version (35分)」</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/08/14/ACM/%E9%A2%98%E8%A7%A3/PAT%E3%80%8C1001%20Battle%20Over%20Cities%20-%20Hard%20Version%20(35%E5%88%86)%E3%80%8D/">
-          
-          
-            
-          
-          1. 题目
-题目链接：PAT「1001 Battle Over Cities - Hard Version (35分)」 。
-Description
-It is vitally important to have all the cities connected by highways in a war. If a city is conquered by the enemy, all the h
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-08-14 14:05" pubdate>
-              2020-08-14
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/ACM/">ACM</a>
-            
-              <a href="/categories/Technique/ACM/%E9%A2%98%E8%A7%A3/">题解</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/ACM/">ACM</a>
-            
-              <a href="/tags/%E9%A2%98%E8%A7%A3/">题解</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/08/14/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%B9%B6%E6%9F%A5%E9%9B%86/">并查集</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/08/14/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%B9%B6%E6%9F%A5%E9%9B%86/">
+        <a href="/2020/09/23/Technique/Math/Theory/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/%E7%A6%BB%E6%95%A3%E4%BD%99%E5%BC%A6%E5%8F%98%E6%8D%A2/">
           
           
             
           
           1. 简介
-并查集是一种高效的数据结构，常用来解决集合的合并和查找问题，常见于图论问题中。
-2. 操作
-2.1 构建
-并查集一般构建为初始时每个节点所属的集合编号即为自己的节点编号。
-1234567// 初始化int father[MAXN];   // father[i] 即为节点 i 所属的集合编号void init(int n) &#123;    for(int i = n; i; --i
+离散余弦变换类似于离散傅里叶变换，但是只使用实数。离散余弦变换相当于一个长度大概是它两倍的离散傅里叶变换。
+2. 定义
+离散余弦变换是一个线性的可逆函数 F:Rn→RnF: R^n \rightarrow R^nF:Rn→Rn，其中 RRR 是实数集。
+2.1 DCT-1
+fm=12(x0+(−1)mxn−1)+∑k=1n−2xkcos(πn−1mk)\begin{array}{c}
+
         </a>
       </p>
 
@@ -667,8 +681,137 @@ It is vitally important to have all the cities connected by highways in a war. I
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-08-14 11:23" pubdate>
-              2020-08-14
+            <time datetime="2020-09-23 09:05" pubdate>
+              2020-09-23
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Math/">Math</a>
+            
+              <a href="/categories/Technique/Math/Theory/">Theory</a>
+            
+              <a href="/categories/Technique/Math/Theory/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/">傅里叶变换</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
+            
+              <a href="/tags/Math/">Math</a>
+            
+              <a href="/tags/Theory/">Theory</a>
+            
+              <a href="/tags/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/">傅里叶变换</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/09/21/Technique/Math/Theory/%E6%9F%AF%E8%A5%BF%E4%B8%BB%E5%80%BC%E7%A7%AF%E5%88%86/">柯西主值积分</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/09/21/Technique/Math/Theory/%E6%9F%AF%E8%A5%BF%E4%B8%BB%E5%80%BC%E7%A7%AF%E5%88%86/">
+          
+          
+            
+          
+          1. 简介
+柯西主值积分是以特殊方式定义的反常积分，其值又称为柯西主值。
+2. 定义
+2.1 第一类反常积分（无穷积分）
+
+设函数 f(x)f(x)f(x) 在 (−∞,+∞)(-\infty,+\infty)(−∞,+∞) 上连续且可积，则定义第一类反常积分：
+
+∫−∞+∞f(x)dx=lim⁡u→−∞∫ucf(x)dx+lim⁡v→+∞∫cvf(x)dx\begin{array}{c}
+\in
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-09-21 21:22" pubdate>
+              2020-09-21
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Math/">Math</a>
+            
+              <a href="/categories/Technique/Math/Theory/">Theory</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/Math/">Math</a>
+            
+              <a href="/tags/Theory/">Theory</a>
+            
+              <a href="/tags/%E6%95%B0%E5%AD%A6%E7%90%86%E8%AE%BA/">数学理论</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/09/20/Technique/ACM/%E7%AE%97%E6%B3%95/%E6%9F%A5%E6%89%BE/%E6%95%B0%E7%BB%84%E4%B8%AD%E7%AC%ACK%E5%B0%8F%E7%9A%84%E6%95%B0/">数组中第K小的数</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/09/20/Technique/ACM/%E7%AE%97%E6%B3%95/%E6%9F%A5%E6%89%BE/%E6%95%B0%E7%BB%84%E4%B8%AD%E7%AC%ACK%E5%B0%8F%E7%9A%84%E6%95%B0/">
+          
+          
+            
+          
+          1. 简介
+查找一个序列中的最大/最小值时间复杂度均为 O(N)O(N)O(N)，而查询一个序列中第 K(K=0⋯N−1)K(K = 0 \cdots N-1)K(K=0⋯N−1) 大的数时间复杂度最坏情况下即为排序的最好时间复杂度 O(Nlog⁡N)O(N \log N)O(NlogN)（只考虑比较排序），但利用快排的 PartitionPartitionPartition 思想也可以达到期望 
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-09-20 21:46" pubdate>
+              2020-09-20
             </time>
           </div>
         
@@ -682,7 +825,7 @@ It is vitally important to have all the cities connected by highways in a war. I
             
               <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/">算法</a>
             
-              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a>
+              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/%E6%9F%A5%E6%89%BE/">查找</a>
             
           </div>
         
@@ -696,131 +839,7 @@ It is vitally important to have all the cities connected by highways in a war. I
             
               <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
             
-              <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/08/10/ACM/%E9%A2%98%E8%A7%A3/SpringOuting/">SpringOuting</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/08/10/ACM/%E9%A2%98%E8%A7%A3/SpringOuting/">
-          
-          
-            
-          
-          1. 题目
-题目链接：Spring Outing 。
-题目描述
-  You class are planning for a spring outing. N people are voting for a destination out of K candidate places.
-  voting progress is below:
-  First the class vote for th
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-08-10 22:23" pubdate>
-              2020-08-10
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/ACM/">ACM</a>
-            
-              <a href="/categories/Technique/ACM/%E9%A2%98%E8%A7%A3/">题解</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/ACM/">ACM</a>
-            
-              <a href="/tags/%E9%A2%98%E8%A7%A3/">题解</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/08/07/ACM/%E9%A2%98%E8%A7%A3/P2418%E3%80%8Cyyy%20loves%20OI%20IV%E3%80%8D/">P2418「yyy loves OI IV」</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/08/07/ACM/%E9%A2%98%E8%A7%A3/P2418%E3%80%8Cyyy%20loves%20OI%20IV%E3%80%8D/">
-          
-          
-            
-          
-          1. 题目
-题目链接：P2418「yyy loves OI IV」 。
-题目背景
-某校 2015届有两位 OI 神牛，yyy 和 c01。
-题目描述
-全校除他们以外的 NNN 名学生，每人都会膜拜他们中的某一个人。现在老师要给他们分宿舍了。但是，问题来了：
-同一间宿舍里的人要么膜拜同一位大牛，要么膜拜 yyy 和 c01 的人数的差的绝对值不超过 MMM。否则他们就会打起来。
-为了方便，老师让 N
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-08-07 20:15" pubdate>
-              2020-08-07
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/ACM/">ACM</a>
-            
-              <a href="/categories/Technique/ACM/%E9%A2%98%E8%A7%A3/">题解</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/ACM/">ACM</a>
-            
-              <a href="/tags/%E9%A2%98%E8%A7%A3/">题解</a>
+              <a href="/tags/%E6%9F%A5%E6%89%BE/">查找</a>
             
           </div>
         
@@ -832,7 +851,7 @@ It is vitally important to have all the cities connected by highways in a war. I
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/page/28/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/27/#board">27</a><a class="page-number" href="/page/28/#board">28</a><span class="page-number current">29</span><a class="page-number" href="/page/30/#board">30</a><a class="page-number" href="/page/31/#board">31</a><span class="space">&hellip;</span><a class="page-number" href="/page/44/#board">44</a><a class="extend next" rel="next" href="/page/30/#board"><i class="iconfont icon-arrowright"></i></a>
+      <a class="extend prev" rel="prev" href="/page/28/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/27/#board">27</a><a class="page-number" href="/page/28/#board">28</a><span class="page-number current">29</span><a class="page-number" href="/page/30/#board">30</a><a class="page-number" href="/page/31/#board">31</a><span class="space">&hellip;</span><a class="page-number" href="/page/53/#board">53</a><a class="extend next" rel="next" href="/page/30/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 

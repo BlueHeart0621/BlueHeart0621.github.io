@@ -18,7 +18,7 @@
   <meta name="author" content="BlueHeart0621">
   <meta name="keywords" content="頑張れ">
   
-    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script> <script src="/live2d-widget/autoload.js" type="text/javascript"></script> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script> <script src="/live2d-widget/autoload.js" type="text/javascript"></script> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/> <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
   
   <title>お前はどこまで見えている</title>
 
@@ -197,24 +197,17 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/07/05/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4stat/">LinuxShell命令stat</a>
+        <a href="/2021/08/24/Technique/Linux/Sundry/Linux%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84/Linux%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84/">Linux目录结构</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/07/05/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4stat/">
+        <a href="/2021/08/24/Technique/Linux/Sundry/Linux%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84/Linux%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84/">
           
           
             
           
           1. 简介
-众所周知，Linux 下一切皆文件。当我们想要去查看某个文件的具体信息时，可以使用 stat 命令进行查看。
-2. 格式
-1stat filename [filename...]
-以 stat /home 为例，以下为我电脑的输出结果：
-
-中文显示
-
-12345678  文件：/home  大小：4096            块：8          IO 块：4096   目录设备
+由于 Linux 系统是开源的，存在众多不同的发行版，为了防止不同的 Linux 发行版的系统目录结构大相径庭，以至于用户从一个发行版迁移到别的发行版后不会使用，FHS（Filesystem Hierarchy Standard）标准诞生了。FHS 标准旨在让用户可以了解到系统上的库文件、已安装的软件文件通常的存放位置，即规范每个特定的目录下应该要放置什么数据。目前主流的 Linux 
         </a>
       </p>
 
@@ -222,152 +215,8 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-07-05 17:56" pubdate>
-              2021-07-05
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/Linux/">Linux</a>
-            
-              <a href="/categories/Technique/Linux/Shell/">Shell</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/Shell/">Shell</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/07/05/Linux/Shell/LinuxShell%E4%B8%8B%E6%96%87%E4%BB%B6%E5%A4%A7%E5%B0%8F%E5%8D%95%E4%BD%8D/">LinuxShell下文件大小单位</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/07/05/Linux/Shell/LinuxShell%E4%B8%8B%E6%96%87%E4%BB%B6%E5%A4%A7%E5%B0%8F%E5%8D%95%E4%BD%8D/">
-          
-          
-            
-          
-          1. 简介
-Linux Shell 下很多命令在打印文件大小信息时，默认使用的是字节作为单位。但为了方便用户使用，往往这些命令提供选项参数 -B[SIZE] 或 --block-size=SIZE 给用户来指定文件大小的单位，比如 ls、df、du 命令等。
-2. 文件大小单位
-Linux Shell 下可选的文件大小单位参数 SIZE 如下表所示：
-
-
-
-单位
-说明
-
-
-
-
-K、k、KB、kB、
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-07-05 16:17" pubdate>
-              2021-07-05
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/Linux/">Linux</a>
-            
-              <a href="/categories/Technique/Linux/Shell/">Shell</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/Shell/">Shell</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/06/13/Linux/Sundry/Linux%E7%B3%BB%E7%BB%9F%E5%90%84%E5%8F%91%E8%A1%8C%E7%89%88%E7%94%A8%E6%88%B7%E6%96%87%E6%A1%A3/">Linux系统各发行版用户文档</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/06/13/Linux/Sundry/Linux%E7%B3%BB%E7%BB%9F%E5%90%84%E5%8F%91%E8%A1%8C%E7%89%88%E7%94%A8%E6%88%B7%E6%96%87%E6%A1%A3/">
-          
-          
-            
-          
-          1. 发行版
-Linux 所有发行版可参见：DistroWatch.com。
-2. 用户文档
-
-Debian
-Ubuntu
-Deepin
-Manjaro
-LinuxMint
-RedHat
-CentOS
-
-
-CentOS 是 RedHat 的社区版，因此技术文档可以参考 RedHat。
-
-
-ArchLinux
-
-
-ArchLinux 官方的 Wiki 非常优秀（吹爆~），基本上大部分用户所需要的文档
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-06-13 14:32" pubdate>
-              2021-06-13
+            <time datetime="2021-08-24 11:17" pubdate>
+              2021-08-24
             </time>
           </div>
         
@@ -405,17 +254,73 @@ ArchLinux 官方的 Wiki 非常优秀（吹爆~），基本上大部分用户所
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/06/13/Linux/Ubuntu/Ubuntu20.04%E4%B8%8B%E5%AE%89%E8%A3%85%E6%98%9F%E7%81%AB%E5%BA%94%E7%94%A8%E5%95%86%E5%BA%97/">Ubuntu20.04下安装星火应用商店</a>
+        <a href="/2021/08/23/Technique/Git/Git%E4%BF%A1%E6%81%AF%E8%B7%9F%E8%B8%AA/">Git信息跟踪</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/06/13/Linux/Ubuntu/Ubuntu20.04%E4%B8%8B%E5%AE%89%E8%A3%85%E6%98%9F%E7%81%AB%E5%BA%94%E7%94%A8%E5%95%86%E5%BA%97/">
+        <a href="/2021/08/23/Technique/Git/Git%E4%BF%A1%E6%81%AF%E8%B7%9F%E8%B8%AA/">
+          
+          
+            
+          
+          1. SSH 连接相关问题
+Git 从版本 2.3.0 开始，可以使用 GIT_SSH_COMMAND 环境变量给  Git 传入临时设置的 SSH 连接参数。因此，可以传入 -v 参数来打印 SSH 连接的详细信息。ssh 命令可以接受 1～3 个 v 参数，数量越多，表示输出的信息越详细。
+12# For exampleGIT_SSH_COMMAND=&quot;ssh -vvv&quot; 
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-08-23 20:26" pubdate>
+              2021-08-23
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Git/">Git</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/Git/">Git</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/08/21/Technique/Linux/ArchLinux/ArchLinux%E4%B8%8B%E8%AE%BE%E7%BD%AE%E4%BA%A4%E6%8D%A2%E7%A9%BA%E9%97%B4/">ArchLinux下设置交换空间</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/08/21/Technique/Linux/ArchLinux/ArchLinux%E4%B8%8B%E8%AE%BE%E7%BD%AE%E4%BA%A4%E6%8D%A2%E7%A9%BA%E9%97%B4/">
           
           
             
           
           1. 简介
-星火应用商店是国内一款开源的 Debian 系应用商店，其中整合了许多优秀的 Linux 软件和 Wine 适配良好的软件，和 Deepin 应用商店相辅相成，旨在构建一个良好的 Linux 应用生态。由于 Deepin 应用商店在其他 Debian 系统上的适配不是很好，比如 Ubuntu 系统，因此星火应用商店对于非 Deepin 的 Debian 系用户提供了一个很好的选择。为星
+Linux 将物理内存分为内存段，叫做页面。交换是指内存页面被复制到预先设定好的硬盘空间（叫做交换空间）的过程，目的是释放这份内存页面。物理内存和交换空间的总大小是可用的虚拟内存的总量。
+1.1 交换空间
+交换空间通常是一个磁盘分区（交换分区），但是也可以是一个文件（交换文件）。用户可以在安装 Arch Linux 的时候创建交换空间，或者在安装后的任何时间建立交换空间。交换空间可用于
         </a>
       </p>
 
@@ -423,8 +328,8 @@ ArchLinux 官方的 Wiki 非常优秀（吹爆~），基本上大部分用户所
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-06-13 13:35" pubdate>
-              2021-06-13
+            <time datetime="2021-08-21 22:48" pubdate>
+              2021-08-21
             </time>
           </div>
         
@@ -436,7 +341,7 @@ ArchLinux 官方的 Wiki 非常优秀（吹爆~），基本上大部分用户所
             
               <a href="/categories/Technique/Linux/">Linux</a>
             
-              <a href="/categories/Technique/Linux/Ubuntu/">Ubuntu</a>
+              <a href="/categories/Technique/Linux/ArchLinux/">ArchLinux</a>
             
           </div>
         
@@ -448,7 +353,7 @@ ArchLinux 官方的 Wiki 非常优秀（吹爆~），基本上大部分用户所
             
               <a href="/tags/Linux/">Linux</a>
             
-              <a href="/tags/Ubuntu/">Ubuntu</a>
+              <a href="/tags/ArchLinux/">ArchLinux</a>
             
           </div>
         
@@ -462,23 +367,41 @@ ArchLinux 官方的 Wiki 非常优秀（吹爆~），基本上大部分用户所
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/06/12/Linux/Ubuntu/Ubuntu20.04%E4%B8%8Bapt%E6%8A%A5%E9%94%99/">Ubuntu20.04下apt报错</a>
+        <a href="/2021/08/18/Technique/Tools/Zsh/Zsh%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99%E6%B1%87%E6%80%BB/">Zsh相关资料汇总</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/06/12/Linux/Ubuntu/Ubuntu20.04%E4%B8%8Bapt%E6%8A%A5%E9%94%99/">
+        <a href="/2021/08/18/Technique/Tools/Zsh/Zsh%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99%E6%B1%87%E6%80%BB/">
           
           
             
           
-          1. 目标 xxx 在 /etc/apt/sources.list:yy 和 /etc/apt/sources.list:zz 中被配置了多次
+          1. Zsh
 
-问题：/etc/apt/sources.list 同时启用了多个镜像源。
-解决：注释掉 /etc/apt/sources.list 中多余的镜像源，只保留其中一个即可。
+官方源码
+官网链接
 
-2. 由于没有公匙，无法验证下列签名: NO_PUBKEY xxx
+2. Zsh 插件
 
-问题：GPG
+Zsh 插件列表及介绍：Awesome-Zsh-Plugins
+
+为了更便于管理插件，Zsh 有好几款插件管理器，诸如 Oh-My-Zsh、Antigen、Zplug、Prezto 等。
+2.1 Oh-My-Zsh
+
+官方源码
+官网链接
+插件列表
+
+2.2 Antigen
+
+官方源码
+官网链接
+
+2.3 Zplug
+
+官方源码
+
+2.4 
         </a>
       </p>
 
@@ -486,8 +409,8 @@ ArchLinux 官方的 Wiki 非常优秀（吹爆~），基本上大部分用户所
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-06-12 20:27" pubdate>
-              2021-06-12
+            <time datetime="2021-08-18 12:18" pubdate>
+              2021-08-18
             </time>
           </div>
         
@@ -497,9 +420,9 @@ ArchLinux 官方的 Wiki 非常优秀（吹爆~），基本上大部分用户所
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/Linux/">Linux</a>
+              <a href="/categories/Technique/Tools/">Tools</a>
             
-              <a href="/categories/Technique/Linux/Ubuntu/">Ubuntu</a>
+              <a href="/categories/Technique/Tools/Zsh/">Zsh</a>
             
           </div>
         
@@ -509,9 +432,9 @@ ArchLinux 官方的 Wiki 非常优秀（吹爆~），基本上大部分用户所
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Linux/">Linux</a>
+              <a href="/tags/Tools/">Tools</a>
             
-              <a href="/tags/Ubuntu/">Ubuntu</a>
+              <a href="/tags/Zsh/">Zsh</a>
             
           </div>
         
@@ -525,19 +448,27 @@ ArchLinux 官方的 Wiki 非常优秀（吹爆~），基本上大部分用户所
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/06/12/Linux/Ubuntu/Ubuntu20.04%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E7%BD%91%E7%BB%9C%E9%97%AE%E9%A2%98/">Ubuntu20.04中遇到的网络问题</a>
+        <a href="/2021/08/18/Technique/Tools/Tmux/Tmux%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99%E6%B1%87%E6%80%BB/">Tmux相关资料汇总</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/06/12/Linux/Ubuntu/Ubuntu20.04%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E7%BD%91%E7%BB%9C%E9%97%AE%E9%A2%98/">
+        <a href="/2021/08/18/Technique/Tools/Tmux/Tmux%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99%E6%B1%87%E6%80%BB/">
           
           
             
           
-          1. 已连上有线/无线，网络未开代理，却无法访问网络
+          1. Tmux
 
-缘由：我之前在 Ubuntu20.04 开过网络代理服务，当时访问网络正常。但今天突然把代理一关发现怎么都上不了网了，Ping 网络时报错名称解析服务失败，而奇怪的是一开代理又可以访问网络了。
-解决：最终发现是 Ubuntu20.04 的网络名称解析服务即 systemd-resolved.service 未开启，因此导致无法由域名解析到 I
+官方源码
+Tmux 使用教程
+
+2. Tmux 插件
+
+Tmux 插件管理器——tpm
+Tmux 插件列表
+
+Tmux 插件配置方案 ~/.tmux.conf 推荐：
+1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950# --------------
         </a>
       </p>
 
@@ -545,8 +476,8 @@ ArchLinux 官方的 Wiki 非常优秀（吹爆~），基本上大部分用户所
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-06-12 19:39" pubdate>
-              2021-06-12
+            <time datetime="2021-08-18 11:18" pubdate>
+              2021-08-18
             </time>
           </div>
         
@@ -556,9 +487,9 @@ ArchLinux 官方的 Wiki 非常优秀（吹爆~），基本上大部分用户所
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/Linux/">Linux</a>
+              <a href="/categories/Technique/Tools/">Tools</a>
             
-              <a href="/categories/Technique/Linux/Ubuntu/">Ubuntu</a>
+              <a href="/categories/Technique/Tools/Tmux/">Tmux</a>
             
           </div>
         
@@ -568,9 +499,9 @@ ArchLinux 官方的 Wiki 非常优秀（吹爆~），基本上大部分用户所
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Linux/">Linux</a>
+              <a href="/tags/Tools/">Tools</a>
             
-              <a href="/tags/Ubuntu/">Ubuntu</a>
+              <a href="/tags/Tmux/">Tmux</a>
             
           </div>
         
@@ -584,17 +515,295 @@ ArchLinux 官方的 Wiki 非常优秀（吹爆~），基本上大部分用户所
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/06/12/Linux/Ubuntu/Ubuntu20.04%E4%B8%8BMAC%E5%9C%B0%E5%9D%80%E9%9A%8F%E6%9C%BA%E5%8C%96/">Ubuntu20.04下MAC地址随机化</a>
+        <a href="/2021/08/18/Technique/Browser/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%AE%9E%E7%94%A8%E6%8F%92%E4%BB%B6%E9%9B%86%E5%90%88/">浏览器实用插件集合</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/06/12/Linux/Ubuntu/Ubuntu20.04%E4%B8%8BMAC%E5%9C%B0%E5%9D%80%E9%9A%8F%E6%9C%BA%E5%8C%96/">
+        <a href="/2021/08/18/Technique/Browser/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%AE%9E%E7%94%A8%E6%8F%92%E4%BB%B6%E9%9B%86%E5%90%88/">
+          
+          
+            
+          
+          1. Surfingkeys
+Surfingkeys 插件实在是 Vim 爱好者的福音，它能够让我们以 Vim 的方式用键盘来操作浏览器，而不再依赖鼠标。它目前支持 Chrome、Firefox 以及 Edge 浏览器。
+
+Vimium 插件功能和 Surfingkeys 类似，而且似乎还更强大。
+
+2. FeHelper
+FeHelper 是一款 Web 开发者助手插件，其内部集成了许多实用的 
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-08-18 11:17" pubdate>
+              2021-08-18
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Browser/">Browser</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/Browser/">Browser</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/08/17/Technique/Tools/Aria2/Aria2%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99%E6%B1%87%E6%80%BB/">Aria2相关资料汇总</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/08/17/Technique/Tools/Aria2/Aria2%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99%E6%B1%87%E6%80%BB/">
+          
+          
+            
+          
+          1. Aria2
+1.1 官方系列
+
+源码仓库
+官方主页
+官方文档
+
+1.2 第三方系列
+
+P3TERX 的配置方案
+
+
+
+Aria2 配置文件仓库
+Aria2 配置文件说明
+
+
+2. Aria2 GUI 前端
+2.1 AriaNg
+
+源码仓库
+使用手册
+
+2.2 Aria2Ng
+
+源码仓库
+使用手册
+
+2.3 Yaaw
+
+源码仓库
+
+2.4 WebUI-Aria2
+
+源码仓库
+
+2.5 Pers
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-08-17 10:32" pubdate>
+              2021-08-17
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Tools/">Tools</a>
+            
+              <a href="/categories/Technique/Tools/Aria2/">Aria2</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/Tools/">Tools</a>
+            
+              <a href="/tags/Aria2/">Aria2</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/08/16/Technique/Tools/XDM/XDM%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/">XDM常见问题</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/08/16/Technique/Tools/XDM/XDM%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/">
+          
+          
+            
+          
+          1. An older version of XDM is already running.
+
+问题：XDM 下载软件无法正常打开，一打开就报错：An older version of XDM is already running 。
+原因：XDM 所在目录下的 download.txt 文件损坏。
+解决：
+
+
+
+关闭 XDM 进程。
+
+12ps aux | grep java_pid    # 
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-08-16 18:23" pubdate>
+              2021-08-16
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Tools/">Tools</a>
+            
+              <a href="/categories/Technique/Tools/XDM/">XDM</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/Tools/">Tools</a>
+            
+              <a href="/tags/XDM/">XDM</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/08/16/Technique/VSCode/VSCode%E8%AE%BE%E7%BD%AE%E4%B8%AD%E8%8B%B1%E6%B7%B7%E5%90%88%E7%AD%89%E5%AE%BD%E5%AD%97%E4%BD%93/">VSCode设置中英混合等宽字体</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/08/16/Technique/VSCode/VSCode%E8%AE%BE%E7%BD%AE%E4%B8%AD%E8%8B%B1%E6%B7%B7%E5%90%88%E7%AD%89%E5%AE%BD%E5%AD%97%E4%BD%93/">
+          
+          
+            
+          
+          1. 缘由
+VSCode 中的 alt+shift 快捷键能够同时操作多列，但其前提是被操作的部分要完全对齐，这就要求 VSCode 编缉器使用的字体得是等宽的。
+2. 配置
+2.1 字体
+
+如果只是单纯使用英文或中文，则使用常见的等宽字体即可，比如 Monospace。
+如果有中英文混合使用，则常见的等宽字体就无法保证中英文之间也能很好地对齐。因为中文汉字是全角字符，而英文字符是半角字符。系统上
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-08-16 16:09" pubdate>
+              2021-08-16
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/VSCode/">VSCode</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/VSCode/">VSCode</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/08/16/Technique/Linux/ArchLinux/ArchLinux%E4%B8%8B%E9%85%8D%E7%BD%AEaria2/">ArchLinux下配置aria2</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/08/16/Technique/Linux/ArchLinux/ArchLinux%E4%B8%8B%E9%85%8D%E7%BD%AEaria2/">
           
           
             
           
           1. 简介
-由于之前的挖矿操作（具体原因参见 Manjaro21.0 下 MAC 地址随机化，导致我电脑无线网卡的 MAC 地址对应的 IP 被路由器限制了。而我的电脑上又装了多个操作系统，因此需要每个操作系统都配置 MAC 地址随机化（突然觉得有点麻烦，下次再也不敢了555）。总体而言，在 Ubuntu20.04 上配置 MAC 地址随机化和 Manjaro21.0 下 MAC 地址随机化 差不
+aria2 是一个轻量级、支持多种协议的命令行下载工具。它支持的协议包括 HTTP(S)、FTP、BitTorrent、Metalink 等。aria2 工具可以并发地进行下载，同时还支持分片与续传，自动替换慢的线程等。
+2. 安装
+1sudo pacman -S aria2            # 安装好后可使用 aria2c 命令
+3. 配置
+aria2 安装完后需要进行复杂的配
         </a>
       </p>
 
@@ -602,8 +811,8 @@ ArchLinux 官方的 Wiki 非常优秀（吹爆~），基本上大部分用户所
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-06-12 15:29" pubdate>
-              2021-06-12
+            <time datetime="2021-08-16 16:06" pubdate>
+              2021-08-16
             </time>
           </div>
         
@@ -615,7 +824,7 @@ ArchLinux 官方的 Wiki 非常优秀（吹爆~），基本上大部分用户所
             
               <a href="/categories/Technique/Linux/">Linux</a>
             
-              <a href="/categories/Technique/Linux/Ubuntu/">Ubuntu</a>
+              <a href="/categories/Technique/Linux/ArchLinux/">ArchLinux</a>
             
           </div>
         
@@ -627,186 +836,7 @@ ArchLinux 官方的 Wiki 非常优秀（吹爆~），基本上大部分用户所
             
               <a href="/tags/Linux/">Linux</a>
             
-              <a href="/tags/Ubuntu/">Ubuntu</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/06/12/PHP/Manjaro21.0%E6%90%AD%E5%BB%BALAMP%E7%8E%AF%E5%A2%83/">Manjaro21.0搭建LAMP环境</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/06/12/PHP/Manjaro21.0%E6%90%AD%E5%BB%BALAMP%E7%8E%AF%E5%A2%83/">
-          
-          
-            
-          
-          1. 简介
-LAMP 即 Linux+Apache+Mysql+PHP 的简称。
-2. 安装 Apache+Mysql+PHP
-1yay -S apache mysql php php-apache
-3. 配置 Apache
-
-打开配置文件
-
-1sudo vim /etc/httpd/conf/httpd.conf
-
-修改 DocumentRoot 字段后的路径为自定义的 Web Server 根
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-06-12 09:24" pubdate>
-              2021-06-12
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/PHP/">PHP</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/PHP/">PHP</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/06/04/C++/C%E8%AF%AD%E8%A8%80%E5%90%84%E7%89%88%E6%9C%AC%E5%AF%B9%E6%AF%94/C%E8%AF%AD%E8%A8%80%E5%90%84%E7%89%88%E6%9C%AC%E5%AF%B9%E6%AF%94/">C语言各版本对比</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/06/04/C++/C%E8%AF%AD%E8%A8%80%E5%90%84%E7%89%88%E6%9C%AC%E5%AF%B9%E6%AF%94/C%E8%AF%AD%E8%A8%80%E5%90%84%E7%89%88%E6%9C%AC%E5%AF%B9%E6%AF%94/">
-          
-          
-            
-          
-          
-附录
-参考资料：
-
-C语言的各种版本：C89，AMD1，C99，C11
-
-
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-06-04 15:57" pubdate>
-              2021-06-04
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/C/">C++</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/C/">C++</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/06/04/C++/C++%E5%86%85%E7%BD%AE%E5%AE%8F%E5%AE%9A%E4%B9%89/">C++内置宏定义</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/06/04/C++/C++%E5%86%85%E7%BD%AE%E5%AE%8F%E5%AE%9A%E4%B9%89/">
-          
-          
-            
-          
-          1. 标准内置宏定义
-标准内置宏定义是由相关的语言标准定义的，因此对于实现了这些语言标准的编译器来说都是可使用的。
-
-__FILE__：字符串格式，指示当前处理的文件路径。
-__LINE__：数字格式，指示当前处理的代码行号。
-#line：用来修改当前行的下一行的行号，即下一行的 __LINE__ 由 #line 所指定的数字开始。
-
-123456789#include&lt;stdio.h&gt
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-06-04 14:53" pubdate>
-              2021-06-04
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/C/">C++</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/C/">C++</a>
+              <a href="/tags/ArchLinux/">ArchLinux</a>
             
           </div>
         
@@ -818,7 +848,7 @@ __LINE__：数字格式，指示当前处理的代码行号。
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/page/9/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/#board">8</a><a class="page-number" href="/page/9/#board">9</a><span class="page-number current">10</span><a class="page-number" href="/page/11/#board">11</a><a class="page-number" href="/page/12/#board">12</a><span class="space">&hellip;</span><a class="page-number" href="/page/44/#board">44</a><a class="extend next" rel="next" href="/page/11/#board"><i class="iconfont icon-arrowright"></i></a>
+      <a class="extend prev" rel="prev" href="/page/9/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/#board">8</a><a class="page-number" href="/page/9/#board">9</a><span class="page-number current">10</span><a class="page-number" href="/page/11/#board">11</a><a class="page-number" href="/page/12/#board">12</a><span class="space">&hellip;</span><a class="page-number" href="/page/53/#board">53</a><a class="extend next" rel="next" href="/page/11/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 

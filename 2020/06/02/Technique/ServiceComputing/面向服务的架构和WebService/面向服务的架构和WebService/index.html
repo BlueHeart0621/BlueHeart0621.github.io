@@ -1,0 +1,748 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/image/self/portrait.jpg">
+  <link rel="icon" href="/image/self/portrait.jpg">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="一个记录各种笔记的小匣子^-^">
+  <meta name="author" content="hotarugali">
+  <meta name="keywords" content="頑張れ">
+  
+    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script> <script src="/live2d-widget/autoload.js" type="text/javascript"></script> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/> <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+  
+  <title>面向服务的架构和WebService - お前はどこまで見えている</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"blueheart0621.github.io","root":"/","version":"1.8.9","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":"§"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/image/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":"c194cf0c8cbc33bfb846ba1329537d81","google":"G-SXJN0942X9","gtag":"G-D3DEHLLP3W","tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"A24MlA4oV7hlze3uNQiXDAIi-MdYXbMMI","app_key":"3moFK5Ao3TD4rjA1HCmPTSm6","server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>お前はどこまで見えている</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/image/covers/%E5%9B%9B%E6%9C%88%E6%98%AF%E4%BD%A0%E7%9A%84%E8%B0%8E%E8%A8%80-1.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="面向服务的架构和WebService">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2020-06-02 00:36" pubdate>
+        2020年6月2日 凌晨
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      2k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      21
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- LeanCloud 统计文章PV -->
+      <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="leancloud-page-views"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">面向服务的架构和WebService</h1>
+            
+            <div class="markdown-body">
+              <h2 id="1-面向服务的架构-SOA">1. 面向服务的架构 SOA</h2>
+<h3 id="1-1-简介">1.1 简介</h3>
+<ul>
+<li>SOA 是从架构方面，整体支持面向服务泛型的基本概念性架构模型</li>
+<li>SOA 是一种<strong>业务-IT</strong>结合的方法。其中，应用依赖于现有的服务来实现业务过程。</li>
+<li>实现 SOA 主要包括：</li>
+</ul>
+<blockquote>
+<ol>
+<li>面向服务的企业</li>
+<li>采用服务开发应用</li>
+<li>采用服务对应用进行封装，以便今后复用<br />
+<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>⋯</mo></mrow><annotation encoding="application/x-tex">\cdots</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.31em;vertical-align:0em;"></span><span class="minner">⋯</span></span></span></span></li>
+</ol>
+</blockquote>
+<h3 id="1-2-模型">1.2 模型</h3>
+<ul>
+<li>传统服务架构模型</li>
+</ul>
+<img src="/images/Technique/ServiceComputing/%E9%9D%A2%E5%90%91%E6%9C%8D%E5%8A%A1%E7%9A%84%E6%9E%B6%E6%9E%84%E5%92%8CWebService/%E4%BC%A0%E7%BB%9F%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84.png" srcset="/image/loading.gif" lazyload class="" width="481" title="传统服务架构">
+<p>传统服务架构模型中，服务请求者和服务调用者之间是紧密耦合的关系。</p>
+<ul>
+<li>SOA 三角操作模型</li>
+</ul>
+<img src="/images/Technique/ServiceComputing/%E9%9D%A2%E5%90%91%E6%9C%8D%E5%8A%A1%E7%9A%84%E6%9E%B6%E6%9E%84%E5%92%8CWebService/SOA%E6%9E%B6%E6%9E%84.png" srcset="/image/loading.gif" lazyload class="" width="432" title="SOA架构">
+<p>SOA 模型最大程度解耦合服务请求者和服务提供者。</p>
+<blockquote>
+<ol>
+<li>服务提供者将服务发布到服务注册者那里</li>
+<li>服务请求者到服务注册者那里查询所需服务</li>
+<li>服务注册者找到最适合服务请求者的服务返回给服务请求者，服务请求者根据返回信息去进行服务的调用</li>
+</ol>
+</blockquote>
+<h3 id="1-3-SOA-的优点">1.3 SOA 的优点</h3>
+<ul>
+<li>从 IT 角度出发</li>
+</ul>
+<blockquote>
+<ol>
+<li>松耦合，消除假依赖（复用）</li>
+</ol>
+<blockquote>
+<ul>
+<li>语言、平台和厂商中立</li>
+<li>消除时间依赖</li>
+<li>消除访问地址依赖</li>
+<li>消除访问协议依赖</li>
+</ul>
+</blockquote>
+<ol start="2">
+<li>服务间接寻址（灵活）</li>
+</ol>
+</blockquote>
+<ul>
+<li>从业务角度出发</li>
+</ul>
+<blockquote>
+<ol>
+<li>保护企业投资，提升现有 IT 资源的作用，促进 IT 资源的复用</li>
+<li>提高企业灵敏度</li>
+<li>支持企业外包管理模式</li>
+</ol>
+</blockquote>
+<ul>
+<li>从双角度出发</li>
+</ul>
+<blockquote>
+<ol>
+<li>SOA 在不同粒度上提供了本质性的指导：业务层、过程层、中间件层和编程层</li>
+<li>在每个层次中间：</li>
+</ol>
+<blockquote>
+<ul>
+<li>SOA 按照<strong>自顶向下</strong>的方式，将一个较大的单元分解为较小的、以服务为中心的单元</li>
+<li>SOA 按照<strong>自底向上</strong>的方式，将可供使用的较小单元组织成为较大的单元，用以提供全新的服务</li>
+</ul>
+</blockquote>
+</blockquote>
+<img src="/images/Technique/ServiceComputing/%E9%9D%A2%E5%90%91%E6%9C%8D%E5%8A%A1%E7%9A%84%E6%9E%B6%E6%9E%84%E5%92%8CWebService/SOA%E6%A8%A1%E5%9E%8B%E5%B1%82%E6%AC%A1.png" srcset="/image/loading.gif" lazyload class="" width="812" title="SOA模型层次">
+<h3 id="1-4-SOA-的参考架构">1.4 SOA 的参考架构</h3>
+<img src="/images/Technique/ServiceComputing/%E9%9D%A2%E5%90%91%E6%9C%8D%E5%8A%A1%E7%9A%84%E6%9E%B6%E6%9E%84%E5%92%8CWebService/SOA%E5%8F%82%E8%80%83%E6%9E%B6%E6%9E%84.png" srcset="/image/loading.gif" lazyload class="" width="622" title="SOA参考架构">
+<ul>
+<li>水平层：对功能性需求加以满足。五个水平层分为两组：</li>
+</ul>
+<blockquote>
+<ol>
+<li>服务提供者（后台）</li>
+</ol>
+<blockquote>
+<ul>
+<li><strong>操作系统层</strong>：包括ISV（独立软件开发商）提供的打包应用、客户应用、遗留系统等。该层的应用（不一定面向服务）往往只为一个目的、服务于一类特定用户。</li>
+<li><strong>服务组件层</strong>：包括用于提供用以实现服务层中所定义服务的代码容器，其中一个服务组件依赖于操作系统层次中的一些打包组件、服务层中的一些服务、业务过程层中的一些业务过程。该层可能实现多个方法，但其中只有一部分会被服务层封装为服务。从调用角度出发，服务组件层负责完成输入转换和输出配置的自动化逻辑。</li>
+<li><strong>服务层</strong>：将SOA三角操作模型扩展为综合的逻辑层次，以支持服务注册、服务分解、服务发现、服务绑定、接口聚合和生命周期管理。服务层负责定位合适的服务提供者，并绑定到具体目标服务接口；同时负责以服务组合的形式封装服务对外提供。<strong>服务簇</strong>是服务层中的核心概念，它是一类从概念上服务于同一业务功能的服务集合。服务簇中的服务可以由不同的功能提供者所发布，并在具体的特性上有所差异（但都能满足业务功能需求）。</li>
+</ul>
+</blockquote>
+<ol start="2">
+<li>服务消费者（前台）</li>
+</ol>
+<blockquote>
+<ul>
+<li><strong>服务层</strong>：服务层作为前后台连通的接口，功能同上。</li>
+<li><strong>业务过程层</strong>：以组合和分解的方式来处理业务逻辑。从组合角度出发，业务过程层使用服务层来快速组合服务，并协调业务过程来满足消费者需求；从分解的角度出发，业务过程层将业务需求分解为能够由概念上的服务簇所表达的任务。业务服务层着眼于从协作和管理一些列过程的角度出发，采用也无流程来构建SOA解决方案。两种组合方式：编排、编导（二者功能上等价，主流模式为编排）。<br />
+<strong>【编排】</strong></li>
+</ul>
+<img src="/images/Technique/ServiceComputing/%E9%9D%A2%E5%90%91%E6%9C%8D%E5%8A%A1%E7%9A%84%E6%9E%B6%E6%9E%84%E5%92%8CWebService/%E7%BC%96%E6%8E%92.png" srcset="/image/loading.gif" lazyload class="" width="438" title="编排">
+<p><strong>【编导】</strong></p>
+<img src="/images/Technique/ServiceComputing/%E9%9D%A2%E5%90%91%E6%9C%8D%E5%8A%A1%E7%9A%84%E6%9E%B6%E6%9E%84%E5%92%8CWebService/%E7%BC%96%E5%AF%BC.png" srcset="/image/loading.gif" lazyload class="" width="691" title="编导">
+<ul>
+<li><strong>消费者层</strong>：消费者层负责表达对业务过程层、服务层及其他层次的调用。通过为业务服务快速构建用户接口来满足消费者的需求。消费者层负责构建SOA解决方案与用户之间进行交互的前端接口。消费者层可能需要同时支持不同种类的用户和渠道。为了提升展现性能，往往需要支持缓存机制。</li>
+</ul>
+</blockquote>
+</blockquote>
+<ul>
+<li>垂直层：对当前系统进行支撑以及实现服务质量、非功能性需求。</li>
+</ul>
+<blockquote>
+<ol>
+<li><strong>集成层</strong>：SOA解决方案中的关键支持部件，用以在服务请求者和服务提供者之间，完成服务请求的中介、路由和转换。</li>
+<li><strong>服务质量（QoS）层</strong>：从各个方面（可用性、可靠性、安全性等非功能性需求）提供解决方案层级的 QoS 管理。服务质量层不关注于服务层级的 QoS 控制，而是着眼于为解决方案层级的 QoS 控制提供支持、跟踪、监视和管理。</li>
+<li><strong>数据架构层</strong>：为了方便值链集成（集成来源于不同开发方的服务），数据架构层为领域相关的数据架构提供统一的表达和支持机制。</li>
+<li><strong>治理层</strong>：提供用以确保 SOA 解决方案的设计原则；通常使用最佳实践的方式，来提供如何在各个层次中构建 SOA 解决方案的原则、如何监管运营中的系统，并在运行时处理异常的原则。</li>
+</ol>
+</blockquote>
+<h2 id="2-Web-Service">2. Web Service</h2>
+<p>SOA 是概念层级的架构模型，需要使用其他技术来具体实现 SOA 模型，比如 Web Service（主流方式）、组件服务、REST 服务等。</p>
+<img src="/images/Technique/ServiceComputing/%E9%9D%A2%E5%90%91%E6%9C%8D%E5%8A%A1%E7%9A%84%E6%9E%B6%E6%9E%84%E5%92%8CWebService/WebService%E5%AE%9E%E7%8E%B0SOA.png" srcset="/image/loading.gif" lazyload class="" width="496" title="WebService实现SOA">
+<h3 id="2-1-简介">2.1 简介</h3>
+<p>Web Service 不是一个协议标准，它是一系列协议标准的集合。它主要包括：XML、XML Schema、NameSpace、SOAP、WDSL、WS-BPEL/WS-CDLUDDI、WSIL、WS-*</p>
+<ul>
+<li>XML 用来定义数据并完成数据交换</li>
+<li>XML Schema 用来定义数据结构</li>
+<li>NameSpace 使得 XML 元素全球可用</li>
+<li>SOAP 定义平台/技术无关的消息传送方式</li>
+<li>WDSL 定义平台/技术无关的服务能力/调用方式使得共享一组相同/相似服务能力的服务簇成为可能，使得构建服务库成为可能</li>
+<li>WS-BPEL/WS-CDL 使用 XML 脚本，以平台/技术无关的方式定义服务组合</li>
+<li>UDDI、WSIL 来完成服务的发布/查找</li>
+<li>WS-* 来为应用满足各种非功能性需求</li>
+</ul>
+<h3 id="2-2-Web-Service-协议栈">2.2 Web Service 协议栈</h3>
+<p>Web Service 协议与具体的平台、语言、技术无关，在各开发平台、语言、环境中均有相关支撑。</p>
+<img src="/images/Technique/ServiceComputing/%E9%9D%A2%E5%90%91%E6%9C%8D%E5%8A%A1%E7%9A%84%E6%9E%B6%E6%9E%84%E5%92%8CWebService/WebService%E5%8D%8F%E8%AE%AE%E6%A0%88.png" srcset="/image/loading.gif" lazyload class="" width="827" title="WebService协议栈">
+<ul>
+<li>组装层：采用平台中立的方式来表达描述如何构造出一个复杂的业务流程、如何采用拼装的方式来给定服务组合</li>
+<li>QoS 层：每一个协议标准都在下层一些协议标准的基础上提供某些方面的非功能性需求</li>
+<li>描述、发布、查询层：WSDL 对服务接口进行描述，UDDI 对发布和查询接口进行描述</li>
+<li>消息层：解决如何跨平台对消息进行封装、描述、表达</li>
+<li>传输层：解决网络数据传输</li>
+</ul>
+<h3 id="2-3-Web-Service-抽象模型">2.3 Web Service 抽象模型</h3>
+<ul>
+<li>作为服务提供者</li>
+</ul>
+<img src="/images/Technique/ServiceComputing/%E9%9D%A2%E5%90%91%E6%9C%8D%E5%8A%A1%E7%9A%84%E6%9E%B6%E6%9E%84%E5%92%8CWebService/WebServiceProvider%E6%8A%BD%E8%B1%A1%E6%A8%A1%E5%9E%8B.png" srcset="/image/loading.gif" lazyload class="" width="635" title="WebServiceProvider抽象模型">
+<blockquote>
+<ol>
+<li>服务合约：以 WSDL 为核心的脚本再加上其他脚本共同规定 Web Service 对外提供服务所应当具备的能力、特征、限制和约束条件。用于解耦服务提供者和服务请求者。</li>
+<li>转换层：message、processing、logic</li>
+</ol>
+</blockquote>
+<ul>
+<li>作为服务请求者</li>
+</ul>
+<img src="/images/Technique/ServiceComputing/%E9%9D%A2%E5%90%91%E6%9C%8D%E5%8A%A1%E7%9A%84%E6%9E%B6%E6%9E%84%E5%92%8CWebService/WebServiceRequestor%E6%8A%BD%E8%B1%A1%E6%A8%A1%E5%9E%8B.png" srcset="/image/loading.gif" lazyload class="" width="569" title="WebServiceRequestor抽象模型">
+<ul>
+<li>同时作为服务提供者和请求者</li>
+</ul>
+<img src="/images/Technique/ServiceComputing/%E9%9D%A2%E5%90%91%E6%9C%8D%E5%8A%A1%E7%9A%84%E6%9E%B6%E6%9E%84%E5%92%8CWebService/WebService%E6%8A%BD%E8%B1%A1%E6%A8%A1%E5%9E%8B.png" srcset="/image/loading.gif" lazyload class="" width="740" title="WebService抽象模型">
+<p>有时习惯性的称提供服务、请求服务为服务端开发、客户端开发。</p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/Technique/">Technique</a>
+                    
+                      <a class="hover-with-bg" href="/categories/Technique/ServiceComputing/">ServiceComputing</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Technique/">Technique</a>
+                    
+                      <a class="hover-with-bg" href="/tags/ServiceComputing/">ServiceComputing</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/06/16/Technique/TeX/LaTeX/Mint19.1%E9%85%8D%E7%BD%AETeXLive+TeXStudio%E7%9A%84LaTeX%E7%8E%AF%E5%A2%83/Mint19.1%E9%85%8D%E7%BD%AETeXLive+TeXStudio%E7%9A%84LaTeX%E7%8E%AF%E5%A2%83/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Mint19.1配置TeXLive+TeXStudio的LaTeX环境</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/05/29/Technique/Linux/Manjaro/Manjaro20.0%E6%97%A0%E6%B3%95%E4%BD%BF%E7%94%A8%E6%B7%B1%E5%BA%A6%E6%88%AA%E5%B1%8F%E9%97%AE%E9%A2%98/Manjaro20.0%E6%97%A0%E6%B3%95%E4%BD%BF%E7%94%A8%E6%B7%B1%E5%BA%A6%E6%88%AA%E5%B1%8F%E9%97%AE%E9%A2%98/">
+                        <span class="hidden-mobile">Manjaro20.0无法使用深度截屏问题</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="waline"></div>
+  <script type="text/javascript">
+    Fluid.utils.lazyComments('waline', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js', function () {
+        new Waline({
+          el: "#waline",
+          placeholder: "都看到这里了，留个脚印再走呗~",
+          path: window.location.pathname,
+          avatar: "retro",
+          visitor: true,
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: true,
+          serverURL: "https://waline-one-beta.vercel.app/",
+          avatarCDN: "https://gravatar.loli.net/avatar/",
+          avatarForce: false,
+          requiredMeta: [],
+          emoji: ["https://cdn.jsdelivr.net/gh/hotarugali/Emoji@bilibili_tv_gif/waline/bilibili_tv_gif","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@bilibiliHotKey/waline/bilibiliHotKey","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@bilibili2233/waline/bilibili2233","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@smallshake/waline/smallshake","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@alu/waline/alu","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@QQ/waline/QQ","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@Tieba-New/waline/Tieba-New","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@weibo/waline/weibo"],
+          // emojiMaps: ,
+          login: "enable",
+          dark: 'html[data-user-color-scheme="dark"]',
+        });
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the
+    <a target="_blank" href="https://waline.js.org" rel="nofollow noopener noopener">comments powered by Waline.</a>
+  </noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+      <div class="col-lg-7 mx-auto nopadding-x-md">
+        <div class="container custom mx-auto">
+          <script src="https://myhkw.cn/api/player/161389264877" id="myhk" key="161389264877" m="1"></script>
+        </div>
+      </div>
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+
+  <script defer src="/js/leancloud.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- KaTeX -->
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" />
+  
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/mermaid@8.8.3/dist/mermaid.min.js" ></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({"theme":"default"});
+    }
+  </script>
+
+
+
+
+  
+    <!-- Baidu Analytics -->
+    <script defer>
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?c194cf0c8cbc33bfb846ba1329537d81";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  
+    <!-- Google Analytics -->
+    <script defer>
+      window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) };
+      ga.l = +new Date;
+      ga('create', 'G-SXJN0942X9', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+  
+
+  
+    <!-- Google gtag.js -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D3DEHLLP3W"></script>
+    <script defer>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-D3DEHLLP3W');
+    </script>
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

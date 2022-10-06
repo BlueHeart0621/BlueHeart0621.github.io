@@ -1,0 +1,619 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/image/self/portrait.jpg">
+  <link rel="icon" href="/image/self/portrait.jpg">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="一个记录各种笔记的小匣子^-^">
+  <meta name="author" content="hotarugali">
+  <meta name="keywords" content="頑張れ">
+  
+    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script> <script src="/live2d-widget/autoload.js" type="text/javascript"></script> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/> <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+  
+  <title>凸包算法 - お前はどこまで見えている</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"blueheart0621.github.io","root":"/","version":"1.8.9","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":"§"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/image/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":"c194cf0c8cbc33bfb846ba1329537d81","google":"G-SXJN0942X9","gtag":"G-D3DEHLLP3W","tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"A24MlA4oV7hlze3uNQiXDAIi-MdYXbMMI","app_key":"3moFK5Ao3TD4rjA1HCmPTSm6","server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>お前はどこまで見えている</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/image/covers/%E5%9B%9B%E6%9C%88%E6%98%AF%E4%BD%A0%E7%9A%84%E8%B0%8E%E8%A8%80-1.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="凸包算法">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2020-08-14 21:19" pubdate>
+        2020年8月14日 晚上
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      2.9k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      48
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- LeanCloud 统计文章PV -->
+      <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="leancloud-page-views"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">凸包算法</h1>
+            
+            <div class="markdown-body">
+              <p>凸包类型的题算法主要有三种：<strong>JarvisMarch</strong> 算法、<strong>Graham</strong> 算法和 <strong>Andrew</strong> 算法，这三种算法时间性能上递增。</p>
+<h2 id="1-JarvisMarch-算法">1. JarvisMarch 算法</h2>
+<h3 id="1-1-思想">1.1 思想</h3>
+<p>纵坐标最小然后横坐标最小的点一定是凸包上的点， 我们将其记为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>p</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">{p_0}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span>，从 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>p</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">{p_0}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span> 开始，按逆时针的方向，逐个找凸包上的点，每前进一步找到一个点，所以叫作步进法。</p>
+<ul>
+<li>选取下一个点的方法：<br />
+假设已找到 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>p</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">{p_0}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span>、<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>p</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">{p_1}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span>，则利用跟 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>p</mi><mn>0</mn></msub><msub><mi>p</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">{p_0p_1}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span> 向量夹角最小的点作为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>p</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">{p_2}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span>。（<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>p</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">{p_1}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span> 则利用 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>p</mi><mn>0</mn></msub><msub><mi>p</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">{p_0p_1}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span>向量和水平线的夹角）</li>
+</ul>
+<h3 id="1-2-代码">1.2 代码</h3>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-comment">/******************************************************************</span><br><span class="hljs-comment">                    Jarvis March的步进算法</span><br><span class="hljs-comment">算法复杂度：O(nH)。（其中 n 是点的总个数，H 是凸包上的点的个数）</span><br><span class="hljs-comment">******************************************************************/</span><br><br><span class="hljs-comment">//#include &lt;bits/stdc++.h&gt;</span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;queue&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;cstdio&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;cmath&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;algorithm&gt;</span></span><br> <br>using namespace <span class="hljs-built_in">std</span>;<br> <br><span class="hljs-type">const</span> <span class="hljs-type">int</span> MAXN = <span class="hljs-number">10005</span>;<br><span class="hljs-type">const</span> <span class="hljs-type">double</span> MAXD = <span class="hljs-number">1e9</span>;<br><span class="hljs-type">const</span> <span class="hljs-type">double</span> ACCUR = <span class="hljs-number">1e-9</span>;<br> <br><span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">node</span></span><br><span class="hljs-class">&#123;</span><br>    <span class="hljs-type">double</span> x, y;        <span class="hljs-comment">//点的坐标</span><br>    <span class="hljs-type">bool</span> operator &lt; (<span class="hljs-type">const</span> node n) <span class="hljs-type">const</span><br>    &#123;<br>        <span class="hljs-keyword">if</span> (<span class="hljs-built_in">abs</span>(y-n.y) &lt; ACCUR) <span class="hljs-keyword">return</span> x &lt; n.x;<br>        <span class="hljs-keyword">else</span>    <span class="hljs-keyword">return</span> y &lt; n.y;<br>    &#125;<br>    <span class="hljs-type">bool</span> operator == (<span class="hljs-type">const</span> node n) <span class="hljs-type">const</span><br>    &#123;<br>        <span class="hljs-keyword">return</span> (<span class="hljs-built_in">abs</span>(x-n.x) &lt; ACCUR) &amp;&amp; (<span class="hljs-built_in">abs</span>(y-n.y) &lt; ACCUR);<br>    &#125;<br>    <span class="hljs-type">void</span> operator = (<span class="hljs-type">const</span> node n)<br>    &#123;<br>        x = n.x;<br>        y = n.y;<br>    &#125;<br>&#125;;<br> <br><span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">vect</span></span><br><span class="hljs-class">&#123;</span><br>    <span class="hljs-type">double</span> x, y;<br>    <span class="hljs-type">void</span> operator = (<span class="hljs-type">const</span> vect v)<br>    &#123;<br>        x = v.x;<br>        y = v.y;<br>    &#125;<br>    <span class="hljs-type">double</span> operator *(<span class="hljs-type">const</span> vect v) <span class="hljs-type">const</span><br>    &#123;<br>        <span class="hljs-keyword">return</span> x*v.x + y*v.y;<br>    &#125;<br>&#125;;<br> <br><span class="hljs-type">bool</span> <span class="hljs-title function_">equal</span> <span class="hljs-params">(<span class="hljs-type">const</span> <span class="hljs-type">double</span> d1, <span class="hljs-type">const</span> <span class="hljs-type">double</span> d2)</span><br>&#123;<br>    <span class="hljs-keyword">return</span> <span class="hljs-built_in">abs</span>(d1-d2) &lt; ACCUR;<br>&#125;<br>vect <span class="hljs-title function_">vform</span><span class="hljs-params">(<span class="hljs-type">const</span> node n1, <span class="hljs-type">const</span> node n2)</span><br>&#123;<br>    vect tmpv;<br>    tmpv.x = n2.x - n1.x;<br>    tmpv.y = n2.y - n1.y;<br>    <span class="hljs-keyword">return</span> tmpv;<br>&#125;<br><span class="hljs-type">double</span> <span class="hljs-title function_">vlen</span><span class="hljs-params">(<span class="hljs-type">const</span> vect v)</span><br>&#123;<br>    <span class="hljs-keyword">return</span> <span class="hljs-built_in">sqrt</span>(v.x*v.x+v.y*v.y);<br>&#125;<br><span class="hljs-type">double</span> <span class="hljs-title function_">vcos</span><span class="hljs-params">(<span class="hljs-type">const</span> vect v1, <span class="hljs-type">const</span> vect v2)</span><br>&#123;<br>    <span class="hljs-keyword">return</span> (v1*v2)/(vlen(v1)*vlen(v2));<br>&#125;<br><span class="hljs-type">double</span> <span class="hljs-title function_">area</span> <span class="hljs-params">(<span class="hljs-type">const</span> node n1, <span class="hljs-type">const</span> node n2, <span class="hljs-type">const</span> node n3)</span><br>&#123;<br>    <span class="hljs-type">double</span> b1, b2, b3;<br>    b1 = vlen(vform(n1,n2));<br>    b2 = vlen(vform(n2,n3));<br>    b3 = vlen(vform(n3,n1));<br>    <span class="hljs-type">double</span> b = (b1+b2+b3)/<span class="hljs-number">2</span>;<br>    <span class="hljs-keyword">return</span> <span class="hljs-built_in">sqrt</span>(b*(b-b1)*(b-b2)*(b-b3));<br>&#125;<br> <br>node p[MAXN];           <span class="hljs-comment">//点集</span><br><span class="hljs-built_in">queue</span> &lt;node&gt; bq;        <span class="hljs-comment">//凸包顶点集</span><br> <br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span><br>&#123;<br>    <span class="hljs-type">int</span> n;<br>    <span class="hljs-keyword">while</span>(<span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d&quot;</span>, &amp;n) == <span class="hljs-number">1</span>)<br>    &#123;<br>        <span class="hljs-keyword">if</span>(n == <span class="hljs-number">0</span>)<br>        &#123;<br>            <span class="hljs-keyword">break</span>;<br>        &#125;<br>        <span class="hljs-comment">/*【注意】第一个点先不标记，作为循环结束条件（即最后找到第一个点）*/</span><br>        <span class="hljs-type">int</span> f[MAXN] = &#123;<span class="hljs-number">0</span>&#125;;      <span class="hljs-comment">//点集标记数组;</span><br>        vect v;                 <span class="hljs-comment">//v表示上两个点形成的向量。</span><br>        node p0, p1;             <span class="hljs-comment">//p0表示第一个点，p1表示上一个点。</span><br>        p0.x = p0.y = MAXD;     <span class="hljs-comment">//初始化</span><br> <br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; n; ++i)<br>        &#123;<br>            <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%lf%lf&quot;</span>, &amp;(p[i].x), &amp;(p[i].y));<br>            <span class="hljs-keyword">if</span> (p[i] &lt; p0)<br>            &#123;<br>                p0 = p[i];<br>            &#125;<br>        &#125;<br> <br>        p1 = p0;                <span class="hljs-comment">//初始化上一个点</span><br>        <span class="hljs-comment">//【注意】初始化向量的选取跟第一个点的选取关。</span><br>        <span class="hljs-comment">//如果第一个点是横坐标最小然后纵坐标最小则初始向量为竖直单位向量</span><br>        v.x = <span class="hljs-number">1</span>; v.y = <span class="hljs-number">0</span>;       <span class="hljs-comment">//初始向量为水平单位向量。</span><br>        <span class="hljs-keyword">do</span><br>        &#123;<br>            node p2;            <span class="hljs-comment">//待判定的点。</span><br>            vect v1;            <span class="hljs-comment">//待判定的向量</span><br>            <span class="hljs-type">int</span> j;              <span class="hljs-comment">//带判定的点的下标</span><br>            <span class="hljs-type">double</span> minvcos = <span class="hljs-number">-1</span>, minvlen = MAXD;    <span class="hljs-comment">//初始最大夹角和最小向量长度。</span><br>            <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; n; ++i)<br>            &#123;<br>                <span class="hljs-keyword">if</span> (!f[i])      <span class="hljs-comment">//判断该点是否已经在凸包上</span><br>                &#123;<br>                    vect tmpv;<br>                    tmpv.x = p[i].x-p1.x;<br>                    tmpv.y = p[i].y-p1.y;<br>                    <span class="hljs-keyword">if</span> (vcos(v,tmpv) &gt; minvcos)<br>                    &#123;<br>                        p2 = p[i];<br>                        v1 = tmpv;<br>                        j = i;<br>                        minvcos = vcos(v,tmpv);<br>                        minvlen = vlen(tmpv);<br>                    &#125;<br>                    <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (equal(vcos(v,tmpv),minvcos) &amp;&amp; vlen(tmpv) &lt; minvlen)<br>                    &#123;<br>                        p2 = p[i];<br>                        v1 = tmpv;<br>                        j = i;<br>                        minvcos = vcos(v,tmpv);<br>                        minvlen = vlen(tmpv);<br>                    &#125;<br>                &#125;<br>            &#125;<br>            bq.push(p2);<br>            p1 = p2;<br>            v = v1;<br>            f[j] = <span class="hljs-number">1</span>;<br>            <span class="hljs-comment">//printf(&quot;minvcos=%f,minvlen=%f\n&quot;, minvcos, minvlen);</span><br>        &#125;<span class="hljs-keyword">while</span>(!(p1==p0));<br> <br>        <span class="hljs-comment">/*</span><br><span class="hljs-comment">        while(!bq.empty())</span><br><span class="hljs-comment">        &#123;</span><br><span class="hljs-comment">            node tmpp = bq.front();</span><br><span class="hljs-comment">            printf(&quot;(%f,%f)\n&quot;, tmpp.x, tmpp.y);</span><br><span class="hljs-comment">            bq.pop();</span><br><span class="hljs-comment">        &#125;</span><br><span class="hljs-comment">        */</span><br>        <br>        <span class="hljs-comment">//凸包周长</span><br>        <span class="hljs-type">double</span> ans = <span class="hljs-number">0</span>;<br>        node fp, ep;<br>        fp = p0;<br>        <span class="hljs-keyword">while</span>(!bq.empty())<br>        &#123;<br>            ep = bq.front();<br>            bq.pop();<br>            ans += vlen(vform(fp, ep));<br>            fp = ep;<br>        &#125;<br>        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%.2f\n&quot;</span>, ans);<br>     <br>        <span class="hljs-comment">/*</span><br><span class="hljs-comment">        //凸包面积</span><br><span class="hljs-comment">        double ans = 0;</span><br><span class="hljs-comment">        node fp = bq.front();</span><br><span class="hljs-comment">        bq.pop();</span><br><span class="hljs-comment">        node np = bq.front();</span><br><span class="hljs-comment">        bq.pop();</span><br><span class="hljs-comment">        while(!bq.empty())</span><br><span class="hljs-comment">        &#123;</span><br><span class="hljs-comment">            node ep = bq.front();</span><br><span class="hljs-comment">            bq.pop();</span><br><span class="hljs-comment">            ans += area(fp,np,ep);</span><br><span class="hljs-comment">            np = ep;</span><br><span class="hljs-comment">            //printf(&quot;(%f,%f)\n&quot;, tmpp.x, tmpp.y);</span><br><span class="hljs-comment">        &#125;</span><br><span class="hljs-comment">        printf(&quot;%d\n&quot;, (int)ans/50);</span><br><span class="hljs-comment">        */</span><br>    &#125;<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+<h2 id="2-Graham-算法">2. Graham 算法</h2>
+<h3 id="2-1-思想">2.1 思想</h3>
+<p>把所有点放在二维坐标系中，则纵坐标最小的点一定是凸包上的点，记为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>p</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">{p_0}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span> 。计算各个点相对 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>p</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">{p_0}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span> 的幅角，按从小到大的顺序对各个点排序。（当幅角相同是，距离 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>p</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">{p_0}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span> 比较近的排在前面）则幅角最小的点和最大的点一定在凸包上。取幅角最小的点记为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>p</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">{p_1}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span>，将 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>p</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">{p_0}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span>、<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>p</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">{p_1}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span> 入栈。连接栈顶的点和次栈顶的点，得到直线 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>l</mi></mrow><annotation encoding="application/x-tex">l</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span></span></span></span>，看当前点是在直线的右边还是左边，在右边则栈顶元素不是凸包上的点，将其弹出，返回继续执行。如果在左边，则当前点是凸包上的点。一直到幅角最大的那个点为之。</p>
+<ul>
+<li>叉积原理<br />
+两个向量的叉积 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>P</mi><mn>1</mn></msub><mo>×</mo><msub><mi>P</mi><mn>2</mn></msub><mo>=</mo><msub><mi>x</mi><mn>1</mn></msub><msub><mi>y</mi><mn>2</mn></msub><mo>−</mo><msub><mi>x</mi><mn>2</mn></msub><msub><mi>y</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">{P_1 \times P_2 = x_1y_2 - x_2y_1}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span>，其中用结果的正负代表叉乘结果的方向。该公式本质是两个三维向量（<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>z</mi></mrow><annotation encoding="application/x-tex">z</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.04398em;">z</span></span></span></span> 轴分量为0）叉乘的结果（原来结果为<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><msub><mi>y</mi><mn>2</mn></msub><mo>−</mo><msub><mi>x</mi><mn>2</mn></msub><msub><mi>y</mi><mn>1</mn></msub><mo stretchy="false">)</mo><mo>⋅</mo><mover accent="true"><mi>k</mi><mo>⃗</mo></mover></mrow><annotation encoding="application/x-tex">{(x_1y_2 - x_2y_1)\cdot \vec{k}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.2274399999999999em;vertical-align:-0.25em;"></span><span class="mord"><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.9774399999999999em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03148em;">k</span></span></span><span style="top:-3.26344em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.2355em;"><span class="overlay" style="height:0.714em;width:0.471em;"><svg width='0.471em' height='0.714em' style='width:0.471em' viewBox='0 0 471 714' preserveAspectRatio='xMinYMin'><path d='M377 20c0-5.333 1.833-10 5.5-14S391 0 397 0c4.667 0 8.667 1.667 12 5
+3.333 2.667 6.667 9 10 19 6.667 24.667 20.333 43.667 41 57 7.333 4.667 11
+10.667 11 18 0 6-1 10-3 12s-6.667 5-14 9c-28.667 14.667-53.667 35.667-75 63
+-1.333 1.333-3.167 3.5-5.5 6.5s-4 4.833-5 5.5c-1 .667-2.5 1.333-4.5 2s-4.333 1
+-7 1c-4.667 0-9.167-1.833-13.5-5.5S337 184 337 178c0-12.667 15.667-32.333 47-59
+H213l-171-1c-8.667-6-13-12.333-13-19 0-4.667 4.333-11.333 13-20h359
+c-16-25.333-24-45-24-59z'/></svg></span></span></span></span></span></span></span></span></span></span></span>，其中 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover accent="true"><mi>k</mi><mo>⃗</mo></mover></mrow><annotation encoding="application/x-tex">{\vec{k}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9774399999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.9774399999999999em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03148em;">k</span></span></span><span style="top:-3.26344em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.2355em;"><span class="overlay" style="height:0.714em;width:0.471em;"><svg width='0.471em' height='0.714em' style='width:0.471em' viewBox='0 0 471 714' preserveAspectRatio='xMinYMin'><path d='M377 20c0-5.333 1.833-10 5.5-14S391 0 397 0c4.667 0 8.667 1.667 12 5
+3.333 2.667 6.667 9 10 19 6.667 24.667 20.333 43.667 41 57 7.333 4.667 11
+10.667 11 18 0 6-1 10-3 12s-6.667 5-14 9c-28.667 14.667-53.667 35.667-75 63
+-1.333 1.333-3.167 3.5-5.5 6.5s-4 4.833-5 5.5c-1 .667-2.5 1.333-4.5 2s-4.333 1
+-7 1c-4.667 0-9.167-1.833-13.5-5.5S337 184 337 178c0-12.667 15.667-32.333 47-59
+H213l-171-1c-8.667-6-13-12.333-13-19 0-4.667 4.333-11.333 13-20h359
+c-16-25.333-24-45-24-59z'/></svg></span></span></span></span></span></span></span></span></span></span></span> 是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>z</mi></mrow><annotation encoding="application/x-tex">z</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.04398em;">z</span></span></span></span> 轴单位正向量）。</li>
+</ul>
+<h3 id="2-2-代码">2.2 代码</h3>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-comment">/************************************************************************</span><br><span class="hljs-comment">                        Graham Scan算法</span><br><span class="hljs-comment">时间复杂度：O(nlogn)。Scan过程为O(n)，预处理排序为O(nlogn)。</span><br><span class="hljs-comment">预处理排序：极角排序。</span><br><span class="hljs-comment">************************************************************************/</span><br><br><span class="hljs-comment">//#include &lt;bits/stdc++.h&gt;</span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stack&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;cstdio&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;cmath&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;algorithm&gt;</span></span><br> <br>using namespace <span class="hljs-built_in">std</span>;<br> <br><span class="hljs-type">const</span> <span class="hljs-type">int</span> MAXN = <span class="hljs-number">10005</span>;<br><span class="hljs-type">const</span> <span class="hljs-type">double</span> MAXD = <span class="hljs-number">1e9</span>;<br><span class="hljs-type">const</span> <span class="hljs-type">double</span> ACCUR = <span class="hljs-number">1e-9</span>;<br> <br><span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">node</span></span><br><span class="hljs-class">&#123;</span><br>    <span class="hljs-type">double</span> x, y;        <span class="hljs-comment">//点的坐标</span><br>    <span class="hljs-type">bool</span> operator &lt; (<span class="hljs-type">const</span> node n) <span class="hljs-type">const</span><br>    &#123;<br>        <span class="hljs-keyword">if</span> (<span class="hljs-built_in">abs</span>(y-n.y) &lt; ACCUR) <span class="hljs-keyword">return</span> x &lt; n.x;<br>        <span class="hljs-keyword">else</span>    <span class="hljs-keyword">return</span> y &lt; n.y;<br>    &#125;<br>    <span class="hljs-type">bool</span> operator == (<span class="hljs-type">const</span> node n) <span class="hljs-type">const</span><br>    &#123;<br>        <span class="hljs-keyword">return</span> (<span class="hljs-built_in">abs</span>(x-n.x) &lt; ACCUR) &amp;&amp; (<span class="hljs-built_in">abs</span>(y-n.y) &lt; ACCUR);<br>    &#125;<br>    <span class="hljs-type">void</span> operator = (<span class="hljs-type">const</span> node n)<br>    &#123;<br>        x = n.x;<br>        y = n.y;<br>    &#125;<br>&#125;;<br> <br><span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">vect</span></span><br><span class="hljs-class">&#123;</span><br>    <span class="hljs-type">double</span> x, y;<br>    <span class="hljs-type">void</span> operator = (<span class="hljs-type">const</span> vect v)<br>    &#123;<br>        x = v.x;<br>        y = v.y;<br>    &#125;<br>    <span class="hljs-comment">//叉积</span><br>    <span class="hljs-type">double</span> operator *(<span class="hljs-type">const</span> vect v) <span class="hljs-type">const</span><br>    &#123;<br>        <span class="hljs-keyword">return</span> x*v.y - y*v.x;<br>    &#125;<br>&#125;;<br> <br>node p0;            <span class="hljs-comment">//纵坐标最小的点</span><br> <br><span class="hljs-type">bool</span> <span class="hljs-title function_">equal</span> <span class="hljs-params">(<span class="hljs-type">const</span> <span class="hljs-type">double</span> d1, <span class="hljs-type">const</span> <span class="hljs-type">double</span> d2)</span><br>&#123;<br>    <span class="hljs-keyword">return</span> <span class="hljs-built_in">abs</span>(d1-d2) &lt; ACCUR;<br>&#125;<br>vect <span class="hljs-title function_">vform</span><span class="hljs-params">(<span class="hljs-type">const</span> node n1, <span class="hljs-type">const</span> node n2)</span><br>&#123;<br>    vect tmpv;<br>    tmpv.x = n2.x - n1.x;<br>    tmpv.y = n2.y - n1.y;<br>    <span class="hljs-keyword">return</span> tmpv;<br>&#125;<br><span class="hljs-type">double</span> <span class="hljs-title function_">vlen</span><span class="hljs-params">(<span class="hljs-type">const</span> vect v)</span><br>&#123;<br>    <span class="hljs-keyword">return</span> <span class="hljs-built_in">sqrt</span>(v.x*v.x+v.y*v.y);<br>&#125;<br><span class="hljs-type">double</span> <span class="hljs-title function_">vcos</span><span class="hljs-params">(<span class="hljs-type">const</span> vect v1, <span class="hljs-type">const</span> vect v2)</span><br>&#123;<br>    <span class="hljs-keyword">return</span> (v1*v2)/(vlen(v1)*vlen(v2));<br>&#125;<br><span class="hljs-comment">//极角排序</span><br><span class="hljs-type">bool</span> <span class="hljs-title function_">cmpp</span> <span class="hljs-params">(<span class="hljs-type">const</span> node p1, <span class="hljs-type">const</span> node p2)</span><br>&#123;<br>    vect v1, v2;<br>    v1 = vform(p0, p1);<br>    v2 = vform(p0, p2);<br>    <span class="hljs-keyword">if</span> (equal(v1*v2,<span class="hljs-number">0</span>))<br>    &#123;<br>        <span class="hljs-keyword">return</span> vlen(v1) &lt; vlen(v2);<br>    &#125;<br>    <span class="hljs-keyword">else</span><br>    &#123;<br>        <span class="hljs-keyword">return</span> v1*v2 &gt; <span class="hljs-number">0</span>;<br>    &#125;<br>&#125;<br><span class="hljs-comment">//叉积判断点（v2的终点）在v1左边还是右边</span><br><span class="hljs-type">bool</span> <span class="hljs-title function_">cmpv</span> <span class="hljs-params">(<span class="hljs-type">const</span> vect v1, <span class="hljs-type">const</span> vect v2)</span><br>&#123;<br>    <span class="hljs-keyword">return</span> (v1*v2 &gt; <span class="hljs-number">0</span>) || equal(v1*v2,<span class="hljs-number">0</span>);<br>&#125;<br><span class="hljs-type">double</span> <span class="hljs-title function_">area</span> <span class="hljs-params">(<span class="hljs-type">const</span> node n1, <span class="hljs-type">const</span> node n2, <span class="hljs-type">const</span> node n3)</span><br>&#123;<br>    <span class="hljs-comment">/*</span><br><span class="hljs-comment">    //海伦公式</span><br><span class="hljs-comment">    double b1, b2, b3;</span><br><span class="hljs-comment">    b1 = vlen(vform(n1,n2));</span><br><span class="hljs-comment">    b2 = vlen(vform(n2,n3));</span><br><span class="hljs-comment">    b3 = vlen(vform(n3,n1));</span><br><span class="hljs-comment">    double b = (b1+b2+b3)/2;</span><br><span class="hljs-comment">    return sqrt(b*(b-b1)*(b-b2)*(b-b3));</span><br><span class="hljs-comment">    */</span><br> <br>    <span class="hljs-comment">//叉积公式（叉积为平行四边形面积）</span><br>    vect v1, v2;<br>    v1 = vform(n1, n2);<br>    v2 = vform(n1, n3);<br>    <span class="hljs-keyword">return</span> <span class="hljs-built_in">abs</span>(v1*v2)/<span class="hljs-number">2</span>;<br>&#125;<br> <br>node p[MAXN];           <span class="hljs-comment">//点集</span><br><span class="hljs-built_in">stack</span> &lt;node&gt; bs;        <span class="hljs-comment">//凸包顶点集</span><br> <br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span><br>&#123;<br>    <span class="hljs-type">int</span> n;<br>    p0.x = p0.y = MAXD; <span class="hljs-comment">//初始化第一个点</span><br>    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d&quot;</span>, &amp;n);<br>    <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; n; ++i)<br>    &#123;<br>        <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%lf%lf&quot;</span>, &amp;(p[i].x), &amp;(p[i].y));<br>        <span class="hljs-keyword">if</span>(p[i] &lt; p0)<br>        &#123;<br>            p0 = p[i];<br>        &#125;<br>    &#125;<br>    sort(p,p+n,cmpp);<br>    bs.push(p[<span class="hljs-number">0</span>]);<br>    bs.push(p[<span class="hljs-number">1</span>]);<br>    <span class="hljs-type">int</span> j = <span class="hljs-number">2</span>;<br>    <span class="hljs-keyword">while</span>(j &lt; n)<br>    &#123;<br>        <span class="hljs-comment">//取出栈顶和次栈顶</span><br>        node p1, p2;<br>        p2 = bs.top();<br>        bs.pop();<br>        p1 = bs.top();<br>        <span class="hljs-comment">//构造叉乘向量</span><br>        vect v1, v2;<br>        v1 = vform(p1,p2);<br>        v2 = vform(p2,p[j]);<br>        <span class="hljs-keyword">if</span>(cmpv(v1,v2))<br>        &#123;<br>            bs.push(p2);<br>            bs.push(p[j]);<br>            ++j;<br>        &#125;<br>    &#125;<br>    <span class="hljs-comment">/*</span><br><span class="hljs-comment">    while(!bs.empty())</span><br><span class="hljs-comment">    &#123;</span><br><span class="hljs-comment">        node tmpp = bs.top();</span><br><span class="hljs-comment">        printf(&quot;(%f,%f)\n&quot;, tmpp.x, tmpp.y);</span><br><span class="hljs-comment">        bs.pop();</span><br><span class="hljs-comment">    &#125;</span><br><span class="hljs-comment">    */</span><br>    <span class="hljs-comment">/*</span><br><span class="hljs-comment">    //计算周长</span><br><span class="hljs-comment">    double ans = 0;</span><br><span class="hljs-comment">    node fp, ep;</span><br><span class="hljs-comment">    fp = p[0];</span><br><span class="hljs-comment">    while(!bs.empty())</span><br><span class="hljs-comment">    &#123;</span><br><span class="hljs-comment">        ep = bs.top();</span><br><span class="hljs-comment">        bs.pop();</span><br><span class="hljs-comment">        ans += vlen(vform(fp, ep));</span><br><span class="hljs-comment">        fp = ep;</span><br><span class="hljs-comment">    &#125;</span><br><span class="hljs-comment">    printf(&quot;%.2f\n&quot;, ans);</span><br><span class="hljs-comment">    */</span><br> <br>    <span class="hljs-comment">//计算面积</span><br>    <span class="hljs-type">double</span> ans = <span class="hljs-number">0</span>;<br>    node fp, np, ep;<br>    fp = bs.top();<br>    bs.pop();<br>    np = bs.top();<br>    bs.pop();<br>    <span class="hljs-keyword">while</span>(!bs.empty())<br>    &#123;<br>        ep = bs.top();<br>        bs.pop();<br>        ans += area(fp,np,ep);<br>        np = ep;<br>    &#125;<br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d\n&quot;</span>, (<span class="hljs-type">int</span>)ans/<span class="hljs-number">50</span>);<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+<h2 id="3-Andrew-算法">3. Andrew 算法</h2>
+<h3 id="3-1-思想">3.1 思想</h3>
+<p>预处理排序改为水平排序，按照横坐标从小到大进行排序，横坐标相同则按纵坐标从小到大排。按照 <strong>graham</strong> 算法思想从 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>p</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">{p_0}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span>、<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>p</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">{p_1}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span> 扫描所有点得到下凸包，再从 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>p</mi><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msub></mrow><annotation encoding="application/x-tex">{p_{n-1}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.638891em;vertical-align:-0.208331em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.301108em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.208331em;"><span></span></span></span></span></span></span></span></span></span></span>、<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>p</mi><mrow><mi>n</mi><mo>−</mo><mn>2</mn></mrow></msub></mrow><annotation encoding="application/x-tex">{p_{n-2}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.638891em;vertical-align:-0.208331em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.301108em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span><span class="mbin mtight">−</span><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.208331em;"><span></span></span></span></span></span></span></span></span></span></span> 扫描所有点得到上凸包，二者结合即为整个凸包。（注意：这里的 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>p</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">{p_1}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span> 不一定在凸包里）</p>
+<h3 id="3-2-代码">3.2 代码</h3>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-comment">/************************************************************************</span><br><span class="hljs-comment">                    Andrew算法（Graham Scan算法变种）</span><br><span class="hljs-comment">时间复杂度：O(nlogn)。Scan过程为O(n)，预处理排序为O(nlogn)。</span><br><span class="hljs-comment">预处理排序：水平排序排序。</span><br><span class="hljs-comment">************************************************************************/</span><br> <br><span class="hljs-comment">//#include &lt;bits/stdc++.h&gt;</span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stack&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;cstdio&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;cmath&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;algorithm&gt;</span></span><br> <br>using namespace <span class="hljs-built_in">std</span>;<br> <br><span class="hljs-type">const</span> <span class="hljs-type">int</span> MAXN = <span class="hljs-number">10005</span>;<br><span class="hljs-type">const</span> <span class="hljs-type">double</span> MAXD = <span class="hljs-number">1e9</span>;<br><span class="hljs-type">const</span> <span class="hljs-type">double</span> ACCUR = <span class="hljs-number">1e-9</span>;<br> <br><span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">node</span></span><br><span class="hljs-class">&#123;</span><br>    <span class="hljs-type">double</span> x, y;        <span class="hljs-comment">//点的坐标</span><br>    <span class="hljs-comment">//水平排序（与极角排序不一样，只能确定p0和pn-1在凸包内）</span><br>    <span class="hljs-type">bool</span> operator &lt; (<span class="hljs-type">const</span> node n) <span class="hljs-type">const</span><br>    &#123;<br>        <span class="hljs-keyword">if</span> (<span class="hljs-built_in">abs</span>(x-n.x) &lt; ACCUR) <span class="hljs-keyword">return</span> y &lt; n.y;<br>        <span class="hljs-keyword">else</span>    <span class="hljs-keyword">return</span> x &lt; n.x;<br>    &#125;<br>    <span class="hljs-type">bool</span> operator == (<span class="hljs-type">const</span> node n) <span class="hljs-type">const</span><br>    &#123;<br>        <span class="hljs-keyword">return</span> (<span class="hljs-built_in">abs</span>(x-n.x) &lt; ACCUR) &amp;&amp; (<span class="hljs-built_in">abs</span>(y-n.y) &lt; ACCUR);<br>    &#125;<br>    <span class="hljs-type">void</span> operator = (<span class="hljs-type">const</span> node n)<br>    &#123;<br>        x = n.x;<br>        y = n.y;<br>    &#125;<br>&#125;;<br> <br><span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">vect</span></span><br><span class="hljs-class">&#123;</span><br>    <span class="hljs-type">double</span> x, y;<br>    <span class="hljs-type">void</span> operator = (<span class="hljs-type">const</span> vect v)<br>    &#123;<br>        x = v.x;<br>        y = v.y;<br>    &#125;<br>    <span class="hljs-comment">//叉积</span><br>    <span class="hljs-type">double</span> operator *(<span class="hljs-type">const</span> vect v) <span class="hljs-type">const</span><br>    &#123;<br>        <span class="hljs-keyword">return</span> x*v.y - y*v.x;<br>    &#125;<br>&#125;;<br> <br><span class="hljs-type">bool</span> <span class="hljs-title function_">equal</span> <span class="hljs-params">(<span class="hljs-type">const</span> <span class="hljs-type">double</span> d1, <span class="hljs-type">const</span> <span class="hljs-type">double</span> d2)</span><br>&#123;<br>    <span class="hljs-keyword">return</span> <span class="hljs-built_in">abs</span>(d1-d2) &lt; ACCUR;<br>&#125;<br>vect <span class="hljs-title function_">vform</span><span class="hljs-params">(<span class="hljs-type">const</span> node n1, <span class="hljs-type">const</span> node n2)</span><br>&#123;<br>    vect tmpv;<br>    tmpv.x = n2.x - n1.x;<br>    tmpv.y = n2.y - n1.y;<br>    <span class="hljs-keyword">return</span> tmpv;<br>&#125;<br><span class="hljs-comment">//计算向量长度</span><br><span class="hljs-type">double</span> <span class="hljs-title function_">vlen</span><span class="hljs-params">(<span class="hljs-type">const</span> vect v)</span><br>&#123;<br>    <span class="hljs-keyword">return</span> <span class="hljs-built_in">sqrt</span>(v.x*v.x+v.y*v.y);<br>&#125;<br><span class="hljs-comment">//计算向量夹角余弦值</span><br><span class="hljs-type">double</span> <span class="hljs-title function_">vcos</span><span class="hljs-params">(<span class="hljs-type">const</span> vect v1, <span class="hljs-type">const</span> vect v2)</span><br>&#123;<br>    <span class="hljs-keyword">return</span> (v1*v2)/(vlen(v1)*vlen(v2));<br>&#125;<br><span class="hljs-comment">/*</span><br><span class="hljs-comment">//极角排序</span><br><span class="hljs-comment">bool cmpp (const node p1, const node p2)</span><br><span class="hljs-comment">&#123;</span><br><span class="hljs-comment">    vect v1, v2;</span><br><span class="hljs-comment">    v1 = vform(p0, p1);</span><br><span class="hljs-comment">    v2 = vform(p0, p2);</span><br><span class="hljs-comment">    if (equal(v1*v2,0))</span><br><span class="hljs-comment">    &#123;</span><br><span class="hljs-comment">        return vlen(v1) &lt; vlen(v2);</span><br><span class="hljs-comment">    &#125;</span><br><span class="hljs-comment">    else</span><br><span class="hljs-comment">    &#123;</span><br><span class="hljs-comment">        return v1*v2 &gt; 0;</span><br><span class="hljs-comment">    &#125;</span><br><span class="hljs-comment">&#125;</span><br><span class="hljs-comment">*/</span><br><span class="hljs-comment">//叉积判断点（v2的终点）在v1左边还是右边</span><br><span class="hljs-type">bool</span> <span class="hljs-title function_">cmpv</span> <span class="hljs-params">(<span class="hljs-type">const</span> vect v1, <span class="hljs-type">const</span> vect v2)</span><br>&#123;<br>    <span class="hljs-keyword">return</span> (v1*v2 &gt; <span class="hljs-number">0</span>) || equal(v1*v2,<span class="hljs-number">0</span>);<br>&#125;<br><span class="hljs-type">double</span> <span class="hljs-title function_">area</span> <span class="hljs-params">(<span class="hljs-type">const</span> node n1, <span class="hljs-type">const</span> node n2, <span class="hljs-type">const</span> node n3)</span><br>&#123;<br>    <span class="hljs-comment">/*</span><br><span class="hljs-comment">    //海伦公式</span><br><span class="hljs-comment">    double b1, b2, b3;</span><br><span class="hljs-comment">    b1 = vlen(vform(n1,n2));</span><br><span class="hljs-comment">    b2 = vlen(vform(n2,n3));</span><br><span class="hljs-comment">    b3 = vlen(vform(n3,n1));</span><br><span class="hljs-comment">    double b = (b1+b2+b3)/2;</span><br><span class="hljs-comment">    return sqrt(b*(b-b1)*(b-b2)*(b-b3));</span><br><span class="hljs-comment">    */</span><br> <br>    <span class="hljs-comment">//叉积公式（叉积为平行四边形面积）</span><br>    vect v1, v2;<br>    v1 = vform(n1, n2);<br>    v2 = vform(n1, n3);<br>    <span class="hljs-keyword">return</span> <span class="hljs-built_in">abs</span>(v1*v2)/<span class="hljs-number">2</span>;<br>&#125;<br> <br>node p[MAXN];           <span class="hljs-comment">//点集</span><br><span class="hljs-built_in">stack</span> &lt;node&gt; bs;        <span class="hljs-comment">//凸包顶点集</span><br> <br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span><br>&#123;<br>    <span class="hljs-type">int</span> n;<br>    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d&quot;</span>, &amp;n);<br>    <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; n; ++i)<br>    &#123;<br>        <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%lf%lf&quot;</span>, &amp;(p[i].x), &amp;(p[i].y));<br>    &#125;<br>    sort(p,p+n);<br>    <span class="hljs-comment">//正向扫描（上凸包）</span><br>    bs.push(p[<span class="hljs-number">0</span>]);<br>    bs.push(p[<span class="hljs-number">1</span>]);<br>    <span class="hljs-type">int</span> j = <span class="hljs-number">2</span>;<br>    <span class="hljs-keyword">while</span>(j &lt; n)<br>    &#123;<br>        <span class="hljs-comment">//取出栈顶和次栈顶</span><br>        node p1, p2;<br>        p2 = bs.top();<br>        bs.pop();<br>        <span class="hljs-comment">//p1不一定在凸包中</span><br>        <span class="hljs-keyword">if</span>(bs.empty())<br>        &#123;<br>            bs.push(p2);<br>            bs.push(p[j]);<br>            ++j;<br>        &#125;<br>        <span class="hljs-keyword">else</span><br>        &#123;<br>            p1 = bs.top();<br>            <span class="hljs-comment">//构造叉乘向量</span><br>            vect v1, v2;<br>            v1 = vform(p1,p2);<br>            v2 = vform(p2,p[j]);<br>            <span class="hljs-keyword">if</span>(cmpv(v1,v2))<br>            &#123;<br>                bs.push(p2);<br>                bs.push(p[j]);<br>                ++j;<br>            &#125;<br>        &#125;<br>    &#125;<br>    <span class="hljs-comment">//反向扫描（下凸包）</span><br>    <span class="hljs-type">int</span> k = n<span class="hljs-number">-2</span>;<br>    <span class="hljs-keyword">while</span>(k &gt;= <span class="hljs-number">0</span>)<br>    &#123;<br>        <span class="hljs-comment">//取出栈顶和次栈顶</span><br>        node p1, p2;<br>        p2 = bs.top();<br>        bs.pop();<br>        p1 = bs.top();<br>        <span class="hljs-comment">//构造叉乘向量</span><br>        vect v1, v2;<br>        v1 = vform(p1,p2);<br>        v2 = vform(p2,p[k]);<br>        <span class="hljs-keyword">if</span>(cmpv(v1,v2))<br>        &#123;<br>            bs.push(p2);<br>            bs.push(p[k]);<br>            --k;<br>        &#125;<br>    &#125;<br>    bs.pop();   <span class="hljs-comment">//p0重复进栈一次</span><br> <br>    <span class="hljs-comment">/*</span><br><span class="hljs-comment">    while(!bs.empty())</span><br><span class="hljs-comment">    &#123;</span><br><span class="hljs-comment">        node tmpp = bs.top();</span><br><span class="hljs-comment">        printf(&quot;(%f,%f)\n&quot;, tmpp.x, tmpp.y);</span><br><span class="hljs-comment">        bs.pop();</span><br><span class="hljs-comment">    &#125;</span><br><span class="hljs-comment">    */</span><br>    <span class="hljs-comment">/*</span><br><span class="hljs-comment">    //计算周长</span><br><span class="hljs-comment">    double ans = 0;</span><br><span class="hljs-comment">    node fp, ep;</span><br><span class="hljs-comment">    fp = p[0];</span><br><span class="hljs-comment">    while(!bs.empty())</span><br><span class="hljs-comment">    &#123;</span><br><span class="hljs-comment">        ep = bs.top();</span><br><span class="hljs-comment">        bs.pop();</span><br><span class="hljs-comment">        ans += vlen(vform(fp, ep));</span><br><span class="hljs-comment">        fp = ep;</span><br><span class="hljs-comment">    &#125;</span><br><span class="hljs-comment">    printf(&quot;%.2f\n&quot;, ans);</span><br><span class="hljs-comment">    */</span><br>    <br>    <span class="hljs-comment">//计算面积</span><br>    <span class="hljs-type">double</span> ans = <span class="hljs-number">0</span>;<br>    node fp, np, ep;<br>    fp = bs.top();<br>    bs.pop();<br>    np = bs.top();<br>    bs.pop();<br>    <span class="hljs-keyword">while</span>(!bs.empty())<br>    &#123;<br>        ep = bs.top();<br>        bs.pop();<br>        ans += area(fp,np,ep);<br>        np = ep;<br>    &#125;<br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d\n&quot;</span>, (<span class="hljs-type">int</span>)ans/<span class="hljs-number">50</span>);<br> <br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/Technique/">Technique</a>
+                    
+                      <a class="hover-with-bg" href="/categories/Technique/ACM/">ACM</a>
+                    
+                      <a class="hover-with-bg" href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/">算法</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Technique/">Technique</a>
+                    
+                      <a class="hover-with-bg" href="/tags/ACM/">ACM</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/08/14/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%A6/%E7%9F%A9%E9%98%B5%E6%A0%91%E5%AE%9A%E7%90%86/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">矩阵树定理</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/08/14/Technique/ACM/%E7%AE%97%E6%B3%95/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/LCS%E3%80%81LIS%E3%80%81LICS%E7%AE%97%E6%B3%95/">
+                        <span class="hidden-mobile">LCS、LIS、LICS算法</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="waline"></div>
+  <script type="text/javascript">
+    Fluid.utils.lazyComments('waline', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js', function () {
+        new Waline({
+          el: "#waline",
+          placeholder: "都看到这里了，留个脚印再走呗~",
+          path: window.location.pathname,
+          avatar: "retro",
+          visitor: true,
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: true,
+          serverURL: "https://waline-one-beta.vercel.app/",
+          avatarCDN: "https://gravatar.loli.net/avatar/",
+          avatarForce: false,
+          requiredMeta: [],
+          emoji: ["https://cdn.jsdelivr.net/gh/hotarugali/Emoji@bilibili_tv_gif/waline/bilibili_tv_gif","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@bilibiliHotKey/waline/bilibiliHotKey","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@bilibili2233/waline/bilibili2233","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@smallshake/waline/smallshake","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@alu/waline/alu","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@QQ/waline/QQ","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@Tieba-New/waline/Tieba-New","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@weibo/waline/weibo"],
+          // emojiMaps: ,
+          login: "enable",
+          dark: 'html[data-user-color-scheme="dark"]',
+        });
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the
+    <a target="_blank" href="https://waline.js.org" rel="nofollow noopener noopener">comments powered by Waline.</a>
+  </noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+      <div class="col-lg-7 mx-auto nopadding-x-md">
+        <div class="container custom mx-auto">
+          <script src="https://myhkw.cn/api/player/161389264877" id="myhk" key="161389264877" m="1"></script>
+        </div>
+      </div>
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+
+  <script defer src="/js/leancloud.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- KaTeX -->
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" />
+  
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/mermaid@8.8.3/dist/mermaid.min.js" ></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({"theme":"default"});
+    }
+  </script>
+
+
+
+
+  
+    <!-- Baidu Analytics -->
+    <script defer>
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?c194cf0c8cbc33bfb846ba1329537d81";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  
+    <!-- Google Analytics -->
+    <script defer>
+      window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) };
+      ga.l = +new Date;
+      ga('create', 'G-SXJN0942X9', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+  
+
+  
+    <!-- Google gtag.js -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D3DEHLLP3W"></script>
+    <script defer>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-D3DEHLLP3W');
+    </script>
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

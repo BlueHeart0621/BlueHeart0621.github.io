@@ -18,7 +18,7 @@
   <meta name="author" content="BlueHeart0621">
   <meta name="keywords" content="頑張れ">
   
-    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script> <script src="/live2d-widget/autoload.js" type="text/javascript"></script> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script> <script src="/live2d-widget/autoload.js" type="text/javascript"></script> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/> <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
   
   <title>お前はどこまで見えている</title>
 
@@ -197,24 +197,614 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/10/02/DeepLearning/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/Adam/">Adam</a>
+        <a href="/2021/01/21/Technique/TeX/LaTeX/Manjaro20.2%E9%85%8D%E7%BD%AETexLive+VSCode%E7%9A%84LaTeX%E7%8E%AF%E5%A2%83/">Manjaro20.2配置TeXLive+VSCode的LaTeX环境</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/10/02/DeepLearning/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/Adam/">
+        <a href="/2021/01/21/Technique/TeX/LaTeX/Manjaro20.2%E9%85%8D%E7%BD%AETexLive+VSCode%E7%9A%84LaTeX%E7%8E%AF%E5%A2%83/">
+          
+          
+            
+          
+          1. 安装
+1.1 安装 TeXLive
+1.1.1 从软件源安装
+在终端执行以下代码，安装 TeXLive 环境：
+12sudo pacman -S texlive-mostsudo pacman -S texlive-lang 
+【注】这样安装 TeXLive 后无法在终端使用 texdoc 工具，会报错：/usr/local/texlive/2020/texmf-dist/doc/gener
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-21 20:25" pubdate>
+              2021-01-21
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/TeX/">TeX</a>
+            
+              <a href="/categories/Technique/TeX/LaTeX/">LaTeX</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/TeX/">TeX</a>
+            
+              <a href="/tags/LaTeX/">LaTeX</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/01/21/Technique/NodeJS/npm%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85%E9%80%9F%E5%BA%A6%E6%85%A2%E9%97%AE%E9%A2%98/">npm下载安装速度慢问题</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/01/21/Technique/NodeJS/npm%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85%E9%80%9F%E5%BA%A6%E6%85%A2%E9%97%AE%E9%A2%98/">
+          
+          
+            
+          
+          1. node 下载 electron 卡住 &amp;&amp; node install.js 卡住
+
+问题：都是由于访问国外网站过慢造成
+解决：
+
+
+
+配置淘宝镜像
+修改 .npmrc 文件（windows C:\Users\username\.npmrc，Linux 在 ~/.npmrc）内容为以下内容：
+
+12registry=https://registry.npm.taobao.or
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-21 16:09" pubdate>
+              2021-01-21
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/NodeJS/">NodeJS</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/NodeJS/">NodeJS</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/01/21/Technique/TeX/LaTeX/LaTeX%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7/">LaTeX奇技淫巧</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/01/21/Technique/TeX/LaTeX/LaTeX%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7/">
+          
+          
+            
+          
+          1. 移动符号
+第一个符号位置不变，改变第二个符号相对第一个符号的位置。
+1.1 左移
+在两个符号间插入 \! 可将第二个符号逐步往左移动。每个 \! 移动 −16-\frac{1}{6}−61​ em 的距离（−-− 表示左移）。插入越多 \! ，第二个符号左移的位移就越大。
+比如：
+
+
+$\dashv \vdash$：
+⊣⊢\dashv \vdash⊣⊢
+
+
+$\dashv \! \vdash
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-21 11:46" pubdate>
+              2021-01-21
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/TeX/">TeX</a>
+            
+              <a href="/categories/Technique/TeX/LaTeX/">LaTeX</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/TeX/">TeX</a>
+            
+              <a href="/tags/LaTeX/">LaTeX</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/01/19/Technique/Math/Theory/%E6%96%B9%E5%90%91%E4%BD%99%E5%BC%A6/">方向余弦</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/01/19/Technique/Math/Theory/%E6%96%B9%E5%90%91%E4%BD%99%E5%BC%A6/">
+          
+          
+            
+          
+          【注】参考自 Wikipedia 。
+1. 定义
+1.1 方向余弦
+
+在解析几何里，一个向量的三个方向余弦分别是这向量与三个坐标轴之间的角度的余弦。
+
+设 v⃗=v1x⃗+v2y⃗+v3z⃗
+\vec{v} = v_1 \vec{x} + v_2 \vec{y} + v_3 \vec{z}
+v=v1​x+v2​y​+v3​z 其中，x⃗\vec{x}x、y⃗\vec{y}y​、z⃗\vec{z}z
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-19 22:25" pubdate>
+              2021-01-19
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Math/">Math</a>
+            
+              <a href="/categories/Technique/Math/Theory/">Theory</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
+            
+              <a href="/tags/Math/">Math</a>
+            
+              <a href="/tags/Theory/">Theory</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/01/19/Technique/ACM/%E9%A2%98%E8%A7%A3/P2758%E3%80%8C%E7%BC%96%E8%BE%91%E8%B7%9D%E7%A6%BB%E3%80%8D/">P2758「编辑距离」</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/01/19/Technique/ACM/%E9%A2%98%E8%A7%A3/P2758%E3%80%8C%E7%BC%96%E8%BE%91%E8%B7%9D%E7%A6%BB%E3%80%8D/">
+          
+          
+            
+          
+          1. 题目
+题目链接：P2758「编辑距离」 。
+题目描述
+设 AAA 和 BBB 是两个字符串。我们要用最少的字符操作次数，将字符串 AAA 转换为字符串 BBB。这里所说的字符操作共有三种：
+
+
+删除一个字符；
+
+
+插入一个字符；
+
+
+将一个字符改为另一个字符；
+
+
+！皆为小写字母！
+输入格式
+第一行为字符串 AAA；第二行为字符串 BBB；字符串 AAA 和 BBB 的长度均小于 20002
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-19 20:39" pubdate>
+              2021-01-19
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/ACM/">ACM</a>
+            
+              <a href="/categories/Technique/ACM/%E9%A2%98%E8%A7%A3/">题解</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/ACM/">ACM</a>
+            
+              <a href="/tags/%E9%A2%98%E8%A7%A3/">题解</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/01/17/Technique/Configure/Configure%E8%84%9A%E6%9C%AC%E5%AD%A6%E4%B9%A0/">Configure脚本学习</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/01/17/Technique/Configure/Configure%E8%84%9A%E6%9C%AC%E5%AD%A6%E4%B9%A0/">
+          
+          
+            
+          
+          1. 指定安装目录
+1./configure --prefix=...
+
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-17 11:28" pubdate>
+              2021-01-17
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Configure/">Configure</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/Configure/">Configure</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/01/17/Technique/CMake/CMake%E4%BD%BF%E7%94%A8%E5%AD%A6%E4%B9%A0/">CMake 使用学习</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/01/17/Technique/CMake/CMake%E4%BD%BF%E7%94%A8%E5%AD%A6%E4%B9%A0/">
+          
+          
+            
+          
+          1. 概述
+CMake 工具能够自动生成 Makefile 文件，减轻手写 Makefile 文件的工作量，同时减少书写 Makefile 文件产生的错误。
+2. CMake 命令
+CMake 运行主要分为两个阶段：
+
+
+配置阶段：解析 CMakeLists.txt 文件
+
+
+生成阶段：生成构建环境
+
+
+有关 cmake 的详细参数参见 cmake --help，本文仅对其中较难理解的选项加以描述
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-17 11:25" pubdate>
+              2021-01-17
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/CMake/">CMake</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/CMake/">CMake</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/01/16/Technique/DeepLearning/Padding%E7%AD%96%E7%95%A5/Padding%E7%AD%96%E7%95%A5/">Padding策略</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/01/16/Technique/DeepLearning/Padding%E7%AD%96%E7%95%A5/Padding%E7%AD%96%E7%95%A5/">
+          
+          
+            
+          
+          1. Zero Padding
+
+均用 0 值填充。
+
+
+2. Replicate Padding
+
+用距离最近的像素值填充。
+
+
+3. Mirror Padding
+
+关于四边界成镜像对称，关于四角成镜像对称。
+
+
+
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-16 18:08" pubdate>
+              2021-01-16
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/DeepLearning/">DeepLearning</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/DeepLearning/">DeepLearning</a>
+            
+              <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/01/16/Technique/InformationTheory/%E4%BF%A1%E6%81%AF%E7%9A%84%E7%BB%9F%E8%AE%A1%E5%BA%A6%E9%87%8F/%E4%BF%A1%E6%81%AF%E7%9A%84%E7%BB%9F%E8%AE%A1%E5%BA%A6%E9%87%8F/">信息的统计度量</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/01/16/Technique/InformationTheory/%E4%BF%A1%E6%81%AF%E7%9A%84%E7%BB%9F%E8%AE%A1%E5%BA%A6%E9%87%8F/%E4%BF%A1%E6%81%AF%E7%9A%84%E7%BB%9F%E8%AE%A1%E5%BA%A6%E9%87%8F/">
+          
+          
+            
+          
+          符号约定
+
+
+
+符号
+说明
+
+
+
+
+X,Y,⋯X, Y, \cdotsX,Y,⋯
+随机事件集合/随机变量
+
+
+x,y,⋯x, y, \cdotsx,y,⋯
+随机事件集合中的元素/随机变量的取值
+
+
+p(x)p(x)p(x)
+随机事件发生的概率
+
+
+p(x∣y)p(x \vert y)p(x∣y)
+随机事件发生的条件概率
+
+
+p(xy),p(x,y)p(x y), p(x, y)p(xy),p(x,
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-16 18:06" pubdate>
+              2021-01-16
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/InformationTheory/">InformationTheory</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/InformationTheory/">InformationTheory</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/01/16/Technique/Math/Modeling/PCA%E6%A8%A1%E5%9E%8B/">PCA模型</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/01/16/Technique/Math/Modeling/PCA%E6%A8%A1%E5%9E%8B/">
           
           
             
           
           1. 简介
-Adam 算法可以看作动量法和 RMSprop 算法的结合，不但使用动量作为参数更新方向，而且可以自适应调整学习率。
+主成分分析是指将数据中相关性很高的属性/变量转化成彼此相互独立或不相关的新属性/变量，利用较少的新属性/变量（主成分）去解释原来数据中的大部分属性/变量的一种降维方法。
 2. 原理
-第 ttt 次迭代时：
-
-一方面计算梯度平方的指数加权平均：
-
-Gt=β2Gt−1+(1−β2)∂L∂Wt−1⊙∂L∂Wt−1\begin{array}{c}
-\boldsymbol{G}_t = \beta_2 \boldsymbol{G}_{t-1} +
+2.1 基础思想
+以学校课程为例，用 x1,x2,⋯ ,xp{x_1,x_2,\cdots,x_p}x1​,x2​,⋯,xp​ 表示 p 门课程的成绩变量， c1,c2,⋯ ,cp{c_1,c_2,\cdo
         </a>
       </p>
 
@@ -222,8 +812,8 @@ Gt=β2Gt−1+(1−β2)∂L∂Wt−1⊙∂L∂Wt−1\begin{array}{c}
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-10-02 20:01" pubdate>
-              2020-10-02
+            <time datetime="2021-01-16 18:06" pubdate>
+              2021-01-16
             </time>
           </div>
         
@@ -233,72 +823,9 @@ Gt=β2Gt−1+(1−β2)∂L∂Wt−1⊙∂L∂Wt−1\begin{array}{c}
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/DeepLearning/">DeepLearning</a>
+              <a href="/categories/Technique/Math/">Math</a>
             
-              <a href="/categories/Technique/DeepLearning/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/">优化算法</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/DeepLearning/">DeepLearning</a>
-            
-              <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a>
-            
-              <a href="/tags/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/">优化算法</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/10/02/DeepLearning/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/Momentum/">Momentum</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/10/02/DeepLearning/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/Momentum/">
-          
-          
-            
-          
-          1. 简介
-Momentum 类似于物理中的冲量的思想，Momentum 算法优化的过程给人的感觉就像是小球在地面上滚动。
-2. 原理
-第 ttt 次迭代时：
-vt=αvt−1−η∂L∂Wt−1Wt=Wt−1+vt\begin{array}{c}
-\boldsymbol{v}_t = \alpha \boldsymbol{v}_{t-1} - \eta \frac{\partial L}{\par
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-10-02 20:01" pubdate>
-              2020-10-02
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/DeepLearning/">DeepLearning</a>
-            
-              <a href="/categories/Technique/DeepLearning/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/">优化算法</a>
+              <a href="/categories/Technique/Math/Modeling/">Modeling</a>
             
           </div>
         
@@ -308,528 +835,9 @@ vt=αvt−1−η∂L∂Wt−1Wt=Wt−1+vt\begin{array}{c}
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/DeepLearning/">DeepLearning</a>
+              <a href="/tags/Math/">Math</a>
             
-              <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a>
-            
-              <a href="/tags/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/">优化算法</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/10/02/DeepLearning/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B/">优化算法</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/10/02/DeepLearning/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B/">
-          
-          
-            
-          
-          1. 简介
-深度学习网络中参数更新的优化方法主要分为两种：
-
-
-调整学习率，使得优化更稳定
-
-
-梯度估计修正，优化训练速度
-
-
-2. 常用优化方法汇总
-
-3. 原理
-上述常用方法均可以使用一下公式来进行同一描述：
-ΔWt=−ηtGt+εMtGt=ψ(∂L∂W1,⋯ ,∂L∂Wt)Mt=ϕ(∂L∂W1,⋯ ,∂L∂Wt)\begin{array}{c}
-\Delta \boldsymbol{W}_t
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-10-02 20:01" pubdate>
-              2020-10-02
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/DeepLearning/">DeepLearning</a>
-            
-              <a href="/categories/Technique/DeepLearning/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/">优化算法</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/DeepLearning/">DeepLearning</a>
-            
-              <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a>
-            
-              <a href="/tags/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/">优化算法</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/10/02/DeepLearning/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/SGD/">随机梯度下降</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/10/02/DeepLearning/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/SGD/">
-          
-          
-            
-          
-          1. 简介
-梯度下降法即沿着训练集的梯度方向下降。随机梯度下降（stochastic gradient descent：SGD）按照数据生成分布抽取 mmm 个小批量（独立同分布的）样本，通过计算它们的梯度均值，从而得到梯度的无偏估计；然后随机梯度下降算法沿着随机挑选的小批量数据的梯度下降方向，能够很大程度加速梯度下降的过程。
-2. 思路
-2.1 梯度下降
-第 ttt 次迭代时：
-Wt=Wt−1−
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-10-02 19:40" pubdate>
-              2020-10-02
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/DeepLearning/">DeepLearning</a>
-            
-              <a href="/categories/Technique/DeepLearning/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/">优化算法</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/DeepLearning/">DeepLearning</a>
-            
-              <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a>
-            
-              <a href="/tags/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/">优化算法</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/10/02/DeepLearning/RNN/RNN/">RNN</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/10/02/DeepLearning/RNN/RNN/">
-          
-          
-            
-          
-          【注】参考自邱锡鹏的《神经网络与深度学习》。
-1. 简介
-循环神经网络（RNN）是一类具有短期记忆能力的神经网络。在循环神经网络中，神经元不但可以接受其他神经元的信息，也可以接受自身的信息，形成具有环路的网络结构。而前馈网络是一种静态网络，不具备记忆能力。
-
-RNN 能够用于处理时序数据的神经网络，被广泛应用于语音识别、语言模型以及自然语言生成等任务上。
-
-
-时序数据的长度一般是不固定的，而前馈神
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-10-02 14:23" pubdate>
-              2020-10-02
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/DeepLearning/">DeepLearning</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/DeepLearning/">DeepLearning</a>
-            
-              <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/10/02/DeepLearning/CNN/CNN/">CNN</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/10/02/DeepLearning/CNN/CNN/">
-          
-          
-            
-          
-          1. 简介
-CNN 是专门用于处理网格化数据的神经网络。CNN 中新增了 Convolution 层和 Pooling 层，CNN 的层的连接顺序是「Convolution-ReLU-(Pooling)」（Pooling层有时会被省略）。这可以理解为之前的“Affine-ReLU”连接被替换成了「Convolution-ReLU-(Pooling)」连接。
-2. CNN 的优势
-
-全连接层（Aff
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-10-02 14:22" pubdate>
-              2020-10-02
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/DeepLearning/">DeepLearning</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/DeepLearning/">DeepLearning</a>
-            
-              <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/10/02/DeepLearning/%E6%AD%A3%E5%88%99%E5%8C%96/">正则化</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/10/02/DeepLearning/%E6%AD%A3%E5%88%99%E5%8C%96/">
-          
-          
-            
-          
-          1. 定义
-在机器学习中，许多策略被显式设计来减少测试误差（可能会增大训练误差为代价），这些策略被统称为正则化。常用的正则化方法简介如下表：
-
-
-
-正则化方法
-简介
-
-
-
-
-正则化项
-通过在经验损失上加上模型参数向量的罚项来防止模型过拟合，常用的有 L1L_1L1​ 和 L2L_2L2​ 范数。
-
-
-Dropout
-通过随机 Mask 掉隐藏层的神经元，使得训练过程中实际训练了一堆的子网络，而最终
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-10-02 13:13" pubdate>
-              2020-10-02
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/DeepLearning/">DeepLearning</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/DeepLearning/">DeepLearning</a>
-            
-              <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/10/01/Linux/Sundry/Linux%E4%B8%8B%E6%9F%A5%E7%9C%8B%E7%B3%BB%E7%BB%9F%E4%BF%A1%E6%81%AF/">Linux下查看系统信息</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/10/01/Linux/Sundry/Linux%E4%B8%8B%E6%9F%A5%E7%9C%8B%E7%B3%BB%E7%BB%9F%E4%BF%A1%E6%81%AF/">
-          
-          
-            
-          
-          1. 查看操作系统信息
-1lsb_release -a
-【注】并不是所有 Linux 发行版都自带 lsb_release 命令，如果系统上没有该命令需要手动安装 lsb-release 工具。
-2. 查看 Linux 内核版本
-1uname -r
-3. 查看显卡厂商
-1lspci | grep -i vga
-4. 查看内存容量
-1free -g/-m/-k/-b    # -g/-m/-k/b 
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-10-01 17:21" pubdate>
-              2020-10-01
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/Linux/">Linux</a>
-            
-              <a href="/categories/Technique/Linux/Sundry/">Sundry</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/Sundry/">Sundry</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/10/01/Linux/Manjaro/Manjaro20.1%E4%B8%8B%E6%90%AD%E5%BB%BAPytorch%E7%8E%AF%E5%A2%83/">Manjaro20.1下搭建Pytorch环境</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/10/01/Linux/Manjaro/Manjaro20.1%E4%B8%8B%E6%90%AD%E5%BB%BAPytorch%E7%8E%AF%E5%A2%83/">
-          
-          
-            
-          
-          1. 安装 cuda 环境
-1sudo pacman -S python-pytorch-cuda
-2. 安装 pytorch 环境
-1pip install torch torchvision
-也可以用其他命令比如 conda 等，具体可以参照 pytorch 官网。
-3. 测试
-1python
-进入到 python 命令行后运行：
-12import torchtorch.cuda.is_ava
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-10-01 17:19" pubdate>
-              2020-10-01
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/Linux/">Linux</a>
-            
-              <a href="/categories/Technique/Linux/Manjaro/">Manjaro</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/Manjaro/">Manjaro</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/10/01/Linux/Mint/Mint20%E4%B8%8B%E6%9F%A5%E7%9C%8Bnvidia%E6%98%BE%E5%8D%A1%E5%9E%8B%E5%8F%B7/">Mint20下查看nvidia显卡型号</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/10/01/Linux/Mint/Mint20%E4%B8%8B%E6%9F%A5%E7%9C%8Bnvidia%E6%98%BE%E5%8D%A1%E5%9E%8B%E5%8F%B7/">
-          
-          
-            
-          
-          1. 命令
-12nvidia-smi      # 显示 GPU 的实时信息nvidia-smi -L   # 列出所有可用的 NVIDIA 设备信息
-2. 参数含义
-
-GPU：GPU 编号。
-Name：GPU 型号。
-Persistence-M：持续模式的状态。持续模式虽然耗能大，但是在新的GPU应用启动时，花费的时间更少，这里显示的是off的状态。
-Fan：风扇转速，从0到100%之间变动。
-
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-10-01 17:08" pubdate>
-              2020-10-01
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/Linux/">Linux</a>
-            
-              <a href="/categories/Technique/Linux/Mint/">Mint</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/Mint/">Mint</a>
+              <a href="/tags/Modeling/">Modeling</a>
             
           </div>
         
@@ -841,7 +849,7 @@ Fan：风扇转速，从0到100%之间变动。
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/page/21/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/20/#board">20</a><a class="page-number" href="/page/21/#board">21</a><span class="page-number current">22</span><a class="page-number" href="/page/23/#board">23</a><a class="page-number" href="/page/24/#board">24</a><span class="space">&hellip;</span><a class="page-number" href="/page/44/#board">44</a><a class="extend next" rel="next" href="/page/23/#board"><i class="iconfont icon-arrowright"></i></a>
+      <a class="extend prev" rel="prev" href="/page/21/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/20/#board">20</a><a class="page-number" href="/page/21/#board">21</a><span class="page-number current">22</span><a class="page-number" href="/page/23/#board">23</a><a class="page-number" href="/page/24/#board">24</a><span class="space">&hellip;</span><a class="page-number" href="/page/53/#board">53</a><a class="extend next" rel="next" href="/page/23/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 

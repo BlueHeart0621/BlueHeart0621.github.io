@@ -18,7 +18,7 @@
   <meta name="author" content="BlueHeart0621">
   <meta name="keywords" content="頑張れ">
   
-    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script> <script src="/live2d-widget/autoload.js" type="text/javascript"></script> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script> <script src="/live2d-widget/autoload.js" type="text/javascript"></script> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/> <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
   
   <title>お前はどこまで見えている</title>
 
@@ -197,25 +197,24 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/ServiceComputing/%E6%9C%8D%E5%8A%A1%E7%94%9F%E6%80%81%E7%B3%BB%E7%BB%9F%E4%B8%8E%E9%9D%A2%E5%90%91%E6%9C%8D%E5%8A%A1%E7%9A%84%E8%AE%A1%E7%AE%97/%E6%9C%8D%E5%8A%A1%E7%94%9F%E6%80%81%E7%B3%BB%E7%BB%9F%E4%B8%8E%E9%9D%A2%E5%90%91%E6%9C%8D%E5%8A%A1%E7%9A%84%E8%AE%A1%E7%AE%97/">服务生态系统与面向服务的计算</a>
+        <a href="/2020/05/26/Technique/Go/Go%E8%AF%AD%E8%A8%80%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">Go语言常用命令</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/ServiceComputing/%E6%9C%8D%E5%8A%A1%E7%94%9F%E6%80%81%E7%B3%BB%E7%BB%9F%E4%B8%8E%E9%9D%A2%E5%90%91%E6%9C%8D%E5%8A%A1%E7%9A%84%E8%AE%A1%E7%AE%97/%E6%9C%8D%E5%8A%A1%E7%94%9F%E6%80%81%E7%B3%BB%E7%BB%9F%E4%B8%8E%E9%9D%A2%E5%90%91%E6%9C%8D%E5%8A%A1%E7%9A%84%E8%AE%A1%E7%AE%97/">
+        <a href="/2020/05/26/Technique/Go/Go%E8%AF%AD%E8%A8%80%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
           
           
             
           
-          1. 服务生态系统
-1.1 服务组合
-
-面向服务的应用逻辑，遵循面向服务的设计原则，采用服务和服务组合加以实现。
-服务组合由多个装配在一起的服务所构成，用以提供对业务任务或过程进行实现的功能。
-由于面向服务倾向于将服务打造为无关的企业资源，即服务和它的调用者之间是无关的，一个服务可能被多个消费者程序所调用，它们能在不同服务组合中组合同一个服务。
-
-1.2 服务库存
-
-服务库存是在组织或组织的合理部
+          1. 构建项目
+在 $GOPATH/bin 目录下构建 $GOPATH/src 目录下的 XXX 文件夹所包含的项目：
+1go build XXX
+构建项目成功会在 $GOPATH/bin 目录下生成 XXX 可执行文件。
+2. 运行项目
+在终端编译运行 $GOPATH/src 目录下的 XXX 文件夹所包含的项目：
+1go run XXX
+3. 测试项目
+如果项目有提供 test 测试文件在 $
         </a>
       </p>
 
@@ -234,7 +233,7 @@
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/ServiceComputing/">ServiceComputing</a>
+              <a href="/categories/Technique/Go/">Go</a>
             
           </div>
         
@@ -244,7 +243,7 @@
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/ServiceComputing/">ServiceComputing</a>
+              <a href="/tags/Go/">Go</a>
             
           </div>
         
@@ -258,40 +257,23 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/ServiceComputing/%E6%9C%8D%E5%8A%A1%E7%94%9F%E6%80%81%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%9E%84%E5%BB%BA/%E6%9C%8D%E5%8A%A1%E7%94%9F%E6%80%81%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%9E%84%E5%BB%BA/">服务生态系统的构建</a>
+        <a href="/2020/05/26/Technique/Go/Go%E8%AF%AD%E8%A8%80%E5%B8%B8%E7%94%A8%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/">Go语言常用环境变量</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/ServiceComputing/%E6%9C%8D%E5%8A%A1%E7%94%9F%E6%80%81%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%9E%84%E5%BB%BA/%E6%9C%8D%E5%8A%A1%E7%94%9F%E6%80%81%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%9E%84%E5%BB%BA/">
+        <a href="/2020/05/26/Technique/Go/Go%E8%AF%AD%E8%A8%80%E5%B8%B8%E7%94%A8%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/">
           
           
             
           
-          1. 服务生命周期
-1.1 基本阶段
-
-面向服务的分析
-面向服务的设计
-服务的开发
-服务的测试
-服务的部署
-服务的管理
-
-1.2 业务逻辑/应用逻辑
-
-业务逻辑源自于企业业务领域，也无需求的文档化实现
-
-
-
-一般被构造为表达这些需求的流程
-包括任何相关的约束、依赖及外部影响
-
-
-
-应用逻辑是组织成不同技术解决方案的业务逻辑的自动化实现
-
-
-【注】业务逻辑和应用逻辑可以认为是针对同一个问题在不同层级
+          1. GOPATH
+GOPATH 环境变量用来指定开发项目所在地址。
+2. GOROOT
+GOROOT 用来指定 go 的安装路径。
+3. GO111MODULE
+GO111MODULE 环境变量用于开启或关闭 Go 语言中的模块支持，它有 off、on、auto 三个可选值，默认为 auto。
+3.1 GO111MODULE=off
+无模块支持，go 会从 $GOPATH 文件夹和 vendor
         </a>
       </p>
 
@@ -310,7 +292,7 @@
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/ServiceComputing/">ServiceComputing</a>
+              <a href="/categories/Technique/Go/">Go</a>
             
           </div>
         
@@ -320,7 +302,7 @@
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/ServiceComputing/">ServiceComputing</a>
+              <a href="/tags/Go/">Go</a>
             
           </div>
         
@@ -334,39 +316,26 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/ServiceComputing/%E6%9C%8D%E5%8A%A1%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/%E6%9C%8D%E5%8A%A1%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/">服务设计原则</a>
+        <a href="/2020/05/26/Technique/Go/Go%E8%AF%AD%E8%A8%80%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/">Go语言流程控制</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/ServiceComputing/%E6%9C%8D%E5%8A%A1%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/%E6%9C%8D%E5%8A%A1%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/">
+        <a href="/2020/05/26/Technique/Go/Go%E8%AF%AD%E8%A8%80%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/">
           
           
             
           
-          1. 标准化服务合约
-1.1 服务合约
+          程序设计语言的流程控制语句用于设定计算执行的次序，建立程序的逻辑结构。流程控制语句主要有三个作用：
 
-建立了与服务交互有关的术语
-提供了技术限制和需求，及服务的拥有者希望对外公布的所有语义信息
+选择：根据条件跳转到不同的执行序列
+循环：根据条件反复执行某段语句序列
+跳转：根据条件跳转到某执行序列
 
+Go 语言支持以下几种流程控制语句：
 
-1.2 标准化服务合约
-
-使用形式化或者标准化的合约
-
-
-
-服务功能描述的标准化
-服务数据表示的标准化
-
-
-
-提倡尽量保持不同服务之间、在数据总体模型和特定数据类型之间的一致性
-
-
-
-非标准化的服务数据表示将导致频繁的数据转换
-Schema 被单独设计和实现，与
+条件语句：对应关键字为 if、else、else if
+选择语句：对应关键字为 switch、case、select
+循环语句：对应关键字为 for、r
         </a>
       </p>
 
@@ -385,7 +354,7 @@ Schema 被单独设计和实现，与
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/ServiceComputing/">ServiceComputing</a>
+              <a href="/categories/Technique/Go/">Go</a>
             
           </div>
         
@@ -395,7 +364,7 @@ Schema 被单独设计和实现，与
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/ServiceComputing/">ServiceComputing</a>
+              <a href="/tags/Go/">Go</a>
             
           </div>
         
@@ -409,23 +378,23 @@ Schema 被单独设计和实现，与
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/VSCode/VSCode%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/VSCode%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/">VSCode常用快捷键</a>
+        <a href="/2020/05/26/Technique/Go/Mint19.1%E9%85%8D%E7%BD%AEVSCode%E7%9A%84Go%E7%8E%AF%E5%A2%83/">Mint19.1配置VSCode的Go环境</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/VSCode/VSCode%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/VSCode%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/">
+        <a href="/2020/05/26/Technique/Go/Mint19.1%E9%85%8D%E7%BD%AEVSCode%E7%9A%84Go%E7%8E%AF%E5%A2%83/">
           
           
             
           
-          更多快捷键请在 VSCode 中点击【设置】→\rightarrow→ 【键盘快捷方式】查看。
-1. Ctrl + Shift + P / F1
-调出命令面板。
-2. Ctrl + K + C / Ctrl + K + U
-注释代码/取消注释。
-3. Ctrl + Shift + - / Ctrl + Alt + -
-光标向前跳转到下一个位置/回退跳转到上一个位置。
-4. Ctrl + F / C
+          1. 下载软件包
+到 Go 语言官网地址下载 tar.gz 软件包，本人下载的软件包版本是 go1.14.2.linux-amd64.tar.gz 。
+2. 解压软件包
+将软件包解压到合适位置，本人解压到路径 /usr/local 目录下：
+1sudo tar -C /usr/local -xzf go1.14.2.linux-amd64.tar.gz
+3. 添加环境变量
+3.1 导入软件包路径
+
         </a>
       </p>
 
@@ -444,7 +413,7 @@ Schema 被单独设计和实现，与
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/VSCode/">VSCode</a>
+              <a href="/categories/Technique/Go/">Go</a>
             
           </div>
         
@@ -454,7 +423,7 @@ Schema 被单独设计和实现，与
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/VSCode/">VSCode</a>
+              <a href="/tags/Go/">Go</a>
             
           </div>
         
@@ -468,23 +437,79 @@ Schema 被单独设计和实现，与
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/ComputerVision/Color/%E9%A2%9C%E8%89%B2%E5%8E%9F%E7%90%86/%E9%A2%9C%E8%89%B2%E5%8E%9F%E7%90%86/">颜色原理</a>
+        <a href="/2020/05/26/Technique/MachineLearning/%E8%A7%84%E8%8C%83%E5%8C%96%E3%80%81%E5%BD%92%E4%B8%80%E5%8C%96%E3%80%81%E6%A0%87%E5%87%86%E5%8C%96%E3%80%81%E4%B8%AD%E5%BF%83%E5%8C%96/">规范化、归一化、标准化、中心化</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/ComputerVision/Color/%E9%A2%9C%E8%89%B2%E5%8E%9F%E7%90%86/%E9%A2%9C%E8%89%B2%E5%8E%9F%E7%90%86/">
+        <a href="/2020/05/26/Technique/MachineLearning/%E8%A7%84%E8%8C%83%E5%8C%96%E3%80%81%E5%BD%92%E4%B8%80%E5%8C%96%E3%80%81%E6%A0%87%E5%87%86%E5%8C%96%E3%80%81%E4%B8%AD%E5%BF%83%E5%8C%96/">
+          
+          
+            
+          
+          
+符号说明：本文中 XXX 表示原数据，X~\tilde{X}X~ 表示处理后的数据，μ,σ2\mu, \sigma^2μ,σ2 分别表示 XXX 的均值和方差。
+
+1. 规范化、归一化
+规范化（Normalization）是指将不同变化范围的值映射到固定范围中，常见的是 [0,1][0, 1][0,1]，此时也称为归一化。规范化将数据从有量纲变为无量纲，方便不同单位和量级之间的数据进行处理。
+
+
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-05-26 10:44" pubdate>
+              2020-05-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/MachineLearning/">MachineLearning</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/MachineLearning/">MachineLearning</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/05/26/Technique/MarkDown/Atom%E6%90%AD%E5%BB%BAMarkDown%E7%8E%AF%E5%A2%83/">Atom搭建MarkDown环境</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/05/26/Technique/MarkDown/Atom%E6%90%AD%E5%BB%BAMarkDown%E7%8E%AF%E5%A2%83/">
           
           
             
           
           1. 简介
-红、绿、蓝作为颜色三元色，通过不同比例的混合就能够产生其他各色颜色。
-2. 原理
-颜色的基本参数有三个：色相、色阶、饱和度。
-2.1 色相
-色相是用来区别区别颜色的标志，是光由于波长、频率的不同而产生的性质。色相是在光谱上自然分割的结果。
-2.2 色阶
-色阶也叫明度，是指颜色的亮度指数，由物体反射出来的光波的多少来量化。图像的色彩丰满度和精细度是由色阶决定的，最亮定义为白色、最暗定义为
+Atom 是 Github 专门为程序员推出的一款开源跨平台文本编辑器，基于 web 技术构建，支持多种语言开发，原生支持 git 以及 MarkDown 基础语法书写和预览。
+2. 常用快捷键
+
+Ctrl+Shift+P ：打开搜索面板
+Ctrl+Shift+M ：打开 MarkDown 实时预览（安装 markdown-preview、markdown-preview-plus 或
         </a>
       </p>
 
@@ -503,9 +528,7 @@ Schema 被单独设计和实现，与
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/ComputerVision/">ComputerVision</a>
-            
-              <a href="/categories/Technique/ComputerVision/Color/">Color</a>
+              <a href="/categories/Technique/MarkDown/">MarkDown</a>
             
           </div>
         
@@ -515,9 +538,7 @@ Schema 被单独设计和实现，与
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/ComputerVision/">ComputerVision</a>
-            
-              <a href="/tags/Color/">Color</a>
+              <a href="/tags/MarkDown/">MarkDown</a>
             
           </div>
         
@@ -531,26 +552,23 @@ Schema 被单独设计和实现，与
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Linux/Mint/Mint19.1%E4%B8%8B%E4%BD%BF%E7%94%A8ssh%E8%BF%9C%E7%A8%8B%E5%B7%A5%E5%85%B7/Mint19.1%E4%B8%8B%E4%BD%BF%E7%94%A8ssh%E8%BF%9C%E7%A8%8B%E5%B7%A5%E5%85%B7/">Mint19.1下使用ssh远程工具</a>
+        <a href="/2020/05/26/Technique/MarkDown/VSCode%E6%90%AD%E5%BB%BAMarkDown%E7%8E%AF%E5%A2%83/">VSCode搭建MarkDown环境</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Linux/Mint/Mint19.1%E4%B8%8B%E4%BD%BF%E7%94%A8ssh%E8%BF%9C%E7%A8%8B%E5%B7%A5%E5%85%B7/Mint19.1%E4%B8%8B%E4%BD%BF%E7%94%A8ssh%E8%BF%9C%E7%A8%8B%E5%B7%A5%E5%85%B7/">
+        <a href="/2020/05/26/Technique/MarkDown/VSCode%E6%90%AD%E5%BB%BAMarkDown%E7%8E%AF%E5%A2%83/">
           
           
             
           
-          1. 安装 ssh 工具
-1.1 本地主机
-1sudo apt install openssh-client
-1.2 服务器
-1sudo apt install openssh-server
-2. 管理 ssh 服务
-2.1 查看服务器的 ssh 服务：
-1service ssh status
-2.2 启动服务器的 ssh 服务：
-1sudo service ssh start
-2.3 关闭服务器
+          VSCode 原生就支持 Markdown 语言编写，但功能比较基础。为了满足 Markdown 更多的日常使用功能，以下推荐几款非常有用的插件：
+1. Markdown Preview Enhanced（MPE）
+该插件包含许多 MarkDown 语法功能，能满足书写 MarkDown 的大部分日常需求。
+
+实时滚动预览（Ctrl+Shift+V）
+LaTex数学公式
+表格
+Code Chunk
         </a>
       </p>
 
@@ -569,9 +587,7 @@ Schema 被单独设计和实现，与
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/Linux/">Linux</a>
-            
-              <a href="/categories/Technique/Linux/Mint/">Mint</a>
+              <a href="/categories/Technique/MarkDown/">MarkDown</a>
             
           </div>
         
@@ -581,9 +597,7 @@ Schema 被单独设计和实现，与
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/Mint/">Mint</a>
+              <a href="/tags/MarkDown/">MarkDown</a>
             
           </div>
         
@@ -597,21 +611,24 @@ Schema 被单独设计和实现，与
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4sed/LinuxShell%E5%91%BD%E4%BB%A4sed/">LinuxShell命令sed</a>
+        <a href="/2020/05/26/Technique/MatLab/MatLab%E4%B8%ADM%E6%96%87%E4%BB%B6/">MatLab中M文件</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4sed/LinuxShell%E5%91%BD%E4%BB%A4sed/">
+        <a href="/2020/05/26/Technique/MatLab/MatLab%E4%B8%ADM%E6%96%87%E4%BB%B6/">
           
           
             
           
-          1. 简介
-sed 是 Linux系统自带的流式编辑器（流式编辑器是指处理处理输入流或文本流中的数据），不同于普通的交互式文本编辑器（比如 vim），sed 编辑器根据命令来处理数据流中的数据。
-sed 默认不会直接修改源文件，而是将读入的数据先复制到模式空间（pattern space）中缓存，再根据给定的命令对模式空间中的数据进行处理并输出（默认 STDOUT）。
-2. 运行机制
+          MatLab 中 M 文件有函数和脚本两种不同类型，是可以被 MatLab 直接执行的源代码文件。
 
-一次从输入
+
+创建/编辑 M 文件：在命令行窗口运行 edit [filename1 [filename2 ...]] 命令。文件存在则编辑文件，文件不存在则先创建文件。若未指定 filename 参数，则默认创建无名的 M 文件。
+
+
+运行 M 文件：在命令行窗口下运行 run filename 命令。
+
+
         </a>
       </p>
 
@@ -630,9 +647,7 @@ sed 默认不会直接修改源文件，而是将读入的数据先复制到模�
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/Linux/">Linux</a>
-            
-              <a href="/categories/Technique/Linux/Shell/">Shell</a>
+              <a href="/categories/Technique/MatLab/">MatLab</a>
             
           </div>
         
@@ -642,9 +657,7 @@ sed 默认不会直接修改源文件，而是将读入的数据先复制到模�
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/Shell/">Shell</a>
+              <a href="/tags/MatLab/">MatLab</a>
             
           </div>
         
@@ -658,18 +671,19 @@ sed 默认不会直接修改源文件，而是将读入的数据先复制到模�
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4%E6%A6%82%E8%BF%B0/LinuxShell%E5%91%BD%E4%BB%A4%E6%A6%82%E8%BF%B0/">LinuxShell命令概述</a>
+        <a href="/2020/05/26/Technique/MatLab/MatLab%E5%87%BD%E6%95%B0/">MatLab函数</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4%E6%A6%82%E8%BF%B0/LinuxShell%E5%91%BD%E4%BB%A4%E6%A6%82%E8%BF%B0/">
+        <a href="/2020/05/26/Technique/MatLab/MatLab%E5%87%BD%E6%95%B0/">
           
           
             
           
-          1. 简介
-1.1 概述
-Linux Shell 中包含大量的命令，提供了许许多多强大的功能。Shell 命令分为内建命令和外部命令；如果需要查看不同命令的帮助，对于内建命令，可以使用 Shell 的一个内建命令 help 来查询帮助信息；对于外置命令，可以使用 Shell 的外部命令 man 或 info（更详细）来查询帮助信息。判断某个命令是内建命令还是外部命令可以使用 Shell 的一个内建
+          1. 普通函数
+MatLab 中的普通函数是可以传递输入参数和输出参数的函数，其基本定义格式为：
+123function [y1,...,yn] = funcname(x1,...,xn)    ...end
+其中，x1,...,xn 为输入参数变量，y1,...,yn 为输出参数变量，funcname 为函数名称。MatLab 在实现对普通函数调用时，允许使用比声明变量数目少的输入输出变量，调用
         </a>
       </p>
 
@@ -688,9 +702,7 @@ Linux Shell 中包含大量的命令，提供了许许多多强大的功能。Sh
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/Linux/">Linux</a>
-            
-              <a href="/categories/Technique/Linux/Shell/">Shell</a>
+              <a href="/categories/Technique/MatLab/">MatLab</a>
             
           </div>
         
@@ -700,9 +712,7 @@ Linux Shell 中包含大量的命令，提供了许许多多强大的功能。Sh
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/Shell/">Shell</a>
+              <a href="/tags/MatLab/">MatLab</a>
             
           </div>
         
@@ -716,24 +726,21 @@ Linux Shell 中包含大量的命令，提供了许许多多强大的功能。Sh
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Linux/Shell/LinuxShell%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/LinuxShell%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">LinuxShell正则表达式</a>
+        <a href="/2020/05/26/Technique/MatLab/MatLab%E5%87%BD%E6%95%B0datetime%E3%80%81datenum%E3%80%81datevec%E3%80%81datestr/">MatLab函数datetime、datenum、datevec、datestr</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Linux/Shell/LinuxShell%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/LinuxShell%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">
+        <a href="/2020/05/26/Technique/MatLab/MatLab%E5%87%BD%E6%95%B0datetime%E3%80%81datenum%E3%80%81datevec%E3%80%81datestr/">
           
           
             
           
-          1. 简介
-正则表达式在处理数据时非常有用，它凭借强大的模式匹配功能，能够用来精确地过滤文本数据，提取有用的数据信息。
-
-graph LR
-A[数据流 ]--&gt; B&#123;正则表达式&#125;
-B --&gt; C[匹配数据]
-B --&gt; D[滤出数据]
-
-正则表达式是通过正则表达式引擎实现的，正则表达式引擎负责解释正则表达式模式并使用这些模式进行文本数据匹配。在Linux中，主
+          【注】详情请参阅 MatLab help 文档。
+1. datetime 函数
+1.1 作用
+datetime 用来创建表示时间点的数组（数组元素类型为 datetime）。
+1.2 语法
+12345678910t = datetimet = datetime(relativeDay)t = datetime(DateString)t = datetime(DateStrings,&#x27;In
         </a>
       </p>
 
@@ -752,9 +759,7 @@ B --&gt; D[滤出数据]
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/Linux/">Linux</a>
-            
-              <a href="/categories/Technique/Linux/Shell/">Shell</a>
+              <a href="/categories/Technique/MatLab/">MatLab</a>
             
           </div>
         
@@ -764,90 +769,7 @@ B --&gt; D[滤出数据]
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/Shell/">Shell</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/05/26/Linux/Shell/LinuxShell%E9%80%9A%E9%85%8D%E7%AC%A6/LinuxShell%E9%80%9A%E9%85%8D%E7%AC%A6/">LinuxShell通配符</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/05/26/Linux/Shell/LinuxShell%E9%80%9A%E9%85%8D%E7%AC%A6/LinuxShell%E9%80%9A%E9%85%8D%E7%AC%A6/">
-          
-          
-            
-          
-          1. 简介
-通配符广泛用于文件扩展匹配，能帮助我们快速筛选文件名，其正式名称叫作元字符通配符。
-2. 基础通配符
-
-
-
-通配符
-名称
-功能
-
-
-
-
-?
-问号
-匹配任意一个字符
-
-
-*
-星号
-匹配0个或多个任意字符
-
-
-[ ]
-中括号
-匹配中括号内字符组中的任意一个字符若在字符组的开头加 ^ 符（[^ ]），则匹配除括号内之外的任一字符若在两个字符间加 - 符（例[x-y]），则匹配 x～y 区间内
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/Linux/">Linux</a>
-            
-              <a href="/categories/Technique/Linux/Shell/">Shell</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/Shell/">Shell</a>
+              <a href="/tags/MatLab/">MatLab</a>
             
           </div>
         
@@ -859,7 +781,7 @@ B --&gt; D[滤出数据]
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/page/42/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/41/#board">41</a><a class="page-number" href="/page/42/#board">42</a><span class="page-number current">43</span><a class="page-number" href="/page/44/#board">44</a><a class="extend next" rel="next" href="/page/44/#board"><i class="iconfont icon-arrowright"></i></a>
+      <a class="extend prev" rel="prev" href="/page/42/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/41/#board">41</a><a class="page-number" href="/page/42/#board">42</a><span class="page-number current">43</span><a class="page-number" href="/page/44/#board">44</a><a class="page-number" href="/page/45/#board">45</a><span class="space">&hellip;</span><a class="page-number" href="/page/53/#board">53</a><a class="extend next" rel="next" href="/page/44/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 

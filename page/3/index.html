@@ -18,7 +18,7 @@
   <meta name="author" content="BlueHeart0621">
   <meta name="keywords" content="頑張れ">
   
-    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script> <script src="/live2d-widget/autoload.js" type="text/javascript"></script> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script> <script src="/live2d-widget/autoload.js" type="text/javascript"></script> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/> <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
   
   <title>お前はどこまで見えている</title>
 
@@ -197,29 +197,17 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2022/02/21/GPS/GPS%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/">GPS相关资料</a>
+        <a href="/2022/06/13/Research/ObjectDetection/2020-ECCV-End-to-End%20Object%20Detection%20with%20Transformers/2020-ECCV-End-to-End%20Object%20Detection%20with%20Transformers/">2020-ECCV-End-to-End Object Detection with Transformers</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2022/02/21/GPS/GPS%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/">
+        <a href="/2022/06/13/Research/ObjectDetection/2020-ECCV-End-to-End%20Object%20Detection%20with%20Transformers/2020-ECCV-End-to-End%20Object%20Detection%20with%20Transformers/">
           
           
             
           
-          1. 相关博文
-
-GPS(英文原版)、GPS(中译版)
-
-2. 相关课程
-
-GPS MOOC (Massive Open Online Course)
-
-3. 相关书籍
-
-Global Positioning System: Signals, Measurements, and Performance Revised Second Edition
-
-
-我的博客即将同步至腾讯云+社区，邀请大家一同入
+          1. 摘要
+这篇文章[1]针对目标检测任务给出了一个基于 Transformer 的端到端的神经网络模型 DETR，简单且有效，不再需要任何的前/后处理操作。DETR 可谓是目标检测方向上一个里程碑式的工作。作者将目标检测看作是一个集合预测问题，即给定一个图片，预测出所有的物体框的集合。通过将问题转化为集合预测的问题，结合 Transformer 结构，作者将原先目标检测模型中依赖于人的先验知识的
         </a>
       </p>
 
@@ -227,8 +215,8 @@ Global Positioning System: Signals, Measurements, and Performance Revised Second
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2022-02-21 15:37" pubdate>
-              2022-02-21
+            <time datetime="2022-06-13 20:09" pubdate>
+              2022-06-13
             </time>
           </div>
         
@@ -236,9 +224,9 @@ Global Positioning System: Signals, Measurements, and Performance Revised Second
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/Technique/">Technique</a>
+              <a href="/categories/Research/">Research</a>
             
-              <a href="/categories/Technique/GPS/">GPS</a>
+              <a href="/categories/Research/ObjectDetection/">ObjectDetection</a>
             
           </div>
         
@@ -246,9 +234,9 @@ Global Positioning System: Signals, Measurements, and Performance Revised Second
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/Technique/">Technique</a>
+              <a href="/tags/Research/">Research</a>
             
-              <a href="/tags/GPS/">GPS</a>
+              <a href="/tags/ObjectDetection/">ObjectDetection</a>
             
           </div>
         
@@ -262,22 +250,28 @@ Global Positioning System: Signals, Measurements, and Performance Revised Second
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2022/02/20/Linux/Sundry/Linux%E7%B3%BB%E7%BB%9F%E8%BF%81%E7%A7%BB/">Linux系统迁移</a>
+        <a href="/2022/06/02/Technique/Python/Python%E5%8C%85%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7/">Python包构建工具</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2022/02/20/Linux/Sundry/Linux%E7%B3%BB%E7%BB%9F%E8%BF%81%E7%A7%BB/">
+        <a href="/2022/06/02/Technique/Python/Python%E5%8C%85%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7/">
           
           
             
           
           1. 简介
-Linux 系统迁移系统相对于 Windows 来说还是简单许多，使用 Linux 系统自带的 dd 命令即可。
-2. 系统迁移
-2.1 创建分区表
-如果是一块新硬盘，则首先要为这个新硬盘创建分区表（不是则可以跳过该步）。分区表类型有 MBR 和 GPT 两种，具体使用哪种要看个人的电脑配置。
+Python 官方也提供了关于打包 Python 包的文档：
 
-进入电脑的 BIOS，查看电脑是否支持 UEFI 启动，如果支持则说明兼容 GPT 分区的
+Packaging Python Projects
+
+相对于官方提供的打包方式，一些第三方打包工具更加方便，比如 Poetry 等。
+2. Poetry
+
+源码仓库
+官方文档
+
+
+Poetry 在构建 Python 包解决依赖时，可能需要下载依赖包。Poetry 默认是从 PyPI 官网下载，在国内由于众所周知的原因，下载
         </a>
       </p>
 
@@ -285,8 +279,8 @@ Linux 系统迁移系统相对于 Windows 来说还是简单许多，使用 Linu
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2022-02-20 23:12" pubdate>
-              2022-02-20
+            <time datetime="2022-06-02 14:20" pubdate>
+              2022-06-02
             </time>
           </div>
         
@@ -296,9 +290,7 @@ Linux 系统迁移系统相对于 Windows 来说还是简单许多，使用 Linu
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/Linux/">Linux</a>
-            
-              <a href="/categories/Technique/Linux/Sundry/">Sundry</a>
+              <a href="/categories/Technique/Python/">Python</a>
             
           </div>
         
@@ -308,9 +300,7 @@ Linux 系统迁移系统相对于 Windows 来说还是简单许多，使用 Linu
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/Sundry/">Sundry</a>
+              <a href="/tags/Python/">Python</a>
             
           </div>
         
@@ -324,19 +314,19 @@ Linux 系统迁移系统相对于 Windows 来说还是简单许多，使用 Linu
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2022/02/20/Printer/Canon/TR4527%E8%BE%93%E7%A8%BF%E5%99%A8%E6%81%A2%E5%A4%8D%E8%BF%9B%E7%BA%B8/">TR4527输稿器恢复进纸</a>
+        <a href="/2022/06/02/Technique/C++/Linux%E4%B8%8B%E4%BD%BF%E7%94%A8VSCode%E9%85%8D%E7%BD%AEC++%E8%B0%83%E8%AF%95%E7%8E%AF%E5%A2%83/Linux%E4%B8%8B%E4%BD%BF%E7%94%A8VSCode%E9%85%8D%E7%BD%AEC++%E8%B0%83%E8%AF%95%E7%8E%AF%E5%A2%83/">Linux下使用VSCode配置C++调试环境</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2022/02/20/Printer/Canon/TR4527%E8%BE%93%E7%A8%BF%E5%99%A8%E6%81%A2%E5%A4%8D%E8%BF%9B%E7%BA%B8/">
+        <a href="/2022/06/02/Technique/C++/Linux%E4%B8%8B%E4%BD%BF%E7%94%A8VSCode%E9%85%8D%E7%BD%AEC++%E8%B0%83%E8%AF%95%E7%8E%AF%E5%A2%83/Linux%E4%B8%8B%E4%BD%BF%E7%94%A8VSCode%E9%85%8D%E7%BD%AEC++%E8%B0%83%E8%AF%95%E7%8E%AF%E5%A2%83/">
           
           
             
           
           1. 简介
-前年买的佳能的 TR4527 打印机，今年回家使用发现，输稿器突然无法使用了。虽然打开输稿器放入纸张会有「嘀」的一声，但按「复印」按钮后打印机始终提示「从玻璃盖板上放纸」，不管设置什么都不管用。最后发现重置一下系统的配置即可，这估计是这款打印机的系统 Bug。
-2. 重置配置
-启动打印机，选择【设置】-&gt;【设备设置】-&gt;【重置设置】-&gt;【设置数据】-&gt;【是】，对
+最近我意识到，调试是一个非常有用的手段。我记得我们当初学习 C++ 语言时，都是使用一个 IDE（比如 CodeBlocks、Dev-C++） 来进行编程和调试；然而随着学习的深入，我发现很多 Debug 工作直接用 printf 就能完成，还是自己接触的工作太少太简单，于是就没太学习调试这方面的知识；直到我开始尝试阅读一个比较大的项目源码。
+
+一个大的项目源码，往往包含一堆的源代码、
         </a>
       </p>
 
@@ -344,8 +334,8 @@ Linux 系统迁移系统相对于 Windows 来说还是简单许多，使用 Linu
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2022-02-20 19:45" pubdate>
-              2022-02-20
+            <time datetime="2022-06-02 13:13" pubdate>
+              2022-06-02
             </time>
           </div>
         
@@ -355,9 +345,7 @@ Linux 系统迁移系统相对于 Windows 来说还是简单许多，使用 Linu
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/Printer/">Printer</a>
-            
-              <a href="/categories/Technique/Printer/Canon/">Canon</a>
+              <a href="/categories/Technique/C/">C++</a>
             
           </div>
         
@@ -367,9 +355,7 @@ Linux 系统迁移系统相对于 Windows 来说还是简单许多，使用 Linu
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Printer/">Printer</a>
-            
-              <a href="/tags/Canon/">Canon</a>
+              <a href="/tags/C/">C++</a>
             
           </div>
         
@@ -383,17 +369,23 @@ Linux 系统迁移系统相对于 Windows 来说还是简单许多，使用 Linu
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2022/02/19/Windows/Windows%E7%B3%BB%E7%BB%9F%E8%BF%81%E7%A7%BB/">Windows系统迁移</a>
+        <a href="/2022/05/31/Technique/CMake/CMake%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99%E6%B1%87%E6%80%BB/">CMake相关资料汇总</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2022/02/19/Windows/Windows%E7%B3%BB%E7%BB%9F%E8%BF%81%E7%A7%BB/">
+        <a href="/2022/05/31/Technique/CMake/CMake%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99%E6%B1%87%E6%80%BB/">
           
           
             
           
-          1. 简介
-当我们为电脑更换硬盘时（比如更换大一点的硬盘或将 HDD 更换为 SSD），往往需要考虑原硬盘上的系统和数据怎么办。重装系统是一个选择，但重装系统后还要重装系统上的软件，还要迁移数据，费时又费力。另一个方法是迁移系统，这样既不用重装系统也不用重装软件，且系统上的数据还全部保存了下来。然而 Windows 系统自身并没有提供系统迁移的工具，不像 Linux 提供了 dd 命令可以用来直接
+          【注】持续更新中……
+
+CMake 官方文档
+An Introduction to Modern CMake
+It's Time To Do CMake Right
+CMake 入门实战
+
+
         </a>
       </p>
 
@@ -401,8 +393,8 @@ Linux 系统迁移系统相对于 Windows 来说还是简单许多，使用 Linu
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2022-02-19 16:50" pubdate>
-              2022-02-19
+            <time datetime="2022-05-31 15:54" pubdate>
+              2022-05-31
             </time>
           </div>
         
@@ -412,7 +404,7 @@ Linux 系统迁移系统相对于 Windows 来说还是简单许多，使用 Linu
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/Windows/">Windows</a>
+              <a href="/categories/Technique/CMake/">CMake</a>
             
           </div>
         
@@ -422,7 +414,7 @@ Linux 系统迁移系统相对于 Windows 来说还是简单许多，使用 Linu
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Windows/">Windows</a>
+              <a href="/tags/CMake/">CMake</a>
             
           </div>
         
@@ -436,17 +428,20 @@ Linux 系统迁移系统相对于 Windows 来说还是简单许多，使用 Linu
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2022/02/19/Net/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/">内网穿透</a>
+        <a href="/2022/05/31/Technique/Make/Make%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99%E6%B1%87%E6%80%BB/">Make相关资料汇总</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2022/02/19/Net/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/">
+        <a href="/2022/05/31/Technique/Make/Make%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99%E6%B1%87%E6%80%BB/">
           
           
             
           
-          1. 简介
-一般的校园网/企业网往往都设置有防火墙，在内网可以访问外网，但在外网却无法访问内网。比如校园的服务器，当我们在校外时，只能通过学校的 VPN 访问校园网。然而，这个 VPN 一来可能不稳定，二来往往只有 Windows 平台有（气抖冷），对于 Linux 用户极其不友好。在朋友的推荐下，我使用了 ZeroTier 这款跨平台的虚拟局域网构建工具，使用它能够进行内网穿透，使得外网也能访问
+          【注】持续更新中……
+
+跟我一起写Makefile
+
+
         </a>
       </p>
 
@@ -454,8 +449,8 @@ Linux 系统迁移系统相对于 Windows 来说还是简单许多，使用 Linu
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2022-02-19 10:41" pubdate>
-              2022-02-19
+            <time datetime="2022-05-31 15:50" pubdate>
+              2022-05-31
             </time>
           </div>
         
@@ -465,7 +460,7 @@ Linux 系统迁移系统相对于 Windows 来说还是简单许多，使用 Linu
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/Net/">Net</a>
+              <a href="/categories/Technique/Make/">Make</a>
             
           </div>
         
@@ -475,7 +470,7 @@ Linux 系统迁移系统相对于 Windows 来说还是简单许多，使用 Linu
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Net/">Net</a>
+              <a href="/tags/Make/">Make</a>
             
           </div>
         
@@ -489,68 +484,28 @@ Linux 系统迁移系统相对于 Windows 来说还是简单许多，使用 Linu
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2022/01/13/Windows/Windows%E4%B8%8B%E6%96%87%E4%BB%B6%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83/">Windows下文件命名规范</a>
+        <a href="/2022/05/20/Technique/ComputerVision/3D%E8%A7%86%E8%A7%89/3D%E8%A7%86%E8%A7%89/">3D视觉</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2022/01/13/Windows/Windows%E4%B8%8B%E6%96%87%E4%BB%B6%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83/">
+        <a href="/2022/05/20/Technique/ComputerVision/3D%E8%A7%86%E8%A7%89/3D%E8%A7%86%E8%A7%89/">
           
           
             
           
-          1. 保留字符
-Windows 系统下以下保留字符不能出现在文件名中：
+          
+
+  
 
 
+1. 简介
+随着自动驾驶、AR &amp; VR 等技术的发展，3D 视觉的研究正方兴未艾。目前 3D 视觉的两个主要问题是：
 
-保留字符
-说明
+从一张 2D 图像预测得到 3D 表示
+处理 3D 表示数据来实现下游任务（分类、检测、分割等）
 
-
-
-
-&lt;
-英文小于号
-
-
-&gt;
-英文大于号
-
-
-:
-英文冒号
-
-
-&quot;
-英文双引号
-
-
-/
-英文正斜杠
-
-
-\
-英文反斜杠
-
-
-|
-英文竖线
-
-
-?
-英文问号
-
-
-*
-英文星号
-
-
-ASCII NUL
-数值为零的 ASCII 字符
-
-
-
-有关 Windows 系统下文件命名规则详情见命
+2. 3D 表示
+目前 3D 视觉表示主要有 555 种方法：深度图（Depth Map）、体素（Voxel Grid）、隐表面（Implicit Surf
         </a>
       </p>
 
@@ -558,8 +513,8 @@ ASCII NUL
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2022-01-13 21:34" pubdate>
-              2022-01-13
+            <time datetime="2022-05-20 16:57" pubdate>
+              2022-05-20
             </time>
           </div>
         
@@ -569,7 +524,7 @@ ASCII NUL
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/Windows/">Windows</a>
+              <a href="/categories/Technique/ComputerVision/">ComputerVision</a>
             
           </div>
         
@@ -579,7 +534,7 @@ ASCII NUL
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Windows/">Windows</a>
+              <a href="/tags/ComputerVision/">ComputerVision</a>
             
           </div>
         
@@ -593,30 +548,17 @@ ASCII NUL
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/12/15/Net/%E6%9C%BA%E5%9C%BA%E7%9B%B8%E5%85%B3%E8%B5%84%E6%BA%90%E6%B1%87%E6%80%BB/">机场相关资源汇总</a>
+        <a href="/2022/05/19/Research/PointCloud/2017-NIPS-PointNet++%EF%BC%9ADeep%20Hierarchical%20Feature%20Learning%20on%20Point%20Sets%20in%20a%20Metric%20Space/2017-NIPS-PointNet++%EF%BC%9ADeep%20Hierarchical%20Feature%20Learning%20on%20Point%20Sets%20in%20a%20Metric%20Space/">2017-NIPS-PointNet++：Deep Hierarchical Feature Learning on Point Sets in a Metric Space</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/12/15/Net/%E6%9C%BA%E5%9C%BA%E7%9B%B8%E5%85%B3%E8%B5%84%E6%BA%90%E6%B1%87%E6%80%BB/">
+        <a href="/2022/05/19/Research/PointCloud/2017-NIPS-PointNet++%EF%BC%9ADeep%20Hierarchical%20Feature%20Learning%20on%20Point%20Sets%20in%20a%20Metric%20Space/2017-NIPS-PointNet++%EF%BC%9ADeep%20Hierarchical%20Feature%20Learning%20on%20Point%20Sets%20in%20a%20Metric%20Space/">
           
           
             
           
-          1. 简介
-由于众所周知的原因，机场已经是我们平时科研/工作/学习乃至生活中不可或缺的重要工具。虽说最好是能有属于自己的机场，但是由于资金/时间的限制，并不是所有人都能拥有自己的私人机场。况且，就算有自己的私人机场，也无法保证万无一失。因此，本文汇总了一些机场相关的资源，以备不时之需。
-2. 相关资源汇总
-
-
-机场推荐 - 猫梦博客
-
-
-毒奶博客
-
-
-ssrandv2rayandss
-
-
-3. 免
+          1. 摘要
+这篇文章[1]是 PointNet 的改进版。PointNet 是直接将神经网络用于点云数据处理的先锋，虽然 PointNet 在 3D 任务上取得不错的效果，但其还是存在不足。PointNet 忽略了点云数据间的空间局部结构，从而不能很好地识别更细粒度的模型，也不能很好地泛化到复杂的场景。PointNet++ 则针对这个问题，在 PointNet 基础上引入了层级式的嵌套结构来捕获局
         </a>
       </p>
 
@@ -624,8 +566,8 @@ ssrandv2rayandss
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-12-15 19:07" pubdate>
-              2021-12-15
+            <time datetime="2022-05-19 16:45" pubdate>
+              2022-05-19
             </time>
           </div>
         
@@ -633,9 +575,9 @@ ssrandv2rayandss
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/Technique/">Technique</a>
+              <a href="/categories/Research/">Research</a>
             
-              <a href="/categories/Technique/Net/">Net</a>
+              <a href="/categories/Research/PointCloud/">PointCloud</a>
             
           </div>
         
@@ -643,9 +585,9 @@ ssrandv2rayandss
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/Technique/">Technique</a>
+              <a href="/tags/Research/">Research</a>
             
-              <a href="/tags/Net/">Net</a>
+              <a href="/tags/PointCloud/">PointCloud</a>
             
           </div>
         
@@ -659,20 +601,17 @@ ssrandv2rayandss
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/12/14/ACM/%E9%A2%98%E8%A7%A3/CF1608C%E3%80%8CGame%20Master%E3%80%8D/">CF1608C「Game Master」</a>
+        <a href="/2022/05/19/Research/PointCloud/2017-CVPR-PointNet%EF%BC%9ADeep%20Learning%20on%20Point%20Sets%20for%203D%20Classification%20and%20Segmentation/2017-CVPR-PointNet%EF%BC%9ADeep%20Learning%20on%20Point%20Sets%20for%203D%20Classification%20and%20Segmentation/">2017-CVPR-PointNet：Deep Learning on Point Sets for 3D Classification and Segmentation</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/12/14/ACM/%E9%A2%98%E8%A7%A3/CF1608C%E3%80%8CGame%20Master%E3%80%8D/">
+        <a href="/2022/05/19/Research/PointCloud/2017-CVPR-PointNet%EF%BC%9ADeep%20Learning%20on%20Point%20Sets%20for%203D%20Classification%20and%20Segmentation/2017-CVPR-PointNet%EF%BC%9ADeep%20Learning%20on%20Point%20Sets%20for%203D%20Classification%20and%20Segmentation/">
           
           
             
           
-          1. 题目
-题目链接：CF1608C「Game Master」。
-Description
-nnn players are playing a game.
-There are two different maps in the game. For each player, we know his strength on each map. When two players fight on a sp
+          1. 摘要
+这篇文章[1]主要提出了一种用于点云数据的神经网络模型，即 PointNet。点云在 3D 视觉中是一种重要的数据结构，其主要分为几何数据和属性数据。几何数据就是每个点的 x,y,zx,y,zx,y,z 坐标，而属性数据则是每个点的颜色等信息。这篇文章主要针对几何数据进行处理。由于 3D 点云这种不规则的数据格式，之前大多数深度学习方法都是将点云几何数据变换成规则的体素网格或者一系列 
         </a>
       </p>
 
@@ -680,8 +619,8 @@ There are two different maps in the game. For each player, we know his strength 
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-12-14 14:31" pubdate>
-              2021-12-14
+            <time datetime="2022-05-19 16:44" pubdate>
+              2022-05-19
             </time>
           </div>
         
@@ -689,11 +628,9 @@ There are two different maps in the game. For each player, we know his strength 
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/Technique/">Technique</a>
+              <a href="/categories/Research/">Research</a>
             
-              <a href="/categories/Technique/ACM/">ACM</a>
-            
-              <a href="/categories/Technique/ACM/%E9%A2%98%E8%A7%A3/">题解</a>
+              <a href="/categories/Research/PointCloud/">PointCloud</a>
             
           </div>
         
@@ -701,11 +638,9 @@ There are two different maps in the game. For each player, we know his strength 
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/Technique/">Technique</a>
+              <a href="/tags/Research/">Research</a>
             
-              <a href="/tags/ACM/">ACM</a>
-            
-              <a href="/tags/%E9%A2%98%E8%A7%A3/">题解</a>
+              <a href="/tags/PointCloud/">PointCloud</a>
             
           </div>
         
@@ -719,19 +654,93 @@ There are two different maps in the game. For each player, we know his strength 
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/12/13/ACM/%E9%A2%98%E8%A7%A3/CF1591D%E3%80%8CYet%20Another%20Sorting%20Problem%E3%80%8D/">CF1591D「Yet Another Sorting Problem」</a>
+        <a href="/2022/05/14/Literature/%E6%91%98%E5%BD%95/%E8%AE%A1%E6%95%B0/">计数</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/12/13/ACM/%E9%A2%98%E8%A7%A3/CF1591D%E3%80%8CYet%20Another%20Sorting%20Problem%E3%80%8D/">
+        <a href="/2022/05/14/Literature/%E6%91%98%E5%BD%95/%E8%AE%A1%E6%95%B0/">
           
           
             
           
-          1. 题目
-题目链接：CF1591D「Yet Another Sorting Problem」。
-Description
-Petya has an array of integers a1,a2,…,ana_1,a_2,…,a_na1​,a2​,…,an​. He only likes sorted arrays. Unfortunately, the given array could be a
+          古代汉字计数用语如下表所示：
+
+
+
+计数用语
+代表数量
+大写
+
+
+
+
+一
+111
+壹
+
+
+二
+222
+贰
+
+
+三
+333
+叁
+
+
+四
+444
+肆
+
+
+五
+555
+伍
+
+
+六
+666
+陆
+
+
+七
+777
+柒
+
+
+八
+888
+捌
+
+
+九
+999
+玖
+
+
+十
+101010
+拾
+
+
+廿（niàn）
+202020
+
+
+
+卅（sà）
+303030
+
+
+
+卌（xì）
+404040
+
+
+
+圩（xū）
+505050
         </a>
       </p>
 
@@ -739,8 +748,8 @@ Petya has an array of integers a1,a2,…,ana_1,a_2,…,a_na1​,a2​,…,an​.
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-12-13 23:50" pubdate>
-              2021-12-13
+            <time datetime="2022-05-14 14:29" pubdate>
+              2022-05-14
             </time>
           </div>
         
@@ -748,11 +757,9 @@ Petya has an array of integers a1,a2,…,ana_1,a_2,…,a_na1​,a2​,…,an​.
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/Technique/">Technique</a>
+              <a href="/categories/Literature/">Literature</a>
             
-              <a href="/categories/Technique/ACM/">ACM</a>
-            
-              <a href="/categories/Technique/ACM/%E9%A2%98%E8%A7%A3/">题解</a>
+              <a href="/categories/Literature/%E6%91%98%E5%BD%95/">摘录</a>
             
           </div>
         
@@ -760,11 +767,9 @@ Petya has an array of integers a1,a2,…,ana_1,a_2,…,a_na1​,a2​,…,an​.
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/Technique/">Technique</a>
+              <a href="/tags/Literature/">Literature</a>
             
-              <a href="/tags/ACM/">ACM</a>
-            
-              <a href="/tags/%E9%A2%98%E8%A7%A3/">题解</a>
+              <a href="/tags/%E6%91%98%E5%BD%95/">摘录</a>
             
           </div>
         
@@ -778,23 +783,25 @@ Petya has an array of integers a1,a2,…,ana_1,a_2,…,a_na1​,a2​,…,an​.
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/12/05/InputMethod/Windows%E4%B8%8B%E9%85%8D%E7%BD%AERime%E8%BE%93%E5%85%A5%E6%96%B9%E6%A1%88/Windows%E4%B8%8B%E9%85%8D%E7%BD%AERime%E8%BE%93%E5%85%A5%E6%96%B9%E6%A1%88/">Windows下配置Rime输入方案</a>
+        <a href="/2022/05/13/Technique/PointCloud/%E7%82%B9%E4%BA%91%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99%E6%B1%87%E6%80%BB/%E7%82%B9%E4%BA%91%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99%E6%B1%87%E6%80%BB/">点云相关资料汇总</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/12/05/InputMethod/Windows%E4%B8%8B%E9%85%8D%E7%BD%AERime%E8%BE%93%E5%85%A5%E6%96%B9%E6%A1%88/Windows%E4%B8%8B%E9%85%8D%E7%BD%AERime%E8%BE%93%E5%85%A5%E6%96%B9%E6%A1%88/">
+        <a href="/2022/05/13/Technique/PointCloud/%E7%82%B9%E4%BA%91%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99%E6%B1%87%E6%80%BB/%E7%82%B9%E4%BA%91%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99%E6%B1%87%E6%80%BB/">
           
           
             
           
-          1. 安装
-到 Rime 官网下载 Windows 版本的 Rime 输入法框架（小狼毫），然后在 Windows 系统上安装好。
-2. 配置
-2.1 设置系统默认输入法
-Windows 默认的输入法是微软拼音输入法，如果想设置 Rime 输入法框架为默认的输入法，则可以根据如下步骤进行配置（Windows 把设置默认输入法设置藏在旮旯里，不得不说，属实恶心人）：
+          1. PCL（Point Cloud Library）
+PCL 是一个应用广泛的点云数据处理库，其使用 C++ 语言编写，支持多种操作系统平台。其整体架构图如下：
+ 
 
+官方网址
+官方手册
+开源仓库
+中文论坛
 
-「设置」-&gt;「时间和语
+详细介绍参见博文 PCL(Point Cloud Library)学习指南&amp;资料推荐（2022版）。中文教程可以看朱德海编写的《点云库 PCL 学习教程》或者郭浩编写的《点云库 P
         </a>
       </p>
 
@@ -802,8 +809,8 @@ Windows 默认的输入法是微软拼音输入法，如果想设置 Rime 输入
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-12-05 10:57" pubdate>
-              2021-12-05
+            <time datetime="2022-05-13 16:29" pubdate>
+              2022-05-13
             </time>
           </div>
         
@@ -813,7 +820,7 @@ Windows 默认的输入法是微软拼音输入法，如果想设置 Rime 输入
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/InputMethod/">InputMethod</a>
+              <a href="/categories/Technique/PointCloud/">PointCloud</a>
             
           </div>
         
@@ -823,7 +830,7 @@ Windows 默认的输入法是微软拼音输入法，如果想设置 Rime 输入
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/InputMethod/">InputMethod</a>
+              <a href="/tags/PointCloud/">PointCloud</a>
             
           </div>
         
@@ -835,7 +842,7 @@ Windows 默认的输入法是微软拼音输入法，如果想设置 Rime 输入
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/page/2/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/#board">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/#board">4</a><a class="page-number" href="/page/5/#board">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/44/#board">44</a><a class="extend next" rel="next" href="/page/4/#board"><i class="iconfont icon-arrowright"></i></a>
+      <a class="extend prev" rel="prev" href="/page/2/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/#board">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/#board">4</a><a class="page-number" href="/page/5/#board">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/53/#board">53</a><a class="extend next" rel="next" href="/page/4/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 

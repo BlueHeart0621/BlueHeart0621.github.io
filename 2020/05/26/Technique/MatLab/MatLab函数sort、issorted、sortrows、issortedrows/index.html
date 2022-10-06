@@ -1,0 +1,861 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/image/self/portrait.jpg">
+  <link rel="icon" href="/image/self/portrait.jpg">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="一个记录各种笔记的小匣子^-^">
+  <meta name="author" content="hotarugali">
+  <meta name="keywords" content="頑張れ">
+  
+    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script> <script src="/live2d-widget/autoload.js" type="text/javascript"></script> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/> <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+  
+  <title>MatLab函数sort、issorted、sortrows、issortedrows - お前はどこまで見えている</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"blueheart0621.github.io","root":"/","version":"1.8.9","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":"§"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/image/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":"c194cf0c8cbc33bfb846ba1329537d81","google":"G-SXJN0942X9","gtag":"G-D3DEHLLP3W","tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"A24MlA4oV7hlze3uNQiXDAIi-MdYXbMMI","app_key":"3moFK5Ao3TD4rjA1HCmPTSm6","server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>お前はどこまで見えている</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/image/covers/%E5%9B%9B%E6%9C%88%E6%98%AF%E4%BD%A0%E7%9A%84%E8%B0%8E%E8%A8%80-1.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="MatLab函数sort、issorted、sortrows、issortedrows">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2020-05-26 10:44" pubdate>
+        2020年5月26日 上午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      4k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      46
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- LeanCloud 统计文章PV -->
+      <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="leancloud-page-views"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">MatLab函数sort、issorted、sortrows、issortedrows</h1>
+            
+            <div class="markdown-body">
+              <p>【注】详情请参阅 <strong>MatLab help 文档</strong>。</p>
+<h2 id="1-sort-函数">1. sort 函数</h2>
+<h3 id="1-1-作用">1.1 作用</h3>
+<p>sort 函数对数组元素进行排序。</p>
+<h3 id="1-2-语法">1.2 语法</h3>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs matlab">B = <span class="hljs-built_in">sort</span>(A)<br>B = <span class="hljs-built_in">sort</span>(A,dim)<br>B = <span class="hljs-built_in">sort</span>(___,direction)<br>B = <span class="hljs-built_in">sort</span>(___,Name,Value)<br>[B,I] = <span class="hljs-built_in">sort</span>(___)<br></code></pre></td></tr></table></figure>
+<ul>
+<li><strong>B = sort(A)</strong><br />
+按升序对 A 的元素进行排序。</li>
+</ul>
+<blockquote>
+<ol>
+<li>如果 A 是向量，则 sort(A) 对向量元素进行排序。</li>
+<li>如果 A 是矩阵，则 sort(A) 会将 A 的列视为向量并对每列进行排序。</li>
+<li>如果 A 是多维数组，则 sort(A) 会沿大小不等于 1 的第一个数组维度计算，并将这些元素视为向量。</li>
+</ol>
+</blockquote>
+<ul>
+<li>
+<p><strong>B = sort(A,dim)</strong><br />
+返回 A 沿维度 dim（正整数标量）的排序结果到变量 B 中。</p>
+</li>
+<li>
+<p><strong>B = sort(___,direction)</strong><br />
+使用上述任何语法返回按 direction 指定的顺序排序结果到变量 B 中。direction 的可选值为 <code>'ascend'</code> 或 <code>'descend'</code>，分别表示升序（默认）、降序。</p>
+</li>
+<li>
+<p><strong>B = sort(___,Name,Value)</strong><br />
+使用上述任何语法的基础上，指定用于排序的其他参数。</p>
+</li>
+</ul>
+<blockquote>
+<p><strong>'MissingPlacement','auto'（默认）| 'first' | 'last'</strong> ：指定排序缺失值（NaN、NaT、<undefined>、missing）的位置。<strong>auto</strong> 指定缺失值放在最后（升序）或最前（降序），<strong>first</strong> 指定缺失值放在最前，<strong>last</strong> 指定缺失值放在最后。</p>
+</blockquote>
+<blockquote>
+<p><strong>'ComparisonMethod','auto'（默认）| 'real' | 'abs'</strong> ：指定元素的比较方法。<strong>auto</strong> 指定当 A 为实数时，按 real(A) 对 A 进行排序；当 A 为复数时，按 abs(A) 进行排序。<strong>real</strong> 指定当 A 为实数或复数时，按 real(A) 对 A 进行排序；如果 A 包含具有相等实部的元素，则使用 imag(A) 进行排序。<strong>abs</strong> 指定当 A 为实数或复数时，按 abs(A) 对 A 进行排序；如果 A 包含具有相等模的元素，则使用区间 (-<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>π</mi></mrow><annotation encoding="application/x-tex">\pi</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">π</span></span></span></span>,<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>π</mi></mrow><annotation encoding="application/x-tex">\pi</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">π</span></span></span></span>] 中的 angle(A) 进行排序。</p>
+</blockquote>
+<ul>
+<li><strong>[B,I] = sort(___)</strong><br />
+使用上述任何语法的基础上，还返回一个索引向量的集合。I 的大小与 A 的大小相同，它描述了 A 的元素沿已排序的维度在 B 中的排序情况。比如，如果 A 是一个向量，则 B = A(I) 。</li>
+</ul>
+<p>【注】当 A 是元胞数组时，不支持 dim 和 direction，即 sort 仅沿其大小不等于 1 的第一个维度进行升序排序。</p>
+<h2 id="2-issorted-函数">2. issorted 函数</h2>
+<h3 id="2-1-作用">2.1 作用</h3>
+<p>issorted 函数用来判断数组是否已经有序。</p>
+<h3 id="2-2-语法">2.2 语法</h3>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs matlab">TF = issorted(A)<br>TF = issorted(A,dim)<br>TF = issorted(___,direction)<br>TF = issorted(___,Name,Value)<br>TF = issorted(A,<span class="hljs-string">&#x27;row&#x27;</span>)<br></code></pre></td></tr></table></figure>
+<ul>
+<li><strong>TF = issorted(A)</strong><br />
+当 A 的元素按升序排列时，TF = issorted(A) 将返回逻辑标量值 1（true）；否则，返回 0（false）。</li>
+</ul>
+<blockquote>
+<ol>
+<li>若 A 是向量，当向量元素按照升序排列时，issorted 返回 1；否则，返回 0。</li>
+<li>若 A 是矩阵，当 A 的每一列按升序排序时，issorted 返回 1；否则，返回 0。</li>
+<li>若 A 是多维数组，当 A 沿其大小不等于 1 的第一个维度按升序排序时，issorted 返回 1；否则，返回 0。</li>
+<li>若 A 是时间表（建议使用 issortedrows 函数，见下文），当其行时间向量按升序排序时，issorted 返回 1；否则，返回 0。</li>
+</ol>
+</blockquote>
+<ul>
+<li>
+<p><strong>TF = issorted(A,dim)</strong><br />
+当 A 沿维度 dim 排序时，issorted 返回 1；否则，返回 0。</p>
+</li>
+<li>
+<p><strong>TF = issorted(___,direction)</strong><br />
+当 A 按 direction 指定的顺序排序时，issorted 返回 1；否则，返回 0。direction 可选值有：</p>
+</li>
+</ul>
+<blockquote>
+<p><strong>'ascend'</strong> ：检查数据是否按升序排列。<br />
+<strong>'decend'</strong> ：检查数据是否按降序排列。<br />
+<strong>'monotonic'</strong> ：检查数据是否按降序或升序排序。<br />
+<strong>'strictascend'</strong> ：检查数据是否严格升序排列（即不能有重复元素或缺失元素）。<br />
+<strong>'strictdescend'</strong> ：检查数据是否严格降序排列（即不能有重复元素或缺失元素）。<br />
+<strong>'strictmonotonic'</strong> ：检查数据是否严格升序或降序排列（即不能有重复元素或缺失元素）。</p>
+</blockquote>
+<ul>
+<li><strong>TF = issorted(___,Name,Value)</strong><br />
+使用上述任何语法的基础上，指定用于检查排序顺序的其他参数。</li>
+</ul>
+<blockquote>
+<p><strong>'MissingPlacement','auto'（默认）| 'first' | 'last'</strong> ：指定判断排序顺序时缺失值应该在的位置。<strong>auto</strong> 指定缺失值必须放在最后（升序）或最前（降序），才会返回 1。<strong>first</strong> 指定缺失值必须放在最前，才会返回 1。<strong>last</strong> 指定 缺失值必须放在最后，才会返回 1。<br />
+【注】时间表不支持该键值对属性（可改用 issortedrows 函数，见下文）</p>
+</blockquote>
+<blockquote>
+<p><strong>'ComparisonMethod','auto'（默认）| 'real' | 'abs'</strong> ：指定元素的比较方法。<strong>auto</strong> 指定当 A 为实数时，A 是否按 real(A) 排序；当 A 为复数时，A 是否按照 abs(A) 排序。<strong>real</strong> 指定当 A 为实数或复数时，A 是否按 real(A) 排序；当 A 中元素具有连续相等的实部，则检查是否按照 imag(A) 排序。<strong>abs</strong> 指定当 A 为实数或复数时，A 是否按 abs(A) 排序；当 A 的元素具有连续相等的模，则检查是否按照区间 (-<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>π</mi></mrow><annotation encoding="application/x-tex">\pi</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">π</span></span></span></span>,<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>π</mi></mrow><annotation encoding="application/x-tex">\pi</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">π</span></span></span></span>] 中的 angle(A) 排序。</p>
+</blockquote>
+<h2 id="3-sortrows-函数">3. sortrows 函数</h2>
+<h3 id="3-1-作用">3.1 作用</h3>
+<p>sortarrows 函数用来对矩阵行或表行进行排序。</p>
+<h3 id="3-2-语法">3.2 语法</h3>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs matlab">B = <span class="hljs-built_in">sortrows</span>(A)<br>B = <span class="hljs-built_in">sortrows</span>(A,column)<br>B = <span class="hljs-built_in">sortrows</span>(___,direction)<br>B = <span class="hljs-built_in">sortrows</span>(___,Name,Value)<br>[B,index] = <span class="hljs-built_in">sortrows</span>(___)<br>tblB = <span class="hljs-built_in">sortrows</span>(tblA)<br>tblB = <span class="hljs-built_in">sortrows</span>(tblA,<span class="hljs-string">&#x27;RowNames&#x27;</span>)<br>tblB = <span class="hljs-built_in">sortrows</span>(tblA,rowDimName)<br>tblB = <span class="hljs-built_in">sortrows</span>(tblA,vars)<br>tblB = <span class="hljs-built_in">sortrows</span>(___,direction) <span class="hljs-comment">% 作用于表或时间表</span><br>tblB = <span class="hljs-built_in">sortrows</span>(___,Name,Value) <span class="hljs-comment">% 作用于表或时间表</span><br>[tblB,index] = <span class="hljs-built_in">sortrows</span>(___) <span class="hljs-comment">% 作用于表或时间表</span><br></code></pre></td></tr></table></figure>
+<ul>
+<li>
+<p><strong>B = sortrows(A)</strong><br />
+基于 A 第一列中的元素按升序对矩阵 A 的行进行排序，将排序结果赋值给 B。当第一列包含重复元素时，sortrows 会进一步根据下一列进行排序，依次类推。</p>
+</li>
+<li>
+<p><strong>B = sortrows(A,column)</strong><br />
+基于向量 column 中指定的列对 A 的行进行排序，将排序结果赋值给 B。按照 column 中的指定的列依次对 A 的行进行排序（即当前列出现相同元素时，进一步依据下一个指定列进行排序）column 为非零整数标量或非零整数向量，每个指定的整数值指示一个按其排序的列，负整数表示排序顺序为降序。</p>
+</li>
+<li>
+<p><strong>B = sortrows(___,direction)</strong><br />
+在上述语法基础上，指定按 direction 指定的顺序对 A 的行进行排序。direction 的可以为 <code>'ascend'</code> 或 <code>'descend'</code>，分别表示升序（默认）、降序；也可以是元素为 <code>'ascend'</code> 和 <code>'descend'</code> 的元胞数组，其中每个元素对应要排序的指定变量、行名称或行时间。</p>
+</li>
+</ul>
+<p>【注】如果同时指定 column 参数和 direction 参数，则 sortrows 根据 direction 进行排序，而忽略 column 中元素的符号。</p>
+<ul>
+<li><strong>B = sortrows(___,Name,Value)</strong><br />
+使用上述任何语法的基础上，指定用于排序的其他参数。</li>
+</ul>
+<blockquote>
+<p><strong>'MissingPlacement','auto'（默认）| 'first' | 'last'</strong> ：指定排序缺失值（NaN、NaT、<undefined>、missing）的位置。<strong>auto</strong> 指定缺失值放在最后（升序）或最前（降序），<strong>first</strong> 指定缺失值放在最前，<strong>last</strong> 指定缺失值放在最后。</p>
+</blockquote>
+<blockquote>
+<p><strong>'ComparisonMethod','auto'（默认）| 'real' | 'abs'</strong> ：指定元素的比较方法。<strong>auto</strong> 指定当 A 为实数时，按 real(A) 对 A 进行排序；当 A 为复数时，按 abs(A) 进行排序。<strong>real</strong> 指定当 A 为实数或复数时，按 real(A) 对 A 进行排序；如果 A 包含具有相等实部的元素，则使用 imag(A) 进行排序。<strong>abs</strong> 指定当 A 为实数或复数时，按 abs(A) 对 A 进行排序；如果 A 包含具有相等模的元素，则使用区间 (-<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>π</mi></mrow><annotation encoding="application/x-tex">\pi</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">π</span></span></span></span>,<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>π</mi></mrow><annotation encoding="application/x-tex">\pi</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">π</span></span></span></span>] 中的 angle(A) 进行排序。</p>
+</blockquote>
+<ul>
+<li>
+<p><strong>[B,index] = sortrows(___)</strong><br />
+在上述语法基础上，还返回描述行排列的索引向量，即 B = A(index,:)。</p>
+</li>
+<li>
+<p><strong>tblB = sortrows(tblA)</strong></p>
+</li>
+</ul>
+<blockquote>
+<ol>
+<li>当 tblA 为表（table）时，基于 tblA 中的第一个变量中的值按升序对表进行排序；如果第一个变量中的元素重复，则 sortrows 按第二个变量中的元素排序，以此类推。</li>
+<li>当 tblA 为时间表（timetable）时，则 sortrows 基于时间升序对 tblA 的行进行排序。时间表的行时间沿时间表的第一个维度标记行。</li>
+</ol>
+</blockquote>
+<ul>
+<li><strong>tblB = sortrows(tblA,'RowNames')</strong></li>
+</ul>
+<blockquote>
+<ol>
+<li>当 tblA 为表（table）时，基于 tblA 的行名称对表进行排序，表的行名称沿表的第一个维度标记行。如果 tblA 不包含行名称，即 tblA.Properties.RowNames 为空，则 sortrows 返回 tblA 。</li>
+<li>当 tblA 是时间表时，不支持此语法。</li>
+</ol>
+</blockquote>
+<ul>
+<li><strong>tblB = sortrows(tblA,rowDimName)</strong><br />
+沿第一个维度按行标签 rowDimName 对 tblA 进行排序。</li>
+</ul>
+<blockquote>
+<ol>
+<li>当 tblA 为表时，则行标签为行名称。</li>
+<li>当 tblA 为时间表时，则行标签为行时间。</li>
+</ol>
+</blockquote>
+<ul>
+<li><strong>tblB = sortrows(tblA,vars)</strong><br />
+按 vars 指定的变量中的元素对表进行排序。</li>
+</ul>
+<blockquote>
+<ol>
+<li>当 tblA 为包含行名称的表，则 vars 可以包含行名称。</li>
+<li>当 tblA 为时间表时，则 vars 可以包含行时间。</li>
+</ol>
+</blockquote>
+<ul>
+<li>
+<p><strong>tblB = sortrows(___,direction) % 作用于表或时间表</strong><br />
+对于上述任意语法，按照 direction 指定的顺序对 tblA 进行排序。direction 可以为 <code>'ascend'</code> 或 <code>'descend'</code>，分别表示升序（默认）、降序；也可以是元素为 <code>'ascend'</code> 和 <code>'descend'</code> 的元胞数组，其中每个元素对应要排序的指定变量、行名称或行时间。</p>
+</li>
+<li>
+<p><strong>tblB = sortrows(___,Name,Value) % 作用于表或时间表</strong><br />
+对于上述任意语法，指定对表或时间表的行进行排序的其他参数。</p>
+</li>
+</ul>
+<blockquote>
+<p><strong>'MissingPlacement','auto'（默认）| 'first' | 'last'</strong> ：指定排序缺失值（NaN、NaT、<undefined>、missing）的位置。<strong>auto</strong> 指定缺失值放在最后（升序）或最前（降序），<strong>first</strong> 指定缺失值放在最前，<strong>last</strong> 指定缺失值放在最后。</p>
+</blockquote>
+<blockquote>
+<p><strong>'ComparisonMethod','auto'（默认）| 'real' | 'abs'</strong> ：指定元素的比较方法。<strong>auto</strong> 指定当 A 为实数时，按 real(A) 对 A 进行排序；当 A 为复数时，按 abs(A) 进行排序。<strong>real</strong> 指定当 A 为实数或复数时，按 real(A) 对 A 进行排序；如果 A 包含具有相等实部的元素，则使用 imag(A) 进行排序。<strong>abs</strong> 指定当 A 为实数或复数时，按 abs(A) 对 A 进行排序；如果 A 包含具有相等模的元素，则使用区间 (-<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>π</mi></mrow><annotation encoding="application/x-tex">\pi</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">π</span></span></span></span>,<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>π</mi></mrow><annotation encoding="application/x-tex">\pi</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">π</span></span></span></span>] 中的 angle(A) 进行排序。</p>
+</blockquote>
+<ul>
+<li><strong>[tblB,index] = sortrows(___) % 作用于表或时间表</strong><br />
+除了返回排序结果 tblB 外，还返回一个索引向量 index 使得 tblB = tblA(index,:) 。</li>
+</ul>
+<h2 id="4-issortedrows-函数">4. issortedrows 函数</h2>
+<h3 id="4-1-作用">4.1 作用</h3>
+<p>issortedrows 函数用来确定矩阵或表的行是否已排序。</p>
+<h3 id="4-2-语法">4.2 语法</h3>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs matlab">TF = issortedrows(A)<br>TF = issortedrows(A,column)<br>TF = issortedrows(___,direction)<br>TF = issortedrows(___,Name,Value)<br>TF = issortedrows(tblA)<br>TF = issortedrows(tblA,<span class="hljs-string">&#x27;RowNames&#x27;</span>)<br>TF = issortedrows(tblA,rowDimName)<br>TF = issortedrows(tblA,vars)<br>TF = issortedrows(___,direction) <span class="hljs-comment">% 作用于表或时间表</span><br>TF = issortedrows(___,Name,Value) <span class="hljs-comment">% 作用于表或时间表</span><br></code></pre></td></tr></table></figure>
+<ul>
+<li>
+<p><strong>TF = issortedrows(A)</strong><br />
+当矩阵 A 的第一列元素按升序排序时，issortedrows 返回逻辑标量 1；否则，返回 0 。当第一列有连续重复元素时，issortedrows 进一步检查下一列是否按升序排序，以此类推。</p>
+</li>
+<li>
+<p><strong>TF = issortedrows(A,column)</strong><br />
+当 A 根据向量 column 中指定的列排序时，issortedrows 返回 1，否则返回 0 。<br />
+column 为非零整数标量或非零整数向量，每个指定的整数值指示一个按其排序的列，负整数表示排序顺序为降序。</p>
+</li>
+<li>
+<p><strong>TF = issortedrows(___,direction)</strong><br />
+按照上述语法，检查是否按照 direction 指定的顺序进行排序，若是则返回 1，否则返回 0 。<br />
+direction 可选值有：</p>
+</li>
+</ul>
+<blockquote>
+<p><strong>'ascend'</strong> ：检查数据是否按升序排列。<br />
+<strong>'decend'</strong> ：检查数据是否按降序排列。<br />
+<strong>'monotonic'</strong> ：检查数据是否按降序或升序排序。<br />
+<strong>'strictascend'</strong> ：检查数据是否严格升序排列（即不能有重复元素或缺失元素）。<br />
+<strong>'strictdescend'</strong> ：检查数据是否严格降序排列（即不能有重复元素或缺失元素）。<br />
+<strong>'strictmonotonic'</strong> ：检查数据是否严格升序或降序排列（即不能有重复元素或缺失元素）<br />
+【注】direction 也可以是包含上述可选值的向量列表的元胞数组，其中列表中的每个元素对应于 A 排序列向量中的一列。</p>
+</blockquote>
+<ul>
+<li><strong>TF = issortedrows(___,Name,Value)</strong><br />
+在上述语法基础上，指定用于检查排序顺序的其他参数。</li>
+</ul>
+<blockquote>
+<p><strong>'MissingPlacement','auto'（默认）| 'first' | 'last'</strong> ：指定判断排序顺序时缺失值应该在的位置。<strong>auto</strong> 指定缺失值必须放在最后（升序）或最前（降序），才会返回 1。<strong>first</strong> 指定缺失值必须放在最前，才会返回 1。<strong>last</strong> 指定 缺失值必须放在最后，才会返回 1。</p>
+</blockquote>
+<blockquote>
+<p><strong>'ComparisonMethod','auto'（默认）| 'real' | 'abs'</strong> ：指定元素的比较方法。<strong>auto</strong> 指定当 A 为实数时，A 是否按 real(A) 排序；当 A 为复数时，A 是否按照 abs(A) 排序。<strong>real</strong> 指定当 A 为实数或复数时，A 是否按 real(A) 排序；当 A 中元素具有连续相等的实部，则检查是否按照 imag(A) 排序。<strong>abs</strong> 指定当 A 为实数或复数时，A 是否按 abs(A) 排序；当 A 的元素具有连续相等的模，则检查是否按照区间 (-<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>π</mi></mrow><annotation encoding="application/x-tex">\pi</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">π</span></span></span></span>,<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>π</mi></mrow><annotation encoding="application/x-tex">\pi</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">π</span></span></span></span>] 中的 angle(A) 排序。</p>
+</blockquote>
+<ul>
+<li><strong>TF = issortedrows(tblA)</strong></li>
+</ul>
+<blockquote>
+<ol>
+<li>若 tblA 为表，则检查表中的行是否基于第一个变量中的元素按升序排序；如果第一个变量中的元素重复，则 issortedrows 检查第二个变量中的元素，依次类推。</li>
+<li>若 tblA 为时间表，则检查 tblA 中的行是否基于其行时间升序排序，时间表的行时间沿时间表的第一个维度标记行。</li>
+</ol>
+</blockquote>
+<ul>
+<li>
+<p><strong>TF = issortedrows(tblA,'RowNames')</strong><br />
+检查表中的行是否基于行名称升序排序。表的行名称沿表的第一个维度标记（tblA 为时间表时不支持该语法）</p>
+</li>
+<li>
+<p><strong>TF = issortedrows(tblA,rowDimName)</strong><br />
+检查表中的行是否沿第一个维度按行标签 rowDimName 进行排序。</p>
+</li>
+</ul>
+<blockquote>
+<ol>
+<li>若 tblA 是表，则标签为行名称。</li>
+<li>若 tblA 是时间表，则标签为行时间。</li>
+</ol>
+</blockquote>
+<ul>
+<li><strong>TF = issortedrows(tblA,vars)</strong><br />
+检查表中的行是否基于变量 vars 中的元素升序排序。</li>
+</ul>
+<blockquote>
+<ol>
+<li>若 tblA 为包含行名称的表，则 vars 可以包含行名称。</li>
+<li>若 tblA 为时间表，则 vars 可以包含行时间。</li>
+</ol>
+</blockquote>
+<ul>
+<li><strong>TF = issortedrows(___,direction) % 作用于表或时间表</strong><br />
+按照上述语法，检查是否按照 direction 指定的顺序进行排序，若是则返回 1，否则返回 0 。<br />
+direction 可选值有：</li>
+</ul>
+<blockquote>
+<p><strong>'ascend'</strong> ：检查数据是否按升序排列。<br />
+<strong>'decend'</strong> ：检查数据是否按降序排列。<br />
+<strong>'monotonic'</strong> ：检查数据是否按降序或升序排序。<br />
+<strong>'strictascend'</strong> ：检查数据是否严格升序排列（即不能有重复元素或缺失元素）。<br />
+<strong>'strictdescend'</strong> ：检查数据是否严格降序排列（即不能有重复元素或缺失元素）。<br />
+<strong>'strictmonotonic'</strong> ：检查数据是否严格升序或降序排列（即不能有重复元素或缺失元素）<br />
+【注】direction 也可以是包含上述可选值的向量列表的元胞数组，其中列表中的每个元素对应于 A 排序列向量中的一列。</p>
+</blockquote>
+<ul>
+<li><strong>TF = issortedrows(___,Name,Value) % 作用于表或时间表</strong><br />
+在上述语法基础上，指定用于检查排序顺序的其他参数。</li>
+</ul>
+<blockquote>
+<p><strong>'MissingPlacement','auto'（默认）| 'first' | 'last'</strong> ：指定判断排序顺序时缺失值应该在的位置。<strong>auto</strong> 指定缺失值必须放在最后（升序）或最前（降序），才会返回 1。<strong>first</strong> 指定缺失值必须放在最前，才会返回 1。<strong>last</strong> 指定 缺失值必须放在最后，才会返回 1。</p>
+</blockquote>
+<blockquote>
+<p><strong>'ComparisonMethod','auto'（默认）| 'real' | 'abs'</strong> ：指定元素的比较方法。<strong>auto</strong> 指定当 A 为实数时，A 是否按 real(A) 排序；当 A 为复数时，A 是否按照 abs(A) 排序。<strong>real</strong> 指定当 A 为实数或复数时，A 是否按 real(A) 排序；当 A 中元素具有连续相等的实部，则检查是否按照 imag(A) 排序。<strong>abs</strong> 指定当 A 为实数或复数时，A 是否按 abs(A) 排序；当 A 的元素具有连续相等的模，则检查是否按照区间 (-<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>π</mi></mrow><annotation encoding="application/x-tex">\pi</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">π</span></span></span></span>,<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>π</mi></mrow><annotation encoding="application/x-tex">\pi</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">π</span></span></span></span>] 中的 angle(A) 排序。</p>
+</blockquote>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/Technique/">Technique</a>
+                    
+                      <a class="hover-with-bg" href="/categories/Technique/MatLab/">MatLab</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Technique/">Technique</a>
+                    
+                      <a class="hover-with-bg" href="/tags/MatLab/">MatLab</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/05/26/Technique/MatLab/MatLab%E5%87%BD%E6%95%B0repmat/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">MatLab函数repmat</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/05/26/Technique/MatLab/MatLab%E5%87%BD%E6%95%B0xlsread%E3%80%81xlswrite%E3%80%81xlsfinfo/">
+                        <span class="hidden-mobile">MatLab函数xlsread、xlswrite、xlsfinfo</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="waline"></div>
+  <script type="text/javascript">
+    Fluid.utils.lazyComments('waline', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js', function () {
+        new Waline({
+          el: "#waline",
+          placeholder: "都看到这里了，留个脚印再走呗~",
+          path: window.location.pathname,
+          avatar: "retro",
+          visitor: true,
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: true,
+          serverURL: "https://waline-one-beta.vercel.app/",
+          avatarCDN: "https://gravatar.loli.net/avatar/",
+          avatarForce: false,
+          requiredMeta: [],
+          emoji: ["https://cdn.jsdelivr.net/gh/hotarugali/Emoji@bilibili_tv_gif/waline/bilibili_tv_gif","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@bilibiliHotKey/waline/bilibiliHotKey","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@bilibili2233/waline/bilibili2233","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@smallshake/waline/smallshake","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@alu/waline/alu","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@QQ/waline/QQ","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@Tieba-New/waline/Tieba-New","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@weibo/waline/weibo"],
+          // emojiMaps: ,
+          login: "enable",
+          dark: 'html[data-user-color-scheme="dark"]',
+        });
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the
+    <a target="_blank" href="https://waline.js.org" rel="nofollow noopener noopener">comments powered by Waline.</a>
+  </noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+      <div class="col-lg-7 mx-auto nopadding-x-md">
+        <div class="container custom mx-auto">
+          <script src="https://myhkw.cn/api/player/161389264877" id="myhk" key="161389264877" m="1"></script>
+        </div>
+      </div>
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+
+  <script defer src="/js/leancloud.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- KaTeX -->
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" />
+  
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/mermaid@8.8.3/dist/mermaid.min.js" ></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({"theme":"default"});
+    }
+  </script>
+
+
+
+
+  
+    <!-- Baidu Analytics -->
+    <script defer>
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?c194cf0c8cbc33bfb846ba1329537d81";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  
+    <!-- Google Analytics -->
+    <script defer>
+      window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) };
+      ga.l = +new Date;
+      ga('create', 'G-SXJN0942X9', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+  
+
+  
+    <!-- Google gtag.js -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D3DEHLLP3W"></script>
+    <script defer>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-D3DEHLLP3W');
+    </script>
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

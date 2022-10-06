@@ -18,7 +18,7 @@
   <meta name="author" content="BlueHeart0621">
   <meta name="keywords" content="頑張れ">
   
-    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script> <script src="/live2d-widget/autoload.js" type="text/javascript"></script> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script> <script src="/live2d-widget/autoload.js" type="text/javascript"></script> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/> <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
   
   <title>お前はどこまで見えている</title>
 
@@ -197,20 +197,24 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Python/pip%E4%B8%8B%E8%BD%BDPython%E5%BA%93%E9%80%9F%E5%BA%A6%E6%85%A2%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/">pip下载Python库速度慢解决方案</a>
+        <a href="/2020/08/14/Technique/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%A6/BSGS%E7%AE%97%E6%B3%95/">BSGS算法</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Python/pip%E4%B8%8B%E8%BD%BDPython%E5%BA%93%E9%80%9F%E5%BA%A6%E6%85%A2%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/">
+        <a href="/2020/08/14/Technique/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%A6/BSGS%E7%AE%97%E6%B3%95/">
           
           
             
           
           1. 简介
-python 的 pip 安装包工具非常便利，但由于其默认的下载源为国外源，因此在安装 python 库的时候下载速度较慢。有时库文件过大，超出 pip 的下载时间限制，就会报错 The read operation timed out。所以我们可是手动更改 pip 的下载源为国内的镜像下载源以提升下载速度。
-2. 国内镜像源
-国内主要的 pip 镜像源有以下几个：
-1234https
+BSGS 算法也称为大小步算法，主要用来解决
+Ax≡Bmod  p\begin{array}{c}
+A^x \equiv B \mod{p}
+\end{array}
+Ax≡Bmodp​
+的问题，其中 ppp 为质数。
+2. 算法
+令 x=i⋅m−jx = i \cdot m -jx=i⋅m−j，其中 m=⌈p ⌉m = \lceil \sqrt{p} \,\rceilm=⌈p​⌉。此时
         </a>
       </p>
 
@@ -218,8 +222,8 @@ python 的 pip 安装包工具非常便利，但由于其默认的下载源为�
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
+            <time datetime="2020-08-14 21:19" pubdate>
+              2020-08-14
             </time>
           </div>
         
@@ -229,7 +233,11 @@ python 的 pip 安装包工具非常便利，但由于其默认的下载源为�
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/Python/">Python</a>
+              <a href="/categories/Technique/ACM/">ACM</a>
+            
+              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/">算法</a>
+            
+              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%A6/">数学</a>
             
           </div>
         
@@ -239,7 +247,11 @@ python 的 pip 安装包工具非常便利，但由于其默认的下载源为�
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Python/">Python</a>
+              <a href="/tags/ACM/">ACM</a>
+            
+              <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
+            
+              <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
             
           </div>
         
@@ -253,21 +265,17 @@ python 的 pip 安装包工具非常便利，但由于其默认的下载源为�
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Qt/Deepin15.11%E4%B8%8BQt5.14%E6%8A%A5%E9%94%99/">Deepin15.11下Qt5.14报错</a>
+        <a href="/2020/08/14/Technique/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%A6/%E4%BA%8C%E7%BB%B4%E5%87%A0%E4%BD%95%E5%9F%BA%E7%A1%80/">二维几何基础</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Qt/Deepin15.11%E4%B8%8BQt5.14%E6%8A%A5%E9%94%99/">
+        <a href="/2020/08/14/Technique/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%A6/%E4%BA%8C%E7%BB%B4%E5%87%A0%E4%BD%95%E5%9F%BA%E7%A1%80/">
           
           
             
           
-          1. error: Unknown module(s) in QT: xlsx
-
-问题：Qt 找不到 qtxlsx 的 modules
-解决：手动安装 qtxlsx 模块
-
-12345git clone git@github.com:dbzhang800/QtXlsxWriter.gitcd QtXlsxWriterqmakemakemake install
+          1. 点、线、凸边形
+123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
         </a>
       </p>
 
@@ -275,8 +283,8 @@ python 的 pip 安装包工具非常便利，但由于其默认的下载源为�
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
+            <time datetime="2020-08-14 21:19" pubdate>
+              2020-08-14
             </time>
           </div>
         
@@ -286,7 +294,11 @@ python 的 pip 安装包工具非常便利，但由于其默认的下载源为�
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/Qt/">Qt</a>
+              <a href="/categories/Technique/ACM/">ACM</a>
+            
+              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/">算法</a>
+            
+              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%A6/">数学</a>
             
           </div>
         
@@ -296,7 +308,11 @@ python 的 pip 安装包工具非常便利，但由于其默认的下载源为�
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Qt/">Qt</a>
+              <a href="/tags/ACM/">ACM</a>
+            
+              <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
+            
+              <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
             
           </div>
         
@@ -310,23 +326,20 @@ python 的 pip 安装包工具非常便利，但由于其默认的下载源为�
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Qt/Deepin15.11%E4%B8%8BQt5.14%E6%97%A0%E6%B3%95%E4%BD%BF%E7%94%A8%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95/">Deepin15.11下Qt5.14无法使用中文输入法</a>
+        <a href="/2020/08/14/Technique/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%A6/%E7%9F%A9%E9%98%B5%E6%A0%91%E5%AE%9A%E7%90%86/">矩阵树定理</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Qt/Deepin15.11%E4%B8%8BQt5.14%E6%97%A0%E6%B3%95%E4%BD%BF%E7%94%A8%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95/">
+        <a href="/2020/08/14/Technique/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%A6/%E7%9F%A9%E9%98%B5%E6%A0%91%E5%AE%9A%E7%90%86/">
           
           
             
           
-          对于使用 fcitx 框架的中文输入法，需要手动编译 fcitx-qt5 生成中文输入法的库文件。
-1. 安装 cmake，用于编译 fcitx-qt5
-首先查看是否已经安装 cmake:
-1cmake --verison
-如果有显示版本信息说明已经安装，则可以到下一步；如果没有安装，则先安装：
-1sudo apt install cmake
-2. 安装 fcitx-libs-dev
-1sudo 
+          1. 思想
+矩阵树定理：对于一个无向图 GGG，它的生成树个数等于其基尔霍夫矩阵任何一个 N−1N - 1N−1 阶主子式的行列式的绝对值。
+
+度数矩阵 DDD：是一个 N×NN \times NN×N 的矩阵，其中 D[i][j]=0(i≠j)D[i][j]=0 (i \neq j)D[i][j]=0(i=j)，D[i][i]=iD[i][i]=iD[i][i]=i 号点的度数。
+邻接矩阵 A
         </a>
       </p>
 
@@ -334,8 +347,8 @@ python 的 pip 安装包工具非常便利，但由于其默认的下载源为�
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
+            <time datetime="2020-08-14 21:19" pubdate>
+              2020-08-14
             </time>
           </div>
         
@@ -345,7 +358,11 @@ python 的 pip 安装包工具非常便利，但由于其默认的下载源为�
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/Qt/">Qt</a>
+              <a href="/categories/Technique/ACM/">ACM</a>
+            
+              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/">算法</a>
+            
+              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%A6/">数学</a>
             
           </div>
         
@@ -355,7 +372,11 @@ python 的 pip 安装包工具非常便利，但由于其默认的下载源为�
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Qt/">Qt</a>
+              <a href="/tags/ACM/">ACM</a>
+            
+              <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
+            
+              <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
             
           </div>
         
@@ -369,18 +390,28 @@ python 的 pip 安装包工具非常便利，但由于其默认的下载源为�
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Qt/Deepin15.11%E4%B8%8BQt5.14%E7%A8%8B%E5%BA%8F%E6%89%93%E5%8C%85/">Deepin15.11下Qt5.14程序打包</a>
+        <a href="/2020/08/14/ACM/%E7%AE%97%E6%B3%95/%E5%9B%BE%E8%AE%BA/%E7%BD%91%E7%BB%9C%E6%B5%81/%E6%9C%80%E5%A4%A7%E6%B5%81/">最大流</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Qt/Deepin15.11%E4%B8%8BQt5.14%E7%A8%8B%E5%BA%8F%E6%89%93%E5%8C%85/">
+        <a href="/2020/08/14/ACM/%E7%AE%97%E6%B3%95/%E5%9B%BE%E8%AE%BA/%E7%BD%91%E7%BB%9C%E6%B5%81/%E6%9C%80%E5%A4%A7%E6%B5%81/">
           
           
             
           
-          【注】使用 linuxdeployqt 工具首先要保证当前系统已经配置好相应的 Qt 环境。
-Qt5.14 for Linux 并没有提供相应的程序打包服务，所以 Linux 下打包 Qt 应用程序并不轻松。好在已经有人开源了一个在 Linux 平台下打包 Qt 应用程序的工具：linuxdeployqt，使用该工具可以轻松打包 Qt 应用程序。
-开发人员提供了已经编译好可直接运行的程序 linu
+          1. 简介
+最大流算法主要分为两大类，一类为增广路算法，一类为预流推进算法。最大流算法解决的是在有向网路图 G=(V,E)
+G = (V,E)
+G=(V,E) 中计算从源点 sss 到汇点 ttt 的最大流量问题，以及最小割容量问题。
+
+最小割最大流定理
+s−ts-ts−t 最大流的值等于 s−ts-ts−t 的最小割容量。
+
+2. 增广路算法
+
+
+剩余容量
+剩余容量 cf(u,v)=c(u,v)
         </a>
       </p>
 
@@ -388,8 +419,8 @@ Qt5.14 for Linux 并没有提供相应的程序打包服务，所以 Linux 下�
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
+            <time datetime="2020-08-14 21:18" pubdate>
+              2020-08-14
             </time>
           </div>
         
@@ -399,7 +430,13 @@ Qt5.14 for Linux 并没有提供相应的程序打包服务，所以 Linux 下�
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/Qt/">Qt</a>
+              <a href="/categories/Technique/ACM/">ACM</a>
+            
+              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/">算法</a>
+            
+              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/%E5%9B%BE%E8%AE%BA/">图论</a>
+            
+              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/%E5%9B%BE%E8%AE%BA/%E7%BD%91%E7%BB%9C%E6%B5%81/">网络流</a>
             
           </div>
         
@@ -409,7 +446,15 @@ Qt5.14 for Linux 并没有提供相应的程序打包服务，所以 Linux 下�
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Qt/">Qt</a>
+              <a href="/tags/ACM/">ACM</a>
+            
+              <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
+            
+              <a href="/tags/%E5%9B%BE%E8%AE%BA/">图论</a>
+            
+              <a href="/tags/%E7%BD%91%E7%BB%9C%E6%B5%81/">网络流</a>
+            
+              <a href="/tags/%E7%BD%91%E7%BB%9C%E6%B5%81%E7%AE%97%E6%B3%95/">网络流算法</a>
             
           </div>
         
@@ -423,21 +468,28 @@ Qt5.14 for Linux 并没有提供相应的程序打包服务，所以 Linux 下�
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Qt/Qt%E6%8A%A5%E9%94%99%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/">Qt报错问题解决</a>
+        <a href="/2020/08/14/Technique/ACM/%E7%AE%97%E6%B3%95/%E5%9B%BE%E8%AE%BA/%E7%BD%91%E7%BB%9C%E6%B5%81/%E6%9C%80%E5%A4%A7%E6%B5%81/">最大流</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Qt/Qt%E6%8A%A5%E9%94%99%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/">
+        <a href="/2020/08/14/Technique/ACM/%E7%AE%97%E6%B3%95/%E5%9B%BE%E8%AE%BA/%E7%BD%91%E7%BB%9C%E6%B5%81/%E6%9C%80%E5%A4%A7%E6%B5%81/">
           
           
             
           
-          1. Qt 定义函数模板时，声明和实现分离（前者在 .h 头文件声明，后者在 .cpp 文件实现）引发找不到定义问题
+          1. 简介
+最大流算法主要分为两大类，一类为增广路算法，一类为预流推进算法。最大流算法解决的是在有向网路图 G=(V,E)
+G = (V,E)
+G=(V,E) 中计算从源点 sss 到汇点 ttt 的最大流量问题，以及最小割容量问题。
 
-原因：Qt 编译器不支持函数模板的声明和实现分离
-解决：直接在 .h 文件声明并实现，不进行分离
+最小割最大流定理
+s−ts-ts−t 最大流的值等于 s−ts-ts−t 的最小割容量。
+
+2. 增广路算法
 
 
+剩余容量
+剩余容量 cf(u,v)=c(u,v)
         </a>
       </p>
 
@@ -445,8 +497,8 @@ Qt5.14 for Linux 并没有提供相应的程序打包服务，所以 Linux 下�
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
+            <time datetime="2020-08-14 21:18" pubdate>
+              2020-08-14
             </time>
           </div>
         
@@ -456,7 +508,13 @@ Qt5.14 for Linux 并没有提供相应的程序打包服务，所以 Linux 下�
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/Qt/">Qt</a>
+              <a href="/categories/Technique/ACM/">ACM</a>
+            
+              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/">算法</a>
+            
+              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/%E5%9B%BE%E8%AE%BA/">图论</a>
+            
+              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/%E5%9B%BE%E8%AE%BA/%E7%BD%91%E7%BB%9C%E6%B5%81/">网络流</a>
             
           </div>
         
@@ -466,7 +524,15 @@ Qt5.14 for Linux 并没有提供相应的程序打包服务，所以 Linux 下�
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Qt/">Qt</a>
+              <a href="/tags/ACM/">ACM</a>
+            
+              <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
+            
+              <a href="/tags/%E5%9B%BE%E8%AE%BA/">图论</a>
+            
+              <a href="/tags/%E7%BD%91%E7%BB%9C%E6%B5%81/">网络流</a>
+            
+              <a href="/tags/%E7%BD%91%E7%BB%9C%E6%B5%81%E7%AE%97%E6%B3%95/">网络流算法</a>
             
           </div>
         
@@ -480,39 +546,19 @@ Qt5.14 for Linux 并没有提供相应的程序打包服务，所以 Linux 下�
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/CompilingPrinciple/%E5%BC%95%E8%AE%BA/%E5%BC%95%E8%AE%BA/">引论</a>
+        <a href="/2020/08/14/Technique/ACM/%E9%A2%98%E8%A7%A3/PAT%E3%80%8C1003%20Universal%20Travel%20Sites%20(35%E5%88%86)%E3%80%8D/">PAT「1003 Universal Travel Sites (35分)」</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/CompilingPrinciple/%E5%BC%95%E8%AE%BA/%E5%BC%95%E8%AE%BA/">
+        <a href="/2020/08/14/Technique/ACM/%E9%A2%98%E8%A7%A3/PAT%E3%80%8C1003%20Universal%20Travel%20Sites%20(35%E5%88%86)%E3%80%8D/">
           
           
             
           
-          1. 主要内容
-
-引论
-高级语言及其文法
-语法分析
-自顶向下的语法分析
-自底向上的语法分析
-语法制导翻译与属性文法
-语义分析与中间代码生成
-符号表管理
-运行时的存储组织
-代码优化
-代码生成
-
-2. 程序设计语言
-
-
-机器语言与汇编语言：01 代码与助记符，更接近于计算机硬件指令系统的工作
-
-
-高级语言：其表示方法更接近于带解决的表示方法
-
-
-命令语言：控制系统的工作，以功能封装为特征（如 UNIX
+          1. 题目
+题目链接：PAT「1003 Universal Travel Sites (35分)」 。
+Description
+After finishing her tour around the Earth, CYLL is now planning a universal travel sites development project. After a careful investigat
         </a>
       </p>
 
@@ -520,8 +566,8 @@ Qt5.14 for Linux 并没有提供相应的程序打包服务，所以 Linux 下�
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
+            <time datetime="2020-08-14 20:18" pubdate>
+              2020-08-14
             </time>
           </div>
         
@@ -531,7 +577,9 @@ Qt5.14 for Linux 并没有提供相应的程序打包服务，所以 Linux 下�
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/CompilingPrinciple/">CompilingPrinciple</a>
+              <a href="/categories/Technique/ACM/">ACM</a>
+            
+              <a href="/categories/Technique/ACM/%E9%A2%98%E8%A7%A3/">题解</a>
             
           </div>
         
@@ -541,7 +589,9 @@ Qt5.14 for Linux 并没有提供相应的程序打包服务，所以 Linux 下�
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/CompilingPrinciple/">CompilingPrinciple</a>
+              <a href="/tags/ACM/">ACM</a>
+            
+              <a href="/tags/%E9%A2%98%E8%A7%A3/">题解</a>
             
           </div>
         
@@ -555,43 +605,19 @@ Qt5.14 for Linux 并没有提供相应的程序打包服务，所以 Linux 下�
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/InformationTheory/%E4%BF%A1%E6%81%AF%E8%AE%BA%E6%A6%82%E8%AE%BA/%E4%BF%A1%E6%81%AF%E8%AE%BA%E6%A6%82%E8%AE%BA/">信息论概论</a>
+        <a href="/2020/08/14/Technique/ACM/%E9%A2%98%E8%A7%A3/PAT%E3%80%8C1002%20Business%20(35%E5%88%86)%E3%80%8D/">PAT「1002 Business (35分)」</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/InformationTheory/%E4%BF%A1%E6%81%AF%E8%AE%BA%E6%A6%82%E8%AE%BA/%E4%BF%A1%E6%81%AF%E8%AE%BA%E6%A6%82%E8%AE%BA/">
+        <a href="/2020/08/14/Technique/ACM/%E9%A2%98%E8%A7%A3/PAT%E3%80%8C1002%20Business%20(35%E5%88%86)%E3%80%8D/">
           
           
             
           
-          1. 内容
-
-绪论
-信息的统计度量
-离散信源
-离散信道及其容量
-无失真信源编码
-有噪信道编码
-限失真信源编码
-保密系统的基本信息理论
-
-2. 信息
-2.1 客观世界三大基本要素
-
-物质：材料科学
-能量：能源科学
-信息：信息科学
-
-2.2 信息、消息、信号
-
-
-消息：是信息的载体和具体表现形式（比如文字、图片等），是信号的具体内容
-
-
-信息：是消息中包含的有意义的内容
-
-
-同一消息对不同的接收者来说
+          1. 题目
+题目链接：PAT「1002 Business (35分)」 。
+Description
+As the manager of your company, you have to carefully consider, for each project, the time taken to finish it, the deadline, and the profit you can ga
         </a>
       </p>
 
@@ -599,8 +625,8 @@ Qt5.14 for Linux 并没有提供相应的程序打包服务，所以 Linux 下�
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
+            <time datetime="2020-08-14 18:19" pubdate>
+              2020-08-14
             </time>
           </div>
         
@@ -610,7 +636,9 @@ Qt5.14 for Linux 并没有提供相应的程序打包服务，所以 Linux 下�
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/InformationTheory/">InformationTheory</a>
+              <a href="/categories/Technique/ACM/">ACM</a>
+            
+              <a href="/categories/Technique/ACM/%E9%A2%98%E8%A7%A3/">题解</a>
             
           </div>
         
@@ -620,7 +648,9 @@ Qt5.14 for Linux 并没有提供相应的程序打包服务，所以 Linux 下�
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/InformationTheory/">InformationTheory</a>
+              <a href="/tags/ACM/">ACM</a>
+            
+              <a href="/tags/%E9%A2%98%E8%A7%A3/">题解</a>
             
           </div>
         
@@ -634,23 +664,19 @@ Qt5.14 for Linux 并没有提供相应的程序打包服务，所以 Linux 下�
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Linux/Deepin/Deepin15.11%E4%B8%8Bapt%E6%8A%A5%E9%94%99/">Deepin15.11下apt报错</a>
+        <a href="/2020/08/14/Technique/ACM/%E9%A2%98%E8%A7%A3/PAT%E3%80%8C1001%20Battle%20Over%20Cities%20-%20Hard%20Version%20(35%E5%88%86)%E3%80%8D/">PAT「1001 Battle Over Cities - Hard Version (35分)」</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Linux/Deepin/Deepin15.11%E4%B8%8Bapt%E6%8A%A5%E9%94%99/">
+        <a href="/2020/08/14/Technique/ACM/%E9%A2%98%E8%A7%A3/PAT%E3%80%8C1001%20Battle%20Over%20Cities%20-%20Hard%20Version%20(35%E5%88%86)%E3%80%8D/">
           
           
             
           
-          1. 由于没有公匙，无法验证下列签名: NO_PUBKEY xxx
-执行命令 sudo apt update 时如上报错。
-
-错误原因：GPG Key 对应的 GPG 验证文件过期或者是有些软件源没有导入 GPG Key 对应的 GPG 验证文件。可以通过下列命令查看所有 GPG Key:
-
-1sudo apt-key list
-
-解决办法：更新无效 GPG Key 对应的 GPG 验证文件。可以
+          1. 题目
+题目链接：PAT「1001 Battle Over Cities - Hard Version (35分)」 。
+Description
+It is vitally important to have all the cities connected by highways in a war. If a city is conquered by the enemy, all the h
         </a>
       </p>
 
@@ -658,8 +684,8 @@ Qt5.14 for Linux 并没有提供相应的程序打包服务，所以 Linux 下�
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
+            <time datetime="2020-08-14 14:05" pubdate>
+              2020-08-14
             </time>
           </div>
         
@@ -669,9 +695,9 @@ Qt5.14 for Linux 并没有提供相应的程序打包服务，所以 Linux 下�
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/Linux/">Linux</a>
+              <a href="/categories/Technique/ACM/">ACM</a>
             
-              <a href="/categories/Technique/Linux/Deepin/">Deepin</a>
+              <a href="/categories/Technique/ACM/%E9%A2%98%E8%A7%A3/">题解</a>
             
           </div>
         
@@ -681,9 +707,9 @@ Qt5.14 for Linux 并没有提供相应的程序打包服务，所以 Linux 下�
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Linux/">Linux</a>
+              <a href="/tags/ACM/">ACM</a>
             
-              <a href="/tags/Deepin/">Deepin</a>
+              <a href="/tags/%E9%A2%98%E8%A7%A3/">题解</a>
             
           </div>
         
@@ -697,21 +723,21 @@ Qt5.14 for Linux 并没有提供相应的程序打包服务，所以 Linux 下�
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Linux/Deepin/Deepin15.11%E4%B8%8B%E8%93%9D%E7%89%99%E9%85%8D%E5%AF%B9%E5%92%8C%E8%BF%9E%E6%8E%A5/">Deepin15.11下蓝牙配对和连接</a>
+        <a href="/2020/08/14/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%B9%B6%E6%9F%A5%E9%9B%86/">并查集</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Linux/Deepin/Deepin15.11%E4%B8%8B%E8%93%9D%E7%89%99%E9%85%8D%E5%AF%B9%E5%92%8C%E8%BF%9E%E6%8E%A5/">
+        <a href="/2020/08/14/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%B9%B6%E6%9F%A5%E9%9B%86/">
           
           
             
           
-          首先确保 bluetooth, bluez, bluez-tools, rfkill 已经安装好，没有则在终端进行安装：
-1sudo apt install bluetooth bluez bluez-tools rfkill
-1. 查找蓝牙适配器
-1hciconfig
-对于系统识别到的每个蓝牙适配器，会显示出其相应信息：XXX:   Type:***，其中 XXX 为该蓝牙适配器的设备名。
-2.
+          1. 简介
+并查集是一种高效的数据结构，常用来解决集合的合并和查找问题，常见于图论问题中。
+2. 操作
+2.1 构建
+并查集一般构建为初始时每个节点所属的集合编号即为自己的节点编号。
+1234567// 初始化int father[MAXN];   // father[i] 即为节点 i 所属的集合编号void init(int n) &#123;    for(int i = n; i; --i
         </a>
       </p>
 
@@ -719,8 +745,8 @@ Qt5.14 for Linux 并没有提供相应的程序打包服务，所以 Linux 下�
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
+            <time datetime="2020-08-14 11:23" pubdate>
+              2020-08-14
             </time>
           </div>
         
@@ -730,9 +756,11 @@ Qt5.14 for Linux 并没有提供相应的程序打包服务，所以 Linux 下�
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/Linux/">Linux</a>
+              <a href="/categories/Technique/ACM/">ACM</a>
             
-              <a href="/categories/Technique/Linux/Deepin/">Deepin</a>
+              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/">算法</a>
+            
+              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a>
             
           </div>
         
@@ -742,9 +770,11 @@ Qt5.14 for Linux 并没有提供相应的程序打包服务，所以 Linux 下�
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Linux/">Linux</a>
+              <a href="/tags/ACM/">ACM</a>
             
-              <a href="/tags/Deepin/">Deepin</a>
+              <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
+            
+              <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a>
             
           </div>
         
@@ -758,23 +788,21 @@ Qt5.14 for Linux 并没有提供相应的程序打包服务，所以 Linux 下�
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Linux/Manjaro/Manjaro20.0%E4%B8%8B%E8%93%9D%E7%89%99%E9%85%8D%E5%AF%B9%E5%92%8C%E8%BF%9E%E6%8E%A5/">Manjaro20.0下蓝牙配对和连接</a>
+        <a href="/2020/08/14/Technique/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%B9%B6%E6%9F%A5%E9%9B%86/">并查集</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Linux/Manjaro/Manjaro20.0%E4%B8%8B%E8%93%9D%E7%89%99%E9%85%8D%E5%AF%B9%E5%92%8C%E8%BF%9E%E6%8E%A5/">
+        <a href="/2020/08/14/Technique/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%B9%B6%E6%9F%A5%E9%9B%86/">
           
           
             
           
-          首先确保 bluez, bluez-utils 已经安装好，否则在终端安装：
-1sudo pacman -S bluez bluez-utils
-1. 查看蓝牙服务状态
-1systemctl status bluetooth.service
-2. 启动蓝牙服务
-如果蓝牙服务未启动，则需手动启动蓝牙服务：
-1sudo systemctl start bluetooth.service
-3. 操控蓝牙
+          1. 简介
+并查集是一种高效的数据结构，常用来解决集合的合并和查找问题，常见于图论问题中。
+2. 操作
+2.1 构建
+并查集一般构建为初始时每个节点所属的集合编号即为自己的节点编号。
+1234567// 初始化int father[MAXN];   // father[i] 即为节点 i 所属的集合编号void init(int n) &#123;    for(int i = n; i; --i
         </a>
       </p>
 
@@ -782,8 +810,8 @@ Qt5.14 for Linux 并没有提供相应的程序打包服务，所以 Linux 下�
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
+            <time datetime="2020-08-14 11:23" pubdate>
+              2020-08-14
             </time>
           </div>
         
@@ -793,9 +821,11 @@ Qt5.14 for Linux 并没有提供相应的程序打包服务，所以 Linux 下�
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/Linux/">Linux</a>
+              <a href="/categories/Technique/ACM/">ACM</a>
             
-              <a href="/categories/Technique/Linux/Manjaro/">Manjaro</a>
+              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/">算法</a>
+            
+              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a>
             
           </div>
         
@@ -805,9 +835,11 @@ Qt5.14 for Linux 并没有提供相应的程序打包服务，所以 Linux 下�
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Linux/">Linux</a>
+              <a href="/tags/ACM/">ACM</a>
             
-              <a href="/tags/Manjaro/">Manjaro</a>
+              <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
+            
+              <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a>
             
           </div>
         
@@ -819,7 +851,7 @@ Qt5.14 for Linux 并没有提供相应的程序打包服务，所以 Linux 下�
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/page/36/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/35/#board">35</a><a class="page-number" href="/page/36/#board">36</a><span class="page-number current">37</span><a class="page-number" href="/page/38/#board">38</a><a class="page-number" href="/page/39/#board">39</a><span class="space">&hellip;</span><a class="page-number" href="/page/44/#board">44</a><a class="extend next" rel="next" href="/page/38/#board"><i class="iconfont icon-arrowright"></i></a>
+      <a class="extend prev" rel="prev" href="/page/36/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/35/#board">35</a><a class="page-number" href="/page/36/#board">36</a><span class="page-number current">37</span><a class="page-number" href="/page/38/#board">38</a><a class="page-number" href="/page/39/#board">39</a><span class="space">&hellip;</span><a class="page-number" href="/page/53/#board">53</a><a class="extend next" rel="next" href="/page/38/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 

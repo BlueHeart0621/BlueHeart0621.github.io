@@ -1,0 +1,1071 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/image/self/portrait.jpg">
+  <link rel="icon" href="/image/self/portrait.jpg">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="一个记录各种笔记的小匣子^-^">
+  <meta name="author" content="hotarugali">
+  <meta name="keywords" content="頑張れ">
+  
+    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script> <script src="/live2d-widget/autoload.js" type="text/javascript"></script> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/> <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+  
+  <title>C++内置宏定义 - お前はどこまで見えている</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"blueheart0621.github.io","root":"/","version":"1.8.9","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":"§"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/image/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":"c194cf0c8cbc33bfb846ba1329537d81","google":"G-SXJN0942X9","gtag":"G-D3DEHLLP3W","tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"A24MlA4oV7hlze3uNQiXDAIi-MdYXbMMI","app_key":"3moFK5Ao3TD4rjA1HCmPTSm6","server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>お前はどこまで見えている</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/image/covers/%E5%9B%9B%E6%9C%88%E6%98%AF%E4%BD%A0%E7%9A%84%E8%B0%8E%E8%A8%80-1.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="C++内置宏定义">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-06-04 14:53" pubdate>
+        2021年6月4日 下午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.6k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      20
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- LeanCloud 统计文章PV -->
+      <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="leancloud-page-views"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">C++内置宏定义</h1>
+            
+            <div class="markdown-body">
+              <h2 id="1-标准内置宏定义">1. 标准内置宏定义</h2>
+<p><a target="_blank" rel="noopener" href="https://gcc.gnu.org/onlinedocs/cpp/Standard-Predefined-Macros.html#Standard-Predefined-Macros">标准内置宏定义</a>是由相关的语言标准定义的，因此对于实现了这些语言标准的编译器来说都是可使用的。</p>
+<ul>
+<li><code>__FILE__</code>：字符串格式，指示当前处理的文件路径。</li>
+<li><code>__LINE__</code>：数字格式，指示当前处理的代码行号。</li>
+<li><code>#line</code>：用来修改当前行的下一行的行号，即下一行的 <code>__LINE__</code> 由 <code>#line</code> 所指定的数字开始。</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>	<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Line: %d\n&quot;</span>, __LINE__);		<span class="hljs-comment">// 5</span><br>	<span class="hljs-meta">#<span class="hljs-keyword">line</span> 100</span><br>	<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Line: %d\n&quot;</span>, __LINE__);	 	<span class="hljs-comment">// 100</span><br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>【注】<code>__FILE__</code> 和 <code>__LINE__</code> 宏主要用于错误处理，可以很方便地定位错误位置。</p>
+<ul>
+<li>C99 引入了 <code>__func__</code>，它和 GCC 提供的 <code>__FUNCTION__</code> 功能类似，二者都是字符串格式，指示当前处理的函数名。</li>
+</ul>
+<p>【注】<code>__func__</code> 和 <code>__FUNCTION__</code> 本质上都不是宏，因为预处理器并不知道当前处理的函数名。</p>
+<ul>
+<li><code>__DATE__</code>：字符串格式，指示预处理器处理当前代码时的日期。</li>
+<li><code>__TIME__</code>：字符串格式，指示预处理器处理当前代码时的时间。</li>
+<li><code>__STDC__</code>：常数格式，一般值为 <code>1</code>，用来告诉编译器遵守 ISO 标准 C 格式。</li>
+<li><code>__STDC_VERSION__</code>：常数格式，指示当前使用的 C 语言标准版本，格式为 <code>yyyymmL</code>，其中 <code>yyyy</code> 和 <code>mm</code> 分别表示年份和月份。</li>
+<li><code>__STDC_HOSTED__</code>：数字格式，<code>1</code> 表示要编译的对象是一个 Hosted Environment，否则表示不是。</li>
+</ul>
+<p>【注】一个 Hosted Environment 表示具有可用的标准 C 库的完整功能。</p>
+<ul>
+<li><code>__cplusplus</code>：当使用了 C++ 编译器时，该宏被定义。因此可以它来测试编译时使用的编译器是 C 编译器还是 C++ 编译器。当 <code>__cplusplus</code> 被定义时，其格式和 <code>__STDC_VERSION__</code> 类似，只不过指示的是 C++ 语言的标准版本号。</li>
+<li><code>__OBJC__</code>：当使用了 Objective-C 编译器时，该宏被定义。因此可以它来测试编译时使用的编译器是 C 编译器还是 Objective-C 编译器。当 <code>__OBJC__</code> 被定义时，其格式和 <code>__STDC_VERSION__</code> 类似，只不过指示的是 Objective-C 语言的标准版本号。</li>
+<li><code>__ASSEMBLER__</code>：当预处理汇编语言时，该宏被定义。</li>
+</ul>
+<h2 id="2-公共内置宏定义">2. 公共内置宏定义</h2>
+<p><a target="_blank" rel="noopener" href="https://gcc.gnu.org/onlinedocs/cpp/Common-Predefined-Macros.html#Common-Predefined-Macros">公共内置宏定义</a>是 GNU C 的扩展，只要使用了 GNU C 或者 GNU Fortran，这些宏都是可使用的。公共内置宏定义数量繁多，因此仅介绍常用的一些宏，更多可以参见官方文档：<a target="_blank" rel="noopener" href="https://gcc.gnu.org/onlinedocs/cpp/Common-Predefined-Macros.html">Common Predefined Macros</a></p>
+<ul>
+<li><code>__COUNTER__</code>：累加器，每次使用一次就递增 <code>1</code>。因此可以用来当作唯一标识符使用。</li>
+<li><code>__GNUC__</code>、<code>__GNUC_MINOR__</code>、<code>__GNUC_PATCHLEVEL__</code>：这些宏在使用了 C 预处理器的所有编译器中都定义了。它们分别指示了编译器的主版本号、次版本号和补丁版本号，均为整数常数。</li>
+<li><code>__BASE_FILE__</code>：字符串格式，指示了主文件的路径。</li>
+<li><code>__FILE_NAME__</code>：字符串格式，指示了当前文件路径的 Basename，即文件名。</li>
+<li><code>__INCLUDE_LEVEL__</code>：数字格式，指示了当前嵌套深度。从 <code>0</code> 开始，每进入一次 <code>#include</code> 指示的头文件，<code>__INCLUDE_LEVEL__</code> 增加 <code>1</code>。</li>
+<li><code>__VERSION__</code>：字符串格式，指示了编译器的版本号。</li>
+<li><code>__OPTIMIZE__</code>、<code>__OPTIMIZE_SIZE__</code>、<code>__NO_INLINE__</code>：这些宏描述了编译模式。<code>__OPTIMIZE__</code> 在所有的优化编译中都定义了，比如 <code>O1</code>、<code>O2</code> 等优化模式下；当编译器优化文件大小而不是运行速度时，<code>__OPTIMIZE_SIZE__</code> 被定义；当编译器内联展开被禁止时，<code>__NO_INLINE__</code> 被定义。</li>
+<li><code>__CHAR_UNSIGNED__</code>、<code>__WCHAR_UNSIGNED__</code>：GCC 定义了宏 <code>__CHAR_UNSIGNED__</code>、<code>__WCHAR_UNSIGNED__</code> 当且仅当数据类型 <code>char</code> 或 <code>wchat_t</code> 在目标主机上是无符号类型。</li>
+<li><code>__CHAR_BIT__</code>：数字格式，表示一个 <code>char</code> 数据类型占用多少 bit。</li>
+<li><code>__BYTE_ORDER__</code>、<code>__ORDER_LITTLE_ENDIAN__</code>、<code>__ORDER_BIG_ENDIAN__</code>、<code>__ORDER_PDP_ENDIAN__</code>：<code>__BYTE_ORDER__</code> 取值只能是 <code>__ORDER_LITTLE_ENDIAN__</code>、<code>__ORDER_BIG_ENDIAN__</code>、<code>__ORDER_PDP_ENDIAN__</code> 中的一种。表示多字节/字数据的存储模式，<code>__ORDER_LITTLE_ENDIAN__</code>、<code>__ORDER_BIG_ENDIAN__</code> 即大小端模式，而 <code>__ORDER_PDP_ENDIAN__</code> 表示对于 16 位的字按照小端模式存储，对于 32 位双字中的 16 位子字是按照大端模式存储的。</li>
+<li><code>__FLOAT_WORD_ORDER__</code>：表示浮点双字的存储模式，其值只能取 <code>__ORDER_LITTLE_ENDIAN__</code> 和 <code>__ORDER_BIG_ENDIAN__</code> 中的一种。</li>
+</ul>
+<p>GCC 定义了一批和数据类型对应的宏，如下表所示：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">数据类型</th>
+<th style="text-align:left">数据类型宏</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>size_t</code></td>
+<td style="text-align:left"><code>__SIZE_TYPE__</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>ptrdiff_t</code></td>
+<td style="text-align:left"><code>__PTRDIFF_TYPE__</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>wchar_t</code></td>
+<td style="text-align:left"><code>__WCHAR_TYPE__</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>wint_t</code></td>
+<td style="text-align:left"><code>__WINT_TYPE__</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>intmax_t</code></td>
+<td style="text-align:left"><code>__INTMAX_TYPE__</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>uintmax_t</code></td>
+<td style="text-align:left"><code>__UINTMAX_TYPE__</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>sig_atomic_t</code></td>
+<td style="text-align:left"><code>__SIG_ATOMIC_TYPE__</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>int8_t</code></td>
+<td style="text-align:left"><code>__INT8_TYPE__</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>int16_t</code></td>
+<td style="text-align:left"><code>__INT16_TYPE__</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>int32_t</code></td>
+<td style="text-align:left"><code>__INT32_TYPE__</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>int64_t</code></td>
+<td style="text-align:left"><code>__INT64_TYPE__</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>uint8_t</code></td>
+<td style="text-align:left"><code>__UINT8_TYPE__</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>uint16_t</code></td>
+<td style="text-align:left"><code>__UINT16_TYPE__</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>uint32_t</code></td>
+<td style="text-align:left"><code>__UINT32_TYPE__</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>uint64_t</code></td>
+<td style="text-align:left"><code>__UINT64_TYPE__</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>int_least8_t</code></td>
+<td style="text-align:left"><code>__INT_LEAST8_TYPE__</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>int_least16_t</code></td>
+<td style="text-align:left"><code>__INT_LEAST16_TYPE__</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>int_least32_t</code></td>
+<td style="text-align:left"><code>__INT_LEAST32_TYPE__</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>int_least64_t</code></td>
+<td style="text-align:left"><code>__INT_LEAST64_TYPE__</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>uint_least8_t</code></td>
+<td style="text-align:left"><code>__UINT_LEAST8_TYPE__</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>uint_least16_t</code></td>
+<td style="text-align:left"><code>__UINT_LEAST16_TYPE__</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>uint_least32_t</code></td>
+<td style="text-align:left"><code>__UINT_LEAST32_TYPE__</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>uint_least64_t</code></td>
+<td style="text-align:left"><code>__UINT_LEAST64_TYPE__</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>int_fast8_t</code></td>
+<td style="text-align:left"><code>__INT_FAST8_TYPE__</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>int_fast16_t</code></td>
+<td style="text-align:left"><code>__INT_FAST16_TYPE__</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>int_fast32_t</code></td>
+<td style="text-align:left"><code>__INT_FAST32_TYPE__</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>int_fast64_t</code></td>
+<td style="text-align:left"><code>__INT_FAST64_TYPE__</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>uint_fast8_t</code></td>
+<td style="text-align:left"><code>__UINT_FAST8_TYPE__</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>uint_fast16_t</code></td>
+<td style="text-align:left"><code>__UINT_FAST16_TYPE__</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>uint_fast32_t</code></td>
+<td style="text-align:left"><code>__UINT_FAST32_TYPE__</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>uint_fast64_t</code></td>
+<td style="text-align:left"><code>__UINT_FAST64_TYPE__</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>intptr_t</code></td>
+<td style="text-align:left"><code>__INTPTR_TYPE__</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>uintptr_t</code></td>
+<td style="text-align:left"><code>__UINTPTR_TYPE__</code></td>
+</tr>
+</tbody>
+</table>
+<p>GCC 定义了一批表示数据类型最大/小值的宏，如下表所示：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">数据类型</th>
+<th style="text-align:left">数据类型最大值宏</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>signed char</code></td>
+<td style="text-align:left"><code>__SCHAR_MAX__</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>wchar_t</code></td>
+<td style="text-align:left"><code>__WCHAR_MAX__</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>signed short</code></td>
+<td style="text-align:left"><code>__SHRT_MAX__</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>signed int</code></td>
+<td style="text-align:left"><code>__INT_MAX__</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>signed long</code></td>
+<td style="text-align:left"><code>__LONG_MAX__</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>signed long long</code></td>
+<td style="text-align:left"><code>__LONG_LONG_MAX__</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>wint_t</code></td>
+<td style="text-align:left"><code>__WINT_MAX__</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>size_t</code></td>
+<td style="text-align:left"><code>__SIZE_MAX__</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>ptrdiff_t</code></td>
+<td style="text-align:left"><code>__PTRDIFF_MAX__</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>intmax_t</code></td>
+<td style="text-align:left"><code>__INTMAX_MAX__</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>uintmax_t</code></td>
+<td style="text-align:left"><code>__UINTMAX_MAX__</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>sig_atomic_t</code></td>
+<td style="text-align:left"><code>__SIG_ATOMIC_MAX__</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>int8_t</code></td>
+<td style="text-align:left"><code>__INT8_MAX__</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>int16_t</code></td>
+<td style="text-align:left"><code>__INT16_MAX__</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>int32_t</code></td>
+<td style="text-align:left"><code>__INT32_MAX__</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>int64_t</code></td>
+<td style="text-align:left"><code>__INT64_MAX__</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>uint8_t</code></td>
+<td style="text-align:left"><code>__UINT8_MAX__</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>uint16_t</code></td>
+<td style="text-align:left"><code>__UINT16_MAX__</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>uint32_t</code></td>
+<td style="text-align:left"><code>__UINT32_MAX__</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>uint64_t</code></td>
+<td style="text-align:left"><code>__UINT64_MAX__</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>int_least8_t</code></td>
+<td style="text-align:left"><code>__INT_LEAST8_MAX__</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>int_least16_t</code></td>
+<td style="text-align:left"><code>__INT_LEAST16_MAX__</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>int_least32_t</code></td>
+<td style="text-align:left"><code>__INT_LEAST32_MAX__</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>int_least64_t</code></td>
+<td style="text-align:left"><code>__INT_LEAST64_MAX__</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>uint_least8_t</code></td>
+<td style="text-align:left"><code>__UINT_LEAST8_MAX__</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>uint_least16_t</code></td>
+<td style="text-align:left"><code>__UINT_LEAST16_MAX__</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>uint_least32_t</code></td>
+<td style="text-align:left"><code>__UINT_LEAST32_MAX__</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>uint_least64_t</code></td>
+<td style="text-align:left"><code>__UINT_LEAST64_MAX__</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>int_fast8_t</code></td>
+<td style="text-align:left"><code>__INT_FAST8_MAX__</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>int_fast16_t</code></td>
+<td style="text-align:left"><code>__INT_FAST16_MAX__</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>int_fast32_t</code></td>
+<td style="text-align:left"><code>__INT_FAST32_MAX__</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>int_fast64_t</code></td>
+<td style="text-align:left"><code>__INT_FAST64_MAX__</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>uint_fast8_t</code></td>
+<td style="text-align:left"><code>__UINT_FAST8_MAX__</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>uint_fast16_t</code></td>
+<td style="text-align:left"><code>__UINT_FAST16_MAX__</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>uint_fast32_t</code></td>
+<td style="text-align:left"><code>__UINT_FAST32_MAX__</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>uint_fast64_t</code></td>
+<td style="text-align:left"><code>__UINT_FAST64_MAX__</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>intptr_t</code></td>
+<td style="text-align:left"><code>__INTPTR_MAX__</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>uintptr_t</code></td>
+<td style="text-align:left"><code>__UINTPTR_MAX__</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>wchar_t</code></td>
+<td style="text-align:left"><code>__WCHAR_MIN__</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>wint_t</code></td>
+<td style="text-align:left"><code>__WINT_MIN__</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>sig_atomic_t</code></td>
+<td style="text-align:left"><code>__SIG_ATOMIC_MIN__</code></td>
+</tr>
+</tbody>
+</table>
+<p>GCC 还定义了一批表示数据类型占用字节数的宏，如下表所示：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">数据类型</th>
+<th style="text-align:left">数据类型占用字节数宏</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>int</code></td>
+<td style="text-align:left"><code>__SIZEOF_INT__</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>long</code></td>
+<td style="text-align:left"><code>__SIZEOF_LONG__</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>long long</code></td>
+<td style="text-align:left"><code>__SIZEOF_LONG_LONG__</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>short</code></td>
+<td style="text-align:left"><code>__SIZEOF_SHORT__</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>void *</code></td>
+<td style="text-align:left"><code>__SIZEOF_POINTER__</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>float</code></td>
+<td style="text-align:left"><code>__SIZEOF_FLOAT__</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>double</code></td>
+<td style="text-align:left"><code>__SIZEOF_DOUBLE__</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>long double</code></td>
+<td style="text-align:left"><code>__SIZEOF_LONG_DOUBLE__</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>size_t</code></td>
+<td style="text-align:left"><code>__SIZEOF_SIZE_T__</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>wchar_t</code></td>
+<td style="text-align:left"><code>__SIZEOF_WCHAR_T__</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>wint_t</code></td>
+<td style="text-align:left"><code>__SIZEOF_WINT_T__</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>ptrdiff_t</code></td>
+<td style="text-align:left"><code>__SIZEOF_PTRDIFF_T__</code></td>
+</tr>
+</tbody>
+</table>
+<p>【注】在某些特定系统上，GCC 如果没有提供 <code>stdint.h</code> 头文件，则上表中的某些数据类型对应的宏可能就未被定义。</p>
+<h3 id="2-1-查看-GCC-所有内置宏定义">2.1 查看 GCC 所有内置宏定义</h3>
+<p>如果想要查看当前系统下的 GCC 所有内置宏定义，可以使用以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">gcc -dM -E - &lt; /dev/null<br></code></pre></td></tr></table></figure>
+<h3 id="2-2-查看-G-所有内置宏定义">2.2 查看 G++ 所有内置宏定义</h3>
+<p>如果想要查看当前系统下的 G++ 所有内置宏定义，可以使用以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">g++ -dM -E -x c++ - &lt; /dev/null<br></code></pre></td></tr></table></figure>
+<h2 id="3-系统内置宏定义">3. 系统内置宏定义</h2>
+<p>对于某些特定系统本身内置的一些宏，GCC 提供和其等价的宏，等价宏的命名在原有宏名称基础上，首尾加上一个或多个下划线，保证首尾下划线数均为 2。比如 Unix 系统的 <code>unix</code> 宏，则 GCC 提供 <code>__unix__</code> 宏；而对于 <code>_mpis</code> 宏，则 GCC 提供 <code>__mips__</code> 宏。</p>
+<h2 id="4-内置操作符宏定义">4. 内置操作符宏定义</h2>
+<p>C++ 定义了 11 个操作符宏，如下表所示：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">操作符</th>
+<th style="text-align:left">操作符宏</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>&amp;&amp;</code></td>
+<td style="text-align:left"><code>and</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&amp;=</code></td>
+<td style="text-align:left"><code>and_eq</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&amp;</code></td>
+<td style="text-align:left"><code>bitand</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>|</code></td>
+<td style="text-align:left"><code>bitor</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>~</code></td>
+<td style="text-align:left"><code>compl</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>!</code></td>
+<td style="text-align:left"><code>not</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>!=</code></td>
+<td style="text-align:left"><code>not_eq</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>||</code></td>
+<td style="text-align:left"><code>or</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>|=</code></td>
+<td style="text-align:left"><code>or_eq</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>^</code></td>
+<td style="text-align:left"><code>xor</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>^=</code></td>
+<td style="text-align:left"><code>xor_eq</code></td>
+</tr>
+</tbody>
+</table>
+<p>如果想要在 C 语言中使用 C++ 中定义的这 11 个操作符宏，可以引入 <code>iso646.h</code> 头文件。</p>
+<h2 id="附录">附录</h2>
+<p>参考资料：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/nyist_zxp/article/details/107890791">C/C++ 宏定义 __FILE__、__LINE__、__func__、__TIME__ 等</a></li>
+<li><a target="_blank" rel="noopener" href="https://gcc.gnu.org/onlinedocs/cpp/Predefined-Macros.html">Predefined Macros</a></li>
+<li><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/2224334/gcc-dump-preprocessor-defines">GCC dump preprocessor defines</a></li>
+</ul>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/Technique/">Technique</a>
+                    
+                      <a class="hover-with-bg" href="/categories/Technique/C/">C++</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Technique/">Technique</a>
+                    
+                      <a class="hover-with-bg" href="/tags/C/">C++</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2021/06/04/Technique/C++/C%E8%AF%AD%E8%A8%80%E5%90%84%E7%89%88%E6%9C%AC%E5%AF%B9%E6%AF%94/C%E8%AF%AD%E8%A8%80%E5%90%84%E7%89%88%E6%9C%AC%E5%AF%B9%E6%AF%94/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">C语言各版本对比</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/06/02/Technique/Linux/Manjaro/Manjaro21.0%E4%B8%8BMAC%E5%9C%B0%E5%9D%80%E9%9A%8F%E6%9C%BA%E5%8C%96/">
+                        <span class="hidden-mobile">Manjaro21.0下MAC地址随机化</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="waline"></div>
+  <script type="text/javascript">
+    Fluid.utils.lazyComments('waline', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js', function () {
+        new Waline({
+          el: "#waline",
+          placeholder: "都看到这里了，留个脚印再走呗~",
+          path: window.location.pathname,
+          avatar: "retro",
+          visitor: true,
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: true,
+          serverURL: "https://waline-one-beta.vercel.app/",
+          avatarCDN: "https://gravatar.loli.net/avatar/",
+          avatarForce: false,
+          requiredMeta: [],
+          emoji: ["https://cdn.jsdelivr.net/gh/hotarugali/Emoji@bilibili_tv_gif/waline/bilibili_tv_gif","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@bilibiliHotKey/waline/bilibiliHotKey","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@bilibili2233/waline/bilibili2233","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@smallshake/waline/smallshake","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@alu/waline/alu","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@QQ/waline/QQ","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@Tieba-New/waline/Tieba-New","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@weibo/waline/weibo"],
+          // emojiMaps: ,
+          login: "enable",
+          dark: 'html[data-user-color-scheme="dark"]',
+        });
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the
+    <a target="_blank" href="https://waline.js.org" rel="nofollow noopener noopener">comments powered by Waline.</a>
+  </noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+      <div class="col-lg-7 mx-auto nopadding-x-md">
+        <div class="container custom mx-auto">
+          <script src="https://myhkw.cn/api/player/161389264877" id="myhk" key="161389264877" m="1"></script>
+        </div>
+      </div>
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+
+  <script defer src="/js/leancloud.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- KaTeX -->
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" />
+  
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/mermaid@8.8.3/dist/mermaid.min.js" ></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({"theme":"default"});
+    }
+  </script>
+
+
+
+
+  
+    <!-- Baidu Analytics -->
+    <script defer>
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?c194cf0c8cbc33bfb846ba1329537d81";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  
+    <!-- Google Analytics -->
+    <script defer>
+      window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) };
+      ga.l = +new Date;
+      ga('create', 'G-SXJN0942X9', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+  
+
+  
+    <!-- Google gtag.js -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D3DEHLLP3W"></script>
+    <script defer>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-D3DEHLLP3W');
+    </script>
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

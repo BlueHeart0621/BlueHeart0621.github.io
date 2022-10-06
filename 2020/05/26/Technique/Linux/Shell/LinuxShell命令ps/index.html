@@ -1,0 +1,1507 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/image/self/portrait.jpg">
+  <link rel="icon" href="/image/self/portrait.jpg">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="一个记录各种笔记的小匣子^-^">
+  <meta name="author" content="hotarugali">
+  <meta name="keywords" content="頑張れ">
+  
+    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script> <script src="/live2d-widget/autoload.js" type="text/javascript"></script> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/> <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+  
+  <title>LinuxShell命令ps - お前はどこまで見えている</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"blueheart0621.github.io","root":"/","version":"1.8.9","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":"§"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/image/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":"c194cf0c8cbc33bfb846ba1329537d81","google":"G-SXJN0942X9","gtag":"G-D3DEHLLP3W","tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"A24MlA4oV7hlze3uNQiXDAIi-MdYXbMMI","app_key":"3moFK5Ao3TD4rjA1HCmPTSm6","server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>お前はどこまで見えている</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/image/covers/%E5%9B%9B%E6%9C%88%E6%98%AF%E4%BD%A0%E7%9A%84%E8%B0%8E%E8%A8%80-1.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="LinuxShell命令ps">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2020-05-26 10:44" pubdate>
+        2020年5月26日 上午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      3.2k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      40
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- LeanCloud 统计文章PV -->
+      <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="leancloud-page-views"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">LinuxShell命令ps</h1>
+            
+            <div class="markdown-body">
+              <p>【注】具体详解参见 man 手册。</p>
+<h2 id="1-简介">1. 简介</h2>
+<p><code>ps</code> 是 Linux 下显示瞬间进程状态的强大命令，并不动态连续显示进程状态（<code>top</code> 命令则是对进程进行实时监控）。</p>
+<h2 id="2-格式">2. 格式</h2>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ps [options]<br></code></pre></td></tr></table></figure>
+<p>Linux 系统中使用 <code>ps</code> 命令支持三种不同类型的命令行选项参数：</p>
+<ul>
+<li>Unix 风格参数（参数前使用单破折线）</li>
+<li>BSD 风格参数（参数前不使用破折线）</li>
+<li>GNU 风格长参数（参数前加双破折线）</li>
+</ul>
+<h2 id="3-选项">3. 选项</h2>
+<ul>
+<li>
+<p>默认情况下（不提供选项参数：<code>ps</code>），只显示运行在当前控制台下属于当前用户的进程。</p>
+</li>
+<li>
+<p>在使用 BSD 参数时，<code>ps</code> 命令会自动改变输出以模仿 BSD 格式。</p>
+</li>
+</ul>
+<h3 id="3-1-Unix-风格">3.1 Unix 风格</h3>
+<ul>
+<li>选项参数</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">选项参数</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>-A</code></td>
+<td style="text-align:left">显示所有进程，同 <code>-e</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>-N</code></td>
+<td style="text-align:left">显示与指定参数不符的所有进程（默认显示除当前终端下的程序外所有程序），同 <code>--deselect</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>-a</code></td>
+<td style="text-align:left">显示除控制进程和无终端进程外的所有进程</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>-d</code></td>
+<td style="text-align:left">显示除控制进程外的所有进程</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>-e</code></td>
+<td style="text-align:left">显示所有进程，同 <code>-A</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>-C cmdlist</code></td>
+<td style="text-align:left">显示包含在 <code>cmdlist</code> 列表中的进程</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>-G grplist</code></td>
+<td style="text-align:left">显示组 ID 包含在 <code>grplist</code> 列表中的进程</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>-U userlist</code></td>
+<td style="text-align:left">显示属主用户 ID 包含在 <code>userlist</code> 列表中的进程，同 <code>--User</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>-g grplist</code></td>
+<td style="text-align:left">显示会话或组 ID 在 <code>grplist</code> 列表中的进程（到底是会话 ID 还是有有效组 ID 取决与具体 Linux 发行版）</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>-p pidlist</code></td>
+<td style="text-align:left">显示 PID 在 <code>pidlist</code> 列表中的进程，同 <code>p</code> 和 <code>--pid</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>-s sesslist</code></td>
+<td style="text-align:left">显示会话 ID 在 <code>sesslist</code> 列表中的进程</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>-t ttylist</code></td>
+<td style="text-align:left">显示终端 ID 在 <code>ttylist</code> 列表中的进程，同 <code>t</code> 和 <code>--tty</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>-u userlist</code></td>
+<td style="text-align:left">显示有效用户 ID 在 <code>userlist</code> 列表中的进程，同 <code>U</code> 和 <code>--user</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>-F</code></td>
+<td style="text-align:left">显示更多额外输出（相较于 <code>-f</code> 参数）</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>-O format</code></td>
+<td style="text-align:left">显示默认的输出列以及 <code>format</code> 列表指定的特定列</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>-M</code></td>
+<td style="text-align:left">显示进程的安全信息</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>-c</code></td>
+<td style="text-align:left">显示进程的额外调度信息</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>-f</code></td>
+<td style="text-align:left">显示完整格式的输出</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>-j</code></td>
+<td style="text-align:left">显示任务信息</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>-l</code></td>
+<td style="text-align:left">显示长列表</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>-o format</code></td>
+<td style="text-align:left">仅显示由 <code>format</code> 指定的列，同 <code>o</code> 和 <code>--format</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>-y</code></td>
+<td style="text-align:left">不显示进程标记（process flag，表明进程状态）</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>-Z</code></td>
+<td style="text-align:left">显示安全标签（security context/label）信息</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>-H</code></td>
+<td style="text-align:left">用层级格式（树状格式，表明进程间的父子关系）来显示进程</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>-n namelist</code></td>
+<td style="text-align:left">设定名称列表文件路径（有些 Linux 发行版不支持）</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>-w</code></td>
+<td style="text-align:left">采用宽输出模式，不限宽度显示</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>-L</code></td>
+<td style="text-align:left">显示进程中的线程</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>-V</code></td>
+<td style="text-align:left">显示 <code>ps</code> 命令的版本号</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Unix 风格为进程单字符状态码（输出为 S 列）</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">状态符号</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>R（TASK_RUNNING）</code></td>
+<td style="text-align:left">正在运行或在运行队列中准备执行</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>S（TASK_INTERRUPTIBLE）</code></td>
+<td style="text-align:left">可中断睡眠状态，因等待某事件发生而被挂起</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>D（TASK_UNINTERRUPTIBEL）</code></td>
+<td style="text-align:left">不可中断（不响应异步信号，而不是不响应外部硬件中断）睡眠状态</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>I</code></td>
+<td style="text-align:left">空闲内核线程</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>T（TASK_STOPPED or TASK_TRACED）</code></td>
+<td style="text-align:left">暂停状态或跟踪状态（被作业控制信号暂停）</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>t</code></td>
+<td style="text-align:left">跟踪暂停状态（在跟踪调试过程中被调试器暂停）</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>Z（EXIT_ZOMBIE）</code></td>
+<td style="text-align:left">僵尸进程</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>X（EXIT_DEAD）</code></td>
+<td style="text-align:left">退出状态，进程即将被销毁</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>W</code></td>
+<td style="text-align:left">进程处于换页状态</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>举例</li>
+</ul>
+<p>显示控制程序和无终端程序：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ps -Na<br></code></pre></td></tr></table></figure>
+<p>本人终端显示结果如下：</p>
+<figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs dos">PID   TTY         <span class="hljs-built_in">TIME</span>      <span class="hljs-built_in">CMD</span><br><span class="hljs-number">1</span>      ?        <span class="hljs-number">00</span>:<span class="hljs-number">00</span>:<span class="hljs-number">02</span>   systemd<br><span class="hljs-number">2</span>      ?        <span class="hljs-number">00</span>:<span class="hljs-number">00</span>:<span class="hljs-number">00</span>   kthreadd<br><span class="hljs-number">4</span>      ?        <span class="hljs-number">00</span>:<span class="hljs-number">00</span>:<span class="hljs-number">00</span>   kworker/<span class="hljs-number">0</span>:<span class="hljs-number">0</span>H<br><span class="hljs-number">6</span>      ?        <span class="hljs-number">00</span>:<span class="hljs-number">00</span>:<span class="hljs-number">00</span>   mm_percpu_wq<br><span class="hljs-number">7</span>      ?        <span class="hljs-number">00</span>:<span class="hljs-number">00</span>:<span class="hljs-number">00</span>   ksoftirqd/<span class="hljs-number">0</span><br>......<br></code></pre></td></tr></table></figure>
+<h3 id="3-2-BSD-风格">3.2  BSD 风格</h3>
+<ul>
+<li>选项参数</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">选项参数</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>T</code></td>
+<td style="text-align:left">显示跟当前终端关联的所有进程，同不带参数的 <code>t</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>a</code></td>
+<td style="text-align:left">显示跟任意终端关联的所有进程</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>g</code></td>
+<td style="text-align:left">显示所有进程（包括控制进程）</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>r</code></td>
+<td style="text-align:left">仅显示运行中的进程</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>x</code></td>
+<td style="text-align:left">显示当前用户的所有进程，甚至包括未分配任何终端的进程（若和 <code>a</code> 连用则显示系统所有进程）</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>U userlist</code></td>
+<td style="text-align:left">显示属主用户 ID 包含在 <code>userlist</code> 列表中的进程</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>p pidlist</code></td>
+<td style="text-align:left">显示 PID 在 <code>pidlist</code> 列表中的进程</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>t ttylist</code></td>
+<td style="text-align:left">显示终端 ID 在 <code>ttylist</code> 列表中的进程</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>O format</code></td>
+<td style="text-align:left">显示默认的输出列以及 <code>format</code> 列表指定的特定列，同 <code>-O</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>X</code></td>
+<td style="text-align:left">按过去的 Linux i386 寄存器格式显示</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>Z</code></td>
+<td style="text-align:left">将安全信息添加到输出中</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>j</code></td>
+<td style="text-align:left">显示任务信息</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>l</code></td>
+<td style="text-align:left">显示长列表</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>o format</code></td>
+<td style="text-align:left">仅显示由 <code>format</code> 指定的列</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>s</code></td>
+<td style="text-align:left">采用信号格式显示</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>u</code></td>
+<td style="text-align:left">采用基于用户的格式显示</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>v</code></td>
+<td style="text-align:left">采用虚拟内存格式显示</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>N namelist</code></td>
+<td style="text-align:left">设定名称列表文件路径（有些 Linux 发行版不支持）</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>O order</code></td>
+<td style="text-align:left">定义显示信息列的顺序，即指定输出信息排序规则（<code>-O</code> 没有此用法）</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>S</code></td>
+<td style="text-align:left">将数值信息从子进程加到父进程上（比如 CPU 和内存使用情况）</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>c</code></td>
+<td style="text-align:left">显示真实的命令名称（用以启动进程的程序名称）</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>e</code></td>
+<td style="text-align:left">显示命令使用的环境变量</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>f</code></td>
+<td style="text-align:left">用分层格式来显示进程（显示父子进程关系）</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>h</code></td>
+<td style="text-align:left">不显示头信息</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>k spec</code></td>
+<td style="text-align:left">指定用以将输出排序的列，同 <code>--sort</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>n</code></td>
+<td style="text-align:left">用数值显示 WCHAN 和 USER 列</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>w</code></td>
+<td style="text-align:left">采用宽输出模式，不限宽度显示</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>H</code></td>
+<td style="text-align:left">将线程按进程来显示</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>m</code></td>
+<td style="text-align:left">在进程后显示线程</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>L</code></td>
+<td style="text-align:left">列出所有格式指示符（第一列用于 <code>[-]o/O</code> 后的 <code>format</code> 格式，第二列为输出对应显示的列名）</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>V</code></td>
+<td style="text-align:left">显示 <code>ps</code> 命令版本号</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>BSD 风格为进程多字符状态码（输出为 STAT 列）：第一个状态码同 Unix 风格显示进程状态，其余字符进一步说明进程的状态。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">状态符号</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>&lt;</code></td>
+<td style="text-align:left">表明该进程运行在高优先级上</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>N</code></td>
+<td style="text-align:left">表明该进程运行在低优先级上</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>L</code></td>
+<td style="text-align:left">表明该进程有页面锁定在内存中</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>s</code></td>
+<td style="text-align:left">表明该进程是控制进程</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>l</code></td>
+<td style="text-align:left">表明该进程是多线程的</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>+</code></td>
+<td style="text-align:left">表明改进程运行在前台</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>举例</li>
+</ul>
+<p>按照父进程 ID 排序显示进程信息：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ps k ppid O ppid<br></code></pre></td></tr></table></figure>
+<p>本人终端显示结果如下：</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs apache">  <span class="hljs-attribute">PID</span>  PPID S TTY          TIME COMMAND<br> <span class="hljs-attribute">3088</span>  <span class="hljs-number">3080</span> S pts/<span class="hljs-number">0</span>    <span class="hljs-number">00</span>:<span class="hljs-number">00</span>:<span class="hljs-number">00</span> bash<br> <span class="hljs-attribute">7869</span>  <span class="hljs-number">3080</span> S pts/<span class="hljs-number">1</span>    <span class="hljs-number">00</span>:<span class="hljs-number">00</span>:<span class="hljs-number">00</span> bash<br><span class="hljs-attribute">10317</span>  <span class="hljs-number">3080</span> S pts/<span class="hljs-number">2</span>    <span class="hljs-number">00</span>:<span class="hljs-number">00</span>:<span class="hljs-number">00</span> bash<br><span class="hljs-attribute">12429</span>  <span class="hljs-number">3080</span> S pts/<span class="hljs-number">4</span>    <span class="hljs-number">00</span>:<span class="hljs-number">00</span>:<span class="hljs-number">00</span> bash<br><span class="hljs-attribute">22354</span>  <span class="hljs-number">3080</span> S pts/<span class="hljs-number">6</span>    <span class="hljs-number">00</span>:<span class="hljs-number">00</span>:<span class="hljs-number">00</span> bash<br><span class="hljs-attribute">27861</span>  <span class="hljs-number">3080</span> S pts/<span class="hljs-number">3</span>    <span class="hljs-number">00</span>:<span class="hljs-number">00</span>:<span class="hljs-number">00</span> bash<br><span class="hljs-attribute">21532</span> <span class="hljs-number">10317</span> S pts/<span class="hljs-number">2</span>    <span class="hljs-number">00</span>:<span class="hljs-number">00</span>:<span class="hljs-number">00</span> man<br><span class="hljs-attribute">16770</span> <span class="hljs-number">12429</span> R pts/<span class="hljs-number">4</span>    <span class="hljs-number">00</span>:<span class="hljs-number">00</span>:<span class="hljs-number">00</span> ps<br><span class="hljs-attribute">21542</span> <span class="hljs-number">21532</span> S pts/<span class="hljs-number">2</span>    <span class="hljs-number">00</span>:<span class="hljs-number">00</span>:<span class="hljs-number">00</span> pager<br><span class="hljs-attribute">27888</span> <span class="hljs-number">27861</span> S pts/<span class="hljs-number">3</span>    <span class="hljs-number">00</span>:<span class="hljs-number">00</span>:<span class="hljs-number">00</span> man<br><span class="hljs-attribute">27898</span> <span class="hljs-number">27888</span> S pts/<span class="hljs-number">3</span>    <span class="hljs-number">00</span>:<span class="hljs-number">00</span>:<span class="hljs-number">00</span> pager<br></code></pre></td></tr></table></figure>
+<h3 id="3-3-GNU-长参数风格">3.3 GNU 长参数风格</h3>
+<ul>
+<li>选项参数</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">选项参数</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>--deselect</code></td>
+<td style="text-align:left">显示与指定参数不符的所有进程（默认显示除当前终端下的程序外所有程序），同 <code>-N</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>--Group grplist</code></td>
+<td style="text-align:left">显示组 ID 在 <code>grplist</code> 列表中的进程</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>--User userlist</code></td>
+<td style="text-align:left">显示用户 ID 在 <code>userlist</code> 列表中的进程</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>--group grplist</code></td>
+<td style="text-align:left">显示有效组 ID 在 <code>grplist</code> 列表中的进程</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>--pid pidlist</code></td>
+<td style="text-align:left">显示 PID 在 <code>pidlist</code> 列表中的进程</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>--ppid pidlist</code></td>
+<td style="text-align:left">显示父 PID 在 <code>pidlist</code> 列表中的进程</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>--sid sidlist</code></td>
+<td style="text-align:left">显示会话 ID 在 <code>sidlist</code> 列表中的进程</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>--tty ttylist</code></td>
+<td style="text-align:left">显示终端设备号在 <code>ttylist</code> 列表中的进程</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>--user userlist</code></td>
+<td style="text-align:left">显示有效用户 ID 在 <code>userlist</code> 列表中的进程</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>--format format</code></td>
+<td style="text-align:left">仅显示由 <code>format</code> 指定的列</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>--context</code></td>
+<td style="text-align:left">显示额外的安全信息</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>--cols/columns n</code></td>
+<td style="text-align:left">将屏幕宽度设置为 <code>n</code> 列</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>--cumulative</code></td>
+<td style="text-align:left">包含已停止的子进程的信息</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>--forest</code></td>
+<td style="text-align:left">用层级结构显示出进程和父进程之间的关系</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>--headers</code></td>
+<td style="text-align:left">在每页输出中都显示列的头</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>--no-headers</code></td>
+<td style="text-align:left">不显示列的头</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>--lines n</code></td>
+<td style="text-align:left">将屏幕高度设为 <code>n</code> 行</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>--rows n</code></td>
+<td style="text-align:left">将屏幕高度设为 <code>n</code> 排</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>--sort spec</code></td>
+<td style="text-align:left">指定将输出按哪列排序</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>--width n</code></td>
+<td style="text-align:left">将屏幕宽度设为 <code>n</code> 列</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>--help</code></td>
+<td style="text-align:left">显示帮助信息</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>--info</code></td>
+<td style="text-align:left">显示调试信息</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>--version</code></td>
+<td style="text-align:left">显示 <code>ps</code> 命令的版本号</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>举例</li>
+</ul>
+<p>按照父进程 ID 排序显示进程信息：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ps --<span class="hljs-built_in">sort</span> ppid --format pid,ppid,<span class="hljs-built_in">tty</span>,cmd<br></code></pre></td></tr></table></figure>
+<p>本人终端显示结果如下：</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs apache">  <span class="hljs-attribute">PID</span>  PPID TT       CMD<br><span class="hljs-attribute">12429</span>  <span class="hljs-number">3080</span> pts/<span class="hljs-number">4</span>    bash<br><span class="hljs-attribute">18446</span> <span class="hljs-number">12429</span> pts/<span class="hljs-number">4</span>    ps --sort ppid --format pid,ppid,tty,cmd<br></code></pre></td></tr></table></figure>
+<h2 id="4-详解">4. 详解</h2>
+<h3 id="4-1-BSD-风格-O-order-参数">4.1 BSD 风格 O order 参数</h3>
+<ul>
+<li>格式</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">O[+|-]key1[,[+|-]key2[,...]]<br></code></pre></td></tr></table></figure>
+<p>其中，<code>+</code> 表示顺序，<code>-</code> 表示逆序。</p>
+<ul>
+<li>key 值表</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">key</th>
+<th style="text-align:left">全称</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>c</code></td>
+<td style="text-align:left">cmd</td>
+<td style="text-align:left">进程启动的程序名称</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>C</code></td>
+<td style="text-align:left">pcpu</td>
+<td style="text-align:left">CPU 利用率</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>f</code></td>
+<td style="text-align:left">flags</td>
+<td style="text-align:left">长列表格式中的 F 列</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>g</code></td>
+<td style="text-align:left">pgrp</td>
+<td style="text-align:left">进程组 ID</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>G</code></td>
+<td style="text-align:left">tpgid</td>
+<td style="text-align:left">tty进程组ID（为连接到 tty 则为 -1）</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>j</code></td>
+<td style="text-align:left">cutime</td>
+<td style="text-align:left">累计用户时间</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>J</code></td>
+<td style="text-align:left">cstime</td>
+<td style="text-align:left">累计系统时间</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>k</code></td>
+<td style="text-align:left">utime</td>
+<td style="text-align:left">用户时间</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>m</code></td>
+<td style="text-align:left">min_flt</td>
+<td style="text-align:left">次要页错误数</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>M</code></td>
+<td style="text-align:left">maj_flt</td>
+<td style="text-align:left">主要页错误数</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>n</code></td>
+<td style="text-align:left">cmin_flt</td>
+<td style="text-align:left">累计次要页错误数</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>N</code></td>
+<td style="text-align:left">cmaj_flt</td>
+<td style="text-align:left">累计主要页错误数</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>o</code></td>
+<td style="text-align:left">session</td>
+<td style="text-align:left">会话 ID</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>p</code></td>
+<td style="text-align:left">pid</td>
+<td style="text-align:left">进程 ID</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>P</code></td>
+<td style="text-align:left">ppid</td>
+<td style="text-align:left">父进程 ID</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>r</code></td>
+<td style="text-align:left">rss</td>
+<td style="text-align:left">进程驻留内存占用空间大小</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>R</code></td>
+<td style="text-align:left">resident</td>
+<td style="text-align:left">驻留内存页</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>s</code></td>
+<td style="text-align:left">size</td>
+<td style="text-align:left">占用内存大小（KB）</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>S</code></td>
+<td style="text-align:left">share</td>
+<td style="text-align:left">共享页数量</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>t</code></td>
+<td style="text-align:left">tty</td>
+<td style="text-align:left">控制终端 tty 设备号</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>T</code></td>
+<td style="text-align:left">start_time</td>
+<td style="text-align:left">进程启动至今所过时间</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>U</code></td>
+<td style="text-align:left">uid</td>
+<td style="text-align:left">用户 ID</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>u</code></td>
+<td style="text-align:left">user</td>
+<td style="text-align:left">用户名</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>v</code></td>
+<td style="text-align:left">vsize</td>
+<td style="text-align:left">总占用虚拟内存空间大小（KB）</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>y</code></td>
+<td style="text-align:left">priority</td>
+<td style="text-align:left">内核调度优先级</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>举例</li>
+</ul>
+<p>按照 PID 逆序输出所有进程信息：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ps -AFl O-p<br></code></pre></td></tr></table></figure>
+<p>本人终端结果如下：</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs awk">F	S	UID	        PID	        PPID	C	PRI	NI	ADDR	SZ	WCHAN	RSS	    PSR	STIME	TTY	TIME	CMD<br><span class="hljs-number">1</span>	S	zhangji+	<span class="hljs-number">29974</span>	<span class="hljs-number">4619</span>	<span class="hljs-number">0</span>	<span class="hljs-number">80</span>	<span class="hljs-number">0</span>	-	<span class="hljs-number">197384</span>	futex_	<span class="hljs-number">100904</span>	<span class="hljs-number">3</span>	<span class="hljs-number">20</span>:<span class="hljs-number">20</span>	?	<span class="hljs-number">0</span>:<span class="hljs-number">00</span>	    <span class="hljs-regexp">/opt/g</span>oogle/chrom<br><span class="hljs-number">1</span>	S	zhangji+	<span class="hljs-number">29953</span>	<span class="hljs-number">4619</span>	<span class="hljs-number">0</span>	<span class="hljs-number">80</span>	<span class="hljs-number">0</span>	-	<span class="hljs-number">192882</span>	futex_	<span class="hljs-number">117896</span>	<span class="hljs-number">3</span>	<span class="hljs-number">20</span>:<span class="hljs-number">20</span>	?	<span class="hljs-number">0</span>:<span class="hljs-number">00</span>	    <span class="hljs-regexp">/opt/g</span>oogle/chrom<br><span class="hljs-number">1</span>	S	zhangji+	<span class="hljs-number">29923</span>	<span class="hljs-number">4619</span>	<span class="hljs-number">0</span>	<span class="hljs-number">80</span>	<span class="hljs-number">0</span>	-	<span class="hljs-number">180153</span>	futex_	<span class="hljs-number">69972</span>	<span class="hljs-number">1</span>	<span class="hljs-number">20</span>:<span class="hljs-number">20</span>	?	<span class="hljs-number">0</span>:<span class="hljs-number">00</span>	    <span class="hljs-regexp">/opt/g</span>oogle/chrom<br><span class="hljs-number">1</span>	S	zhangji+	<span class="hljs-number">29885</span>	<span class="hljs-number">4619</span>	<span class="hljs-number">0</span>	<span class="hljs-number">80</span>	<span class="hljs-number">0</span>	-	<span class="hljs-number">202766</span>	futex_	<span class="hljs-number">112476</span>	<span class="hljs-number">2</span>	<span class="hljs-number">20</span>:<span class="hljs-number">20</span>	?	<span class="hljs-number">0</span>:<span class="hljs-number">02</span>	    <span class="hljs-regexp">/opt/g</span>oogle/chrom<br><span class="hljs-number">1</span>	S	zhangji+	<span class="hljs-number">29856</span>	<span class="hljs-number">4619</span>	<span class="hljs-number">0</span>	<span class="hljs-number">80</span>	<span class="hljs-number">0</span>	-	<span class="hljs-number">205781</span>	futex_	<span class="hljs-number">127136</span>	<span class="hljs-number">6</span>	<span class="hljs-number">20</span>:<span class="hljs-number">20</span>	?	<span class="hljs-number">0</span>:<span class="hljs-number">01</span>	    <span class="hljs-regexp">/opt/g</span>oogle/chrom<br>......<br></code></pre></td></tr></table></figure>
+<h3 id="4-2-AIX-格式描述符">4.2 AIX 格式描述符</h3>
+<ul>
+<li>格式</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">[-]o/O format<br></code></pre></td></tr></table></figure>
+<p>其中，<code>format</code> 为格式字符串（类似 <code>printf</code> 的格式，不同格式中间可自选分隔符）。</p>
+<ul>
+<li><code>format</code> 中可选格式列表如下：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">格式</th>
+<th style="text-align:left">含义</th>
+<th style="text-align:left">输出列名</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>%C</code></td>
+<td style="text-align:left">pcpu</td>
+<td style="text-align:left">%CPU</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>%G</code></td>
+<td style="text-align:left">group</td>
+<td style="text-align:left">GROUP</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>%P</code></td>
+<td style="text-align:left">ppid</td>
+<td style="text-align:left">PPID</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>%U</code></td>
+<td style="text-align:left">user</td>
+<td style="text-align:left">USER</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>%a</code></td>
+<td style="text-align:left">args</td>
+<td style="text-align:left">COMMAND</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>%c</code></td>
+<td style="text-align:left">comm</td>
+<td style="text-align:left">COMMAND</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>%g</code></td>
+<td style="text-align:left">rgroup</td>
+<td style="text-align:left">RGROUP</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>%n</code></td>
+<td style="text-align:left">nice</td>
+<td style="text-align:left">NI</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>%p</code></td>
+<td style="text-align:left">pid</td>
+<td style="text-align:left">PID</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>%r</code></td>
+<td style="text-align:left">pgid</td>
+<td style="text-align:left">PGID</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>%t</code></td>
+<td style="text-align:left">etime</td>
+<td style="text-align:left">ELAPSED</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>%u</code></td>
+<td style="text-align:left">ruser</td>
+<td style="text-align:left">RUSER</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>%x</code></td>
+<td style="text-align:left">time</td>
+<td style="text-align:left">TIME</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>%y</code></td>
+<td style="text-align:left">tty</td>
+<td style="text-align:left">TTY</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>%z</code></td>
+<td style="text-align:left">vsz</td>
+<td style="text-align:left">VSZ</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>举例</li>
+</ul>
+<p>输出所有进程的 PID、TTY 号、当目前为止进程运行的累计 CPU 时间、CPU 占用率，并且自定义分隔符：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ps -eo <span class="hljs-string">&quot;%p -%y,%x %c&quot;</span><br></code></pre></td></tr></table></figure>
+<p>本人终端结果如下：</p>
+<figure class="highlight tap"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs tap">PID -TTY     ,    TIME COMMAND<br> <span class="hljs-number"> 1 </span>-?       ,00:00:02 systemd<br> <span class="hljs-number"> 2 </span>-?       ,00:00:00 kthreadd<br> <span class="hljs-number"> 4 </span>-?       ,00:00:00 kworker/0:0H<br> <span class="hljs-number"> 6 </span>-?       ,00:00:00 mm_percpu_wq<br>  ......<br></code></pre></td></tr></table></figure>
+<h3 id="4-3-常用标准格式描述符">4.3 常用标准格式描述符</h3>
+<ul>
+<li>格式</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">[-]o/O key1[=rename1|:width1][[[,| ][key2[=rename2|:width1]]...]<br>--<span class="hljs-built_in">sort</span> [+|-]key1[,[+|-]key2[,...]]<br></code></pre></td></tr></table></figure>
+<p>其中，<code>keyn</code> 为指定格式描述符，<code>renamen</code> 为重命名输出列名，<code>widthn</code> 为指定输出列宽度，<code>+</code> 表示顺序而 <code>-</code> 表示逆序。</p>
+<ul>
+<li>常用格式描述符列表</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">格式描述符</th>
+<th style="text-align:left">列名</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>user/euser/uname</code></td>
+<td style="text-align:left">USER/EUSER</td>
+<td style="text-align:left">有效用户名</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>uid/euid</code></td>
+<td style="text-align:left">UID/EUID</td>
+<td style="text-align:left">启动进程的有效用户 ID</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>pid/tgid</code></td>
+<td style="text-align:left">PID/TGID</td>
+<td style="text-align:left">进程 ID</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>ppid</code></td>
+<td style="text-align:left">PPID</td>
+<td style="text-align:left">父进程 ID</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>pgid/pgrp</code></td>
+<td style="text-align:left">PGID/PGRP</td>
+<td style="text-align:left">进程组 ID</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>c</code></td>
+<td style="text-align:left">C</td>
+<td style="text-align:left">进程生命周期中的 CPU 利用率</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>%cpu/pcpu</code></td>
+<td style="text-align:left">%CPU</td>
+<td style="text-align:left">CPU 占用率</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>%mem/pmem</code></td>
+<td style="text-align:left">%MEM</td>
+<td style="text-align:left">内存使用率</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>start/start_time/stime</code></td>
+<td style="text-align:left">进程启动时的系统时间</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>etime</code></td>
+<td style="text-align:left">ELAPSED</td>
+<td style="text-align:left">进程启动至今经过的时间（<code>[DD-]HH:MM:SS</code> 格式输出）</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>etimes</code></td>
+<td style="text-align:left">ELAPSED</td>
+<td style="text-align:left">进程启动至今经过的时间（秒）</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>time/cputime</code></td>
+<td style="text-align:left">TIME</td>
+<td style="text-align:left">当目前为止进程运行的累计 CPU 时间（<code>[DD-]HH:MM:SS</code> 格式输出）</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>times/cputimes</code></td>
+<td style="text-align:left">TIME</td>
+<td style="text-align:left">当目前为止进程运行的累计 CPU 时间（秒）</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>args/cmd/command</code></td>
+<td style="text-align:left">CMD/COMMAND</td>
+<td style="text-align:left">进程启动的程序命令</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>comm/ucmd/ucomm</code></td>
+<td style="text-align:left">COMMAND/CMD</td>
+<td style="text-align:left">进程启动的可执行文件名</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>tt/tty</code></td>
+<td style="text-align:left">TT</td>
+<td style="text-align:left">进程启动时的终端设备</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>f/flag/flags</code></td>
+<td style="text-align:left">F</td>
+<td style="text-align:left">内核分配给进程的系统标记</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>s/state</code></td>
+<td style="text-align:left">S</td>
+<td style="text-align:left">进程单字符状态符</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>stat</code></td>
+<td style="text-align:left">STAT</td>
+<td style="text-align:left">进程多字符状态符</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>pri</code></td>
+<td style="text-align:left">PRI</td>
+<td style="text-align:left">进程优先级（值越大优先级越低）</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>ni/nice</code></td>
+<td style="text-align:left">NI</td>
+<td style="text-align:left">谦让度，参与决定优先级</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>size</code></td>
+<td style="text-align:left">SIZE</td>
+<td style="text-align:left">进程换出需要的交换空间大致大小</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>sz</code></td>
+<td style="text-align:left">SZ</td>
+<td style="text-align:left">进程所占物理页大小</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>vsz/vsize</code></td>
+<td style="text-align:left">VSZ</td>
+<td style="text-align:left">进程所占虚拟内存大小（KB）</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>rss/rssize/rsz</code></td>
+<td style="text-align:left">RSS/RSZ</td>
+<td style="text-align:left">进程驻留内存占用空间大小（kB）</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>wchan</code></td>
+<td style="text-align:left">WCHAN</td>
+<td style="text-align:left">进程休眠的内核函数名称（<code>-</code> 表示进程正在运行，<code>*</code> 表示为多线程进程）</td>
+</tr>
+<tr>
+<td style="text-align:left">......</td>
+<td style="text-align:left">......</td>
+<td style="text-align:left"></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>举例</li>
+</ul>
+<p>按照自定义格式 <code>pid,ppid,pgrp,comm</code> 显示指定字段的进程信息：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ps -o pid,ppid,pgrp,<span class="hljs-built_in">comm</span><br></code></pre></td></tr></table></figure>
+<p>本人终端显示结果如下：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-string">PID</span>  <span class="hljs-string">PPID</span>    <span class="hljs-string">PGRP</span>    <span class="hljs-string">COMMAND</span><br><span class="hljs-number">6776  </span><span class="hljs-number">13466</span>   <span class="hljs-number">6776     </span><span class="hljs-string">bash</span><br><span class="hljs-number">6858  </span><span class="hljs-number">2307    </span><span class="hljs-number">6851    </span><span class="hljs-string">python3</span><br><span class="hljs-number">9412  </span><span class="hljs-number">6776    </span><span class="hljs-number">9412    </span><span class="hljs-string">ps</span><br></code></pre></td></tr></table></figure>
+<h2 id="5-常用参数组合">5. 常用参数组合</h2>
+<h3 id="5-1-查看系统上运行的所有进程">5.1 查看系统上运行的所有进程</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># Unix 风格</span><br>ps -ef<br>ps -eF      <span class="hljs-comment"># 信息更加详细</span><br><span class="hljs-comment"># BSD 风格</span><br>ps ax<br>ps axu<br></code></pre></td></tr></table></figure>
+<h3 id="5-2-采用层级结构显示系统上运行的所有进程">5.2 采用层级结构显示系统上运行的所有进程</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">ps -efH<br>ps -ef f    <span class="hljs-comment"># 层级结构更清晰</span><br>ps axf<br></code></pre></td></tr></table></figure>
+<h3 id="5-3-获取线程信息">5.3 获取线程信息</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">ps -eLf<br>ps axms<br></code></pre></td></tr></table></figure>
+<h3 id="5-4-获取安全信息">5.4 获取安全信息</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">ps -eM<br>ps -axZ<br></code></pre></td></tr></table></figure>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/Technique/">Technique</a>
+                    
+                      <a class="hover-with-bg" href="/categories/Technique/Linux/">Linux</a>
+                    
+                      <a class="hover-with-bg" href="/categories/Technique/Linux/Shell/">Shell</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Technique/">Technique</a>
+                    
+                      <a class="hover-with-bg" href="/tags/Linux/">Linux</a>
+                    
+                      <a class="hover-with-bg" href="/tags/Shell/">Shell</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/05/26/Technique/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4more/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">LinuxShell命令more</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/05/26/Technique/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4sort/">
+                        <span class="hidden-mobile">LinuxShell命令sort</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="waline"></div>
+  <script type="text/javascript">
+    Fluid.utils.lazyComments('waline', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js', function () {
+        new Waline({
+          el: "#waline",
+          placeholder: "都看到这里了，留个脚印再走呗~",
+          path: window.location.pathname,
+          avatar: "retro",
+          visitor: true,
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: true,
+          serverURL: "https://waline-one-beta.vercel.app/",
+          avatarCDN: "https://gravatar.loli.net/avatar/",
+          avatarForce: false,
+          requiredMeta: [],
+          emoji: ["https://cdn.jsdelivr.net/gh/hotarugali/Emoji@bilibili_tv_gif/waline/bilibili_tv_gif","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@bilibiliHotKey/waline/bilibiliHotKey","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@bilibili2233/waline/bilibili2233","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@smallshake/waline/smallshake","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@alu/waline/alu","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@QQ/waline/QQ","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@Tieba-New/waline/Tieba-New","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@weibo/waline/weibo"],
+          // emojiMaps: ,
+          login: "enable",
+          dark: 'html[data-user-color-scheme="dark"]',
+        });
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the
+    <a target="_blank" href="https://waline.js.org" rel="nofollow noopener noopener">comments powered by Waline.</a>
+  </noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+      <div class="col-lg-7 mx-auto nopadding-x-md">
+        <div class="container custom mx-auto">
+          <script src="https://myhkw.cn/api/player/161389264877" id="myhk" key="161389264877" m="1"></script>
+        </div>
+      </div>
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+
+  <script defer src="/js/leancloud.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- KaTeX -->
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" />
+  
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/mermaid@8.8.3/dist/mermaid.min.js" ></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({"theme":"default"});
+    }
+  </script>
+
+
+
+
+  
+    <!-- Baidu Analytics -->
+    <script defer>
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?c194cf0c8cbc33bfb846ba1329537d81";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  
+    <!-- Google Analytics -->
+    <script defer>
+      window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) };
+      ga.l = +new Date;
+      ga('create', 'G-SXJN0942X9', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+  
+
+  
+    <!-- Google gtag.js -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D3DEHLLP3W"></script>
+    <script defer>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-D3DEHLLP3W');
+    </script>
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

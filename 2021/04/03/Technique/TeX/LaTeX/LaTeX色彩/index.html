@@ -1,0 +1,860 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/image/self/portrait.jpg">
+  <link rel="icon" href="/image/self/portrait.jpg">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="一个记录各种笔记的小匣子^-^">
+  <meta name="author" content="hotarugali">
+  <meta name="keywords" content="頑張れ">
+  
+    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script> <script src="/live2d-widget/autoload.js" type="text/javascript"></script> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/> <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+  
+  <title>LaTeX色彩 - お前はどこまで見えている</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"blueheart0621.github.io","root":"/","version":"1.8.9","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":"§"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/image/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":"c194cf0c8cbc33bfb846ba1329537d81","google":"G-SXJN0942X9","gtag":"G-D3DEHLLP3W","tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"A24MlA4oV7hlze3uNQiXDAIi-MdYXbMMI","app_key":"3moFK5Ao3TD4rjA1HCmPTSm6","server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>お前はどこまで見えている</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/image/covers/%E5%9B%9B%E6%9C%88%E6%98%AF%E4%BD%A0%E7%9A%84%E8%B0%8E%E8%A8%80-1.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="LaTeX色彩">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-04-03 23:41" pubdate>
+        2021年4月3日 晚上
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.5k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      19
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- LeanCloud 统计文章PV -->
+      <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="leancloud-page-views"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">LaTeX色彩</h1>
+            
+            <div class="markdown-body">
+              <p>【注】笔记来自《LaTeX入门》——刘海洋。</p>
+<h2 id="1-简介">1. 简介</h2>
+<p>原始的 TeX 引擎不支持彩色，有关彩色的功能都是由输出 PS、PDF 格式的 TeX 引擎或驱动提供的，有关命令是在绘图相关的扩展宏包中定义的。基本的彩色支持工具是 <code>color</code> 宏包，它是 LaTeX 的基本组件，<code>graphics</code> 工具包的一部分。</p>
+<h2 id="2-基础">2. 基础</h2>
+<h3 id="2-1-预定义颜色">2.1 预定义颜色</h3>
+<p>在标准的 <code>color</code> 宏包中只有几种原色是预定义的，分别是：</p>
+<ul>
+<li>黑白颜色：<code>black</code>（黑）、<code>white</code>（白）</li>
+<li>色光三原色：<code>red</code>（红）、<code>green</code>（绿）、<code>blue</code>（蓝）</li>
+<li>印刷三原色：<code>cyan</code>（青）、<code>magenta</code>（品红）、<code>yellow</code>（黄）</li>
+</ul>
+<p>这三类原色分别使用三种不同的色彩模型：gray（灰度）、rgb（红绿蓝）和 cmyk（青品红黄黑）。在使用颜色时，除了可以使用预定义的颜色外，还可以给颜色命令指定模型，然后使用色彩模型下的几个分量 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">[</mo><mn>0</mn><mo separator="true">,</mo><mn>1</mn><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">[0,1]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">1</span><span class="mclose">]</span></span></span></span> 之间的数值来表示具体颜色。</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-comment">% 命令解释见下文</span><br><span class="hljs-keyword">\textcolor</span>[gray]&#123;0.5&#125;&#123;50<span class="hljs-keyword">\%</span> 灰色&#125;<br><span class="hljs-keyword">\color</span>[rgb]&#123;0.6,0.6,0&#125; 暗黄色<br></code></pre></td></tr></table></figure>
+<p>还有一种由输出驱动直接支持的 <code>named</code> 名称模型，比如在 Dvips 驱动下，可以给用 <code>usenames</code> 宏包选项直接调用下图中的各种色彩名，并加以色彩强度。</p>
+<table>
+    <tr>
+        <td>名称</td>   <td>颜色</td>   <td>数值</td>
+        <td>名称</td>   <td>颜色</td>   <td>数值</td>
+    </tr>
+    <tr>
+    <tr>
+        <td>Apricot</td>		<td bgcolor="#FBB982"></td> <td>#FBB982</td>
+        <td>Aquamarine</td>		<td bgcolor="#00B5BE"></td> <td>#00B5BE</td>
+    </tr>
+    <tr>
+        <td>Bittersweet</td>	<td bgcolor="#C04F17"></td> <td>#C04F17</td>
+        <td>Black</td>			<td bgcolor="#221E1F"></td> <td>#221E1F</td>
+    </tr>
+    <tr>
+        <td>Blue</td>			<td bgcolor="#2D2F92"></td> <td>#2D2F92</td>
+        <td>BlueGreen</td>		<td bgcolor="#00B3B8"></td> <td>#00B3B8</td>
+    </tr>
+    <tr>
+        <td>BlueViolet</td>		<td bgcolor="#473992"></td> <td>#473992</td>
+        <td>BrickRed</td>		<td bgcolor="#B6321C"></td> <td>#B6321C</td>
+    </tr>
+    <tr>
+        <td>Brown</td>			<td bgcolor="#792500"></td> <td>#792500</td>
+        <td>BurntOrange</td>	<td bgcolor="#F7921D"></td> <td>#F7921D</td>
+    </tr>
+    <tr>
+        <td>CadetBlue</td>		<td bgcolor="#74729A"></td> <td>#74729A</td>
+        <td>CarnationPink</td>	<td bgcolor="#F282B4"></td> <td>#F282B4</td>
+    </tr>
+    <tr>
+        <td>Cerulean</td>		<td bgcolor="#00A2E3"></td> <td>#00A2E3</td>
+        <td>CornflowerBlue</td>	<td bgcolor="#41B0E4"></td> <td>#41B0E4</td>
+    </tr>
+    <tr>
+        <td>Cyan</td>			<td bgcolor="#00AEEF"></td> <td>#00AEEF</td>
+        <td>Dandelion</td>		<td bgcolor="#FDBC42"></td> <td>#FDBC42</td>
+    </tr>
+    <tr>
+        <td>DarkOrchid</td>		<td bgcolor="#A4538A"></td> <td>#A4538A</td>
+        <td>Emerald</td>		<td bgcolor="#00A99D"></td> <td>#00A99D</td>
+    </tr>
+    <tr>
+        <td>ForestGreen</td>	<td bgcolor="#009B55"></td> <td>#009B55</td>
+        <td>Fuchsia</td>		<td bgcolor="#8C368C"></td> <td>#8C368C</td>
+    </tr>
+    <tr>
+        <td>Goldenrod</td>		<td bgcolor="#FFDF42"></td> <td>#FFDF42</td>
+        <td>Gray</td>			<td bgcolor="#949698"></td> <td>#949698</td>
+    </tr>
+    <tr>
+        <td>Green</td>			<td bgcolor="#00A64F"></td> <td>#00A64F</td>
+        <td>GreenYellow</td>	<td bgcolor="#DFE674"></td> <td>#DFE674</td>
+    </tr>
+    <tr>
+        <td>JungleGreen</td>	<td bgcolor="#00A99A"></td> <td>#00A99A</td>
+        <td>Lavender</td>		<td bgcolor="#F49EC4"></td> <td>#F49EC4</td>
+    </tr>
+    <tr>
+        <td>LimeGreen</td>		<td bgcolor="#8DC73E"></td> <td>#8DC73E</td>
+        <td>Magenta</td>		<td bgcolor="#EC008C"></td> <td>#EC008C</td>
+    </tr>
+    <tr>
+        <td>Mahogany</td>		<td bgcolor="#A9341F"></td> <td>#A9341F</td>
+        <td>Maroon</td>			<td bgcolor="#AF3235"></td> <td>#AF3235</td>
+    </tr>
+    <tr>
+        <td>Melon</td>			<td bgcolor="#F89E7B"></td> <td>#F89E7B</td>
+        <td>MidnightBlue</td>	<td bgcolor="#006795"></td> <td>#006795</td>
+    </tr>
+    <tr>
+        <td>Mulberry</td>		<td bgcolor="#A93C93"></td> <td>#A93C93</td>
+        <td>NavyBlue</td>		<td bgcolor="#006EB8"></td> <td>#006EB8</td>
+    </tr>
+    <tr>
+        <td>OliveGreen</td>		<td bgcolor="#3C8031"></td> <td>#3C8031</td>
+        <td>Orange</td>			<td bgcolor="#F58137"></td> <td>#F58137</td>
+    </tr>
+    <tr>
+        <td>OrangeRed</td>		<td bgcolor="#ED135A"></td> <td>#ED135A</td>
+        <td>Orchid</td>			<td bgcolor="#AF72B0"></td> <td>#AF72B0</td>
+    </tr>
+    <tr>
+        <td>Peach</td>			<td bgcolor="#F7965A"></td> <td>#F7965A</td>
+        <td>Periwinkle</td>	    <td bgcolor="#7977B8"></td> <td>#7977B8</td>
+    </tr>
+    <tr>
+        <td>PineGreen</td>		<td bgcolor="#008B72"></td> <td>#008B72</td>
+        <td>Plum</td>			<td bgcolor="#92268F"></td> <td>#92268F</td>
+    </tr>
+    <tr>
+        <td>ProcessBlue</td>	<td bgcolor="#00B0F0"></td> <td>#00B0F0</td>
+        <td>Purple</td>			<td bgcolor="#99479B"></td> <td>#99479B</td>
+    </tr>
+    <tr>
+        <td>RawSienna</td>		<td bgcolor="#974006"></td> <td>#974006</td>
+        <td>Red</td>			<td bgcolor="#ED1B23"></td> <td>#ED1B23</td>
+    </tr>
+    <tr>
+        <td>RedOrange</td>		<td bgcolor="#F26035"></td> <td>#F26035</td>
+        <td>RedViolet</td>		<td bgcolor="#A1246B"></td> <td>#A1246B</td>
+    </tr>
+    <tr>
+        <td>Rhodamine</td>		<td bgcolor="#EF559F"></td> <td>#EF559F</td>
+        <td>RoyalBlue</td>		<td bgcolor="#0071BC"></td> <td>#0071BC</td>
+    </tr>
+    <tr>
+        <td>RoyalPurple</td>	<td bgcolor="#613F99"></td> <td>#613F99</td>
+        <td>RubineRed</td>		<td bgcolor="#ED017D"></td> <td>#ED017D</td>
+    </tr>
+    <tr>
+        <td>Salmon</td>			<td bgcolor="#F69289"></td> <td>#F69289</td>
+        <td>SeaGreen</td>		<td bgcolor="#3FBC9D"></td> <td>#3FBC9D</td>
+    </tr>
+    <tr>
+        <td>Sepia</td>			<td bgcolor="#671800"></td> <td>#671800</td>
+        <td>SkyBlue</td>		<td bgcolor="#46C5DD"></td> <td>#46C5DD</td>
+    </tr>
+    <tr>
+        <td>SpringGreen</td>	<td bgcolor="#C6DC67"></td> <td>#C6DC67</td>
+        <td>Tan</td>			<td bgcolor="#DA9D76"></td> <td>#DA9D76</td>
+    </tr>
+    <tr>
+        <td>TealBlue</td>		<td bgcolor="#00AEB3"></td> <td>#00AEB3</td>
+        <td>Thistle</td>		<td bgcolor="#D883B7"></td> <td>#D883B7</td>
+    </tr>
+    <tr>
+        <td>Turquoise</td>		<td bgcolor="#00B4CE"></td> <td>#00B4CE</td>
+        <td>Violet</td>			<td bgcolor="#58429B"></td> <td>#58429B</td>
+    </tr>
+    <tr>
+        <td>VioletRed</td>		<td bgcolor="#EF58A0"></td> <td>#EF58A0</td>
+        <td>White</td>			<td bgcolor="#FFFFFF"></td> <td>#FFFFFF</td>
+    </tr>
+    <tr>
+        <td>WildStrawberry</td>	<td bgcolor="#EE2967"></td> <td>#EE2967</td>
+        <td>Yellow</td>			<td bgcolor="#FFF200"></td> <td>#FFF200</td>
+    </tr>
+    <tr>
+        <td>YellowGreen</td>	<td bgcolor="#98CC70"></td> <td>#98CC70</td>
+        <td>YellowOrange</td>	<td bgcolor="#FAA21A"></td> <td>#FAA21A</td>
+    </tr>
+</table>
+<p>比如可以选定 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>60</mn><mi mathvariant="normal">%</mi></mrow><annotation encoding="application/x-tex">60\%</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.80556em;vertical-align:-0.05556em;"></span><span class="mord">6</span><span class="mord">0</span><span class="mord">%</span></span></span></span> 的淡紫色：</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-comment">% 导言区</span><br><span class="hljs-keyword">\uspackage</span>[usenames]&#123;color&#125;<br><span class="hljs-comment">% ……</span><br><span class="hljs-comment">% 使用 latex + dvips 编译</span><br><span class="hljs-keyword">\color</span>[named]&#123;Purple,0.6&#125;<br></code></pre></td></tr></table></figure>
+<p>此外，还可以使用 <code>dvipsnames</code> 选项来获得更多的色彩名，而不必考虑使用的输出驱动。<code>dvipsnames</code> 选项调入的色彩名默认以 cmyk 色彩模型给出。</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-comment">% 导言区</span><br><span class="hljs-keyword">\usepackage</span>[dvipsnames]&#123;color&#125;<br><span class="hljs-comment">% ……</span><br><span class="hljs-keyword">\textcolor</span>&#123;Purple&#125;&#123;紫色文字&#125;<br></code></pre></td></tr></table></figure>
+<p>类似的色彩名称也可以用户自己定义，其语法格式如下：</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-keyword">\definecolor</span>&#123;&lt;色彩名&gt;&#125;&#123;&lt;模型&gt;&#125;&#123;&lt;分量值&gt;&#125;<br><span class="hljs-comment">% 比如定义紫色</span><br><span class="hljs-keyword">\definecolor</span>&#123;Purple&#125;&#123;cmyk&#125;&#123;0.45,0.86,0,0&#125;<br></code></pre></td></tr></table></figure>
+<h3 id="2-2-文字">2.2 文字</h3>
+<p>在 <code>color</code> 宏包中，使用彩色的基本命令是 <code>\color</code> 和 <code>\textcolor</code>：</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-keyword">\color</span>&#123;&lt;颜色&gt;&#125;<br><span class="hljs-keyword">\textcolor</span>&#123;&lt;颜色&gt;&#125;&#123;&lt;文字&gt;&#125;<br></code></pre></td></tr></table></figure>
+<p>其中，<code>\color</code> 是生命式命令，它使（同一分组内）后面的内容都使用指定的颜色输出，而 <code>\textcolor</code> 则将参数 <code>&lt;文字&gt;</code> 以指定的颜色输出。</p>
+<h3 id="2-3-背景和线框">2.3 背景和线框</h3>
+<p><code>color</code> 宏包还提供页面背景色以及彩色盒子的命令，其语法格式如下：</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-keyword">\pagecolor</span>&#123;&lt;页面颜色&gt;&#125;<br><span class="hljs-keyword">\colorbox</span>&#123;&lt;盒子颜色&gt;&#125;&#123;&lt;文字&gt;&#125;<br><span class="hljs-keyword">\fcolorbox</span>&#123;&lt;线框颜色&gt;&#125;&#123;&lt;盒子颜色&gt;&#125;&#123;&lt;文字&gt;&#125;<br></code></pre></td></tr></table></figure>
+<p>和 <code>\fbox</code> 类似，盒子外框的间距与线框粗细由长度变量 <code>\fboxsep</code> 和 <code>\fboxrule</code> 控制。</p>
+<h2 id="3-扩展">3. 扩展</h2>
+<h3 id="3-1-xcolor-宏包">3.1 <code>xcolor</code> 宏包</h3>
+<p><code>xcolor</code> 宏包支持更多的色彩模型，诸如 rgb、cmy、cmyk、hsb、gray 等。使用这些模型可以更方便地定义各色色彩，而且将这些色彩模型作为宏包选项，则可以将整个文档的所有色彩都转换到指定的模型去，比如制作印刷稿时：</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-comment">% 将所有色彩转换为 cmyk 模型</span><br><span class="hljs-keyword">\usepackage</span>[cmyk]&#123;xcolor&#125;<br></code></pre></td></tr></table></figure>
+<p><code>xcolor</code> 宏包比 <code>color</code> 宏包支持更多的基本色彩，下表中的颜色在调用 <code>xcolor</code> 宏包后即可任意使用：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">名称</th>
+<th style="text-align:center">颜色</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">black</td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mpadded width="+6pt" height="+6pt" lspace="3pt" voffset="3pt" mathbackground="black"><mrow></mrow></mpadded></mrow><annotation encoding="application/x-tex">\colorbox{black}{}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6em;vertical-align:-0.3em;"></span><span class="mord"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3em;"><span style="top:-2.3000000000000003em;"><span class="pstrut" style="height:2.6em;"></span><span class="stretchy colorbox" style="height:0.6em;background-color:black;"></span></span><span style="top:-2.6em;"><span class="pstrut" style="height:2.6em;"></span><span class="mord boxpad"></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3em;"><span></span></span></span></span></span></span></span></span></td>
+</tr>
+<tr>
+<td style="text-align:center">blue</td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mpadded width="+6pt" height="+6pt" lspace="3pt" voffset="3pt" mathbackground="blue"><mrow></mrow></mpadded></mrow><annotation encoding="application/x-tex">\colorbox{blue}{}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6em;vertical-align:-0.3em;"></span><span class="mord"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3em;"><span style="top:-2.3000000000000003em;"><span class="pstrut" style="height:2.6em;"></span><span class="stretchy colorbox" style="height:0.6em;background-color:blue;"></span></span><span style="top:-2.6em;"><span class="pstrut" style="height:2.6em;"></span><span class="mord boxpad"></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3em;"><span></span></span></span></span></span></span></span></span></td>
+</tr>
+<tr>
+<td style="text-align:center">brown</td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mpadded width="+6pt" height="+6pt" lspace="3pt" voffset="3pt" mathbackground="brown"><mrow></mrow></mpadded></mrow><annotation encoding="application/x-tex">\colorbox{brown}{}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6em;vertical-align:-0.3em;"></span><span class="mord"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3em;"><span style="top:-2.3000000000000003em;"><span class="pstrut" style="height:2.6em;"></span><span class="stretchy colorbox" style="height:0.6em;background-color:brown;"></span></span><span style="top:-2.6em;"><span class="pstrut" style="height:2.6em;"></span><span class="mord boxpad"></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3em;"><span></span></span></span></span></span></span></span></span></td>
+</tr>
+<tr>
+<td style="text-align:center">cyan</td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mpadded width="+6pt" height="+6pt" lspace="3pt" voffset="3pt" mathbackground="cyan"><mrow></mrow></mpadded></mrow><annotation encoding="application/x-tex">\colorbox{cyan}{}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6em;vertical-align:-0.3em;"></span><span class="mord"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3em;"><span style="top:-2.3000000000000003em;"><span class="pstrut" style="height:2.6em;"></span><span class="stretchy colorbox" style="height:0.6em;background-color:cyan;"></span></span><span style="top:-2.6em;"><span class="pstrut" style="height:2.6em;"></span><span class="mord boxpad"></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3em;"><span></span></span></span></span></span></span></span></span></td>
+</tr>
+<tr>
+<td style="text-align:center">darkgray</td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mpadded width="+6pt" height="+6pt" lspace="3pt" voffset="3pt" mathbackground="darkgray"><mrow></mrow></mpadded></mrow><annotation encoding="application/x-tex">\colorbox{darkgray}{}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6em;vertical-align:-0.3em;"></span><span class="mord"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3em;"><span style="top:-2.3000000000000003em;"><span class="pstrut" style="height:2.6em;"></span><span class="stretchy colorbox" style="height:0.6em;background-color:darkgray;"></span></span><span style="top:-2.6em;"><span class="pstrut" style="height:2.6em;"></span><span class="mord boxpad"></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3em;"><span></span></span></span></span></span></span></span></span></td>
+</tr>
+<tr>
+<td style="text-align:center">gray</td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mpadded width="+6pt" height="+6pt" lspace="3pt" voffset="3pt" mathbackground="gray"><mrow></mrow></mpadded></mrow><annotation encoding="application/x-tex">\colorbox{gray}{}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6em;vertical-align:-0.3em;"></span><span class="mord"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3em;"><span style="top:-2.3000000000000003em;"><span class="pstrut" style="height:2.6em;"></span><span class="stretchy colorbox" style="height:0.6em;background-color:gray;"></span></span><span style="top:-2.6em;"><span class="pstrut" style="height:2.6em;"></span><span class="mord boxpad"></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3em;"><span></span></span></span></span></span></span></span></span></td>
+</tr>
+<tr>
+<td style="text-align:center">green</td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mpadded width="+6pt" height="+6pt" lspace="3pt" voffset="3pt" mathbackground="green"><mrow></mrow></mpadded></mrow><annotation encoding="application/x-tex">\colorbox{green}{}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6em;vertical-align:-0.3em;"></span><span class="mord"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3em;"><span style="top:-2.3000000000000003em;"><span class="pstrut" style="height:2.6em;"></span><span class="stretchy colorbox" style="height:0.6em;background-color:green;"></span></span><span style="top:-2.6em;"><span class="pstrut" style="height:2.6em;"></span><span class="mord boxpad"></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3em;"><span></span></span></span></span></span></span></span></span></td>
+</tr>
+<tr>
+<td style="text-align:center">lightgray</td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mpadded width="+6pt" height="+6pt" lspace="3pt" voffset="3pt" mathbackground="lightgray"><mrow></mrow></mpadded></mrow><annotation encoding="application/x-tex">\colorbox{lightgray}{}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6em;vertical-align:-0.3em;"></span><span class="mord"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3em;"><span style="top:-2.3000000000000003em;"><span class="pstrut" style="height:2.6em;"></span><span class="stretchy colorbox" style="height:0.6em;background-color:lightgray;"></span></span><span style="top:-2.6em;"><span class="pstrut" style="height:2.6em;"></span><span class="mord boxpad"></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3em;"><span></span></span></span></span></span></span></span></span></td>
+</tr>
+<tr>
+<td style="text-align:center">lime</td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mpadded width="+6pt" height="+6pt" lspace="3pt" voffset="3pt" mathbackground="lime"><mrow></mrow></mpadded></mrow><annotation encoding="application/x-tex">\colorbox{lime}{}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6em;vertical-align:-0.3em;"></span><span class="mord"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3em;"><span style="top:-2.3000000000000003em;"><span class="pstrut" style="height:2.6em;"></span><span class="stretchy colorbox" style="height:0.6em;background-color:lime;"></span></span><span style="top:-2.6em;"><span class="pstrut" style="height:2.6em;"></span><span class="mord boxpad"></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3em;"><span></span></span></span></span></span></span></span></span></td>
+</tr>
+<tr>
+<td style="text-align:center">magenta</td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mpadded width="+6pt" height="+6pt" lspace="3pt" voffset="3pt" mathbackground="magenta"><mrow></mrow></mpadded></mrow><annotation encoding="application/x-tex">\colorbox{magenta}{}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6em;vertical-align:-0.3em;"></span><span class="mord"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3em;"><span style="top:-2.3000000000000003em;"><span class="pstrut" style="height:2.6em;"></span><span class="stretchy colorbox" style="height:0.6em;background-color:magenta;"></span></span><span style="top:-2.6em;"><span class="pstrut" style="height:2.6em;"></span><span class="mord boxpad"></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3em;"><span></span></span></span></span></span></span></span></span></td>
+</tr>
+<tr>
+<td style="text-align:center">olive</td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mpadded width="+6pt" height="+6pt" lspace="3pt" voffset="3pt" mathbackground="olive"><mrow></mrow></mpadded></mrow><annotation encoding="application/x-tex">\colorbox{olive}{}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6em;vertical-align:-0.3em;"></span><span class="mord"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3em;"><span style="top:-2.3000000000000003em;"><span class="pstrut" style="height:2.6em;"></span><span class="stretchy colorbox" style="height:0.6em;background-color:olive;"></span></span><span style="top:-2.6em;"><span class="pstrut" style="height:2.6em;"></span><span class="mord boxpad"></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3em;"><span></span></span></span></span></span></span></span></span></td>
+</tr>
+<tr>
+<td style="text-align:center">orange</td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mpadded width="+6pt" height="+6pt" lspace="3pt" voffset="3pt" mathbackground="orange"><mrow></mrow></mpadded></mrow><annotation encoding="application/x-tex">\colorbox{orange}{}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6em;vertical-align:-0.3em;"></span><span class="mord"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3em;"><span style="top:-2.3000000000000003em;"><span class="pstrut" style="height:2.6em;"></span><span class="stretchy colorbox" style="height:0.6em;background-color:orange;"></span></span><span style="top:-2.6em;"><span class="pstrut" style="height:2.6em;"></span><span class="mord boxpad"></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3em;"><span></span></span></span></span></span></span></span></span></td>
+</tr>
+<tr>
+<td style="text-align:center">pink</td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mpadded width="+6pt" height="+6pt" lspace="3pt" voffset="3pt" mathbackground="pink"><mrow></mrow></mpadded></mrow><annotation encoding="application/x-tex">\colorbox{pink}{}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6em;vertical-align:-0.3em;"></span><span class="mord"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3em;"><span style="top:-2.3000000000000003em;"><span class="pstrut" style="height:2.6em;"></span><span class="stretchy colorbox" style="height:0.6em;background-color:pink;"></span></span><span style="top:-2.6em;"><span class="pstrut" style="height:2.6em;"></span><span class="mord boxpad"></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3em;"><span></span></span></span></span></span></span></span></span></td>
+</tr>
+<tr>
+<td style="text-align:center">purple</td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mpadded width="+6pt" height="+6pt" lspace="3pt" voffset="3pt" mathbackground="purple"><mrow></mrow></mpadded></mrow><annotation encoding="application/x-tex">\colorbox{purple}{}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6em;vertical-align:-0.3em;"></span><span class="mord"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3em;"><span style="top:-2.3000000000000003em;"><span class="pstrut" style="height:2.6em;"></span><span class="stretchy colorbox" style="height:0.6em;background-color:purple;"></span></span><span style="top:-2.6em;"><span class="pstrut" style="height:2.6em;"></span><span class="mord boxpad"></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3em;"><span></span></span></span></span></span></span></span></span></td>
+</tr>
+<tr>
+<td style="text-align:center">red</td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mpadded width="+6pt" height="+6pt" lspace="3pt" voffset="3pt" mathbackground="red"><mrow></mrow></mpadded></mrow><annotation encoding="application/x-tex">\colorbox{red}{}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6em;vertical-align:-0.3em;"></span><span class="mord"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3em;"><span style="top:-2.3000000000000003em;"><span class="pstrut" style="height:2.6em;"></span><span class="stretchy colorbox" style="height:0.6em;background-color:red;"></span></span><span style="top:-2.6em;"><span class="pstrut" style="height:2.6em;"></span><span class="mord boxpad"></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3em;"><span></span></span></span></span></span></span></span></span></td>
+</tr>
+<tr>
+<td style="text-align:center">teal</td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mpadded width="+6pt" height="+6pt" lspace="3pt" voffset="3pt" mathbackground="teal"><mrow></mrow></mpadded></mrow><annotation encoding="application/x-tex">\colorbox{teal}{}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6em;vertical-align:-0.3em;"></span><span class="mord"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3em;"><span style="top:-2.3000000000000003em;"><span class="pstrut" style="height:2.6em;"></span><span class="stretchy colorbox" style="height:0.6em;background-color:teal;"></span></span><span style="top:-2.6em;"><span class="pstrut" style="height:2.6em;"></span><span class="mord boxpad"></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3em;"><span></span></span></span></span></span></span></span></span></td>
+</tr>
+<tr>
+<td style="text-align:center">violet</td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mpadded width="+6pt" height="+6pt" lspace="3pt" voffset="3pt" mathbackground="violet"><mrow></mrow></mpadded></mrow><annotation encoding="application/x-tex">\colorbox{violet}{}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6em;vertical-align:-0.3em;"></span><span class="mord"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3em;"><span style="top:-2.3000000000000003em;"><span class="pstrut" style="height:2.6em;"></span><span class="stretchy colorbox" style="height:0.6em;background-color:violet;"></span></span><span style="top:-2.6em;"><span class="pstrut" style="height:2.6em;"></span><span class="mord boxpad"></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3em;"><span></span></span></span></span></span></span></span></span></td>
+</tr>
+<tr>
+<td style="text-align:center">white</td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mpadded width="+6pt" height="+6pt" lspace="3pt" voffset="3pt" mathbackground="white"><mrow></mrow></mpadded></mrow><annotation encoding="application/x-tex">\colorbox{white}{}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6em;vertical-align:-0.3em;"></span><span class="mord"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3em;"><span style="top:-2.3000000000000003em;"><span class="pstrut" style="height:2.6em;"></span><span class="stretchy colorbox" style="height:0.6em;background-color:white;"></span></span><span style="top:-2.6em;"><span class="pstrut" style="height:2.6em;"></span><span class="mord boxpad"></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3em;"><span></span></span></span></span></span></span></span></span></td>
+</tr>
+<tr>
+<td style="text-align:center">yellow</td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mpadded width="+6pt" height="+6pt" lspace="3pt" voffset="3pt" mathbackground="yellow"><mrow></mrow></mpadded></mrow><annotation encoding="application/x-tex">\colorbox{yellow}{}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6em;vertical-align:-0.3em;"></span><span class="mord"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3em;"><span style="top:-2.3000000000000003em;"><span class="pstrut" style="height:2.6em;"></span><span class="stretchy colorbox" style="height:0.6em;background-color:yellow;"></span></span><span style="top:-2.6em;"><span class="pstrut" style="height:2.6em;"></span><span class="mord boxpad"></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3em;"><span></span></span></span></span></span></span></span></span></td>
+</tr>
+</tbody>
+</table>
+<p>同时除了可以使用 <code>dvipsnames</code> 选项可以访问 PostScript 预定义的色彩名称（见「2.1」节表格）外，还可以使用 <code>svgnames</code> 和 <code>x11names</code> 访问 svg 格式或者是 unix x11 库中预定义的大量色彩名称。尤其有用的是，<code>xcolor</code> 还支持颜色表达式的记法，常用的有：</p>
+<ul>
+<li>半色调：<code>&lt;颜色&gt;!&lt;百分数&gt;</code></li>
+<li>混合色：<code>&lt;颜色&gt;!&lt;百分数&gt;!&lt;颜色&gt;</code></li>
+<li>互补色：<code>-&lt;颜色&gt;</code></li>
+</ul>
+<p>这样可以方便地表示出 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>50</mn><mi mathvariant="normal">%</mi></mrow><annotation encoding="application/x-tex">50\%</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.80556em;vertical-align:-0.05556em;"></span><span class="mord">5</span><span class="mord">0</span><span class="mord">%</span></span></span></span> 的紫色或者是更复杂的将不同颜料按比例混合的中间色调。</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-keyword">\textcolor</span>&#123;purple!70&#125;&#123;淡紫色&#125;<br>&#123;<span class="hljs-keyword">\color</span>&#123;blue!60!black&#125; 60<span class="hljs-keyword">\%</span> 蓝与 40<span class="hljs-keyword">\%</span> 黑混合的深蓝色&#125;<br><span class="hljs-keyword">\colorbox</span>&#123;-red&#125;&#123;青色与红色互补&#125;<br></code></pre></td></tr></table></figure>
+<p><code>xcolor</code> 宏包也提供了许多新的命令来支持更丰富的命令，比如 <code>\colorlet</code> 可以使用色彩表达式来定义新色彩名：</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-keyword">\colorlet</span>&#123;darkred&#125;&#123;red!50!black&#125;<br><span class="hljs-keyword">\textcolor</span>&#123;darkred&#125;&#123;定义暗红色&#125;<br></code></pre></td></tr></table></figure>
+<p>更多相关的命令可以参见官方手册。</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs latex">texdoc xcolor<br></code></pre></td></tr></table></figure>
+<h3 id="3-2-transparent-宏包">3.2 <code>transparent</code> 宏包</h3>
+<p><code>color</code> 和 <code>xcolor</code> 宏包都不提供透明颜色的支持，使用 pdfTeX 引擎时，可以使用 <code>transparent</code> 宏包实现颜色透明度的支持。它提供了 <code>\transparent</code> 与 <code>\texttransparent</code> 命令，用法与 <code>\color</code> 和 <code>\textcolor</code> 类似。<code>transparent</code> 宏包不支持 pdfTeX 以外的其他图形驱动，不过 LaTeX 中更为复杂的绘图语言 PSTricks 和 TikZ 都支持透明色，如果需要可以调用它们实现。</p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/Technique/">Technique</a>
+                    
+                      <a class="hover-with-bg" href="/categories/Technique/TeX/">TeX</a>
+                    
+                      <a class="hover-with-bg" href="/categories/Technique/TeX/LaTeX/">LaTeX</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Technique/">Technique</a>
+                    
+                      <a class="hover-with-bg" href="/tags/TeX/">TeX</a>
+                    
+                      <a class="hover-with-bg" href="/tags/LaTeX/">LaTeX</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2021/04/05/Technique/Compression/Image/%E5%87%8F%E8%89%B2%E7%AE%97%E6%B3%95/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">减色算法</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/04/03/Technique/TeX/LaTeX/LaTeX%E6%A0%87%E9%A2%98%E6%8E%A7%E5%88%B6/">
+                        <span class="hidden-mobile">LaTeX标题控制</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="waline"></div>
+  <script type="text/javascript">
+    Fluid.utils.lazyComments('waline', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js', function () {
+        new Waline({
+          el: "#waline",
+          placeholder: "都看到这里了，留个脚印再走呗~",
+          path: window.location.pathname,
+          avatar: "retro",
+          visitor: true,
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: true,
+          serverURL: "https://waline-one-beta.vercel.app/",
+          avatarCDN: "https://gravatar.loli.net/avatar/",
+          avatarForce: false,
+          requiredMeta: [],
+          emoji: ["https://cdn.jsdelivr.net/gh/hotarugali/Emoji@bilibili_tv_gif/waline/bilibili_tv_gif","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@bilibiliHotKey/waline/bilibiliHotKey","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@bilibili2233/waline/bilibili2233","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@smallshake/waline/smallshake","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@alu/waline/alu","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@QQ/waline/QQ","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@Tieba-New/waline/Tieba-New","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@weibo/waline/weibo"],
+          // emojiMaps: ,
+          login: "enable",
+          dark: 'html[data-user-color-scheme="dark"]',
+        });
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the
+    <a target="_blank" href="https://waline.js.org" rel="nofollow noopener noopener">comments powered by Waline.</a>
+  </noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+      <div class="col-lg-7 mx-auto nopadding-x-md">
+        <div class="container custom mx-auto">
+          <script src="https://myhkw.cn/api/player/161389264877" id="myhk" key="161389264877" m="1"></script>
+        </div>
+      </div>
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+
+  <script defer src="/js/leancloud.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- KaTeX -->
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" />
+  
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/mermaid@8.8.3/dist/mermaid.min.js" ></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({"theme":"default"});
+    }
+  </script>
+
+
+
+
+  
+    <!-- Baidu Analytics -->
+    <script defer>
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?c194cf0c8cbc33bfb846ba1329537d81";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  
+    <!-- Google Analytics -->
+    <script defer>
+      window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) };
+      ga.l = +new Date;
+      ga('create', 'G-SXJN0942X9', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+  
+
+  
+    <!-- Google gtag.js -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D3DEHLLP3W"></script>
+    <script defer>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-D3DEHLLP3W');
+    </script>
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

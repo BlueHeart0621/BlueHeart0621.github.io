@@ -18,7 +18,7 @@
   <meta name="author" content="BlueHeart0621">
   <meta name="keywords" content="頑張れ">
   
-    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script> <script src="/live2d-widget/autoload.js" type="text/javascript"></script> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script> <script src="/live2d-widget/autoload.js" type="text/javascript"></script> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/> <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
   
   <title>お前はどこまで見えている</title>
 
@@ -197,22 +197,21 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Linux/Sundry/SystemTap/SystemTap/">SystemTap</a>
+        <a href="/2020/05/26/Technique/MatLab/MatLab%E5%87%BD%E6%95%B0interp1%E3%80%81interp2%E3%80%81interp3%E3%80%81interpn/">MatLab函数interp1、interp2、interp3、interpn</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Linux/Sundry/SystemTap/SystemTap/">
+        <a href="/2020/05/26/Technique/MatLab/MatLab%E5%87%BD%E6%95%B0interp1%E3%80%81interp2%E3%80%81interp3%E3%80%81interpn/">
           
           
             
           
-          1. 简介
-
-
-SystemTap 是一个诊断 Linux 系统性能或功能问题的开源软件。它使得对运行时的Linux 系统进行诊断调式变得更容易、更简单。有了它，开发者或调试人员不再需要重编译、安装新内核、重启动等烦人的步骤。
-
-
-为了诊断系统问题或性能，开发者或调试人员只需要写一些脚本，而且 SystemTap 本身也提供了很多脚本，称为「tapset」方便开发，然后通过 SystemTap 提
+          【注】详情请参阅 MatLab help 文档。
+1. interp1
+1.1 作用
+对一元函数数据进行插值，得到指定自变量值对应插值函数值。
+1.2 语法
+1234567vq = interp1(x,v,xq)vq = interp1(x,v,xq,method)vq = interp1(x,v,xq,method,extrapolation)vq = interp1(v,xq)vq = int
         </a>
       </p>
 
@@ -231,9 +230,7 @@ SystemTap 是一个诊断 Linux 系统性能或功能问题的开源软件。它
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/Linux/">Linux</a>
-            
-              <a href="/categories/Technique/Linux/Sundry/">Sundry</a>
+              <a href="/categories/Technique/MatLab/">MatLab</a>
             
           </div>
         
@@ -243,9 +240,7 @@ SystemTap 是一个诊断 Linux 系统性能或功能问题的开源软件。它
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/Sundry/">Sundry</a>
+              <a href="/tags/MatLab/">MatLab</a>
             
           </div>
         
@@ -259,22 +254,20 @@ SystemTap 是一个诊断 Linux 系统性能或功能问题的开源软件。它
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Math/Theory/%E5%90%84%E7%A7%8D%E8%B7%9D%E7%A6%BB/%E5%90%84%E7%A7%8D%E8%B7%9D%E7%A6%BB/">各种距离</a>
+        <a href="/2020/05/26/Technique/MatLab/MatLab%E5%87%BD%E6%95%B0legend/">MatLab函数legend</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Math/Theory/%E5%90%84%E7%A7%8D%E8%B7%9D%E7%A6%BB/%E5%90%84%E7%A7%8D%E8%B7%9D%E7%A6%BB/">
+        <a href="/2020/05/26/Technique/MatLab/MatLab%E5%87%BD%E6%95%B0legend/">
           
           
             
           
-          1. 欧几里得距离
-给定空间中两个点 (x1,y1){(x_1,y_1)}(x1​,y1​)，(x2,y2){(x_2,y_2)}(x2​,y2​)；它们之间的欧几里得距离公式为：
-(x1−x2)2+(y1−y2)2\begin{array}{c}
-\sqrt{(x_1-x_2)^2+(y_1-y_2)^2}
-\end{array}
-(x1​−x2​)2+(y1​−y2​)2​​
-即两个点之间的直
+          【注】详情请参阅 MatLab help 文档。
+1. 简介
+legend 函数可以在 MatLab 的坐标区按曲线的绘制顺序添加对应曲线的图例。
+2. 格式
+1234567891011legendlegend(label1,···,labelN)legend(labels)legend(subset,___)legend(target,___)legend(___,Name,Value)lege
         </a>
       </p>
 
@@ -293,9 +286,7 @@ SystemTap 是一个诊断 Linux 系统性能或功能问题的开源软件。它
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/Math/">Math</a>
-            
-              <a href="/categories/Technique/Math/Theory/">Theory</a>
+              <a href="/categories/Technique/MatLab/">MatLab</a>
             
           </div>
         
@@ -305,9 +296,7 @@ SystemTap 是一个诊断 Linux 系统性能或功能问题的开源软件。它
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Math/">Math</a>
-            
-              <a href="/tags/Theory/">Theory</a>
+              <a href="/tags/MatLab/">MatLab</a>
             
           </div>
         
@@ -321,34 +310,25 @@ SystemTap 是一个诊断 Linux 系统性能或功能问题的开源软件。它
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/System/Security/UNIX%E8%AE%BF%E9%97%AE%E6%9D%83%E9%99%90/UNIX%E8%AE%BF%E9%97%AE%E6%9D%83%E9%99%90/">UNIX访问权限</a>
+        <a href="/2020/05/26/Technique/MatLab/MatLab%E5%87%BD%E6%95%B0meshgrid%E3%80%81ndgrid/">MatLab函数meshgrid、ndgrid</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/System/Security/UNIX%E8%AE%BF%E9%97%AE%E6%9D%83%E9%99%90/UNIX%E8%AE%BF%E9%97%AE%E6%9D%83%E9%99%90/">
+        <a href="/2020/05/26/Technique/MatLab/MatLab%E5%87%BD%E6%95%B0meshgrid%E3%80%81ndgrid/">
           
           
             
           
-          【注】*NIX 下很重要的概念是「一切皆文件」；以下仅以 *NIX 家族的起源 UNIX 作为分析对象。
-1. 文件的组织与权限表示
-1.1 文件的组织方式（此处文件为泛指概念，包括目录等）
+          【注】详情请参阅 MatLab help 文档。
+1. meshgrid
+1.1 作用
+meshgrid 函数用于生成二维或三维网络坐标。
+1.2 语法
+1234[X,Y] = meshgrid(x,y)[X,Y] = meshgrid(x)[X,Y,Z] = meshgrid(x,y,z)[X,Y,Z] = meshgrid(x)
 
 
-文件存在于目录中
-
-
-目录是一种特殊的文件
-
-
-文件采用层次结构存放
-
-
-
-文件的基本操作：open、close、read、write、lseek
-
-
-打开现存文件或创建新文件，内核都会向进程返回一个文件
+[X,Y] = meshgrid(x,y)
+基于 x、y 坐
         </a>
       </p>
 
@@ -367,9 +347,7 @@ SystemTap 是一个诊断 Linux 系统性能或功能问题的开源软件。它
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/System/">System</a>
-            
-              <a href="/categories/Technique/System/Security/">Security</a>
+              <a href="/categories/Technique/MatLab/">MatLab</a>
             
           </div>
         
@@ -379,9 +357,7 @@ SystemTap 是一个诊断 Linux 系统性能或功能问题的开源软件。它
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/System/">System</a>
-            
-              <a href="/tags/Security/">Security</a>
+              <a href="/tags/MatLab/">MatLab</a>
             
           </div>
         
@@ -395,40 +371,21 @@ SystemTap 是一个诊断 Linux 系统性能或功能问题的开源软件。它
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/System/Security/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8%E5%9F%BA%E7%A1%80/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8%E5%9F%BA%E7%A1%80/">操作系统安全基础</a>
+        <a href="/2020/05/26/Technique/MatLab/MatLab%E5%87%BD%E6%95%B0rand%E3%80%81randi%E3%80%81randn%E3%80%81rng/">MatLab函数rand、randi、randn、rng</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/System/Security/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8%E5%9F%BA%E7%A1%80/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8%E5%9F%BA%E7%A1%80/">
+        <a href="/2020/05/26/Technique/MatLab/MatLab%E5%87%BD%E6%95%B0rand%E3%80%81randi%E3%80%81randn%E3%80%81rng/">
           
           
             
           
-          1. 计算机系统组成层次
-
-1.1 硬件
-
-提供基本计算资源（CPU、Memory、I/O Devices）
-
-1.2 操作系统
-
-控制、协调不同的应用程序使用计算机硬件
-
-1.3 应用程序
-
-定义人们使用系统资源的方式
-
-2. 操作系统安全目标
-2.1 允许多用户安全的共享单机
-
-进程、内存、文件设备等的分离与共享
-处理器模式
-内存保护
-文件的访问控制
-鉴别
-
-2.2 确保网络环境下的安全操作
-
+          【注】详情请参阅 MatLab help 文档。
+1. rand 函数
+1.1 作用
+rand 函数用于生成在区间 (0,1) 均匀分布的随机数。
+1.2 语法
+123456X = rand    % 返回一个均匀分布的随机数X = rand(n) % 返回一个均匀分布的随机数矩阵（n x n）X = rand(sz1,...,szN)   % 返回由均匀分布的随机数组成的 sz1 x ... x
         </a>
       </p>
 
@@ -447,9 +404,7 @@ SystemTap 是一个诊断 Linux 系统性能或功能问题的开源软件。它
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/System/">System</a>
-            
-              <a href="/categories/Technique/System/Security/">Security</a>
+              <a href="/categories/Technique/MatLab/">MatLab</a>
             
           </div>
         
@@ -459,9 +414,7 @@ SystemTap 是一个诊断 Linux 系统性能或功能问题的开源软件。它
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/System/">System</a>
-            
-              <a href="/tags/Security/">Security</a>
+              <a href="/tags/MatLab/">MatLab</a>
             
           </div>
         
@@ -475,18 +428,24 @@ SystemTap 是一个诊断 Linux 系统性能或功能问题的开源软件。它
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/System/Security/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8%E6%A6%82%E8%AE%BA/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8%E6%A6%82%E8%AE%BA/">计算机系统安全概论</a>
+        <a href="/2020/05/26/Technique/MatLab/MatLab%E5%87%BD%E6%95%B0repmat/">MatLab函数repmat</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/System/Security/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8%E6%A6%82%E8%AE%BA/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8%E6%A6%82%E8%AE%BA/">
+        <a href="/2020/05/26/Technique/MatLab/MatLab%E5%87%BD%E6%95%B0repmat/">
           
           
             
           
-          1. 网络空间安全计划
-1.1 美国
-2008 年，美国启动“国家网络安全教育计划”（National Initiative for Cybersecurity Education，NICE），由美国国家标准与技术研究院（NIST）组织实施。该计划由美国《国家网络安全综合计划》演进而来。目前，NIST 致力于向高技术部门和政府部门以外的学校、图书馆和一般的办公场场合推广“国家网络安全教育计划”，旨
+          【注】详情请参阅 MatLab help 文档。
+1. 简介
+repmat函数可以用来创建重复元素的矩阵，元素可以是MatLab的任何单个数据类型（double、char、cell、struct 等）值，也可以是矩阵。
+2. 格式
+123B = repmat(A,n)B = repmat(A,r1,...,rN)B = repmat(A,r)
+
+
+第一种格式
+B为行、列维度均包含n个A的副本的矩阵
         </a>
       </p>
 
@@ -505,9 +464,7 @@ SystemTap 是一个诊断 Linux 系统性能或功能问题的开源软件。它
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/System/">System</a>
-            
-              <a href="/categories/Technique/System/Security/">Security</a>
+              <a href="/categories/Technique/MatLab/">MatLab</a>
             
           </div>
         
@@ -517,9 +474,7 @@ SystemTap 是一个诊断 Linux 系统性能或功能问题的开源软件。它
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/System/">System</a>
-            
-              <a href="/tags/Security/">Security</a>
+              <a href="/tags/MatLab/">MatLab</a>
             
           </div>
         
@@ -533,20 +488,28 @@ SystemTap 是一个诊断 Linux 系统性能或功能问题的开源软件。它
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/25/Linux/Sundry/Linux%E5%BC%95%E5%AF%BCgrub%E5%A4%B1%E8%B4%A5%E9%97%AE%E9%A2%98/">Linux引导grub失败问题</a>
+        <a href="/2020/05/26/Technique/MatLab/MatLab%E5%87%BD%E6%95%B0sort%E3%80%81issorted%E3%80%81sortrows%E3%80%81issortedrows/">MatLab函数sort、issorted、sortrows、issortedrows</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/25/Linux/Sundry/Linux%E5%BC%95%E5%AF%BCgrub%E5%A4%B1%E8%B4%A5%E9%97%AE%E9%A2%98/">
+        <a href="/2020/05/26/Technique/MatLab/MatLab%E5%87%BD%E6%95%B0sort%E3%80%81issorted%E3%80%81sortrows%E3%80%81issortedrows/">
           
           
             
           
-          1. Windows 大更新导致 Linux 引导 grub 失败
-1.1 问题
-我的电脑装有 Windows 10 和 Manjaro 双系统，最近我把 Windows 10 升级了，没想到原来漂亮的 Manjaro grub 菜单界面就再也出不来了，只见终端弹出一下信息：
-12error:unknow filesystemgrub rescue&gt;
-此时进入的是 grub 修复模式，此模式
+          【注】详情请参阅 MatLab help 文档。
+1. sort 函数
+1.1 作用
+sort 函数对数组元素进行排序。
+1.2 语法
+12345B = sort(A)B = sort(A,dim)B = sort(___,direction)B = sort(___,Name,Value)[B,I] = sort(___)
+
+B = sort(A)
+按升序对 A 的元素进行排序。
+
+
+
+如果 A
         </a>
       </p>
 
@@ -554,8 +517,8 @@ SystemTap 是一个诊断 Linux 系统性能或功能问题的开源软件。它
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-25 23:30" pubdate>
-              2020-05-25
+            <time datetime="2020-05-26 10:44" pubdate>
+              2020-05-26
             </time>
           </div>
         
@@ -565,9 +528,7 @@ SystemTap 是一个诊断 Linux 系统性能或功能问题的开源软件。它
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/Linux/">Linux</a>
-            
-              <a href="/categories/Technique/Linux/Sundry/">Sundry</a>
+              <a href="/categories/Technique/MatLab/">MatLab</a>
             
           </div>
         
@@ -577,9 +538,7 @@ SystemTap 是一个诊断 Linux 系统性能或功能问题的开源软件。它
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/Sundry/">Sundry</a>
+              <a href="/tags/MatLab/">MatLab</a>
             
           </div>
         
@@ -593,18 +552,22 @@ SystemTap 是一个诊断 Linux 系统性能或功能问题的开源软件。它
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/02/11/Linux/Shell/IFS%E5%8F%98%E9%87%8F%E5%AF%B9%E5%8A%A0%E5%8F%8C%E5%BC%95%E5%8F%B7%E5%92%8C%E4%B8%8D%E5%8A%A0%E5%8F%8C%E5%BC%95%E5%8F%B7%E5%8F%98%E9%87%8F%E7%9A%84%E5%8C%BA%E5%88%AB%E5%AF%B9%E5%BE%85/">IFS变量对加双引号和不加双引号变量的区别对待</a>
+        <a href="/2020/05/26/Technique/MatLab/MatLab%E5%87%BD%E6%95%B0xlsread%E3%80%81xlswrite%E3%80%81xlsfinfo/">MatLab函数xlsread、xlswrite、xlsfinfo</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/02/11/Linux/Shell/IFS%E5%8F%98%E9%87%8F%E5%AF%B9%E5%8A%A0%E5%8F%8C%E5%BC%95%E5%8F%B7%E5%92%8C%E4%B8%8D%E5%8A%A0%E5%8F%8C%E5%BC%95%E5%8F%B7%E5%8F%98%E9%87%8F%E7%9A%84%E5%8C%BA%E5%88%AB%E5%AF%B9%E5%BE%85/">
+        <a href="/2020/05/26/Technique/MatLab/MatLab%E5%87%BD%E6%95%B0xlsread%E3%80%81xlswrite%E3%80%81xlsfinfo/">
           
           
             
           
-          1. IFS(Internal Field Seprator) 变量
-IFS 变量是一个特殊的环境变量，叫做内部域分隔符。IFS 环境变量定义了 bash shell 用作字段分隔符的一系列字符。如果 bash shell 在数据中看到了这些字符中的任意一个，它就会假定这表明了列表中一个新数据字段的开始。默认情况下 IFS 指定为空白符（即空格、tab 符、换行符）。
-2. IFS对待未加双引号的
+          【注】详情请参阅 MatLab help 文档。
+1. xlsread 函数
+1.1 作用
+读取 XLS、XLSX、XLSM、XLTX 和 XLTM 电子表格文件。
+【注】xlsread 仅读取 7 位 ASCII 字符，不支持非相邻范围。
+1.2 语法
+12345678data = xlsread(filename)data = xlsread(filename,sheet)data = xls
         </a>
       </p>
 
@@ -612,8 +575,8 @@ IFS 变量是一个特殊的环境变量，叫做内部域分隔符。IFS 环境
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-02-11 14:53" pubdate>
-              2020-02-11
+            <time datetime="2020-05-26 10:44" pubdate>
+              2020-05-26
             </time>
           </div>
         
@@ -623,9 +586,7 @@ IFS 变量是一个特殊的环境变量，叫做内部域分隔符。IFS 环境
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/Linux/">Linux</a>
-            
-              <a href="/categories/Technique/Linux/Shell/">Shell</a>
+              <a href="/categories/Technique/MatLab/">MatLab</a>
             
           </div>
         
@@ -635,9 +596,196 @@ IFS 变量是一个特殊的环境变量，叫做内部域分隔符。IFS 环境
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Linux/">Linux</a>
+              <a href="/tags/MatLab/">MatLab</a>
             
-              <a href="/tags/Shell/">Shell</a>
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/05/26/Technique/MatLab/MatLab%E5%8F%96%E6%95%B4%E5%87%BD%E6%95%B0/">MatLab取整函数</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/05/26/Technique/MatLab/MatLab%E5%8F%96%E6%95%B4%E5%87%BD%E6%95%B0/">
+          
+          
+            
+          
+          MatLab默认的数值类型为双精度 double 型，而 double / single 类型数据在转为整型时常常需要取整，MatLab提供了以下四种取整函数。
+
+
+
+函数
+说明
+举例
+
+
+
+
+floor
+向下取整
+floor(1.5)=1floor(-1.5)=-2
+
+
+ceil
+向上取整
+ceil(1.5)=2ceil(-1.5)=-1
+
+
+round
+取整到最近的整数（若小数部分为0.5，则
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-05-26 10:44" pubdate>
+              2020-05-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/MatLab/">MatLab</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/MatLab/">MatLab</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/05/26/Technique/MatLab/MatLab%E5%8F%98%E9%87%8F/">MatLab变量</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/05/26/Technique/MatLab/MatLab%E5%8F%98%E9%87%8F/">
+          
+          
+            
+          
+          1. 变量命名
+在 MatLab 中，变量不需预先声明就可直接进行赋值操作。变量命名遵循以下规则：
+
+变量名和函数名对字母大小写敏感
+变量名和函数名必须以字母为开端，其后可以是字母、数字和下划线
+不能使用 MatLab 关键字作为变量名和函数名（可使用 iskeywords 函数查看 MatLab 中所有的关键字）
+变量名和函数名最多可包含 63 个字符，超过部分被截断忽略
+避免使用函数名作为变量
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-05-26 10:44" pubdate>
+              2020-05-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/MatLab/">MatLab</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/MatLab/">MatLab</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/05/26/Technique/MatLab/MatLab%E5%B7%A5%E4%BD%9C%E5%8C%BA/">MatLab工作区</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/05/26/Technique/MatLab/MatLab%E5%B7%A5%E4%BD%9C%E5%8C%BA/">
+          
+          
+            
+          
+          1. 基础工作区
+MatLab 中的基础工作区是针对当前 MatLab 窗口内的脚本代码而言的（无论是命令行窗口输入的还是 M 脚本文件中的），是所有脚本代码所共享的（即对当前 MatLab 窗口而言是唯一的），是对外可见的（即 MatLab 窗口中显示的工作区），与当前 MatLab 窗口是共存亡的。
+【注】从函数中调用脚本时，脚本使用的是调用函数的函数工作区。
+2. 函数工作区
+MatLab 
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-05-26 10:44" pubdate>
+              2020-05-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/MatLab/">MatLab</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/MatLab/">MatLab</a>
             
           </div>
         
@@ -649,7 +797,7 @@ IFS 变量是一个特殊的环境变量，叫做内部域分隔符。IFS 环境
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/page/43/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/42/#board">42</a><a class="page-number" href="/page/43/#board">43</a><span class="page-number current">44</span>
+      <a class="extend prev" rel="prev" href="/page/43/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/42/#board">42</a><a class="page-number" href="/page/43/#board">43</a><span class="page-number current">44</span><a class="page-number" href="/page/45/#board">45</a><a class="page-number" href="/page/46/#board">46</a><span class="space">&hellip;</span><a class="page-number" href="/page/53/#board">53</a><a class="extend next" rel="next" href="/page/45/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 

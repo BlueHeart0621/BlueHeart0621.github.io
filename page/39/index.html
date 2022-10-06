@@ -18,7 +18,7 @@
   <meta name="author" content="BlueHeart0621">
   <meta name="keywords" content="頑張れ">
   
-    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script> <script src="/live2d-widget/autoload.js" type="text/javascript"></script> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script> <script src="/live2d-widget/autoload.js" type="text/javascript"></script> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/> <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
   
   <title>お前はどこまで見えている</title>
 
@@ -197,23 +197,21 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Linux/Shell/BashShell%E5%B8%B8%E9%87%8F%E5%92%8C%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6/">BashShell常量和特殊字符</a>
+        <a href="/2020/07/20/Technique/NodeJS/NodeJS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">NodeJS学习笔记</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Linux/Shell/BashShell%E5%B8%B8%E9%87%8F%E5%92%8C%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6/">
+        <a href="/2020/07/20/Technique/NodeJS/NodeJS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
           
           
             
           
-          1. 常量
-1.1 整数
-Bash Shell 中的整数常量的基本形式如下：
-1[base#]n
-其中，base 是一个 2 到 64 的十进制数值，表示数字的基数；n 是在 base 基数中的数字的值。如果忽略 base# ，则默认以 10 为基数。n 中的每一位数如果大于 9，则依次以小写字母、大写字母、@、_ 表示（最大表示到十进制中的 63，因为 base 最大为 64）。
+          1. exports变量
+为了方便，Node为每个模块提供一个exports变量，指向module.exports。这等同在每个模块头部，有一行这样的命令。
+1var exports = module.exports;
 
-
-如果 ba
+注意，不能直接将exports变量指向一个值，因为这样等于切断了exports与module.exports的联系。
+如果模块输出的是一个函数，那就不能定义在exports对象上
         </a>
       </p>
 
@@ -221,8 +219,8 @@ Bash Shell 中的整数常量的基本形式如下：
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
+            <time datetime="2020-07-20 10:43" pubdate>
+              2020-07-20
             </time>
           </div>
         
@@ -232,9 +230,7 @@ Bash Shell 中的整数常量的基本形式如下：
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/Linux/">Linux</a>
-            
-              <a href="/categories/Technique/Linux/Shell/">Shell</a>
+              <a href="/categories/Technique/NodeJS/">NodeJS</a>
             
           </div>
         
@@ -244,9 +240,7 @@ Bash Shell 中的整数常量的基本形式如下：
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/Shell/">Shell</a>
+              <a href="/tags/NodeJS/">NodeJS</a>
             
           </div>
         
@@ -260,26 +254,18 @@ Bash Shell 中的整数常量的基本形式如下：
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Linux/Shell/BashShell%E6%95%B0%E5%80%BC%E8%BF%90%E7%AE%97/">BashShell数值运算</a>
+        <a href="/2020/07/20/Technique/NodeJS/Windows10%E4%B8%8Bnode-gyp%20rebuild%E6%8A%A5%E9%94%99/">Windows10下node-gyp rebuild报错</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Linux/Shell/BashShell%E6%95%B0%E5%80%BC%E8%BF%90%E7%AE%97/">
+        <a href="/2020/07/20/Technique/NodeJS/Windows10%E4%B8%8Bnode-gyp%20rebuild%E6%8A%A5%E9%94%99/">
           
           
             
           
           1. 简介
-Bash Shell 本身一些内置命令可以执行简单的整数运算，但复杂一些的运算（比如浮点数运算）需要通过一些外部命令来实现，Bash Shell 数学运算符只支持整数运算。
-
-
-内置命令：(( ))、let、$[ ]（方括号并不是所有的 Shell 都支持）
-
-
-外部命令：expr、bc、awk
-
-
-从运行效率来看，Bash Shell 内置命令的执行效率要高于外部命令，(( )) 执
+在 Windows 10 下 npm install 失败，并报错：
+12345678910111213141516gyp WARN install got an error, rolling back installgyp ERR! configure errorgyp ERR! stack Error: connect ETIMEDOUT 104.20.22.46:443gyp E
         </a>
       </p>
 
@@ -287,8 +273,8 @@ Bash Shell 本身一些内置命令可以执行简单的整数运算，但复杂
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
+            <time datetime="2020-07-20 10:43" pubdate>
+              2020-07-20
             </time>
           </div>
         
@@ -298,9 +284,7 @@ Bash Shell 本身一些内置命令可以执行简单的整数运算，但复杂
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/Linux/">Linux</a>
-            
-              <a href="/categories/Technique/Linux/Shell/">Shell</a>
+              <a href="/categories/Technique/NodeJS/">NodeJS</a>
             
           </div>
         
@@ -310,9 +294,7 @@ Bash Shell 本身一些内置命令可以执行简单的整数运算，但复杂
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/Shell/">Shell</a>
+              <a href="/tags/NodeJS/">NodeJS</a>
             
           </div>
         
@@ -326,58 +308,21 @@ Bash Shell 本身一些内置命令可以执行简单的整数运算，但复杂
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Linux/Shell/BashShell%E8%BF%90%E7%AE%97%E7%AC%A6%E5%8F%8A%E4%BC%98%E5%85%88%E7%BA%A7/">BashShell运算符及优先级</a>
+        <a href="/2020/07/17/Technique/TeX/LaTeX/Manjaro20.0%E9%85%8D%E7%BD%AETeXLive+TeXStudio%E7%9A%84LaTeX%E7%8E%AF%E5%A2%83/Manjaro20.0%E9%85%8D%E7%BD%AETeXLive+TeXStudio%E7%9A%84LaTeX%E7%8E%AF%E5%A2%83/">Manjaro20.0配置TeXLive+TeXStudio的LaTeX环境</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Linux/Shell/BashShell%E8%BF%90%E7%AE%97%E7%AC%A6%E5%8F%8A%E4%BC%98%E5%85%88%E7%BA%A7/">
+        <a href="/2020/07/17/Technique/TeX/LaTeX/Manjaro20.0%E9%85%8D%E7%BD%AETeXLive+TeXStudio%E7%9A%84LaTeX%E7%8E%AF%E5%A2%83/Manjaro20.0%E9%85%8D%E7%BD%AETeXLive+TeXStudio%E7%9A%84LaTeX%E7%8E%AF%E5%A2%83/">
           
           
             
           
-          Bash Shell 语言中的运算符及其优先级、聚合程度与 C 语言相同，以下运算符表按照优先级级别分组并从上往下递减：
-
-
-
-优先级
-说明
-
-
-
-
-( )
-圆括号运算符
-
-
-id++、id--
-变量自增、自减（在后）
-
-
-++id、--id
-变量自增、自减（在前）
-
-
--、+
-（单目）取负、取正
-
-
-!、~
-逻辑非、位取反
-
-
-**
-乘幂
-
-
-*、/、%
-乘、除、取余
-
-
-+、-
-加、减
-
-
-&
+          1. 安装
+1.1 安装 TeXLive
+1.1.1 从软件源安装
+在终端执行以下代码，安装 TeXLive 环境：
+12sudo pacman -S texlive-mostsudo pacman -S texlive-lang 
+【注】这样安装 TeXLive 后无法在终端使用 texdoc 工具，会报错：texdoc error: No texlive.tlpdb nor shipped t
         </a>
       </p>
 
@@ -385,8 +330,8 @@ id++、id--
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
+            <time datetime="2020-07-17 20:12" pubdate>
+              2020-07-17
             </time>
           </div>
         
@@ -396,9 +341,9 @@ id++、id--
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/Linux/">Linux</a>
+              <a href="/categories/Technique/TeX/">TeX</a>
             
-              <a href="/categories/Technique/Linux/Shell/">Shell</a>
+              <a href="/categories/Technique/TeX/LaTeX/">LaTeX</a>
             
           </div>
         
@@ -408,9 +353,9 @@ id++、id--
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Linux/">Linux</a>
+              <a href="/tags/TeX/">TeX</a>
             
-              <a href="/tags/Shell/">Shell</a>
+              <a href="/tags/LaTeX/">LaTeX</a>
             
           </div>
         
@@ -424,20 +369,32 @@ id++、id--
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%88%86%E7%B1%BB/">LinuxShell分类</a>
+        <a href="/2020/07/06/Technique/System/ComputerArchitecture/%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/">体系结构复习笔记</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%88%86%E7%B1%BB/">
+        <a href="/2020/07/06/Technique/System/ComputerArchitecture/%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/">
           
           
             
           
-          Linux Shell 从交互式和登录式来看可划分为不同的类别。
-1. 交互式 Shell
-交互式 Shell 是指在终端命令行上执行，以提示符的方式在终端等待用户输入，并实时运行用户输入的命令的模式；即与用户交互的模式。
-1.1 交互登录式 Shell
-交互登录式 Shell 是需要用户名和密码登录后进入的 Shell（比如终端下登录远程服务器）或者通过 -login 选项在终端启动的 Shel
+          1. 定律
+1.1 摩尔定律
+集成电路上可容纳的晶体管数目，大约每隔两年便会增加一倍；
+
+CMOS工艺的瓶颈使得摩尔定律逐渐失效。
+
+1.2 登纳德缩放比例定律
+每平方毫米的电路耗能几乎不变；
+
+登纳德缩放比例定律2007年开始逐渐失效，到2012年几乎完全失效；
+
+1.3 阿姆达定律
+多核并行计算机的加速受到程序中串行计算部分的限制；
+
+2. DSA 提高性能的四个原因
+
+DSA为特定领域开发了
         </a>
       </p>
 
@@ -445,8 +402,8 @@ id++、id--
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
+            <time datetime="2020-07-06 17:46" pubdate>
+              2020-07-06
             </time>
           </div>
         
@@ -456,9 +413,9 @@ id++、id--
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/Linux/">Linux</a>
+              <a href="/categories/Technique/System/">System</a>
             
-              <a href="/categories/Technique/Linux/Shell/">Shell</a>
+              <a href="/categories/Technique/System/ComputerArchitecture/">ComputerArchitecture</a>
             
           </div>
         
@@ -468,9 +425,9 @@ id++、id--
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Linux/">Linux</a>
+              <a href="/tags/System/">System</a>
             
-              <a href="/tags/Shell/">Shell</a>
+              <a href="/tags/ComputerArchitecture/">ComputerArchitecture</a>
             
           </div>
         
@@ -484,31 +441,20 @@ id++、id--
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%88%87%E6%8D%A2%E5%89%8D%E5%90%8E%E5%8F%B0%E7%A8%8B%E5%BA%8F/">LinuxShell切换前后台程序</a>
+        <a href="/2020/07/06/Technique/System/ComputerArchitecture/%E7%94%B5%E8%B7%AF%E6%9C%AF%E8%AF%AD/">电路术语</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%88%87%E6%8D%A2%E5%89%8D%E5%90%8E%E5%8F%B0%E7%A8%8B%E5%BA%8F/">
+        <a href="/2020/07/06/Technique/System/ComputerArchitecture/%E7%94%B5%E8%B7%AF%E6%9C%AF%E8%AF%AD/">
           
           
             
           
-          1. 前台运行
-直接在 Linux 终端运行命令则默认在前台执行。
-2. 后台运行
-
-
-commands  &amp;：但一旦关闭对应终端则后台程序也会被强制关闭。
-
-
-nohup commands：即使关闭对应终端后台程序也不会被强制关闭。（在别的终端需要使用 ps 命令 查看）
-
-
-1ps -aux | grep XXX	# XXX为对应程序名
-3. 前后转到后台
-
-
-ctrl + z：将在前
+          
+MUX：数据选择器（multiplexer），也称为多路选择器：在多路数据传送过程中，能够根据需要将其中任意一路选出来的电路。
+PMD：个人移动设备
+DSA：特定领域架构，针对特定领域设计的体系架构，也称为加速器，可以加速某些特定的应用程序；
+CPU：Central Processing Unit；GPU：Graphic Processing Unit；TPU：Tensor Processing
         </a>
       </p>
 
@@ -516,8 +462,8 @@ ctrl + z：将在前
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
+            <time datetime="2020-07-06 02:22" pubdate>
+              2020-07-06
             </time>
           </div>
         
@@ -527,9 +473,9 @@ ctrl + z：将在前
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/Linux/">Linux</a>
+              <a href="/categories/Technique/System/">System</a>
             
-              <a href="/categories/Technique/Linux/Shell/">Shell</a>
+              <a href="/categories/Technique/System/ComputerArchitecture/">ComputerArchitecture</a>
             
           </div>
         
@@ -539,9 +485,9 @@ ctrl + z：将在前
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Linux/">Linux</a>
+              <a href="/tags/System/">System</a>
             
-              <a href="/tags/Shell/">Shell</a>
+              <a href="/tags/ComputerArchitecture/">ComputerArchitecture</a>
             
           </div>
         
@@ -555,24 +501,26 @@ ctrl + z：将在前
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%8D%95%E5%BC%95%E5%8F%B7%E3%80%81%E5%8F%8C%E5%BC%95%E5%8F%B7%E3%80%81%E5%8F%8D%E5%BC%95%E5%8F%B7%E4%BB%A5%E5%8F%8A%E6%97%A0%E5%BC%95%E5%8F%B7%E7%9A%84%E5%8C%BA%E5%88%AB/">LinuxShell单引号、双引号、反引号以及无引号的区别</a>
+        <a href="/2020/07/04/Technique/Linux/Sundry/Linux%E4%B8%8Bunzip%E8%A7%A3%E5%8E%8B%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98/">Linux下unzip解压中文乱码问题</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%8D%95%E5%BC%95%E5%8F%B7%E3%80%81%E5%8F%8C%E5%BC%95%E5%8F%B7%E3%80%81%E5%8F%8D%E5%BC%95%E5%8F%B7%E4%BB%A5%E5%8F%8A%E6%97%A0%E5%BC%95%E5%8F%B7%E7%9A%84%E5%8C%BA%E5%88%AB/">
+        <a href="/2020/07/04/Technique/Linux/Sundry/Linux%E4%B8%8Bunzip%E8%A7%A3%E5%8E%8B%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98/">
           
           
             
           
-          1. 单引号
-单引号为强引用，即将单引号中的内容原样输出，而不会对任何变量函数进行解析。比如在 Shell 中输入以下代码：
-12_str_=&quot;hello world&quot;echo &#x27;$_str_&#x27;
-结果输出：
-1$_str_
-2. 双引号
-在双引号内，会解析的符号：` $ \
-除此之外，其余符号都原样输出。比如在 Shell 中输入以下代码：
-12_str_=
+          1. 问题
+unzip 直接解压 .zip 压缩包，如果有中文文件名则会乱码。网上大多数解决是
+1unzip -O CP936 xxx.zip
+但是对于 Manjaro、Centos 来说是没有 -O 选项的。
+2. 解决方法
+2.1 使用 unar
+1unar xxx.zip
+2.2 安装 unzip-iconv
+1yay -S unzip-iconv
+安装完后，就可以使用 -O 选项了。
+
         </a>
       </p>
 
@@ -580,8 +528,8 @@ ctrl + z：将在前
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
+            <time datetime="2020-07-04 12:12" pubdate>
+              2020-07-04
             </time>
           </div>
         
@@ -593,7 +541,7 @@ ctrl + z：将在前
             
               <a href="/categories/Technique/Linux/">Linux</a>
             
-              <a href="/categories/Technique/Linux/Shell/">Shell</a>
+              <a href="/categories/Technique/Linux/Sundry/">Sundry</a>
             
           </div>
         
@@ -605,7 +553,7 @@ ctrl + z：将在前
             
               <a href="/tags/Linux/">Linux</a>
             
-              <a href="/tags/Shell/">Shell</a>
+              <a href="/tags/Sundry/">Sundry</a>
             
           </div>
         
@@ -619,21 +567,42 @@ ctrl + z：将在前
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4alias/">LinuxShell命令alias</a>
+        <a href="/2020/07/03/Technique/DataBase/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/">数据库复习笔记</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4alias/">
+        <a href="/2020/07/03/Technique/DataBase/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/">
           
           
             
           
-          【注】具体详解参见 help 手册。
-1. 简介
-Linux Shell 内建命令 alias 用于定义或显示别名。定义别名可以为常用的（带参数）命令创建另一个名称，从而减少输入量，方便日常使用。
-2. 格式
-12alias [-p]alias NAME=VALUE [NAME=VALUE ...]
-其中，不带参数或者带 -p 参数用于以 alias NAME=VALUE 的格式显示已定义的所有别
+          1. 并发控制
+1.1 不一致性
+
+丢失修改
+不能重复读
+脏读
+
+
+2. 事务
+2.1 概念
+具有ACID特性的若干数据库
+基本操作的组合体被称为事务。
+2.2 特性
+
+宏观独立完整
+微观交错执行
+
+2.3 ACID
+
+原子性 Atomicity
+一致性 Consistency
+隔离性 Isolation
+持久性 Durability
+
+2.4 调度
+一组事务的基本步(读、写、其他控 制操
+作如加
         </a>
       </p>
 
@@ -641,8 +610,8 @@ Linux Shell 内建命令 alias 用于定义或显示别名。定义别名可以�
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
+            <time datetime="2020-07-03 14:41" pubdate>
+              2020-07-03
             </time>
           </div>
         
@@ -652,9 +621,7 @@ Linux Shell 内建命令 alias 用于定义或显示别名。定义别名可以�
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/Linux/">Linux</a>
-            
-              <a href="/categories/Technique/Linux/Shell/">Shell</a>
+              <a href="/categories/Technique/DataBase/">DataBase</a>
             
           </div>
         
@@ -664,9 +631,7 @@ Linux Shell 内建命令 alias 用于定义或显示别名。定义别名可以�
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/Shell/">Shell</a>
+              <a href="/tags/DataBase/">DataBase</a>
             
           </div>
         
@@ -680,22 +645,35 @@ Linux Shell 内建命令 alias 用于定义或显示别名。定义别名可以�
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4declare%E3%80%81local%E3%80%81typeset/">LinuxShell命令declare、local、typeset</a>
+        <a href="/2020/07/03/Technique/CryptographyBasics/%E5%AF%86%E7%A0%81%E5%AD%A6%E6%A6%82%E8%BF%B0/">密码学概述</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4declare%E3%80%81local%E3%80%81typeset/">
+        <a href="/2020/07/03/Technique/CryptographyBasics/%E5%AF%86%E7%A0%81%E5%AD%A6%E6%A6%82%E8%BF%B0/">
           
           
             
           
-          【注】具体详解参见 help 手册。
-1. 简介
-Linux Shell 内建命令 declare 用于声明变量并赋予它们属性。如果没有给定变量名称，则显示所有变量的属性和值。
-内建命令 typeset 、local 均等价于 declare，只不过 local 命令只能用在函数内部。三个内建命令的选项参数及其含义均一致。
-以下仅以 declare 内建命令为例进行解释。
-2. 格式
-1decla
+          1. 口令
+从密码学角度来看，各种网站、系统、软件的登录密码本质上不是密码，而是口令。
+2. 密码学的应用
+2.1 安全通信
+
+HTTPS
+实时消息加密
+WiFi
+Bluetooth
+
+2.2 磁盘文件加密
+
+EFS（Encrypting File System）
+TrueCrypt
+Bitlocker
+
+2.3 内容保护
+
+CSS（Content Scrambling System）
+AACS（
         </a>
       </p>
 
@@ -703,8 +681,8 @@ Linux Shell 内建命令 declare 用于声明变量并赋予它们属性。如�
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
+            <time datetime="2020-07-03 12:02" pubdate>
+              2020-07-03
             </time>
           </div>
         
@@ -714,9 +692,7 @@ Linux Shell 内建命令 declare 用于声明变量并赋予它们属性。如�
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/Linux/">Linux</a>
-            
-              <a href="/categories/Technique/Linux/Shell/">Shell</a>
+              <a href="/categories/Technique/CryptographyBasics/">CryptographyBasics</a>
             
           </div>
         
@@ -726,9 +702,7 @@ Linux Shell 内建命令 declare 用于声明变量并赋予它们属性。如�
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/Shell/">Shell</a>
+              <a href="/tags/CryptographyBasics/">CryptographyBasics</a>
             
           </div>
         
@@ -742,21 +716,24 @@ Linux Shell 内建命令 declare 用于声明变量并赋予它们属性。如�
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4grep/">LinuxShell命令grep</a>
+        <a href="/2020/07/03/Technique/CryptographyBasics/AdvancedEncryptionStandard/AdvancedEncryptionStandard/">AdvancedEncryptionStandard</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4grep/">
+        <a href="/2020/07/03/Technique/CryptographyBasics/AdvancedEncryptionStandard/AdvancedEncryptionStandard/">
           
           
             
           
-          【注】具体详解参见 man 手册。
-1. 简介
-grep 命令用来在文件中查找并输出包含匹配指定模式的字符的行。
-2. 格式
-123grep [OPTIONS] PATTERN [FILE...]grep [OPTIONS] -e PATTERN ... [FILE...]grep [OPTIONS] -f FILE ... [FILE...]
-其中，OPTIONS 为指定的选项参数，PATTER
+          1. 简化版 AES
+
+Key size = 16 bits (128/192/256 bits for AES)
+Number of rounds = 2 (10/12/14 for AES)
+Plaintext block = 16 bits (128 bits for AES)
+Ciphertext block = 16 bits (128 bits for AES)
+
+
+数据表示格式如下：
         </a>
       </p>
 
@@ -764,8 +741,8 @@ grep 命令用来在文件中查找并输出包含匹配指定模式的字符的
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
+            <time datetime="2020-07-03 12:02" pubdate>
+              2020-07-03
             </time>
           </div>
         
@@ -775,9 +752,7 @@ grep 命令用来在文件中查找并输出包含匹配指定模式的字符的
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/Linux/">Linux</a>
-            
-              <a href="/categories/Technique/Linux/Shell/">Shell</a>
+              <a href="/categories/Technique/CryptographyBasics/">CryptographyBasics</a>
             
           </div>
         
@@ -787,9 +762,7 @@ grep 命令用来在文件中查找并输出包含匹配指定模式的字符的
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/Shell/">Shell</a>
+              <a href="/tags/CryptographyBasics/">CryptographyBasics</a>
             
           </div>
         
@@ -803,28 +776,45 @@ grep 命令用来在文件中查找并输出包含匹配指定模式的字符的
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4head/">LinuxShell命令head</a>
+        <a href="/2020/07/03/Technique/CryptographyBasics/MD5/MD5/">MD5</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4head/">
+        <a href="/2020/07/03/Technique/CryptographyBasics/MD5/MD5/">
           
           
             
           
-          【注】具体详解参见 man 手册。
-1. 简介
-head 命令用于在标准输出上显示每个文件起始 10 行。如果多于一个文件，则会逐个进行显示，并在每个文件显示的首部给出对应的文件名。如果没有指定文件或者指定为 -，则从标准输入上读取。
-2. 格式
-1head [OPTION]... [FILE]...
-其中，OPTION 指定选项参数，FILE 指定显示的文件。
-3. 选项
+          1. 简介
+MD5算法采用迭代型Hash函数的一般结构，输入消息可以任意长度X，每次迭代处理512bit的消息分组，最终输出散列值为128bit。
+
+2. 步骤
 
 
 
-选项参数
-说明
 
+预处理
+
+
+
+对消息填充
+初始化缓冲区
+
+
+
+压缩过程
+
+
+
+循环处理L个消息分组
+4个轮函数和模加运算，其中每个轮函数有16步
+每轮移位步数不同
+
+
+
+
+输出结果
+L个分组都被处理完后，最后一个HMD5的输出即为产生的消息摘要。
         </a>
       </p>
 
@@ -832,8 +822,8 @@ head 命令用于在标准输出上显示每个文件起始 10 行。如果多�
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
+            <time datetime="2020-07-03 12:02" pubdate>
+              2020-07-03
             </time>
           </div>
         
@@ -843,9 +833,7 @@ head 命令用于在标准输出上显示每个文件起始 10 行。如果多�
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/Linux/">Linux</a>
-            
-              <a href="/categories/Technique/Linux/Shell/">Shell</a>
+              <a href="/categories/Technique/CryptographyBasics/">CryptographyBasics</a>
             
           </div>
         
@@ -855,9 +843,7 @@ head 命令用于在标准输出上显示每个文件起始 10 行。如果多�
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/Shell/">Shell</a>
+              <a href="/tags/CryptographyBasics/">CryptographyBasics</a>
             
           </div>
         
@@ -869,7 +855,7 @@ head 命令用于在标准输出上显示每个文件起始 10 行。如果多�
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/page/38/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/37/#board">37</a><a class="page-number" href="/page/38/#board">38</a><span class="page-number current">39</span><a class="page-number" href="/page/40/#board">40</a><a class="page-number" href="/page/41/#board">41</a><span class="space">&hellip;</span><a class="page-number" href="/page/44/#board">44</a><a class="extend next" rel="next" href="/page/40/#board"><i class="iconfont icon-arrowright"></i></a>
+      <a class="extend prev" rel="prev" href="/page/38/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/37/#board">37</a><a class="page-number" href="/page/38/#board">38</a><span class="page-number current">39</span><a class="page-number" href="/page/40/#board">40</a><a class="page-number" href="/page/41/#board">41</a><span class="space">&hellip;</span><a class="page-number" href="/page/53/#board">53</a><a class="extend next" rel="next" href="/page/40/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 

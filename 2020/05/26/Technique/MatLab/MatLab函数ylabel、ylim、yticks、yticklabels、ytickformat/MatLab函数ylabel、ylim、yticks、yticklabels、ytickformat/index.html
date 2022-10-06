@@ -1,0 +1,976 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/image/self/portrait.jpg">
+  <link rel="icon" href="/image/self/portrait.jpg">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="一个记录各种笔记的小匣子^-^">
+  <meta name="author" content="hotarugali">
+  <meta name="keywords" content="頑張れ">
+  
+    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script> <script src="/live2d-widget/autoload.js" type="text/javascript"></script> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/> <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+  
+  <title>MatLab函数ylabel、ylim、yticks、yticklabels、ytickformat - お前はどこまで見えている</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"blueheart0621.github.io","root":"/","version":"1.8.9","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":"§"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/image/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":"c194cf0c8cbc33bfb846ba1329537d81","google":"G-SXJN0942X9","gtag":"G-D3DEHLLP3W","tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"A24MlA4oV7hlze3uNQiXDAIi-MdYXbMMI","app_key":"3moFK5Ao3TD4rjA1HCmPTSm6","server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>お前はどこまで見えている</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/image/covers/%E5%9B%9B%E6%9C%88%E6%98%AF%E4%BD%A0%E7%9A%84%E8%B0%8E%E8%A8%80-1.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="MatLab函数ylabel、ylim、yticks、yticklabels、ytickformat">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2020-05-26 10:44" pubdate>
+        2020年5月26日 上午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      2.1k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      24
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- LeanCloud 统计文章PV -->
+      <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="leancloud-page-views"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">MatLab函数ylabel、ylim、yticks、yticklabels、ytickformat</h1>
+            
+            <div class="markdown-body">
+              <p>【注】x、z 轴对应函数同理；具体函数详解在 MatLab 中使用命令 <code>help func</code> 查阅。</p>
+<h2 id="1-ylabel-函数">1. ylabel 函数</h2>
+<h3 id="1-1-作用">1.1 作用</h3>
+<p>为 y 轴添加标签。</p>
+<h3 id="1-2-语法">1.2 语法</h3>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs matlab">ylabel(text) <span class="hljs-comment">% 为 gca 命令返回的当前坐标区或者图形的 y 轴添加标签</span><br>ylabel(target,text) <span class="hljs-comment">% 向 target 指定的坐标区或图形添加标签</span><br>ylabel(___,Name,Value) <span class="hljs-comment">% 使用键值对（属性名-属性值）修改标签外观（并非所有图形类型均支持修改标签外观）</span><br>t = ylabel(___) <span class="hljs-comment">% 返回用作 y 轴标签的文本对象，使用 t 可在创建标签后对其进行修改</span><br></code></pre></td></tr></table></figure>
+<ul>
+<li>常用属性：</li>
+</ul>
+<blockquote>
+<p><strong>'FontSize', Value</strong>  % 设置字体大小（默认数值 11，Value 以磅为单位）<br />
+<strong>'FontWeight', 'normal'|'bold'</strong> % 设置字体粗细（默认为 normal）<br />
+<strong>'FontName', 'XXX' | 'FixedWidth'</strong> % 设置文本字体（默认字体取决具体操作系统和区域设置，XXX 必须为系统支持的字体名称，FixedWidth 为等宽字体）<br />
+<strong>'Color', [r,g,b] | 'X'</strong> % 设置文本颜色（默认为 [0.15,0.15,0.15] RGB 三元组，X 为 <a href="/2020/05/26/Technique/MatLab/MatLab%E7%BB%98%E5%9B%BE%E6%8A%80%E5%B7%A7/MatLab%E7%BB%98%E5%9B%BE%E6%8A%80%E5%B7%A7">MatLab 常用颜色</a>名称）<br />
+<strong>'Interpreter', 'tex' | 'latex' | 'none'</strong> % 设置文本字符的解释方式（默认为 tex）<br />
+<strong>'HorizontalAlignment', 'left' | 'center' | 'right'</strong> % 设置文本在文本框中的水平对齐格式（默认为 center）<br />
+<strong>'Position', [x,y]</strong> % 设置文本框位置</p>
+</blockquote>
+<ul>
+<li>文本对象</li>
+</ul>
+<blockquote>
+<p>创建对象 t 后可以使用 <a target="_blank" rel="noopener" href="http://t.XXX">t.XXX</a> 访问、修改对应属性。（XXX 为属性名，即属性键值对中的键）</p>
+</blockquote>
+<h2 id="2-ylim-函数">2. ylim 函数</h2>
+<h3 id="2-1-作用">2.1 作用</h3>
+<p>设置或查询 y 轴范围。</p>
+<h3 id="2-2-语法">2.2 语法</h3>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs matlab">ylim(limits) <span class="hljs-comment">% 设置当前坐标区或图的 y 轴范围，limits 为 [ymin,ymax] 形式的向量（ymax &gt; ymin）</span><br>yl = ylim <span class="hljs-comment">% 以二元素向量形式赋值当前 y 轴范围给 yl</span><br>ylim auto <span class="hljs-comment">% 设置自动模式，使坐标区自动确认 y 轴范围（即此命令会将坐标区的 YLimMode 属性设置为 auto）</span><br>ylim manual <span class="hljs-comment">% 设置手动模式，将范围冻结在当前值（即此命令会将坐标区的 YLimMode 属性设置为 manual）此命令用在 hold on 命令向坐标区添加数据时保留当前范围</span><br>m = ylim(<span class="hljs-string">&#x27;mode&#x27;</span>) <span class="hljs-comment">% 返回当前 y 轴范围模式（auto 或 manual）</span><br>___ = ylim(target,___) <span class="hljs-comment">% 对 target 指定到的坐标区或图进行上述设置</span><br></code></pre></td></tr></table></figure>
+<ul>
+<li>半自动 y 轴范围：limits 指定的向量 [ymin, ymax] 中的一个为具体数值，一个为无穷大（无穷大方向由 MatLab 自动确认）</li>
+</ul>
+<h2 id="3-yticks-函数">3. yticks 函数</h2>
+<h3 id="3-1-作用">3.1 作用</h3>
+<p>设置或查询 y 轴刻度值。</p>
+<h3 id="3-2-语法">3.2 语法</h3>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs matlab">yticks(ticks) <span class="hljs-comment">% 设置 y 轴上显示刻度值的位置（ticks 为递增值向量，若设为 [] 则删除当前 y 轴刻度线）</span><br>yt = yticks <span class="hljs-comment">% 以向量形式返回当前 y 轴刻度值</span><br>yticks(<span class="hljs-string">&#x27;auto&#x27;</span>) <span class="hljs-comment">% 设置自动模式，使坐标区自动确定 y 轴显示刻度的位置值</span><br>yticks(<span class="hljs-string">&#x27;manual&#x27;</span>) <span class="hljs-comment">% 设置手动模式，将 y 轴刻度值冻结在当前值</span><br>m = yticks(<span class="hljs-string">&#x27;mode&#x27;</span>) <span class="hljs-comment">% 返回当前 y 轴刻度值模式（auto 或 manual）</span><br>___ = yticks(ax,___) <span class="hljs-comment">% 使用 ax 指定的坐标区进行上述设置</span><br></code></pre></td></tr></table></figure>
+<h2 id="4-yticklabels-函数">4. yticklabels 函数</h2>
+<h3 id="4-1-作用">4.1 作用</h3>
+<p>设置或查询 y 轴刻度标签。</p>
+<h3 id="4-2-语法">4.2 语法</h3>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs matlab">yticklabels(labels) <span class="hljs-comment">% 设置 y 轴显示刻度（yticks）对应的刻度标签，labels 为字符串数组或字符向量元胞数组</span><br>yl = yticklabels <span class="hljs-comment">% 返回当前坐标区的 y 轴刻度标签</span><br>yticklabels(<span class="hljs-string">&#x27;auto&#x27;</span>) <span class="hljs-comment">% 设置自动模式，使坐标区自动确认 y 轴刻度标签</span><br>yticklabels(<span class="hljs-string">&#x27;manual&#x27;</span>) <span class="hljs-comment">% 设置手动模式，将 y 周刻度标签冻结在当前值</span><br>m = yticklabels(<span class="hljs-string">&#x27;mode&#x27;</span>) <span class="hljs-comment">% 返回 y 轴刻度标签模式的当前值（auto 或 manual）</span><br>___ = yticklabels(ax,___) <span class="hljs-comment">% 使用 ax 指定的坐标区进行上述设置</span><br></code></pre></td></tr></table></figure>
+<h2 id="5-ytickformat-函数">5. ytickformat 函数</h2>
+<h3 id="4-1-作用-2">4.1 作用</h3>
+<p>指定 y 轴刻度标签格式。</p>
+<h3 id="4-2-语法-2">4.2 语法</h3>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs matlab">ytickformat(fmt) <span class="hljs-comment">% 设置数值 y 轴刻度标签的格式</span><br>ytickformat(datefmt) <span class="hljs-comment">% 设置显示日期或时间的标签的格式</span><br>ytickformat(durationfmt) <span class="hljs-comment">% 设置显示持续时间的标签的格式</span><br>ytickformat(ax,___) <span class="hljs-comment">% 使用 ax 指定的坐标区进行上述设置</span><br>yfmt = ytickformat <span class="hljs-comment">% 返回当前坐标区的 y 轴刻度标签所使用的格式样式</span><br>yfmt = ytickformat(ax) <span class="hljs-comment">% 返回 ax 指定的坐标区所使用的格式样式</span><br></code></pre></td></tr></table></figure>
+<ul>
+<li>数值刻度标签格式 fmt ：<code>数值格式（默认 '%g'）| 字符向量 | 字符串标量</code><br />
+数值格式如下：</li>
+</ul>
+<img src="/images/Technique/MatLab/MatLab%E5%87%BD%E6%95%B0ylabel%E3%80%81ylim%E3%80%81yticks%E3%80%81yticklabels%E3%80%81ytickformat/%E6%95%B0%E5%80%BC%E6%A0%BC%E5%BC%8F.png" srcset="/image/loading.gif" lazyload class="" width="442" title="数值格式">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">可选标识符（flags）</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">,</td>
+<td style="text-align:left">每隔三位数显示一个逗号</td>
+</tr>
+<tr>
+<td style="text-align:left">+</td>
+<td style="text-align:left">在正值前打印 + 号</td>
+</tr>
+<tr>
+<td style="text-align:left">0</td>
+<td style="text-align:left">用前导零而不是空格填充字段宽度</td>
+</tr>
+<tr>
+<td style="text-align:left">-</td>
+<td style="text-align:left">左对齐，在值得末尾而不是开头用空格填充</td>
+</tr>
+<tr>
+<td style="text-align:left">#</td>
+<td style="text-align:left">对于 %f、%e 和 %g 转换字符，即使精度为 0，也会打印小数点</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">转换标识符（required）</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">d 或 i</td>
+<td style="text-align:left">底数为 10 的有符号整数，精度值（precision）指示有效位数</td>
+</tr>
+<tr>
+<td style="text-align:left">f</td>
+<td style="text-align:left">定点记数法，精度值（precision）指示小数位数</td>
+</tr>
+<tr>
+<td style="text-align:left">e</td>
+<td style="text-align:left">指数记数法，精度值（precision）指示小数位数</td>
+</tr>
+<tr>
+<td style="text-align:left">g</td>
+<td style="text-align:left">精简版的 e 或 f，不带尾随零，精度值（precision）指示最大小数位数</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">预定义格式</th>
+<th style="text-align:left">说明</th>
+<th style="text-align:left">等效</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">'usd'</td>
+<td style="text-align:left">美元（若标签使用科学计数法，则此将指数设为 0 ）</td>
+<td style="text-align:left">$%,.2f</td>
+</tr>
+<tr>
+<td style="text-align:left">'eur'</td>
+<td style="text-align:left">欧元（若标签使用科学计数法，则此将指数设为 0 ）</td>
+<td style="text-align:left">\x20AC%,.2f</td>
+</tr>
+<tr>
+<td style="text-align:left">'gbp'</td>
+<td style="text-align:left">英镑（若标签使用科学计数法，则此将指数设为 0 ）</td>
+<td style="text-align:left">\x00A3%,.2f</td>
+</tr>
+<tr>
+<td style="text-align:left">'jpy'</td>
+<td style="text-align:left">日元（若标签使用科学计数法，则此将指数设为 0 ）</td>
+<td style="text-align:left">\x00A5%,d</td>
+</tr>
+<tr>
+<td style="text-align:left">'degress'</td>
+<td style="text-align:left">在值后显示度符号</td>
+<td style="text-align:left">%g\x00B0</td>
+</tr>
+<tr>
+<td style="text-align:left">'percentage'</td>
+<td style="text-align:left">在值后显示百分号</td>
+<td style="text-align:left">%g%%</td>
+</tr>
+<tr>
+<td style="text-align:left">'auto'</td>
+<td style="text-align:left">默认格式</td>
+<td style="text-align:left">%g</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>日期和时间格式 datefmt ：<code>'auto' | 字符向量 | 字符串标量</code>（默认格式基于数据）<br />
+日期和时间格式如下：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">字母标识符</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">G</td>
+<td style="text-align:left">年代</td>
+</tr>
+<tr>
+<td style="text-align:left">y</td>
+<td style="text-align:left">年份（没有前导零）</td>
+</tr>
+<tr>
+<td style="text-align:left">yy</td>
+<td style="text-align:left">年份，使用最后两位数</td>
+</tr>
+<tr>
+<td style="text-align:left">yyy, yyyy ···</td>
+<td style="text-align:left">年份（至少使用 'y' 实例数指定的位数）</td>
+</tr>
+<tr>
+<td style="text-align:left">u, uu, ···</td>
+<td style="text-align:left">ISO 年份（单个数字来指定年份）</td>
+</tr>
+<tr>
+<td style="text-align:left">Q</td>
+<td style="text-align:left">季度（使用一位数）</td>
+</tr>
+<tr>
+<td style="text-align:left">QQ</td>
+<td style="text-align:left">季度（使用两位数）</td>
+</tr>
+<tr>
+<td style="text-align:left">QQQ</td>
+<td style="text-align:left">季度（缩写）</td>
+</tr>
+<tr>
+<td style="text-align:left">QQQQ</td>
+<td style="text-align:left">季度（全名）</td>
+</tr>
+<tr>
+<td style="text-align:left">M</td>
+<td style="text-align:left">月份（使用一位数或两位数）</td>
+</tr>
+<tr>
+<td style="text-align:left">MM</td>
+<td style="text-align:left">月份（使用两位数）</td>
+</tr>
+<tr>
+<td style="text-align:left">MMM</td>
+<td style="text-align:left">月份（缩写）</td>
+</tr>
+<tr>
+<td style="text-align:left">MMMM</td>
+<td style="text-align:left">月份（全名）</td>
+</tr>
+<tr>
+<td style="text-align:left">MMMMM</td>
+<td style="text-align:left">月份（首字母大写）</td>
+</tr>
+<tr>
+<td style="text-align:left">W</td>
+<td style="text-align:left">一月中的第几周</td>
+</tr>
+<tr>
+<td style="text-align:left">d</td>
+<td style="text-align:left">一月中的第几天（使用一位数或两位数）</td>
+</tr>
+<tr>
+<td style="text-align:left">dd</td>
+<td style="text-align:left">一月中的第几天（使用两位数）</td>
+</tr>
+<tr>
+<td style="text-align:left">D</td>
+<td style="text-align:left">一年中的第几天（使用一位、两位或三位数）</td>
+</tr>
+<tr>
+<td style="text-align:left">DD</td>
+<td style="text-align:left">一年中的第几天（使用两位数）</td>
+</tr>
+<tr>
+<td style="text-align:left">DDD</td>
+<td style="text-align:left">一年中的第几天（使用三位数）</td>
+</tr>
+<tr>
+<td style="text-align:left">e</td>
+<td style="text-align:left">一周中的星期几（使用一位数）</td>
+</tr>
+<tr>
+<td style="text-align:left">ee</td>
+<td style="text-align:left">一周中的星期几（使用两位数）</td>
+</tr>
+<tr>
+<td style="text-align:left">eee</td>
+<td style="text-align:left">星期几（缩写名称）</td>
+</tr>
+<tr>
+<td style="text-align:left">eeee</td>
+<td style="text-align:left">星期几（全名）</td>
+</tr>
+<tr>
+<td style="text-align:left">eeeee</td>
+<td style="text-align:left">星期几（使用一位大写数字）</td>
+</tr>
+<tr>
+<td style="text-align:left">a</td>
+<td style="text-align:left">一天中的时段（上午或下午）</td>
+</tr>
+<tr>
+<td style="text-align:left">h</td>
+<td style="text-align:left">小时（采用 12 小时制，使用一位或两位数）</td>
+</tr>
+<tr>
+<td style="text-align:left">hh</td>
+<td style="text-align:left">小时（采用 12 小时制，使用两位数）</td>
+</tr>
+<tr>
+<td style="text-align:left">H</td>
+<td style="text-align:left">小时（采用 24 小时制，使用一位或两位数）</td>
+</tr>
+<tr>
+<td style="text-align:left">HH</td>
+<td style="text-align:left">小时（采用 24 小时制，使用两位数）</td>
+</tr>
+<tr>
+<td style="text-align:left">m</td>
+<td style="text-align:left">分钟（使用一位或两位数）</td>
+</tr>
+<tr>
+<td style="text-align:left">mm</td>
+<td style="text-align:left">分钟（使用两位数）</td>
+</tr>
+<tr>
+<td style="text-align:left">s</td>
+<td style="text-align:left">秒（使用一位或两位数）</td>
+</tr>
+<tr>
+<td style="text-align:left">ss</td>
+<td style="text-align:left">秒（使用两位数）</td>
+</tr>
+<tr>
+<td style="text-align:left">S, SS, ···, SSSSSSSSS</td>
+<td style="text-align:left">小数秒（S 个数指定位数，最多 9 位）</td>
+</tr>
+</tbody>
+</table>
+<p>时区偏移量格式如下：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">字母标识符</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">z</td>
+<td style="text-align:left">时区偏移量的缩写名称</td>
+</tr>
+<tr>
+<td style="text-align:left">Z</td>
+<td style="text-align:left">ISO 8601 基本格式（带有小时、分钟和可选的秒字段）</td>
+</tr>
+<tr>
+<td style="text-align:left">ZZZZ</td>
+<td style="text-align:left">长 UTC 格式</td>
+</tr>
+<tr>
+<td style="text-align:left">ZZZZZ</td>
+<td style="text-align:left">ISO 8601 扩展格式（带有小时、分钟和可选的秒字段）</td>
+</tr>
+<tr>
+<td style="text-align:left">x 或 X</td>
+<td style="text-align:left">ISO 8601 基本格式（带有小时和可选分钟字段）</td>
+</tr>
+<tr>
+<td style="text-align:left">xx 或 XX</td>
+<td style="text-align:left">ISO 8601 基本格式（带有小时和分钟字段）</td>
+</tr>
+<tr>
+<td style="text-align:left">xxx 或 XXX</td>
+<td style="text-align:left">ISO 8601 扩展格式（带有小时和分钟字段）</td>
+</tr>
+<tr>
+<td style="text-align:left">xxxx 或 XXXX</td>
+<td style="text-align:left">ISO 8601 基本格式（带有小时、分钟和可选的秒字段）</td>
+</tr>
+<tr>
+<td style="text-align:left">xxxxx 或 XXXXX</td>
+<td style="text-align:left">ISO 8601 扩展格式（带有小时、分钟和可选的秒字段）</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>持续时间值格式 durationfmt ：<code>字符向量 | 字符串向量</code></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">格式</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">'y'</td>
+<td style="text-align:left">精确固定长度的年份的数目（固定长度的一年 = 365.2425 天</td>
+</tr>
+<tr>
+<td style="text-align:left">'d'</td>
+<td style="text-align:left">精确固定长度的天数的数目（固定长度的一天 = 24 小时</td>
+</tr>
+<tr>
+<td style="text-align:left">'h'</td>
+<td style="text-align:left">小时数</td>
+</tr>
+<tr>
+<td style="text-align:left">'m'</td>
+<td style="text-align:left">分钟数</td>
+</tr>
+<tr>
+<td style="text-align:left">'s'</td>
+<td style="text-align:left">秒数</td>
+</tr>
+</tbody>
+</table>
+<p>数字计时器形式显示持续时间有以下格式：</p>
+<blockquote>
+<p><strong>'dd:hh:mm:ss'</strong><br />
+<strong>'hh:mm:ss'</strong><br />
+<strong>'mm:ss'</strong><br />
+<strong>'hh:mm'</strong><br />
+【注】可以通过附加最多 9 个 S 字符显示最多 9 位小数的秒位。</p>
+</blockquote>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/Technique/">Technique</a>
+                    
+                      <a class="hover-with-bg" href="/categories/Technique/MatLab/">MatLab</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Technique/">Technique</a>
+                    
+                      <a class="hover-with-bg" href="/tags/MatLab/">MatLab</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/05/26/Technique/MarkDown/MarkDown%E9%AB%98%E7%BA%A7%E6%8A%80%E5%B7%A7/MarkDown%E9%AB%98%E7%BA%A7%E6%8A%80%E5%B7%A7/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">MarkDown高级技巧</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/05/26/Technique/MatLab/MatLab%E5%87%BD%E6%95%B0yyaxis/MatLab%E5%87%BD%E6%95%B0yyaxis/">
+                        <span class="hidden-mobile">MatLab函数yyaxis</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="waline"></div>
+  <script type="text/javascript">
+    Fluid.utils.lazyComments('waline', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js', function () {
+        new Waline({
+          el: "#waline",
+          placeholder: "都看到这里了，留个脚印再走呗~",
+          path: window.location.pathname,
+          avatar: "retro",
+          visitor: true,
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: true,
+          serverURL: "https://waline-one-beta.vercel.app/",
+          avatarCDN: "https://gravatar.loli.net/avatar/",
+          avatarForce: false,
+          requiredMeta: [],
+          emoji: ["https://cdn.jsdelivr.net/gh/hotarugali/Emoji@bilibili_tv_gif/waline/bilibili_tv_gif","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@bilibiliHotKey/waline/bilibiliHotKey","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@bilibili2233/waline/bilibili2233","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@smallshake/waline/smallshake","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@alu/waline/alu","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@QQ/waline/QQ","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@Tieba-New/waline/Tieba-New","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@weibo/waline/weibo"],
+          // emojiMaps: ,
+          login: "enable",
+          dark: 'html[data-user-color-scheme="dark"]',
+        });
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the
+    <a target="_blank" href="https://waline.js.org" rel="nofollow noopener noopener">comments powered by Waline.</a>
+  </noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+      <div class="col-lg-7 mx-auto nopadding-x-md">
+        <div class="container custom mx-auto">
+          <script src="https://myhkw.cn/api/player/161389264877" id="myhk" key="161389264877" m="1"></script>
+        </div>
+      </div>
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+
+  <script defer src="/js/leancloud.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- KaTeX -->
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" />
+  
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/mermaid@8.8.3/dist/mermaid.min.js" ></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({"theme":"default"});
+    }
+  </script>
+
+
+
+
+  
+    <!-- Baidu Analytics -->
+    <script defer>
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?c194cf0c8cbc33bfb846ba1329537d81";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  
+    <!-- Google Analytics -->
+    <script defer>
+      window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) };
+      ga.l = +new Date;
+      ga('create', 'G-SXJN0942X9', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+  
+
+  
+    <!-- Google gtag.js -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D3DEHLLP3W"></script>
+    <script defer>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-D3DEHLLP3W');
+    </script>
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>
