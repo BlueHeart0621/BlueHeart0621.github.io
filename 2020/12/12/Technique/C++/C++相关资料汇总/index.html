@@ -1,0 +1,878 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/image/self/portrait.jpg">
+  <link rel="icon" href="/image/self/portrait.jpg">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="一个记录各种笔记的小匣子^-^">
+  <meta name="author" content="hotarugali">
+  <meta name="keywords" content="頑張れ">
+  
+    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script> <script src="/live2d-widget/autoload.js" type="text/javascript"></script> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
+  
+  <title>C++相关资料汇总 - お前はどこまで見えている</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+  <!-- 
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/fancybox.css" />
+   -->
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"blueheart0621.github.io","root":"/","version":"1.8.9","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":"§"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/image/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":"c194cf0c8cbc33bfb846ba1329537d81","google":"G-SXJN0942X9","gtag":"G-D3DEHLLP3W","tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"A24MlA4oV7hlze3uNQiXDAIi-MdYXbMMI","app_key":"3moFK5Ao3TD4rjA1HCmPTSm6","server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>お前はどこまで見えている</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/image/covers/%E5%9B%9B%E6%9C%88%E6%98%AF%E4%BD%A0%E7%9A%84%E8%B0%8E%E8%A8%80-1.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="C++相关资料汇总">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2020-12-12 11:14" pubdate>
+        2020年12月12日 上午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      2.7k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      52
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- LeanCloud 统计文章PV -->
+      <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="leancloud-page-views"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">C++相关资料汇总</h1>
+            
+            <div class="markdown-body">
+              <table>
+<thead>
+<tr>
+<th>网站</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.learncpp.com/">learncpp.com</a></td>
+<td>免费的 C++ 学习指导在线文档，非常好的 C++ 教程。</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://en.cppreference.com/w/">cppreference.com</a></td>
+<td>C++ 官方在线参考文档，内容详实丰厚。</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://cplusplus.com/">cplusplus.com</a></td>
+<td>C++ 的非官方在线参考文档。</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.boost.org/">boost.org</a></td>
+<td>boost 官方网址；boost 是一个功能强大的 C++ 开源库，其兼容并扩展了 C++ 的标准库。</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://theboostcpplibraries.com/">The Boost C++ Libraries</a></td>
+<td>boost 的在线文档，对 boost 中常用的库给出了简洁明了的综述。</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>来自 Stackoverflow 的书籍推荐清单如下：</p>
+</blockquote>
+<h2 id="Beginner">Beginner</h2>
+<h3 id="Introductory-no-previous-programming-experience">Introductory, no previous programming experience</h3>
+<table>
+<thead>
+<tr>
+<th>Book</th>
+<th>Author(s)</th>
+<th>Description</th>
+<th>review</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://rads.stackoverflow.com/amzn/click/com/0321714113"><em>C++ Primer</em></a> <br />Not to be confused with <a target="_blank" rel="noopener" href="https://rads.stackoverflow.com/amzn/click/com/0672326973"><em>C++ Primer Plus</em></a> (Stephen Prata), with a significantly less favorable <a target="_blank" rel="noopener" href="https://accu.org/bookreviews/2002/glassborow_1744">review</a>.</td>
+<td>Stanley Lippman, Josée Lajoie, and Barbara E. Moo  (<strong>updated for C++11</strong>)</td>
+<td>Coming at 1k pages, this is a very thorough introduction into C++  that covers just about everything in the language in a very accessible  format and in great detail. The fifth edition (released August 16, 2012) covers C++11.</td>
+<td>[<a target="_blank" rel="noopener" href="https://accu.org/bookreviews/2012/glassborow_1848">Review]</a></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://rads.stackoverflow.com/amzn/click/com/0321992784"><em>Programming: Principles and Practice Using C++</em></a></td>
+<td>Bjarne Stroustrup, 2nd Edition - May 25, 2014 (<strong>updated for C++11/C++14</strong>)</td>
+<td>An introduction to programming using C++ by the creator of the  language. A good read, that assumes no previous programming experience,  but is not only for beginners.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="Introductory-with-previous-programming-experience">Introductory, with previous programming experience</h3>
+<table>
+<thead>
+<tr>
+<th>Book</th>
+<th>Author(s)</th>
+<th>Description</th>
+<th>review</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://rads.stackoverflow.com/amzn/click/com/B00F8CWGOS"><em>A Tour of C++</em></a></td>
+<td>Bjarne Stroustrup (<strong><a target="_blank" rel="noopener" href="https://rads.stackoverflow.com/amzn/click/com/0134997832">2nd edition for C++17</a></strong>, <strong><a target="_blank" rel="noopener" href="https://rads.stackoverflow.com/amzn/click/com/0136816487">3rd edition for C++20</a></strong>)</td>
+<td>The “tour” is a quick (about 180 pages and 14 chapters) tutorial  overview of all of standard C++ (language and standard library, <strong>and using C++11</strong>) at a moderately high level for people who already know C++ or at least  are experienced programmers. This book is an extended version of the  material that constitutes Chapters 2-5 of The C++ Programming Language,  4th edition.</td>
+<td></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://rads.stackoverflow.com/amzn/click/com/020170353X"><em>Accelerated C++</em></a></td>
+<td>Andrew Koenig and Barbara Moo, 1st Edition - August 24, 2000</td>
+<td>This basically covers the same ground as the <em>C++ Primer</em>, but does so in a quarter of its space. This is largely because it does not attempt to be an introduction to <em>programming</em>, but an introduction to <em>C++</em> for people who've previously programmed in some other language. It has a steeper learning curve, but, for those who can cope with this, it is a  very compact introduction to the language. (Historically, it broke new  ground by being the first beginner's book to use a modern approach to  teaching the language.) Despite this, the C++ it teaches is purely  C++98.</td>
+<td>[<a target="_blank" rel="noopener" href="https://accu.org/bookreviews/2000/glassborow_1185">Review]</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="Best-practices">Best practices</h3>
+<table>
+<thead>
+<tr>
+<th>Book</th>
+<th>Author(s)</th>
+<th>Description</th>
+<th>review</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://rads.stackoverflow.com/amzn/click/com/0321334876"><em>Effective C++</em></a></td>
+<td>Scott Meyers, 3rd Edition - May 22, 2005</td>
+<td>This was written with the aim of being the best second book C++  programmers should read, and it succeeded. Earlier editions were aimed  at programmers coming from C, the third edition changes this and targets programmers coming from languages like Java. It presents ~50  easy-to-remember rules of thumb along with their rationale in a very  accessible (and enjoyable) style. For C++11 and C++14 the examples and a few issues are outdated and Effective Modern C++ should be preferred.</td>
+<td>[<a target="_blank" rel="noopener" href="https://accu.org/bookreviews/1998/glassborow_700">Review]</a></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://rads.stackoverflow.com/amzn/click/com/1491903996"><em>Effective Modern C++</em></a></td>
+<td>Scott Meyers</td>
+<td>This book is aimed at C++ programmers making the transition from  C++03 to C++11 and C++14. This book can be treated like a continuation  and &quot;correction&quot; of some parts of the previous book - &quot;Effective C++&quot;.  They don't cover the same things, but keep similar item-based theme.</td>
+<td>[<a target="_blank" rel="noopener" href="https://accu.org/bookreviews/2019/floyd_1937">Review]</a></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://rads.stackoverflow.com/amzn/click/com/0201749629"><em>Effective STL</em></a></td>
+<td>Scott Meyers</td>
+<td>This aims to do the same to the part of the standard library coming from the STL what <em>Effective C++</em> did to the language as a whole: It presents rules of thumb along with their rationale.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="Intermediate">Intermediate</h2>
+<table>
+<thead>
+<tr>
+<th>Book</th>
+<th>Author(s)</th>
+<th>Description</th>
+<th>review</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://rads.stackoverflow.com/amzn/click/com/020163371X"><em>More Effective C++</em></a></td>
+<td>Scott Meyers</td>
+<td>Even more rules of thumb than <em>Effective C++</em>. Not as important as the ones in the first book, but still good to know.</td>
+<td></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://rads.stackoverflow.com/amzn/click/com/0201615622"><em>Exceptional C++</em></a></td>
+<td>Herb Sutter</td>
+<td>Presented as a set of puzzles, this has one of the best and thorough discussions of the proper resource management and exception safety in  C++ through Resource Acquisition is Initialization (RAII) in addition to in-depth coverage of a variety of other topics including the pimpl  idiom, name lookup, good class design, and the C++ memory model.</td>
+<td>[<a target="_blank" rel="noopener" href="https://accu.org/bookreviews/2000/griffiths_209">Review]</a></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://rads.stackoverflow.com/amzn/click/com/020170434X"><em>More Exceptional C++</em></a></td>
+<td>Herb Sutter</td>
+<td>Covers additional exception safety topics not covered in <em>Exceptional C++</em>, in addition to discussion of effective object-oriented programming in C++ and correct use of the STL.</td>
+<td>[<a target="_blank" rel="noopener" href="https://accu.org/bookreviews/2002/glassborow_784">Review]</a></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://rads.stackoverflow.com/amzn/click/com/0201760428"><em>Exceptional C++ Style</em></a></td>
+<td>Herb Sutter</td>
+<td>Discusses generic programming, optimization, and resource  management; this book also has an excellent exposition of how to write  modular code in C++ by using non-member functions and the single  responsibility principle.</td>
+<td>[<a target="_blank" rel="noopener" href="https://accu.org/bookreviews/2005/goodliffe_107">Review]</a></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://rads.stackoverflow.com/amzn/click/com/0321113586"><em>C++ Coding Standards</em></a></td>
+<td>Herb Sutter and Andrei Alexandrescu</td>
+<td>“Coding standards” here doesn't mean “how many spaces should I  indent my code?”  This book contains 101 best practices, idioms, and  common pitfalls that can help you to write correct, understandable, and  efficient C++ code.</td>
+<td>[<a target="_blank" rel="noopener" href="https://accu.org/bookreviews/2004/glassborow_1439">Review]</a></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://rads.stackoverflow.com/amzn/click/com/0201734842"><em>C++ Templates: The Complete Guide</em></a></td>
+<td>David Vandevoorde and Nicolai M. Josuttis</td>
+<td>This is <em>the</em> book about templates as they existed before  C++11.  It covers everything from the very basics to some of the most  advanced template metaprogramming and explains every detail of how  templates work (both conceptually and at how they are implemented) and  discusses many common pitfalls.  Has excellent summaries of the One  Definition Rule (ODR) and overload resolution in the appendices. A <a target="_blank" rel="noopener" href="https://rads.stackoverflow.com/amzn/click/com/0321714121">second edition</a> covering C++11, C++14 and C++17 has been already published.</td>
+<td>[<a target="_blank" rel="noopener" href="https://accu.org/bookreviews/2020/floyd_1946">Review]</a></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://leanpub.com/cpp17"><em>C++ 17 - The Complete Guide</em></a></td>
+<td>Nicolai M. Josuttis</td>
+<td>This book describes all the new features introduced in the C++17  Standard covering everything from the simple ones like 'Inline  Variables', 'constexpr if' all the way up to 'Polymorphic Memory  Resources' and 'New and Delete with over aligned Data'.</td>
+<td>[<a target="_blank" rel="noopener" href="https://accu.org/bookreviews/2020/floyd_1943">Review]</a></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://leanpub.com/cpp20"><em>C++ 20 - The Complete Guide</em></a></td>
+<td>Nicolai M. Josuttis</td>
+<td>This book presents all the new language and library features of  C++20. It covers the motivation and context of each new feature with  examples and background information. The focus is on how these features  impact day-to-day programming, what it means to combine them, and how to benefit from C++20 in practice. (Note that this book was <strong>published step-by-step</strong>, and the first edition is now complete.)</td>
+<td></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="http://www.worldcolleges.info/sites/default/files/C++_In_Action.pdf"><em>C++ in Action</em></a></td>
+<td>Bartosz Milewski</td>
+<td>This book explains C++ and its features by building an application from ground up.</td>
+<td>[<a target="_blank" rel="noopener" href="https://eli.thegreenplace.net/2003/09/12/book-review-c-in-action-by-bartosz-milewski">Review]</a></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.manning.com/books/functional-programming-in-c-plus-plus"><em>Functional Programming in C++</em></a></td>
+<td>Ivan Čukić</td>
+<td>This book introduces functional programming techniques to modern C++ (C++11 and later). A very nice read for those who want to apply  functional programming paradigms to C++.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="Advanced">Advanced</h2>
+<table>
+<thead>
+<tr>
+<th>Book</th>
+<th>Author(s)</th>
+<th>Description</th>
+<th>review</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://rads.stackoverflow.com/amzn/click/com/0201704315"><em>Modern C++ Design</em></a></td>
+<td>Andrei Alexandrescu</td>
+<td>A groundbreaking book on advanced generic programming techniques.   Introduces policy-based design, type lists, and fundamental generic  programming idioms then explains how many useful design patterns  (including small object allocators, functors, factories, visitors, and  multi-methods) can be implemented efficiently, modularly, and cleanly  using generic programming.</td>
+<td>[<a target="_blank" rel="noopener" href="https://accu.org/bookreviews/2001/glassborow_979">Review]</a></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://rads.stackoverflow.com/amzn/click/com/0321227255"><em>C++ Template Metaprogramming</em></a></td>
+<td>David Abrahams and Aleksey Gurtovoy</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://rads.stackoverflow.com/amzn/click/com/1933988770"><em>C++ Concurrency In Action</em></a></td>
+<td>Anthony Williams</td>
+<td>A book covering C++11 concurrency support including the thread  library, the atomics library, the C++ memory model, locks and mutexes,  as well as issues of designing and debugging multithreaded applications. A <a target="_blank" rel="noopener" href="https://rads.stackoverflow.com/amzn/click/com/1617294691">second edition</a> covering C++14 and C++17 has already been published.</td>
+<td>[<a target="_blank" rel="noopener" href="https://accu.org/bookreviews/2012/glassborow_1850">Review]</a></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://rads.stackoverflow.com/amzn/click/com/1460966163"><em>Advanced C++ Metaprogramming</em></a></td>
+<td>Davide Di Gennaro</td>
+<td>A pre-C++11 manual of TMP techniques, focused more on practice than  theory.  There are a ton of snippets in this book, some of which are  made obsolete by type traits, but the techniques, are nonetheless useful to know.  If you can put up with the quirky formatting/editing, it is  easier to read than Alexandrescu, and arguably, more rewarding.  For  more experienced developers, there is a good chance that you may pick up something about a dark corner of C++ (a quirk) that usually only comes  about through extensive experience.</td>
+<td></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.pearson.com/store/p/large-scale-c-volume-i-process-and-architecture/P100001343596/9780201717068"><em>Large Scale C++ volume I, Process and architecture</em></a> (2020)</td>
+<td>John Lakos</td>
+<td>Part one of a three-part series extending the older book 'Large  Scale C++ Design'. Lakos explains battle-tested techniques to manage  very big C++ software projects. If you work in a big C++ software  project this is a great read, detailing the relationship between  physical and logical structure, strategies for components, and their  reuse.</td>
+<td>[<a target="_blank" rel="noopener" href="https://accu.org/bookreviews/2020/bruntlett_1953/">Review]</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="Reference-Style-All-Levels">Reference Style - All Levels</h2>
+<table>
+<thead>
+<tr>
+<th>Book</th>
+<th>Author(s)</th>
+<th>Description</th>
+<th>review</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://rads.stackoverflow.com/amzn/click/com/0321958322"><em>The C++ Programming Language</em></a></td>
+<td>Bjarne Stroustrup (<strong>updated for C++11</strong>)</td>
+<td>The classic introduction to C++ by its creator. Written to parallel  the classic K&amp;R, this indeed reads very much like it and covers just about everything from the core language to the standard library, to  programming paradigms to the language's philosophy.</td>
+<td>[<a target="_blank" rel="noopener" href="https://accu.org/bookreviews/2014/lenton_1853">Review]</a>  Note: All releases of the C++ standard are tracked in the question &quot;<em><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/81656/where-do-i-find-the-current-c-or-c-standard-documents">Where do I find the current C or C++ standard documents?</a></em>&quot;.</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://rads.stackoverflow.com/amzn/click/com/0321623215"><em>C++ Standard Library Tutorial and Reference</em></a></td>
+<td>Nicolai Josuttis (<strong>updated for C++11</strong>)</td>
+<td><em>The</em> introduction and reference for the C++ Standard Library. The second edition (released on April 9, 2012) covers C++11.</td>
+<td>[<a target="_blank" rel="noopener" href="https://accu.org/bookreviews/2012/glassborow_1849">Review]</a></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://rads.stackoverflow.com/amzn/click/com/0201183951"><em>The C++ IO Streams and Locales</em></a></td>
+<td>Angelika Langer and Klaus Kreft</td>
+<td>There's very little to say about this book except that if you want  to know anything about streams and locales, then this is the one place  to find definitive answers.</td>
+<td>[<a target="_blank" rel="noopener" href="https://accu.org/bookreviews/2000/glassborow_200">Review]</a></td>
+</tr>
+</tbody>
+</table>
+<p><strong>C++11/14/17/… References:</strong></p>
+<ul>
+<li><a target="_blank" rel="noopener" href="http://eel.is/c++draft/">Working Draft, Standard for Programming Language C++</a> generated from  <a target="_blank" rel="noopener" href="https://github.com/cplusplus/draft">LaTeX sources published on GitHub</a>.</li>
+<li><a target="_blank" rel="noopener" href="https://www.open-std.org/jtc1/sc22/wg21/docs/papers/">C++ Standard Papers</a>, latest standard working draft: <a target="_blank" rel="noopener" href="https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2020/n4868.pdf">ISO working draft</a></li>
+<li><em>The C++<a target="_blank" rel="noopener" href="https://www.iso.org/standard/50372.html">11</a>/<a target="_blank" rel="noopener" href="https://www.iso.org/standard/64029.html">14</a>/<a target="_blank" rel="noopener" href="https://www.iso.org/standard/68564.html">17</a> Standard (INCITS/ISO/IEC 14882:2011/2014/2017)</em> This, of course, is the final arbiter of all that is or isn't C++. Be  aware, however, that it is intended purely as a reference for <em>experienced</em> users willing to devote considerable time and effort to its  understanding. The C++17 standard is released in electronic form for 198 Swiss Francs.</li>
+<li>The C++17 standard is available, but seemingly not in an economical form – <a target="_blank" rel="noopener" href="https://www.iso.org/standard/68564.html">directly from the ISO</a> it costs 198 Swiss Francs (about $200 US). For most people, the <a target="_blank" rel="noopener" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/n4659.pdf">final draft before standardization</a> is more than adequate (and free). Many will prefer an <a target="_blank" rel="noopener" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/n4778.pdf">even newer draft</a>, documenting new features that are likely to be included in C++20.</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/cplusplus/draft/releases/download/n4868/n4868.pdf">C++20 draft</a> is available on GitHub as <a target="_blank" rel="noopener" href="https://github.com/cplusplus/draft/releases">some older too</a>.</li>
+<li><a target="_blank" rel="noopener" href="https://www.artima.com/shop/overview_of_the_new_cpp"><em>Overview of the New C++ (C++11/14) (PDF only)</em></a> (Scott Meyers) (<strong>updated for C++14</strong>) These are the presentation materials (slides and some lecture notes) of a three-day training course offered by Scott Meyers, who's a highly  respected author on C++. Even though the list of items is short, the  quality is high.</li>
+<li>The <a target="_blank" rel="noopener" href="https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md"><em>C++ Core Guidelines (C++11/14/17/…)</em></a> (edited by Bjarne Stroustrup and Herb Sutter) is an evolving online  document consisting of a set of guidelines for using modern C++ well.  The guidelines are focused on relatively higher-level issues, such as  interfaces, resource management, memory management, and concurrency  affecting application architecture and library design. The project was <a target="_blank" rel="noopener" href="https://isocpp.org/blog/2015/09/bjarne-stroustrup-announces-cpp-core-guidelines">announced at CppCon'15 by Bjarne Stroustrup and others</a> and welcomes contributions from the community. Most guidelines are  supplemented with a rationale and examples as well as discussions of  possible tool support. Many rules are designed specifically to be  automatically checkable by static analysis tools.</li>
+<li>The <a target="_blank" rel="noopener" href="https://isocpp.org/faq"><em>C++ Super-FAQ</em></a> (Marshall Cline, Bjarne Stroustrup, and others) is an effort by the  Standard C++ Foundation to unify the C++ FAQs previously maintained  individually by Marshall Cline and Bjarne Stroustrup and also  incorporating new contributions. The items mostly address issues at an  intermediate level and are often written with a humorous tone. Not all  items might be fully up to date with the latest edition of the C++  standard yet.</li>
+<li><a target="_blank" rel="noopener" href="https://cppreference.com"><em>cppreference.com (C++03/11/14/17/…)</em></a> (initiated by Nate Kohl) is a wiki that summarizes the basic  core-language features and has extensive documentation of the C++  standard library. The documentation is very precise but is easier to  read than the official standard document and provides better navigation  due to its wiki nature. The project documents all versions of the C++  standard and the site allows filtering the display for a specific  version. The project was <a target="_blank" rel="noopener" href="https://isocpp.org/blog/2015/07/cppcon-2014-cppreference.com-documenting-cpp-one-edit-at-a-time-nate-kohl">presented by Nate Kohl at CppCon'14</a>.</li>
+</ul>
+<hr />
+<h2 id="Classics-Older">Classics / Older</h2>
+<p><strong>Note:</strong> Some information contained within these books may not be up-to-date or no longer considered best practice.</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://rads.stackoverflow.com/amzn/click/com/0201543303"><em>The Design and Evolution of C++</em></a> (Bjarne Stroustrup)  If you want to know <em>why</em> the language is the way it is, this book is where you find answers. This covers everything <em>before the standardization</em> of C++.</li>
+<li><a target="_blank" rel="noopener" href="https://rads.stackoverflow.com/amzn/click/com/0201423391"><em>Ruminations on C++</em></a> - (Andrew Koenig and Barbara Moo) [<a target="_blank" rel="noopener" href="https://accu.org/bookreviews/1997/glassborow_776">Review]</a></li>
+<li><a target="_blank" rel="noopener" href="https://rads.stackoverflow.com/amzn/click/com/0201548550"><em>Advanced C++ Programming Styles and Idioms</em></a> (James Coplien)  A predecessor of the pattern movement, it describes  many C++-specific “idioms”. It's certainly a very good book and might  still be worth a read if you can spare the time, but quite old and not  up-to-date with current C++.</li>
+<li><a target="_blank" rel="noopener" href="https://rads.stackoverflow.com/amzn/click/com/0201633620"><em>Large Scale C++ Software Design</em></a> (John Lakos)  Lakos explains techniques to manage very big C++ software projects. Certainly, a good read, if it only was up to date. It was  written long before C++ 98 and misses on many features (e.g. namespaces) important for large-scale projects. If you need to work on a big C++  software project, you might want to read it, although you need to take  more than a grain of salt with it. Not to be confused with the extended  and later book series Large Scale C++ volume I-III.</li>
+<li><a target="_blank" rel="noopener" href="https://rads.stackoverflow.com/amzn/click/com/0201834545"><em>Inside the C++ Object Model</em></a> (Stanley Lippman)  If you want to know how virtual member functions are commonly implemented and how base objects are commonly laid out in  memory in a multi-inheritance scenario, and how all this affects  performance, this is where you will find thorough discussions of such  topics.</li>
+<li><a target="_blank" rel="noopener" href="https://rads.stackoverflow.com/amzn/click/com/0201514591"><em>The Annotated C++ Reference Manual</em></a> (Bjarne Stroustrup, Margaret A. Ellis) This book is quite outdated in  the fact that it explores the 1989 C++ 2.0 version - Templates,  exceptions, namespaces, and new casts were not yet introduced. Saying  that however, this book goes through the entire C++ standard of the time explaining the rationale, the possible implementations, and features of the language. This is not a book to learn programming principles and  patterns on C++, but to understand every aspect of the C++ language.</li>
+<li><a target="_blank" rel="noopener" href="https://rads.stackoverflow.com/amzn/click/com/0139798099"><em>Thinking in C++</em></a> (Bruce Eckel, 2nd Edition, 2000).  Two volumes; is a tutorial-style <em>free</em> set of intro level books. Downloads: <a target="_blank" rel="noopener" href="https://ia800100.us.archive.org/10/items/TICPP2ndEdVolOne/TICPP-2nd-ed-Vol-one.zip">vol 1</a>, <a target="_blank" rel="noopener" href="https://ia800108.us.archive.org/24/items/TICPP2ndEdVolTwo/TICPP-2nd-ed-Vol-two.zip">vol 2</a>. Unfortunately, they're marred by a number of trivial errors (e.g. maintaining that temporaries are automatic <code>const</code>), with no official errata list. A partial 3rd party errata list is available at <a target="_blank" rel="noopener" href="http://www.computersciencelab.com/Eckel.htm">http://www.computersciencelab.com/Eckel.htm</a>, but it is apparently not maintained.</li>
+<li><a target="_blank" rel="noopener" href="https://rads.stackoverflow.com/amzn/click/com/0201533936"><em>Scientific and Engineering C++: An Introduction to Advanced Techniques and Examples</em></a> (John Barton and Lee Nackman) It is a comprehensive and very detailed book that tried to explain and  make use of all the features available in C++, in the context of  numerical methods. It introduced at the time several new techniques,  such as the Curiously Recurring Template Pattern (CRTP, also called  Barton-Nackman trick). It pioneered several techniques such as dimensional analysis and  automatic differentiation. It came with a lot of compilable and useful code, ranging from an  expression parser to a Lapack wrapper. The code is <a target="_blank" rel="noopener" href="https://www.informit.com/store/scientific-and-engineering-c-plus-plus-an-introduction-9780201533934">still available online</a>. Unfortunately, the books have become somewhat outdated in the style and  C++ features, however, it was an incredible tour-de-force at the time  (1994, pre-STL). The chapters on dynamics inheritance are a bit complicated to understand and not very useful. An updated version of this classic book that includes move semantics and the lessons learned from the STL would be very nice.</li>
+</ul>
+<h2 id="参考资料">参考资料</h2>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/388242/the-definitive-c-book-guide-and-list">The Definitive C++ Book Guide and List</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.reddit.com/r/cpp_questions/comments/ld7a54/is_cpluspluscom_a_good_way_to_learn_proper_c/">Is cplusplus.com a good way to learn proper C++?</a></li>
+</ul>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/Technique/">Technique</a>
+                    
+                      <a class="hover-with-bg" href="/categories/Technique/C/">C++</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Technique/">Technique</a>
+                    
+                      <a class="hover-with-bg" href="/tags/C/">C++</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/12/13/Research/Sundry/AI%E4%BC%9A%E8%AE%AE%E6%9C%9F%E5%88%8A%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99%E6%B1%87%E6%80%BB/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">ML、CV方向会议期刊相关资料汇总</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/12/10/Technique/Python/Python%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83/">
+                        <span class="hidden-mobile">Python虚拟环境</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="waline"></div>
+  <script type="text/javascript">
+    Fluid.utils.lazyComments('waline', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js', function () {
+        new Waline({
+          el: "#waline",
+          placeholder: "都看到这里了，留个脚印再走呗~",
+          path: window.location.pathname,
+          avatar: "retro",
+          visitor: true,
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: true,
+          serverURL: "https://waline-one-beta.vercel.app/",
+          avatarCDN: "https://gravatar.loli.net/avatar/",
+          avatarForce: false,
+          requiredMeta: [],
+          emoji: ["https://cdn.jsdelivr.net/gh/hotarugali/Emoji@bilibili_tv_gif/waline/bilibili_tv_gif","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@bilibiliHotKey/waline/bilibiliHotKey","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@bilibili2233/waline/bilibili2233","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@smallshake/waline/smallshake","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@alu/waline/alu","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@QQ/waline/QQ","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@Tieba-New/waline/Tieba-New","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@weibo/waline/weibo"],
+          // emojiMaps: ,
+          login: "enable",
+          dark: 'html[data-user-color-scheme="dark"]',
+        });
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the
+    <a target="_blank" href="https://waline.js.org" rel="nofollow noopener noopener">comments powered by Waline.</a>
+  </noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+      <div class="col-lg-7 mx-auto nopadding-x-md">
+        <div class="container custom mx-auto">
+          <script src="https://myhkw.cn/api/player/161389264877" id="myhk" key="161389264877" m="1"></script>
+        </div>
+      </div>
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+<!-- 
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/fancybox.umd.js" ></script>
+ -->
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+
+  <script defer src="/js/leancloud.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- KaTeX -->
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" />
+  
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/mermaid@8.8.3/dist/mermaid.min.js" ></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({"theme":"default"});
+    }
+  </script>
+
+
+
+
+  
+    <!-- Baidu Analytics -->
+    <script defer>
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?c194cf0c8cbc33bfb846ba1329537d81";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  
+    <!-- Google Analytics -->
+    <script defer>
+      window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) };
+      ga.l = +new Date;
+      ga('create', 'G-SXJN0942X9', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+  
+
+  
+    <!-- Google gtag.js -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D3DEHLLP3W"></script>
+    <script defer>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-D3DEHLLP3W');
+    </script>
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

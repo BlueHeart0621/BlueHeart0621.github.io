@@ -197,6 +197,254 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
+        <a href="/2020/11/18/Technique/NLP/%E8%AF%8D%E5%B5%8C%E5%85%A5/%E8%AF%8D%E5%B5%8C%E5%85%A5/">词嵌入</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/11/18/Technique/NLP/%E8%AF%8D%E5%B5%8C%E5%85%A5/%E8%AF%8D%E5%B5%8C%E5%85%A5/">
+          
+          
+            
+          
+          【注】参考自李沐的《动手学深度学习》。
+1. 简介
+自然语言是一套用来表达含义的复杂系统，词是表义的基本单元。而我们要考虑是如何构造词向量来表示词。把词映射为实数域向量的技术称为词嵌入。
+2. 词嵌入
+
+最初的词嵌入采用 one-hot 编码来生成词向量，但 one-hot 编码的词向量无法准确表达不同词之间的相似度。刻画词向量间的相似度常常使用余弦相似度：对于向量 x,y∈Rd
+\boldsym
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-11-18 14:19" pubdate>
+              2020-11-18
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/NLP/">NLP</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/NLP/">NLP</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/11/16/Technique/Linux/Shell/LinuxShell%E4%B8%8B%E5%88%86%E5%8D%B7%E5%8E%8B%E7%BC%A9%E4%B8%8E%E8%A7%A3%E5%8E%8B/">LinuxShell下分卷压缩与解压</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/11/16/Technique/Linux/Shell/LinuxShell%E4%B8%8B%E5%88%86%E5%8D%B7%E5%8E%8B%E7%BC%A9%E4%B8%8E%E8%A7%A3%E5%8E%8B/">
+          
+          
+            
+          
+          1. 简介
+由于网络传输有时会限制单个文件大小，所以对于大文件的传输我们需要将其分卷压缩成多个小的压缩包。在 LinuxShell 下可以使用 split &amp; cat（系统自带）命令或直接使用压缩软件 rar、zip、7z（需自行安装）命令来实现分卷压缩和解压。
+2. rar/7z 命令
+2.1 分卷压缩
+1rar/7z a -v&lt;size&gt;[b,k,m,g,...] &lt;
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-11-16 11:37" pubdate>
+              2020-11-16
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Linux/">Linux</a>
+            
+              <a href="/categories/Technique/Linux/Shell/">Shell</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/Linux/">Linux</a>
+            
+              <a href="/tags/Shell/">Shell</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/11/13/Technique/Linux/Shell/BashShell%E5%AD%97%E7%AC%A6%E4%B8%B2/">BashShell字符串</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/11/13/Technique/Linux/Shell/BashShell%E5%AD%97%E7%AC%A6%E4%B8%B2/">
+          
+          
+            
+          
+          1. 简介
+BashShell 字符串内置许多字符串操作，包括有字符串切割、替换、分割等。
+2. $&#123;&#125; 语法
+2.1 字符串截取
+举例来说：对于字符串 file=/dir1/dir2/dir3/my.file.txt，可以用 $&#123;&#125; 分别替换得到不同的值：
+
+$&#123;file#*/&#125;：   删掉第一个 / 及其左边的字符串：dir1/dir
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-11-13 14:53" pubdate>
+              2020-11-13
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Linux/">Linux</a>
+            
+              <a href="/categories/Technique/Linux/Shell/">Shell</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/Linux/">Linux</a>
+            
+              <a href="/tags/Shell/">Shell</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/11/11/Technique/Compression/Image/JPEG%E5%8E%8B%E7%BC%A9%E5%9B%BE%E5%83%8F%E5%A2%9E%E5%BC%BA%E7%BB%BC%E8%BF%B0/JPEG%E5%8E%8B%E7%BC%A9%E5%9B%BE%E5%83%8F%E5%A2%9E%E5%BC%BA%E7%BB%BC%E8%BF%B0/">JPEG压缩图像增强综述</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/11/11/Technique/Compression/Image/JPEG%E5%8E%8B%E7%BC%A9%E5%9B%BE%E5%83%8F%E5%A2%9E%E5%BC%BA%E7%BB%BC%E8%BF%B0/JPEG%E5%8E%8B%E7%BC%A9%E5%9B%BE%E5%83%8F%E5%A2%9E%E5%BC%BA%E7%BB%BC%E8%BF%B0/">
+          
+          
+            
+          
+          【注】参考自 Jiaying Liu 等的论文「A Comprehensive Benchmark for Single Image Compression Artifact Reduction」。
+1. 常用数据集
+1.1 数据集特征
+
+1.2 数据集性能
+
+2. 研究历史
+
+压缩图像增强主要分为深度学习方法和非深度学习方法。
+2.1 非深度方法
+
+2.2 深度方法
+深度方法目前主要分为两个主流
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-11-11 20:44" pubdate>
+              2020-11-11
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Compression/">Compression</a>
+            
+              <a href="/categories/Technique/Compression/Image/">Image</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/Compression/">Compression</a>
+            
+              <a href="/tags/Image/">Image</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
         <a href="/2020/11/10/Technique/Python/Python%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/">Python函数式编程</a>
       </h1>
 
@@ -564,267 +812,6 @@ Rime 可谓是一款「神级」中文输入框架，支持多种输入法，诸
               <a href="/tags/Technique/">Technique</a>
             
               <a href="/tags/InputMethod/">InputMethod</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/10/24/Technique/Math/Theory/%E7%9F%A9%E9%98%B5/Toeplitz%E7%9F%A9%E9%98%B5%E5%92%8C%E5%BE%AA%E7%8E%AF%E7%9F%A9%E9%98%B5/">Toeplitz矩阵和循环矩阵</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/10/24/Technique/Math/Theory/%E7%9F%A9%E9%98%B5/Toeplitz%E7%9F%A9%E9%98%B5%E5%92%8C%E5%BE%AA%E7%8E%AF%E7%9F%A9%E9%98%B5/">
-          
-          
-            
-          
-          1. Toeplitz矩阵
-1.1 定义
-Toeplitz（特普利茨）矩阵又称为常对角矩阵，该矩阵每条左上至右下的对角线均为常数。Toeplitz矩阵 AAA 为满足以下条件的矩阵：
-Aij=Ai+1,j+1\begin{array}{c}
-A_{ij} = A_{i+1,j+1}
-\end{array}
-Aij​=Ai+1,j+1​​
-其一般形式为：
-A=[a0a−1⋯a−(n−1)a1a0⋯a
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-10-24 22:12" pubdate>
-              2020-10-24
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/Math/">Math</a>
-            
-              <a href="/categories/Technique/Math/Theory/">Theory</a>
-            
-              <a href="/categories/Technique/Math/Theory/%E7%9F%A9%E9%98%B5/">矩阵</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/Math/">Math</a>
-            
-              <a href="/tags/Theory/">Theory</a>
-            
-              <a href="/tags/%E7%9F%A9%E9%98%B5/">矩阵</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/10/22/Technique/DeepLearning/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E7%BB%8F%E5%85%B8%E7%BD%91%E7%BB%9C/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E7%BB%8F%E5%85%B8%E7%BD%91%E7%BB%9C/">图像处理经典网络</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/10/22/Technique/DeepLearning/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E7%BB%8F%E5%85%B8%E7%BD%91%E7%BB%9C/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E7%BB%8F%E5%85%B8%E7%BD%91%E7%BB%9C/">
-          
-          
-            
-          
-          【注】本文采用 PyTorch 框架，基于 Fashion-MNIST 数据集。
-1. LeNet
-LeNet分为卷积层块和全连接层块两个部分。
-
-1.1 卷积层块
-
-
-卷积层块⾥的基本单位是卷积层后接最⼤池化层：卷积层⽤来识别图像⾥的空间模式，如线条和物体局部，之后的最⼤池化层则⽤来降低卷积层对位置的敏感性。
-
-
-在卷积层块中：每个卷积层都使⽤ 5×55 \times 55×5 的窗⼝，并在输出
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-10-22 10:51" pubdate>
-              2020-10-22
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/DeepLearning/">DeepLearning</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/DeepLearning/">DeepLearning</a>
-            
-              <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/10/17/Technique/DeepLearning/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/AdaDelta/">AdaDelta</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/10/17/Technique/DeepLearning/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/AdaDelta/">
-          
-          
-            
-          
-          1. 简介
-AdaDelta 算法是 AdaGrad 算法的改进，和 RMSprop 算法类似，AdaDelta 算法通过梯度平方的指数衰减移动平均来调整学习率；此外，AdaDelta 算法还引入了每次参数更新差值 Δθ\Delta \thetaΔθ 的平方的指数衰减移动平均。
-2. 原理
-第 ttt 次迭代时：
-
-首先计算参数更新差值 ΔW\Delta WΔW 的平方的指数衰减权值移动平均为：
-
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-10-17 16:21" pubdate>
-              2020-10-17
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/DeepLearning/">DeepLearning</a>
-            
-              <a href="/categories/Technique/DeepLearning/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/">优化算法</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/DeepLearning/">DeepLearning</a>
-            
-              <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a>
-            
-              <a href="/tags/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/">优化算法</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/10/17/Technique/DeepLearning/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/RMSprop/">RMSprop</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/10/17/Technique/DeepLearning/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/RMSprop/">
-          
-          
-            
-          
-          1. 简介
-RMSprop 算法是 AdaGrad 算法的改进，可以在有些情况下避免 AdaGrad 算法中学习率不断单调下降以至于过早衰减的缺点。
-2. 原理
-第 ttt 次迭代时：
-
-RMSprop 算法首先计算每次迭代梯度 ∂L∂W\frac{\partial L}{\partial \boldsymbol{W}}∂W∂L​ 平方的指数衰减移动平均：
-
-ht=βht−1+(1−β)∂L∂Wt
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-10-17 16:21" pubdate>
-              2020-10-17
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/DeepLearning/">DeepLearning</a>
-            
-              <a href="/categories/Technique/DeepLearning/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/">优化算法</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/DeepLearning/">DeepLearning</a>
-            
-              <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a>
-            
-              <a href="/tags/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/">优化算法</a>
             
           </div>
         

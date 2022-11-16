@@ -197,6 +197,141 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
+        <a href="/2020/05/26/Technique/Linux/Manjaro/Manjaro20.0%E5%AE%89%E8%A3%85deb%E8%BD%AF%E4%BB%B6%E5%8C%85/">Manjaro20.0安装deb软件包</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/05/26/Technique/Linux/Manjaro/Manjaro20.0%E5%AE%89%E8%A3%85deb%E8%BD%AF%E4%BB%B6%E5%8C%85/">
+          
+          
+            
+          
+          由于 Manjaro 基于 ArchLinux，而 deb 软件包格式为 Debian 系统安装包格式，故 Manjaro 不能直接安装 deb 软件包，而需要借助 debtap 工具。
+1. 安装 debtap
+
+yaourt 工具
+
+1yaourt -S debtap
+
+yay 工具
+
+1yay -S debtap
+
+pacaur 工具
+
+1pacaur -S debtap
+【注】三种方式任选
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-05-26 10:44" pubdate>
+              2020-05-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Linux/">Linux</a>
+            
+              <a href="/categories/Technique/Linux/Manjaro/">Manjaro</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/Linux/">Linux</a>
+            
+              <a href="/tags/Manjaro/">Manjaro</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/05/26/Technique/Linux/Manjaro/Manjaro20.0%E5%AE%89%E8%A3%85man%E4%B8%AD%E6%96%87%E6%89%8B%E5%86%8C/">Manjaro20.0安装man中文手册</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/05/26/Technique/Linux/Manjaro/Manjaro20.0%E5%AE%89%E8%A3%85man%E4%B8%AD%E6%96%87%E6%89%8B%E5%86%8C/">
+          
+          
+            
+          
+          1. 安装 man 中文软件包
+1pacman -S man-pages-zh_cn   # 繁体换成 man-pages-zh_tw
+2. 查询 man 中文手册安装目录
+1pacman -Ql man-pages-zh_cn | less
+发现 man 中文手册安装目录为 /usr/share/man/zh_CN 。
+3. 设置中英文 man 别名
+
+编辑 ~/.bashrc文件：
+
+1sud
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-05-26 10:44" pubdate>
+              2020-05-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Linux/">Linux</a>
+            
+              <a href="/categories/Technique/Linux/Manjaro/">Manjaro</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/Linux/">Linux</a>
+            
+              <a href="/tags/Manjaro/">Manjaro</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
         <a href="/2020/05/26/Technique/Linux/Manjaro/Manjaro20.0%E6%B7%BB%E5%8A%A0%E5%9B%BD%E5%86%85%E6%BA%90%E3%80%81%E7%A4%BE%E5%8C%BA%E6%BA%90%E3%80%81AUR%E6%BA%90/">Manjaro20.0添加国内源、社区源、AUR源</a>
       </h1>
 
@@ -669,170 +804,6 @@ Bash Shell 中的整数常量的基本形式如下：
 
 
 如果 ba
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/Linux/">Linux</a>
-            
-              <a href="/categories/Technique/Linux/Shell/">Shell</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/Shell/">Shell</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/05/26/Technique/Linux/Shell/BashShell%E6%95%B0%E5%80%BC%E8%BF%90%E7%AE%97/">BashShell数值运算</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/05/26/Technique/Linux/Shell/BashShell%E6%95%B0%E5%80%BC%E8%BF%90%E7%AE%97/">
-          
-          
-            
-          
-          1. 简介
-Bash Shell 本身一些内置命令可以执行简单的整数运算，但复杂一些的运算（比如浮点数运算）需要通过一些外部命令来实现，Bash Shell 数学运算符只支持整数运算。
-
-
-内置命令：(( ))、let、$[ ]（方括号并不是所有的 Shell 都支持）
-
-
-外部命令：expr、bc、awk
-
-
-从运行效率来看，Bash Shell 内置命令的执行效率要高于外部命令，(( )) 执
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/Linux/">Linux</a>
-            
-              <a href="/categories/Technique/Linux/Shell/">Shell</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/Shell/">Shell</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/05/26/Technique/Linux/Shell/BashShell%E8%BF%90%E7%AE%97%E7%AC%A6%E5%8F%8A%E4%BC%98%E5%85%88%E7%BA%A7/">BashShell运算符及优先级</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/05/26/Technique/Linux/Shell/BashShell%E8%BF%90%E7%AE%97%E7%AC%A6%E5%8F%8A%E4%BC%98%E5%85%88%E7%BA%A7/">
-          
-          
-            
-          
-          Bash Shell 语言中的运算符及其优先级、聚合程度与 C 语言相同，以下运算符表按照优先级级别分组并从上往下递减：
-
-
-
-优先级
-说明
-
-
-
-
-( )
-圆括号运算符
-
-
-id++、id--
-变量自增、自减（在后）
-
-
-++id、--id
-变量自增、自减（在前）
-
-
--、+
-（单目）取负、取正
-
-
-!、~
-逻辑非、位取反
-
-
-**
-乘幂
-
-
-*、/、%
-乘、除、取余
-
-
-+、-
-加、减
-
-
-&
         </a>
       </p>
 

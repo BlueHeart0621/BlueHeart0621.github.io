@@ -197,6 +197,132 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
+        <a href="/2020/05/26/Technique/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4let/">LinuxShell命令let</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/05/26/Technique/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4let/">
+          
+          
+            
+          
+          【注】具体详解参见 help 手册。
+1. 简介
+Linux Shell 内建命令用于估算算数表达式。估算的计算以定宽的整数完成，不带溢出检测，但除 0 会报错。
+2. 格式
+1let ARG [ARG ...]
+其中，ARG 参数会被 let 作为算数表达式来进行估值。ARG 中的算术操作符列表按照优先级由高到低给出如下：
+【注】如果最后一个 ARG 估值为 0,则返回 1；否则返回 0 。
+
+
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-05-26 10:44" pubdate>
+              2020-05-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Linux/">Linux</a>
+            
+              <a href="/categories/Technique/Linux/Shell/">Shell</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/Linux/">Linux</a>
+            
+              <a href="/tags/Shell/">Shell</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/05/26/Technique/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4more/">LinuxShell命令more</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/05/26/Technique/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4more/">
+          
+          
+            
+          
+          【注】具体详解参见 man 手册。
+1. 简介
+more 是一个用于屏幕阅读的文件分页阅览过滤的 Shell 命令，一次阅览一屏幕文字，同时提供页面阅读的基于 vi 交互式命令的交互环境。
+2. 格式
+1more [OPTIONS] FILE...
+其中，OPTIONS 指定选项参数，FILE 指定阅读的文件。
+除命令行指定 OPTIONS 选项参数外，more 也同时从环境变量 MORE（选项参
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-05-26 10:44" pubdate>
+              2020-05-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Linux/">Linux</a>
+            
+              <a href="/categories/Technique/Linux/Shell/">Shell</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/Linux/">Linux</a>
+            
+              <a href="/tags/Shell/">Shell</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
         <a href="/2020/05/26/Technique/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4ps/">LinuxShell命令ps</a>
       </h1>
 
@@ -698,129 +824,6 @@ Linux Shell 中在当前 Shell 执行脚本文件的方式有：
               <a href="/tags/Linux/">Linux</a>
             
               <a href="/tags/Shell/">Shell</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/05/26/Technique/Linux/Shell/LinuxShell%E9%87%8D%E5%AE%9A%E5%90%91%E5%92%8C%E7%AE%A1%E9%81%93/">LinuxShell重定向和管道</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/05/26/Technique/Linux/Shell/LinuxShell%E9%87%8D%E5%AE%9A%E5%90%91%E5%92%8C%E7%AE%A1%E9%81%93/">
-          
-          
-            
-          
-          Linux Shell 提供重定向符用于重定向命令的输入和输出，提供管道符用于将一个命令的输出重定向作为另一个命令的输入。
-【注】在终端命令上，重定向符总是指向数据流动的方向。
-1. 输出重定向
-1.1 输出重定向符 &gt;
-1command &gt; outputfile
-&gt; 重定向符用于把 command 命令的输出结果重定向输入到指定的 outputfile 文件中。
-
-
-如果 ou
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/Linux/">Linux</a>
-            
-              <a href="/categories/Technique/Linux/Shell/">Shell</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/Shell/">Shell</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/05/26/Technique/Linux/Sundry/Linux%E4%B8%8Bfcitx%E9%85%8D%E7%BD%AE%E4%B8%AD%E6%96%87%E6%A0%87%E7%82%B9/">Linux下fcitx配置中文标点</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/05/26/Technique/Linux/Sundry/Linux%E4%B8%8Bfcitx%E9%85%8D%E7%BD%AE%E4%B8%AD%E6%96%87%E6%A0%87%E7%82%B9/">
-          
-          
-            
-          
-          Linux 系统环境下使用中文输入法往往是令人头疼的一件事。使用 fcitx 成功安装了中文输入法后，却发现中文标点和日常使用不一致。这是由于系统设定的全角标点映射集不符合我们期望，于是乎我们可以撸起袖子定制属于自己的个性化中文标点映射集。
-
-查看 /usr/share/fcitx/data/punc.mb.zh_CN 文件
-本人系统上目前的全角标点映射集如下（第一列是键盘符号，每个键盘符号可以对
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/Linux/">Linux</a>
-            
-              <a href="/categories/Technique/Linux/Sundry/">Sundry</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/Sundry/">Sundry</a>
             
           </div>
         

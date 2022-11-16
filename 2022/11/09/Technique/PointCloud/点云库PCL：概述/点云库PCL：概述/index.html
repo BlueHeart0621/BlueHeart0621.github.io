@@ -1,0 +1,642 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/image/self/portrait.jpg">
+  <link rel="icon" href="/image/self/portrait.jpg">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="一个记录各种笔记的小匣子^-^">
+  <meta name="author" content="hotarugali">
+  <meta name="keywords" content="頑張れ">
+  
+    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script> <script src="/live2d-widget/autoload.js" type="text/javascript"></script> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
+  
+  <title>点云库PCL：概述 - お前はどこまで見えている</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+  <!-- 
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/fancybox.css" />
+   -->
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"blueheart0621.github.io","root":"/","version":"1.8.9","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":"§"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/image/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":"c194cf0c8cbc33bfb846ba1329537d81","google":"G-SXJN0942X9","gtag":"G-D3DEHLLP3W","tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"A24MlA4oV7hlze3uNQiXDAIi-MdYXbMMI","app_key":"3moFK5Ao3TD4rjA1HCmPTSm6","server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>お前はどこまで見えている</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/image/covers/%E5%9B%9B%E6%9C%88%E6%98%AF%E4%BD%A0%E7%9A%84%E8%B0%8E%E8%A8%80-1.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="点云库PCL：概述">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2022-11-09 00:27" pubdate>
+        2022年11月9日 凌晨
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      3.2k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      32
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- LeanCloud 统计文章PV -->
+      <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="leancloud-page-views"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">点云库PCL：概述</h1>
+            
+            <div class="markdown-body">
+              <blockquote>
+<p>阅读笔记，摘录自《点云库 PCL 从入门到精通》— 郭浩。</p>
+</blockquote>
+<h2 id="1-PCL-介绍">1. PCL 介绍</h2>
+<p>PCL（Point Cloud Library，点云库）是在吸收了前人点云相关研究基础上建立起来的大型跨平台开源 C++ 编程库，它实现了大量点云相关的通用算法和高效数据结构，涉及点云获取、滤波、分割、配准、检索、特征提取、识别、追踪、曲面重建、可视化等；支持多种操作系统平台，可在 Windows、Linux、Android、Mac OS X、部分嵌入式实时系统上运行。如果说 OpenCV 是 2D 信息获取与处理的结晶，那么 PCL 就在 3D 信息获取与处理上具有相同的地位。PCL 是 BSD 授权方式，可以免费进行商业和学术应用。</p>
+<h2 id="2-点云介绍">2. 点云介绍</h2>
+<p>点云是分布在 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi></mrow><annotation encoding="application/x-tex">N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span></span></span></span> 维空间中的离散点集，主要以三维为主，它是对物体表面信息的离散采样。三维扫描技术的迅速发展使得点云数据的获取更加简单方便，而点云驱动的计算机图形学在逆向工程、数字城市、文物保护、智能机器人、无人驾驶和人机交互等领域日益彰显其广阔的应用前景。点云处理技术包括点云获取、滤波、分割、配准、检索、特征提取、识别、追踪、曲面重建、可视化等方法技术，也包括结合图论、模式识别、机器学习、数据挖掘和深度学习等人工智能算法之后的解决实践应用中的同步定位与地图构建（SLAM）、三维模型检索、三维场景语义分析、广义点云等综合技术内容。</p>
+<h2 id="3-点云应用">3. 点云应用</h2>
+<h3 id="3-1-测绘领域">3.1 测绘领域</h3>
+<p>能够直接获取高精度三维地面点数据，是对传统测量技术在高程数据获取及自动化快速处理方面的重要技术补充。激光遥感测量系统在地形测绘、环境检测、三维城市建模、地球科学、行星科学等诸多领域具有广泛的发展前景，是目前最先进的能实时获取地形表面三维空间信息和影像的遥感系统。目前，在各种提取地面点的算法中，算法结果与实际结果之间差别较大，违背了实际情况，PCL中强大的模块可以助力此处的各种需求。</p>
+<h3 id="3-2-无人驾驶领域">3.2 无人驾驶领域</h3>
+<p>无人驾驶车辆（Unmanned Vehicle）是一种具有自主驾驶行为的车辆。它是在传统车辆基础上，加人环境感知、智能决策、路径规划、行为控制等人工智能模块，进而可以与周围环境交互并作出相应决策和动作的移动轮式机器人，用于解放驾驶员，辅助安全驾驶，得到了广泛的关注，并且拥有良好的前景。无人驾驶能够实现主要是依赖车载 LiDAR 点云系统，其可以快速提取地球表面物体三维坐标信息，实时定位于构建地图，有着其他方法无法比拟的优势：</p>
+<ul>
+<li>数据采集速度快，只需沿街一次便可收集所有信息；</li>
+<li>抗干扰能力强，全天候 24 小时都可进行数据采集；</li>
+<li>点云密度大，数据量丰富，精度可靠；</li>
+<li>可以得到实时车辆的位姿信息。</li>
+</ul>
+<h3 id="3-3-机器人领域">3.3 机器人领域</h3>
+<p>移动机器人对其工作环境的有效感知、辨识与认知，是其进行自主行为优化并可靠完成所承担任务的前提和基础。如何实现场景中物体的有效分类与识别是移动机器人场景认知的核心问题，目前基于视觉图像处理技术来进行场景的认知是该领域的重要方法。但移动机器人在线获取的视觉图像质量受光线变化影响较大，特别是在光线较暗的场景更难以应用，随着 RGBD 获取设备的大量推广，在机器人领域势必掀起一股深度信息结合2D信息的应用研究热潮，深度信息的引人能够使机器人更好地对环境进行认知、辨识，与图像信息在机器人领域的应用一样，需要强大智能软件算法支撑，PCL 就为此而生，最重要的是 PCL 本身就是为机器人而发起的开源项目，PCL 中不仅提供了对现有的 RGBD 信息的获取设备的支持，还提供了高效的分割、特征提取、识别、追踪等最新的算法，最重要的是它可以移植到ROS、Android、Ubuntu 等主流 Linux 平台上，PCL 无疑将会成为机器人应用领域的一把瑞士军刀。</p>
+<h3 id="3-4-人机交互领域">3.4 人机交互领域</h3>
+<p>虚拟现实技术（简称 VR），又称灵境技术，是以沉浸性、交互性和构想性为基本特征的计算机高级人机界面。它综合利用了计算机图形学、仿真技术、多媒体技术、人工智能技术、计算机网络技术、并行处理技术和多传感器技术，模拟人的视觉、听觉、触觉等感觉器官功能，使人能够沉浸在计算机生成的虚拟境界中，并能够通过语言、手势等自然的方式与之进行实时交互，创建了一种适人化的多维信息空间，具有广阔的应用前景。目前各种交互式体感应用的推出，让虚拟现实与人机交互发展非常迅速，以微软、华硕、三星等为例，目前诸多公司推出的 RGBD 解决方案，势必会让虚拟现实走出实验室，因为现有的 RGBD 设备已经开始大量推向市场，只是缺少其他应用的跟进，这正是在为虚拟现实和人机交互应用铸造生态链的底部，笔者认为这也正是 PCL 为何在此时才把自己与世人分享的重要原因所在，它将是基于 RGBD 设备的虛拟现实和人机交互应用生态链中最重要的一个环节。</p>
+<h3 id="3-5-逆向工程与其他工业自动化领域">3.5 逆向工程与其他工业自动化领域</h3>
+<p>大部分工业产品是根据二维或三维 CAD 模型制造而成，但有时因为数据丢失、设计多点云库 PCL 从入门到精通次更改、实物引进等原因，产品的几何模型无法获得，因而常常需要根据现有产品实物生成物体几何模型。逆向工程技术能够对产品实物进行测绘，重构产品表面三维几何模型，生成产品制造所需的数字化文档。在一些工业领域，如汽车制造业，许多零件的几何模型都通过逆向工程由油泥模型或实物零件获得，目前在 CAD/CAM 领域利用激光点云进行高精度测量与重建成为趋势，同时引来了新的问题，通过获取的海量点云数据，来提取重建模型的几何参数，或者形状模型，对模型进行智能检索，从点云数据获取模型的曲面模型等，诸如此类的问题解决方案在 PCL 中都有涉及。例如 <code>kdtree</code> 和 <code>octree</code> 对海量点云进行高效压缩存储与管理，其中滤波、配准、特征描述与提前基础处理，可以应用于模型的智能检索，以及后期的曲面重建和可视化都在 PCL 中有相应的模块。总之，三维点云数据的处理是逆向工程中比较重要的一环，PCL 中间所有的模块正是为此而生的。</p>
+<h3 id="3-6-BIM-领域">3.6 BIM 领域</h3>
+<p>BIM（Building Information modeling，建筑信息模型化），是用三维模型作为信息载体，以描述建筑物生命周期内的建设活动的一种理念。BIM工作的核心是建立一个可供建筑设计者、结构设计者、施工方、物业方乃至业主等参与者都能使用、修改的三维模型。这样的模型一般称为BIM模型，这种模型是现实地物的虚拟映射，大到整个项目的规三维激光扫描技术为BIM建立模型提供准确的几何信息，可以大面积、高效率、全面地采集地物的几何信息以及功能特性，快捷地建立起精确的地物模型。通过三维激光扫描得到的点云BIM模型能够非常真实地呈现地物的实际状态，作为一种基础数据类型，结合 BIM 工程主要有以下几方面的应用:</p>
+<ul>
+<li>文物建筑保护</li>
+<li>工程质量检测与管理</li>
+<li>建筑拆迁管理</li>
+<li>建筑物改造或装修</li>
+</ul>
+<h2 id="4-PCL-结构">4. PCL 结构</h2>
+<p>对于 3D 点云处理来说，PCL 完全是一个模块化的现化 C++ 模板库，PCL 架构图如下所示：</p>
+<img src="/images/Technique/PointCloud/%E7%82%B9%E4%BA%91%E5%BA%93PCL%EF%BC%9A%E6%A6%82%E8%BF%B0/PCL%E6%9E%B6%E6%9E%84.png" srcset="/image/loading.gif" lazyload class="" width="1217" title="PCL架构">
+<p>PCL 基于以下第三方库：Boost、Eigen、FLANN、VTK、CUDA、OpenNI、Qhull，实现点云相关获取、滤波、分割、配准、检索、特征提取、识别、追踪、曲面重建、可视化等。</p>
+<ul>
+<li>PCL 利用 OpenMP、GPU、CUDA 等先进高性能计算技术，通过并行化提高程序实时性；</li>
+<li>PCL 中 K 近邻搜索操作的架构是基于 FLANN 所实现的，速度也是目前技术中最快的。</li>
+<li>PCL 中所有模块和算法都是通过 Boost 共享指针来传送数据的，因而避免了多次复制系统中已存在的数据的需要。</li>
+</ul>
+<p>从算法的角度，PCL 是指纳入了多种操作点云数据的三维处理算法，其中包括：过滤、特征估计、表面重建、模型拟合和分割、定位搜索等。每一套算法都是通过基类进行划分的，试图把贯穿整个流水线处理技术的所有常见功能整合在一起，从而保持了整个算法实现过程中的紧凑和结构清晰，提高代码的重用性、简洁可读。在PCL中一个处理管道的基本接口程序如下。</p>
+<ol>
+<li>创建处理对象(例如过滤、特征估计、分割等)。</li>
+<li>使用setInputCloud通过输入点云数据，处理模块。</li>
+<li>设置算法相关参数。</li>
+<li>调用计算（或过滤、分割等）得到输出。</li>
+</ol>
+<p>为了进一步简化和开发，PCL 被分成一系列较小的代码库， 使其模块化，以便能够单独编译使用，提高可配置性，特别适用于嵌入式处理中。PCL 中常用代码库介绍如下。</p>
+<ul>
+<li>libpcl filters: 如采样、去除离群点、特征提取、拟合估计等数据实现过滤器。</li>
+<li>libpcl features: 实现多种三维特征，如曲面法线、曲率、边界点估计、矩不变量、主曲率，PFH 和 FPFH 特征，旋转图像、积分图像，NARF 描述子，RIFT, 相对标准偏差，数据强度的筛选等等。</li>
+<li>libpcl I/O: 实现数据的输入和输出操作，例如点云数据文件(PCD)的读写。</li>
+<li>libpcl segmentation: 实现聚类提取，如通过采样一致性方法对一系列参数模型(如平面、柱面、球面、直线等)进行模型拟合点云分割提取，提取多边形棱镜内部点云等。</li>
+<li>libpcl surface: 实现表面重建技术，如网格重建、凸包重建、移动最小二乘法平滑等。</li>
+<li>libpcl register: 实现点云配准方法，如 ICP 等。</li>
+<li>libpcl keypoints: 实现不同的关键点的提取方法，这可以用来作为预处理步骤，决定在哪儿提取特征描述符。</li>
+<li>libpcl range: 实现支持不同点云数据集生成的范围图像。</li>
+</ul>
+<p>为了保证 PCL 中操作的正确性，上述提到的库中的方法和类包含了单元测试。这套单元测试通常都是由专门的构建按需求编译和验证的。当某一部分测试失败时，这些特定部分的各自作者就会立即被告知。这彻底地保证了代码测试过程出现的任何变故，以及新功能或修改都不会破坏 PCL 中已经存在的代码。</p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/Technique%EF%BC%8CPointCloud/">Technique，PointCloud</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Technique%EF%BC%8CPointCloud/">Technique，PointCloud</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2022/11/16/Technique/TeX/BibTeX/BibTeX%E6%9D%A1%E7%9B%AE%E7%B1%BB%E5%9E%8B/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">BibTeX条目类型</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2022/11/07/Technique/Tools/Tmux/Tmux%E9%85%8D%E7%BD%AE/">
+                        <span class="hidden-mobile">Tmux配置</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="waline"></div>
+  <script type="text/javascript">
+    Fluid.utils.lazyComments('waline', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js', function () {
+        new Waline({
+          el: "#waline",
+          placeholder: "都看到这里了，留个脚印再走呗~",
+          path: window.location.pathname,
+          avatar: "retro",
+          visitor: true,
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: true,
+          serverURL: "https://waline-one-beta.vercel.app/",
+          avatarCDN: "https://gravatar.loli.net/avatar/",
+          avatarForce: false,
+          requiredMeta: [],
+          emoji: ["https://cdn.jsdelivr.net/gh/hotarugali/Emoji@bilibili_tv_gif/waline/bilibili_tv_gif","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@bilibiliHotKey/waline/bilibiliHotKey","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@bilibili2233/waline/bilibili2233","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@smallshake/waline/smallshake","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@alu/waline/alu","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@QQ/waline/QQ","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@Tieba-New/waline/Tieba-New","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@weibo/waline/weibo"],
+          // emojiMaps: ,
+          login: "enable",
+          dark: 'html[data-user-color-scheme="dark"]',
+        });
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the
+    <a target="_blank" href="https://waline.js.org" rel="nofollow noopener noopener">comments powered by Waline.</a>
+  </noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+      <div class="col-lg-7 mx-auto nopadding-x-md">
+        <div class="container custom mx-auto">
+          <script src="https://myhkw.cn/api/player/161389264877" id="myhk" key="161389264877" m="1"></script>
+        </div>
+      </div>
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+<!-- 
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/fancybox.umd.js" ></script>
+ -->
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+
+  <script defer src="/js/leancloud.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- KaTeX -->
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" />
+  
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/mermaid@8.8.3/dist/mermaid.min.js" ></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({"theme":"default"});
+    }
+  </script>
+
+
+
+
+  
+    <!-- Baidu Analytics -->
+    <script defer>
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?c194cf0c8cbc33bfb846ba1329537d81";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  
+    <!-- Google Analytics -->
+    <script defer>
+      window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) };
+      ga.l = +new Date;
+      ga('create', 'G-SXJN0942X9', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+  
+
+  
+    <!-- Google gtag.js -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D3DEHLLP3W"></script>
+    <script defer>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-D3DEHLLP3W');
+    </script>
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

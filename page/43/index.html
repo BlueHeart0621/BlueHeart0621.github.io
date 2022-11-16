@@ -197,6 +197,122 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
+        <a href="/2020/05/26/Technique/Git/Windows%E4%B8%8BGit%E9%85%8D%E7%BD%AEssh-key/">Windows下Git配置ssh-key</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/05/26/Technique/Git/Windows%E4%B8%8BGit%E9%85%8D%E7%BD%AEssh-key/">
+          
+          
+            
+          
+          1. 简介
+Git 配置 ssh-key 是为了识别并区分不同的主机，所以一台主机要使用 Git 进行远程仓库托管代码，首先要在本机生成 ssh-key，并配置到对应远程仓库网站（Github、Gitee 等）。
+2. 生成 ssh-key
+在 Git 终端输入：
+1ssh-keygen -t rsa -C &quot;youremail&quot; 
+然后 Git 终端会询问保存路径（建议直接 
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-05-26 10:44" pubdate>
+              2020-05-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Git/">Git</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/Git/">Git</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/05/26/Technique/Go/Go%E8%AF%AD%E8%A8%80%E4%BB%A3%E7%A0%81%E9%A3%8E%E6%A0%BC/">Go语言代码风格</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/05/26/Technique/Go/Go%E8%AF%AD%E8%A8%80%E4%BB%A3%E7%A0%81%E9%A3%8E%E6%A0%BC/">
+          
+          
+            
+          
+          Go 语言对代码风格进行了强制性统一，其代码风格要求如下：
+1. Public 变量/函数必须以大写字母开头，Private 变量/函数必须以小写字母开头
+Private 函数只能在本包中使用，Public 函数可以被其他包调用。
+2. { } 书写应遵循 K&amp;R 风格
+譬如以下风格是正确的：
+123if expression &#123;    ...&#125;
+而以下风格是错误的：
+
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-05-26 10:44" pubdate>
+              2020-05-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Go/">Go</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/Go/">Go</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
         <a href="/2020/05/26/Technique/Go/Go%E8%AF%AD%E8%A8%80%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">Go语言常用命令</a>
       </h1>
 
@@ -629,118 +745,6 @@ Code Chunk
 运行 M 文件：在命令行窗口下运行 run filename 命令。
 
 
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/MatLab/">MatLab</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/MatLab/">MatLab</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/05/26/Technique/MatLab/MatLab%E5%87%BD%E6%95%B0/">MatLab函数</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/05/26/Technique/MatLab/MatLab%E5%87%BD%E6%95%B0/">
-          
-          
-            
-          
-          1. 普通函数
-MatLab 中的普通函数是可以传递输入参数和输出参数的函数，其基本定义格式为：
-123function [y1,...,yn] = funcname(x1,...,xn)    ...end
-其中，x1,...,xn 为输入参数变量，y1,...,yn 为输出参数变量，funcname 为函数名称。MatLab 在实现对普通函数调用时，允许使用比声明变量数目少的输入输出变量，调用
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/MatLab/">MatLab</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/MatLab/">MatLab</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/05/26/Technique/MatLab/MatLab%E5%87%BD%E6%95%B0datetime%E3%80%81datenum%E3%80%81datevec%E3%80%81datestr/">MatLab函数datetime、datenum、datevec、datestr</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/05/26/Technique/MatLab/MatLab%E5%87%BD%E6%95%B0datetime%E3%80%81datenum%E3%80%81datevec%E3%80%81datestr/">
-          
-          
-            
-          
-          【注】详情请参阅 MatLab help 文档。
-1. datetime 函数
-1.1 作用
-datetime 用来创建表示时间点的数组（数组元素类型为 datetime）。
-1.2 语法
-12345678910t = datetimet = datetime(relativeDay)t = datetime(DateString)t = datetime(DateStrings,&#x27;In
         </a>
       </p>
 
