@@ -203,7 +203,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      509 字
+      510 字
     </span>
   
 
@@ -260,7 +260,7 @@
 <h3 id="2-1-相邻两次登录间隔">2.1 相邻两次登录间隔</h3>
 <p>Arch Linux 默认在一次登录失败后，需要等待一段时间的延迟才能进行下一次的登录，默认设置下个人感觉还可以接受。如果需要修改，则可以在配置文件 <code>/etc/pam.d/system-login</code> 中增加以下一行设定：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">auth optional pam_faildelay.so delay=4000000<br></code></pre></td></tr></table></figure>
-<p>上述设定是 4 秒，如果需要其它时间，只需修改 <code>delay</code> 字段，它的单位是毫秒。</p>
+<p>上述设定是 4 秒，如果需要其它时间，只需修改 <code>delay</code> 字段，它的单位是微秒（microsecond）。</p>
 <h3 id="2-2-登录失败次数和锁定时间">2.2 登录失败次数和锁定时间</h3>
 <p>Arch Linux 默认在 15 分钟内登录失败 3 次就锁定 10 分钟，可以修改 <code>/etc/security/faillock.conf</code> 来更改默认设定，主要修改其中三个字段：</p>
 <ul>
