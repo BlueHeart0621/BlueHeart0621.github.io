@@ -197,18 +197,21 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/01/17/Technique/Configure/Configure%E8%84%9A%E6%9C%AC%E5%AD%A6%E4%B9%A0/">Configure脚本学习</a>
+        <a href="/2021/01/23/Technique/TeX/LaTeX/LaTeX%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F%E6%8E%92%E7%89%88/">LaTeX数学公式排版</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/01/17/Technique/Configure/Configure%E8%84%9A%E6%9C%AC%E5%AD%A6%E4%B9%A0/">
+        <a href="/2021/01/23/Technique/TeX/LaTeX/LaTeX%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F%E6%8E%92%E7%89%88/">
           
           
             
           
-          1. 指定安装目录
-1./configure --prefix=...
-
+          1. 公式对齐
+1234\begin&#123;aligned&#125;    x &amp; = a + &amp; b \\    c + d &amp; = &amp; y \\\end&#123;aligned&#125;
+其中，&amp; 表示的是需要对齐的位置。结果显示如下：
+x=a+bc+d=y\begin{array}{c}
+\begin{aligned}
+    x &amp;
         </a>
       </p>
 
@@ -216,8 +219,8 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-17 11:28" pubdate>
-              2021-01-17
+            <time datetime="2021-01-23 13:26" pubdate>
+              2021-01-23
             </time>
           </div>
         
@@ -227,7 +230,9 @@
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/Configure/">Configure</a>
+              <a href="/categories/Technique/TeX/">TeX</a>
+            
+              <a href="/categories/Technique/TeX/LaTeX/">LaTeX</a>
             
           </div>
         
@@ -237,7 +242,9 @@
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Configure/">Configure</a>
+              <a href="/tags/TeX/">TeX</a>
+            
+              <a href="/tags/LaTeX/">LaTeX</a>
             
           </div>
         
@@ -251,28 +258,20 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/01/17/Technique/CMake/CMake%E4%BD%BF%E7%94%A8%E5%AD%A6%E4%B9%A0/">CMake 使用学习</a>
+        <a href="/2021/01/22/Technique/TeX/LaTeX/LaTeX%E6%96%87%E7%AB%A0%E6%8F%90%E7%BA%B2/LaTeX%E6%96%87%E7%AB%A0%E6%8F%90%E7%BA%B2/">LaTeX文章提纲</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/01/17/Technique/CMake/CMake%E4%BD%BF%E7%94%A8%E5%AD%A6%E4%B9%A0/">
+        <a href="/2021/01/22/Technique/TeX/LaTeX/LaTeX%E6%96%87%E7%AB%A0%E6%8F%90%E7%BA%B2/LaTeX%E6%96%87%E7%AB%A0%E6%8F%90%E7%BA%B2/">
           
           
             
           
-          1. 概述
-CMake 工具能够自动生成 Makefile 文件，减轻手写 Makefile 文件的工作量，同时减少书写 Makefile 文件产生的错误。
-2. CMake 命令
-CMake 运行主要分为两个阶段：
-
-
-配置阶段：解析 CMakeLists.txt 文件
-
-
-生成阶段：生成构建环境
-
-
-有关 cmake 的详细参数参见 cmake --help，本文仅对其中较难理解的选项加以描述
+          【注】笔记来自《LaTeX入门》——刘海洋。
+1. 导言区
+在 \begin&#123;document&#125; 前面的部分称为导言区，导言区通常用来对文档的性质做一些设置，或者自定义一些命令。
+1.1 声明文档类
+12\documentclass&#123;article&#125;         # 西文短文类\documentclass[UTF8]&#123;ctexart&#125;
         </a>
       </p>
 
@@ -280,8 +279,8 @@ CMake 运行主要分为两个阶段：
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-17 11:25" pubdate>
-              2021-01-17
+            <time datetime="2021-01-22 19:50" pubdate>
+              2021-01-22
             </time>
           </div>
         
@@ -291,7 +290,9 @@ CMake 运行主要分为两个阶段：
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/CMake/">CMake</a>
+              <a href="/categories/Technique/TeX/">TeX</a>
+            
+              <a href="/categories/Technique/TeX/LaTeX/">LaTeX</a>
             
           </div>
         
@@ -301,7 +302,9 @@ CMake 运行主要分为两个阶段：
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/CMake/">CMake</a>
+              <a href="/tags/TeX/">TeX</a>
+            
+              <a href="/tags/LaTeX/">LaTeX</a>
             
           </div>
         
@@ -315,31 +318,26 @@ CMake 运行主要分为两个阶段：
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/01/16/Technique/DeepLearning/Padding%E7%AD%96%E7%95%A5/Padding%E7%AD%96%E7%95%A5/">Padding策略</a>
+        <a href="/2021/01/22/Technique/TeX/LaTeX/LaTeX%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86/LaTeX%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86/">LaTeX相关知识</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/01/16/Technique/DeepLearning/Padding%E7%AD%96%E7%95%A5/Padding%E7%AD%96%E7%95%A5/">
+        <a href="/2021/01/22/Technique/TeX/LaTeX/LaTeX%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86/LaTeX%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86/">
           
           
             
           
-          1. Zero Padding
+          1. TeX 引擎、命令、格式
 
-均用 0 值填充。
+TeX 引擎目前主要有四种：TeX/eTeX、pdfTeX、XeTeX、LuaTeX
+TeX 格式目前主要有三种：Plain TeX、LaTeX、ConTeXt
 
+TeX 引擎对不同的 TeX 格式提供的排版命令以及编译输出的排版文件格式如下表：
 
-2. Replicate Padding
-
-用距离最近的像素值填充。
-
-
-3. Mirror Padding
-
-关于四边界成镜像对称，关于四角成镜像对称。
+2. TeX 引擎编译流程
 
 
-
+早些年代电子文档格式主要是 PostScript（PS），那时主要通过 dvips 
         </a>
       </p>
 
@@ -347,8 +345,8 @@ CMake 运行主要分为两个阶段：
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-16 18:08" pubdate>
-              2021-01-16
+            <time datetime="2021-01-22 10:04" pubdate>
+              2021-01-22
             </time>
           </div>
         
@@ -358,7 +356,9 @@ CMake 运行主要分为两个阶段：
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/DeepLearning/">DeepLearning</a>
+              <a href="/categories/Technique/TeX/">TeX</a>
+            
+              <a href="/categories/Technique/TeX/LaTeX/">LaTeX</a>
             
           </div>
         
@@ -368,9 +368,9 @@ CMake 运行主要分为两个阶段：
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/DeepLearning/">DeepLearning</a>
+              <a href="/tags/TeX/">TeX</a>
             
-              <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a>
+              <a href="/tags/LaTeX/">LaTeX</a>
             
           </div>
         
@@ -384,42 +384,24 @@ CMake 运行主要分为两个阶段：
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/01/16/Technique/InformationTheory/%E4%BF%A1%E6%81%AF%E7%9A%84%E7%BB%9F%E8%AE%A1%E5%BA%A6%E9%87%8F/%E4%BF%A1%E6%81%AF%E7%9A%84%E7%BB%9F%E8%AE%A1%E5%BA%A6%E9%87%8F/">信息的统计度量</a>
+        <a href="/2021/01/21/Technique/TeX/LaTeX/TeXStudio%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/">TeXStudio使用技巧</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/01/16/Technique/InformationTheory/%E4%BF%A1%E6%81%AF%E7%9A%84%E7%BB%9F%E8%AE%A1%E5%BA%A6%E9%87%8F/%E4%BF%A1%E6%81%AF%E7%9A%84%E7%BB%9F%E8%AE%A1%E5%BA%A6%E9%87%8F/">
+        <a href="/2021/01/21/Technique/TeX/LaTeX/TeXStudio%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/">
           
           
             
           
-          符号约定
+          1. 正反向查找
+正反向查找是由 SyncTeX 机制实现的, 需要源代码编辑器、pdf 阅读器和 TeX 输出程序的共同参与。
+1.1 正向查找
+正向查找即根据源文件位置查找生成的 pdf 文件对应位置。
 
+在 TeXStudio 环境中，使用快捷键 Ctrl+鼠标左击 即可定位源文件中鼠标位置在 pdf 文件中的对应位置。
 
-
-符号
-说明
-
-
-
-
-X,Y,⋯X, Y, \cdotsX,Y,⋯
-随机事件集合/随机变量
-
-
-x,y,⋯x, y, \cdotsx,y,⋯
-随机事件集合中的元素/随机变量的取值
-
-
-p(x)p(x)p(x)
-随机事件发生的概率
-
-
-p(x∣y)p(x \vert y)p(x∣y)
-随机事件发生的条件概率
-
-
-p(xy),p(x,y)p(x y), p(x, y)p(xy),p(x,
+1.2 反向查找
+反向查找即根据 pdf 文件位置查找源文件的对应位
         </a>
       </p>
 
@@ -427,8 +409,8 @@ p(xy),p(x,y)p(x y), p(x, y)p(xy),p(x,
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-16 18:06" pubdate>
-              2021-01-16
+            <time datetime="2021-01-21 21:14" pubdate>
+              2021-01-21
             </time>
           </div>
         
@@ -438,7 +420,9 @@ p(xy),p(x,y)p(x y), p(x, y)p(xy),p(x,
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/InformationTheory/">InformationTheory</a>
+              <a href="/categories/Technique/TeX/">TeX</a>
+            
+              <a href="/categories/Technique/TeX/LaTeX/">LaTeX</a>
             
           </div>
         
@@ -448,7 +432,9 @@ p(xy),p(x,y)p(x y), p(x, y)p(xy),p(x,
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/InformationTheory/">InformationTheory</a>
+              <a href="/tags/TeX/">TeX</a>
+            
+              <a href="/tags/LaTeX/">LaTeX</a>
             
           </div>
         
@@ -462,20 +448,24 @@ p(xy),p(x,y)p(x y), p(x, y)p(xy),p(x,
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/01/16/Technique/Math/Modeling/PCA%E6%A8%A1%E5%9E%8B/">PCA模型</a>
+        <a href="/2021/01/21/Technique/TeX/LaTeX/VSCode+LaTeXWorkshop%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/">VSCode+LaTeXWorkshop使用技巧</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/01/16/Technique/Math/Modeling/PCA%E6%A8%A1%E5%9E%8B/">
+        <a href="/2021/01/21/Technique/TeX/LaTeX/VSCode+LaTeXWorkshop%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/">
           
           
             
           
-          1. 简介
-主成分分析是指将数据中相关性很高的属性/变量转化成彼此相互独立或不相关的新属性/变量，利用较少的新属性/变量（主成分）去解释原来数据中的大部分属性/变量的一种降维方法。
-2. 原理
-2.1 基础思想
-以学校课程为例，用 x1,x2,⋯ ,xp{x_1,x_2,\cdots,x_p}x1​,x2​,⋯,xp​ 表示 p 门课程的成绩变量， c1,c2,⋯ ,cp{c_1,c_2,\cdo
+          1. 正反向查找
+正反向查找是由 SyncTeX 机制实现的, 需要源代码编辑器、pdf 阅读器和 TeX 输出程序的共同参与。
+1.1 正向查找
+正向查找即根据源文件位置查找生成的 pdf 文件对应位置。
+
+在 VSCode+LaTeXWorkshop 环境中，使用快捷键 Ctrl+Alt+j 即可定位源文件中鼠标位置在 pdf 文件中的对应位置。
+
+1.2 反向查找
+反向查找即根据 pdf 文
         </a>
       </p>
 
@@ -483,8 +473,8 @@ p(xy),p(x,y)p(x y), p(x, y)p(xy),p(x,
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-16 18:06" pubdate>
-              2021-01-16
+            <time datetime="2021-01-21 21:08" pubdate>
+              2021-01-21
             </time>
           </div>
         
@@ -494,9 +484,9 @@ p(xy),p(x,y)p(x y), p(x, y)p(xy),p(x,
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/Math/">Math</a>
+              <a href="/categories/Technique/TeX/">TeX</a>
             
-              <a href="/categories/Technique/Math/Modeling/">Modeling</a>
+              <a href="/categories/Technique/TeX/LaTeX/">LaTeX</a>
             
           </div>
         
@@ -506,9 +496,9 @@ p(xy),p(x,y)p(x y), p(x, y)p(xy),p(x,
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Math/">Math</a>
+              <a href="/tags/TeX/">TeX</a>
             
-              <a href="/tags/Modeling/">Modeling</a>
+              <a href="/tags/LaTeX/">LaTeX</a>
             
           </div>
         
@@ -522,20 +512,21 @@ p(xy),p(x,y)p(x y), p(x, y)p(xy),p(x,
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/01/16/Technique/Math/Theory/%E5%87%B8%E5%87%BD%E6%95%B0%E5%8F%8A%E5%85%B6%E6%80%A7%E8%B4%A8/">凸函数及其性质</a>
+        <a href="/2021/01/21/Technique/TeX/LaTeX/Manjaro20.2%E9%85%8D%E7%BD%AETexLive+VSCode%E7%9A%84LaTeX%E7%8E%AF%E5%A2%83/">Manjaro20.2配置TeXLive+VSCode的LaTeX环境</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/01/16/Technique/Math/Theory/%E5%87%B8%E5%87%BD%E6%95%B0%E5%8F%8A%E5%85%B6%E6%80%A7%E8%B4%A8/">
+        <a href="/2021/01/21/Technique/TeX/LaTeX/Manjaro20.2%E9%85%8D%E7%BD%AETexLive+VSCode%E7%9A%84LaTeX%E7%8E%AF%E5%A2%83/">
           
           
             
           
-          1. 定义
-1.1 上凸函数
-
-
-如果对任意 x1x_1x1​、x2x_2x2​ 总有 f[αx1+(1−α)x2]≥αf(x1)+(1−α)f(x2)f[\alpha x_1 + (1 - \alpha )x_2] \geq \alpha f(x_1) + (1 - \alpha )f(x_2)f[αx1​+(1−α)x2​]≥αf(x1​)+(1−α)f(x2​)，其中 0≤α≤10 \leq
+          1. 安装
+1.1 安装 TeXLive
+1.1.1 从软件源安装
+在终端执行以下代码，安装 TeXLive 环境：
+12sudo pacman -S texlive-mostsudo pacman -S texlive-lang 
+【注】这样安装 TeXLive 后无法在终端使用 texdoc 工具，会报错：/usr/local/texlive/2020/texmf-dist/doc/gener
         </a>
       </p>
 
@@ -543,8 +534,201 @@ p(xy),p(x,y)p(x y), p(x, y)p(xy),p(x,
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-16 18:06" pubdate>
-              2021-01-16
+            <time datetime="2021-01-21 20:25" pubdate>
+              2021-01-21
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/TeX/">TeX</a>
+            
+              <a href="/categories/Technique/TeX/LaTeX/">LaTeX</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/TeX/">TeX</a>
+            
+              <a href="/tags/LaTeX/">LaTeX</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/01/21/Technique/NodeJS/npm%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85%E9%80%9F%E5%BA%A6%E6%85%A2%E9%97%AE%E9%A2%98/">npm下载安装速度慢问题</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/01/21/Technique/NodeJS/npm%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85%E9%80%9F%E5%BA%A6%E6%85%A2%E9%97%AE%E9%A2%98/">
+          
+          
+            
+          
+          1. node 下载 electron 卡住 &amp;&amp; node install.js 卡住
+
+问题：都是由于访问国外网站过慢造成
+解决：
+
+
+
+配置淘宝镜像
+修改 .npmrc 文件（windows C:\Users\username\.npmrc，Linux 在 ~/.npmrc）内容为以下内容：
+
+12registry=https://registry.npm.taobao.or
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-21 16:09" pubdate>
+              2021-01-21
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/NodeJS/">NodeJS</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/NodeJS/">NodeJS</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/01/21/Technique/TeX/LaTeX/LaTeX%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7/">LaTeX奇技淫巧</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/01/21/Technique/TeX/LaTeX/LaTeX%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7/">
+          
+          
+            
+          
+          1. 移动符号
+第一个符号位置不变，改变第二个符号相对第一个符号的位置。
+1.1 左移
+在两个符号间插入 \! 可将第二个符号逐步往左移动。每个 \! 移动 −16-\frac{1}{6}−61​ em 的距离（−-− 表示左移）。插入越多 \! ，第二个符号左移的位移就越大。
+比如：
+
+
+$\dashv \vdash$：
+⊣⊢\dashv \vdash⊣⊢
+
+
+$\dashv \! \vdash
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-21 11:46" pubdate>
+              2021-01-21
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/TeX/">TeX</a>
+            
+              <a href="/categories/Technique/TeX/LaTeX/">LaTeX</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/TeX/">TeX</a>
+            
+              <a href="/tags/LaTeX/">LaTeX</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/01/19/Technique/Math/Theory/%E6%96%B9%E5%90%91%E4%BD%99%E5%BC%A6/">方向余弦</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/01/19/Technique/Math/Theory/%E6%96%B9%E5%90%91%E4%BD%99%E5%BC%A6/">
+          
+          
+            
+          
+          【注】参考自 Wikipedia 。
+1. 定义
+1.1 方向余弦
+
+在解析几何里，一个向量的三个方向余弦分别是这向量与三个坐标轴之间的角度的余弦。
+
+设 v⃗=v1x⃗+v2y⃗+v3z⃗
+\vec{v} = v_1 \vec{x} + v_2 \vec{y} + v_3 \vec{z}
+v=v1​x+v2​y​+v3​z 其中，x⃗\vec{x}x、y⃗\vec{y}y​、z⃗\vec{z}z
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-19 22:25" pubdate>
+              2021-01-19
             </time>
           </div>
         
@@ -566,64 +750,7 @@ p(xy),p(x,y)p(x y), p(x, y)p(xy),p(x,
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Math/">Math</a>
-            
-              <a href="/tags/Theory/">Theory</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/01/16/Technique/Math/Theory/%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0/">欧拉函数</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/01/16/Technique/Math/Theory/%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0/">
-          
-          
-            
-          
-          1. 欧拉函数定义
-欧拉函数 ϕ(n){\phi(n)}ϕ(n) 表示的是小于等于 nnn 且和 nnn 互质的正整数的个数。（易知 ϕ(1)=1{\phi(1) = 1}ϕ(1)=1）
-2. 欧拉函数公式
-对于任意整数 nnn，若其质因数分解结果为 n=p1k1p2k1⋯pnkn{n = p_1^{k_1}p_2^{k_1} \cdots p_n^{k_n}}n=p1k1​​p2k1​​⋯pnk
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-16 18:06" pubdate>
-              2021-01-16
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/Math/">Math</a>
-            
-              <a href="/categories/Technique/Math/Theory/">Theory</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
+              <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
             
               <a href="/tags/Math/">Math</a>
             
@@ -641,26 +768,33 @@ p(xy),p(x,y)p(x y), p(x, y)p(xy),p(x,
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/01/16/Technique/Math/Modeling/%E4%BC%A0%E6%9F%93%E7%97%85%E6%A8%A1%E5%9E%8B/%E4%BC%A0%E6%9F%93%E7%97%85%E6%A8%A1%E5%9E%8B/">传染病模型</a>
+        <a href="/2021/01/19/Technique/ACM/%E9%A2%98%E8%A7%A3/P2758%E3%80%8C%E7%BC%96%E8%BE%91%E8%B7%9D%E7%A6%BB%E3%80%8D/">P2758「编辑距离」</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/01/16/Technique/Math/Modeling/%E4%BC%A0%E6%9F%93%E7%97%85%E6%A8%A1%E5%9E%8B/%E4%BC%A0%E6%9F%93%E7%97%85%E6%A8%A1%E5%9E%8B/">
+        <a href="/2021/01/19/Technique/ACM/%E9%A2%98%E8%A7%A3/P2758%E3%80%8C%E7%BC%96%E8%BE%91%E8%B7%9D%E7%A6%BB%E3%80%8D/">
           
           
             
           
-          
+          1. 题目
+题目链接：P2758「编辑距离」 。
+题目描述
+设 AAA 和 BBB 是两个字符串。我们要用最少的字符操作次数，将字符串 AAA 转换为字符串 BBB。这里所说的字符操作共有三种：
 
-基础定义
+
+删除一个字符；
 
 
-将传染病范围内的人群分为以下类别：
+插入一个字符；
 
-SSS(Susceptible)类：指未得病，但与感染者接触后容易收到感染的人。
-EEE(Exposed)类：指接触过感染者，但暂时没有传播的能力的人。
-III(Infectious)类：指染上传染病，具有传播能力的人。（可以传播给SSS类人员，将其变成EEE类或III类成员）
-RRR(Recovered / Removed)类：指病愈而具有
+
+将一个字符改为另一个字符；
+
+
+！皆为小写字母！
+输入格式
+第一行为字符串 AAA；第二行为字符串 BBB；字符串 AAA 和 BBB 的长度均小于 20002
         </a>
       </p>
 
@@ -668,8 +802,8 @@ RRR(Recovered / Removed)类：指病愈而具有
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-16 18:06" pubdate>
-              2021-01-16
+            <time datetime="2021-01-19 20:39" pubdate>
+              2021-01-19
             </time>
           </div>
         
@@ -679,68 +813,9 @@ RRR(Recovered / Removed)类：指病愈而具有
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/Math/">Math</a>
+              <a href="/categories/Technique/ACM/">ACM</a>
             
-              <a href="/categories/Technique/Math/Modeling/">Modeling</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/Math/">Math</a>
-            
-              <a href="/tags/Modeling/">Modeling</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/01/16/Technique/Math/Theory/%E5%88%9A%E6%80%A7%E6%96%B9%E7%A8%8B/%E5%88%9A%E6%80%A7%E6%96%B9%E7%A8%8B/">刚性方程</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/01/16/Technique/Math/Theory/%E5%88%9A%E6%80%A7%E6%96%B9%E7%A8%8B/%E5%88%9A%E6%80%A7%E6%96%B9%E7%A8%8B/">
-          
-          
-            
-          
-          摘自Wikipedia——刚性方程。
-1.  定义
-在数学领域中，刚性方程（stiffness equation）是指一个微分方程，其数值分析的解只有在时间间隔很小时才会稳定，只要时间间隔略大，其解就会不稳定。目前很难去精确地去定义哪些微分方程是刚性方程，然而粗略而言，若此方程式中包含使其快速变动的项，则其为刚性方程。
-在积分微分方程时，若某一区域的解曲线的变化很大，会希望在这个区域的积分间隔密一
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-16 18:06" pubdate>
-              2021-01-16
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/Math/">Math</a>
-            
-              <a href="/categories/Technique/Math/Theory/">Theory</a>
+              <a href="/categories/Technique/ACM/%E9%A2%98%E8%A7%A3/">题解</a>
             
           </div>
         
@@ -750,76 +825,9 @@ RRR(Recovered / Removed)类：指病愈而具有
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Math/">Math</a>
+              <a href="/tags/ACM/">ACM</a>
             
-              <a href="/tags/Theory/">Theory</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/01/16/Technique/System/CSAPP/%E6%B5%AE%E7%82%B9%E6%95%B0/%E6%B5%AE%E7%82%B9%E6%95%B0/">浮点数</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/01/16/Technique/System/CSAPP/%E6%B5%AE%E7%82%B9%E6%95%B0/%E6%B5%AE%E7%82%B9%E6%95%B0/">
-          
-          
-            
-          
-          1. IEEE 754 标准
-IEEE 754 浮点标准用 V=(−1)s×M×2EV = (-1)^s \times M \times 2^EV=(−1)s×M×2E 的形式来表示一个数。
-
-
-
-符号位（s）：指明数的正负，即 VVV 中的 sss。
-
-
-阶码（exp）：对浮点数加权，即 VVV 中的 EEE。
-
-
-尾数（frac）：二进制小数，即 VVV 中的 MMM，范围为 1∼2−ε1 \
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-16 18:06" pubdate>
-              2021-01-16
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/System/">System</a>
-            
-              <a href="/categories/Technique/System/CSAPP/">CSAPP</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/System/">System</a>
-            
-              <a href="/tags/CSAPP/">CSAPP</a>
+              <a href="/tags/%E9%A2%98%E8%A7%A3/">题解</a>
             
           </div>
         
@@ -831,7 +839,7 @@ IEEE 754 浮点标准用 V=(−1)s×M×2EV = (-1)^s \times M \times 2^EV=(−1)s
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/page/22/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/21/#board">21</a><a class="page-number" href="/page/22/#board">22</a><span class="page-number current">23</span><a class="page-number" href="/page/24/#board">24</a><a class="page-number" href="/page/25/#board">25</a><span class="space">&hellip;</span><a class="page-number" href="/page/53/#board">53</a><a class="extend next" rel="next" href="/page/24/#board"><i class="iconfont icon-arrowright"></i></a>
+      <a class="extend prev" rel="prev" href="/page/22/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/21/#board">21</a><a class="page-number" href="/page/22/#board">22</a><span class="page-number current">23</span><a class="page-number" href="/page/24/#board">24</a><a class="page-number" href="/page/25/#board">25</a><span class="space">&hellip;</span><a class="page-number" href="/page/54/#board">54</a><a class="extend next" rel="next" href="/page/24/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 

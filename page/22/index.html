@@ -197,21 +197,21 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/01/23/Technique/TeX/LaTeX/LaTeX%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F%E6%8E%92%E7%89%88/">LaTeX数学公式排版</a>
+        <a href="/2021/02/22/Technique/Linux/Sundry/Linux%E4%B8%8B%E6%9F%A5%E7%9C%8B%E5%B7%A5%E5%85%B7%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3/">Linux下查看工具官方文档</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/01/23/Technique/TeX/LaTeX/LaTeX%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F%E6%8E%92%E7%89%88/">
+        <a href="/2021/02/22/Technique/Linux/Sundry/Linux%E4%B8%8B%E6%9F%A5%E7%9C%8B%E5%B7%A5%E5%85%B7%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3/">
           
           
             
           
-          1. 公式对齐
-1234\begin&#123;aligned&#125;    x &amp; = a + &amp; b \\    c + d &amp; = &amp; y \\\end&#123;aligned&#125;
-其中，&amp; 表示的是需要对齐的位置。结果显示如下：
-x=a+bc+d=y\begin{array}{c}
-\begin{aligned}
-    x &amp;
+          1. 简介
+Linux 系统包含大量开源工具，大部分开源工具在安装时都自带手册，而手册又分为使用手册、技术手册和帮助文档等。
+2. 使用手册
+Linux 下非内建工具的使用手册一般都集成在 man 或 info 工具中，内建工具的使用手册集成在 help 工具。查看工具 xxx 的使用手册直接在终端运行以下命令中对应的那个即可：
+123man xxxinfo xxxhelp xxx
+3. 技术手册
         </a>
       </p>
 
@@ -219,7 +219,198 @@ x=a+bc+d=y\begin{array}{c}
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-23 13:26" pubdate>
+            <time datetime="2021-02-22 18:57" pubdate>
+              2021-02-22
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Linux/">Linux</a>
+            
+              <a href="/categories/Technique/Linux/Sundry/">Sundry</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/Sundry/">Sundry</a>
+            
+              <a href="/tags/Linux/">Linux</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/02/11/Technique/Linux/Sundry/Linux%E4%BF%AE%E6%94%B9grub%E8%8F%9C%E5%8D%95/">Linux修改grub菜单</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/02/11/Technique/Linux/Sundry/Linux%E4%BF%AE%E6%94%B9grub%E8%8F%9C%E5%8D%95/">
+          
+          
+            
+          
+          【注】参考自 grub 官方手册。
+1. 保留上一次 grub 菜单选项
+1.1 问题
+每次开机时，大部分 Linux 发行版的 grub 菜单都是定位在首选项位置（即当前系统选项位置）。这就导致如果我们电脑安装了多个系统，那么每次开机进入其他系统都要重新选择 grub 菜单选项。而我们一般都是一段时间固定使用一个系统，因此如果 grub 菜单能够记住上一次的菜单选项，我们平常使用就不需要手动切换
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-02-11 10:12" pubdate>
+              2021-02-11
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Linux/">Linux</a>
+            
+              <a href="/categories/Technique/Linux/Sundry/">Sundry</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/Sundry/">Sundry</a>
+            
+              <a href="/tags/Linux/">Linux</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/01/26/Technique/ACM/%E9%A2%98%E8%A7%A3/P1439%E3%80%8C%E3%80%90%E6%A8%A1%E6%9D%BF%E3%80%91%E6%9C%80%E9%95%BF%E5%85%AC%E5%85%B1%E5%AD%90%E5%BA%8F%E5%88%97%E3%80%8D/">P1439「【模板】最长公共子序列」</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/01/26/Technique/ACM/%E9%A2%98%E8%A7%A3/P1439%E3%80%8C%E3%80%90%E6%A8%A1%E6%9D%BF%E3%80%91%E6%9C%80%E9%95%BF%E5%85%AC%E5%85%B1%E5%AD%90%E5%BA%8F%E5%88%97%E3%80%8D/">
+          
+          
+            
+          
+          1. 题目
+题目链接：P1439「【模板】最长公共子序列」 。
+题目描述
+给出 1,2,…,n1,2,\ldots,n1,2,…,n 的两个排列 P1P_1P1​  和 P2P_2P2​，求它们的最长公共子序列。
+输入格式
+第一行是一个数 nnn。
+接下来两行，每行为 nnn 个数，为自然数 1,2,…,n1,2,\ldots,n1,2,…,n 的一个排列。
+输出格式
+一个数，即最长公共子序列的长
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-26 01:19" pubdate>
+              2021-01-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/ACM/">ACM</a>
+            
+              <a href="/categories/Technique/ACM/%E9%A2%98%E8%A7%A3/">题解</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/ACM/">ACM</a>
+            
+              <a href="/tags/%E9%A2%98%E8%A7%A3/">题解</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/01/23/Technique/TeX/LaTeX/LaTeX%E4%BF%AE%E9%A5%B0%E7%AC%A6%E5%8F%B7/LaTeX%E4%BF%AE%E9%A5%B0%E7%AC%A6%E5%8F%B7/">LaTeX修饰符号</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/01/23/Technique/TeX/LaTeX/LaTeX%E4%BF%AE%E9%A5%B0%E7%AC%A6%E5%8F%B7/LaTeX%E4%BF%AE%E9%A5%B0%E7%AC%A6%E5%8F%B7/">
+          
+          
+            
+          
+          【注】摘自 Scott Pakin 的 《The Comprehensive LaTeX Symbol List》 。
+
+
+
+
+
+
+
+
+
+
+
+
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-23 13:28" pubdate>
               2021-01-23
             </time>
           </div>
@@ -258,20 +449,29 @@ x=a+bc+d=y\begin{array}{c}
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/01/22/Technique/TeX/LaTeX/LaTeX%E6%96%87%E7%AB%A0%E6%8F%90%E7%BA%B2/LaTeX%E6%96%87%E7%AB%A0%E6%8F%90%E7%BA%B2/">LaTeX文章提纲</a>
+        <a href="/2021/01/23/Technique/TeX/LaTeX/LaTeX%E5%85%B6%E4%BB%96%E7%AC%A6%E5%8F%B7/LaTeX%E5%85%B6%E4%BB%96%E7%AC%A6%E5%8F%B7/">LaTeX其他符号</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/01/22/Technique/TeX/LaTeX/LaTeX%E6%96%87%E7%AB%A0%E6%8F%90%E7%BA%B2/LaTeX%E6%96%87%E7%AB%A0%E6%8F%90%E7%BA%B2/">
+        <a href="/2021/01/23/Technique/TeX/LaTeX/LaTeX%E5%85%B6%E4%BB%96%E7%AC%A6%E5%8F%B7/LaTeX%E5%85%B6%E4%BB%96%E7%AC%A6%E5%8F%B7/">
           
           
             
           
-          【注】笔记来自《LaTeX入门》——刘海洋。
-1. 导言区
-在 \begin&#123;document&#125; 前面的部分称为导言区，导言区通常用来对文档的性质做一些设置，或者自定义一些命令。
-1.1 声明文档类
-12\documentclass&#123;article&#125;         # 西文短文类\documentclass[UTF8]&#123;ctexart&#125;
+          【注】摘自 Scott Pakin 的 《The Comprehensive LaTeX Symbol List》 。
+
+
+
+
+
+
+
+
+
+
+
+
+
         </a>
       </p>
 
@@ -279,8 +479,8 @@ x=a+bc+d=y\begin{array}{c}
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-22 19:50" pubdate>
-              2021-01-22
+            <time datetime="2021-01-23 13:28" pubdate>
+              2021-01-23
             </time>
           </div>
         
@@ -318,26 +518,67 @@ x=a+bc+d=y\begin{array}{c}
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/01/22/Technique/TeX/LaTeX/LaTeX%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86/LaTeX%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86/">LaTeX相关知识</a>
+        <a href="/2021/01/23/Technique/TeX/LaTeX/LaTeX%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7/LaTeX%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7/">LaTeX数学符号</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/01/22/Technique/TeX/LaTeX/LaTeX%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86/LaTeX%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86/">
+        <a href="/2021/01/23/Technique/TeX/LaTeX/LaTeX%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7/LaTeX%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7/">
           
           
             
           
-          1. TeX 引擎、命令、格式
-
-TeX 引擎目前主要有四种：TeX/eTeX、pdfTeX、XeTeX、LuaTeX
-TeX 格式目前主要有三种：Plain TeX、LaTeX、ConTeXt
-
-TeX 引擎对不同的 TeX 格式提供的排版命令以及编译输出的排版文件格式如下表：
-
-2. TeX 引擎编译流程
+          【注】摘自 Scott Pakin 的 《The Comprehensive LaTeX Symbol List》 。
 
 
-早些年代电子文档格式主要是 PostScript（PS），那时主要通过 dvips 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         </a>
       </p>
 
@@ -345,8 +586,8 @@ TeX 引擎对不同的 TeX 格式提供的排版命令以及编译输出的排�
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-22 10:04" pubdate>
-              2021-01-22
+            <time datetime="2021-01-23 13:28" pubdate>
+              2021-01-23
             </time>
           </div>
         
@@ -384,24 +625,41 @@ TeX 引擎对不同的 TeX 格式提供的排版命令以及编译输出的排�
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/01/21/Technique/TeX/LaTeX/TeXStudio%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/">TeXStudio使用技巧</a>
+        <a href="/2021/01/23/Technique/TeX/LaTeX/LaTeX%E6%AD%A3%E6%96%87%E7%AC%A6%E5%8F%B7/LaTeX%E6%AD%A3%E6%96%87%E7%AC%A6%E5%8F%B7/">LaTeX正文符号</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/01/21/Technique/TeX/LaTeX/TeXStudio%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/">
+        <a href="/2021/01/23/Technique/TeX/LaTeX/LaTeX%E6%AD%A3%E6%96%87%E7%AC%A6%E5%8F%B7/LaTeX%E6%AD%A3%E6%96%87%E7%AC%A6%E5%8F%B7/">
           
           
             
           
-          1. 正反向查找
-正反向查找是由 SyncTeX 机制实现的, 需要源代码编辑器、pdf 阅读器和 TeX 输出程序的共同参与。
-1.1 正向查找
-正向查找即根据源文件位置查找生成的 pdf 文件对应位置。
+          【注】摘自 Scott Pakin 的 《The Comprehensive LaTeX Symbol List》 。
 
-在 TeXStudio 环境中，使用快捷键 Ctrl+鼠标左击 即可定位源文件中鼠标位置在 pdf 文件中的对应位置。
 
-1.2 反向查找
-反向查找即根据 pdf 文件位置查找源文件的对应位
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         </a>
       </p>
 
@@ -409,8 +667,8 @@ TeX 引擎对不同的 TeX 格式提供的排版命令以及编译输出的排�
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-21 21:14" pubdate>
-              2021-01-21
+            <time datetime="2021-01-23 13:28" pubdate>
+              2021-01-23
             </time>
           </div>
         
@@ -448,24 +706,42 @@ TeX 引擎对不同的 TeX 格式提供的排版命令以及编译输出的排�
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/01/21/Technique/TeX/LaTeX/VSCode+LaTeXWorkshop%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/">VSCode+LaTeXWorkshop使用技巧</a>
+        <a href="/2021/01/23/Technique/TeX/LaTeX/LaTeX%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6%E5%92%8C%E7%AC%A6%E5%8F%B7/LaTeX%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6%E5%92%8C%E7%AC%A6%E5%8F%B7/">LaTeX特殊字符和符号</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/01/21/Technique/TeX/LaTeX/VSCode+LaTeXWorkshop%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/">
+        <a href="/2021/01/23/Technique/TeX/LaTeX/LaTeX%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6%E5%92%8C%E7%AC%A6%E5%8F%B7/LaTeX%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6%E5%92%8C%E7%AC%A6%E5%8F%B7/">
           
           
             
           
-          1. 正反向查找
-正反向查找是由 SyncTeX 机制实现的, 需要源代码编辑器、pdf 阅读器和 TeX 输出程序的共同参与。
-1.1 正向查找
-正向查找即根据源文件位置查找生成的 pdf 文件对应位置。
+          1. 引号
+无论什么字体，LaTeX以一个反勾号或重音符(`)当做左引号，以一个正勾号或直立引号(')当做右引号。
 
-在 VSCode+LaTeXWorkshop 环境中，使用快捷键 Ctrl+Alt+j 即可定位源文件中鼠标位置在 pdf 文件中的对应位置。
 
-1.2 反向查找
-反向查找即根据 pdf 文
+
+单引号（‘xxx’）
+`xxx' 或 ‘xxx’
+
+
+
+
+双引号（“xxx”）
+``xxx'' 或 “xxx”
+
+
+
+【注】如果出现单引号与双引号连续出现的情况，则在二者中间用 \, 分隔开。
+
+
+
+字符串示例
+LaTeX 代码
+
+
+
+
+“ ‘A’ or ‘B’ ”，he as
         </a>
       </p>
 
@@ -473,8 +749,8 @@ TeX 引擎对不同的 TeX 格式提供的排版命令以及编译输出的排�
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-21 21:08" pubdate>
-              2021-01-21
+            <time datetime="2021-01-23 13:28" pubdate>
+              2021-01-23
             </time>
           </div>
         
@@ -512,21 +788,24 @@ TeX 引擎对不同的 TeX 格式提供的排版命令以及编译输出的排�
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/01/21/Technique/TeX/LaTeX/Manjaro20.2%E9%85%8D%E7%BD%AETexLive+VSCode%E7%9A%84LaTeX%E7%8E%AF%E5%A2%83/">Manjaro20.2配置TeXLive+VSCode的LaTeX环境</a>
+        <a href="/2021/01/23/Technique/TeX/LaTeX/LaTeX%E7%A7%91%E6%8A%80%E7%AC%A6%E5%8F%B7/LaTeX%E7%A7%91%E6%8A%80%E7%AC%A6%E5%8F%B7/">LaTeX科技符号</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/01/21/Technique/TeX/LaTeX/Manjaro20.2%E9%85%8D%E7%BD%AETexLive+VSCode%E7%9A%84LaTeX%E7%8E%AF%E5%A2%83/">
+        <a href="/2021/01/23/Technique/TeX/LaTeX/LaTeX%E7%A7%91%E6%8A%80%E7%AC%A6%E5%8F%B7/LaTeX%E7%A7%91%E6%8A%80%E7%AC%A6%E5%8F%B7/">
           
           
             
           
-          1. 安装
-1.1 安装 TeXLive
-1.1.1 从软件源安装
-在终端执行以下代码，安装 TeXLive 环境：
-12sudo pacman -S texlive-mostsudo pacman -S texlive-lang 
-【注】这样安装 TeXLive 后无法在终端使用 texdoc 工具，会报错：/usr/local/texlive/2020/texmf-dist/doc/gener
+          【注】摘自 Scott Pakin 的 《The Comprehensive LaTeX Symbol List》 。
+
+
+
+
+
+
+
+
         </a>
       </p>
 
@@ -534,8 +813,8 @@ TeX 引擎对不同的 TeX 格式提供的排版命令以及编译输出的排�
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-21 20:25" pubdate>
-              2021-01-21
+            <time datetime="2021-01-23 13:28" pubdate>
+              2021-01-23
             </time>
           </div>
         
@@ -573,26 +852,18 @@ TeX 引擎对不同的 TeX 格式提供的排版命令以及编译输出的排�
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/01/21/Technique/NodeJS/npm%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85%E9%80%9F%E5%BA%A6%E6%85%A2%E9%97%AE%E9%A2%98/">npm下载安装速度慢问题</a>
+        <a href="/2021/01/23/Technique/TeX/LaTeX/LaTeX%E4%B8%ADTikZ%E5%AE%8F%E5%8C%85/TikZ%E4%B8%AD%E8%8A%82%E7%82%B9%E7%BB%98%E5%88%B6%E7%9A%84%E5%BE%AA%E7%8E%AF%E9%80%89%E9%A1%B9%E9%97%AE%E9%A2%98/TikZ%E4%B8%AD%E8%8A%82%E7%82%B9%E7%BB%98%E5%88%B6%E7%9A%84%E5%BE%AA%E7%8E%AF%E9%80%89%E9%A1%B9%E9%97%AE%E9%A2%98/">TikZ中节点绘制的循环选项问题</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/01/21/Technique/NodeJS/npm%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85%E9%80%9F%E5%BA%A6%E6%85%A2%E9%97%AE%E9%A2%98/">
+        <a href="/2021/01/23/Technique/TeX/LaTeX/LaTeX%E4%B8%ADTikZ%E5%AE%8F%E5%8C%85/TikZ%E4%B8%AD%E8%8A%82%E7%82%B9%E7%BB%98%E5%88%B6%E7%9A%84%E5%BE%AA%E7%8E%AF%E9%80%89%E9%A1%B9%E9%97%AE%E9%A2%98/TikZ%E4%B8%AD%E8%8A%82%E7%82%B9%E7%BB%98%E5%88%B6%E7%9A%84%E5%BE%AA%E7%8E%AF%E9%80%89%E9%A1%B9%E9%97%AE%E9%A2%98/">
           
           
             
           
-          1. node 下载 electron 卡住 &amp;&amp; node install.js 卡住
-
-问题：都是由于访问国外网站过慢造成
-解决：
-
-
-
-配置淘宝镜像
-修改 .npmrc 文件（windows C:\Users\username\.npmrc，Linux 在 ~/.npmrc）内容为以下内容：
-
-12registry=https://registry.npm.taobao.or
+          在 LaTeX 中使用 TikZ 宏包绘制闭合曲线时，可以在 \draw 中使用循环选项。
+1.第一种情况
+12345678910111213\documentclass&#123;article&#125;\usepackage&#123;tikz&#125;\usetikzlibrary&#123;arrows,backgrounds,calc,fit,intersections,throug
         </a>
       </p>
 
@@ -600,71 +871,8 @@ TeX 引擎对不同的 TeX 格式提供的排版命令以及编译输出的排�
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-21 16:09" pubdate>
-              2021-01-21
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/NodeJS/">NodeJS</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/NodeJS/">NodeJS</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/01/21/Technique/TeX/LaTeX/LaTeX%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7/">LaTeX奇技淫巧</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/01/21/Technique/TeX/LaTeX/LaTeX%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7/">
-          
-          
-            
-          
-          1. 移动符号
-第一个符号位置不变，改变第二个符号相对第一个符号的位置。
-1.1 左移
-在两个符号间插入 \! 可将第二个符号逐步往左移动。每个 \! 移动 −16-\frac{1}{6}−61​ em 的距离（−-− 表示左移）。插入越多 \! ，第二个符号左移的位移就越大。
-比如：
-
-
-$\dashv \vdash$：
-⊣⊢\dashv \vdash⊣⊢
-
-
-$\dashv \! \vdash
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-21 11:46" pubdate>
-              2021-01-21
+            <time datetime="2021-01-23 13:28" pubdate>
+              2021-01-23
             </time>
           </div>
         
@@ -678,6 +886,8 @@ $\dashv \! \vdash
             
               <a href="/categories/Technique/TeX/LaTeX/">LaTeX</a>
             
+              <a href="/categories/Technique/TeX/LaTeX/LaTeX%E4%B8%ADTikZ%E5%AE%8F%E5%8C%85/">LaTeX中TikZ宏包</a>
+            
           </div>
         
         
@@ -690,144 +900,7 @@ $\dashv \! \vdash
             
               <a href="/tags/LaTeX/">LaTeX</a>
             
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/01/19/Technique/Math/Theory/%E6%96%B9%E5%90%91%E4%BD%99%E5%BC%A6/">方向余弦</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/01/19/Technique/Math/Theory/%E6%96%B9%E5%90%91%E4%BD%99%E5%BC%A6/">
-          
-          
-            
-          
-          【注】参考自 Wikipedia 。
-1. 定义
-1.1 方向余弦
-
-在解析几何里，一个向量的三个方向余弦分别是这向量与三个坐标轴之间的角度的余弦。
-
-设 v⃗=v1x⃗+v2y⃗+v3z⃗
-\vec{v} = v_1 \vec{x} + v_2 \vec{y} + v_3 \vec{z}
-v=v1​x+v2​y​+v3​z 其中，x⃗\vec{x}x、y⃗\vec{y}y​、z⃗\vec{z}z
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-19 22:25" pubdate>
-              2021-01-19
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/Math/">Math</a>
-            
-              <a href="/categories/Technique/Math/Theory/">Theory</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
-            
-              <a href="/tags/Math/">Math</a>
-            
-              <a href="/tags/Theory/">Theory</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/01/19/Technique/ACM/%E9%A2%98%E8%A7%A3/P2758%E3%80%8C%E7%BC%96%E8%BE%91%E8%B7%9D%E7%A6%BB%E3%80%8D/">P2758「编辑距离」</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/01/19/Technique/ACM/%E9%A2%98%E8%A7%A3/P2758%E3%80%8C%E7%BC%96%E8%BE%91%E8%B7%9D%E7%A6%BB%E3%80%8D/">
-          
-          
-            
-          
-          1. 题目
-题目链接：P2758「编辑距离」 。
-题目描述
-设 AAA 和 BBB 是两个字符串。我们要用最少的字符操作次数，将字符串 AAA 转换为字符串 BBB。这里所说的字符操作共有三种：
-
-
-删除一个字符；
-
-
-插入一个字符；
-
-
-将一个字符改为另一个字符；
-
-
-！皆为小写字母！
-输入格式
-第一行为字符串 AAA；第二行为字符串 BBB；字符串 AAA 和 BBB 的长度均小于 20002
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-19 20:39" pubdate>
-              2021-01-19
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/ACM/">ACM</a>
-            
-              <a href="/categories/Technique/ACM/%E9%A2%98%E8%A7%A3/">题解</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/ACM/">ACM</a>
-            
-              <a href="/tags/%E9%A2%98%E8%A7%A3/">题解</a>
+              <a href="/tags/LaTeX%E4%B8%ADTikZ%E5%AE%8F%E5%8C%85/">LaTeX中TikZ宏包</a>
             
           </div>
         
@@ -839,7 +912,7 @@ v=v1​x+v2​y​+v3​z 其中，x⃗\vec{x}x、y⃗\vec{y}y​、z⃗\vec{z}z
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/page/21/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/20/#board">20</a><a class="page-number" href="/page/21/#board">21</a><span class="page-number current">22</span><a class="page-number" href="/page/23/#board">23</a><a class="page-number" href="/page/24/#board">24</a><span class="space">&hellip;</span><a class="page-number" href="/page/53/#board">53</a><a class="extend next" rel="next" href="/page/23/#board"><i class="iconfont icon-arrowright"></i></a>
+      <a class="extend prev" rel="prev" href="/page/21/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/20/#board">20</a><a class="page-number" href="/page/21/#board">21</a><span class="page-number current">22</span><a class="page-number" href="/page/23/#board">23</a><a class="page-number" href="/page/24/#board">24</a><span class="space">&hellip;</span><a class="page-number" href="/page/54/#board">54</a><a class="extend next" rel="next" href="/page/23/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 

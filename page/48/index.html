@@ -197,26 +197,278 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Technique/Linux/Shell/BashShell%E6%95%B0%E5%80%BC%E8%BF%90%E7%AE%97/">BashShell数值运算</a>
+        <a href="/2020/05/26/Technique/Linux/Manjaro/Manjaro20.0%E5%AE%89%E8%A3%85man%E4%B8%AD%E6%96%87%E6%89%8B%E5%86%8C/">Manjaro20.0安装man中文手册</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Technique/Linux/Shell/BashShell%E6%95%B0%E5%80%BC%E8%BF%90%E7%AE%97/">
+        <a href="/2020/05/26/Technique/Linux/Manjaro/Manjaro20.0%E5%AE%89%E8%A3%85man%E4%B8%AD%E6%96%87%E6%89%8B%E5%86%8C/">
+          
+          
+            
+          
+          1. 安装 man 中文软件包
+1pacman -S man-pages-zh_cn   # 繁体换成 man-pages-zh_tw
+2. 查询 man 中文手册安装目录
+1pacman -Ql man-pages-zh_cn | less
+发现 man 中文手册安装目录为 /usr/share/man/zh_CN 。
+3. 设置中英文 man 别名
+
+编辑 ~/.bashrc文件：
+
+1sud
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-05-26 10:44" pubdate>
+              2020-05-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Linux/">Linux</a>
+            
+              <a href="/categories/Technique/Linux/Manjaro/">Manjaro</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/Linux/">Linux</a>
+            
+              <a href="/tags/Manjaro/">Manjaro</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/05/26/Technique/Linux/Manjaro/Manjaro20.0%E6%B7%BB%E5%8A%A0%E5%9B%BD%E5%86%85%E6%BA%90%E3%80%81%E7%A4%BE%E5%8C%BA%E6%BA%90%E3%80%81AUR%E6%BA%90/">Manjaro20.0添加国内源、社区源、AUR源</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/05/26/Technique/Linux/Manjaro/Manjaro20.0%E6%B7%BB%E5%8A%A0%E5%9B%BD%E5%86%85%E6%BA%90%E3%80%81%E7%A4%BE%E5%8C%BA%E6%BA%90%E3%80%81AUR%E6%BA%90/">
+          
+          
+            
+          
+          1. 添加国内源
+1.1 备份文件
+1sudo cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak
+1.2 编辑文件
+1sudo vim /etc/pacman.d/mirrorlist
+添加的源从上到下优先级依次降低。
+
+添加 Manjaro 源
+
+123456789## manjaro 稳定源# 中科大Server = https:
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-05-26 10:44" pubdate>
+              2020-05-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Linux/">Linux</a>
+            
+              <a href="/categories/Technique/Linux/Manjaro/">Manjaro</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/Linux/">Linux</a>
+            
+              <a href="/tags/Manjaro/">Manjaro</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/05/26/Technique/Linux/Manjaro/Manjaro20.0%E9%85%8D%E7%BD%AETR4527%E6%89%93%E5%8D%B0%E6%9C%BA%E5%92%8C%E6%89%AB%E6%8F%8F%E4%BB%AA%E9%A9%B1%E5%8A%A8/">Manjaro20.0配置TR4527打印机和扫描仪驱动</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/05/26/Technique/Linux/Manjaro/Manjaro20.0%E9%85%8D%E7%BD%AETR4527%E6%89%93%E5%8D%B0%E6%9C%BA%E5%92%8C%E6%89%AB%E6%8F%8F%E4%BB%AA%E9%A9%B1%E5%8A%A8/">
+          
+          
+            
+          
+          【注】Manjaro 系统日常使用问题可以上 Manjaro 官方论坛上逛一逛，说不定具有解决办法。
+1. 打印机驱动
+Arch Linux AUR 源已经提供了 TR4527 打印机驱动程序 cnijfilter2，详情参见地址。
+在终端手动安装该驱动程序即可：
+1yay -S cnijfilter2
+2. 扫描仪驱动
+Arch Linux AUR 源已经提供了 TR4527 扫描仪驱动程序 s
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-05-26 10:44" pubdate>
+              2020-05-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Linux/">Linux</a>
+            
+              <a href="/categories/Technique/Linux/Manjaro/">Manjaro</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/Linux/">Linux</a>
+            
+              <a href="/tags/Manjaro/">Manjaro</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/05/26/Technique/Linux/Mint/Mint19.1%E4%B8%8Bdpkg%E6%8A%A5%E9%94%99/">Mint19.1下dpkg报错</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/05/26/Technique/Linux/Mint/Mint19.1%E4%B8%8Bdpkg%E6%8A%A5%E9%94%99/">
+          
+          
+            
+          
+          1. E: Sub-process /usr/bin/dpkg returned an error code (1)
+解决办法如下：
+12345678cd /var/lib/dpkgsudo mv info info_baksudo mkdir infosudo apt update &gt; /dev/null			# 若要输出信息，去除重定向符及其后内容sudo apt install -fs
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-05-26 10:44" pubdate>
+              2020-05-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Linux/">Linux</a>
+            
+              <a href="/categories/Technique/Linux/Mint/">Mint</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/Linux/">Linux</a>
+            
+              <a href="/tags/Mint/">Mint</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/05/26/Technique/Linux/Mint/Mint19.1%E4%B8%8B%E4%BD%BF%E7%94%A8npm%E5%B7%A5%E5%85%B7/">Mint19.1下使用npm工具</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/05/26/Technique/Linux/Mint/Mint19.1%E4%B8%8B%E4%BD%BF%E7%94%A8npm%E5%B7%A5%E5%85%B7/">
           
           
             
           
           1. 简介
-Bash Shell 本身一些内置命令可以执行简单的整数运算，但复杂一些的运算（比如浮点数运算）需要通过一些外部命令来实现，Bash Shell 数学运算符只支持整数运算。
 
 
-内置命令：(( ))、let、$[ ]（方括号并不是所有的 Shell 都支持）
+npm 是一个 NodeJS 平台的 JavaScript 包管理工具，它用于管理包发布、查询、安装、开发以及包之间的依赖性冲突等。
 
 
-外部命令：expr、bc、awk
+npm 安装软件目录有两种模式，一个是全局模式、一个是局部模式（默认）。
 
 
-从运行效率来看，Bash Shell 内置命令的执行效率要高于外部命令，(( )) 执
+3. 格式
+1npm &lt;command&gt; [args]
+4. 查看帮助信息
+12345npm help helpnpm help package.jsonn
         </a>
       </p>
 
@@ -237,7 +489,7 @@ Bash Shell 本身一些内置命令可以执行简单的整数运算，但复杂
             
               <a href="/categories/Technique/Linux/">Linux</a>
             
-              <a href="/categories/Technique/Linux/Shell/">Shell</a>
+              <a href="/categories/Technique/Linux/Mint/">Mint</a>
             
           </div>
         
@@ -249,7 +501,7 @@ Bash Shell 本身一些内置命令可以执行简单的整数运算，但复杂
             
               <a href="/tags/Linux/">Linux</a>
             
-              <a href="/tags/Shell/">Shell</a>
+              <a href="/tags/Mint/">Mint</a>
             
           </div>
         
@@ -263,58 +515,24 @@ Bash Shell 本身一些内置命令可以执行简单的整数运算，但复杂
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Technique/Linux/Shell/BashShell%E8%BF%90%E7%AE%97%E7%AC%A6%E5%8F%8A%E4%BC%98%E5%85%88%E7%BA%A7/">BashShell运算符及优先级</a>
+        <a href="/2020/05/26/Technique/Linux/Mint/Mint19.1%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%92%AD%E6%94%BE%E9%9F%B3%E4%B9%90/">Mint19.1命令行播放音乐</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Technique/Linux/Shell/BashShell%E8%BF%90%E7%AE%97%E7%AC%A6%E5%8F%8A%E4%BC%98%E5%85%88%E7%BA%A7/">
+        <a href="/2020/05/26/Technique/Linux/Mint/Mint19.1%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%92%AD%E6%94%BE%E9%9F%B3%E4%B9%90/">
           
           
             
           
-          Bash Shell 语言中的运算符及其优先级、聚合程度与 C 语言相同，以下运算符表按照优先级级别分组并从上往下递减：
-
-
-
-优先级
-说明
-
-
-
-
-( )
-圆括号运算符
-
-
-id++、id--
-变量自增、自减（在后）
-
-
-++id、--id
-变量自增、自减（在前）
-
-
--、+
-（单目）取负、取正
-
-
-!、~
-逻辑非、位取反
-
-
-**
-乘幂
-
-
-*、/、%
-乘、除、取余
-
-
-+、-
-加、减
-
-
-&
+          1. 安装必要软件包
+1sudo apt install sox libsox-fmt-all
+2. 命令行播放音乐
+安装上述软件包后，就可以在命令行中使用 play 命令
+1play [musicname].mp3
+play 命令有很多强大的功能，具体用法可以 help 一下
+1play --help
+3. 用途
+安装该功能后，就能在 bash 脚本中使用，可以实现诸如报警、提醒、定时闹钟等功能
         </a>
       </p>
 
@@ -335,7 +553,7 @@ id++、id--
             
               <a href="/categories/Technique/Linux/">Linux</a>
             
-              <a href="/categories/Technique/Linux/Shell/">Shell</a>
+              <a href="/categories/Technique/Linux/Mint/">Mint</a>
             
           </div>
         
@@ -347,7 +565,7 @@ id++、id--
             
               <a href="/tags/Linux/">Linux</a>
             
-              <a href="/tags/Shell/">Shell</a>
+              <a href="/tags/Mint/">Mint</a>
             
           </div>
         
@@ -361,20 +579,25 @@ id++、id--
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Technique/Linux/Shell/LinuxShell%E5%88%86%E7%B1%BB/">LinuxShell分类</a>
+        <a href="/2020/05/26/Technique/Linux/Mint/Mint19.1%E5%AE%89%E8%A3%85man%E4%B8%AD%E6%96%87%E6%89%8B%E5%86%8C/">Mint19.1安装man中文手册</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Technique/Linux/Shell/LinuxShell%E5%88%86%E7%B1%BB/">
+        <a href="/2020/05/26/Technique/Linux/Mint/Mint19.1%E5%AE%89%E8%A3%85man%E4%B8%AD%E6%96%87%E6%89%8B%E5%86%8C/">
           
           
             
           
-          Linux Shell 从交互式和登录式来看可划分为不同的类别。
-1. 交互式 Shell
-交互式 Shell 是指在终端命令行上执行，以提示符的方式在终端等待用户输入，并实时运行用户输入的命令的模式；即与用户交互的模式。
-1.1 交互登录式 Shell
-交互登录式 Shell 是需要用户名和密码登录后进入的 Shell（比如终端下登录远程服务器）或者通过 -login 选项在终端启动的 Shel
+          1. 安装 man 中文软件包
+1sudo apt install manpages-zh
+2. 查询 man 中文手册安装目录
+1dpkg -L manpages-zh | less
+发现 man 中文手册安装目录为 /usr/share/man/zh_CN（简体）或 /usr/share/man/zh_TW （繁体）。
+3. 设置中英文 man 别名
+
+编辑 ~/.bashrc文件：
+
+1su
         </a>
       </p>
 
@@ -395,7 +618,7 @@ id++、id--
             
               <a href="/categories/Technique/Linux/">Linux</a>
             
-              <a href="/categories/Technique/Linux/Shell/">Shell</a>
+              <a href="/categories/Technique/Linux/Mint/">Mint</a>
             
           </div>
         
@@ -407,7 +630,7 @@ id++、id--
             
               <a href="/tags/Linux/">Linux</a>
             
-              <a href="/tags/Shell/">Shell</a>
+              <a href="/tags/Mint/">Mint</a>
             
           </div>
         
@@ -421,31 +644,33 @@ id++、id--
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Technique/Linux/Shell/LinuxShell%E5%88%87%E6%8D%A2%E5%89%8D%E5%90%8E%E5%8F%B0%E7%A8%8B%E5%BA%8F/">LinuxShell切换前后台程序</a>
+        <a href="/2020/05/26/Technique/Linux/Mint/Mint19.1%E6%B8%85%E9%99%A4%E7%B3%BB%E7%BB%9F%E5%9E%83%E5%9C%BE/">Mint19.1清除系统垃圾</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Technique/Linux/Shell/LinuxShell%E5%88%87%E6%8D%A2%E5%89%8D%E5%90%8E%E5%8F%B0%E7%A8%8B%E5%BA%8F/">
+        <a href="/2020/05/26/Technique/Linux/Mint/Mint19.1%E6%B8%85%E9%99%A4%E7%B3%BB%E7%BB%9F%E5%9E%83%E5%9C%BE/">
           
           
             
           
-          1. 前台运行
-直接在 Linux 终端运行命令则默认在前台执行。
-2. 后台运行
+          1. 清除不再需要的软件依赖包
+1sudo apt autoremove
+2. 清除所有软件安装包
+1sudo apt clean
+3. 清除系统旧的不再使用的软件安装包
+1sudo apt autoclean
+4. 清除系统多余内核
 
+首先查看当前内核
 
-commands  &amp;：但一旦关闭对应终端则后台程序也会被强制关闭。
+1uname -a
 
+然后查看系统所有内核
 
-nohup commands：即使关闭对应终端后台程序也不会被强制关闭。（在别的终端需要使用 ps 命令 查看）
+1dpkg --get-selections | grep linux
 
+最后删除不需要的内核
 
-1ps -aux | grep XXX	# XXX为对应程序名
-3. 前后转到后台
-
-
-ctrl + z：将在前
         </a>
       </p>
 
@@ -466,7 +691,7 @@ ctrl + z：将在前
             
               <a href="/categories/Technique/Linux/">Linux</a>
             
-              <a href="/categories/Technique/Linux/Shell/">Shell</a>
+              <a href="/categories/Technique/Linux/Mint/">Mint</a>
             
           </div>
         
@@ -478,7 +703,7 @@ ctrl + z：将在前
             
               <a href="/tags/Linux/">Linux</a>
             
-              <a href="/tags/Shell/">Shell</a>
+              <a href="/tags/Mint/">Mint</a>
             
           </div>
         
@@ -492,24 +717,24 @@ ctrl + z：将在前
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Technique/Linux/Shell/LinuxShell%E5%8D%95%E5%BC%95%E5%8F%B7%E3%80%81%E5%8F%8C%E5%BC%95%E5%8F%B7%E3%80%81%E5%8F%8D%E5%BC%95%E5%8F%B7%E4%BB%A5%E5%8F%8A%E6%97%A0%E5%BC%95%E5%8F%B7%E7%9A%84%E5%8C%BA%E5%88%AB/">LinuxShell单引号、双引号、反引号以及无引号的区别</a>
+        <a href="/2020/05/26/Technique/Linux/Ubuntu/Ubuntu18.04%E6%9B%B4%E6%8D%A2%E5%9B%BD%E5%86%85%E6%BA%90/">Ubuntu18.04更换国内源</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Technique/Linux/Shell/LinuxShell%E5%8D%95%E5%BC%95%E5%8F%B7%E3%80%81%E5%8F%8C%E5%BC%95%E5%8F%B7%E3%80%81%E5%8F%8D%E5%BC%95%E5%8F%B7%E4%BB%A5%E5%8F%8A%E6%97%A0%E5%BC%95%E5%8F%B7%E7%9A%84%E5%8C%BA%E5%88%AB/">
+        <a href="/2020/05/26/Technique/Linux/Ubuntu/Ubuntu18.04%E6%9B%B4%E6%8D%A2%E5%9B%BD%E5%86%85%E6%BA%90/">
           
           
             
           
-          1. 单引号
-单引号为强引用，即将单引号中的内容原样输出，而不会对任何变量函数进行解析。比如在 Shell 中输入以下代码：
-12_str_=&quot;hello world&quot;echo &#x27;$_str_&#x27;
-结果输出：
-1$_str_
-2. 双引号
-在双引号内，会解析的符号：` $ \
-除此之外，其余符号都原样输出。比如在 Shell 中输入以下代码：
-12_str_=
+          1. 备份原来的源文件 /etc/apt/sources.list
+1sudo mv /etc/apt/sources.list /etc/apt/sources.list.bk
+2. 新建文件 /etc/apt/sources.list
+1sudo vim /etc/apt/sources.list
+3. 将国内源粘贴复制进去
+
+阿里源
+
+123456789101112deb http://mi
         </a>
       </p>
 
@@ -530,7 +755,7 @@ ctrl + z：将在前
             
               <a href="/categories/Technique/Linux/">Linux</a>
             
-              <a href="/categories/Technique/Linux/Shell/">Shell</a>
+              <a href="/categories/Technique/Linux/Ubuntu/">Ubuntu</a>
             
           </div>
         
@@ -542,7 +767,7 @@ ctrl + z：将在前
             
               <a href="/tags/Linux/">Linux</a>
             
-              <a href="/tags/Shell/">Shell</a>
+              <a href="/tags/Ubuntu/">Ubuntu</a>
             
           </div>
         
@@ -556,21 +781,24 @@ ctrl + z：将在前
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Technique/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4alias/">LinuxShell命令alias</a>
+        <a href="/2020/05/26/Technique/Linux/Ubuntu/Ubuntu20.04%E6%9B%B4%E6%8D%A2%E5%9B%BD%E5%86%85%E6%BA%90/">Ubuntu20.04更换国内源</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Technique/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4alias/">
+        <a href="/2020/05/26/Technique/Linux/Ubuntu/Ubuntu20.04%E6%9B%B4%E6%8D%A2%E5%9B%BD%E5%86%85%E6%BA%90/">
           
           
             
           
-          【注】具体详解参见 help 手册。
-1. 简介
-Linux Shell 内建命令 alias 用于定义或显示别名。定义别名可以为常用的（带参数）命令创建另一个名称，从而减少输入量，方便日常使用。
-2. 格式
-12alias [-p]alias NAME=VALUE [NAME=VALUE ...]
-其中，不带参数或者带 -p 参数用于以 alias NAME=VALUE 的格式显示已定义的所有别
+          1. 备份原来的源文件 /etc/apt/sources.list
+1sudo mv /etc/apt/sources.list /etc/apt/sources.list.bk
+2. 新建文件 /etc/apt/sources.list
+1sudo vim /etc/apt/sources.list
+3. 将国内源粘贴复制进去
+
+清华源
+
+12345678910111213# 默认注释了源码镜像
         </a>
       </p>
 
@@ -591,7 +819,7 @@ Linux Shell 内建命令 alias 用于定义或显示别名。定义别名可以�
             
               <a href="/categories/Technique/Linux/">Linux</a>
             
-              <a href="/categories/Technique/Linux/Shell/">Shell</a>
+              <a href="/categories/Technique/Linux/Ubuntu/">Ubuntu</a>
             
           </div>
         
@@ -603,259 +831,7 @@ Linux Shell 内建命令 alias 用于定义或显示别名。定义别名可以�
             
               <a href="/tags/Linux/">Linux</a>
             
-              <a href="/tags/Shell/">Shell</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/05/26/Technique/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4declare%E3%80%81local%E3%80%81typeset/">LinuxShell命令declare、local、typeset</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/05/26/Technique/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4declare%E3%80%81local%E3%80%81typeset/">
-          
-          
-            
-          
-          【注】具体详解参见 help 手册。
-1. 简介
-Linux Shell 内建命令 declare 用于声明变量并赋予它们属性。如果没有给定变量名称，则显示所有变量的属性和值。
-内建命令 typeset 、local 均等价于 declare，只不过 local 命令只能用在函数内部。三个内建命令的选项参数及其含义均一致。
-以下仅以 declare 内建命令为例进行解释。
-2. 格式
-1decla
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/Linux/">Linux</a>
-            
-              <a href="/categories/Technique/Linux/Shell/">Shell</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/Shell/">Shell</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/05/26/Technique/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4grep/">LinuxShell命令grep</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/05/26/Technique/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4grep/">
-          
-          
-            
-          
-          【注】具体详解参见 man 手册。
-1. 简介
-grep 命令用来在文件中查找并输出包含匹配指定模式的字符的行。
-2. 格式
-123grep [OPTIONS] PATTERN [FILE...]grep [OPTIONS] -e PATTERN ... [FILE...]grep [OPTIONS] -f FILE ... [FILE...]
-其中，OPTIONS 为指定的选项参数，PATTER
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/Linux/">Linux</a>
-            
-              <a href="/categories/Technique/Linux/Shell/">Shell</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/Shell/">Shell</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/05/26/Technique/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4head/">LinuxShell命令head</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/05/26/Technique/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4head/">
-          
-          
-            
-          
-          【注】具体详解参见 man 手册。
-1. 简介
-head 命令用于在标准输出上显示每个文件起始 10 行。如果多于一个文件，则会逐个进行显示，并在每个文件显示的首部给出对应的文件名。如果没有指定文件或者指定为 -，则从标准输入上读取。
-2. 格式
-1head [OPTION]... [FILE]...
-其中，OPTION 指定选项参数，FILE 指定显示的文件。
-3. 选项
-
-
-
-选项参数
-说明
-
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/Linux/">Linux</a>
-            
-              <a href="/categories/Technique/Linux/Shell/">Shell</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/Shell/">Shell</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/05/26/Technique/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4history/">LinuxShell命令history</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/05/26/Technique/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4history/">
-          
-          
-            
-          
-          【注】具体详解参见 help 手册。
-1. 简介
-history 内建命令用于显示或操纵历史命令列表。
-2. 格式
-123history [NUM|-c|-d [offset]]history [-a|-n|-r|-w] [FILE]history [-p|-s] ARG [ARG ...]
-其中，FILE 用于指定保存历史命令列表的文件，默认是~/.bash_history 文件。若未指定任何选
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/Linux/">Linux</a>
-            
-              <a href="/categories/Technique/Linux/Shell/">Shell</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/Shell/">Shell</a>
+              <a href="/tags/Ubuntu/">Ubuntu</a>
             
           </div>
         
@@ -867,7 +843,7 @@ history 内建命令用于显示或操纵历史命令列表。
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/page/47/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/46/#board">46</a><a class="page-number" href="/page/47/#board">47</a><span class="page-number current">48</span><a class="page-number" href="/page/49/#board">49</a><a class="page-number" href="/page/50/#board">50</a><span class="space">&hellip;</span><a class="page-number" href="/page/53/#board">53</a><a class="extend next" rel="next" href="/page/49/#board"><i class="iconfont icon-arrowright"></i></a>
+      <a class="extend prev" rel="prev" href="/page/47/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/46/#board">46</a><a class="page-number" href="/page/47/#board">47</a><span class="page-number current">48</span><a class="page-number" href="/page/49/#board">49</a><a class="page-number" href="/page/50/#board">50</a><span class="space">&hellip;</span><a class="page-number" href="/page/54/#board">54</a><a class="extend next" rel="next" href="/page/49/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 

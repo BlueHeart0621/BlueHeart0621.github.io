@@ -197,6 +197,582 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
+        <a href="/2020/05/26/Technique/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4wc/">LinuxShell命令wc</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/05/26/Technique/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4wc/">
+          
+          
+            
+          
+          1. 简介
+wc 命令用来统计每个文件的行、单词和字节数并输出。如果指定多个文件，则输出每个文件的总行\单词\字节数及所有文件总的行\单词\字节数；如果没有指定文件或指定文件为 - ，则从标准输入读取。
+2. 格式
+12wc [options]... [filelist]wc [options]... --files0-from=F
+其中，options 指定统计输出格式，filelist 为指定
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-05-26 10:44" pubdate>
+              2020-05-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Linux/">Linux</a>
+            
+              <a href="/categories/Technique/Linux/Shell/">Shell</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/Linux/">Linux</a>
+            
+              <a href="/tags/Shell/">Shell</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/05/26/Technique/Linux/Shell/LinuxShell%E5%AE%9A%E6%97%B6%E5%8A%9F%E8%83%BD/">LinuxShell定时功能</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/05/26/Technique/Linux/Shell/LinuxShell%E5%AE%9A%E6%97%B6%E5%8A%9F%E8%83%BD/">
+          
+          
+            
+          
+          Linux 系统提供了多个在预定时间运行作业的方法：at 命令和 cron 表。
+1. at命令
+命令格式如下：
+1at [-f filename] time
+其中，time参数指定了Linux系统何时运行该作业。at命令可识别的time格式有很多种，譬如：
+
+
+
+10:30
+
+
+
+
+10:30 PM
+
+
+now、noon、midnight、teatime
+
+
+MMDDYY、MM/DD/YY、DD
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-05-26 10:44" pubdate>
+              2020-05-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Linux/">Linux</a>
+            
+              <a href="/categories/Technique/Linux/Shell/">Shell</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/Linux/">Linux</a>
+            
+              <a href="/tags/Shell/">Shell</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/05/26/Technique/Linux/Shell/LinuxShell%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E4%B8%8E%E9%80%9A%E9%85%8D%E7%AC%A6%E7%9A%84%E5%8C%BA%E5%88%AB/">LinuxShell正则表达式与通配符的区别</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/05/26/Technique/Linux/Shell/LinuxShell%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E4%B8%8E%E9%80%9A%E9%85%8D%E7%AC%A6%E7%9A%84%E5%8C%BA%E5%88%AB/">
+          
+          
+            
+          
+          1. 正则表达式
+正则表达式是用来在文本中匹配符合条件的字符串，是包含匹配 。Linux Shell中诸如 grep、awk、sed 等命令都支持正则表达式。
+【注】详解请见正则表达式。
+2. 通配符
+通配符是用来匹配符合条件的文件/路径名，是完全匹配 。Linux Shell中 ls、find、cp 命令不支持正则表达式，所以只能使用通配符来进行文件/路径匹配。
+【注】详解请见通配符。
+
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-05-26 10:44" pubdate>
+              2020-05-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Linux/">Linux</a>
+            
+              <a href="/categories/Technique/Linux/Shell/">Shell</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/Linux/">Linux</a>
+            
+              <a href="/tags/Shell/">Shell</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/05/26/Technique/Linux/Shell/LinuxShell%E7%88%B6%E5%AD%90%E5%85%B3%E7%B3%BB%E6%A6%82%E8%BF%B0/">LinuxShell父子关系概述</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/05/26/Technique/Linux/Shell/LinuxShell%E7%88%B6%E5%AD%90%E5%85%B3%E7%B3%BB%E6%A6%82%E8%BF%B0/">
+          
+          
+            
+          
+          1. 父 Shell
+父 Shell 是用于登录某个远程主机或虚拟控制器终端或在 GUI 中运行终端仿真器时所启动的默认的交互式 Shell 。
+
+Linux Shell 中在当前 Shell 执行脚本文件的方式有：
+12source script             # 在当前 Shell 执行 script 文件. script                  # 在当前 Shell 执
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-05-26 10:44" pubdate>
+              2020-05-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Linux/">Linux</a>
+            
+              <a href="/categories/Technique/Linux/Shell/">Shell</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/Linux/">Linux</a>
+            
+              <a href="/tags/Shell/">Shell</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/05/26/Technique/Linux/Shell/LinuxShell%E9%87%8D%E5%AE%9A%E5%90%91%E5%92%8C%E7%AE%A1%E9%81%93/">LinuxShell重定向和管道</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/05/26/Technique/Linux/Shell/LinuxShell%E9%87%8D%E5%AE%9A%E5%90%91%E5%92%8C%E7%AE%A1%E9%81%93/">
+          
+          
+            
+          
+          Linux Shell 提供重定向符用于重定向命令的输入和输出，提供管道符用于将一个命令的输出重定向作为另一个命令的输入。
+【注】在终端命令上，重定向符总是指向数据流动的方向。
+1. 输出重定向
+1.1 输出重定向符 &gt;
+1command &gt; outputfile
+&gt; 重定向符用于把 command 命令的输出结果重定向输入到指定的 outputfile 文件中。
+
+
+如果 ou
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-05-26 10:44" pubdate>
+              2020-05-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Linux/">Linux</a>
+            
+              <a href="/categories/Technique/Linux/Shell/">Shell</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/Linux/">Linux</a>
+            
+              <a href="/tags/Shell/">Shell</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/05/26/Technique/InformationTheory/%E4%BF%A1%E6%81%AF%E8%AE%BA%E6%A6%82%E8%AE%BA/%E4%BF%A1%E6%81%AF%E8%AE%BA%E6%A6%82%E8%AE%BA/">信息论概论</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/05/26/Technique/InformationTheory/%E4%BF%A1%E6%81%AF%E8%AE%BA%E6%A6%82%E8%AE%BA/%E4%BF%A1%E6%81%AF%E8%AE%BA%E6%A6%82%E8%AE%BA/">
+          
+          
+            
+          
+          1. 内容
+
+绪论
+信息的统计度量
+离散信源
+离散信道及其容量
+无失真信源编码
+有噪信道编码
+限失真信源编码
+保密系统的基本信息理论
+
+2. 信息
+2.1 客观世界三大基本要素
+
+物质：材料科学
+能量：能源科学
+信息：信息科学
+
+2.2 信息、消息、信号
+
+
+消息：是信息的载体和具体表现形式（比如文字、图片等），是信号的具体内容
+
+
+信息：是消息中包含的有意义的内容
+
+
+同一消息对不同的接收者来说
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-05-26 10:44" pubdate>
+              2020-05-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/InformationTheory/">InformationTheory</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/InformationTheory/">InformationTheory</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/05/26/Technique/MatLab/MatLab%E5%87%BD%E6%95%B0ylabel%E3%80%81ylim%E3%80%81yticks%E3%80%81yticklabels%E3%80%81ytickformat/MatLab%E5%87%BD%E6%95%B0ylabel%E3%80%81ylim%E3%80%81yticks%E3%80%81yticklabels%E3%80%81ytickformat/">MatLab函数ylabel、ylim、yticks、yticklabels、ytickformat</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/05/26/Technique/MatLab/MatLab%E5%87%BD%E6%95%B0ylabel%E3%80%81ylim%E3%80%81yticks%E3%80%81yticklabels%E3%80%81ytickformat/MatLab%E5%87%BD%E6%95%B0ylabel%E3%80%81ylim%E3%80%81yticks%E3%80%81yticklabels%E3%80%81ytickformat/">
+          
+          
+            
+          
+          【注】x、z 轴对应函数同理；具体函数详解在 MatLab 中使用命令 help func 查阅。
+1. ylabel 函数
+1.1 作用
+为 y 轴添加标签。
+1.2 语法
+1234ylabel(text) % 为 gca 命令返回的当前坐标区或者图形的 y 轴添加标签ylabel(target,text) % 向 target 指定的坐标区或图形添加标签ylabel(___,Name,Valu
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-05-26 10:44" pubdate>
+              2020-05-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/MatLab/">MatLab</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/MatLab/">MatLab</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/05/26/Technique/MatLab/MatLab%E5%87%BD%E6%95%B0yyaxis/MatLab%E5%87%BD%E6%95%B0yyaxis/">MatLab函数yyaxis</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/05/26/Technique/MatLab/MatLab%E5%87%BD%E6%95%B0yyaxis/MatLab%E5%87%BD%E6%95%B0yyaxis/">
+          
+          
+            
+          
+          【注】详情请参阅 MatLab help 文档。
+1. 简介
+yyaxis 函数可以创建具有两个 y 轴的坐标图。
+2. 格式
+123yyaxis leftyyaxis rightyyaxis(ax,___)
+
+
+yyaxis left
+激活当前坐标区中与左侧 y 轴关联的一侧，后续图形命令的目标均为左侧 y 轴。如果当前坐标区中没有两个 y 轴，此命令将添加第二个 y 轴。如果没有坐标区，此命令
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-05-26 10:44" pubdate>
+              2020-05-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/MatLab/">MatLab</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/MatLab/">MatLab</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/05/26/Technique/MatLab/MatLab%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/MatLab%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/">MatLab环境配置</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/05/26/Technique/MatLab/MatLab%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/MatLab%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/">
+          
+          
+            
+          
+          1. 修改快捷键
+依次点击【主页】⇒\Rightarrow⇒【预设】⇒\Rightarrow⇒【键盘】⇒\Rightarrow⇒【快捷方式】
+
+【注】MatLab 提供了两组快捷键集：Windows 默认集和Emacs 默认集，同时也可以在下方对快捷键默认集进行个性化修改。
+2. 设置帮助文档
+依次点击【主页】⇒\Rightarrow⇒【预设】⇒\Rightarrow⇒【帮助】
+
+在打开的设置界面
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-05-26 10:44" pubdate>
+              2020-05-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/MatLab/">MatLab</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/MatLab/">MatLab</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
         <a href="/2020/05/26/Technique/MatLab/MatLab%E7%BB%98%E5%9B%BE%E6%8A%80%E5%B7%A7/MatLab%E7%BB%98%E5%9B%BE%E6%8A%80%E5%B7%A7/">MatLab绘图技巧</a>
       </h1>
 
@@ -344,564 +920,11 @@ RGB 三元组
     </article>
   </div>
 
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/05/26/Technique/Math/Theory/%CF%80%E7%9A%84%E8%AE%A1%E7%AE%97%E5%85%AC%E5%BC%8F/">π的计算公式</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/05/26/Technique/Math/Theory/%CF%80%E7%9A%84%E8%AE%A1%E7%AE%97%E5%85%AC%E5%BC%8F/">
-          
-          
-            
-          
-          1. BBP（贝利-波尔温-普劳夫）公式
-π=∑k=0∞116k(48k+1−28k+4−18k+5−18k+6)\begin{array}{c}
-\pi = \sum_{k=0}^\infty{1 \over 16^k}({4 \over {8k + 1}} - {2 \over {8k + 4}} - {1 \over {8k + 5}} - {1 \over {8k + 6}})
-\end{
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/Math/">Math</a>
-            
-              <a href="/categories/Technique/Math/Theory/">Theory</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/Math/">Math</a>
-            
-              <a href="/tags/Theory/">Theory</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/05/26/Technique/Net/CDN%E5%86%85%E5%AE%B9%E5%88%86%E5%8F%91%E7%BD%91%E7%BB%9C/CDN%E5%86%85%E5%AE%B9%E5%88%86%E5%8F%91%E7%BD%91%E7%BB%9C/">CDN内容分发网络</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/05/26/Technique/Net/CDN%E5%86%85%E5%AE%B9%E5%88%86%E5%8F%91%E7%BD%91%E7%BB%9C/CDN%E5%86%85%E5%AE%B9%E5%88%86%E5%8F%91%E7%BD%91%E7%BB%9C/">
-          
-          
-            
-          
-          1. 简介
-CDN（内容分发网络）是指一种透过互联网互相连接的电脑网络系统，其利用最靠近用户的服务器，为每位用户提供高性能、可扩展性及低成本的网络内容传递。
-
-现在大部分大网站都是利用 CDN 技术来实现数据的分发，比如 Github 等网站。
-2. 组成
-CDN 网络包含的功能实体主要有：
-
-内容缓存设备：用户接入点，实现内容的边缘传播和存储。
-内容交换机：连接用户接入点的中心，对内容进行缓存负
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/Net/">Net</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/Net/">Net</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/05/26/Technique/Net/DNS%E6%B1%A1%E6%9F%93%E5%92%8CDNS%E5%8A%AB%E6%8C%81/DNS%E6%B1%A1%E6%9F%93%E5%92%8CDNS%E5%8A%AB%E6%8C%81/">DNS污染和DNS劫持</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/05/26/Technique/Net/DNS%E6%B1%A1%E6%9F%93%E5%92%8CDNS%E5%8A%AB%E6%8C%81/DNS%E6%B1%A1%E6%9F%93%E5%92%8CDNS%E5%8A%AB%E6%8C%81/">
-          
-          
-            
-          
-          1. DNS 污染
-DNS 污染又称 DNS 缓存投毒，通过制造一些虚假的域名服务器数据包，将域名指向不正确的 IP 地址。
-
-工作原理
-
-由于域名查询没有任何认证机制，且通常是基于无连接不可靠的 UDP 协议，查询者只接受最先到达且格式正确的查询结果（后来的查询结果均被丢弃），因此可以通过对 UDP 的53端口上的域名查询进行 IDS 入侵检测，一旦发现相匹配的域名查询请求，就立刻伪装成目标域名
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/Net/">Net</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/Net/">Net</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/05/26/Technique/Net/DNS%E5%9C%B0%E5%9D%80%E6%9B%B4%E6%8D%A2/DNS%E5%9C%B0%E5%9D%80%E6%9B%B4%E6%8D%A2/">DNS地址更换</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/05/26/Technique/Net/DNS%E5%9C%B0%E5%9D%80%E6%9B%B4%E6%8D%A2/DNS%E5%9C%B0%E5%9D%80%E6%9B%B4%E6%8D%A2/">
-          
-          
-            
-          
-          1. 简介
-由于网络中存在 DNS 污染和 DNS 劫持的问题，因此有时我们需要更改自己主机上默认的 DNS 服务器地址。
-2. Linux 更改 DNS 地址
-
-临时修改 DNS 地址（重启电脑后失效）
-
-直接在 /etc/resolv.conf 文件中修改 DNS 地址，格式为 nameserver x.x.x.x
-1sudo vim /etc/resolv.conf
-
-永久修改 DNS 地址
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/Net/">Net</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/Net/">Net</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/05/26/Technique/ServiceComputing/WebService%E6%89%A9%E5%B1%95/WebService%E6%89%A9%E5%B1%95/">WebService扩展</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/05/26/Technique/ServiceComputing/WebService%E6%89%A9%E5%B1%95/WebService%E6%89%A9%E5%B1%95/">
-          
-          
-            
-          
-          1. 服务发布和查询
-1.1 概念
-SOAP、WSDL、XML Schema 已经可以完成点到点的调用，但点到点的调用不能完全发挥面向服务的特点
-
-graph LR
-    subgraph 点到点的调用不能完全发挥面向服务的特点
-    A(SOAP);
-    B(WSDL);
-    C(XML Schema);
-    D&#123;点到点的调用&#125;;
-    A &amp; B 
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/ServiceComputing/">ServiceComputing</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/ServiceComputing/">ServiceComputing</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/05/26/Technique/ServiceComputing/WebService%E6%A0%B8%E5%BF%83/WebService%E6%A0%B8%E5%BF%83/">WebService核心</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/05/26/Technique/ServiceComputing/WebService%E6%A0%B8%E5%BF%83/WebService%E6%A0%B8%E5%BF%83/">
-          
-          
-            
-          
-          1. SOAP
-1.1 概念
-SOAP 提供了一种标准的方法，使得运行在不同平台并使用不同的技术和编程语言的应用程序可以互相进行 XML 通信。从本质上来说，SOAP 并不是一个网络传输协议，它仅仅是一个信息传递的概念性框架，在实际使用时，需要绑定具体的网络传输协议和上层的应用逻辑来创建关联。
-1.2 作用
-
-
-SOAP 提供了基于 XML 的信息定义方式，用以在去中心化的分布环境中，提供点到点的
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/ServiceComputing/">ServiceComputing</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/ServiceComputing/">ServiceComputing</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/05/26/Technique/ServiceComputing/XML%E5%8F%8A%E7%9B%B8%E5%85%B3%E5%8D%8F%E8%AE%AE/XML%E5%8F%8A%E7%9B%B8%E5%85%B3%E5%8D%8F%E8%AE%AE/">XML及相关协议</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/05/26/Technique/ServiceComputing/XML%E5%8F%8A%E7%9B%B8%E5%85%B3%E5%8D%8F%E8%AE%AE/XML%E5%8F%8A%E7%9B%B8%E5%85%B3%E5%8D%8F%E8%AE%AE/">
-          
-          
-            
-          
-          1. 面向服务中的信息交换和数据类型
-1.1 电子信息交换
-
-定义
-在执行领域（业务）相关功能时，各式各样、采用电子方式编码的信息，在软件单元之间的移动的过程。
-分类
-
-
-
-应用内部 - 信息在单个应用的不同部分之间移动
-应用之间 - 信息在同一个企业系统中的不同应用之间
-系统之间 - 信息在同一个企业的不同系统之间移动
-公司之间 - 信息在不同的公司之间移动
-
-
-
-
-交换方式
-
-
-
-基于二进制的
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/ServiceComputing/">ServiceComputing</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/ServiceComputing/">ServiceComputing</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/05/26/Technique/ServiceComputing/%E6%9C%8D%E5%8A%A1%E3%80%81%E6%9C%8D%E5%8A%A1%E7%B3%BB%E7%BB%9F%E4%B8%8E%E9%9D%A2%E5%90%91%E6%9C%8D%E5%8A%A1%E7%9A%84%E6%B3%9B%E5%9E%8B/%E6%9C%8D%E5%8A%A1%E3%80%81%E6%9C%8D%E5%8A%A1%E7%B3%BB%E7%BB%9F%E4%B8%8E%E9%9D%A2%E5%90%91%E6%9C%8D%E5%8A%A1%E7%9A%84%E6%B3%9B%E5%9E%8B/">服务、服务系统与面向服务的泛型</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/05/26/Technique/ServiceComputing/%E6%9C%8D%E5%8A%A1%E3%80%81%E6%9C%8D%E5%8A%A1%E7%B3%BB%E7%BB%9F%E4%B8%8E%E9%9D%A2%E5%90%91%E6%9C%8D%E5%8A%A1%E7%9A%84%E6%B3%9B%E5%9E%8B/%E6%9C%8D%E5%8A%A1%E3%80%81%E6%9C%8D%E5%8A%A1%E7%B3%BB%E7%BB%9F%E4%B8%8E%E9%9D%A2%E5%90%91%E6%9C%8D%E5%8A%A1%E7%9A%84%E6%B3%9B%E5%9E%8B/">
-          
-          
-            
-          
-          1. 服务
-1.1 定义
-
-服务是为客户（担任协同提供者）所执行的非持久的，无形的体验。
-服务是单个或一系列活动。这些活动或多或少带有无形的天然属性，通常（不是必须）在客户和服务雇员/物理资源和产品/服务提供者的系统之间的交互中所发生。它们用来提供针对客户问题的解决方案。
-
-1.2 服务模型 vs. 制造模型
-graph LR
-subgraph 服务模型
-    A((服务客户))
-    B[前
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/ServiceComputing/">ServiceComputing</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/ServiceComputing/">ServiceComputing</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/05/26/Technique/ServiceComputing/%E6%9C%8D%E5%8A%A1%E7%94%9F%E6%80%81%E7%B3%BB%E7%BB%9F%E4%B8%8E%E9%9D%A2%E5%90%91%E6%9C%8D%E5%8A%A1%E7%9A%84%E8%AE%A1%E7%AE%97/%E6%9C%8D%E5%8A%A1%E7%94%9F%E6%80%81%E7%B3%BB%E7%BB%9F%E4%B8%8E%E9%9D%A2%E5%90%91%E6%9C%8D%E5%8A%A1%E7%9A%84%E8%AE%A1%E7%AE%97/">服务生态系统与面向服务的计算</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/05/26/Technique/ServiceComputing/%E6%9C%8D%E5%8A%A1%E7%94%9F%E6%80%81%E7%B3%BB%E7%BB%9F%E4%B8%8E%E9%9D%A2%E5%90%91%E6%9C%8D%E5%8A%A1%E7%9A%84%E8%AE%A1%E7%AE%97/%E6%9C%8D%E5%8A%A1%E7%94%9F%E6%80%81%E7%B3%BB%E7%BB%9F%E4%B8%8E%E9%9D%A2%E5%90%91%E6%9C%8D%E5%8A%A1%E7%9A%84%E8%AE%A1%E7%AE%97/">
-          
-          
-            
-          
-          1. 服务生态系统
-1.1 服务组合
-
-面向服务的应用逻辑，遵循面向服务的设计原则，采用服务和服务组合加以实现。
-服务组合由多个装配在一起的服务所构成，用以提供对业务任务或过程进行实现的功能。
-由于面向服务倾向于将服务打造为无关的企业资源，即服务和它的调用者之间是无关的，一个服务可能被多个消费者程序所调用，它们能在不同服务组合中组合同一个服务。
-
-1.2 服务库存
-
-服务库存是在组织或组织的合理部
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/ServiceComputing/">ServiceComputing</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/ServiceComputing/">ServiceComputing</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
 
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/page/50/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/49/#board">49</a><a class="page-number" href="/page/50/#board">50</a><span class="page-number current">51</span><a class="page-number" href="/page/52/#board">52</a><a class="page-number" href="/page/53/#board">53</a><a class="extend next" rel="next" href="/page/52/#board"><i class="iconfont icon-arrowright"></i></a>
+      <a class="extend prev" rel="prev" href="/page/50/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/49/#board">49</a><a class="page-number" href="/page/50/#board">50</a><span class="page-number current">51</span><a class="page-number" href="/page/52/#board">52</a><a class="page-number" href="/page/53/#board">53</a><a class="page-number" href="/page/54/#board">54</a><a class="extend next" rel="next" href="/page/52/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 
