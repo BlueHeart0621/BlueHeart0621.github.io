@@ -197,6 +197,79 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
+        <a href="/2021/09/25/Technique/Linux/ArchLinux/ArchLinux%E4%B8%8B%E9%85%8D%E7%BD%AE%E5%AD%97%E4%BD%93/">ArchLinux下配置字体</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/09/25/Technique/Linux/ArchLinux/ArchLinux%E4%B8%8B%E9%85%8D%E7%BD%AE%E5%AD%97%E4%BD%93/">
+          
+          
+            
+          
+          1. 设定
+在修改 /etc/locale.gen 后，需要运行以下命令来刷新系统字体：
+1sudo locale-gen
+否则，运行命令比如 tmux 会报错：tmux: invalid LC_ALL, LC_CTYPE or LANG。
+
+查看字体列表
+
+1fc-list
+
+建立字体缓存
+
+12mkfontscalemkfontdir
+
+刷新字体缓存
+
+1fc-cache -fv
+附录
+参考资
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-09-25 19:54" pubdate>
+              2021-09-25
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Linux/">Linux</a>
+            
+              <a href="/categories/Technique/Linux/ArchLinux/">ArchLinux</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/Linux/">Linux</a>
+            
+              <a href="/tags/ArchLinux/">ArchLinux</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
         <a href="/2021/09/20/Technique/Math/Theory/%E5%87%B8%E4%BC%98%E5%8C%96/Convex_Sets/">Convex_Sets</a>
       </h1>
 
@@ -730,65 +803,6 @@ Git 从版本 2.3.0 开始，可以使用 GIT_SSH_COMMAND 环境变量给  Git �
               <a href="/tags/Technique/">Technique</a>
             
               <a href="/tags/Git/">Git</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/08/21/Technique/Linux/ArchLinux/ArchLinux%E4%B8%8B%E8%AE%BE%E7%BD%AE%E4%BA%A4%E6%8D%A2%E7%A9%BA%E9%97%B4/">ArchLinux下设置交换空间</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/08/21/Technique/Linux/ArchLinux/ArchLinux%E4%B8%8B%E8%AE%BE%E7%BD%AE%E4%BA%A4%E6%8D%A2%E7%A9%BA%E9%97%B4/">
-          
-          
-            
-          
-          1. 简介
-Linux 将物理内存分为内存段，叫做页面。交换是指内存页面被复制到预先设定好的硬盘空间（叫做交换空间）的过程，目的是释放这份内存页面。物理内存和交换空间的总大小是可用的虚拟内存的总量。
-1.1 交换空间
-交换空间通常是一个磁盘分区（交换分区），但是也可以是一个文件（交换文件）。用户可以在安装 Arch Linux 的时候创建交换空间，或者在安装后的任何时间建立交换空间。交换空间可用于
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-08-21 22:48" pubdate>
-              2021-08-21
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/Linux/">Linux</a>
-            
-              <a href="/categories/Technique/Linux/ArchLinux/">ArchLinux</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/ArchLinux/">ArchLinux</a>
             
           </div>
         

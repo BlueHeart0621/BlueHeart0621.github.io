@@ -197,191 +197,6 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Technique/Linux/Sundry/Linux%E4%B8%8Bfcitx%E9%85%8D%E7%BD%AE%E4%B8%AD%E6%96%87%E6%A0%87%E7%82%B9/">Linux下fcitx配置中文标点</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/05/26/Technique/Linux/Sundry/Linux%E4%B8%8Bfcitx%E9%85%8D%E7%BD%AE%E4%B8%AD%E6%96%87%E6%A0%87%E7%82%B9/">
-          
-          
-            
-          
-          Linux 系统环境下使用中文输入法往往是令人头疼的一件事。使用 fcitx 成功安装了中文输入法后，却发现中文标点和日常使用不一致。这是由于系统设定的全角标点映射集不符合我们期望，于是乎我们可以撸起袖子定制属于自己的个性化中文标点映射集。
-
-查看 /usr/share/fcitx/data/punc.mb.zh_CN 文件
-本人系统上目前的全角标点映射集如下（第一列是键盘符号，每个键盘符号可以对
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/Linux/">Linux</a>
-            
-              <a href="/categories/Technique/Linux/Sundry/">Sundry</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/Sundry/">Sundry</a>
-            
-              <a href="/tags/Linux/">Linux</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/05/26/Technique/Linux/Sundry/Linux%E4%B8%8Bsudo%E6%8A%A5%E9%94%99/">Linux下sudo报错</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/05/26/Technique/Linux/Sundry/Linux%E4%B8%8Bsudo%E6%8A%A5%E9%94%99/">
-          
-          
-            
-          
-          1. sudo: XXX: command not found
-其中，XXX 是所运行的程序命令。
-
-
-问题：直接运行 XXX 程序命令时没有问题，但加上超级权限 sudo 就报错 command not found 。
-
-
-原因：使用 sudo 命令时，使用的配置文件是 /etc/sudoers，查找可运行程序命令由 /etc/sudoers 文件中的 $secure_path 环境变量指定，所
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/Linux/">Linux</a>
-            
-              <a href="/categories/Technique/Linux/Sundry/">Sundry</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/Sundry/">Sundry</a>
-            
-              <a href="/tags/Linux/">Linux</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/05/26/Technique/Linux/Sundry/Linux%E4%B8%8B%E4%BD%BF%E7%94%A8%E6%89%93%E5%8D%B0%E6%9C%BA/">Linux下使用打印机</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/05/26/Technique/Linux/Sundry/Linux%E4%B8%8B%E4%BD%BF%E7%94%A8%E6%89%93%E5%8D%B0%E6%9C%BA/">
-          
-          
-            
-          
-          1. 查看打印机守护进程状态
-1systemctl status cups.service
-如果打印机守护进程没有开启，则需要先启动：
-1systemctl start cups.service
-2. 查看 CPUs 守护进程状态
-在浏览器输入 http://localhost:631，会弹出打印机的管理界面。
-3. 查看 USB 是否连上打印机
-打开 /dev/usb 文件夹，如果有 lpn 文
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/Linux/">Linux</a>
-            
-              <a href="/categories/Technique/Linux/Sundry/">Sundry</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/Sundry/">Sundry</a>
-            
-              <a href="/tags/Linux/">Linux</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
         <a href="/2020/05/26/Technique/Linux/Shell/BashShell%E5%B8%B8%E9%87%8F%E5%92%8C%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6/">BashShell常量和特殊字符</a>
       </h1>
 
@@ -819,6 +634,197 @@ Linux Shell 内建命令 alias 用于定义或显示别名。定义别名可以�
 2. 格式
 12alias [-p]alias NAME=VALUE [NAME=VALUE ...]
 其中，不带参数或者带 -p 参数用于以 alias NAME=VALUE 的格式显示已定义的所有别
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-05-26 10:44" pubdate>
+              2020-05-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Linux/">Linux</a>
+            
+              <a href="/categories/Technique/Linux/Shell/">Shell</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/Linux/">Linux</a>
+            
+              <a href="/tags/Shell/">Shell</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/05/26/Technique/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4declare%E3%80%81local%E3%80%81typeset/">LinuxShell命令declare、local、typeset</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/05/26/Technique/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4declare%E3%80%81local%E3%80%81typeset/">
+          
+          
+            
+          
+          【注】具体详解参见 help 手册。
+1. 简介
+Linux Shell 内建命令 declare 用于声明变量并赋予它们属性。如果没有给定变量名称，则显示所有变量的属性和值。
+内建命令 typeset 、local 均等价于 declare，只不过 local 命令只能用在函数内部。三个内建命令的选项参数及其含义均一致。
+以下仅以 declare 内建命令为例进行解释。
+2. 格式
+1decla
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-05-26 10:44" pubdate>
+              2020-05-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Linux/">Linux</a>
+            
+              <a href="/categories/Technique/Linux/Shell/">Shell</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/Linux/">Linux</a>
+            
+              <a href="/tags/Shell/">Shell</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/05/26/Technique/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4grep/">LinuxShell命令grep</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/05/26/Technique/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4grep/">
+          
+          
+            
+          
+          【注】具体详解参见 man 手册。
+1. 简介
+grep 命令用来在文件中查找并输出包含匹配指定模式的字符的行。
+2. 格式
+123grep [OPTIONS] PATTERN [FILE...]grep [OPTIONS] -e PATTERN ... [FILE...]grep [OPTIONS] -f FILE ... [FILE...]
+其中，OPTIONS 为指定的选项参数，PATTER
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-05-26 10:44" pubdate>
+              2020-05-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Linux/">Linux</a>
+            
+              <a href="/categories/Technique/Linux/Shell/">Shell</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/Linux/">Linux</a>
+            
+              <a href="/tags/Shell/">Shell</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/05/26/Technique/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4head/">LinuxShell命令head</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/05/26/Technique/Linux/Shell/LinuxShell%E5%91%BD%E4%BB%A4head/">
+          
+          
+            
+          
+          【注】具体详解参见 man 手册。
+1. 简介
+head 命令用于在标准输出上显示每个文件起始 10 行。如果多于一个文件，则会逐个进行显示，并在每个文件显示的首部给出对应的文件名。如果没有指定文件或者指定为 -，则从标准输入上读取。
+2. 格式
+1head [OPTION]... [FILE]...
+其中，OPTION 指定选项参数，FILE 指定显示的文件。
+3. 选项
+
+
+
+选项参数
+说明
+
         </a>
       </p>
 

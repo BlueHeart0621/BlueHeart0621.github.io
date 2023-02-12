@@ -197,6 +197,142 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
+        <a href="/2020/05/26/Technique/Linux/Manjaro/Manjaro20.0%E5%AE%89%E8%A3%85EasyConnect/">Manjaro20.0安装EasyConnect</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/05/26/Technique/Linux/Manjaro/Manjaro20.0%E5%AE%89%E8%A3%85EasyConnect/">
+          
+          
+            
+          
+          EasyConnect 是深信服公司新一代的 SSLVPN，支持各大操作系统平台，但 Linux 目前只支持 deb 包和 rpm 包，所以 Manjaro 安装 EasyConnect 并不友好。
+1. 安装最新版 EasyConnect
+1.1 终端安装 AUR 版本
+
+yaourt 用户
+
+1yaourt -S easyconnect
+
+yay 用户
+
+1yay -S easyconnect
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-05-26 10:44" pubdate>
+              2020-05-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Linux/">Linux</a>
+            
+              <a href="/categories/Technique/Linux/Manjaro/">Manjaro</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/Linux/">Linux</a>
+            
+              <a href="/tags/Manjaro/">Manjaro</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/05/26/Technique/Linux/Manjaro/Manjaro20.0%E5%AE%89%E8%A3%85deb%E8%BD%AF%E4%BB%B6%E5%8C%85/">Manjaro20.0安装deb软件包</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/05/26/Technique/Linux/Manjaro/Manjaro20.0%E5%AE%89%E8%A3%85deb%E8%BD%AF%E4%BB%B6%E5%8C%85/">
+          
+          
+            
+          
+          由于 Manjaro 基于 ArchLinux，而 deb 软件包格式为 Debian 系统安装包格式，故 Manjaro 不能直接安装 deb 软件包，而需要借助 debtap 工具。
+1. 安装 debtap
+
+yaourt 工具
+
+1yaourt -S debtap
+
+yay 工具
+
+1yay -S debtap
+
+pacaur 工具
+
+1pacaur -S debtap
+【注】三种方式任选
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-05-26 10:44" pubdate>
+              2020-05-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Linux/">Linux</a>
+            
+              <a href="/categories/Technique/Linux/Manjaro/">Manjaro</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/Linux/">Linux</a>
+            
+              <a href="/tags/Manjaro/">Manjaro</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
         <a href="/2020/05/26/Technique/Linux/Manjaro/Manjaro20.0%E5%AE%89%E8%A3%85man%E4%B8%AD%E6%96%87%E6%89%8B%E5%86%8C/">Manjaro20.0安装man中文手册</a>
       </h1>
 
@@ -704,134 +840,6 @@ play 命令有很多强大的功能，具体用法可以 help 一下
               <a href="/tags/Linux/">Linux</a>
             
               <a href="/tags/Mint/">Mint</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/05/26/Technique/Linux/Ubuntu/Ubuntu18.04%E6%9B%B4%E6%8D%A2%E5%9B%BD%E5%86%85%E6%BA%90/">Ubuntu18.04更换国内源</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/05/26/Technique/Linux/Ubuntu/Ubuntu18.04%E6%9B%B4%E6%8D%A2%E5%9B%BD%E5%86%85%E6%BA%90/">
-          
-          
-            
-          
-          1. 备份原来的源文件 /etc/apt/sources.list
-1sudo mv /etc/apt/sources.list /etc/apt/sources.list.bk
-2. 新建文件 /etc/apt/sources.list
-1sudo vim /etc/apt/sources.list
-3. 将国内源粘贴复制进去
-
-阿里源
-
-123456789101112deb http://mi
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/Linux/">Linux</a>
-            
-              <a href="/categories/Technique/Linux/Ubuntu/">Ubuntu</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/Ubuntu/">Ubuntu</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/05/26/Technique/Linux/Ubuntu/Ubuntu20.04%E6%9B%B4%E6%8D%A2%E5%9B%BD%E5%86%85%E6%BA%90/">Ubuntu20.04更换国内源</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/05/26/Technique/Linux/Ubuntu/Ubuntu20.04%E6%9B%B4%E6%8D%A2%E5%9B%BD%E5%86%85%E6%BA%90/">
-          
-          
-            
-          
-          1. 备份原来的源文件 /etc/apt/sources.list
-1sudo mv /etc/apt/sources.list /etc/apt/sources.list.bk
-2. 新建文件 /etc/apt/sources.list
-1sudo vim /etc/apt/sources.list
-3. 将国内源粘贴复制进去
-
-清华源
-
-12345678910111213# 默认注释了源码镜像
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/Linux/">Linux</a>
-            
-              <a href="/categories/Technique/Linux/Ubuntu/">Ubuntu</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/Ubuntu/">Ubuntu</a>
             
           </div>
         

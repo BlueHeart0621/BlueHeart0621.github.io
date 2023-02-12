@@ -203,7 +203,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      1.4k 字
+      929 字
     </span>
   
 
@@ -213,7 +213,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      21
+      14
        分钟
     </span>
   
@@ -277,47 +277,47 @@
 <tbody>
 <tr>
 <td style="text-align:left">加</td>
-<td style="text-align:left"><code>((i=i+1))</code>、<code>((i++))</code>、<code>((++i))</code>、<code>((i+=1))</code> <br> <code>let i=i+1</code>、<code>let i++</code>、<code>let ++i</code>、<code>let i+=1</code> <br> <code>i=$[i+1]</code>、<code>i=$[i++]</code>、<code>i=$[++i]</code>、<code>i=$[i+=1]</code> <br> （<code>++i</code> 和 <code>i++</code> 的区别同 C 语言） <br> <code>i=$(expr $i + 1)</code> <br> <code>i=$(echo $i+1 | bc)</code> <br> <code>i=$(ehco &quot;$i 1&quot; | awk '&#123;printf $1+$2;&#125;')</code></td>
+<td style="text-align:left"><code>((i=i+1))</code>、<code>((i++))</code>、<code>((++i))</code>、<code>((i+=1))</code> <br> <code>let i=i+1</code>、<code>let i++</code>、<code>let ++i</code>、<code>let i+=1</code> <br> <code>i=$[i+1]</code>、<code>i=$[i++]</code>、<code>i=$[++i]</code>、<code>i=$[i+=1]</code> <br> （<code>++i</code> 和 <code>i++</code> 的区别同 C 语言） <br> <code>i=$(expr $i + 1)</code> <br> `i=$(echo $i+1</td>
 </tr>
 <tr>
 <td style="text-align:left">减</td>
-<td style="text-align:left"><code>((i=i-1))</code>、<code>((i--))</code>、<code>((--i))</code>、<code>((i-=1))</code> <br> <code>let i=i-1</code>、<code>let i--</code>、<code> let --i</code>、<code>let i-=1</code> <br> <code>i=$[i-1]</code>、<code>i=$[i--]</code>、<code>i=$[--i]</code>、<code>i=$[i-=1]</code> <br> （<code>--i</code> 和 <code>i--</code> 的区别同 C 语言） <br> <code>i=$(expr $i - 1)</code> <br> <code>i=$(echo $i-1 | bc)</code> <br> <code>i=$(ehco &quot;$i 1&quot; | awk '&#123;printf $1-$2;&#125;')</code></td>
+<td style="text-align:left"><code>((i=i-1))</code>、<code>((i--))</code>、<code>((--i))</code>、<code>((i-=1))</code> <br> <code>let i=i-1</code>、<code>let i--</code>、<code> let --i</code>、<code>let i-=1</code> <br> <code>i=$[i-1]</code>、<code>i=$[i--]</code>、<code>i=$[--i]</code>、<code>i=$[i-=1]</code> <br> （<code>--i</code> 和 <code>i--</code> 的区别同 C 语言） <br> <code>i=$(expr $i - 1)</code> <br> `i=$(echo $i-1</td>
 </tr>
 <tr>
 <td style="text-align:left">乘</td>
-<td style="text-align:left"><code>((i=i*2))</code>、<code>((i*=2))</code> <br> <code>let i=i*2</code>、<code>let i*=2</code> <br> <code>i=$(expr $i \* 2)</code>（乘号需要转义） <br> <code>i=$[i*2]</code>、<code>i=$[i*=2]</code> <br> <code>i=$(echo $i*2 | bc)</code> <br> <code>i=$(ehco &quot;$i 2&quot; | awk '&#123;printf $1*$2;&#125;')</code></td>
+<td style="text-align:left"><code>((i=i*2))</code>、<code>((i*=2))</code> <br> <code>let i=i*2</code>、<code>let i*=2</code> <br> <code>i=$(expr $i \* 2)</code>（乘号需要转义） <br> <code>i=$[i*2]</code>、<code>i=$[i*=2]</code> <br> `i=$(echo $i*2</td>
 </tr>
 <tr>
 <td style="text-align:left">除</td>
-<td style="text-align:left"><code>((i=i/2))</code>、<code>((i/=2))</code> <br> <code>let i=i/2</code>、<code>let i/=2</code> <br> <code>i=$[i/2]</code>、<code>i=$[i/=2]</code> <br> <code>i=$(expr $i / 2)</code> <br> <code>i=$(echo $i/2 | bc)</code> <br> <code>i=$(ehco &quot;$i 2&quot; | awk '&#123;printf $1/$2;&#125;')</code></td>
+<td style="text-align:left"><code>((i=i/2))</code>、<code>((i/=2))</code> <br> <code>let i=i/2</code>、<code>let i/=2</code> <br> <code>i=$[i/2]</code>、<code>i=$[i/=2]</code> <br> <code>i=$(expr $i / 2)</code> <br> `i=$(echo $i/2</td>
 </tr>
 <tr>
 <td style="text-align:left">取模</td>
-<td style="text-align:left"><code>((i=i%2))</code>、<code>((i%=2))</code> <br> <code>let i=i%2</code>、<code>let i%=2</code> <br> <code>i=$[i%2]</code>、<code>i=$[i%=2]</code> <br> <code>i=$(expr $i % 2)</code> <br> <code>i=$(echo $i%2 | bc)</code> <br> <code>i=$(echo &quot;$i 2&quot; | awk '&#123;printf $1%$2;&#125;')</code></td>
+<td style="text-align:left"><code>((i=i%2))</code>、<code>((i%=2))</code> <br> <code>let i=i%2</code>、<code>let i%=2</code> <br> <code>i=$[i%2]</code>、<code>i=$[i%=2]</code> <br> <code>i=$(expr $i % 2)</code> <br> `i=$(echo $i%2</td>
 </tr>
 <tr>
 <td style="text-align:left">求幂</td>
-<td style="text-align:left"><code>((i=i**2))</code> <br> <code>let i=i**2</code> <br> <code>i=$[i**2]</code> <br> <code>i=$(echo $i^2 | bc)</code> <br> <code>i=$(echo &quot;$i 2&quot; | awk '&#123;printf $1**$2;&#125;')</code> <br> <code>i=$(echo &quot;$i 2&quot; | awk '&#123;printf $1^$2;&#125;') </code> <br> （<code>awk</code> 求幂既支持 <code>**</code> 运算符也支持 <code>^</code> 运算符）</td>
+<td style="text-align:left"><code>((i=i**2))</code> <br> <code>let i=i**2</code> <br> <code>i=$[i**2]</code> <br> `i=$(echo $i^2</td>
 </tr>
 <tr>
 <td style="text-align:left">移位</td>
-<td style="text-align:left"><code>((i=i&lt;&lt;1))</code>、<code>((i&lt;&lt;=1))</code>、<code>((i=i&gt;&gt;1))</code>、<code>((i&gt;&gt;=1))</code> <br> <code>let i=i&lt;&lt;1</code>、<code>let i&lt;&lt;=1</code>、<code>let i=i&gt;&gt;1</code>、<code>let i&gt;&gt;=1</code> <br> <code>i=$[i&lt;&lt;1]</code>、<code>i=$[i&lt;&lt;=1]</code>、<code>i=$[i&gt;&gt;1]</code>、<code>i=$[i&gt;&gt;=1]</code> <br> （<code>expr</code>、<code>bc</code> 均不支持移位运算） <br> <code>i=$(echo &quot;$i 1&quot; | awk '&#123;printf lshift($1,$2);&#125;')</code> <br> <code>i=$(echo &quot;$i 1&quot; | awk '&#123;printf rshift($1,$2);&#125;')</code></td>
+<td style="text-align:left"><code>((i=i&lt;&lt;1))</code>、<code>((i&lt;&lt;=1))</code>、<code>((i=i&gt;&gt;1))</code>、<code>((i&gt;&gt;=1))</code> <br> <code>let i=i&lt;&lt;1</code>、<code>let i&lt;&lt;=1</code>、<code>let i=i&gt;&gt;1</code>、<code>let i&gt;&gt;=1</code> <br> <code>i=$[i&lt;&lt;1]</code>、<code>i=$[i&lt;&lt;=1]</code>、<code>i=$[i&gt;&gt;1]</code>、<code>i=$[i&gt;&gt;=1]</code> <br> （<code>expr</code>、<code>bc</code> 均不支持移位运算） <br> `i=<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi>e</mi><mi>c</mi><mi>h</mi><mi>o</mi><mi mathvariant="normal">&quot;</mi></mrow><annotation encoding="application/x-tex">(echo &quot;</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal">e</span><span class="mord mathnormal">c</span><span class="mord mathnormal">h</span><span class="mord mathnormal">o</span><span class="mord">&quot;</span></span></span></span>i 1&quot;</td>
 </tr>
 <tr>
 <td style="text-align:left">位取反</td>
-<td style="text-align:left"><code>((i=~i))</code> <br> <code>let i=~i</code> <br> <code>i=$[~i]</code> <br> （<code>expr</code>、<code>bc</code> 均不支持位取反运算） <br> <code>i=$(echo &quot;$i&quot; | awk -M '&#123;printf compl($i);&#125;')</code> <br> 【注】<code>-M</code> 参数指定 <code>awk</code> 以任意精度计算（默认为 53 位，不加 <code>-M</code> 会有较大误差且无法对 64 位整数取反）</td>
+<td style="text-align:left"><code>((i=~i))</code> <br> <code>let i=~i</code> <br> <code>i=$[~i]</code> <br> （<code>expr</code>、<code>bc</code> 均不支持位取反运算） <br> `i=<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi>e</mi><mi>c</mi><mi>h</mi><mi>o</mi><mi mathvariant="normal">&quot;</mi></mrow><annotation encoding="application/x-tex">(echo &quot;</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal">e</span><span class="mord mathnormal">c</span><span class="mord mathnormal">h</span><span class="mord mathnormal">o</span><span class="mord">&quot;</span></span></span></span>i&quot;</td>
 </tr>
 <tr>
 <td style="text-align:left">位与</td>
-<td style="text-align:left"><code>((i=i&amp;2))</code>、<code>((i&amp;=2))</code> <br> <code>let i=i&amp;2</code>、<code>let i&amp;=2</code> <br> <code>i=$[i&amp;2]</code>、<code>i=$[i&amp;=2]</code> <br> （<code>expr</code>、<code>bc</code> 均不支持位与运算） <br> <code>i=$(echo &quot;$i 2&quot; | awk '&#123;printf and($1,$2);&#125;')</code></td>
+<td style="text-align:left"><code>((i=i&amp;2))</code>、<code>((i&amp;=2))</code> <br> <code>let i=i&amp;2</code>、<code>let i&amp;=2</code> <br> <code>i=$[i&amp;2]</code>、<code>i=$[i&amp;=2]</code> <br> （<code>expr</code>、<code>bc</code> 均不支持位与运算） <br> `i=<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi>e</mi><mi>c</mi><mi>h</mi><mi>o</mi><mi mathvariant="normal">&quot;</mi></mrow><annotation encoding="application/x-tex">(echo &quot;</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal">e</span><span class="mord mathnormal">c</span><span class="mord mathnormal">h</span><span class="mord mathnormal">o</span><span class="mord">&quot;</span></span></span></span>i 2&quot;</td>
 </tr>
 <tr>
 <td style="text-align:left">位或</td>
-<td style="text-align:left"><code>((i=i|2))</code>、<code>((i|=2))</code> <br> <code>let i=i|2</code>、<code>let i|=2</code> <br> <code>i=$[i|2]</code>、<code>i=$[i|=2]</code> <br> （<code>expr</code>、<code>bc</code> 均不支持位或运算） <br> <code>i=$(echo &quot;$i 2&quot; | awk '&#123;printf or($1,$2);&#125;')</code></td>
+<td style="text-align:left">`((i=i</td>
 </tr>
 <tr>
 <td style="text-align:left">位异或</td>
-<td style="text-align:left"><code>((i=i^2))</code>、<code>((i^=2))</code> <br> <code>let i=i^2</code>、<code>let i^=2</code> <br> <code>i=$[i^2]</code>、<code>i=$[i^=2]</code> <br> （<code>expr</code>、<code>bc</code> 均不支持位或运算） <br> <code>i=$(echo &quot;$i 2&quot; | awk '&#123;printf xor($1,$2);&#125;')</code></td>
+<td style="text-align:left"><code>((i=i^2))</code>、<code>((i^=2))</code> <br> <code>let i=i^2</code>、<code>let i^=2</code> <br> <code>i=$[i^2]</code>、<code>i=$[i^=2]</code> <br> （<code>expr</code>、<code>bc</code> 均不支持位或运算） <br> `i=<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi>e</mi><mi>c</mi><mi>h</mi><mi>o</mi><mi mathvariant="normal">&quot;</mi></mrow><annotation encoding="application/x-tex">(echo &quot;</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal">e</span><span class="mord mathnormal">c</span><span class="mord mathnormal">h</span><span class="mord mathnormal">o</span><span class="mord">&quot;</span></span></span></span>i 2&quot;</td>
 </tr>
 </tbody>
 </table>
@@ -333,11 +333,11 @@
 <tbody>
 <tr>
 <td style="text-align:left"><code>bc</code></td>
-<td style="text-align:left"><code>echo &quot;scale = 5; 0.5+0.5&quot; | bc</code> <br> <code>echo &quot;scale = 5; 0.5-0.5&quot; | bc</code> <br> <code>echo &quot;scale = 5; 0.5*0.5&quot; | bc</code> <br> <code>echo &quot;scale=5; 1/3&quot; | bc</code> <br> <code>echo &quot;scale = 5; 0.5^2&quot; | bc</code> <br> 【注】<code>bc</code> 不支持求小数幂，只支持求整数幂，即 <code>^</code> 运算符右边参数必须为整数。</td>
+<td style="text-align:left">`echo &quot;scale = 5; 0.5+0.5&quot;</td>
 </tr>
 <tr>
 <td style="text-align:left"><code>awk</code></td>
-<td style="text-align:left"><code>echo &quot;0.5 0.5&quot; | awk '&#123;printf(&quot;%0.5f\n&quot;,$1+$2);&#125;'</code> <br> <code>echo &quot;0.5 0.5&quot; | awk '&#123;printf(&quot;%0.5f\n&quot;,$1-$2);&#125;'</code> <br> <code>echo &quot;0.5 0.5&quot; | awk '&#123;printf(&quot;%0.5f\n&quot;,$1*$2);&#125;'</code> <br> <code>echo &quot;1 3&quot; | awk '&#123;printf(&quot;%0.5f\n&quot;,$1/$2);&#125;'</code> <br> <code>echo &quot;0.5 0.5&quot; | awk '&#123;printf(&quot;%0.5f\n&quot;,$1**$2);&#125;'</code> <br> <code>echo &quot;0.5 0.5&quot; | awk '&#123;printf(&quot;%0.5f\n&quot;,$1^$2);&#125;'</code></td>
+<td style="text-align:left">`echo &quot;0.5 0.5&quot;</td>
 </tr>
 </tbody>
 </table>
@@ -358,32 +358,32 @@
 <tr>
 <td style="text-align:left">sin(x)</td>
 <td style="text-align:left"><code>s(x)</code></td>
-<td style="text-align:left"><code>echo &quot;s($x)&quot; | bc -l</code></td>
+<td style="text-align:left">`echo &quot;s($x)&quot;</td>
 </tr>
 <tr>
 <td style="text-align:left">cos(x)</td>
 <td style="text-align:left"><code>c(x)</code></td>
-<td style="text-align:left"><code>echo &quot;c($x)&quot; | bc -l</code></td>
+<td style="text-align:left">`echo &quot;c($x)&quot;</td>
 </tr>
 <tr>
 <td style="text-align:left">arctan(x)</td>
 <td style="text-align:left"><code>a(x)</code></td>
-<td style="text-align:left"><code>echo &quot;a($x)&quot; | bc -l</code></td>
+<td style="text-align:left">`echo &quot;a($x)&quot;</td>
 </tr>
 <tr>
 <td style="text-align:left">ln(x)</td>
 <td style="text-align:left"><code>l(x)</code></td>
-<td style="text-align:left"><code>echo &quot;l($x)&quot; | bc -l</code></td>
+<td style="text-align:left">`echo &quot;l($x)&quot;</td>
 </tr>
 <tr>
 <td style="text-align:left">exp(x)</td>
 <td style="text-align:left"><code>e(x)</code></td>
-<td style="text-align:left"><code>echo &quot;e($x)&quot; | bc -l</code></td>
+<td style="text-align:left">`echo &quot;e($x)&quot;</td>
 </tr>
 <tr>
 <td style="text-align:left">开方</td>
 <td style="text-align:left"><code>sqrt(x)</code></td>
-<td style="text-align:left"><code>echo &quot;sqrt($x)&quot; | bc -l</code></td>
+<td style="text-align:left">`echo &quot;sqrt($x)&quot;</td>
 </tr>
 <tr>
 <td style="text-align:left">...</td>
@@ -405,32 +405,32 @@
 <tr>
 <td style="text-align:left">sin(x)</td>
 <td style="text-align:left"><code>sin(x)</code></td>
-<td style="text-align:left"><code>echo &quot;$i&quot; | awk '&#123;printf sin($1);&#125;'</code></td>
+<td style="text-align:left">`echo &quot;$i&quot;</td>
 </tr>
 <tr>
 <td style="text-align:left">cos(x)</td>
 <td style="text-align:left"><code>cos(x)</code></td>
-<td style="text-align:left"><code>echo &quot;$i&quot; | awk '&#123;printf cos($1);&#125;'</code></td>
+<td style="text-align:left">`echo &quot;$i&quot;</td>
 </tr>
 <tr>
 <td style="text-align:left">arctan(x)</td>
 <td style="text-align:left"><code>atan2(y,x)</code></td>
-<td style="text-align:left"><code>echo &quot;$i $j&quot; | awk '&#123;printf atan2($1,$2);&#125;'</code></td>
+<td style="text-align:left">`echo &quot;$i $j&quot;</td>
 </tr>
 <tr>
 <td style="text-align:left">ln(x)</td>
 <td style="text-align:left"><code>log(x)</code></td>
-<td style="text-align:left"><code>echo &quot;$i&quot; | awk '&#123;printf log($1);&#125;'</code></td>
+<td style="text-align:left">`echo &quot;$i&quot;</td>
 </tr>
 <tr>
 <td style="text-align:left">exp(x)</td>
 <td style="text-align:left"><code>exp(x)</code></td>
-<td style="text-align:left"><code>echo &quot;$i&quot; | awk '&#123;printf exp($1);&#125;'</code></td>
+<td style="text-align:left">`echo &quot;$i&quot;</td>
 </tr>
 <tr>
 <td style="text-align:left">开方</td>
 <td style="text-align:left"><code>sqrt(x)</code></td>
-<td style="text-align:left"><code>echo &quot;$i&quot; | awk '&#123;printf sqrt($1);&#125;'</code></td>
+<td style="text-align:left">`echo &quot;$i&quot;</td>
 </tr>
 <tr>
 <td style="text-align:left">...</td>

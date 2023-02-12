@@ -347,7 +347,7 @@
 <h2 id="6-ResNet">6. ResNet</h2>
 <h3 id="6-1-网络结构">6.1 网络结构</h3>
 <p>ResNet 引入了恒等映射的跨层连结，其基础块称为残差块（Residual），如下所示：</p>
-<img src="/images/Technique/DeepLearning/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E7%BB%8F%E5%85%B8%E7%BD%91%E7%BB%9C/Residual.png" srcset="/image/loading.gif" lazyload class="" width="675" title="Residual">
+<img src="/images/Technique/DeepLearning/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E7%BB%8F%E5%85%B8%E7%BD%91%E7%BB%9C/Residual.png" srcset="/image/loading.gif" lazyload class="" width="540" title="Residual">
 <ul>
 <li>ResNet 沿⽤了 VGG 全 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">3 \times 3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">3</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span></span></span></span> 卷积层的设计。残差块⾥⾸先有 2 个有相同输出通道数的 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">3 \times 3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">3</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span></span></span></span> 卷积层。每个卷积层后接⼀个批量归⼀化层和 ReLU 激活函数。</li>
 <li>然后我们将输⼊跳过这两个卷积运算后直接加在最后的 ReLU 激活函数前。这样的设计要求两个卷积层的输出与输⼊形状⼀样，从⽽可以相加。</li>
@@ -359,7 +359,7 @@
 <h2 id="7-DenseNet">7. DenseNet</h2>
 <h3 id="7-1-网络结构">7.1 网络结构</h3>
 <p>DenseNet 的主要局部结构如下：</p>
-<img src="/images/Technique/DeepLearning/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E7%BB%8F%E5%85%B8%E7%BD%91%E7%BB%9C/DenseBlock.png" srcset="/image/loading.gif" lazyload class="" width="754" title="DenseBlock">
+<img src="/images/Technique/DeepLearning/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E7%BB%8F%E5%85%B8%E7%BD%91%E7%BB%9C/DenseBlock.png" srcset="/image/loading.gif" lazyload class="" width="603" title="DenseBlock">
 <p>DenseNet 网络结构如下：</p>
 <img src="/images/Technique/DeepLearning/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E7%BB%8F%E5%85%B8%E7%BD%91%E7%BB%9C/DenseNet.png" srcset="/image/loading.gif" lazyload class="" width="751" title="DenseNet">
 <p>DenseNet 的基础块称为稠密块（DenseBlock）和过渡层（TransitionLayer）：</p>

@@ -197,6 +197,69 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
+        <a href="/2020/09/06/Technique/ACM/%E9%A2%98%E8%A7%A3/P5357%E3%80%8C%E3%80%90%E6%A8%A1%E6%9D%BF%E3%80%91AC%E8%87%AA%E5%8A%A8%E6%9C%BA%EF%BC%88%E4%BA%8C%E6%AC%A1%E5%8A%A0%E5%BC%BA%E7%89%88%EF%BC%89%E3%80%8D/">P5357「【模板】AC自动机（二次加强版）」</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/09/06/Technique/ACM/%E9%A2%98%E8%A7%A3/P5357%E3%80%8C%E3%80%90%E6%A8%A1%E6%9D%BF%E3%80%91AC%E8%87%AA%E5%8A%A8%E6%9C%BA%EF%BC%88%E4%BA%8C%E6%AC%A1%E5%8A%A0%E5%BC%BA%E7%89%88%EF%BC%89%E3%80%8D/">
+          
+          
+            
+          
+          1. 题目
+题目链接：P5357「【模板】AC自动机（二次加强版）」 。
+题目描述
+给你一个文本串 SSS 和 nnn 个模式串 T1..nT_{1..n}T1..n​，请你分别求出每个模式串 TiT_iTi​ 在 SS 中出现的次数。
+输入格式
+第一行包含一个正整数 nnn 表示模式串的个数。
+接下来 nnn 行，第 iii 行包含一个由小写英文字母构成的字符串 TiT_iTi​ 。
+最后一行包
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-09-06 22:26" pubdate>
+              2020-09-06
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/ACM/">ACM</a>
+            
+              <a href="/categories/Technique/ACM/%E9%A2%98%E8%A7%A3/">题解</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/ACM/">ACM</a>
+            
+              <a href="/tags/%E9%A2%98%E8%A7%A3/">题解</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
         <a href="/2020/09/06/Technique/ACM/%E9%A2%98%E8%A7%A3/CF1409F%E3%80%8CSubsequences%20of%20Length%20Two%E3%80%8D/">CF1409F「Subsequences of Length Two」</a>
       </h1>
 
@@ -726,71 +789,6 @@ prefix(S,i)=S[0..i]​
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
             <time datetime="2020-09-03 16:05" pubdate>
-              2020-09-03
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/ACM/">ACM</a>
-            
-              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/">算法</a>
-            
-              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/ACM/">ACM</a>
-            
-              <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
-            
-              <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/09/03/ACM/%E7%AE%97%E6%B3%95/%E5%AD%97%E7%AC%A6%E4%B8%B2/KMP/">KMP</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/09/03/ACM/%E7%AE%97%E6%B3%95/%E5%AD%97%E7%AC%A6%E4%B8%B2/KMP/">
-          
-          
-            
-          
-          1. 简介
-KMP 算法是一种优秀的字符串模式匹配算法，相对于暴力匹配方法来说，其改进在于：每当一趟匹配过程出现字符比较不相等时，不需回溯主串的 iii 指针，而是利用已经得到的「部分匹配」的结果将模式串向右「滑动」尽可能远的一段距离后（即回溯模式串的 jjj 指针），继续进行比较。
-2. 实现
-
-
-设模式串为 p1p2⋯pmp_1 p_2 \cdots p_mp1​p2​⋯pm​，主串为 s1s
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-09-03 09:56" pubdate>
               2020-09-03
             </time>
           </div>

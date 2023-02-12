@@ -197,21 +197,38 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Technique/MarkDown/Atom%E6%90%AD%E5%BB%BAMarkDown%E7%8E%AF%E5%A2%83/">Atom搭建MarkDown环境</a>
+        <a href="/2020/05/26/Technique/MatLab/MatLab%E5%8F%96%E6%95%B4%E5%87%BD%E6%95%B0/">MatLab取整函数</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Technique/MarkDown/Atom%E6%90%AD%E5%BB%BAMarkDown%E7%8E%AF%E5%A2%83/">
+        <a href="/2020/05/26/Technique/MatLab/MatLab%E5%8F%96%E6%95%B4%E5%87%BD%E6%95%B0/">
           
           
             
           
-          1. 简介
-Atom 是 Github 专门为程序员推出的一款开源跨平台文本编辑器，基于 web 技术构建，支持多种语言开发，原生支持 git 以及 MarkDown 基础语法书写和预览。
-2. 常用快捷键
+          MatLab默认的数值类型为双精度 double 型，而 double / single 类型数据在转为整型时常常需要取整，MatLab提供了以下四种取整函数。
 
-Ctrl+Shift+P ：打开搜索面板
-Ctrl+Shift+M ：打开 MarkDown 实时预览（安装 markdown-preview、markdown-preview-plus 或
+
+
+函数
+说明
+举例
+
+
+
+
+floor
+向下取整
+floor(1.5)=1floor(-1.5)=-2
+
+
+ceil
+向上取整
+ceil(1.5)=2ceil(-1.5)=-1
+
+
+round
+取整到最近的整数（若小数部分为0.5，则
         </a>
       </p>
 
@@ -230,7 +247,7 @@ Ctrl+Shift+M ：打开 MarkDown 实时预览（安装 markdown-preview、markdow
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/MarkDown/">MarkDown</a>
+              <a href="/categories/Technique/MatLab/">MatLab</a>
             
           </div>
         
@@ -240,7 +257,122 @@ Ctrl+Shift+M ：打开 MarkDown 实时预览（安装 markdown-preview、markdow
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/MarkDown/">MarkDown</a>
+              <a href="/tags/MatLab/">MatLab</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/05/26/Technique/MatLab/MatLab%E5%8F%98%E9%87%8F/">MatLab变量</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/05/26/Technique/MatLab/MatLab%E5%8F%98%E9%87%8F/">
+          
+          
+            
+          
+          1. 变量命名
+在 MatLab 中，变量不需预先声明就可直接进行赋值操作。变量命名遵循以下规则：
+
+变量名和函数名对字母大小写敏感
+变量名和函数名必须以字母为开端，其后可以是字母、数字和下划线
+不能使用 MatLab 关键字作为变量名和函数名（可使用 iskeywords 函数查看 MatLab 中所有的关键字）
+变量名和函数名最多可包含 63 个字符，超过部分被截断忽略
+避免使用函数名作为变量
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-05-26 10:44" pubdate>
+              2020-05-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/MatLab/">MatLab</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/MatLab/">MatLab</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/05/26/Technique/MatLab/MatLab%E5%B7%A5%E4%BD%9C%E5%8C%BA/">MatLab工作区</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/05/26/Technique/MatLab/MatLab%E5%B7%A5%E4%BD%9C%E5%8C%BA/">
+          
+          
+            
+          
+          1. 基础工作区
+MatLab 中的基础工作区是针对当前 MatLab 窗口内的脚本代码而言的（无论是命令行窗口输入的还是 M 脚本文件中的），是所有脚本代码所共享的（即对当前 MatLab 窗口而言是唯一的），是对外可见的（即 MatLab 窗口中显示的工作区），与当前 MatLab 窗口是共存亡的。
+【注】从函数中调用脚本时，脚本使用的是调用函数的函数工作区。
+2. 函数工作区
+MatLab 
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-05-26 10:44" pubdate>
+              2020-05-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/MatLab/">MatLab</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/MatLab/">MatLab</a>
             
           </div>
         
@@ -319,290 +451,6 @@ B 与 A 相除（A 为标量或满足 A 非奇异，A\B=A−1
               <a href="/tags/Technique/">Technique</a>
             
               <a href="/tags/MatLab/">MatLab</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/05/26/Technique/MarkDown/VSCode%E6%90%AD%E5%BB%BAMarkDown%E7%8E%AF%E5%A2%83/">VSCode搭建MarkDown环境</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/05/26/Technique/MarkDown/VSCode%E6%90%AD%E5%BB%BAMarkDown%E7%8E%AF%E5%A2%83/">
-          
-          
-            
-          
-          VSCode 原生就支持 Markdown 语言编写，但功能比较基础。为了满足 Markdown 更多的日常使用功能，以下推荐几款非常有用的插件：
-1. Markdown Preview Enhanced（MPE）
-该插件包含许多 MarkDown 语法功能，能满足书写 MarkDown 的大部分日常需求。
-
-实时滚动预览（Ctrl+Shift+V）
-LaTex数学公式
-表格
-Code Chunk
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/MarkDown/">MarkDown</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/MarkDown/">MarkDown</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/05/26/Technique/Net/Hosts%E6%96%87%E4%BB%B6%E4%BF%AE%E6%94%B9/">Hosts文件修改</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/05/26/Technique/Net/Hosts%E6%96%87%E4%BB%B6%E4%BF%AE%E6%94%B9/">
-          
-          
-            
-          
-          1. 简介
-有时访问某些国外网站很卡（不包括无法访问的网站），很大的原因是这些网站的 CDN 的域名遭到 DNS 污染了。这时就可以选择直接访问源网站 IP ，绕过 DNS 解析，即通过修改主机 hosts 文件的方式，将域名和 IP 的对应关系直接记录下来，来加速对这些网站的访问。
-2. 原理
-主机操作系统下都有一个 hosts 文件，其作用在于将一些常用网址域名与其对应的 IP 地址建立一个关
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/Net/">Net</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/Net/">Net</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/05/26/Technique/NodeJS/Mint19.1%E5%AE%89%E8%A3%85NodeJS/">Mint19.1安装NodeJS</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/05/26/Technique/NodeJS/Mint19.1%E5%AE%89%E8%A3%85NodeJS/">
-          
-          
-            
-          
-          1. 查看 NodeJS 版本
-查看最新版本的 NodeJS，见官网地址。
-2. 添加 NodeJS 源
-NodeJS 每个大版本都有相对应的源，比如 12.16.2 版本对应的源为 https://deb.nodesource.com/setup_12.x，将所需安装的 NodeJS 版本源添加到系统中：
-1curl -sL https://deb.nodesource.com/setup_12
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/NodeJS/">NodeJS</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/NodeJS/">NodeJS</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/05/26/Technique/Python/Python%E6%8A%A5%E9%94%99/">Python报错</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/05/26/Technique/Python/Python%E6%8A%A5%E9%94%99/">
-          
-          
-            
-          
-          1. fatal error: Python.h: 没有那个文件或目录
-
-问题：缺少 python-dev 包
-解决：安装对应包：
-
-1sudo apt install python-dev # 最好指定 python 版本，比如：python3.6-dev
-2. ERROR: Package 'pylint' requires a different Python: 2.7.15 not in 
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/Python/">Python</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/Python/">Python</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/05/26/Technique/Python/pip%E4%B8%8B%E8%BD%BDPython%E5%BA%93%E9%80%9F%E5%BA%A6%E6%85%A2%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/">pip下载Python库速度慢解决方案</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/05/26/Technique/Python/pip%E4%B8%8B%E8%BD%BDPython%E5%BA%93%E9%80%9F%E5%BA%A6%E6%85%A2%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/">
-          
-          
-            
-          
-          1. 简介
-python 的 pip 安装包工具非常便利，但由于其默认的下载源为国外源，因此在安装 python 库的时候下载速度较慢。有时库文件过大，超出 pip 的下载时间限制，就会报错 The read operation timed out。所以我们可是手动更改 pip 的下载源为国内的镜像下载源以提升下载速度。
-2. 国内镜像源
-国内主要的 pip 镜像源有以下几个：
-1234https
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/Python/">Python</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/Python/">Python</a>
             
           </div>
         
@@ -787,6 +635,175 @@ secure-file-priv 参数值
               <a href="/tags/Technique/">Technique</a>
             
               <a href="/tags/MySQL/">MySQL</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/05/26/Technique/Net/Hosts%E6%96%87%E4%BB%B6%E4%BF%AE%E6%94%B9/">Hosts文件修改</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/05/26/Technique/Net/Hosts%E6%96%87%E4%BB%B6%E4%BF%AE%E6%94%B9/">
+          
+          
+            
+          
+          1. 简介
+有时访问某些国外网站很卡（不包括无法访问的网站），很大的原因是这些网站的 CDN 的域名遭到 DNS 污染了。这时就可以选择直接访问源网站 IP ，绕过 DNS 解析，即通过修改主机 hosts 文件的方式，将域名和 IP 的对应关系直接记录下来，来加速对这些网站的访问。
+2. 原理
+主机操作系统下都有一个 hosts 文件，其作用在于将一些常用网址域名与其对应的 IP 地址建立一个关
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-05-26 10:44" pubdate>
+              2020-05-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Net/">Net</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/Net/">Net</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/05/26/Technique/NodeJS/Mint19.1%E5%AE%89%E8%A3%85NodeJS/">Mint19.1安装NodeJS</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/05/26/Technique/NodeJS/Mint19.1%E5%AE%89%E8%A3%85NodeJS/">
+          
+          
+            
+          
+          1. 查看 NodeJS 版本
+查看最新版本的 NodeJS，见官网地址。
+2. 添加 NodeJS 源
+NodeJS 每个大版本都有相对应的源，比如 12.16.2 版本对应的源为 https://deb.nodesource.com/setup_12.x，将所需安装的 NodeJS 版本源添加到系统中：
+1curl -sL https://deb.nodesource.com/setup_12
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-05-26 10:44" pubdate>
+              2020-05-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/NodeJS/">NodeJS</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/NodeJS/">NodeJS</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/05/26/Technique/Python/Python%E6%8A%A5%E9%94%99/">Python报错</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/05/26/Technique/Python/Python%E6%8A%A5%E9%94%99/">
+          
+          
+            
+          
+          1. fatal error: Python.h: 没有那个文件或目录
+
+问题：缺少 python-dev 包
+解决：安装对应包：
+
+1sudo apt install python-dev # 最好指定 python 版本，比如：python3.6-dev
+2. ERROR: Package 'pylint' requires a different Python: 2.7.15 not in 
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-05-26 10:44" pubdate>
+              2020-05-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Python/">Python</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/Python/">Python</a>
             
           </div>
         
