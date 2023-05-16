@@ -197,6 +197,262 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
+        <a href="/2021/01/21/Technique/TeX/LaTeX/Manjaro20.2%E9%85%8D%E7%BD%AETexLive+VSCode%E7%9A%84LaTeX%E7%8E%AF%E5%A2%83/">Manjaro20.2配置TeXLive+VSCode的LaTeX环境</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/01/21/Technique/TeX/LaTeX/Manjaro20.2%E9%85%8D%E7%BD%AETexLive+VSCode%E7%9A%84LaTeX%E7%8E%AF%E5%A2%83/">
+          
+          
+            
+          
+          1. 安装
+1.1 安装 TeXLive
+1.1.1 从软件源安装
+在终端执行以下代码，安装 TeXLive 环境：
+12sudo pacman -S texlive-mostsudo pacman -S texlive-lang 
+【注】这样安装 TeXLive 后无法在终端使用 texdoc 工具，会报错：/usr/local/texlive/2020/texmf-dist/doc/gener
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-21 20:25" pubdate>
+              2021-01-21
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/TeX/">TeX</a>
+            
+              <a href="/categories/Technique/TeX/LaTeX/">LaTeX</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/TeX/">TeX</a>
+            
+              <a href="/tags/LaTeX/">LaTeX</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/01/21/Technique/NodeJS/npm%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85%E9%80%9F%E5%BA%A6%E6%85%A2%E9%97%AE%E9%A2%98/">npm下载安装速度慢问题</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/01/21/Technique/NodeJS/npm%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85%E9%80%9F%E5%BA%A6%E6%85%A2%E9%97%AE%E9%A2%98/">
+          
+          
+            
+          
+          1. node 下载 electron 卡住 &amp;&amp; node install.js 卡住
+
+问题：都是由于访问国外网站过慢造成
+解决：
+
+
+
+配置淘宝镜像
+修改 .npmrc 文件（windows C:\Users\username\.npmrc，Linux 在 ~/.npmrc）内容为以下内容：
+
+12registry=https://registry.npm.taobao.or
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-21 16:09" pubdate>
+              2021-01-21
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/NodeJS/">NodeJS</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/NodeJS/">NodeJS</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/01/21/Technique/TeX/LaTeX/LaTeX%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7/">LaTeX奇技淫巧</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/01/21/Technique/TeX/LaTeX/LaTeX%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7/">
+          
+          
+            
+          
+          1. 移动符号
+第一个符号位置不变，改变第二个符号相对第一个符号的位置。
+1.1 左移
+在两个符号间插入 \! 可将第二个符号逐步往左移动。每个 \! 移动 −16-\frac{1}{6}−61​ em 的距离（−-− 表示左移）。插入越多 \! ，第二个符号左移的位移就越大。
+比如：
+
+
+$\dashv \vdash$：
+⊣⊢\dashv \vdash⊣⊢
+
+
+$\dashv \! \vdash
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-21 11:46" pubdate>
+              2021-01-21
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/TeX/">TeX</a>
+            
+              <a href="/categories/Technique/TeX/LaTeX/">LaTeX</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/TeX/">TeX</a>
+            
+              <a href="/tags/LaTeX/">LaTeX</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/01/19/Technique/Math/Theory/%E6%96%B9%E5%90%91%E4%BD%99%E5%BC%A6/">方向余弦</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/01/19/Technique/Math/Theory/%E6%96%B9%E5%90%91%E4%BD%99%E5%BC%A6/">
+          
+          
+            
+          
+          【注】参考自 Wikipedia 。
+1. 定义
+1.1 方向余弦
+
+在解析几何里，一个向量的三个方向余弦分别是这向量与三个坐标轴之间的角度的余弦。
+
+设 v⃗=v1x⃗+v2y⃗+v3z⃗
+\vec{v} = v_1 \vec{x} + v_2 \vec{y} + v_3 \vec{z}
+v=v1​x+v2​y​+v3​z 其中，x⃗\vec{x}x、y⃗\vec{y}y​、z⃗\vec{z}z
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-19 22:25" pubdate>
+              2021-01-19
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Math/">Math</a>
+            
+              <a href="/categories/Technique/Math/Theory/">Theory</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
+            
+              <a href="/tags/Math/">Math</a>
+            
+              <a href="/tags/Theory/">Theory</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
         <a href="/2021/01/19/Technique/ACM/%E9%A2%98%E8%A7%A3/P2758%E3%80%8C%E7%BC%96%E8%BE%91%E8%B7%9D%E7%A6%BB%E3%80%8D/">P2758「编辑距离」</a>
       </h1>
 
@@ -589,255 +845,11 @@ p(xy),p(x,y)p(x y), p(x, y)p(xy),p(x,
     </article>
   </div>
 
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/01/16/Technique/Math/Theory/%E5%87%B8%E5%87%BD%E6%95%B0%E5%8F%8A%E5%85%B6%E6%80%A7%E8%B4%A8/">凸函数及其性质</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/01/16/Technique/Math/Theory/%E5%87%B8%E5%87%BD%E6%95%B0%E5%8F%8A%E5%85%B6%E6%80%A7%E8%B4%A8/">
-          
-          
-            
-          
-          1. 定义
-1.1 上凸函数
-
-
-如果对任意 x1x_1x1​、x2x_2x2​ 总有 f[αx1+(1−α)x2]≥αf(x1)+(1−α)f(x2)f[\alpha x_1 + (1 - \alpha )x_2] \geq \alpha f(x_1) + (1 - \alpha )f(x_2)f[αx1​+(1−α)x2​]≥αf(x1​)+(1−α)f(x2​)，其中 0≤α≤10 \leq
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-16 18:06" pubdate>
-              2021-01-16
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/Math/">Math</a>
-            
-              <a href="/categories/Technique/Math/Theory/">Theory</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/Math/">Math</a>
-            
-              <a href="/tags/Theory/">Theory</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/01/16/Technique/Math/Theory/%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0/">欧拉函数</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/01/16/Technique/Math/Theory/%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0/">
-          
-          
-            
-          
-          1. 欧拉函数定义
-欧拉函数 ϕ(n){\phi(n)}ϕ(n) 表示的是小于等于 nnn 且和 nnn 互质的正整数的个数。（易知 ϕ(1)=1{\phi(1) = 1}ϕ(1)=1）
-2. 欧拉函数公式
-对于任意整数 nnn，若其质因数分解结果为 n=p1k1p2k1⋯pnkn{n = p_1^{k_1}p_2^{k_1} \cdots p_n^{k_n}}n=p1k1​​p2k1​​⋯pnk
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-16 18:06" pubdate>
-              2021-01-16
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/Math/">Math</a>
-            
-              <a href="/categories/Technique/Math/Theory/">Theory</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/Math/">Math</a>
-            
-              <a href="/tags/Theory/">Theory</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/01/16/Technique/Math/Modeling/%E4%BC%A0%E6%9F%93%E7%97%85%E6%A8%A1%E5%9E%8B/%E4%BC%A0%E6%9F%93%E7%97%85%E6%A8%A1%E5%9E%8B/">传染病模型</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/01/16/Technique/Math/Modeling/%E4%BC%A0%E6%9F%93%E7%97%85%E6%A8%A1%E5%9E%8B/%E4%BC%A0%E6%9F%93%E7%97%85%E6%A8%A1%E5%9E%8B/">
-          
-          
-            
-          
-          
-
-基础定义
-
-
-将传染病范围内的人群分为以下类别：
-
-SSS(Susceptible)类：指未得病，但与感染者接触后容易收到感染的人。
-EEE(Exposed)类：指接触过感染者，但暂时没有传播的能力的人。
-III(Infectious)类：指染上传染病，具有传播能力的人。（可以传播给SSS类人员，将其变成EEE类或III类成员）
-RRR(Recovered / Removed)类：指病愈而具有
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-16 18:06" pubdate>
-              2021-01-16
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/Math/">Math</a>
-            
-              <a href="/categories/Technique/Math/Modeling/">Modeling</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/Math/">Math</a>
-            
-              <a href="/tags/Modeling/">Modeling</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/01/16/Technique/Math/Theory/%E5%88%9A%E6%80%A7%E6%96%B9%E7%A8%8B/%E5%88%9A%E6%80%A7%E6%96%B9%E7%A8%8B/">刚性方程</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/01/16/Technique/Math/Theory/%E5%88%9A%E6%80%A7%E6%96%B9%E7%A8%8B/%E5%88%9A%E6%80%A7%E6%96%B9%E7%A8%8B/">
-          
-          
-            
-          
-          摘自Wikipedia——刚性方程。
-1.  定义
-在数学领域中，刚性方程（stiffness equation）是指一个微分方程，其数值分析的解只有在时间间隔很小时才会稳定，只要时间间隔略大，其解就会不稳定。目前很难去精确地去定义哪些微分方程是刚性方程，然而粗略而言，若此方程式中包含使其快速变动的项，则其为刚性方程。
-在积分微分方程时，若某一区域的解曲线的变化很大，会希望在这个区域的积分间隔密一
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-16 18:06" pubdate>
-              2021-01-16
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/Math/">Math</a>
-            
-              <a href="/categories/Technique/Math/Theory/">Theory</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/Math/">Math</a>
-            
-              <a href="/tags/Theory/">Theory</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
 
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/page/23/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/22/#board">22</a><a class="page-number" href="/page/23/#board">23</a><span class="page-number current">24</span><a class="page-number" href="/page/25/#board">25</a><a class="page-number" href="/page/26/#board">26</a><span class="space">&hellip;</span><a class="page-number" href="/page/54/#board">54</a><a class="extend next" rel="next" href="/page/25/#board"><i class="iconfont icon-arrowright"></i></a>
+      <a class="extend prev" rel="prev" href="/page/23/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/22/#board">22</a><a class="page-number" href="/page/23/#board">23</a><span class="page-number current">24</span><a class="page-number" href="/page/25/#board">25</a><a class="page-number" href="/page/26/#board">26</a><span class="space">&hellip;</span><a class="page-number" href="/page/55/#board">55</a><a class="extend next" rel="next" href="/page/25/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 

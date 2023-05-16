@@ -197,6 +197,303 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
+        <a href="/2020/05/26/Technique/MySQL/MySQL%E6%8A%A5%E9%94%99/">MySQL报错</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/05/26/Technique/MySQL/MySQL%E6%8A%A5%E9%94%99/">
+          
+          
+            
+          
+          1. The MySQL server is running with the --secure-file-priv option ***
+
+问题：secure-file-priv 未配置或配置与当前使用路径冲突。secure-file-priv 参数是用来限制 mysql 下数据导入导出只能发生的路径下。
+
+
+
+
+secure-file-priv 参数值
+说明
+
+
+
+
+''
+表示 mysqld 
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-05-26 10:44" pubdate>
+              2020-05-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/MySQL/">MySQL</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/MySQL/">MySQL</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/05/26/Technique/MySQL/%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%B8%8B%E4%BD%BF%E7%94%A8MySQL/">命令行下使用MySQL</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/05/26/Technique/MySQL/%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%B8%8B%E4%BD%BF%E7%94%A8MySQL/">
+          
+          
+            
+          
+          1. 进入 MySQL 终端
+
+指定服务器 host 和 user
+
+1mysql -h host -u user -p    # -p 选项指明输入密码
+
+匿名形式进入 MySQL 终端（host 默认为 localhost，user 默认为当前系统的 user）
+
+1mysql
+【注】linux 系统下可能需要使用超级用户权限：
+12sudo mysql -h host -u user -ps
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-05-26 10:44" pubdate>
+              2020-05-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/MySQL/">MySQL</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/MySQL/">MySQL</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/05/26/Technique/Net/Hosts%E6%96%87%E4%BB%B6%E4%BF%AE%E6%94%B9/">Hosts文件修改</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/05/26/Technique/Net/Hosts%E6%96%87%E4%BB%B6%E4%BF%AE%E6%94%B9/">
+          
+          
+            
+          
+          1. 简介
+有时访问某些国外网站很卡（不包括无法访问的网站），很大的原因是这些网站的 CDN 的域名遭到 DNS 污染了。这时就可以选择直接访问源网站 IP ，绕过 DNS 解析，即通过修改主机 hosts 文件的方式，将域名和 IP 的对应关系直接记录下来，来加速对这些网站的访问。
+2. 原理
+主机操作系统下都有一个 hosts 文件，其作用在于将一些常用网址域名与其对应的 IP 地址建立一个关
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-05-26 10:44" pubdate>
+              2020-05-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Net/">Net</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/Net/">Net</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/05/26/Technique/NodeJS/Mint19.1%E5%AE%89%E8%A3%85NodeJS/">Mint19.1安装NodeJS</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/05/26/Technique/NodeJS/Mint19.1%E5%AE%89%E8%A3%85NodeJS/">
+          
+          
+            
+          
+          1. 查看 NodeJS 版本
+查看最新版本的 NodeJS，见官网地址。
+2. 添加 NodeJS 源
+NodeJS 每个大版本都有相对应的源，比如 12.16.2 版本对应的源为 https://deb.nodesource.com/setup_12.x，将所需安装的 NodeJS 版本源添加到系统中：
+1curl -sL https://deb.nodesource.com/setup_12
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-05-26 10:44" pubdate>
+              2020-05-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/NodeJS/">NodeJS</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/NodeJS/">NodeJS</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/05/26/Technique/Python/Python%E6%8A%A5%E9%94%99/">Python报错</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/05/26/Technique/Python/Python%E6%8A%A5%E9%94%99/">
+          
+          
+            
+          
+          1. fatal error: Python.h: 没有那个文件或目录
+
+问题：缺少 python-dev 包
+解决：安装对应包：
+
+1sudo apt install python-dev # 最好指定 python 版本，比如：python3.6-dev
+2. ERROR: Package 'pylint' requires a different Python: 2.7.15 not in 
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-05-26 10:44" pubdate>
+              2020-05-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Python/">Python</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/Python/">Python</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
         <a href="/2020/05/26/Technique/Python/pip%E4%B8%8B%E8%BD%BDPython%E5%BA%93%E9%80%9F%E5%BA%A6%E6%85%A2%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/">pip下载Python库速度慢解决方案</a>
       </h1>
 
@@ -474,352 +771,11 @@ Qt5.14 for Linux 并没有提供相应的程序打包服务，所以 Linux 下�
     </article>
   </div>
 
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/05/26/Technique/CompilingPrinciple/%E5%BC%95%E8%AE%BA/%E5%BC%95%E8%AE%BA/">引论</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/05/26/Technique/CompilingPrinciple/%E5%BC%95%E8%AE%BA/%E5%BC%95%E8%AE%BA/">
-          
-          
-            
-          
-          1. 主要内容
-
-引论
-高级语言及其文法
-语法分析
-自顶向下的语法分析
-自底向上的语法分析
-语法制导翻译与属性文法
-语义分析与中间代码生成
-符号表管理
-运行时的存储组织
-代码优化
-代码生成
-
-2. 程序设计语言
-
-
-机器语言与汇编语言：01 代码与助记符，更接近于计算机硬件指令系统的工作
-
-
-高级语言：其表示方法更接近于带解决的表示方法
-
-
-命令语言：控制系统的工作，以功能封装为特征（如 UNIX
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/CompilingPrinciple/">CompilingPrinciple</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/CompilingPrinciple/">CompilingPrinciple</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/05/26/Technique/InformationTheory/%E4%BF%A1%E6%81%AF%E8%AE%BA%E6%A6%82%E8%AE%BA/%E4%BF%A1%E6%81%AF%E8%AE%BA%E6%A6%82%E8%AE%BA/">信息论概论</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/05/26/Technique/InformationTheory/%E4%BF%A1%E6%81%AF%E8%AE%BA%E6%A6%82%E8%AE%BA/%E4%BF%A1%E6%81%AF%E8%AE%BA%E6%A6%82%E8%AE%BA/">
-          
-          
-            
-          
-          1. 内容
-
-绪论
-信息的统计度量
-离散信源
-离散信道及其容量
-无失真信源编码
-有噪信道编码
-限失真信源编码
-保密系统的基本信息理论
-
-2. 信息
-2.1 客观世界三大基本要素
-
-物质：材料科学
-能量：能源科学
-信息：信息科学
-
-2.2 信息、消息、信号
-
-
-消息：是信息的载体和具体表现形式（比如文字、图片等），是信号的具体内容
-
-
-信息：是消息中包含的有意义的内容
-
-
-同一消息对不同的接收者来说
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/InformationTheory/">InformationTheory</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/InformationTheory/">InformationTheory</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/05/26/Technique/Linux/Deepin/Deepin15.11%E4%B8%8Bapt%E6%8A%A5%E9%94%99/">Deepin15.11下apt报错</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/05/26/Technique/Linux/Deepin/Deepin15.11%E4%B8%8Bapt%E6%8A%A5%E9%94%99/">
-          
-          
-            
-          
-          1. 由于没有公匙，无法验证下列签名: NO_PUBKEY xxx
-执行命令 sudo apt update 时如上报错。
-
-错误原因：GPG Key 对应的 GPG 验证文件过期或者是有些软件源没有导入 GPG Key 对应的 GPG 验证文件。可以通过下列命令查看所有 GPG Key:
-
-1sudo apt-key list
-
-解决办法：更新无效 GPG Key 对应的 GPG 验证文件。可以
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/Linux/">Linux</a>
-            
-              <a href="/categories/Technique/Linux/Deepin/">Deepin</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/Deepin/">Deepin</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/05/26/Technique/Linux/Deepin/Deepin15.11%E4%B8%8B%E8%93%9D%E7%89%99%E9%85%8D%E5%AF%B9%E5%92%8C%E8%BF%9E%E6%8E%A5/">Deepin15.11下蓝牙配对和连接</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/05/26/Technique/Linux/Deepin/Deepin15.11%E4%B8%8B%E8%93%9D%E7%89%99%E9%85%8D%E5%AF%B9%E5%92%8C%E8%BF%9E%E6%8E%A5/">
-          
-          
-            
-          
-          首先确保 bluetooth, bluez, bluez-tools, rfkill 已经安装好，没有则在终端进行安装：
-1sudo apt install bluetooth bluez bluez-tools rfkill
-1. 查找蓝牙适配器
-1hciconfig
-对于系统识别到的每个蓝牙适配器，会显示出其相应信息：XXX:   Type:***，其中 XXX 为该蓝牙适配器的设备名。
-2.
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/Linux/">Linux</a>
-            
-              <a href="/categories/Technique/Linux/Deepin/">Deepin</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/Deepin/">Deepin</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/05/26/Technique/Linux/Manjaro/Manjaro20.0%E4%B8%8B%E8%93%9D%E7%89%99%E9%85%8D%E5%AF%B9%E5%92%8C%E8%BF%9E%E6%8E%A5/">Manjaro20.0下蓝牙配对和连接</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/05/26/Technique/Linux/Manjaro/Manjaro20.0%E4%B8%8B%E8%93%9D%E7%89%99%E9%85%8D%E5%AF%B9%E5%92%8C%E8%BF%9E%E6%8E%A5/">
-          
-          
-            
-          
-          首先确保 bluez, bluez-utils 已经安装好，否则在终端安装：
-1sudo pacman -S bluez bluez-utils
-1. 查看蓝牙服务状态
-1systemctl status bluetooth.service
-2. 启动蓝牙服务
-如果蓝牙服务未启动，则需手动启动蓝牙服务：
-1sudo systemctl start bluetooth.service
-3. 操控蓝牙
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-26 10:44" pubdate>
-              2020-05-26
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/Linux/">Linux</a>
-            
-              <a href="/categories/Technique/Linux/Manjaro/">Manjaro</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/Manjaro/">Manjaro</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
 
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/page/46/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/45/#board">45</a><a class="page-number" href="/page/46/#board">46</a><span class="page-number current">47</span><a class="page-number" href="/page/48/#board">48</a><a class="page-number" href="/page/49/#board">49</a><span class="space">&hellip;</span><a class="page-number" href="/page/54/#board">54</a><a class="extend next" rel="next" href="/page/48/#board"><i class="iconfont icon-arrowright"></i></a>
+      <a class="extend prev" rel="prev" href="/page/46/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/45/#board">45</a><a class="page-number" href="/page/46/#board">46</a><span class="page-number current">47</span><a class="page-number" href="/page/48/#board">48</a><a class="page-number" href="/page/49/#board">49</a><span class="space">&hellip;</span><a class="page-number" href="/page/55/#board">55</a><a class="extend next" rel="next" href="/page/48/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 

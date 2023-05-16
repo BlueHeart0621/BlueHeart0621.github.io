@@ -197,6 +197,289 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
+        <a href="/2020/10/01/Technique/Linux/Sundry/Linux%E4%B8%8B%E6%9F%A5%E7%9C%8B%E7%B3%BB%E7%BB%9F%E4%BF%A1%E6%81%AF/">Linux下查看系统信息</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/10/01/Technique/Linux/Sundry/Linux%E4%B8%8B%E6%9F%A5%E7%9C%8B%E7%B3%BB%E7%BB%9F%E4%BF%A1%E6%81%AF/">
+          
+          
+            
+          
+          1. 查看操作系统信息
+1lsb_release -a
+【注】并不是所有 Linux 发行版都自带 lsb_release 命令，如果系统上没有该命令需要手动安装 lsb-release 工具。
+2. 查看 Linux 内核版本
+1uname -r
+3. 查看显卡厂商
+1lspci | grep -i vga
+4. 查看内存容量
+1free -g/-m/-k/-b    # -g/-m/-k/b 
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-10-01 17:21" pubdate>
+              2020-10-01
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Linux/">Linux</a>
+            
+              <a href="/categories/Technique/Linux/Sundry/">Sundry</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/Sundry/">Sundry</a>
+            
+              <a href="/tags/Linux/">Linux</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/10/01/Technique/Linux/Manjaro/Manjaro20.1%E4%B8%8B%E6%90%AD%E5%BB%BAPytorch%E7%8E%AF%E5%A2%83/">Manjaro20.1下搭建Pytorch环境</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/10/01/Technique/Linux/Manjaro/Manjaro20.1%E4%B8%8B%E6%90%AD%E5%BB%BAPytorch%E7%8E%AF%E5%A2%83/">
+          
+          
+            
+          
+          1. 安装 cuda 环境
+1sudo pacman -S python-pytorch-cuda
+2. 安装 pytorch 环境
+1pip install torch torchvision
+也可以用其他命令比如 conda 等，具体可以参照 pytorch 官网。
+3. 测试
+1python
+进入到 python 命令行后运行：
+12import torchtorch.cuda.is_ava
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-10-01 17:19" pubdate>
+              2020-10-01
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Linux/">Linux</a>
+            
+              <a href="/categories/Technique/Linux/Manjaro/">Manjaro</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/Linux/">Linux</a>
+            
+              <a href="/tags/Manjaro/">Manjaro</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/10/01/Technique/Linux/Mint/Mint20%E4%B8%8B%E6%9F%A5%E7%9C%8Bnvidia%E6%98%BE%E5%8D%A1%E5%9E%8B%E5%8F%B7/">Mint20下查看nvidia显卡型号</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/10/01/Technique/Linux/Mint/Mint20%E4%B8%8B%E6%9F%A5%E7%9C%8Bnvidia%E6%98%BE%E5%8D%A1%E5%9E%8B%E5%8F%B7/">
+          
+          
+            
+          
+          1. 命令
+12nvidia-smi      # 显示 GPU 的实时信息nvidia-smi -L   # 列出所有可用的 NVIDIA 设备信息
+2. 参数含义
+
+GPU：GPU 编号。
+Name：GPU 型号。
+Persistence-M：持续模式的状态。持续模式虽然耗能大，但是在新的GPU应用启动时，花费的时间更少，这里显示的是off的状态。
+Fan：风扇转速，从0到100%之间变动。
+
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-10-01 17:08" pubdate>
+              2020-10-01
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Linux/">Linux</a>
+            
+              <a href="/categories/Technique/Linux/Mint/">Mint</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/Linux/">Linux</a>
+            
+              <a href="/tags/Mint/">Mint</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/09/29/Technique/Math/Theory/%E7%9F%A9%E9%98%B5/%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/">基本概念</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/09/29/Technique/Math/Theory/%E7%9F%A9%E9%98%B5/%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/">
+          
+          
+            
+          
+          1. 术语
+
+
+
+概念/符号
+含义
+
+
+
+
+方阵
+行数和列数相同的矩阵
+
+
+长方矩阵
+函数和列数可能不相同的矩阵
+
+
+C\mathbb{C}C
+复数域
+
+
+R\mathbb{R}R
+实数域
+
+
+Sn\mathbb{S}^nSn
+nnn 阶对称阵全集
+
+
+diag(d1,⋯ ,dn)\mathrm{diag}(d_1,\cdots,d_n)diag(d1​,⋯,dn​)
+表示对角元素为 d1,⋯ ,
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-09-29 11:01" pubdate>
+              2020-09-29
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Math/">Math</a>
+            
+              <a href="/categories/Technique/Math/Theory/">Theory</a>
+            
+              <a href="/categories/Technique/Math/Theory/%E7%9F%A9%E9%98%B5/">矩阵</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/Math/">Math</a>
+            
+              <a href="/tags/Theory/">Theory</a>
+            
+              <a href="/tags/%E7%9F%A9%E9%98%B5/">矩阵</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
         <a href="/2020/09/28/Technique/Python/Numpy/Numpy%E6%95%B0%E7%BB%84/Numpy%E6%95%B0%E7%BB%84/">Numpy数组</a>
       </h1>
 
@@ -592,269 +875,11 @@ E(f~(x))=∣
     </article>
   </div>
 
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/09/26/Technique/DeepLearning/%E6%BF%80%E6%B4%BB%E5%87%BD%E6%95%B0/%E6%BF%80%E6%B4%BB%E5%87%BD%E6%95%B0/">激活函数</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/09/26/Technique/DeepLearning/%E6%BF%80%E6%B4%BB%E5%87%BD%E6%95%B0/%E6%BF%80%E6%B4%BB%E5%87%BD%E6%95%B0/">
-          
-          
-            
-          
-          常见激活函数及其导数：
-
-1. Sigmoid 函数
-【注】Sigmoid 型函数是指一类 S 型曲线函数，为两端饱和函数。常用的 Sigmoid 型函数有 Logistic 函数和 Tanh 函数。
-1.1 Logistic 函数
-
-定义：σ(x)=11+e−x\sigma(x) = {1 \over 1 + e^{-x}}
-σ(x)=1+e−x1​
-
-
-
-
-Logistic 函数常用来产生伯努
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-09-26 20:21" pubdate>
-              2020-09-26
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/DeepLearning/">DeepLearning</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/DeepLearning/">DeepLearning</a>
-            
-              <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">机器学习&深度学习</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/09/26/Technique/Math/Theory/%E6%95%B0%E5%AD%97%E4%B8%96%E7%95%8C%E4%B8%AD%E5%B8%B8%E8%A7%81%E5%87%BD%E6%95%B0/">数字世界中常见函数</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/09/26/Technique/Math/Theory/%E6%95%B0%E5%AD%97%E4%B8%96%E7%95%8C%E4%B8%AD%E5%B8%B8%E8%A7%81%E5%87%BD%E6%95%B0/">
-          
-          
-            
-          
-          1. 狄利克雷函数
-英文名称为「Dirac Delta Function」。
-1.1 简介
-狄利克雷函数在除零以外的点取值均为 0，但在整个定义域上的积分为 1。δ\deltaδ 函数可以看作是在原点处无限高、无限细，但总面积为 1 的一个尖峰。
-1.2 定义
-δ(x)={+∞x=00x≠0∫−∞+∞δ(x)dx=1\begin{array}{c}
-\delta(x) = \begin{cases
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-09-26 12:23" pubdate>
-              2020-09-26
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/Math/">Math</a>
-            
-              <a href="/categories/Technique/Math/Theory/">Theory</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
-            
-              <a href="/tags/Math/">Math</a>
-            
-              <a href="/tags/Theory/">Theory</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/09/24/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%A6/%E5%BF%AB%E9%80%9F%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/">快速傅里叶变换</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/09/24/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%A6/%E5%BF%AB%E9%80%9F%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/">
-          
-          
-            
-          
-          【注】参考自算法导论。
-1. 简介
-快速傅里叶变换（FFT）是实现离散傅里叶变换（DFT）和离散傅里叶逆变换（IDFT）的快速算法，其时间复杂度为 O(nlog⁡n)O(n \log n)O(nlogn)。DFT 在实际生活中有很多应用，比如通过离散傅里叶变换，可以将系数表示的多项式转为点值表示的多项式，从而使得多项式的乘法的复杂度由 O(n2)O(n^2)O(n2) 降为 O(n)O(n)O(n
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-09-24 10:12" pubdate>
-              2020-09-24
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/ACM/">ACM</a>
-            
-              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/">算法</a>
-            
-              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%A6/">数学</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/ACM/">ACM</a>
-            
-              <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
-            
-              <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
-            
-              <a href="/tags/%E6%95%B0%E5%AD%A6-%E7%AE%97%E6%B3%95/">数学 算法</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/09/24/Technique/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%A6/%E5%BF%AB%E9%80%9F%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/">快速傅里叶变换</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/09/24/Technique/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%A6/%E5%BF%AB%E9%80%9F%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/">
-          
-          
-            
-          
-          【注】参考自算法导论。
-1. 简介
-快速傅里叶变换（FFT）是实现离散傅里叶变换（DFT）和离散傅里叶逆变换（IDFT）的快速算法，其时间复杂度为 O(nlog⁡n)O(n \log n)O(nlogn)。DFT 在实际生活中有很多应用，比如通过离散傅里叶变换，可以将系数表示的多项式转为点值表示的多项式，从而使得多项式的乘法的复杂度由 O(n2)O(n^2)O(n2) 降为 O(n)O(n)O(n
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-09-24 10:12" pubdate>
-              2020-09-24
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/ACM/">ACM</a>
-            
-              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/">算法</a>
-            
-              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%A6/">数学</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/ACM/">ACM</a>
-            
-              <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
-            
-              <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
-            
-              <a href="/tags/%E6%95%B0%E5%AD%A6-%E7%AE%97%E6%B3%95/">数学 算法</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
 
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/page/29/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/28/#board">28</a><a class="page-number" href="/page/29/#board">29</a><span class="page-number current">30</span><a class="page-number" href="/page/31/#board">31</a><a class="page-number" href="/page/32/#board">32</a><span class="space">&hellip;</span><a class="page-number" href="/page/54/#board">54</a><a class="extend next" rel="next" href="/page/31/#board"><i class="iconfont icon-arrowright"></i></a>
+      <a class="extend prev" rel="prev" href="/page/29/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/28/#board">28</a><a class="page-number" href="/page/29/#board">29</a><span class="page-number current">30</span><a class="page-number" href="/page/31/#board">31</a><a class="page-number" href="/page/32/#board">32</a><span class="space">&hellip;</span><a class="page-number" href="/page/55/#board">55</a><a class="extend next" rel="next" href="/page/31/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 

@@ -203,7 +203,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      194 字
+      221 字
     </span>
   
 
@@ -254,14 +254,15 @@
             <h1 style="display: none">Python函数式编程</h1>
             
             <div class="markdown-body">
-              <h2 id="1-装饰器（decorator）">1. 装饰器（decorator）</h2>
+              <h2 id="1-装饰器">1. 装饰器</h2>
 <p>在代码运行期间动态增加功能的方式，称之为「装饰器」（decorator）。本质上，decorator 就是一个返回函数的高阶函数，它需要接受一个函数作为输入参数，并返回一个函数。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">log</span>(<span class="hljs-params">func</span>):<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">wrapper</span>(<span class="hljs-params">*args, **kw</span>):<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;call %s():&#x27;</span> % func.__name__)<br>        <span class="hljs-keyword">return</span> func(*args, **kw)<br>    <span class="hljs-keyword">return</span> wrapper<br></code></pre></td></tr></table></figure>
-<p>上面的 <code>log</code> 就是一个 decorator。Python 的 @ 语法可以把 decorator 置于函数的定义处：</p>
+<p>上面的 <code>log</code> 就是一个 decorator。Python 的 <code>@</code> 语法可以把 decorator 置于函数的定义处：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-meta">@log</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">now</span>():<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;2015-3-25&#x27;</span>)<br></code></pre></td></tr></table></figure>
 <p>此时调用 <code>now</code> 函数，会在运行 <code>now</code> 前运行 <code>log(now)</code> 打印日志。</p>
 <h2 id="2-偏函数">2. 偏函数</h2>
 <p><code>functools.partial</code> 的作用就是，把一个函数的某些参数给固定住（也就是设置默认值），返回一个新的函数，调用这个新函数会更简单。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> functools <span class="hljs-keyword">import</span> partial<br><br><span class="hljs-comment"># 求幂函数</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">pow</span>(<span class="hljs-params">a, b</span>):<br>  <span class="hljs-keyword">return</span> a**b<br><br><span class="hljs-comment"># 定义一个平方函数</span><br>square = partial(<span class="hljs-built_in">pow</span>, b=<span class="hljs-number">2</span>)<br></code></pre></td></tr></table></figure>
 
             </div>
             <hr>

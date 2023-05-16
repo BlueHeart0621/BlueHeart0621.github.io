@@ -197,6 +197,251 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
+        <a href="/2022/04/30/Research/ImageCompression/VAE/2018-ICLR-Variational%20image%20compression%20with%20a%20scale%20Hyper-prior/2018-ICLR-Variational%20image%20compression%20with%20a%20scale%20Hyper-prior/">2018-ICLR-Variational image compression with a scale Hyper-prior</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2022/04/30/Research/ImageCompression/VAE/2018-ICLR-Variational%20image%20compression%20with%20a%20scale%20Hyper-prior/2018-ICLR-Variational%20image%20compression%20with%20a%20scale%20Hyper-prior/">
+          
+          
+            
+          
+          1. 摘要
+这篇文章[1]在上一篇文章[2]基础上增加了一个超先验模块，用来有效地捕获隐变量空间的空间依赖信息。这个超先验可以看作是边信息，使用边信息作为先验来辅助压缩在很多标准的图像压缩算法中都广泛使用，但在基于神经网络的压缩算法中还没有得到研究。因此，作者提出了一个超先验模块，和用于压缩的 AutoEncoder 进行联合训练。作者在文章中展示了其提出方法达到了 SOTA 的性能，同时还对比了
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2022-04-30 14:09" pubdate>
+              2022-04-30
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Research/">Research</a>
+            
+              <a href="/categories/Research/ImageCompression/">ImageCompression</a>
+            
+              <a href="/categories/Research/ImageCompression/VAE/">VAE</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Research/">Research</a>
+            
+              <a href="/tags/ImageCompression/">ImageCompression</a>
+            
+              <a href="/tags/VAE/">VAE</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2022/04/26/Research/ResNet/2016-CVPR-Deep%20Residual%20Learning%20for%20Image%20Recognition/2016-CVPR-Deep%20Residual%20Learning%20for%20Image%20Recognition/">2016-CVPR-Deep Residual Learning for Image Recognition</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2022/04/26/Research/ResNet/2016-CVPR-Deep%20Residual%20Learning%20for%20Image%20Recognition/2016-CVPR-Deep%20Residual%20Learning%20for%20Image%20Recognition/">
+          
+          
+            
+          
+          1. 简介
+这篇文章[1]主要思想是将 shortcut 用在了神经网络模型中，从而在一定程度上缓解了深度神经网络训不动的问题（即网络深到一定程度反而性能下降）。shortcut 在 202020 年前的神经网络热潮中就被提出来了，作者从新将其用在了深度神经网络中，发现性能很好。
+2. 框架
+ 
+3. 实验
+ 
+可以看到，加入 shortcut 后，34 层的网络在训练误差和测试误差上都要小于 1
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2022-04-26 17:49" pubdate>
+              2022-04-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Research/">Research</a>
+            
+              <a href="/categories/Research/ResNet/">ResNet</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Research/">Research</a>
+            
+              <a href="/tags/ResNet/">ResNet</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2022/04/26/Research/Sundry/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3%E6%8C%87%E6%A0%87/">神经网络相关指标</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2022/04/26/Research/Sundry/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3%E6%8C%87%E6%A0%87/">
+          
+          
+            
+          
+          在神经网络中，假设：
+
+卷积层的大小用 kh×kw×kckh \times kw \times kckh×kw×kc 表示；
+
+
+
+
+指标
+计算公式
+
+
+
+
+FLOPs
+(卷积核高×\times×卷积)
+
+
+
+
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2022-04-26 16:48" pubdate>
+              2022-04-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Research/">Research</a>
+            
+              <a href="/categories/Research/Assessory/">Assessory</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Research/">Research</a>
+            
+              <a href="/tags/Assessory/">Assessory</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2022/04/25/Research/Multimodal/CLIP/2021-Arxiv-Learning%20Transferable%20Visual%20Models%20From%20Natural%20Language%20Supervision/2021-Arxiv-Learning%20Transferable%20Visual%20Models%20From%20Natural%20Language%20Supervision/">2021-Arxiv-Learning Transferable Visual Models From Natural Language Supervision</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2022/04/25/Research/Multimodal/CLIP/2021-Arxiv-Learning%20Transferable%20Visual%20Models%20From%20Natural%20Language%20Supervision/2021-Arxiv-Learning%20Transferable%20Visual%20Models%20From%20Natural%20Language%20Supervision/">
+          
+          
+            
+          
+          1. 简介
+这篇文章[1]的主要想法是，对自然语言特征和图像特征进行对比学习，训练得到对应的文本和图像编码器，然后使用预训练好的成对的编码器去做各种各样的下游任务。以图像分类任务为例：
+
+
+在训练阶段，对每个图像的类别按照一种文本范式来构建该图片的描述句子，然后使用一个图像编码器模块和文本编码器模块，分别对图像和文本进行编码得到对应的特征。所有文本特征构成一个文本特征向量，一个 Batch 内的图
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2022-04-25 19:52" pubdate>
+              2022-04-25
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Research/">Research</a>
+            
+              <a href="/categories/Research/Multimodal/">Multimodal</a>
+            
+              <a href="/categories/Research/Multimodal/CLIP/">CLIP</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Research/">Research</a>
+            
+              <a href="/tags/Multimodal/">Multimodal</a>
+            
+              <a href="/tags/CLIP/">CLIP</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
         <a href="/2022/04/24/Technique/StatisticalLearning/%E6%84%9F%E7%9F%A5%E6%9C%BA/%E6%84%9F%E7%9F%A5%E6%9C%BA/">感知机</a>
       </h1>
 
@@ -534,249 +779,11 @@
     </article>
   </div>
 
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2022/03/05/Research/ImageCompression/Others/2016-PCS-End-to-end%20optimization%20of%20nonlinear%20transform%20codes%20for%20perceptual%20quality/2016-PCS-End-to-end%20optimization%20of%20nonlinear%20transform%20codes%20for%20perceptual%20quality/">2016-PCS-End-to-end optimization of nonlinear transform codes for perceptual quality</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2022/03/05/Research/ImageCompression/Others/2016-PCS-End-to-end%20optimization%20of%20nonlinear%20transform%20codes%20for%20perceptual%20quality/2016-PCS-End-to-end%20optimization%20of%20nonlinear%20transform%20codes%20for%20perceptual%20quality/">
-          
-          
-            
-          
-          1. 摘要
-这篇文章[1]提出了一个通用的变换编码框架，用于提升假定使用标量量化的端到端的非线性变换编码的率失真性能。结合任意可微的感知度量，这个框架可以用于优化任意可微的分析变换和综合变换对。
-2. 变换编码框架
-这篇文章提出的变换编码框架的可视化如下图所示：
-
-2.1 编解码流程
-编码时，图像向量 x\boldsymbol{x}x 经过可微变换 gag_aga​ 得到编码向量 y=ga(x;ϕ
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2022-03-05 15:35" pubdate>
-              2022-03-05
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Research/">Research</a>
-            
-              <a href="/categories/Research/ImageCompression/">ImageCompression</a>
-            
-              <a href="/categories/Research/ImageCompression/Others/">Others</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Research/">Research</a>
-            
-              <a href="/tags/ImageCompression/">ImageCompression</a>
-            
-              <a href="/tags/Others/">Others</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2022/03/05/Technique/Docker/Linux%E6%99%AE%E9%80%9A%E7%94%A8%E6%88%B7%E4%BD%BF%E7%94%A8Docker/">Linux普通用户使用Docker</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2022/03/05/Technique/Docker/Linux%E6%99%AE%E9%80%9A%E7%94%A8%E6%88%B7%E4%BD%BF%E7%94%A8Docker/">
-          
-          
-            
-          
-          1. 简介
-Docker 是一款开源的应用容器引擎，让开发者可以打包他们的应用以及依赖包到一个可移植的镜像中，然后发布到任何流行的 Linux 或 Windows 操作系统的机器上，也可以实现虚拟化。容器是完全使用沙箱机制，相互之间不会有任何接口。
-
-以上摘自**《百度百科——Docker》**
-
-Docker 为开发者带来了极大便利性，因此被广泛使用于工作学习中。然而，Docker 默认只有拥于
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2022-03-05 10:51" pubdate>
-              2022-03-05
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/Docker/">Docker</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/Docker/">Docker</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2022/03/03/Technique/Browser/Chrome/Chrome%E6%B8%85%E9%99%A4DNS%E7%BC%93%E5%AD%98/">Chrome清除DNS缓存</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2022/03/03/Technique/Browser/Chrome/Chrome%E6%B8%85%E9%99%A4DNS%E7%BC%93%E5%AD%98/">
-          
-          
-            
-          
-          1. 简介
-当域名解析的 IP 发生变化（DNS 服务器已经刷新）时，如果想立即获取变化而不关闭 Chrome，则可以手动清除一下浏览器的 DNS 缓存。
-
-Chrome 的 DNS 缓存好像是存在内存中的，所以直接关闭 Chrome 也能达到清除 DNS 缓存的目的。
-
-2. 清除 DNS 缓存
-在 Chrome 中输入 chrome://net-internals/#dns，在弹出的页面中点击
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2022-03-03 11:47" pubdate>
-              2022-03-03
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/Browser/">Browser</a>
-            
-              <a href="/categories/Technique/Browser/Chrome/">Chrome</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/Browser/">Browser</a>
-            
-              <a href="/tags/Chrome/">Chrome</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2022/03/01/Technique/Linux/CentOS/CentOS7%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BAXray/">CentOS7服务器搭建Xray</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2022/03/01/Technique/Linux/CentOS/CentOS7%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BAXray/">
-          
-          
-            
-          
-          1. 简介
-不同于桌面系统，服务器系统更便重于稳定性和可靠性。鉴于 CentOS 是目前使用最广泛的 Linux 服务器系统之一，本人也在自己的 VPS 上安装了 CentOS。虽然不幸的是， CentOS 官方在 2021 年底已经宣布停止维护 CentOS 8，但目前并不影响我们当下继续使用 CentOS 7，CentOS 7 的维护周期到 2024 年才截止。有关 Xray 的介绍可以参见「
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2022-03-01 00:19" pubdate>
-              2022-03-01
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/Linux/">Linux</a>
-            
-              <a href="/categories/Technique/Linux/CentOS/">CentOS</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/CentOS/">CentOS</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
 
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/page/6/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/#board">5</a><a class="page-number" href="/page/6/#board">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/#board">8</a><a class="page-number" href="/page/9/#board">9</a><span class="space">&hellip;</span><a class="page-number" href="/page/54/#board">54</a><a class="extend next" rel="next" href="/page/8/#board"><i class="iconfont icon-arrowright"></i></a>
+      <a class="extend prev" rel="prev" href="/page/6/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/#board">5</a><a class="page-number" href="/page/6/#board">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/#board">8</a><a class="page-number" href="/page/9/#board">9</a><span class="space">&hellip;</span><a class="page-number" href="/page/55/#board">55</a><a class="extend next" rel="next" href="/page/8/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 
