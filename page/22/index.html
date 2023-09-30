@@ -197,22 +197,21 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/02/28/Technique/System/OperationSystem/%E5%A4%9A%E7%B3%BB%E7%BB%9F%E5%85%B1%E4%BA%AB%E8%93%9D%E7%89%99%E8%AE%BE%E5%A4%87/">多系统共享蓝牙设备</a>
+        <a href="/2021/04/16/Technique/Linux/Manjaro/Manjaro21.0%E4%B8%8BKDE5%E6%A1%8C%E9%9D%A2%E8%AE%BE%E7%BD%AE%E6%A1%8C%E9%9D%A2%E5%A3%81%E7%BA%B8/">Manjaro21.0下KDE5桌面设置桌面壁纸</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/02/28/Technique/System/OperationSystem/%E5%A4%9A%E7%B3%BB%E7%BB%9F%E5%85%B1%E4%BA%AB%E8%93%9D%E7%89%99%E8%AE%BE%E5%A4%87/">
+        <a href="/2021/04/16/Technique/Linux/Manjaro/Manjaro21.0%E4%B8%8BKDE5%E6%A1%8C%E9%9D%A2%E8%AE%BE%E7%BD%AE%E6%A1%8C%E9%9D%A2%E5%A3%81%E7%BA%B8/">
           
           
             
           
-          1. 简介
-当我们在一台电脑上安装了多个操作系统，且电脑只有一个蓝牙适配器时，如果此时使用蓝牙设备（比如蓝牙鼠标），且希望切换系统时能自动连接，则会发现问题：
-
-如果在当前系统配对后，然后跑到另一个系统下配对，再回到当前系统下会发现蓝牙无法自动连接，只能删除配对并再次配对。然而这样导致的结果就是在另一个系统下同样无法自动连接。
-如此往复，永远无法实现能够在两个操作系统共享蓝牙设备。
-
-这种情况下你
+          1. 缘由
+本来 Manjaro 的 KDE 桌面是可以直接在「系统设置」中直接 GUI 直接更换桌面壁纸的，但我发现每次系统进行滚动更新后，原先的壁纸设置就消失了，需要重新设置。本着不愿动鼠标的念头，不如写个脚本来实现吧（本质还是懒）。然而这个似乎不是简单的事情，好在 StackOverflow 在手，知识全有（白嫖真香）。
+2. 代码
+2.1 单张壁纸固定
+固定显示某张图片作为桌面壁纸。
+12
         </a>
       </p>
 
@@ -220,8 +219,8 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-02-28 23:03" pubdate>
-              2021-02-28
+            <time datetime="2021-04-16 18:25" pubdate>
+              2021-04-16
             </time>
           </div>
         
@@ -231,9 +230,9 @@
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/System/">System</a>
+              <a href="/categories/Technique/Linux/">Linux</a>
             
-              <a href="/categories/Technique/System/OperationSystem/">OperationSystem</a>
+              <a href="/categories/Technique/Linux/Manjaro/">Manjaro</a>
             
           </div>
         
@@ -243,9 +242,9 @@
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/System/">System</a>
+              <a href="/tags/Linux/">Linux</a>
             
-              <a href="/tags/OperationSystem/">OperationSystem</a>
+              <a href="/tags/Manjaro/">Manjaro</a>
             
           </div>
         
@@ -259,36 +258,23 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/02/28/Technique/Linux/Shell/LinuxShell%E5%A4%9A%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/">LinuxShell多命令执行</a>
+        <a href="/2021/04/15/Technique/Linux/Shell/BashShell%E5%8F%98%E9%87%8F/">BashShell变量</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/02/28/Technique/Linux/Shell/LinuxShell%E5%A4%9A%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/">
+        <a href="/2021/04/15/Technique/Linux/Shell/BashShell%E5%8F%98%E9%87%8F/">
           
           
             
           
-          在 Linux 终端下，一行多命令顺序执行主要有三种方式，其基本格式和区别如下：
+          1. 简介
+Bash Shell 使用「环境变量」来存储有关 Shell 会话和工作环境的信息。环境变量分为两类：
 
+全局环境变量：全局环境变量对于所有 Shell 会话和所生成的子 Shell 、孩子 Shell 都是可见的。
+局部环境变量：局部环境变量只对创建它们的 Shell 和子 Shell 可见。
+本地环境变量：本地环境变量只能在定义它们的函数内部以及子函数中可见。
 
-
-多命令执行符
-基本格式
-作用
-
-
-
-
-;
-command1 ; command2
-多个命令按照先后顺序执行，命令之间没有逻辑制约关系
-
-
-&amp;&amp;
-command1 &amp;&amp; command2
-两个命令为逻辑与制约关系，只有当 command1 执行正确后，command2 才会执行
-
-
+【注】有关子 Sh
         </a>
       </p>
 
@@ -296,8 +282,8 @@ command1 &amp;&amp; command2
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-02-28 22:49" pubdate>
-              2021-02-28
+            <time datetime="2021-04-15 11:21" pubdate>
+              2021-04-15
             </time>
           </div>
         
@@ -335,227 +321,21 @@ command1 &amp;&amp; command2
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/02/25/Research/Sundry/CV%E6%95%B0%E6%8D%AE%E9%9B%86%E8%B5%84%E6%BA%90%E6%B1%87%E6%80%BB/">数据集链接</a>
+        <a href="/2021/04/06/Technique/Compression/Image/XBM%E6%A0%BC%E5%BC%8F/">XBM格式</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/02/25/Research/Sundry/CV%E6%95%B0%E6%8D%AE%E9%9B%86%E8%B5%84%E6%BA%90%E6%B1%87%E6%80%BB/">
-          
-          
-            
-          
-          1. 常用数据集
-
-
-
-常用数据集
-说明
-
-
-
-
-BSDS500
-500 张自然图像，300 训练集 + 200 测试集（PNG 格式）
-
-
-CityScapes
-城市街景图（同一个地点连续多张图）（PNG 格式）
-
-
-DIV2K
-800 训练集 + 100 测试集（PNG 格式）
-
-
-Flickr2k
-2000 多张自然图像（PNG 格式）
-
-
-Kodak
-24 测试集（PNG 格式）
-
-
-LF
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-02-25 18:34" pubdate>
-              2021-02-25
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Research/">Research</a>
-            
-              <a href="/categories/Research/Assessory/">Assessory</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Research/">Research</a>
-            
-              <a href="/tags/Assessory/">Assessory</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/02/25/Technique/Python/Matplotlib/Matplotlib%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/">Matplotlib常见问题</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/02/25/Technique/Python/Matplotlib/Matplotlib%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/">
-          
-          
-            
-          
-          1. 显示中文乱码
-
-问题：matplotlib 在系统上没有找到对应的中文字体。
-解决：
-
-
-在代码中手动指定系统上的中文字体。
-1234567import matplotlib as mplimport matplotlib.pyplot as pltfrom matplotlib.font_manager import FontPropertieszhfont = mpl.font_mana
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-02-25 17:59" pubdate>
-              2021-02-25
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/Python/">Python</a>
-            
-              <a href="/categories/Technique/Python/Matplotlib/">Matplotlib</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/Python/">Python</a>
-            
-              <a href="/tags/Matplotlib/">Matplotlib</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/02/23/Research/ImageCompression/Others/2006-IEEE-Recovering%20DC%20coefficients%20in%20block-based%20DCT/2006-IEEE-Recovering%20DC%20coefficients%20in%20block-based%20DCT/">2006-IEEE-Recovering DC coefficients in block-based DCT</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/02/23/Research/ImageCompression/Others/2006-IEEE-Recovering%20DC%20coefficients%20in%20block-based%20DCT/2006-IEEE-Recovering%20DC%20coefficients%20in%20block-based%20DCT/">
-          
-          
-            
-          
-          【注】此论文中谈论的图像均为像素值在 (0,255)(0,255)(0,255) 范围内的 RGB 图像，定义点 (i,j)(i,j)(i,j) 处像素值为 f(i,j)f(i,j)f(i,j)。
-1. 拉普拉斯分布特性
-对于自然图像而言，点 (i,j)(i,j)(i,j) 处的相邻像素点为
-{(i−1,j−1),(i−1,j),(i−1,j+1),(i,j−1),(i,j+1),(i+1,j−1
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-02-23 20:28" pubdate>
-              2021-02-23
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Research/">Research</a>
-            
-              <a href="/categories/Research/ImageCompression/">ImageCompression</a>
-            
-              <a href="/categories/Research/ImageCompression/Others/">Others</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Research/">Research</a>
-            
-              <a href="/tags/ImageCompression/">ImageCompression</a>
-            
-              <a href="/tags/Others/">Others</a>
-            
-              <a href="/tags/DC%E7%B3%BB%E6%95%B0%E6%81%A2%E5%A4%8D/">DC系数恢复</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/02/22/Technique/Linux/Sundry/Linux%E4%B8%8B%E6%9F%A5%E7%9C%8B%E5%B7%A5%E5%85%B7%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3/">Linux下查看工具官方文档</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/02/22/Technique/Linux/Sundry/Linux%E4%B8%8B%E6%9F%A5%E7%9C%8B%E5%B7%A5%E5%85%B7%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3/">
+        <a href="/2021/04/06/Technique/Compression/Image/XBM%E6%A0%BC%E5%BC%8F/">
           
           
             
           
           1. 简介
-Linux 系统包含大量开源工具，大部分开源工具在安装时都自带手册，而手册又分为使用手册、技术手册和帮助文档等。
-2. 使用手册
-Linux 下非内建工具的使用手册一般都集成在 man 或 info 工具中，内建工具的使用手册集成在 help 工具。查看工具 xxx 的使用手册直接在终端运行以下命令中对应的那个即可：
-123man xxxinfo xxxhelp xxx
-3. 技术手册
+XBM 是一种最简单的一种图像格式，不像其他图像格式那样最终存储的二进制数据，XBM 图像格式存的是 C 源码。XBM 格式基本只在 X Windows 系统上使用，只支持两种颜色。相较于 BMP 格式，XBM 格式更像是 BMP 图像在 Windows 下的 icon 文件。
+【注】XBM 格式在 X Windows 环境外几乎很少用到。
+2. 格式
+2.1 详解
+XBM 图像格式示
         </a>
       </p>
 
@@ -563,8 +343,8 @@ Linux 下非内建工具的使用手册一般都集成在 man 或 info 工具中
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-02-22 18:57" pubdate>
-              2021-02-22
+            <time datetime="2021-04-06 16:42" pubdate>
+              2021-04-06
             </time>
           </div>
         
@@ -574,9 +354,9 @@ Linux 下非内建工具的使用手册一般都集成在 man 或 info 工具中
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/Linux/">Linux</a>
+              <a href="/categories/Technique/Compression/">Compression</a>
             
-              <a href="/categories/Technique/Linux/Sundry/">Sundry</a>
+              <a href="/categories/Technique/Compression/Image/">Image</a>
             
           </div>
         
@@ -586,9 +366,9 @@ Linux 下非内建工具的使用手册一般都集成在 man 或 info 工具中
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Sundry/">Sundry</a>
+              <a href="/tags/Compression/">Compression</a>
             
-              <a href="/tags/Linux/">Linux</a>
+              <a href="/tags/Image/">Image</a>
             
           </div>
         
@@ -602,19 +382,24 @@ Linux 下非内建工具的使用手册一般都集成在 man 或 info 工具中
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/02/11/Technique/Linux/Sundry/Linux%E4%BF%AE%E6%94%B9grub%E8%8F%9C%E5%8D%95/">Linux修改grub菜单</a>
+        <a href="/2021/04/06/Technique/Compression/Image/BMP%E6%A0%BC%E5%BC%8F/BMP%E6%A0%BC%E5%BC%8F/">BMP格式</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/02/11/Technique/Linux/Sundry/Linux%E4%BF%AE%E6%94%B9grub%E8%8F%9C%E5%8D%95/">
+        <a href="/2021/04/06/Technique/Compression/Image/BMP%E6%A0%BC%E5%BC%8F/BMP%E6%A0%BC%E5%BC%8F/">
           
           
             
           
-          【注】参考自 grub 官方手册。
-1. 保留上一次 grub 菜单选项
-1.1 问题
-每次开机时，大部分 Linux 发行版的 grub 菜单都是定位在首选项位置（即当前系统选项位置）。这就导致如果我们电脑安装了多个系统，那么每次开机进入其他系统都要重新选择 grub 菜单选项。而我们一般都是一段时间固定使用一个系统，因此如果 grub 菜单能够记住上一次的菜单选项，我们平常使用就不需要手动切换
+          1. 简介
+BMP 格式是 Windows 下最简单的图像存储格式，它支持图像以每像素 1,4,8,16,24,321,4,8,16,24,321,4,8,16,24,32 比特表示。BMP 格式也支持 4,84,84,8 比特每像素的游程算法压缩图像。
+2. 格式
+BMP 文件基本结构如下：
+
+其详细结构如下：
+
+2.1 File Header
+BMP 文件中的 File Header 包含一个
         </a>
       </p>
 
@@ -622,8 +407,8 @@ Linux 下非内建工具的使用手册一般都集成在 man 或 info 工具中
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-02-11 10:12" pubdate>
-              2021-02-11
+            <time datetime="2021-04-06 12:28" pubdate>
+              2021-04-06
             </time>
           </div>
         
@@ -633,9 +418,9 @@ Linux 下非内建工具的使用手册一般都集成在 man 或 info 工具中
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/Linux/">Linux</a>
+              <a href="/categories/Technique/Compression/">Compression</a>
             
-              <a href="/categories/Technique/Linux/Sundry/">Sundry</a>
+              <a href="/categories/Technique/Compression/Image/">Image</a>
             
           </div>
         
@@ -645,9 +430,9 @@ Linux 下非内建工具的使用手册一般都集成在 man 或 info 工具中
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Sundry/">Sundry</a>
+              <a href="/tags/Compression/">Compression</a>
             
-              <a href="/tags/Linux/">Linux</a>
+              <a href="/tags/Image/">Image</a>
             
           </div>
         
@@ -661,24 +446,19 @@ Linux 下非内建工具的使用手册一般都集成在 man 或 info 工具中
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/01/26/Technique/ACM/%E9%A2%98%E8%A7%A3/P1439%E3%80%8C%E3%80%90%E6%A8%A1%E6%9D%BF%E3%80%91%E6%9C%80%E9%95%BF%E5%85%AC%E5%85%B1%E5%AD%90%E5%BA%8F%E5%88%97%E3%80%8D/">P1439「【模板】最长公共子序列」</a>
+        <a href="/2021/04/05/Technique/Compression/Image/%E5%87%8F%E8%89%B2%E7%AE%97%E6%B3%95/">减色算法</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/01/26/Technique/ACM/%E9%A2%98%E8%A7%A3/P1439%E3%80%8C%E3%80%90%E6%A8%A1%E6%9D%BF%E3%80%91%E6%9C%80%E9%95%BF%E5%85%AC%E5%85%B1%E5%AD%90%E5%BA%8F%E5%88%97%E3%80%8D/">
+        <a href="/2021/04/05/Technique/Compression/Image/%E5%87%8F%E8%89%B2%E7%AE%97%E6%B3%95/">
           
           
             
           
-          1. 题目
-题目链接：P1439「【模板】最长公共子序列」 。
-题目描述
-给出 1,2,…,n1,2,\ldots,n1,2,…,n 的两个排列 P1P_1P1​  和 P2P_2P2​，求它们的最长公共子序列。
-输入格式
-第一行是一个数 nnn。
-接下来两行，每行为 nnn 个数，为自然数 1,2,…,n1,2,\ldots,n1,2,…,n 的一个排列。
-输出格式
-一个数，即最长公共子序列的长
+          1. 简介
+减色算法（ColorQuantization）是一种应用在色彩空间中用于减少图像离散色彩值的一类算法，旨在通过减少图像的离散色彩值从而减少了每个色彩值的表示比特数。一方面达到压缩图像的效果，另一方面使得一些以固定有限比特数表示像素的显示设备也能显示每个像素更多表示比特的图像。
+2. 中位切割算法
+中位切割算法（Median Cut）是最知名、应用最广泛的减色算法，常见的图像处理软件如 
         </a>
       </p>
 
@@ -686,8 +466,8 @@ Linux 下非内建工具的使用手册一般都集成在 man 或 info 工具中
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-26 01:19" pubdate>
-              2021-01-26
+            <time datetime="2021-04-05 23:49" pubdate>
+              2021-04-05
             </time>
           </div>
         
@@ -697,9 +477,9 @@ Linux 下非内建工具的使用手册一般都集成在 man 或 info 工具中
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/ACM/">ACM</a>
+              <a href="/categories/Technique/Compression/">Compression</a>
             
-              <a href="/categories/Technique/ACM/%E9%A2%98%E8%A7%A3/">题解</a>
+              <a href="/categories/Technique/Compression/Image/">Image</a>
             
           </div>
         
@@ -709,9 +489,9 @@ Linux 下非内建工具的使用手册一般都集成在 man 或 info 工具中
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/ACM/">ACM</a>
+              <a href="/tags/Compression/">Compression</a>
             
-              <a href="/tags/%E9%A2%98%E8%A7%A3/">题解</a>
+              <a href="/tags/Image/">Image</a>
             
           </div>
         
@@ -725,28 +505,21 @@ Linux 下非内建工具的使用手册一般都集成在 man 或 info 工具中
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/01/23/Technique/TeX/LaTeX/LaTeX%E4%BF%AE%E9%A5%B0%E7%AC%A6%E5%8F%B7/LaTeX%E4%BF%AE%E9%A5%B0%E7%AC%A6%E5%8F%B7/">LaTeX修饰符号</a>
+        <a href="/2021/04/03/Technique/TeX/LaTeX/LaTeX%E8%89%B2%E5%BD%A9/">LaTeX色彩</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/01/23/Technique/TeX/LaTeX/LaTeX%E4%BF%AE%E9%A5%B0%E7%AC%A6%E5%8F%B7/LaTeX%E4%BF%AE%E9%A5%B0%E7%AC%A6%E5%8F%B7/">
+        <a href="/2021/04/03/Technique/TeX/LaTeX/LaTeX%E8%89%B2%E5%BD%A9/">
           
           
             
           
-          【注】摘自 Scott Pakin 的 《The Comprehensive LaTeX Symbol List》 。
-
-
-
-
-
-
-
-
-
-
-
-
+          【注】笔记来自《LaTeX入门》——刘海洋。
+1. 简介
+原始的 TeX 引擎不支持彩色，有关彩色的功能都是由输出 PS、PDF 格式的 TeX 引擎或驱动提供的，有关命令是在绘图相关的扩展宏包中定义的。基本的彩色支持工具是 color 宏包，它是 LaTeX 的基本组件，graphics 工具包的一部分。
+2. 基础
+2.1 预定义颜色
+在标准的 color 宏包中只有几种原色是预定义的，分别是
         </a>
       </p>
 
@@ -754,8 +527,8 @@ Linux 下非内建工具的使用手册一般都集成在 man 或 info 工具中
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-23 13:28" pubdate>
-              2021-01-23
+            <time datetime="2021-04-03 23:41" pubdate>
+              2021-04-03
             </time>
           </div>
         
@@ -793,29 +566,21 @@ Linux 下非内建工具的使用手册一般都集成在 man 或 info 工具中
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/01/23/Technique/TeX/LaTeX/LaTeX%E5%85%B6%E4%BB%96%E7%AC%A6%E5%8F%B7/LaTeX%E5%85%B6%E4%BB%96%E7%AC%A6%E5%8F%B7/">LaTeX其他符号</a>
+        <a href="/2021/04/03/Technique/TeX/LaTeX/LaTeX%E6%A0%87%E9%A2%98%E6%8E%A7%E5%88%B6/">LaTeX标题控制</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/01/23/Technique/TeX/LaTeX/LaTeX%E5%85%B6%E4%BB%96%E7%AC%A6%E5%8F%B7/LaTeX%E5%85%B6%E4%BB%96%E7%AC%A6%E5%8F%B7/">
+        <a href="/2021/04/03/Technique/TeX/LaTeX/LaTeX%E6%A0%87%E9%A2%98%E6%8E%A7%E5%88%B6/">
           
           
             
           
-          【注】摘自 Scott Pakin 的 《The Comprehensive LaTeX Symbol List》 。
-
-
-
-
-
-
-
-
-
-
-
-
-
+          【注】笔记来自《LaTeX入门》——刘海洋。详细参数可参见 LaTeX 官方文档：
+1texdoc caption
+1. 简介
+在设计文档时，我们经常需要修改浮动体标题的字体、间距、对齐方式等格式，然而 LaTeX 内核及标准文档并没有提供直接修改浮动标题格式的命令，这时就可以使用 caption 宏包来完成相关的设置。
+2. 格式选项
+使用 caption 宏包设置标题格式是通过一系列键值对形式
         </a>
       </p>
 
@@ -823,8 +588,213 @@ Linux 下非内建工具的使用手册一般都集成在 man 或 info 工具中
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-23 13:28" pubdate>
-              2021-01-23
+            <time datetime="2021-04-03 10:41" pubdate>
+              2021-04-03
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/TeX/">TeX</a>
+            
+              <a href="/categories/Technique/TeX/LaTeX/">LaTeX</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/TeX/">TeX</a>
+            
+              <a href="/tags/LaTeX/">LaTeX</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/03/30/Technique/TeX/LaTeX/LaTeX%E6%B5%AE%E5%8A%A8%E4%BD%93/">LaTeX浮动体</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/03/30/Technique/TeX/LaTeX/LaTeX%E6%B5%AE%E5%8A%A8%E4%BD%93/">
+          
+          
+            
+          
+          【注】笔记来自《LaTeX入门》——刘海洋。
+1. 简介
+图片或表格通常都占有较大的一块，直接放在文档常常会造成分页的困难，即前一页放不下，放在后一页又会造成很大的留白。其他一些大块的内容也可能有类似的问题，比如程序算法、大型公式和不宜断开的特殊形状段落。LaTeX 中通过引入浮动体来解决这类问题。
+
+
+「浮动体」是一个活动的盒子，它可以把内容放在距离浮动体代码前后不远的地方，通常就是浮动体代码所
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-03-30 19:21" pubdate>
+              2021-03-30
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/TeX/">TeX</a>
+            
+              <a href="/categories/Technique/TeX/LaTeX/">LaTeX</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/TeX/">TeX</a>
+            
+              <a href="/tags/LaTeX/">LaTeX</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/03/29/Technique/TeX/LaTeX/LaTeX%E6%8F%92%E5%9B%BE/">LaTeX插图</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/03/29/Technique/TeX/LaTeX/LaTeX%E6%8F%92%E5%9B%BE/">
+          
+          
+            
+          
+          【注】笔记来自《LaTeX入门》——刘海洋。
+1. 简介
+插图功能是利用 TeX 的特定编译程序提供的机制实现的，不同的编译程序支持不同的图形方式。不同 LaTeX 编译程序对应的插图格式如下表所示：
+
+
+
+TeX 引擎命令
+图形驱动
+支持的格式
+说明
+
+
+
+
+latex
+Dvips
+EPS
+MiKTeX 还部分支持 PNG 和 JPEG
+
+
+latex
+DVIPDFMx
+EPS,PDF,PNG,
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-03-29 14:22" pubdate>
+              2021-03-29
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/TeX/">TeX</a>
+            
+              <a href="/categories/Technique/TeX/LaTeX/">LaTeX</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/TeX/">TeX</a>
+            
+              <a href="/tags/LaTeX/">LaTeX</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/03/26/Technique/TeX/LaTeX/LaTeX%E5%B9%BB%E7%81%AF%E7%89%87%E6%8F%90%E7%BA%B2/LaTeX%E5%B9%BB%E7%81%AF%E7%89%87%E6%8F%90%E7%BA%B2/">LaTeX幻灯片提纲</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/03/26/Technique/TeX/LaTeX/LaTeX%E5%B9%BB%E7%81%AF%E7%89%87%E6%8F%90%E7%BA%B2/LaTeX%E5%B9%BB%E7%81%AF%E7%89%87%E6%8F%90%E7%BA%B2/">
+          
+          
+            
+          
+          【注】笔记来自《LaTeX入门》——刘海洋。更多细节内容可以参考官方用户手册。
+1texdoc beamer
+1. 简介
+由于现代的 LaTeX 系统主要以 pdf 文件为输出方式，因此它可以用来生成各种专门的电子文档，诸如书籍、文章、幻灯片等。
+1.1 工具
+LaTeX 中专门用来制作幻灯片的工具有很多，诸如：
+
+beamer 文档类
+powerdot 文档类
+prosper 文档类
+pdfsl
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-03-26 20:49" pubdate>
+              2021-03-26
             </time>
           </div>
         
@@ -860,7 +830,7 @@ Linux 下非内建工具的使用手册一般都集成在 man 或 info 工具中
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/page/21/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/20/#board">20</a><a class="page-number" href="/page/21/#board">21</a><span class="page-number current">22</span><a class="page-number" href="/page/23/#board">23</a><a class="page-number" href="/page/24/#board">24</a><span class="space">&hellip;</span><a class="page-number" href="/page/55/#board">55</a><a class="extend next" rel="next" href="/page/23/#board"><i class="iconfont icon-arrowright"></i></a>
+      <a class="extend prev" rel="prev" href="/page/21/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/20/#board">20</a><a class="page-number" href="/page/21/#board">21</a><span class="page-number current">22</span><a class="page-number" href="/page/23/#board">23</a><a class="page-number" href="/page/24/#board">24</a><span class="space">&hellip;</span><a class="page-number" href="/page/56/#board">56</a><a class="extend next" rel="next" href="/page/23/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 

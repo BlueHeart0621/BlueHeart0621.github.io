@@ -197,29 +197,24 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/07/05/Technique/Linux/Shell/LinuxShell%E4%B8%8B%E6%96%87%E4%BB%B6%E5%A4%A7%E5%B0%8F%E5%8D%95%E4%BD%8D/">LinuxShell下文件大小单位</a>
+        <a href="/2021/07/17/Technique/StatisticalLearning/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/">统计学习方法</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/07/05/Technique/Linux/Shell/LinuxShell%E4%B8%8B%E6%96%87%E4%BB%B6%E5%A4%A7%E5%B0%8F%E5%8D%95%E4%BD%8D/">
+        <a href="/2021/07/17/Technique/StatisticalLearning/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/">
           
           
             
           
-          1. 简介
-Linux Shell 下很多命令在打印文件大小信息时，默认使用的是字节作为单位。但为了方便用户使用，往往这些命令提供选项参数 -B[SIZE] 或 --block-size=SIZE 给用户来指定文件大小的单位，比如 ls、df、du 命令等。
-2. 文件大小单位
-Linux Shell 下可选的文件大小单位参数 SIZE 如下表所示：
+          【注】学习笔记参考自《统计学习方法第二版》——李航。
+1. 简介
+统计学习方法由三要素构成，即：方法=模型+策略+算法。
+2. 模型
+统计学习首要考虑的问题是学习什么样的模型。在监督学习中，模型就是所有要学习的条件概率分布或决策函数。模型的假设空间包含所有可能的条件概率分布或决策函数。
 
+假设空间用 F\mathcal{F}F 表示，可以定义为决策函数的集合：
 
-
-单位
-说明
-
-
-
-
-K、k、KB、kB、
+F={f∣Y=fθ(X),θ∈Rn
         </a>
       </p>
 
@@ -227,8 +222,8 @@ K、k、KB、kB、
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-07-05 16:17" pubdate>
-              2021-07-05
+            <time datetime="2021-07-17 18:25" pubdate>
+              2021-07-17
             </time>
           </div>
         
@@ -238,9 +233,7 @@ K、k、KB、kB、
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/Linux/">Linux</a>
-            
-              <a href="/categories/Technique/Linux/Shell/">Shell</a>
+              <a href="/categories/Technique/StatisticalLearning/">StatisticalLearning</a>
             
           </div>
         
@@ -250,9 +243,7 @@ K、k、KB、kB、
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/Shell/">Shell</a>
+              <a href="/tags/StatisticalLearning/">StatisticalLearning</a>
             
           </div>
         
@@ -266,35 +257,26 @@ K、k、KB、kB、
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/06/13/Technique/Linux/Sundry/Linux%E7%B3%BB%E7%BB%9F%E5%90%84%E5%8F%91%E8%A1%8C%E7%89%88%E7%94%A8%E6%88%B7%E6%96%87%E6%A1%A3/">Linux系统各发行版用户文档</a>
+        <a href="/2021/07/17/Technique/StatisticalLearning/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%A6%82%E8%BF%B0/">统计学习概述</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/06/13/Technique/Linux/Sundry/Linux%E7%B3%BB%E7%BB%9F%E5%90%84%E5%8F%91%E8%A1%8C%E7%89%88%E7%94%A8%E6%88%B7%E6%96%87%E6%A1%A3/">
+        <a href="/2021/07/17/Technique/StatisticalLearning/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%A6%82%E8%BF%B0/">
           
           
             
           
-          1. 发行版
-Linux 所有发行版可参见：DistroWatch.com。
-2. 用户文档
+          【注】学习笔记参考自《统计学习方法第二版》——李航。
+1. 定义
+统计学习是关于计算机基于数据构建概率统计模型并运用模型对数据进行预测与分析的一门学科，统计学习也称为统计机器学习。
 
-Debian
-Ubuntu
-Deepin
-Manjaro
-LinuxMint
-RedHat
-CentOS
+赫尔伯特・西蒙曾对「学习」给出以下定义：「如果一个系统能够通过执行某个过程改进它的性能，这就是学习。」
+
+按照这一观点，统计学习就是计算机系统通过运用数据及统计方法提高系统性能的机器学习。
+2. 特点
 
 
-CentOS 是 RedHat 的社区版，因此技术文档可以参考 RedHat。
-
-
-ArchLinux
-
-
-ArchLinux 官方的 Wiki 非常优秀（吹爆~），基本上大部分用户所需要的文档
+统计学习以
         </a>
       </p>
 
@@ -302,8 +284,68 @@ ArchLinux 官方的 Wiki 非常优秀（吹爆~），基本上大部分用户所
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-06-13 14:32" pubdate>
-              2021-06-13
+            <time datetime="2021-07-17 16:03" pubdate>
+              2021-07-17
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/StatisticalLearning/">StatisticalLearning</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/StatisticalLearning/">StatisticalLearning</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/07/16/Technique/Linux/Sundry/Linux%E4%B8%8B%E5%90%84%E7%A7%8D%E5%AE%89%E8%A3%85%E5%8C%85%E6%89%93%E5%8C%85%E5%B7%A5%E5%85%B7/">Linux下各种安装包打包工具</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/07/16/Technique/Linux/Sundry/Linux%E4%B8%8B%E5%90%84%E7%A7%8D%E5%AE%89%E8%A3%85%E5%8C%85%E6%89%93%E5%8C%85%E5%B7%A5%E5%85%B7/">
+          
+          
+            
+          
+          1. Deb 包
+Deb 包是 Debian 系 Linux 发行版的软件包格式。
+1.1 Debreate
+
+官网
+文档
+仓库
+
+
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-07-16 19:48" pubdate>
+              2021-07-16
             </time>
           </div>
         
@@ -341,17 +383,18 @@ ArchLinux 官方的 Wiki 非常优秀（吹爆~），基本上大部分用户所
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/06/13/Technique/Linux/Ubuntu/Ubuntu20.04%E4%B8%8B%E5%AE%89%E8%A3%85%E6%98%9F%E7%81%AB%E5%BA%94%E7%94%A8%E5%95%86%E5%BA%97/">Ubuntu20.04下安装星火应用商店</a>
+        <a href="/2021/07/16/Technique/Linux/KaliLinux/KaliLinux%E4%B8%8B%E5%AE%89%E8%A3%85deepinwine%E8%BD%AF%E4%BB%B6/">KaliLinux下安装deepinwine软件</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/06/13/Technique/Linux/Ubuntu/Ubuntu20.04%E4%B8%8B%E5%AE%89%E8%A3%85%E6%98%9F%E7%81%AB%E5%BA%94%E7%94%A8%E5%95%86%E5%BA%97/">
+        <a href="/2021/07/16/Technique/Linux/KaliLinux/KaliLinux%E4%B8%8B%E5%AE%89%E8%A3%85deepinwine%E8%BD%AF%E4%BB%B6/">
           
           
             
           
           1. 简介
-星火应用商店是国内一款开源的 Debian 系应用商店，其中整合了许多优秀的 Linux 软件和 Wine 适配良好的软件，和 Deepin 应用商店相辅相成，旨在构建一个良好的 Linux 应用生态。由于 Deepin 应用商店在其他 Debian 系统上的适配不是很好，比如 Ubuntu 系统，因此星火应用商店对于非 Deepin 的 Debian 系用户提供了一个很好的选择。为星
+Deepin 团队开发的一系列基于 deepinwine 的国产软件越来越好用，但多数 Linux 发行版并不支持直接安装，目前已知除了 Deepin 系统本身外，仅有 Arch 系的 Linux 发行版依靠 AUR 源可直接进行安装，Debian 系的其他 Linux 发行版均无法直接安装。目前有几种比较好的解决方案：星火应用商店、deepin-wine.i-m.dev。
+2. 星火
         </a>
       </p>
 
@@ -359,8 +402,8 @@ ArchLinux 官方的 Wiki 非常优秀（吹爆~），基本上大部分用户所
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-06-13 13:35" pubdate>
-              2021-06-13
+            <time datetime="2021-07-16 19:15" pubdate>
+              2021-07-16
             </time>
           </div>
         
@@ -372,7 +415,7 @@ ArchLinux 官方的 Wiki 非常优秀（吹爆~），基本上大部分用户所
             
               <a href="/categories/Technique/Linux/">Linux</a>
             
-              <a href="/categories/Technique/Linux/Ubuntu/">Ubuntu</a>
+              <a href="/categories/Technique/Linux/KaliLinux/">KaliLinux</a>
             
           </div>
         
@@ -384,7 +427,7 @@ ArchLinux 官方的 Wiki 非常优秀（吹爆~），基本上大部分用户所
             
               <a href="/tags/Linux/">Linux</a>
             
-              <a href="/tags/Ubuntu/">Ubuntu</a>
+              <a href="/tags/KaliLinux/">KaliLinux</a>
             
           </div>
         
@@ -398,139 +441,23 @@ ArchLinux 官方的 Wiki 非常优秀（吹爆~），基本上大部分用户所
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/06/12/Technique/Linux/Ubuntu/Ubuntu20.04%E4%B8%8Bapt%E6%8A%A5%E9%94%99/">Ubuntu20.04下apt报错</a>
+        <a href="/2021/07/16/Technique/Linux/ArchLinux/ArchLinux%E4%B8%8BVSCode%E6%97%A0%E6%B3%95%E8%81%94%E7%BD%91%E4%B8%8B%E8%BD%BD%E6%89%A9%E5%B1%95/">ArchLinux下VSCode无法联网下载扩展</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/06/12/Technique/Linux/Ubuntu/Ubuntu20.04%E4%B8%8Bapt%E6%8A%A5%E9%94%99/">
-          
-          
-            
-          
-          1. 目标 xxx 在 /etc/apt/sources.list:yy 和 /etc/apt/sources.list:zz 中被配置了多次
-
-问题：/etc/apt/sources.list 同时启用了多个镜像源。
-解决：注释掉 /etc/apt/sources.list 中多余的镜像源，只保留其中一个即可。
-
-2. 由于没有公匙，无法验证下列签名: NO_PUBKEY xxx
-
-问题：GPG
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-06-12 20:27" pubdate>
-              2021-06-12
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/Linux/">Linux</a>
-            
-              <a href="/categories/Technique/Linux/Ubuntu/">Ubuntu</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/Ubuntu/">Ubuntu</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/06/12/Technique/Linux/Ubuntu/Ubuntu20.04%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E7%BD%91%E7%BB%9C%E9%97%AE%E9%A2%98/">Ubuntu20.04中遇到的网络问题</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/06/12/Technique/Linux/Ubuntu/Ubuntu20.04%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E7%BD%91%E7%BB%9C%E9%97%AE%E9%A2%98/">
-          
-          
-            
-          
-          1. 已连上有线/无线，网络未开代理，却无法访问网络
-
-缘由：我之前在 Ubuntu20.04 开过网络代理服务，当时访问网络正常。但今天突然把代理一关发现怎么都上不了网了，Ping 网络时报错名称解析服务失败，而奇怪的是一开代理又可以访问网络了。
-解决：最终发现是 Ubuntu20.04 的网络名称解析服务即 systemd-resolved.service 未开启，因此导致无法由域名解析到 I
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-06-12 19:39" pubdate>
-              2021-06-12
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/Linux/">Linux</a>
-            
-              <a href="/categories/Technique/Linux/Ubuntu/">Ubuntu</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/Ubuntu/">Ubuntu</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/06/12/Technique/Linux/Ubuntu/Ubuntu20.04%E4%B8%8BMAC%E5%9C%B0%E5%9D%80%E9%9A%8F%E6%9C%BA%E5%8C%96/">Ubuntu20.04下MAC地址随机化</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/06/12/Technique/Linux/Ubuntu/Ubuntu20.04%E4%B8%8BMAC%E5%9C%B0%E5%9D%80%E9%9A%8F%E6%9C%BA%E5%8C%96/">
+        <a href="/2021/07/16/Technique/Linux/ArchLinux/ArchLinux%E4%B8%8BVSCode%E6%97%A0%E6%B3%95%E8%81%94%E7%BD%91%E4%B8%8B%E8%BD%BD%E6%89%A9%E5%B1%95/">
           
           
             
           
           1. 简介
-由于之前的挖矿操作（具体原因参见 Manjaro21.0 下 MAC 地址随机化，导致我电脑无线网卡的 MAC 地址对应的 IP 被路由器限制了。而我的电脑上又装了多个操作系统，因此需要每个操作系统都配置 MAC 地址随机化（突然觉得有点麻烦，下次再也不敢了555）。总体而言，在 Ubuntu20.04 上配置 MAC 地址随机化和 Manjaro21.0 下 MAC 地址随机化 差不
+VSCode 作为「宇宙最强编辑器」，在日常生活办公中自然不可或缺。VSCode 目前有好几个版本，分别是 Code-OSS、Visual-Studio-Code 以及 VSCodium，它们的区别是：
+
+Code-OSS 是通过官方源码编译的开源版本。
+Visual-Studio-Code 是微软官方版本，专有软件。
+VSCodium 是社区驱动的完全开源版本。
+
+至于它们具体的功能
         </a>
       </p>
 
@@ -538,8 +465,8 @@ ArchLinux 官方的 Wiki 非常优秀（吹爆~），基本上大部分用户所
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-06-12 15:29" pubdate>
-              2021-06-12
+            <time datetime="2021-07-16 14:31" pubdate>
+              2021-07-16
             </time>
           </div>
         
@@ -551,7 +478,7 @@ ArchLinux 官方的 Wiki 非常优秀（吹爆~），基本上大部分用户所
             
               <a href="/categories/Technique/Linux/">Linux</a>
             
-              <a href="/categories/Technique/Linux/Ubuntu/">Ubuntu</a>
+              <a href="/categories/Technique/Linux/ArchLinux/">ArchLinux</a>
             
           </div>
         
@@ -563,7 +490,7 @@ ArchLinux 官方的 Wiki 非常优秀（吹爆~），基本上大部分用户所
             
               <a href="/tags/Linux/">Linux</a>
             
-              <a href="/tags/Ubuntu/">Ubuntu</a>
+              <a href="/tags/ArchLinux/">ArchLinux</a>
             
           </div>
         
@@ -577,26 +504,20 @@ ArchLinux 官方的 Wiki 非常优秀（吹爆~），基本上大部分用户所
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/06/12/Technique/PHP/Manjaro21.0%E6%90%AD%E5%BB%BALAMP%E7%8E%AF%E5%A2%83/">Manjaro21.0搭建LAMP环境</a>
+        <a href="/2021/07/15/Technique/Linux/ArchLinux/ArchLinux%E4%B8%8Bzsh%E9%85%8D%E7%BD%AE/">ArchLinux下zsh配置</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/06/12/Technique/PHP/Manjaro21.0%E6%90%AD%E5%BB%BALAMP%E7%8E%AF%E5%A2%83/">
+        <a href="/2021/07/15/Technique/Linux/ArchLinux/ArchLinux%E4%B8%8Bzsh%E9%85%8D%E7%BD%AE/">
           
           
             
           
           1. 简介
-LAMP 即 Linux+Apache+Mysql+PHP 的简称。
-2. 安装 Apache+Mysql+PHP
-1yay -S apache mysql php php-apache
-3. 配置 Apache
-
-打开配置文件
-
-1sudo vim /etc/httpd/conf/httpd.conf
-
-修改 DocumentRoot 字段后的路径为自定义的 Web Server 根
+zsh 是一款优秀的 Shell 脚本解释器，其基于 Bourne Shell 作出了大量改进，同时加入了 bash、ksh 和 tcsh 的一些功能。
+2. 配置
+Oh My Zsh 用户社区收集了 zsh 大量的第三方插件，并推出了 oh-my-zsh 框架用于管理 zsh 插件。因此对 zsh 进行配置之前，首先安装该框架：
+123# 以下安装方式选一种即可sh -c &quot
         </a>
       </p>
 
@@ -604,179 +525,8 @@ LAMP 即 Linux+Apache+Mysql+PHP 的简称。
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-06-12 09:24" pubdate>
-              2021-06-12
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/PHP/">PHP</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/PHP/">PHP</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/06/04/Technique/C++/C%E8%AF%AD%E8%A8%80%E5%90%84%E7%89%88%E6%9C%AC%E5%AF%B9%E6%AF%94/C%E8%AF%AD%E8%A8%80%E5%90%84%E7%89%88%E6%9C%AC%E5%AF%B9%E6%AF%94/">C语言各版本对比</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/06/04/Technique/C++/C%E8%AF%AD%E8%A8%80%E5%90%84%E7%89%88%E6%9C%AC%E5%AF%B9%E6%AF%94/C%E8%AF%AD%E8%A8%80%E5%90%84%E7%89%88%E6%9C%AC%E5%AF%B9%E6%AF%94/">
-          
-          
-            
-          
-          
-附录
-参考资料：
-
-C语言的各种版本：C89，AMD1，C99，C11
-
-
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-06-04 15:57" pubdate>
-              2021-06-04
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/C/">C++</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/C/">C++</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/06/04/Technique/C++/C++%E5%86%85%E7%BD%AE%E5%AE%8F%E5%AE%9A%E4%B9%89/">C++内置宏定义</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/06/04/Technique/C++/C++%E5%86%85%E7%BD%AE%E5%AE%8F%E5%AE%9A%E4%B9%89/">
-          
-          
-            
-          
-          1. 标准内置宏定义
-标准内置宏定义是由相关的语言标准定义的，因此对于实现了这些语言标准的编译器来说都是可使用的。
-
-__FILE__：字符串格式，指示当前处理的文件路径。
-__LINE__：数字格式，指示当前处理的代码行号。
-#line：用来修改当前行的下一行的行号，即下一行的 __LINE__ 由 #line 所指定的数字开始。
-
-123456789#include&lt;stdio.h&gt
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-06-04 14:53" pubdate>
-              2021-06-04
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/C/">C++</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/C/">C++</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/06/02/Technique/Linux/Manjaro/Manjaro21.0%E4%B8%8BMAC%E5%9C%B0%E5%9D%80%E9%9A%8F%E6%9C%BA%E5%8C%96/">Manjaro21.0下MAC地址随机化</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/06/02/Technique/Linux/Manjaro/Manjaro21.0%E4%B8%8BMAC%E5%9C%B0%E5%9D%80%E9%9A%8F%E6%9C%BA%E5%8C%96/">
-          
-          
-            
-          
-          1. 缘由
-我们平时使用无线 Wifi 时，电脑的 IP 地址一般都是路由器分配的，因此这种情况下我们无法修改自己电脑的 IP 地址（除非路由器是你家的）。而我们电脑的 IP 地址有时候会被路由器莫名奇妙地限制，导致我们无法领略到互联网的精彩。（好吧，我不装了，我摊牌了，其实是我用自己电脑挖矿被校园网发现了，然后 IP 被禁了。。。可是我用的是自己的电脑啊喂，呜呜呜）
-哼，道高一尺，魔高一丈。在这
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-06-02 15:48" pubdate>
-              2021-06-02
+            <time datetime="2021-07-15 18:40" pubdate>
+              2021-07-15
             </time>
           </div>
         
@@ -788,7 +538,7 @@ __LINE__：数字格式，指示当前处理的代码行号。
             
               <a href="/categories/Technique/Linux/">Linux</a>
             
-              <a href="/categories/Technique/Linux/Manjaro/">Manjaro</a>
+              <a href="/categories/Technique/Linux/ArchLinux/">ArchLinux</a>
             
           </div>
         
@@ -800,7 +550,257 @@ __LINE__：数字格式，指示当前处理的代码行号。
             
               <a href="/tags/Linux/">Linux</a>
             
-              <a href="/tags/Manjaro/">Manjaro</a>
+              <a href="/tags/ArchLinux/">ArchLinux</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/07/15/Technique/Linux/ArchLinux/ArchLinux%E4%B8%8Bbash%E9%85%8D%E7%BD%AE/">ArchLinux下bash配置</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/07/15/Technique/Linux/ArchLinux/ArchLinux%E4%B8%8Bbash%E9%85%8D%E7%BD%AE/">
+          
+          
+            
+          
+          1. 简介
+由于 ArchLinux 保持系统最简的原则，因此系统自带的 bash 只有最基本的功能。
+2. 配置
+2.1 自动补全
+默认的 bash 按下 tab 键只会补全命令、文件名和变量。如果需要更多的补全，比如 pacman -S 安装软件包时的补全，则需要安装 bash-completion 软件包：
+1sudo pacman -S bash-completion
+2.2 其他
+bas
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-07-15 18:40" pubdate>
+              2021-07-15
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Linux/">Linux</a>
+            
+              <a href="/categories/Technique/Linux/ArchLinux/">ArchLinux</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/Linux/">Linux</a>
+            
+              <a href="/tags/ArchLinux/">ArchLinux</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/07/15/Technique/Linux/ArchLinux/ArchLinux%E4%B8%8B%E8%A7%A3%E5%86%B3deepinwine%E8%BD%AF%E4%BB%B6%E4%B8%AD%E6%96%87%E9%BB%91%E6%A1%86%E9%97%AE%E9%A2%98/">ArchLinux下解决deepinwine软件中文黑框问题</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/07/15/Technique/Linux/ArchLinux/ArchLinux%E4%B8%8B%E8%A7%A3%E5%86%B3deepinwine%E8%BD%AF%E4%BB%B6%E4%B8%AD%E6%96%87%E9%BB%91%E6%A1%86%E9%97%AE%E9%A2%98/">
+          
+          
+            
+          
+          1. 简介
+随着 deepinwine 的不断完善，类似中文显示等问题也在逐渐减少，目前最新的 deepinwine 应用，如 com.qq.tim.spark 等中文都显示正常，相信到后面这类问题就会完全消失。给 deepin 团队打 call ！！！
+2. 中文显示黑框
+目前遇到两种情况下中文显示黑框，一种是英文环境下中文显示黑框，但中文环境下正常；另一种是中文环境下中文也显示为黑框。
+2.1
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-07-15 18:39" pubdate>
+              2021-07-15
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Linux/">Linux</a>
+            
+              <a href="/categories/Technique/Linux/ArchLinux/">ArchLinux</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/Linux/">Linux</a>
+            
+              <a href="/tags/ArchLinux/">ArchLinux</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/07/15/Technique/Linux/ArchLinux/ArchLinux%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/">ArchLinux安装使用教程</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/07/15/Technique/Linux/ArchLinux/ArchLinux%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/">
+          
+          
+            
+          
+          ArchLinux 安装参考：
+
+官方 Wiki 文档
+博文——以官方 Wiki 的方式安装 ArchLinux
+教程——Arch Linux 安装使用教程 - ArchTutorial - Arch Linux Studio
+
+1. 多系统 grub 菜单
+【注】这里有一点需要注意的是，对于多系统用户，在生成 GRUB 配置文件时，如果需要自动探测其他系统，并将它们添加到启动菜单中，按照上述文档
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-07-15 18:35" pubdate>
+              2021-07-15
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Linux/">Linux</a>
+            
+              <a href="/categories/Technique/Linux/ArchLinux/">ArchLinux</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/Linux/">Linux</a>
+            
+              <a href="/tags/ArchLinux/">ArchLinux</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/07/15/Technique/Linux/Sundry/Linux%E5%90%84%E6%A1%8C%E9%9D%A2%E7%94%A8%E6%88%B7%E6%96%87%E6%A1%A3/">Linux各桌面用户文档</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/07/15/Technique/Linux/Sundry/Linux%E5%90%84%E6%A1%8C%E9%9D%A2%E7%94%A8%E6%88%B7%E6%96%87%E6%A1%A3/">
+          
+          
+            
+          
+          
+KDE 桌面
+Gnome 桌面
+Xfce 桌面
+DDE 桌面
+Cinnamon 桌面
+MATE 桌面
+
+
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-07-15 18:35" pubdate>
+              2021-07-15
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Linux/">Linux</a>
+            
+              <a href="/categories/Technique/Linux/Sundry/">Sundry</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/Sundry/">Sundry</a>
+            
+              <a href="/tags/Linux/">Linux</a>
             
           </div>
         
@@ -812,7 +812,7 @@ __LINE__：数字格式，指示当前处理的代码行号。
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/page/16/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/15/#board">15</a><a class="page-number" href="/page/16/#board">16</a><span class="page-number current">17</span><a class="page-number" href="/page/18/#board">18</a><a class="page-number" href="/page/19/#board">19</a><span class="space">&hellip;</span><a class="page-number" href="/page/55/#board">55</a><a class="extend next" rel="next" href="/page/18/#board"><i class="iconfont icon-arrowright"></i></a>
+      <a class="extend prev" rel="prev" href="/page/16/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/15/#board">15</a><a class="page-number" href="/page/16/#board">16</a><span class="page-number current">17</span><a class="page-number" href="/page/18/#board">18</a><a class="page-number" href="/page/19/#board">19</a><span class="space">&hellip;</span><a class="page-number" href="/page/56/#board">56</a><a class="extend next" rel="next" href="/page/18/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 

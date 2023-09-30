@@ -203,7 +203,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      90 字
+      181 字
     </span>
   
 
@@ -213,7 +213,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      1
+      2
        分钟
     </span>
   
@@ -259,7 +259,9 @@
 <li><strong>问题</strong>：当前用户 <code>.ssh</code> 目录下私钥权限太开放了；</li>
 <li>解决：找到当前用户目录下 <code>.ssh/id_rsa</code> 文件，鼠标右键-&gt;属性-&gt;安全，然后编缉「组或用户名」，将除当前用户、SYSTEM 和管理员用户之外的其它用户都删除即可。</li>
 </ul>
-
+<h3 id="2-Linux-服务器杀死所有-Server-端进程">2. Linux 服务器杀死所有 Server 端进程</h3>
+<p>由于 vscode 缓存的原因，有时 Linux 服务器环境变量发生变动，需要将服务器上 vscode server 进程完全清掉，重新连接才能生效。在命令行中，清除所有 vscode server 进程的命令如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ps uxa | grep .vscode-server | awk <span class="hljs-string">&#x27;&#123;print $2&#125;&#x27;</span> | xargs <span class="hljs-built_in">kill</span> -9<br></code></pre></td></tr></table></figure>
             </div>
             <hr>
             <div>

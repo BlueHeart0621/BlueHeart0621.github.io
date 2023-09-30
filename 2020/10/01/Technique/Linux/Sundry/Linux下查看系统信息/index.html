@@ -203,7 +203,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      403 字
+      487 字
     </span>
   
 
@@ -213,7 +213,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      5
+      6
        分钟
     </span>
   
@@ -254,11 +254,20 @@
             <h1 style="display: none">Linux下查看系统信息</h1>
             
             <div class="markdown-body">
-              <h3 id="1-查看操作系统信息">1. 查看操作系统信息</h3>
+              <h3 id="1-查看发行版信息">1. 查看发行版信息</h3>
+<p>通用方法：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cat</span> /etc/os-release<br></code></pre></td></tr></table></figure>
+<p>借助 <code>lsb_release</code> 工具：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">lsb_release -a<br></code></pre></td></tr></table></figure>
 <p>【注】并不是所有 Linux 发行版都自带 <code>lsb_release</code> 命令，如果系统上没有该命令需要手动安装 <code>lsb-release</code> 工具。</p>
+<blockquote>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://linux.cn/article-9586-1.html">查看 Linux 发行版名称和版本号的 8 种方法</a></li>
+</ul>
+</blockquote>
 <h3 id="2-查看-Linux-内核版本">2. 查看 Linux 内核版本</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">uname</span> -r<br></code></pre></td></tr></table></figure>
+<p>以下两个命令都可以用来查看 Linux 内核版本：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">uname</span> -a<br><span class="hljs-built_in">cat</span> /proc/version<br></code></pre></td></tr></table></figure>
 <h3 id="3-查看显卡厂商">3. 查看显卡厂商</h3>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">lspci | grep -i vga<br></code></pre></td></tr></table></figure>
 <h3 id="4-查看内存容量">4. 查看内存容量</h3>
@@ -268,6 +277,7 @@
 <h3 id="6-查看系统各类硬件信息">6. 查看系统各类硬件信息</h3>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">inxi -Fi<br></code></pre></td></tr></table></figure>
 <p><code>inxi</code> 命令还可以具体查看具体某一硬件信息，具体参看 <code>inxi --help</code> 。</p>
+<p>【注】并不是所有 Linux 发行版都自带 <code>inxi</code> 命令，如果系统上没有该命令需要手动安装 <code>inxi</code> 工具。</p>
 <h3 id="7-查看系统主要软硬件信息">7. 查看系统主要软硬件信息</h3>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">screenfetch<br></code></pre></td></tr></table></figure>
 <ul>

@@ -197,29 +197,35 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/06/24/Technique/CryptographyBasics/%E5%AF%86%E7%A0%81%E5%88%86%E6%9E%90%E6%96%B9%E5%BC%8F/">密码分析方式</a>
+        <a href="/2020/07/03/Technique/CryptographyBasics/%E5%AF%86%E7%A0%81%E5%AD%A6%E6%A6%82%E8%BF%B0/">密码学概述</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/06/24/Technique/CryptographyBasics/%E5%AF%86%E7%A0%81%E5%88%86%E6%9E%90%E6%96%B9%E5%BC%8F/">
+        <a href="/2020/07/03/Technique/CryptographyBasics/%E5%AF%86%E7%A0%81%E5%AD%A6%E6%A6%82%E8%BF%B0/">
           
           
             
           
-          1. 唯密文攻击（COA）
-破译者只知道「加密算法」和「带破译的密文」。
+          1. 口令
+从密码学角度来看，各种网站、系统、软件的登录密码本质上不是密码，而是口令。
+2. 密码学的应用
+2.1 安全通信
 
-举例：实验一仿射密码的暴力破解就属于唯密文攻击。
+HTTPS
+实时消息加密
+WiFi
+Bluetooth
 
-2. 已知明文攻击（KPA）
-破译者知道「加密算法」和经密钥加密形成的一个或多个「明文——密文对」。
+2.2 磁盘文件加密
 
-举例：希尔密码依赖唯密文攻击较难破解，但通过已知明文破解攻击则容易破解。
+EFS（Encrypting File System）
+TrueCrypt
+Bitlocker
 
-3. 选择明文攻击（CPA）
-破译者知道「加密算法」、「选择的明文」和「对应的密文」。
+2.3 内容保护
 
-举
+CSS（Content Scrambling System）
+AACS（
         </a>
       </p>
 
@@ -227,8 +233,8 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-06-24 09:36" pubdate>
-              2020-06-24
+            <time datetime="2020-07-03 12:02" pubdate>
+              2020-07-03
             </time>
           </div>
         
@@ -262,24 +268,24 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/06/24/Technique/JavaScript/JavaScript%E5%87%BD%E6%95%B0%E3%80%81%E5%AF%B9%E8%B1%A1%E5%92%8C%E4%BA%8B%E4%BB%B6/">JavaScript函数、对象和事件</a>
+        <a href="/2020/07/03/Technique/CryptographyBasics/AdvancedEncryptionStandard/AdvancedEncryptionStandard/">AdvancedEncryptionStandard</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/06/24/Technique/JavaScript/JavaScript%E5%87%BD%E6%95%B0%E3%80%81%E5%AF%B9%E8%B1%A1%E5%92%8C%E4%BA%8B%E4%BB%B6/">
+        <a href="/2020/07/03/Technique/CryptographyBasics/AdvancedEncryptionStandard/AdvancedEncryptionStandard/">
           
           
             
           
-          1. 函数
+          1. 简化版 AES
 
-JavaScript 函数通过 function 关键词进行定义，其后是函数名和括号 ()。
-函数名可包含字母、数字、下划线和美元符号（规则与变量名相同）。
-圆括号可包括由逗号分隔的参数，由函数执行的代码被放置在花括号 {} 中：
+Key size = 16 bits (128/192/256 bits for AES)
+Number of rounds = 2 (10/12/14 for AES)
+Plaintext block = 16 bits (128 bits for AES)
+Ciphertext block = 16 bits (128 bits for AES)
 
-123function name(参数 1, 参数 2, 参数 3) &#123;    要执行的代码&#125;
 
-当 JavaScript 到达 r
+数据表示格式如下：
         </a>
       </p>
 
@@ -287,8 +293,8 @@ JavaScript 函数通过 function 关键词进行定义，其后是函数名和�
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-06-24 09:36" pubdate>
-              2020-06-24
+            <time datetime="2020-07-03 12:02" pubdate>
+              2020-07-03
             </time>
           </div>
         
@@ -298,7 +304,7 @@ JavaScript 函数通过 function 关键词进行定义，其后是函数名和�
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/JavaScript/">JavaScript</a>
+              <a href="/categories/Technique/CryptographyBasics/">CryptographyBasics</a>
             
           </div>
         
@@ -308,7 +314,7 @@ JavaScript 函数通过 function 关键词进行定义，其后是函数名和�
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/JavaScript/">JavaScript</a>
+              <a href="/tags/CryptographyBasics/">CryptographyBasics</a>
             
           </div>
         
@@ -322,25 +328,45 @@ JavaScript 函数通过 function 关键词进行定义，其后是函数名和�
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/06/24/Technique/JavaScript/JavaScript%E5%AD%97%E7%AC%A6%E4%B8%B2/">JavaScript字符串</a>
+        <a href="/2020/07/03/Technique/CryptographyBasics/MD5/MD5/">MD5</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/06/24/Technique/JavaScript/JavaScript%E5%AD%97%E7%AC%A6%E4%B8%B2/">
+        <a href="/2020/07/03/Technique/CryptographyBasics/MD5/MD5/">
           
           
             
           
-          1. 概述
-JavaScript 字符串是引号（单引号或双引号）中的零个或多个字符，用于存储和操作文本。
+          1. 简介
+MD5算法采用迭代型Hash函数的一般结构，输入消息可以任意长度X，每次迭代处理512bit的消息分组，最终输出散列值为128bit。
 
-对于特殊字符：'、&quot;、\ 使用时需要前置转义字符 \ 来使用。
+2. 步骤
 
-123\&#x27;\&quot;\\
 
-在字符串中换行，通过一个反斜杠即可。
 
-【注】\ 方法并不是 ECMAScript (JavaScript) 标准，某些浏览器也不允许 \ 字符之后的空格，对长字符串换行的最
+
+预处理
+
+
+
+对消息填充
+初始化缓冲区
+
+
+
+压缩过程
+
+
+
+循环处理L个消息分组
+4个轮函数和模加运算，其中每个轮函数有16步
+每轮移位步数不同
+
+
+
+
+输出结果
+L个分组都被处理完后，最后一个HMD5的输出即为产生的消息摘要。
         </a>
       </p>
 
@@ -348,8 +374,8 @@ JavaScript 字符串是引号（单引号或双引号）中的零个或多个字
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-06-24 09:36" pubdate>
-              2020-06-24
+            <time datetime="2020-07-03 12:02" pubdate>
+              2020-07-03
             </time>
           </div>
         
@@ -359,7 +385,7 @@ JavaScript 字符串是引号（单引号或双引号）中的零个或多个字
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/JavaScript/">JavaScript</a>
+              <a href="/categories/Technique/CryptographyBasics/">CryptographyBasics</a>
             
           </div>
         
@@ -369,7 +395,7 @@ JavaScript 字符串是引号（单引号或双引号）中的零个或多个字
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/JavaScript/">JavaScript</a>
+              <a href="/tags/CryptographyBasics/">CryptographyBasics</a>
             
           </div>
         
@@ -383,33 +409,28 @@ JavaScript 字符串是引号（单引号或双引号）中的零个或多个字
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/06/24/Technique/JavaScript/JavaScript%E6%95%B0%E5%80%BC/">JavaScript数值</a>
+        <a href="/2020/07/03/Technique/CryptographyBasics/RC4/RC4/">RC4</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/06/24/Technique/JavaScript/JavaScript%E6%95%B0%E5%80%BC/">
+        <a href="/2020/07/03/Technique/CryptographyBasics/RC4/RC4/">
           
           
             
           
-          1. 概述
-JavaScript 只有一种数值类型，书写数值时带不带小数点均可。超大或超小的数可通过科学计数法来写。
+          1. 简介
+RC4 属于同步流密码，同步流密码的加密器分成密钥流产生器和加密变换器两个部分。
 
-JavaScript 数值始终是 64 位的浮点数。此格式用 64 位存储数值，其中 0 到 51 存储数字（片段），52 到 62 存储指数，63 位存储符号：
+2. 特性
 
+密钥长度可变，面向字节操作；
+用置换加密（异或）输入消息，每次一个字节；
+至少采用 128128128 比特的密钥
 
+3. 加密过程
+3.1 密钥调度算法（Key-Scheduling Algorithm, 简称 KSA）
 
-
-值
-指数
-符号
-
-
-
-
-52 bits(0 - 51)
-11 bits (52 - 62)
-1 bit (6
+由密钥流决定一个 0∼2550 \sim 2550∼255 的置
         </a>
       </p>
 
@@ -417,8 +438,8 @@ JavaScript 数值始终是 64 位的浮点数。此格式用 64 位存储数值�
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-06-24 09:36" pubdate>
-              2020-06-24
+            <time datetime="2020-07-03 12:02" pubdate>
+              2020-07-03
             </time>
           </div>
         
@@ -428,7 +449,7 @@ JavaScript 数值始终是 64 位的浮点数。此格式用 64 位存储数值�
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/JavaScript/">JavaScript</a>
+              <a href="/categories/Technique/CryptographyBasics/">CryptographyBasics</a>
             
           </div>
         
@@ -438,7 +459,7 @@ JavaScript 数值始终是 64 位的浮点数。此格式用 64 位存储数值�
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/JavaScript/">JavaScript</a>
+              <a href="/tags/CryptographyBasics/">CryptographyBasics</a>
             
           </div>
         
@@ -452,144 +473,31 @@ JavaScript 数值始终是 64 位的浮点数。此格式用 64 位存储数值�
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/06/24/Technique/JavaScript/JavaScript%E6%95%B0%E7%BB%84/">JavaScript数组</a>
+        <a href="/2020/07/03/Technique/CryptographyBasics/%E4%BC%AA%E9%9A%8F%E6%9C%BA%E5%BA%8F%E5%88%97/%E4%BC%AA%E9%9A%8F%E6%9C%BA%E5%BA%8F%E5%88%97/">伪随机序列</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/06/24/Technique/JavaScript/JavaScript%E6%95%B0%E7%BB%84/">
+        <a href="/2020/07/03/Technique/CryptographyBasics/%E4%BC%AA%E9%9A%8F%E6%9C%BA%E5%BA%8F%E5%88%97/%E4%BC%AA%E9%9A%8F%E6%9C%BA%E5%BA%8F%E5%88%97/">
           
           
             
           
-          1. 概述
-数组是一种特殊类型的对象。在 JavaScript 中对数组使用 typeof 运算符会返回 &quot;object&quot;。
+          1. 概念
+伪随机序列是指统计特性类似随机噪声的序列，但可以重复产生。
+2. m 序列
+2.1 概念
+m 序列是最大长度线性反馈移位寄存器序列的简称。
+2.2 线性反馈移位寄存器的一般结构
 
-数组元素可以通过下表访问（非键值对数组），也可以通过键访问（键值对数组）。
-JavaScript 变量可以是对象。数组是特殊类型的对象。可以在相同数组中存放不同类型的变量：对象、函数、数组等……
+2.3 线性反馈移位寄存器的特征多项式
 
-1.1 创建数组
-
-语法：
-
-12var array-
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-06-24 09:36" pubdate>
-              2020-06-24
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/JavaScript/">JavaScript</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/JavaScript/">JavaScript</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/06/24/Technique/Math/Theory/%E5%8D%A1%E8%BF%88%E5%85%8B%E5%B0%94%E5%87%BD%E6%95%B0/">卡迈克尔函数</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/06/24/Technique/Math/Theory/%E5%8D%A1%E8%BF%88%E5%85%8B%E5%B0%94%E5%87%BD%E6%95%B0/">
-          
-          
-            
-          
-          1. 定义
-卡迈克尔函数定义为：当 nnn 为 1、2、4、奇质数的次幂、奇质数的次幂的两倍时为欧拉函数，当 nnn 为 2、4 以外的 2 的次幂时为欧拉函数的一半。
-λ(n)={ϕ(n)    n=1,2,3,4,5,6,7,9,10,⋯12ϕ(n)    n=8,16,32,64,128,256,⋯\begin{array}{c}
-\lambda(n) = \left\{
-    \begi
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-06-24 09:36" pubdate>
-              2020-06-24
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/Math/">Math</a>
-            
-              <a href="/categories/Technique/Math/Theory/">Theory</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/Math/">Math</a>
-            
-              <a href="/tags/Theory/">Theory</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/06/24/Technique/Math/Theory/%E8%B4%B9%E9%A9%AC%E5%B0%8F%E5%AE%9A%E7%90%86/">费马小定理</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/06/24/Technique/Math/Theory/%E8%B4%B9%E9%A9%AC%E5%B0%8F%E5%AE%9A%E7%90%86/">
-          
-          
-            
-          
-          1. 定义
-假如 a{\displaystyle a}a 是一个整数，p{\displaystyle p}p是一个质数，那么 ap−a{\displaystyle a^{p}-a}ap−a 是 ppp 的倍数，可以表示为
-ap≡a  (mod  p)\begin{array}{c}
-a^p \equiv a \,\, (mod \,\, p)
+m 序列的
+\begin{array}{c}
+\mbox{重复周期数} = 2^n - 1
 \end{array}
-ap≡a(modp)​
-如果 
+
+2.4 m 序列产生的充要条件
+m 序列对应的线
         </a>
       </p>
 
@@ -597,8 +505,8 @@ ap≡a(modp)​
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-06-24 09:36" pubdate>
-              2020-06-24
+            <time datetime="2020-07-03 12:02" pubdate>
+              2020-07-03
             </time>
           </div>
         
@@ -608,9 +516,7 @@ ap≡a(modp)​
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/Math/">Math</a>
-            
-              <a href="/categories/Technique/Math/Theory/">Theory</a>
+              <a href="/categories/Technique/CryptographyBasics/">CryptographyBasics</a>
             
           </div>
         
@@ -620,9 +526,7 @@ ap≡a(modp)​
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Math/">Math</a>
-            
-              <a href="/tags/Theory/">Theory</a>
+              <a href="/tags/CryptographyBasics/">CryptographyBasics</a>
             
           </div>
         
@@ -636,17 +540,34 @@ ap≡a(modp)​
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/06/24/Technique/Web/HTML/HTML%E6%A0%87%E7%AD%BE%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C/">HTML标签参考手册</a>
+        <a href="/2020/07/03/Technique/CryptographyBasics/%E5%88%86%E7%BB%84%E5%AF%86%E7%A0%81%E6%A8%A1%E5%BC%8F/%E5%88%86%E7%BB%84%E5%AF%86%E7%A0%81%E6%A8%A1%E5%BC%8F/">分组密码模式</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/06/24/Technique/Web/HTML/HTML%E6%A0%87%E7%AD%BE%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C/">
+        <a href="/2020/07/03/Technique/CryptographyBasics/%E5%88%86%E7%BB%84%E5%AF%86%E7%A0%81%E6%A8%A1%E5%BC%8F/%E5%88%86%E7%BB%84%E5%AF%86%E7%A0%81%E6%A8%A1%E5%BC%8F/">
           
           
             
           
-          HTML Basic Document
-12345678&lt;html&gt;    &lt;head&gt;        &lt;title&gt;Document name goes here&lt;/title&gt;    &lt;/head&gt;    &lt;body&gt;        Visible text goes here    &lt;/body&gt;&lt;/h
+          1. 电码本 Electronic Codebook (ECB)
+将消息划分为独立的块，并独立地进行加密。
+
+1.1 优点：
+
+用于加密短消息
+
+1.2 缺点：
+
+消息中的内容重复可能在密文中显示出来
+Weakness ：因为各组加密是独立的
+不会隐藏数据模式：
+
+
+
+易受到延迟攻击
+错误传播仅局限于同一组消息，不同组间没有错误传播
+
+2. 密码分组链接 Cipher-Block Chaining
         </a>
       </p>
 
@@ -654,8 +575,8 @@ ap≡a(modp)​
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-06-24 09:36" pubdate>
-              2020-06-24
+            <time datetime="2020-07-03 12:02" pubdate>
+              2020-07-03
             </time>
           </div>
         
@@ -665,9 +586,7 @@ ap≡a(modp)​
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/Web/">Web</a>
-            
-              <a href="/categories/Technique/Web/HTML/">HTML</a>
+              <a href="/categories/Technique/CryptographyBasics/">CryptographyBasics</a>
             
           </div>
         
@@ -677,9 +596,7 @@ ap≡a(modp)​
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Web/">Web</a>
-            
-              <a href="/tags/HTML/">HTML</a>
+              <a href="/tags/CryptographyBasics/">CryptographyBasics</a>
             
           </div>
         
@@ -693,22 +610,28 @@ ap≡a(modp)​
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/06/16/Technique/TeX/LaTeX/Mint19.1%E9%85%8D%E7%BD%AETeXLive+TeXStudio%E7%9A%84LaTeX%E7%8E%AF%E5%A2%83/Mint19.1%E9%85%8D%E7%BD%AETeXLive+TeXStudio%E7%9A%84LaTeX%E7%8E%AF%E5%A2%83/">Mint19.1配置TeXLive+TeXStudio的LaTeX环境</a>
+        <a href="/2020/07/03/Technique/CryptographyBasics/%E5%8F%A4%E5%85%B8%E5%AF%86%E7%A0%81%E5%AD%A6%E6%A6%82%E8%BF%B0/%E5%8F%A4%E5%85%B8%E5%AF%86%E7%A0%81%E5%AD%A6%E6%A6%82%E8%BF%B0/">古典密码学概述</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/06/16/Technique/TeX/LaTeX/Mint19.1%E9%85%8D%E7%BD%AETeXLive+TeXStudio%E7%9A%84LaTeX%E7%8E%AF%E5%A2%83/Mint19.1%E9%85%8D%E7%BD%AETeXLive+TeXStudio%E7%9A%84LaTeX%E7%8E%AF%E5%A2%83/">
+        <a href="/2020/07/03/Technique/CryptographyBasics/%E5%8F%A4%E5%85%B8%E5%AF%86%E7%A0%81%E5%AD%A6%E6%A6%82%E8%BF%B0/%E5%8F%A4%E5%85%B8%E5%AF%86%E7%A0%81%E5%AD%A6%E6%A6%82%E8%BF%B0/">
           
           
             
           
-          1. 安装
+          1. 隐写术 Steganography
+隐写术是指首先用传统加密算法对数据进行加密，然后用某种方法将加密后的数据修改为一个伪装文本。
+2. 替换密码 Substitution cipher
+对数据中的每个字符用另一个字符进行替换。
 
-执行以下代码，安装 TeXLive+TeXStudio 环境，使用 XeTeX 作为 LaTeX 的编译引擎：
+替换密码依赖与固定的替换结构
+对于字母表中的每一个字母的替换都是固定的
 
-123sudo apt install texlive-fullsudo apt install texlive-xetexsudo apt install texstudio
 
-由于这里使用 XeTeX 作为 LaTeX 的编译引擎，故安装好 TeXStudio 后，需
+【注】
+
+一次替换一个字符显然会在密文中留下太多的明文结构
+如果已知明文的性质/结构，则
         </a>
       </p>
 
@@ -716,8 +639,8 @@ ap≡a(modp)​
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-06-16 11:32" pubdate>
-              2020-06-16
+            <time datetime="2020-07-03 12:02" pubdate>
+              2020-07-03
             </time>
           </div>
         
@@ -727,9 +650,7 @@ ap≡a(modp)​
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/TeX/">TeX</a>
-            
-              <a href="/categories/Technique/TeX/LaTeX/">LaTeX</a>
+              <a href="/categories/Technique/CryptographyBasics/">CryptographyBasics</a>
             
           </div>
         
@@ -739,9 +660,7 @@ ap≡a(modp)​
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/TeX/">TeX</a>
-            
-              <a href="/tags/LaTeX/">LaTeX</a>
+              <a href="/tags/CryptographyBasics/">CryptographyBasics</a>
             
           </div>
         
@@ -755,36 +674,30 @@ ap≡a(modp)​
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/06/02/Technique/ServiceComputing/%E9%9D%A2%E5%90%91%E6%9C%8D%E5%8A%A1%E7%9A%84%E6%9E%B6%E6%9E%84%E5%92%8CWebService/%E9%9D%A2%E5%90%91%E6%9C%8D%E5%8A%A1%E7%9A%84%E6%9E%B6%E6%9E%84%E5%92%8CWebService/">面向服务的架构和WebService</a>
+        <a href="/2020/07/03/Technique/CryptographyBasics/%E5%93%88%E5%B8%8C%E5%87%BD%E6%95%B0/%E5%93%88%E5%B8%8C%E5%87%BD%E6%95%B0/">哈希函数</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/06/02/Technique/ServiceComputing/%E9%9D%A2%E5%90%91%E6%9C%8D%E5%8A%A1%E7%9A%84%E6%9E%B6%E6%9E%84%E5%92%8CWebService/%E9%9D%A2%E5%90%91%E6%9C%8D%E5%8A%A1%E7%9A%84%E6%9E%B6%E6%9E%84%E5%92%8CWebService/">
+        <a href="/2020/07/03/Technique/CryptographyBasics/%E5%93%88%E5%B8%8C%E5%87%BD%E6%95%B0/%E5%93%88%E5%B8%8C%E5%87%BD%E6%95%B0/">
           
           
             
           
-          1. 面向服务的架构 SOA
-1.1 简介
+          1. 概述
 
-SOA 是从架构方面，整体支持面向服务泛型的基本概念性架构模型
-SOA 是一种业务-IT结合的方法。其中，应用依赖于现有的服务来实现业务过程。
-实现 SOA 主要包括：
+加密是双向的，即明文可以通过密钥加密为密文，密文也可以通过密钥解密为明文
+哈希是单向的，即只能从明文到
 
-
-
-面向服务的企业
-采用服务开发应用
-采用服务对应用进行封装，以便今后复用
-⋯\cdots⋯
+2. 用法
 
 
-1.2 模型
 
-传统服务架构模型
+3. 特性
+3.1 Arbitrary-length message to fixed-length digest
 
+3.2 抗原象 Preimage resistant (One-way property)
 
-传统服务架构模型中，服务请求者和服务调用者之间
+3.3 抗第二原象 Second preimage
         </a>
       </p>
 
@@ -792,8 +705,8 @@ SOA 是一种业务-IT结合的方法。其中，应用依赖于现有的服务�
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-06-02 00:36" pubdate>
-              2020-06-02
+            <time datetime="2020-07-03 12:02" pubdate>
+              2020-07-03
             </time>
           </div>
         
@@ -803,7 +716,7 @@ SOA 是一种业务-IT结合的方法。其中，应用依赖于现有的服务�
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/ServiceComputing/">ServiceComputing</a>
+              <a href="/categories/Technique/CryptographyBasics/">CryptographyBasics</a>
             
           </div>
         
@@ -813,7 +726,129 @@ SOA 是一种业务-IT结合的方法。其中，应用依赖于现有的服务�
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/ServiceComputing/">ServiceComputing</a>
+              <a href="/tags/CryptographyBasics/">CryptographyBasics</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/07/03/Technique/CryptographyBasics/%E7%8E%B0%E4%BB%A3%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86%E5%92%8CDataEncryptionStandard/%E7%8E%B0%E4%BB%A3%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86%E5%92%8CDataEncryptionStandard/">现代对称加密和DataEncryptionStandard</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/07/03/Technique/CryptographyBasics/%E7%8E%B0%E4%BB%A3%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86%E5%92%8CDataEncryptionStandard/%E7%8E%B0%E4%BB%A3%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86%E5%92%8CDataEncryptionStandard/">
+          
+          
+            
+          
+          1. 现代对称加密
+1.1 P 盒（Permutation box 置换盒）
+P 盒类似于传统的置换密码，用于置换 bit 位。P 盒分三种类别：
+
+Straight P-box：输入数 = 输出数（只有该 P 盒可逆）
+Compress P-box：输入数 &gt; 输出数
+Expansion P-box：输入数 &lt; 输出数
+
+1.2 S 盒（Subtitution box 替换盒）
+S 
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-07-03 12:02" pubdate>
+              2020-07-03
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/CryptographyBasics/">CryptographyBasics</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/CryptographyBasics/">CryptographyBasics</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/07/03/Technique/CryptographyBasics/%E7%BE%A4%E7%8E%AF%E5%9F%9F%E4%BB%A5%E5%8F%8A%E5%9F%9F%E4%B8%8A%E7%9A%84%E5%A4%9A%E9%A1%B9%E5%BC%8F%E6%93%8D%E4%BD%9C/%E7%BE%A4%E7%8E%AF%E5%9F%9F%E4%BB%A5%E5%8F%8A%E5%9F%9F%E4%B8%8A%E7%9A%84%E5%A4%9A%E9%A1%B9%E5%BC%8F%E6%93%8D%E4%BD%9C/">群环域以及域上的多项式操作</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/07/03/Technique/CryptographyBasics/%E7%BE%A4%E7%8E%AF%E5%9F%9F%E4%BB%A5%E5%8F%8A%E5%9F%9F%E4%B8%8A%E7%9A%84%E5%A4%9A%E9%A1%B9%E5%BC%8F%E6%93%8D%E4%BD%9C/%E7%BE%A4%E7%8E%AF%E5%9F%9F%E4%BB%A5%E5%8F%8A%E5%9F%9F%E4%B8%8A%E7%9A%84%E5%A4%9A%E9%A1%B9%E5%BC%8F%E6%93%8D%E4%BD%9C/">
+          
+          
+            
+          
+          1. 模运算
+1.1 ZnZ_nZn​ 上模运算的三种运算
+
+
+模加运算：(a+b)mod   n=c(a+b) \mod \ n = c(a+b)mod n=c
+模减运算：(a−b)mod   n=c(a-b) \mod \ n = c(a−b)mod n=c
+模乘运算：(a×b)mod   n=c(a \times b) \mod \ n = c(a×b)mod n=c
+
+
+1.2 ZnZ_n
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-07-03 12:02" pubdate>
+              2020-07-03
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/CryptographyBasics/">CryptographyBasics</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/CryptographyBasics/">CryptographyBasics</a>
             
           </div>
         
@@ -825,7 +860,7 @@ SOA 是一种业务-IT结合的方法。其中，应用依赖于现有的服务�
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/page/42/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/41/#board">41</a><a class="page-number" href="/page/42/#board">42</a><span class="page-number current">43</span><a class="page-number" href="/page/44/#board">44</a><a class="page-number" href="/page/45/#board">45</a><span class="space">&hellip;</span><a class="page-number" href="/page/55/#board">55</a><a class="extend next" rel="next" href="/page/44/#board"><i class="iconfont icon-arrowright"></i></a>
+      <a class="extend prev" rel="prev" href="/page/42/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/41/#board">41</a><a class="page-number" href="/page/42/#board">42</a><span class="page-number current">43</span><a class="page-number" href="/page/44/#board">44</a><a class="page-number" href="/page/45/#board">45</a><span class="space">&hellip;</span><a class="page-number" href="/page/56/#board">56</a><a class="extend next" rel="next" href="/page/44/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 

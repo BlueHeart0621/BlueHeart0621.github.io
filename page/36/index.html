@@ -197,22 +197,21 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/08/24/Technique/ACM/%E7%AE%97%E6%B3%95/%E5%AD%97%E7%AC%A6%E4%B8%B2/%E5%90%8E%E7%BC%80%E6%95%B0%E7%BB%84/%E5%90%8E%E7%BC%80%E6%95%B0%E7%BB%84/">后缀数组</a>
+        <a href="/2020/09/03/Technique/ACM/%E7%AE%97%E6%B3%95/%E5%AD%97%E7%AC%A6%E4%B8%B2/KMP/">KMP</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/08/24/Technique/ACM/%E7%AE%97%E6%B3%95/%E5%AD%97%E7%AC%A6%E4%B8%B2/%E5%90%8E%E7%BC%80%E6%95%B0%E7%BB%84/%E5%90%8E%E7%BC%80%E6%95%B0%E7%BB%84/">
+        <a href="/2020/09/03/Technique/ACM/%E7%AE%97%E6%B3%95/%E5%AD%97%E7%AC%A6%E4%B8%B2/KMP/">
           
           
             
           
           1. 简介
-后缀数组是处理字符串的一种强有力工具，高效而且容易编程实现，可应用于求字符串的多种子串问题中，可谓处理字符串的一大利器。
-2. 思想
-2.1 子串
-字符串 SSS 的子串 s[i..j], i≤js[i..j], \ i \leq js[i..j], i≤j 表示串 SSS 中从第 iii 个字符到第 jjj 个字符形成的字符串。
-2.1.1 重复子串
-字符串 sss 在字符串 SSS
+KMP 算法是一种优秀的字符串模式匹配算法，相对于暴力匹配方法来说，其改进在于：每当一趟匹配过程出现字符比较不相等时，不需回溯主串的 iii 指针，而是利用已经得到的「部分匹配」的结果将模式串向右「滑动」尽可能远的一段距离后（即回溯模式串的 jjj 指针），继续进行比较。
+2. 实现
+
+
+设模式串为 p1p2⋯pmp_1 p_2 \cdots p_mp1​p2​⋯pm​，主串为 s1s
         </a>
       </p>
 
@@ -220,8 +219,8 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-08-24 17:11" pubdate>
-              2020-08-24
+            <time datetime="2020-09-03 09:56" pubdate>
+              2020-09-03
             </time>
           </div>
         
@@ -251,8 +250,6 @@
             
               <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</a>
             
-              <a href="/tags/%E7%AE%97%E6%B3%95-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">算法 数据结构</a>
-            
           </div>
         
       </div>
@@ -265,144 +262,22 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/08/24/ACM/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/%E6%A1%B6%E6%8E%92%E5%BA%8F/">桶排序</a>
+        <a href="/2020/09/02/ACM/%E7%AE%97%E6%B3%95/%E5%AD%97%E7%AC%A6%E4%B8%B2/%E5%AD%97%E5%85%B8%E6%A0%91/%E5%AD%97%E5%85%B8%E6%A0%91/">字典树</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/08/24/ACM/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/%E6%A1%B6%E6%8E%92%E5%BA%8F/">
-          
-          
-            
-          
-          【注】参考自教材「算法导论」。
-1. 简介
-  桶排序是将待排序序列分到有限数量的桶中，然后对每一个桶分别进行排序。桶排序的前提假设为被排序序列的关键字数值符合均匀分布，此时桶排序的平均时间复杂度为 O(n+n2k+k)O(n + {n^2 \over k} + k)O(n+kn2​+k)，最坏时间复杂度为 O(n2)O(n^2)O(n2)，其中 kkk 为桶的数量。当桶数量 k≈nk \appr
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-08-24 13:25" pubdate>
-              2020-08-24
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/ACM/">ACM</a>
-            
-              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/">算法</a>
-            
-              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/">排序</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/ACM/">ACM</a>
-            
-              <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
-            
-              <a href="/tags/%E6%8E%92%E5%BA%8F/">排序</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/08/24/Technique/ACM/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/%E6%A1%B6%E6%8E%92%E5%BA%8F/">桶排序</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/08/24/Technique/ACM/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/%E6%A1%B6%E6%8E%92%E5%BA%8F/">
-          
-          
-            
-          
-          【注】参考自教材「算法导论」。
-1. 简介
-  桶排序是将待排序序列分到有限数量的桶中，然后对每一个桶分别进行排序。桶排序的前提假设为被排序序列的关键字数值符合均匀分布，此时桶排序的平均时间复杂度为 O(n+n2k+k)O(n + {n^2 \over k} + k)O(n+kn2​+k)，最坏时间复杂度为 O(n2)O(n^2)O(n2)，其中 kkk 为桶的数量。当桶数量 k≈nk \appr
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-08-24 13:25" pubdate>
-              2020-08-24
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/ACM/">ACM</a>
-            
-              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/">算法</a>
-            
-              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/">排序</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/ACM/">ACM</a>
-            
-              <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
-            
-              <a href="/tags/%E6%8E%92%E5%BA%8F/">排序</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/08/22/ACM/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/%E5%B8%8C%E5%B0%94%E6%8E%92%E5%BA%8F/">希尔排序</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/08/22/ACM/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/%E5%B8%8C%E5%B0%94%E6%8E%92%E5%BA%8F/">
+        <a href="/2020/09/02/ACM/%E7%AE%97%E6%B3%95/%E5%AD%97%E7%AC%A6%E4%B8%B2/%E5%AD%97%E5%85%B8%E6%A0%91/%E5%AD%97%E5%85%B8%E6%A0%91/">
           
           
             
           
           1. 简介
-希尔排序又称缩小增量排序，其也属于插入排序类算法。相较于一般的插入算法、折半插入算法、2-路插入算法以及表插入算法，希尔排序在时间效率上更加优秀。
-2. 思想
-对于普通的插入算法，其时间复杂度为 O(n2)O(n^2)O(n2)，且在序列有序时，可以达到最好的时间复杂度 O(n)O(n)O(n)；而且当 nnn 较小时，由于移动的元素较少，插入排序效率也比较高。
-因此，我们可以采用分治
+字典树（Trie）用边来代表字母，从根结点到树上某一结点的路径就代表了一个字符串。
+
+2. 实现
+
+由于字典树中的字符串都是从根结点开始，于是我们可以通过标记字符串的终止结点来记录已经插入字典树中的字符串。
+我们用 δ(u,c)\delta(u,c)δ(u,c) 表示结点 uuu 的 ccc 字符指向的下一结点，即在结点 uuu 代表的字符串后面添加一个字符 ccc 形成的字符串的结点
         </a>
       </p>
 
@@ -410,8 +285,8 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-08-22 23:12" pubdate>
-              2020-08-22
+            <time datetime="2020-09-02 09:27" pubdate>
+              2020-09-02
             </time>
           </div>
         
@@ -425,7 +300,7 @@
             
               <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/">算法</a>
             
-              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/">排序</a>
+              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</a>
             
           </div>
         
@@ -439,7 +314,9 @@
             
               <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
             
-              <a href="/tags/%E6%8E%92%E5%BA%8F/">排序</a>
+              <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</a>
+            
+              <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E7%AE%97%E6%B3%95/">数据结构 算法</a>
             
           </div>
         
@@ -453,20 +330,22 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/08/22/Technique/ACM/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/%E5%B8%8C%E5%B0%94%E6%8E%92%E5%BA%8F/">希尔排序</a>
+        <a href="/2020/09/02/Technique/ACM/%E7%AE%97%E6%B3%95/%E5%AD%97%E7%AC%A6%E4%B8%B2/%E5%AD%97%E5%85%B8%E6%A0%91/%E5%AD%97%E5%85%B8%E6%A0%91/">字典树</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/08/22/Technique/ACM/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/%E5%B8%8C%E5%B0%94%E6%8E%92%E5%BA%8F/">
+        <a href="/2020/09/02/Technique/ACM/%E7%AE%97%E6%B3%95/%E5%AD%97%E7%AC%A6%E4%B8%B2/%E5%AD%97%E5%85%B8%E6%A0%91/%E5%AD%97%E5%85%B8%E6%A0%91/">
           
           
             
           
           1. 简介
-希尔排序又称缩小增量排序，其也属于插入排序类算法。相较于一般的插入算法、折半插入算法、2-路插入算法以及表插入算法，希尔排序在时间效率上更加优秀。
-2. 思想
-对于普通的插入算法，其时间复杂度为 O(n2)O(n^2)O(n2)，且在序列有序时，可以达到最好的时间复杂度 O(n)O(n)O(n)；而且当 nnn 较小时，由于移动的元素较少，插入排序效率也比较高。
-因此，我们可以采用分治
+字典树（Trie）用边来代表字母，从根结点到树上某一结点的路径就代表了一个字符串。
+
+2. 实现
+
+由于字典树中的字符串都是从根结点开始，于是我们可以通过标记字符串的终止结点来记录已经插入字典树中的字符串。
+我们用 δ(u,c)\delta(u,c)δ(u,c) 表示结点 uuu 的 ccc 字符指向的下一结点，即在结点 uuu 代表的字符串后面添加一个字符 ccc 形成的字符串的结点
         </a>
       </p>
 
@@ -474,8 +353,8 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-08-22 23:12" pubdate>
-              2020-08-22
+            <time datetime="2020-09-02 09:27" pubdate>
+              2020-09-02
             </time>
           </div>
         
@@ -489,7 +368,7 @@
             
               <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/">算法</a>
             
-              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/">排序</a>
+              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</a>
             
           </div>
         
@@ -503,7 +382,9 @@
             
               <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
             
-              <a href="/tags/%E6%8E%92%E5%BA%8F/">排序</a>
+              <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</a>
+            
+              <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E7%AE%97%E6%B3%95/">数据结构 算法</a>
             
           </div>
         
@@ -517,311 +398,22 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/08/22/ACM/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/%E5%9F%BA%E7%A1%80%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/">基础排序算法</a>
+        <a href="/2020/09/01/Technique/ACM/%E9%A2%98%E8%A7%A3/P2580%E3%80%8C%E4%BA%8E%E6%98%AF%E4%BB%96%E9%94%99%E8%AF%AF%E7%9A%84%E7%82%B9%E5%90%8D%E5%BC%80%E5%A7%8B%E4%BA%86%E3%80%8D/">P2580「于是他错误的点名开始了」</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/08/22/ACM/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/%E5%9F%BA%E7%A1%80%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/">
-          
-          
-            
-          
-          【注】参考自教材「算法导论」。
-1. 插入排序
-1.1 简介
-插入排序是稳定的、原址的排序算法，其时间复杂度为 O(n2)O(n^2)O(n2) 。
-1.2 伪代码
-1234567891011InsertionSort(A) &#123;    for j = 2 to A.length        key = A[j]        // 将 A[j] 插入到有序数组 A[1..j-1] 中 
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-08-22 19:31" pubdate>
-              2020-08-22
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/ACM/">ACM</a>
-            
-              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/">算法</a>
-            
-              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/">排序</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/ACM/">ACM</a>
-            
-              <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
-            
-              <a href="/tags/%E6%8E%92%E5%BA%8F/">排序</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/08/22/Technique/ACM/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/%E5%9F%BA%E7%A1%80%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/">基础排序算法</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/08/22/Technique/ACM/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/%E5%9F%BA%E7%A1%80%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/">
-          
-          
-            
-          
-          【注】参考自教材「算法导论」。
-1. 插入排序
-1.1 简介
-插入排序是稳定的、原址的排序算法，其时间复杂度为 O(n2)O(n^2)O(n2) 。
-1.2 伪代码
-1234567891011InsertionSort(A) &#123;    for j = 2 to A.length        key = A[j]        // 将 A[j] 插入到有序数组 A[1..j-1] 中 
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-08-22 19:31" pubdate>
-              2020-08-22
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/ACM/">ACM</a>
-            
-              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/">算法</a>
-            
-              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/">排序</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/ACM/">ACM</a>
-            
-              <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
-            
-              <a href="/tags/%E6%8E%92%E5%BA%8F/">排序</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/08/21/ACM/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E6%A6%82%E8%BF%B0/">排序算法概述</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/08/21/ACM/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E6%A6%82%E8%BF%B0/">
-          
-          
-            
-          
-          1. 概念
-1.1 原址
-如果输入数组中仅有常数个元素需要在排序过程中存储在数组之外，则成排序算法是原址的。
-1.2 稳定
-在输入数组中，存在多个具有相同的关键字的元素，若经过排序，这些元素的相对次序保持不变，则称这种排序算法是稳定的，否则称为不稳定的。
-2. 算法
-2.1 比较排序
-
-
-
-排序方法
-平均时间复杂度
-最坏时间复杂度
-最好时间复杂度
-空间复杂度
-稳定性
-
-
-
-
-插入排序
-O(n2)O
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-08-21 23:50" pubdate>
-              2020-08-21
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/ACM/">ACM</a>
-            
-              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/">算法</a>
-            
-              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/">排序</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/ACM/">ACM</a>
-            
-              <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
-            
-              <a href="/tags/%E6%8E%92%E5%BA%8F/">排序</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/08/21/Technique/ACM/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E6%A6%82%E8%BF%B0/">排序算法概述</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/08/21/Technique/ACM/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E6%A6%82%E8%BF%B0/">
-          
-          
-            
-          
-          1. 概念
-1.1 原址
-如果输入数组中仅有常数个元素需要在排序过程中存储在数组之外，则成排序算法是原址的。
-1.2 稳定
-在输入数组中，存在多个具有相同的关键字的元素，若经过排序，这些元素的相对次序保持不变，则称这种排序算法是稳定的，否则称为不稳定的。
-2. 算法
-2.1 比较排序
-
-
-
-排序方法
-平均时间复杂度
-最坏时间复杂度
-最好时间复杂度
-空间复杂度
-稳定性
-
-
-
-
-插入排序
-O(n2)O
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-08-21 23:50" pubdate>
-              2020-08-21
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/ACM/">ACM</a>
-            
-              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/">算法</a>
-            
-              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/">排序</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/ACM/">ACM</a>
-            
-              <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
-            
-              <a href="/tags/%E6%8E%92%E5%BA%8F/">排序</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/08/20/Technique/ACM/%E9%A2%98%E8%A7%A3/PAT%E3%80%8C1005%20Programming%20Pattern%20(35%E5%88%86)%E3%80%8D/">PAT「1005 Programming Pattern (35分)」</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/08/20/Technique/ACM/%E9%A2%98%E8%A7%A3/PAT%E3%80%8C1005%20Programming%20Pattern%20(35%E5%88%86)%E3%80%8D/">
+        <a href="/2020/09/01/Technique/ACM/%E9%A2%98%E8%A7%A3/P2580%E3%80%8C%E4%BA%8E%E6%98%AF%E4%BB%96%E9%94%99%E8%AF%AF%E7%9A%84%E7%82%B9%E5%90%8D%E5%BC%80%E5%A7%8B%E4%BA%86%E3%80%8D/">
           
           
             
           
           1. 题目
-题目链接：PAT「1005 Programming Pattern (35分)」 。
-Description
-Programmers often have a preference among program constructs. For example, some may prefer if(0==a), while others may prefer if(!a). Analyz
+题目链接：P2580「于是他错误的点名开始了」 。
+题目背景
+XS中学化学竞赛组教练是一个酷爱炉石的人。
+他会一边搓炉石一边点名以至于有一天他连续点到了某个同学两次，然后正好被路过的校长发现了然后就是一顿欧拉欧拉欧拉（详情请见已结束比赛 CON900）。
+题目描述
+这之后校长任命你为特派探员，每天记录他的点名。校长会提供化学竞赛学生的人数和名单，而你需要告诉校长他有没有点错名。（为什么
         </a>
       </p>
 
@@ -829,8 +421,441 @@ Programmers often have a preference among program constructs. For example, some 
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-08-20 23:32" pubdate>
-              2020-08-20
+            <time datetime="2020-09-01 23:51" pubdate>
+              2020-09-01
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/ACM/">ACM</a>
+            
+              <a href="/categories/Technique/ACM/%E9%A2%98%E8%A7%A3/">题解</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/ACM/">ACM</a>
+            
+              <a href="/tags/%E9%A2%98%E8%A7%A3/">题解</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/09/01/Technique/Math/Theory/%E5%9B%BE%E8%AE%BA/%E5%B9%B3%E9%9D%A2%E5%9B%BE/">平面图</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/09/01/Technique/Math/Theory/%E5%9B%BE%E8%AE%BA/%E5%B9%B3%E9%9D%A2%E5%9B%BE/">
+          
+          
+            
+          
+          1. 定义
+1.1 平面图 &amp; 非平面图
+
+
+如果能够将无向图 GGG 画在平面上使得除顶点处外无边相交，则称 GGG 为可平面图，简称平面图。
+
+
+画出的无边相交的图称作 GGG 的平面嵌入。
+
+
+无平面嵌入的图称作非平面图。
+
+
+2. 性质
+
+平面图的子图都是平面图，非平面图的母图都是非平面图。
+
+
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-09-01 22:30" pubdate>
+              2020-09-01
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Math/">Math</a>
+            
+              <a href="/categories/Technique/Math/Theory/">Theory</a>
+            
+              <a href="/categories/Technique/Math/Theory/%E5%9B%BE%E8%AE%BA/">图论</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/Math/">Math</a>
+            
+              <a href="/tags/Theory/">Theory</a>
+            
+              <a href="/tags/%E5%9B%BE%E8%AE%BA/">图论</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/09/01/Technique/Math/Theory/%E5%9B%BE%E8%AE%BA/%E6%94%AF%E9%85%8D%E9%9B%86%E3%80%81%E7%8B%AC%E7%AB%8B%E9%9B%86%E3%80%81%E8%A6%86%E7%9B%96%E9%9B%86/">支配集、独立集、覆盖集</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/09/01/Technique/Math/Theory/%E5%9B%BE%E8%AE%BA/%E6%94%AF%E9%85%8D%E9%9B%86%E3%80%81%E7%8B%AC%E7%AB%8B%E9%9B%86%E3%80%81%E8%A6%86%E7%9B%96%E9%9B%86/">
+          
+          
+            
+          
+          1. 定义
+1.1 支配集
+
+
+设无向简单图 G=&lt;V,E&gt;,V∗⊆V
+G = \lt V,E \gt, V^* \subseteq V 
+G=&lt;V,E&gt;,V∗⊆V，若 ∀vi∈V−V∗,∃vj∈V∗
+\forall v_i \in V - V^*, \exists v_j \in V^*
+∀vi​∈V−V∗,∃vj​∈V∗ 使得 (vi,Vj)∈E(v_i,V_j) \i
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-09-01 22:13" pubdate>
+              2020-09-01
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Math/">Math</a>
+            
+              <a href="/categories/Technique/Math/Theory/">Theory</a>
+            
+              <a href="/categories/Technique/Math/Theory/%E5%9B%BE%E8%AE%BA/">图论</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/Math/">Math</a>
+            
+              <a href="/tags/Theory/">Theory</a>
+            
+              <a href="/tags/%E5%9B%BE%E8%AE%BA/">图论</a>
+            
+              <a href="/tags/math/">math</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/09/01/Technique/Math/Modeling/%E6%8E%92%E9%98%9F%E8%AE%BA%E6%A8%A1%E5%9E%8B/">排队论模型</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/09/01/Technique/Math/Modeling/%E6%8E%92%E9%98%9F%E8%AE%BA%E6%A8%A1%E5%9E%8B/">
+          
+          
+            
+          
+          1. 简介
+我们使用六个符号表示排队模型，在符号之间用斜线隔开，记为 X/Y/Z/A/B/C 。第一个符号 X 表示顾客到达流或顾客到达间隔时间的分布；第二个符号 Y 表示服务时间的分布；第三个符号 Z 表示服务台数目；第四个符号 A 是系统容量限制；第五个符号 B 是顾客源数目；第六个符号 C 表示的是服务规则，例如先到先服务 FCFS， 后到先服务 LCFS 等。
+2. Little（利特尔）
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-09-01 21:00" pubdate>
+              2020-09-01
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Math/">Math</a>
+            
+              <a href="/categories/Technique/Math/Modeling/">Modeling</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/Math/">Math</a>
+            
+              <a href="/tags/Modeling/">Modeling</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/08/31/Technique/Math/Theory/%E5%9B%BE%E8%AE%BA/%E6%AC%A7%E6%8B%89%E5%9B%BE/">欧拉图</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/08/31/Technique/Math/Theory/%E5%9B%BE%E8%AE%BA/%E6%AC%A7%E6%8B%89%E5%9B%BE/">
+          
+          
+            
+          
+          1. 定义
+1.1 欧拉通路 &amp; 欧拉回路
+
+
+通过图（无向图或有向图）中所有边一次且仅一次行遍所有顶点的通路称作欧拉通路。
+
+
+通过图（无向图或有向图）中所有边一次且仅一次行遍所有顶点的回路称作欧拉回路。
+
+
+【注】规定平凡图是欧拉图。
+1.2 欧拉图 &amp; 半欧拉图
+
+
+具有欧拉回路的图称为欧拉图。
+
+
+具有欧拉通路而无欧拉回路的图称作半欧拉图。
+
+
+2. 性质
+
+
+无向图 GG
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-08-31 20:10" pubdate>
+              2020-08-31
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Math/">Math</a>
+            
+              <a href="/categories/Technique/Math/Theory/">Theory</a>
+            
+              <a href="/categories/Technique/Math/Theory/%E5%9B%BE%E8%AE%BA/">图论</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/Math/">Math</a>
+            
+              <a href="/tags/Theory/">Theory</a>
+            
+              <a href="/tags/%E5%9B%BE%E8%AE%BA/">图论</a>
+            
+              <a href="/tags/math/">math</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/08/31/Technique/Math/Theory/%E5%9B%BE%E8%AE%BA/%E5%93%88%E5%AF%86%E9%A1%BF%E5%9B%BE/">哈密顿图</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/08/31/Technique/Math/Theory/%E5%9B%BE%E8%AE%BA/%E5%93%88%E5%AF%86%E9%A1%BF%E5%9B%BE/">
+          
+          
+            
+          
+          1. 定义
+1.1 哈密顿通路 &amp; 哈密顿回路
+
+
+经过图（无向图或有向图）中所有顶点一次且仅一次的通路称作哈密顿通路。
+
+
+经过图（无向图或有向图）中所有顶点一次且仅一次的回路称作哈密顿回路。
+
+
+1.2 哈密顿图 &amp; 半哈密顿图
+
+
+具有哈密顿回路的图称作哈密顿图。
+
+
+具有哈密顿通路但不具有哈密顿回路的图称作半哈密顿图。
+
+
+【注】规定平凡图是哈密顿图。
+2. 性质
+【注】p
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-08-31 15:16" pubdate>
+              2020-08-31
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Math/">Math</a>
+            
+              <a href="/categories/Technique/Math/Theory/">Theory</a>
+            
+              <a href="/categories/Technique/Math/Theory/%E5%9B%BE%E8%AE%BA/">图论</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/Math/">Math</a>
+            
+              <a href="/tags/Theory/">Theory</a>
+            
+              <a href="/tags/%E5%9B%BE%E8%AE%BA/">图论</a>
+            
+              <a href="/tags/math/">math</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/08/30/Technique/ACM/%E9%A2%98%E8%A7%A3/P1169%E3%80%8C%E6%A3%8B%E7%9B%98%E5%88%B6%E4%BD%9C%E3%80%8D/">P1169「棋盘制作」</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/08/30/Technique/ACM/%E9%A2%98%E8%A7%A3/P1169%E3%80%8C%E6%A3%8B%E7%9B%98%E5%88%B6%E4%BD%9C%E3%80%8D/">
+          
+          
+            
+          
+          1. 题目
+题目链接：P1169「棋盘制作」 。
+题目描述
+国际象棋是世界上最古老的博弈游戏之一，和中国的围棋、象棋以及日本的将棋同享盛名。据说国际象棋起源于易经的思想，棋盘是一个 8×88 \times 88×8 大小的黑白相间的方阵，对应八八六十四卦，黑白对应阴阳。
+而我们的主人公小 Q，正是国际象棋的狂热爱好者。作为一个顶尖高手，他已不满足于普通的棋盘与规则，于是他跟他的好朋友小 W 决定将
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-08-30 13:28" pubdate>
+              2020-08-30
             </time>
           </div>
         
@@ -866,7 +891,7 @@ Programmers often have a preference among program constructs. For example, some 
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/page/35/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/34/#board">34</a><a class="page-number" href="/page/35/#board">35</a><span class="page-number current">36</span><a class="page-number" href="/page/37/#board">37</a><a class="page-number" href="/page/38/#board">38</a><span class="space">&hellip;</span><a class="page-number" href="/page/55/#board">55</a><a class="extend next" rel="next" href="/page/37/#board"><i class="iconfont icon-arrowright"></i></a>
+      <a class="extend prev" rel="prev" href="/page/35/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/34/#board">34</a><a class="page-number" href="/page/35/#board">35</a><span class="page-number current">36</span><a class="page-number" href="/page/37/#board">37</a><a class="page-number" href="/page/38/#board">38</a><span class="space">&hellip;</span><a class="page-number" href="/page/56/#board">56</a><a class="extend next" rel="next" href="/page/37/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 

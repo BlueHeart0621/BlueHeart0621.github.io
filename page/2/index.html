@@ -197,26 +197,37 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2023/03/03/Technique/Recsys/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F%E5%B8%B8%E7%94%A8%E8%AF%84%E4%BB%B7%E6%8C%87%E6%A0%87/">推荐系统常用评价指标</a>
+        <a href="/2023/08/07/Technique/ReinforcementLearning/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E6%A6%82%E8%BF%B0/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E6%A6%82%E8%BF%B0/">强化学习概述</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2023/03/03/Technique/Recsys/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F%E5%B8%B8%E7%94%A8%E8%AF%84%E4%BB%B7%E6%8C%87%E6%A0%87/">
+        <a href="/2023/08/07/Technique/ReinforcementLearning/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E6%A6%82%E8%BF%B0/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E6%A6%82%E8%BF%B0/">
           
           
             
           
-          1. 基本概念
+          
 
-正样本：预测标签与真实标签一致的样本；
-负样本：预测标签与真实标签不一致的样本；
-困难样本：预测值与实际标签误差较大的样本；
-简单样本：预测值与实际标签误差较小的样本。
+  
 
-2. AUC
-AUC: Area Under ROC Curve，同目标检测中的 AUC 指标。
 
-理解：随机抽取一对正负样本，AUC 是把正样本预测为 111 的概率大于把负样本预测为 111 的概率的概率。
+1. 定义
+通过从交互中学习来实现目标的计算方法：
+
+强化学习主要包括三个方面：
+
+感知：在某种程度上感知环境的状态
+行动：可以采取行动来影响状态或者达到目标
+目标：随着时间的推移最大化累积奖励
+
+2. 交互
+强化学习与环境交互过程如下图：
+
+3. 系统要素
+
+
+历史（History）：是观察、行动和奖励的序列。即一直到时间 ttt 为止的所有可观测变量：
+Ht=O1,R1,A1,O
         </a>
       </p>
 
@@ -224,8 +235,8 @@ AUC: Area Under ROC Curve，同目标检测中的 AUC 指标。
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2023-03-03 21:15" pubdate>
-              2023-03-03
+            <time datetime="2023-08-07 10:48" pubdate>
+              2023-08-07
             </time>
           </div>
         
@@ -235,7 +246,7 @@ AUC: Area Under ROC Curve，同目标检测中的 AUC 指标。
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/Recsys/">Recsys</a>
+              <a href="/categories/Technique/ReinforcementLearning/">ReinforcementLearning</a>
             
           </div>
         
@@ -245,7 +256,7 @@ AUC: Area Under ROC Curve，同目标检测中的 AUC 指标。
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Recsys/">Recsys</a>
+              <a href="/tags/ReinforcementLearning/">ReinforcementLearning</a>
             
           </div>
         
@@ -259,24 +270,19 @@ AUC: Area Under ROC Curve，同目标检测中的 AUC 指标。
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2023/01/24/Technique/Math/Theory/%E7%9F%A9%E9%98%B5/%E7%89%B9%E5%BE%81%E5%80%BC%E5%88%86%E8%A7%A3/%E7%89%B9%E5%BE%81%E5%80%BC%E5%88%86%E8%A7%A3/">特征值分解</a>
+        <a href="/2023/08/02/Technique/Cuda/CUDA%E5%85%A8%E5%B1%80%E5%86%85%E5%AD%98/CUDA%E5%85%A8%E5%B1%80%E5%86%85%E5%AD%98/">CUDA全局内存</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2023/01/24/Technique/Math/Theory/%E7%9F%A9%E9%98%B5/%E7%89%B9%E5%BE%81%E5%80%BC%E5%88%86%E8%A7%A3/%E7%89%B9%E5%BE%81%E5%80%BC%E5%88%86%E8%A7%A3/">
+        <a href="/2023/08/02/Technique/Cuda/CUDA%E5%85%A8%E5%B1%80%E5%86%85%E5%AD%98/CUDA%E5%85%A8%E5%B1%80%E5%86%85%E5%AD%98/">
           
           
             
           
           1. 简介
-以物理中「力」的角度来看待，我们通常会将「合力」分解为各个「分力」，来描述整个「合力」的影响。特征值分解便是将「矩阵」分解成各个方向的分量，通过对各个分量的刻画来描述此矩阵。
-
-特征分解：eigen decomposition
-特征向量：eigen vector
-特征值：eigen value
-
-2. 理解
-设矩阵 A∈Rn×nA \in \mathbb{R}^{n \times n}
+CPU 和 GPU 的主存都采用的是 DRAM（动态随机存取存储器），而低延迟内存（如 CPU 一级缓存）使用的则是 SRAM（静态随机存取存储器）。CPU 和 GPU 在内存层次结构设计中都使用相似的准则和模型。GPU 和 CPU 内存模型的主要区别是，CUDA 编程模型能将内存层次结构更好地呈现给用户，能让我们显式地控制它的行为。
+2. CUDA 内存模型
+对于程序员来说，一般有两
         </a>
       </p>
 
@@ -284,8 +290,243 @@ AUC: Area Under ROC Curve，同目标检测中的 AUC 指标。
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2023-01-24 11:44" pubdate>
-              2023-01-24
+            <time datetime="2023-08-02 08:39" pubdate>
+              2023-08-02
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Cuda/">Cuda</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/Cuda/">Cuda</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2023/07/20/Technique/MachineLearning/LightGBM%E7%AE%97%E6%B3%95%E8%AF%A6%E8%A7%A3/LightGBM%E7%AE%97%E6%B3%95%E8%AF%A6%E8%A7%A3/">LightGBM算法详解</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2023/07/20/Technique/MachineLearning/LightGBM%E7%AE%97%E6%B3%95%E8%AF%A6%E8%A7%A3/LightGBM%E7%AE%97%E6%B3%95%E8%AF%A6%E8%A7%A3/">
+          
+          
+            
+          
+          1. 简介
+LightGBM 是一个高性能的分布式梯度提升决策树框架，可以用于分类、回归、排序任务等，属于监督学习算法。LightGBM 属于 Boosting 的一种，Boosting 是指用一系列的模型线性组合起来完成模型任务。Boosting 分为两种：
+
+Ada Boost：根据当前的 Loss 来改变样本权重，比如这个样本在学习中误差比较大，则获得一个大的权重，反之获得更小的权重，从而控
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-07-20 15:17" pubdate>
+              2023-07-20
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/MachineLearning/">MachineLearning</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/MachineLearning/">MachineLearning</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2023/07/05/Technique/Linux/Sundry/Linux%E7%B3%BB%E7%BB%9F%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86/">Linux系统用户管理</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2023/07/05/Technique/Linux/Sundry/Linux%E7%B3%BB%E7%BB%9F%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86/">
+          
+          
+            
+          
+          1. 创建用户
+1sudo useradd -m -s /bin/bash -d /data/$&#123;username&#125; $&#123;username&#125;
+其中，-m 参数表示在创建用户的同时创建用户的主目录；-s 参数用来指定用户默认的 Shell；-d 参数用来指定用户的 HOME 目录路径。
+
+后续如果需要迁移用户主目录，可以使用以下命令：
+1sudo usermo
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-07-05 14:42" pubdate>
+              2023-07-05
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Linux/">Linux</a>
+            
+              <a href="/categories/Technique/Linux/Sundry/">Sundry</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/Sundry/">Sundry</a>
+            
+              <a href="/tags/Linux/">Linux</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2023/06/27/Technique/Cuda/%E5%B9%B6%E8%A1%8C%E5%BC%82%E6%9E%84%E8%AE%A1%E7%AE%97%E6%A6%82%E8%BF%B0/%E5%B9%B6%E8%A1%8C%E5%BC%82%E6%9E%84%E8%AE%A1%E7%AE%97%E6%A6%82%E8%BF%B0/">并行异构计算概述</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2023/06/27/Technique/Cuda/%E5%B9%B6%E8%A1%8C%E5%BC%82%E6%9E%84%E8%AE%A1%E7%AE%97%E6%A6%82%E8%BF%B0/%E5%B9%B6%E8%A1%8C%E5%BC%82%E6%9E%84%E8%AE%A1%E7%AE%97%E6%A6%82%E8%BF%B0/">
+          
+          
+            
+          
+          
+
+  
+
+ 
+GPU vs. CPU
+CPU 计算适合处理控制密集型任务，GPU 计算适合处理包含数据并件的计算密集型任务。
+
+CPU 核心比较重，用来处理非常复杂的控制逻辑，以优化串行程序执行。
+GPU 核心比较轻，用于优化具有简单控制逻辑的数据并行任务，注重并行程序的吞吐量。
+
+GPU 不是一个独立运行的平台而是 CPU 的协处理器，因此 GPU 必须通过 PCIe 总线与基于 CPU 的主
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-06-27 23:18" pubdate>
+              2023-06-27
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Cuda/">Cuda</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/Cuda/">Cuda</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2023/06/19/Technique/Math/Theory/%E6%8B%89%E6%A0%BC%E6%9C%97%E6%97%A5%E4%B9%98%E5%AD%90%E6%B3%95/">拉格朗日乘子法</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2023/06/19/Technique/Math/Theory/%E6%8B%89%E6%A0%BC%E6%9C%97%E6%97%A5%E4%B9%98%E5%AD%90%E6%B3%95/">
+          
+          
+            
+          
+          1. 简介
+拉格朗日乘子法是一种寻找多元函数在其变量受到一个或多个条件的约束时的局部极值的方法。这种方法可以将一个有 nnn 个变量与 kkk 个约束条件的最优化问题转换为一个解有 n+kn+kn+k 个变量的方程组的解的问题。
+2. 方法
+2.1 拉格朗日乘法定理
+设 f:Rn→Rf: \mathbb{R}^n \rightarrow \mathbb{R}f:Rn→R 为目标函数，g:Rn→Rc
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-06-19 18:17" pubdate>
+              2023-06-19
             </time>
           </div>
         
@@ -299,8 +540,6 @@ AUC: Area Under ROC Curve，同目标检测中的 AUC 指标。
             
               <a href="/categories/Technique/Math/Theory/">Theory</a>
             
-              <a href="/categories/Technique/Math/Theory/%E7%9F%A9%E9%98%B5/">矩阵</a>
-            
           </div>
         
         
@@ -313,8 +552,6 @@ AUC: Area Under ROC Curve，同目标检测中的 AUC 指标。
             
               <a href="/tags/Theory/">Theory</a>
             
-              <a href="/tags/%E7%9F%A9%E9%98%B5/">矩阵</a>
-            
           </div>
         
       </div>
@@ -327,357 +564,31 @@ AUC: Area Under ROC Curve，同目标检测中的 AUC 指标。
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2023/01/05/Technique/Detection/ObjectDetection/%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B%E6%A6%82%E8%BF%B0/%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B%E6%A6%82%E8%BF%B0/">目标检测概述</a>
+        <a href="/2023/06/19/Technique/Linux/Sundry/Nano%E7%BC%96%E8%BE%91%E5%99%A8%E5%85%A5%E9%97%A8/">Nano编辑器入门</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2023/01/05/Technique/Detection/ObjectDetection/%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B%E6%A6%82%E8%BF%B0/%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B%E6%A6%82%E8%BF%B0/">
+        <a href="/2023/06/19/Technique/Linux/Sundry/Nano%E7%BC%96%E8%BE%91%E5%99%A8%E5%85%A5%E9%97%A8/">
           
           
             
           
           1. 简介
-目前学术和工业界出现的目标检测算法分成三类：
+Nano 编辑器是很多 Linux 发行版默认配备的命令行编辑器。尽管可以将系统默认配置修改成 vi/vim 等功能更强大的编辑器，但每个环境都修改配置未免过于麻烦。因此，掌握 Nano 编辑器的基本使用还是有必要的。
+2. 常用快捷键
 
-传统的目标检测算法
-
-Cascade + HOG / DPM + Haar / SVM
-
-
-候选窗 + 深度学习分类
-
-提取候选区域 + 深度深度习方法分类
-R-CNN（Selective Search + CNN + SVM）SPP-Net（ROI Pooling）Fast R-CNN（Selective Search + CNN + 
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2023-01-05 17:00" pubdate>
-              2023-01-05
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/Detection/">Detection</a>
-            
-              <a href="/categories/Technique/Detection/ObjectDetection/">ObjectDetection</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/ObjectDetection/">ObjectDetection</a>
-            
-              <a href="/tags/Detection/">Detection</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2022/12/30/Technique/StatisticalLearning/%E8%81%9A%E7%B1%BB%E6%96%B9%E6%B3%95/%E8%81%9A%E7%B1%BB%E6%96%B9%E6%B3%95/">聚类方法</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2022/12/30/Technique/StatisticalLearning/%E8%81%9A%E7%B1%BB%E6%96%B9%E6%B3%95/%E8%81%9A%E7%B1%BB%E6%96%B9%E6%B3%95/">
-          
-          
-            
-          
-          1. 简介
-聚类是针对给定的样本，依据它们特征的相似度或距离，将其归并到若干个「类」或「簇」的数据分析问题。一个类是样本的一个子集，直观上，相似的样本聚集在相同的类，不相似的样本分散在不同的类。
-聚类的目的是通过得到的类或和入在来发现数据的特和点或对数据进行处理，在数据挖掘、模式识别等领域有着广泛的应用。聚类属于无监督学习，因为只是根据样本的相似度或距离将其进行归类，而类或簇事先并不知道。
-常用的
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2022-12-30 10:25" pubdate>
-              2022-12-30
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/StatisticalLearning/">StatisticalLearning</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/StatisticalLearning/">StatisticalLearning</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2022/12/22/Technique/StatisticalLearning/%E6%9C%80%E5%A4%A7%E7%86%B5%E6%A8%A1%E5%9E%8B/%E6%9C%80%E5%A4%A7%E7%86%B5%E6%A8%A1%E5%9E%8B/">最大熵模型</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2022/12/22/Technique/StatisticalLearning/%E6%9C%80%E5%A4%A7%E7%86%B5%E6%A8%A1%E5%9E%8B/%E6%9C%80%E5%A4%A7%E7%86%B5%E6%A8%A1%E5%9E%8B/">
-          
-          
-            
-          
-          1. 简介
-最大熵模型由最大熵原理推导实现。
-2. 最大熵原理
-最大熵原理是概率模型学习的一个原则。最大熵原理认为，学习概率模型时，在所有可能的概率模型中，熵最大的模型是最好的模型。通常用约束条件来确定概率模型的集合，因此最大熵原理也可以表述为在满足约束条件的模型集合中选取熵最大的模型。
-
-假设离散随机变量 XXX 的概率分布是 P(X)P(X)P(X)，则其熵为
-H(P)=−∑xP(x)log⁡
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2022-12-22 23:04" pubdate>
-              2022-12-22
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/StatisticalLearning/">StatisticalLearning</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/StatisticalLearning/">StatisticalLearning</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2022/12/22/Technique/StatisticalLearning/%E9%80%BB%E8%BE%91%E6%96%AF%E8%B0%9B%E5%9B%9E%E5%BD%92/%E9%80%BB%E8%BE%91%E6%96%AF%E8%B0%9B%E5%9B%9E%E5%BD%92/">逻辑斯谛回归</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2022/12/22/Technique/StatisticalLearning/%E9%80%BB%E8%BE%91%E6%96%AF%E8%B0%9B%E5%9B%9E%E5%BD%92/%E9%80%BB%E8%BE%91%E6%96%AF%E8%B0%9B%E5%9B%9E%E5%BD%92/">
-          
-          
-            
-          
-          1. 简介
-逻辑斯谛回归是统计学习中的经典分类方法。
-2. 逻辑斯谛分布
-
-
-定义：设 XXX 是连续随机变量，XXX 服从逻辑斯谛分布是指 XXX 具有下列分布函数和密度函数：
-F(x)=P(X≤x)=11+e−(x−μ)/γf(x)=F′(x)=e−(x−μ)/γγ(1+e−(x−μ)/γ)2F(x) = P(X \leq x) = \frac{1}{1 + e^{-(x-\mu)/\gamm
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2022-12-22 21:17" pubdate>
-              2022-12-22
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/StatisticalLearning/">StatisticalLearning</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/StatisticalLearning/">StatisticalLearning</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2022/12/03/Language/Japanese/%E6%97%A5%E8%AF%AD%E5%BD%A2%E5%AE%B9%E8%AF%8D/">日语形容词</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2022/12/03/Language/Japanese/%E6%97%A5%E8%AF%AD%E5%BD%A2%E5%AE%B9%E8%AF%8D/">
-          
-          
-            
-          
-          1. 简介
-日语形容词分为两类，它们的一般规律为：
-
-Ⅰ类：也称「い」类，即显示地以「い」结尾的形容词；
-Ⅱ类：不以「い」结尾，一般由两个汉字组成，或者是外来语。
-
-2. Ⅰ类
-Ⅰ类形容词修饰名词时为「Ⅰ类形容词 + 名词」的结构，中间不能加「の」。
-常用的Ⅰ类形容词：
-
-
-
-Ⅰ类形容词
-含义
-Ⅰ类形容词
-含义
+在 Nano 编辑器页面中，会给出一些快捷键提示，其 ^ 符号表示 Ctrl 键，其 M 符号表示 Alt 键。
 
 
 
 
-あたらし（新しい）
-新
-ふるい（古い）
-旧
-
-
-あつい（熱い）
-热，烫
-つめた
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2022-12-03 11:20" pubdate>
-              2022-12-03
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Language/">Language</a>
-            
-              <a href="/categories/Language/Japanese/">Japanese</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Language/">Language</a>
-            
-              <a href="/tags/Japanese/">Japanese</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2022/12/02/Language/Japanese/%E6%97%A5%E8%AF%AD%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99%E6%B1%87%E6%80%BB/">日语学习资料汇总</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2022/12/02/Language/Japanese/%E6%97%A5%E8%AF%AD%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99%E6%B1%87%E6%80%BB/">
-          
-          
-            
-          
-          学习
-
-
-
-资料
+快捷键
 说明
 
 
 
 
-【日语课程】标日初级精讲BY萌萌哒葉子先生
-叶子老师的新标日初级公开课，详细有趣，但也因此比较费时。
-
-
-日语学习：新标日课文带读，早中晚跟读一次！！不知不觉就记住了
-新标日课文带/跟读
-
-
-日语学习：新标日单词，早中晚跟读一次！！不知不觉就记住了！
-新标日单读带/跟读
-
-
-日语学习：新标日课程0到N1，B站史上最好学的日语入门视频教程零基础学习日语轻松简单学
-新标
+Ct
         </a>
       </p>
 
@@ -685,8 +596,8 @@ F(x)=P(X≤x)=11+e−(x−μ)/γf(x)=F′(x)=e−(x−μ)/γγ(1+e−(x−μ)/γ
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2022-12-02 11:30" pubdate>
-              2022-12-02
+            <time datetime="2023-06-19 16:02" pubdate>
+              2023-06-19
             </time>
           </div>
         
@@ -694,9 +605,11 @@ F(x)=P(X≤x)=11+e−(x−μ)/γf(x)=F′(x)=e−(x−μ)/γγ(1+e−(x−μ)/γ
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/Language/">Language</a>
+              <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Language/Japanese/">Japanese</a>
+              <a href="/categories/Technique/Linux/">Linux</a>
+            
+              <a href="/categories/Technique/Linux/Sundry/">Sundry</a>
             
           </div>
         
@@ -704,9 +617,11 @@ F(x)=P(X≤x)=11+e−(x−μ)/γf(x)=F′(x)=e−(x−μ)/γγ(1+e−(x−μ)/γ
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/Language/">Language</a>
+              <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Japanese/">Japanese</a>
+              <a href="/tags/Sundry/">Sundry</a>
+            
+              <a href="/tags/Linux/">Linux</a>
             
           </div>
         
@@ -720,20 +635,19 @@ F(x)=P(X≤x)=11+e−(x−μ)/γf(x)=F′(x)=e−(x−μ)/γγ(1+e−(x−μ)/γ
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2022/12/01/Technique/Math/Theory/%E7%9F%A9/">矩</a>
+        <a href="/2023/05/16/Technique/Linux/ArchLinux/ArchLinux%E5%AE%89%E8%A3%85ibus-rime%E8%BE%93%E5%85%A5%E6%B3%95/">ArchLinux安装ibus-rime输入法</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2022/12/01/Technique/Math/Theory/%E7%9F%A9/">
+        <a href="/2023/05/16/Technique/Linux/ArchLinux/ArchLinux%E5%AE%89%E8%A3%85ibus-rime%E8%BE%93%E5%85%A5%E6%B3%95/">
           
           
             
           
           1. 简介
-在概率论和统计学中，矩是用来描述随机变量的某些特征的统计量。
-2. 定义
-设随机变量 XXX 的概率密度函数为 f(x)f(x)f(x)。对于离散型随机变量，在存在的前提下，其相对于值 ccc 的 nnn 阶矩为：
-μn=E[(X−c)n]=∑i=1∞(xi−c)nP(xi)\mu_n = E\left[(X - c)^n\right] = \sum_{i=1}^{\infty} (x
+ArchLinux 下一般都推荐安装 fcitx 或者 fcitx5，但是没想到即使是 fcitx5 还是存在很多问题。本文就是写于我的 ArchLinux 上 fcitx5 无法使用 rime 输入法之际，寻求解决方案无果后，只能转而使用 ibus。
+2. 安装
+在安装 ibus-rime 之前，需要先将 fcitx5 的环境（如果有的话）清除掉。最简单暴力的方法就是将 fcitx5
         </a>
       </p>
 
@@ -741,8 +655,8 @@ F(x)=P(X≤x)=11+e−(x−μ)/γf(x)=F′(x)=e−(x−μ)/γγ(1+e−(x−μ)/γ
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2022-12-01 20:56" pubdate>
-              2022-12-01
+            <time datetime="2023-05-16 20:00" pubdate>
+              2023-05-16
             </time>
           </div>
         
@@ -752,9 +666,9 @@ F(x)=P(X≤x)=11+e−(x−μ)/γf(x)=F′(x)=e−(x−μ)/γγ(1+e−(x−μ)/γ
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/Math/">Math</a>
+              <a href="/categories/Technique/Linux/">Linux</a>
             
-              <a href="/categories/Technique/Math/Theory/">Theory</a>
+              <a href="/categories/Technique/Linux/ArchLinux/">ArchLinux</a>
             
           </div>
         
@@ -764,9 +678,9 @@ F(x)=P(X≤x)=11+e−(x−μ)/γf(x)=F′(x)=e−(x−μ)/γγ(1+e−(x−μ)/γ
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Math/">Math</a>
+              <a href="/tags/Linux/">Linux</a>
             
-              <a href="/tags/Theory/">Theory</a>
+              <a href="/tags/ArchLinux/">ArchLinux</a>
             
           </div>
         
@@ -780,21 +694,19 @@ F(x)=P(X≤x)=11+e−(x−μ)/γf(x)=F′(x)=e−(x−μ)/γγ(1+e−(x−μ)/γ
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2022/11/26/Technique/SSH/SSH%E5%B8%B8%E7%94%A8%E5%8A%9F%E8%83%BD/">SSH常用功能</a>
+        <a href="/2023/03/27/Technique/Mac/Shell/Mac%E7%BB%88%E7%AB%AFShell%E5%91%BD%E4%BB%A4Open/">Mac终端Shell命令Open</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2022/11/26/Technique/SSH/SSH%E5%B8%B8%E7%94%A8%E5%8A%9F%E8%83%BD/">
+        <a href="/2023/03/27/Technique/Mac/Shell/Mac%E7%BB%88%E7%AB%AFShell%E5%91%BD%E4%BB%A4Open/">
           
           
             
           
-          1. 登录服务器
-以 &lt;username&gt; 用户名登录 IP 为 &lt;ipaddress&gt; 端口为 &lt;port&gt; 的服务器：
-1ssh -p &lt;port&gt; &lt;username&gt;@&lt;ipaddress&gt;
-其中，如果已经在 SSH 配置文件中配置了该服务器，则可以直接使用以下命令进行登录：
-1ssh &lt;host&gt;
-&lt
+          1. 简介
+Mac 下手动打开目录、文件和应用程序等和 Windows 都很一不样，用惯 Windows 的用户刚开始使用 Mac 系统可能会非常不习惯。好在 Mac 下有一个非常方便的命令行工具 open，它能很方便地打开 Mac 上的目录、文件和应用程序。
+2. 格式
+12345678910111213141516171819202122232425Usage: open [-e] [-t] 
         </a>
       </p>
 
@@ -802,8 +714,8 @@ F(x)=P(X≤x)=11+e−(x−μ)/γf(x)=F′(x)=e−(x−μ)/γγ(1+e−(x−μ)/γ
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2022-11-26 23:29" pubdate>
-              2022-11-26
+            <time datetime="2023-03-27 15:07" pubdate>
+              2023-03-27
             </time>
           </div>
         
@@ -813,7 +725,9 @@ F(x)=P(X≤x)=11+e−(x−μ)/γf(x)=F′(x)=e−(x−μ)/γγ(1+e−(x−μ)/γ
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/SSH/">SSH</a>
+              <a href="/categories/Technique/Mac/">Mac</a>
+            
+              <a href="/categories/Technique/Mac/Shell/">Shell</a>
             
           </div>
         
@@ -823,7 +737,69 @@ F(x)=P(X≤x)=11+e−(x−μ)/γf(x)=F′(x)=e−(x−μ)/γγ(1+e−(x−μ)/γ
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/SSH/">SSH</a>
+              <a href="/tags/Mac/">Mac</a>
+            
+              <a href="/tags/Shell/">Shell</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2023/03/27/Technique/Mac/Mac%E7%BB%88%E7%AB%AF%E6%89%93%E5%BC%80%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F/">Mac终端打开应用程序</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2023/03/27/Technique/Mac/Mac%E7%BB%88%E7%AB%AF%E6%89%93%E5%BC%80%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F/">
+          
+          
+            
+          
+          1. 简介
+在 Mac 下安装应用时，如果直接在终端使用 brew 安装，则一般都可以在终端直接输入应用名打开。但对于非终端下安装的应用程序，则不能直接在终端下打开。
+2. 方法
+对于 Mac 非终端安装的应用程序，可以使用以下命令打开：
+1open -a &lt;app_name&gt;
+其中，-a 参数表示打开应用程序，即 Application。
+附录
+
+How to Open Applic
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-03-27 14:56" pubdate>
+              2023-03-27
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Mac/">Mac</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/Mac/">Mac</a>
             
           </div>
         
@@ -835,7 +811,7 @@ F(x)=P(X≤x)=11+e−(x−μ)/γf(x)=F′(x)=e−(x−μ)/γγ(1+e−(x−μ)/γ
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/#board">3</a><a class="page-number" href="/page/4/#board">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/55/#board">55</a><a class="extend next" rel="next" href="/page/3/#board"><i class="iconfont icon-arrowright"></i></a>
+      <a class="extend prev" rel="prev" href="/"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/#board">3</a><a class="page-number" href="/page/4/#board">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/56/#board">56</a><a class="extend next" rel="next" href="/page/3/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 

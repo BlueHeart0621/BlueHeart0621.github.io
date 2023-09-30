@@ -197,19 +197,26 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/09/17/Technique/ACM/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/">快速排序</a>
+        <a href="/2020/09/28/Technique/DeepLearning/%E8%AF%AF%E5%B7%AE%E5%87%BD%E6%95%B0/">误差函数</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/09/17/Technique/ACM/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/">
+        <a href="/2020/09/28/Technique/DeepLearning/%E8%AF%AF%E5%B7%AE%E5%87%BD%E6%95%B0/">
           
           
             
           
-          【注】参考自教材「算法导论」。
-1. 简介
-快速排序是一种被广泛运用的排序算法，虽然其最坏情况下的时间复杂度为 O(n2)O(n^2)O(n2)，但其平均时间复杂度为 (nlog⁡2n)(n\log_2 n)(nlog2​n)，而且其常数因子非常小，所以实际情况下跑的很快。快速排序是不稳定的、原址的排序算法。
-【注】实际上只要保证快排的每一层枢轴左右两边的序列大小的划分比不超过某一常数比（即与序列
+          1. 平方误差
+
+对于单个数据来说，其平方误差为
+
+E=12∑k(yk−tk)2\begin{array}{c}
+E = \frac{1}{2} \sum_{k} (y_k - t_k)^2
+\end{array}
+E=21​∑k​(yk​−tk​)2​
+其中，yky_kyk​ 表示神经网络的输出，tkt_ktk​ 表示监督数据（ttt 采用 one-hot 编码），kkk 表示数据的维度。
+
+对
         </a>
       </p>
 
@@ -217,8 +224,8 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-09-17 22:34" pubdate>
-              2020-09-17
+            <time datetime="2020-09-28 11:40" pubdate>
+              2020-09-28
             </time>
           </div>
         
@@ -228,11 +235,7 @@
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/ACM/">ACM</a>
-            
-              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/">算法</a>
-            
-              <a href="/categories/Technique/ACM/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/">排序</a>
+              <a href="/categories/Technique/DeepLearning/">DeepLearning</a>
             
           </div>
         
@@ -242,11 +245,9 @@
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/ACM/">ACM</a>
+              <a href="/tags/DeepLearning/">DeepLearning</a>
             
-              <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
-            
-              <a href="/tags/%E6%8E%92%E5%BA%8F/">排序</a>
+              <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a>
             
           </div>
         
@@ -260,40 +261,22 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/09/15/Technique/Math/Theory/%E6%A6%82%E7%8E%87%E8%AE%BA/%E5%B8%B8%E8%A7%81%E5%88%86%E5%B8%83/">常见分布</a>
+        <a href="/2020/09/27/Technique/Math/Theory/%E7%9F%A9%E9%98%B5/MoorePenrose%E4%BC%AA%E9%80%86/">MoorePenrose伪逆</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/09/15/Technique/Math/Theory/%E6%A6%82%E7%8E%87%E8%AE%BA/%E5%B8%B8%E8%A7%81%E5%88%86%E5%B8%83/">
+        <a href="/2020/09/27/Technique/Math/Theory/%E7%9F%A9%E9%98%B5/MoorePenrose%E4%BC%AA%E9%80%86/">
           
           
             
           
-          
-XXX 表示随机变量/向量，其余小写黑体表示向量，大写黑体表示矩阵。
+          1. 简介
+Moore-Penrose 伪逆常用于求解或简化非一致线性方程组的最小范数最小二乘解。其在实数域和复数域上都是唯一的，并且可以通过奇异值分解求得。
+2. 定义
+矩阵 AAA 的伪逆定义为
+A+=lim⁡α→0(ATA+αI)−1AT\begin{array}{c}
+A^+ = \lim_{\alpha \rightarrow 0}(A^T A + \alpha I)^{-1} A^T
 
-1. 离散分布
-记 q=1−pq = 1 - pq=1−p。
-
-
-
-概率分布
-记法
-累积分布函数
-均值
-方差
-
-
-
-
-0-1 分布（伯努利分布）
-X∼B(1,p)X \sim B(1, p)X∼B(1,p)
-$$P(X = 1) = p \P(X = 0) = q$$
-ppp
-pqpqpq
-
-
-二项分布（nnn 重伯努利分布
         </a>
       </p>
 
@@ -301,8 +284,8 @@ pqpqpq
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-09-15 11:27" pubdate>
-              2020-09-15
+            <time datetime="2020-09-27 22:13" pubdate>
+              2020-09-27
             </time>
           </div>
         
@@ -316,7 +299,7 @@ pqpqpq
             
               <a href="/categories/Technique/Math/Theory/">Theory</a>
             
-              <a href="/categories/Technique/Math/Theory/%E6%A6%82%E7%8E%87%E8%AE%BA/">概率论</a>
+              <a href="/categories/Technique/Math/Theory/%E7%9F%A9%E9%98%B5/">矩阵</a>
             
           </div>
         
@@ -325,12 +308,14 @@ pqpqpq
             <i class="iconfont icon-tags"></i>
             
               <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
             
               <a href="/tags/Math/">Math</a>
             
               <a href="/tags/Theory/">Theory</a>
             
-              <a href="/tags/%E6%A6%82%E7%8E%87%E8%AE%BA/">概率论</a>
+              <a href="/tags/%E7%9F%A9%E9%98%B5/">矩阵</a>
             
           </div>
         
@@ -344,23 +329,23 @@ pqpqpq
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/09/14/Technique/StatisticalLearning/%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/">概述</a>
+        <a href="/2020/09/27/Technique/Math/Theory/%E7%9F%A9%E9%98%B5/%E8%8C%83%E6%95%B0/">范数</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/09/14/Technique/StatisticalLearning/%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/">
+        <a href="/2020/09/27/Technique/Math/Theory/%E7%9F%A9%E9%98%B5/%E8%8C%83%E6%95%B0/">
           
           
             
           
-          1. 定义
-监督学习方法可以为生成方法和判别方法，所学到的模型分别称为生成模型和判别模型。
-
-
-生成方法由数据学习联合概率分布 P(X,Y)P(X, Y)P(X,Y)，然后求出条件概率分布 P(Y∣X)P(Y | X)P(Y∣X) 作为预测的模型，即生成模型：
-P(Y∣X)=P(X,Y)P(X)P(Y | X) = \frac{P(X, Y)}{P(X)}
-P(Y∣X)=P(X)P(X,Y)​
-生
+          1. 向量范数
+1.1 LpL_pLp​ 范数
+LpL_pLp​ 范数是向量空间中的一组范数。
+1.1.1 定义
+Lp(x⃗)=∣x⃗∣p=(∑i=1n∣xi∣p)1p\begin{array}{c}
+L_p(\vec{x}) = |\vec{x}|_p = (\sum_{i=1}^n |x_i|^p)^{\frac{1}{p}}
+\end{array}
+Lp​(x)=∣x∣p​=(∑i=1n​∣
         </a>
       </p>
 
@@ -368,8 +353,8 @@ P(Y∣X)=P(X)P(X,Y)​
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-09-14 22:45" pubdate>
-              2020-09-14
+            <time datetime="2020-09-27 19:20" pubdate>
+              2020-09-27
             </time>
           </div>
         
@@ -379,7 +364,11 @@ P(Y∣X)=P(X)P(X,Y)​
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/StatisticalLearning/">StatisticalLearning</a>
+              <a href="/categories/Technique/Math/">Math</a>
+            
+              <a href="/categories/Technique/Math/Theory/">Theory</a>
+            
+              <a href="/categories/Technique/Math/Theory/%E7%9F%A9%E9%98%B5/">矩阵</a>
             
           </div>
         
@@ -389,7 +378,13 @@ P(Y∣X)=P(X)P(X,Y)​
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/StatisticalLearning/">StatisticalLearning</a>
+              <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
+            
+              <a href="/tags/Math/">Math</a>
+            
+              <a href="/tags/Theory/">Theory</a>
+            
+              <a href="/tags/%E7%9F%A9%E9%98%B5/">矩阵</a>
             
           </div>
         
@@ -403,29 +398,20 @@ P(Y∣X)=P(X)P(X,Y)​
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/09/14/Technique/MachineLearning/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%A6%82%E8%BF%B0/">机器学习概述</a>
+        <a href="/2020/09/27/Technique/Math/Theory/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/%E6%9D%A1%E4%BB%B6%E6%95%B0/">条件数</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/09/14/Technique/MachineLearning/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%A6%82%E8%BF%B0/">
+        <a href="/2020/09/27/Technique/Math/Theory/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/%E6%9D%A1%E4%BB%B6%E6%95%B0/">
           
           
             
           
-          1. 定义
-假设用 PPP 来评估计算机程序在某任务类 TTT 上的性能，若一个程序通过利用经验 EEE 在 TTT 中的任务上获得了性能改善，我们就说关于 TTT 和 PPP，该程序对 EEE 进行了学习。
-2. 分类
-
-机械学习
-示教学习
-类比学习
-归纳学习（主流技术，涵盖监督学习、无监督学习等，相当于「从样例中学习」）
-
-3. 归纳学习
-3.1 符号主义
-
-
-决策树：经典的决策树学习以信息论
+          1. 简介
+数值分析中，函数的条件数衡量的是输入参数的微小变化可以使函数的输出值变化多少，用来测量函数输出对于输入的微小变化的敏感程度，或者说一个问题的条件数是该数量在数值计算中容易程度的衡量。一个低条件数的问题称为良置的，而高条件数的问题称为病态（非良置）的。
+2. 定义
+给定问题 fff，输入 xxx 以及用于求解问题的算法 f~\tilde{f}f~​，则绝对误差定义为
+E(f~(x))=∣
         </a>
       </p>
 
@@ -433,8 +419,8 @@ P(Y∣X)=P(X)P(X,Y)​
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-09-14 22:32" pubdate>
-              2020-09-14
+            <time datetime="2020-09-27 16:49" pubdate>
+              2020-09-27
             </time>
           </div>
         
@@ -444,7 +430,11 @@ P(Y∣X)=P(X)P(X,Y)​
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/MachineLearning/">MachineLearning</a>
+              <a href="/categories/Technique/Math/">Math</a>
+            
+              <a href="/categories/Technique/Math/Theory/">Theory</a>
+            
+              <a href="/categories/Technique/Math/Theory/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/">数值分析</a>
             
           </div>
         
@@ -454,9 +444,13 @@ P(Y∣X)=P(X)P(X,Y)​
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/MachineLearning/">MachineLearning</a>
+              <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
             
-              <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</a>
+              <a href="/tags/Math/">Math</a>
+            
+              <a href="/tags/Theory/">Theory</a>
+            
+              <a href="/tags/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/">数值分析</a>
             
           </div>
         
@@ -470,19 +464,23 @@ P(Y∣X)=P(X)P(X,Y)​
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/09/12/Technique/ACM/%E9%A2%98%E8%A7%A3/UVA437%E3%80%8CThe%20Tower%20of%20Babylon%E3%80%8D/">UVA437「The Tower of Babylon」</a>
+        <a href="/2020/09/27/Technique/Math/Theory/%E7%9F%A9%E9%98%B5/%E6%AD%A3%E8%B4%9F%E5%AE%9A%E7%9F%A9%E9%98%B5/">正负定矩阵</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/09/12/Technique/ACM/%E9%A2%98%E8%A7%A3/UVA437%E3%80%8CThe%20Tower%20of%20Babylon%E3%80%8D/">
+        <a href="/2020/09/27/Technique/Math/Theory/%E7%9F%A9%E9%98%B5/%E6%AD%A3%E8%B4%9F%E5%AE%9A%E7%9F%A9%E9%98%B5/">
           
           
             
           
-          1. 题目
-题目链接：UVA437「The Tower of Babylon」 。
-Description
-Perhaps you have heard of the legend of the Tower of Babylon. Nowadays many details of this tale have been forgotten. So now, in line with the edu
+          1. 正定矩阵
+1.1 定义
+
+
+在实数域下，一个 n×nn \times nn×n 的实对称矩阵 MMM 是正定的，当且仅当对于所有的非零实系数向量 zzz 都有 zTMz&gt;0z^T M z \gt 0zTMz&gt;0 。
+
+
+在复数域下，一个 n×nn \times nn×n 的埃尔米特矩阵 MMM 是正定的当且仅当对于每个非零的复向量 zzz 都有 z∗Mz&gt;0z^* M z 
         </a>
       </p>
 
@@ -490,8 +488,8 @@ Perhaps you have heard of the legend of the Tower of Babylon. Nowadays many deta
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-09-12 11:51" pubdate>
-              2020-09-12
+            <time datetime="2020-09-27 15:57" pubdate>
+              2020-09-27
             </time>
           </div>
         
@@ -501,9 +499,11 @@ Perhaps you have heard of the legend of the Tower of Babylon. Nowadays many deta
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/ACM/">ACM</a>
+              <a href="/categories/Technique/Math/">Math</a>
             
-              <a href="/categories/Technique/ACM/%E9%A2%98%E8%A7%A3/">题解</a>
+              <a href="/categories/Technique/Math/Theory/">Theory</a>
+            
+              <a href="/categories/Technique/Math/Theory/%E7%9F%A9%E9%98%B5/">矩阵</a>
             
           </div>
         
@@ -513,9 +513,13 @@ Perhaps you have heard of the legend of the Tower of Babylon. Nowadays many deta
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/ACM/">ACM</a>
+              <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
             
-              <a href="/tags/%E9%A2%98%E8%A7%A3/">题解</a>
+              <a href="/tags/Math/">Math</a>
+            
+              <a href="/tags/Theory/">Theory</a>
+            
+              <a href="/tags/%E7%9F%A9%E9%98%B5/">矩阵</a>
             
           </div>
         
@@ -529,19 +533,28 @@ Perhaps you have heard of the legend of the Tower of Babylon. Nowadays many deta
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/09/10/Technique/ACM/%E9%A2%98%E8%A7%A3/CF1407D%E3%80%8CDiscrete%20Centrifugal%20Jumps%E3%80%8D/">CF1407D「Discrete Centrifugal Jumps」</a>
+        <a href="/2020/09/26/Technique/DeepLearning/%E6%BF%80%E6%B4%BB%E5%87%BD%E6%95%B0/%E6%BF%80%E6%B4%BB%E5%87%BD%E6%95%B0/">激活函数</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/09/10/Technique/ACM/%E9%A2%98%E8%A7%A3/CF1407D%E3%80%8CDiscrete%20Centrifugal%20Jumps%E3%80%8D/">
+        <a href="/2020/09/26/Technique/DeepLearning/%E6%BF%80%E6%B4%BB%E5%87%BD%E6%95%B0/%E6%BF%80%E6%B4%BB%E5%87%BD%E6%95%B0/">
           
           
             
           
-          1. 题目
-题目链接：CF1407D「Discrete Centrifugal Jumps」 。
-Description
-There are nnn beautiful skyscrapers in New York, the height of the iii-th one is hih_ihi​. Today some villains have set on fire first n−1n-
+          常见激活函数及其导数：
+
+1. Sigmoid 函数
+【注】Sigmoid 型函数是指一类 S 型曲线函数，为两端饱和函数。常用的 Sigmoid 型函数有 Logistic 函数和 Tanh 函数。
+1.1 Logistic 函数
+
+定义：σ(x)=11+e−x\sigma(x) = {1 \over 1 + e^{-x}}
+σ(x)=1+e−x1​
+
+
+
+
+Logistic 函数常用来产生伯努
         </a>
       </p>
 
@@ -549,8 +562,8 @@ There are nnn beautiful skyscrapers in New York, the height of the iii-th one is
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-09-10 13:21" pubdate>
-              2020-09-10
+            <time datetime="2020-09-26 20:21" pubdate>
+              2020-09-26
             </time>
           </div>
         
@@ -560,9 +573,7 @@ There are nnn beautiful skyscrapers in New York, the height of the iii-th one is
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/ACM/">ACM</a>
-            
-              <a href="/categories/Technique/ACM/%E9%A2%98%E8%A7%A3/">题解</a>
+              <a href="/categories/Technique/DeepLearning/">DeepLearning</a>
             
           </div>
         
@@ -572,9 +583,9 @@ There are nnn beautiful skyscrapers in New York, the height of the iii-th one is
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/ACM/">ACM</a>
+              <a href="/tags/DeepLearning/">DeepLearning</a>
             
-              <a href="/tags/%E9%A2%98%E8%A7%A3/">题解</a>
+              <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">机器学习&深度学习</a>
             
           </div>
         
@@ -588,19 +599,22 @@ There are nnn beautiful skyscrapers in New York, the height of the iii-th one is
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/09/09/Technique/ACM/%E9%A2%98%E8%A7%A3/CF991F%E3%80%8CTree%20Destruction%E3%80%8D/">CF991F「Tree Destruction」</a>
+        <a href="/2020/09/26/Technique/Math/Theory/%E6%95%B0%E5%AD%97%E4%B8%96%E7%95%8C%E4%B8%AD%E5%B8%B8%E8%A7%81%E5%87%BD%E6%95%B0/">数字世界中常见函数</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/09/09/Technique/ACM/%E9%A2%98%E8%A7%A3/CF991F%E3%80%8CTree%20Destruction%E3%80%8D/">
+        <a href="/2020/09/26/Technique/Math/Theory/%E6%95%B0%E5%AD%97%E4%B8%96%E7%95%8C%E4%B8%AD%E5%B8%B8%E8%A7%81%E5%87%BD%E6%95%B0/">
           
           
             
           
-          1. 题目
-题目链接：CF991F「Tree Destruction」 。
-Description
-You are given an unweighted tree with nnn vertices. Then n−1n - 1n−1 following operations are applied to the tree. A single operation consists of the 
+          1. 狄利克雷函数
+英文名称为「Dirac Delta Function」。
+1.1 简介
+狄利克雷函数在除零以外的点取值均为 0，但在整个定义域上的积分为 1。δ\deltaδ 函数可以看作是在原点处无限高、无限细，但总面积为 1 的一个尖峰。
+1.2 定义
+δ(x)={+∞x=00x≠0∫−∞+∞δ(x)dx=1\begin{array}{c}
+\delta(x) = \begin{cases
         </a>
       </p>
 
@@ -608,8 +622,8 @@ You are given an unweighted tree with nnn vertices. Then n−1n - 1n−1 followi
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-09-09 15:19" pubdate>
-              2020-09-09
+            <time datetime="2020-09-26 12:23" pubdate>
+              2020-09-26
             </time>
           </div>
         
@@ -619,9 +633,9 @@ You are given an unweighted tree with nnn vertices. Then n−1n - 1n−1 followi
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/ACM/">ACM</a>
+              <a href="/categories/Technique/Math/">Math</a>
             
-              <a href="/categories/Technique/ACM/%E9%A2%98%E8%A7%A3/">题解</a>
+              <a href="/categories/Technique/Math/Theory/">Theory</a>
             
           </div>
         
@@ -631,9 +645,11 @@ You are given an unweighted tree with nnn vertices. Then n−1n - 1n−1 followi
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/ACM/">ACM</a>
+              <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
             
-              <a href="/tags/%E9%A2%98%E8%A7%A3/">题解</a>
+              <a href="/tags/Math/">Math</a>
+            
+              <a href="/tags/Theory/">Theory</a>
             
           </div>
         
@@ -647,20 +663,18 @@ You are given an unweighted tree with nnn vertices. Then n−1n - 1n−1 followi
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/09/08/Technique/ACM/%E9%A2%98%E8%A7%A3/CF1405D%E3%80%8CTree%20Tag%E3%80%8D/">CF1405D「Tree Tag」</a>
+        <a href="/2020/09/24/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%A6/%E5%BF%AB%E9%80%9F%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/">快速傅里叶变换</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/09/08/Technique/ACM/%E9%A2%98%E8%A7%A3/CF1405D%E3%80%8CTree%20Tag%E3%80%8D/">
+        <a href="/2020/09/24/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%A6/%E5%BF%AB%E9%80%9F%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/">
           
           
             
           
-          1. 题目
-题目链接：CF1405D「Tree Tag」 。
-DESCRIPTION
-Alice and Bob are playing a fun game of tree tag.
-The game is played on a tree of nnn vertices numbered from 111 to nnn. Recall that a tree on nnn vertices i
+          【注】参考自算法导论。
+1. 简介
+快速傅里叶变换（FFT）是实现离散傅里叶变换（DFT）和离散傅里叶逆变换（IDFT）的快速算法，其时间复杂度为 O(nlog⁡n)O(n \log n)O(nlogn)。DFT 在实际生活中有很多应用，比如通过离散傅里叶变换，可以将系数表示的多项式转为点值表示的多项式，从而使得多项式的乘法的复杂度由 O(n2)O(n^2)O(n2) 降为 O(n)O(n)O(n
         </a>
       </p>
 
@@ -668,68 +682,8 @@ The game is played on a tree of nnn vertices numbered from 111 to nnn. Recall th
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-09-08 19:58" pubdate>
-              2020-09-08
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/ACM/">ACM</a>
-            
-              <a href="/categories/Technique/ACM/%E9%A2%98%E8%A7%A3/">题解</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/ACM/">ACM</a>
-            
-              <a href="/tags/%E9%A2%98%E8%A7%A3/">题解</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/09/08/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%A6/LCM%E4%B8%8EGCD%E7%AE%97%E6%B3%95/">LCM与GCD算法</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/09/08/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%A6/LCM%E4%B8%8EGCD%E7%AE%97%E6%B3%95/">
-          
-          
-            
-          
-          LCM（最小公倍数）和 GCD（最大公因数）在做 ACM 题时经常会用到，求两个整数的 LCM 和 GCD 有两种方法。
-1. 辗转相除法（欧几里得算法）
-
-
-定理：对于任意的两个整数 a,b(a≥b)a,b (a \geq b)a,b(a≥b)， 有 (a,b)=(b,a%b)(a,b) = (b, a\%b)(a,b)=(b,a%b) 。（(a,b)(a, b)(a,b) 表示 aaa 和 b
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-09-08 19:51" pubdate>
-              2020-09-08
+            <time datetime="2020-09-24 10:12" pubdate>
+              2020-09-24
             </time>
           </div>
         
@@ -759,6 +713,8 @@ The game is played on a tree of nnn vertices numbered from 111 to nnn. Recall th
             
               <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
             
+              <a href="/tags/%E6%95%B0%E5%AD%A6-%E7%AE%97%E6%B3%95/">数学 算法</a>
+            
           </div>
         
       </div>
@@ -771,20 +727,18 @@ The game is played on a tree of nnn vertices numbered from 111 to nnn. Recall th
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/09/08/Technique/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%A6/LCM%E4%B8%8EGCD%E7%AE%97%E6%B3%95/">LCM与GCD算法</a>
+        <a href="/2020/09/24/Technique/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%A6/%E5%BF%AB%E9%80%9F%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/">快速傅里叶变换</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/09/08/Technique/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%A6/LCM%E4%B8%8EGCD%E7%AE%97%E6%B3%95/">
+        <a href="/2020/09/24/Technique/ACM/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%A6/%E5%BF%AB%E9%80%9F%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/">
           
           
             
           
-          LCM（最小公倍数）和 GCD（最大公因数）在做 ACM 题时经常会用到，求两个整数的 LCM 和 GCD 有两种方法。
-1. 辗转相除法（欧几里得算法）
-
-
-定理：对于任意的两个整数 a,b(a≥b)a,b (a \geq b)a,b(a≥b)， 有 (a,b)=(b,a%b)(a,b) = (b, a\%b)(a,b)=(b,a%b) 。（(a,b)(a, b)(a,b) 表示 aaa 和 b
+          【注】参考自算法导论。
+1. 简介
+快速傅里叶变换（FFT）是实现离散傅里叶变换（DFT）和离散傅里叶逆变换（IDFT）的快速算法，其时间复杂度为 O(nlog⁡n)O(n \log n)O(nlogn)。DFT 在实际生活中有很多应用，比如通过离散傅里叶变换，可以将系数表示的多项式转为点值表示的多项式，从而使得多项式的乘法的复杂度由 O(n2)O(n^2)O(n2) 降为 O(n)O(n)O(n
         </a>
       </p>
 
@@ -792,8 +746,8 @@ The game is played on a tree of nnn vertices numbered from 111 to nnn. Recall th
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-09-08 19:51" pubdate>
-              2020-09-08
+            <time datetime="2020-09-24 10:12" pubdate>
+              2020-09-24
             </time>
           </div>
         
@@ -822,6 +776,76 @@ The game is played on a tree of nnn vertices numbered from 111 to nnn. Recall th
               <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
             
               <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
+            
+              <a href="/tags/%E6%95%B0%E5%AD%A6-%E7%AE%97%E6%B3%95/">数学 算法</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/09/23/Technique/Math/Theory/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/%E7%A6%BB%E6%95%A3%E4%BD%99%E5%BC%A6%E5%8F%98%E6%8D%A2/">离散余弦变换</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/09/23/Technique/Math/Theory/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/%E7%A6%BB%E6%95%A3%E4%BD%99%E5%BC%A6%E5%8F%98%E6%8D%A2/">
+          
+          
+            
+          
+          1. 简介
+离散余弦变换类似于离散傅里叶变换，但是只使用实数。离散余弦变换相当于一个长度大概是它两倍的离散傅里叶变换。
+2. 定义
+离散余弦变换是一个线性的可逆函数 F:Rn→RnF: R^n \rightarrow R^nF:Rn→Rn，其中 RRR 是实数集。
+2.1 DCT-1
+fm=12(x0+(−1)mxn−1)+∑k=1n−2xkcos(πn−1mk)\begin{array}{c}
+
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-09-23 09:05" pubdate>
+              2020-09-23
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/Math/">Math</a>
+            
+              <a href="/categories/Technique/Math/Theory/">Theory</a>
+            
+              <a href="/categories/Technique/Math/Theory/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/">傅里叶变换</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
+            
+              <a href="/tags/Math/">Math</a>
+            
+              <a href="/tags/Theory/">Theory</a>
+            
+              <a href="/tags/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/">傅里叶变换</a>
             
           </div>
         
@@ -833,7 +857,7 @@ The game is played on a tree of nnn vertices numbered from 111 to nnn. Recall th
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/page/31/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/30/#board">30</a><a class="page-number" href="/page/31/#board">31</a><span class="page-number current">32</span><a class="page-number" href="/page/33/#board">33</a><a class="page-number" href="/page/34/#board">34</a><span class="space">&hellip;</span><a class="page-number" href="/page/55/#board">55</a><a class="extend next" rel="next" href="/page/33/#board"><i class="iconfont icon-arrowright"></i></a>
+      <a class="extend prev" rel="prev" href="/page/31/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/30/#board">30</a><a class="page-number" href="/page/31/#board">31</a><span class="page-number current">32</span><a class="page-number" href="/page/33/#board">33</a><a class="page-number" href="/page/34/#board">34</a><span class="space">&hellip;</span><a class="page-number" href="/page/56/#board">56</a><a class="extend next" rel="next" href="/page/33/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 

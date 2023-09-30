@@ -197,30 +197,24 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Technique/MySQL/MySQL%E6%8A%A5%E9%94%99/">MySQL报错</a>
+        <a href="/2020/05/26/Technique/MatLab/MatLab%E4%B8%ADM%E6%96%87%E4%BB%B6/">MatLab中M文件</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Technique/MySQL/MySQL%E6%8A%A5%E9%94%99/">
+        <a href="/2020/05/26/Technique/MatLab/MatLab%E4%B8%ADM%E6%96%87%E4%BB%B6/">
           
           
             
           
-          1. The MySQL server is running with the --secure-file-priv option ***
-
-问题：secure-file-priv 未配置或配置与当前使用路径冲突。secure-file-priv 参数是用来限制 mysql 下数据导入导出只能发生的路径下。
+          MatLab 中 M 文件有函数和脚本两种不同类型，是可以被 MatLab 直接执行的源代码文件。
 
 
+创建/编辑 M 文件：在命令行窗口运行 edit [filename1 [filename2 ...]] 命令。文件存在则编辑文件，文件不存在则先创建文件。若未指定 filename 参数，则默认创建无名的 M 文件。
 
 
-secure-file-priv 参数值
-说明
+运行 M 文件：在命令行窗口下运行 run filename 命令。
 
 
-
-
-''
-表示 mysqld 
         </a>
       </p>
 
@@ -239,7 +233,7 @@ secure-file-priv 参数值
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/MySQL/">MySQL</a>
+              <a href="/categories/Technique/MatLab/">MatLab</a>
             
           </div>
         
@@ -249,7 +243,7 @@ secure-file-priv 参数值
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/MySQL/">MySQL</a>
+              <a href="/tags/MatLab/">MatLab</a>
             
           </div>
         
@@ -263,26 +257,19 @@ secure-file-priv 参数值
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Technique/MySQL/%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%B8%8B%E4%BD%BF%E7%94%A8MySQL/">命令行下使用MySQL</a>
+        <a href="/2020/05/26/Technique/MatLab/MatLab%E5%87%BD%E6%95%B0/">MatLab函数</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Technique/MySQL/%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%B8%8B%E4%BD%BF%E7%94%A8MySQL/">
+        <a href="/2020/05/26/Technique/MatLab/MatLab%E5%87%BD%E6%95%B0/">
           
           
             
           
-          1. 进入 MySQL 终端
-
-指定服务器 host 和 user
-
-1mysql -h host -u user -p    # -p 选项指明输入密码
-
-匿名形式进入 MySQL 终端（host 默认为 localhost，user 默认为当前系统的 user）
-
-1mysql
-【注】linux 系统下可能需要使用超级用户权限：
-12sudo mysql -h host -u user -ps
+          1. 普通函数
+MatLab 中的普通函数是可以传递输入参数和输出参数的函数，其基本定义格式为：
+123function [y1,...,yn] = funcname(x1,...,xn)    ...end
+其中，x1,...,xn 为输入参数变量，y1,...,yn 为输出参数变量，funcname 为函数名称。MatLab 在实现对普通函数调用时，允许使用比声明变量数目少的输入输出变量，调用
         </a>
       </p>
 
@@ -301,7 +288,7 @@ secure-file-priv 参数值
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/MySQL/">MySQL</a>
+              <a href="/categories/Technique/MatLab/">MatLab</a>
             
           </div>
         
@@ -311,7 +298,7 @@ secure-file-priv 参数值
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/MySQL/">MySQL</a>
+              <a href="/tags/MatLab/">MatLab</a>
             
           </div>
         
@@ -325,19 +312,21 @@ secure-file-priv 参数值
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Technique/Net/Hosts%E6%96%87%E4%BB%B6%E4%BF%AE%E6%94%B9/">Hosts文件修改</a>
+        <a href="/2020/05/26/Technique/MatLab/MatLab%E5%87%BD%E6%95%B0datetime%E3%80%81datenum%E3%80%81datevec%E3%80%81datestr/">MatLab函数datetime、datenum、datevec、datestr</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Technique/Net/Hosts%E6%96%87%E4%BB%B6%E4%BF%AE%E6%94%B9/">
+        <a href="/2020/05/26/Technique/MatLab/MatLab%E5%87%BD%E6%95%B0datetime%E3%80%81datenum%E3%80%81datevec%E3%80%81datestr/">
           
           
             
           
-          1. 简介
-有时访问某些国外网站很卡（不包括无法访问的网站），很大的原因是这些网站的 CDN 的域名遭到 DNS 污染了。这时就可以选择直接访问源网站 IP ，绕过 DNS 解析，即通过修改主机 hosts 文件的方式，将域名和 IP 的对应关系直接记录下来，来加速对这些网站的访问。
-2. 原理
-主机操作系统下都有一个 hosts 文件，其作用在于将一些常用网址域名与其对应的 IP 地址建立一个关
+          【注】详情请参阅 MatLab help 文档。
+1. datetime 函数
+1.1 作用
+datetime 用来创建表示时间点的数组（数组元素类型为 datetime）。
+1.2 语法
+12345678910t = datetimet = datetime(relativeDay)t = datetime(DateString)t = datetime(DateStrings,&#x27;In
         </a>
       </p>
 
@@ -356,7 +345,7 @@ secure-file-priv 参数值
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/Net/">Net</a>
+              <a href="/categories/Technique/MatLab/">MatLab</a>
             
           </div>
         
@@ -366,7 +355,7 @@ secure-file-priv 参数值
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Net/">Net</a>
+              <a href="/tags/MatLab/">MatLab</a>
             
           </div>
         
@@ -380,20 +369,21 @@ secure-file-priv 参数值
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Technique/NodeJS/Mint19.1%E5%AE%89%E8%A3%85NodeJS/">Mint19.1安装NodeJS</a>
+        <a href="/2020/05/26/Technique/MatLab/MatLab%E5%87%BD%E6%95%B0interp1%E3%80%81interp2%E3%80%81interp3%E3%80%81interpn/">MatLab函数interp1、interp2、interp3、interpn</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Technique/NodeJS/Mint19.1%E5%AE%89%E8%A3%85NodeJS/">
+        <a href="/2020/05/26/Technique/MatLab/MatLab%E5%87%BD%E6%95%B0interp1%E3%80%81interp2%E3%80%81interp3%E3%80%81interpn/">
           
           
             
           
-          1. 查看 NodeJS 版本
-查看最新版本的 NodeJS，见官网地址。
-2. 添加 NodeJS 源
-NodeJS 每个大版本都有相对应的源，比如 12.16.2 版本对应的源为 https://deb.nodesource.com/setup_12.x，将所需安装的 NodeJS 版本源添加到系统中：
-1curl -sL https://deb.nodesource.com/setup_12
+          【注】详情请参阅 MatLab help 文档。
+1. interp1
+1.1 作用
+对一元函数数据进行插值，得到指定自变量值对应插值函数值。
+1.2 语法
+1234567vq = interp1(x,v,xq)vq = interp1(x,v,xq,method)vq = interp1(x,v,xq,method,extrapolation)vq = interp1(v,xq)vq = int
         </a>
       </p>
 
@@ -412,7 +402,7 @@ NodeJS 每个大版本都有相对应的源，比如 12.16.2 版本对应的源�
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/NodeJS/">NodeJS</a>
+              <a href="/categories/Technique/MatLab/">MatLab</a>
             
           </div>
         
@@ -422,7 +412,7 @@ NodeJS 每个大版本都有相对应的源，比如 12.16.2 版本对应的源�
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/NodeJS/">NodeJS</a>
+              <a href="/tags/MatLab/">MatLab</a>
             
           </div>
         
@@ -436,22 +426,20 @@ NodeJS 每个大版本都有相对应的源，比如 12.16.2 版本对应的源�
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Technique/Python/Python%E6%8A%A5%E9%94%99/">Python报错</a>
+        <a href="/2020/05/26/Technique/MatLab/MatLab%E5%87%BD%E6%95%B0legend/">MatLab函数legend</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Technique/Python/Python%E6%8A%A5%E9%94%99/">
+        <a href="/2020/05/26/Technique/MatLab/MatLab%E5%87%BD%E6%95%B0legend/">
           
           
             
           
-          1. fatal error: Python.h: 没有那个文件或目录
-
-问题：缺少 python-dev 包
-解决：安装对应包：
-
-1sudo apt install python-dev # 最好指定 python 版本，比如：python3.6-dev
-2. ERROR: Package 'pylint' requires a different Python: 2.7.15 not in 
+          【注】详情请参阅 MatLab help 文档。
+1. 简介
+legend 函数可以在 MatLab 的坐标区按曲线的绘制顺序添加对应曲线的图例。
+2. 格式
+1234567891011legendlegend(label1,···,labelN)legend(labels)legend(subset,___)legend(target,___)legend(___,Name,Value)lege
         </a>
       </p>
 
@@ -470,7 +458,7 @@ NodeJS 每个大版本都有相对应的源，比如 12.16.2 版本对应的源�
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/Python/">Python</a>
+              <a href="/categories/Technique/MatLab/">MatLab</a>
             
           </div>
         
@@ -480,7 +468,7 @@ NodeJS 每个大版本都有相对应的源，比如 12.16.2 版本对应的源�
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Python/">Python</a>
+              <a href="/tags/MatLab/">MatLab</a>
             
           </div>
         
@@ -494,20 +482,25 @@ NodeJS 每个大版本都有相对应的源，比如 12.16.2 版本对应的源�
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Technique/Python/pip%E4%B8%8B%E8%BD%BDPython%E5%BA%93%E9%80%9F%E5%BA%A6%E6%85%A2%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/">pip下载Python库速度慢解决方案</a>
+        <a href="/2020/05/26/Technique/MatLab/MatLab%E5%87%BD%E6%95%B0meshgrid%E3%80%81ndgrid/">MatLab函数meshgrid、ndgrid</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Technique/Python/pip%E4%B8%8B%E8%BD%BDPython%E5%BA%93%E9%80%9F%E5%BA%A6%E6%85%A2%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/">
+        <a href="/2020/05/26/Technique/MatLab/MatLab%E5%87%BD%E6%95%B0meshgrid%E3%80%81ndgrid/">
           
           
             
           
-          1. 简介
-python 的 pip 安装包工具非常便利，但由于其默认的下载源为国外源，因此在安装 python 库的时候下载速度较慢。有时库文件过大，超出 pip 的下载时间限制，就会报错 The read operation timed out。所以我们可是手动更改 pip 的下载源为国内的镜像下载源以提升下载速度。
-2. 国内镜像源
-国内主要的 pip 镜像源有以下几个：
-1234https
+          【注】详情请参阅 MatLab help 文档。
+1. meshgrid
+1.1 作用
+meshgrid 函数用于生成二维或三维网络坐标。
+1.2 语法
+1234[X,Y] = meshgrid(x,y)[X,Y] = meshgrid(x)[X,Y,Z] = meshgrid(x,y,z)[X,Y,Z] = meshgrid(x)
+
+
+[X,Y] = meshgrid(x,y)
+基于 x、y 坐
         </a>
       </p>
 
@@ -526,7 +519,7 @@ python 的 pip 安装包工具非常便利，但由于其默认的下载源为�
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/Python/">Python</a>
+              <a href="/categories/Technique/MatLab/">MatLab</a>
             
           </div>
         
@@ -536,7 +529,7 @@ python 的 pip 安装包工具非常便利，但由于其默认的下载源为�
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Python/">Python</a>
+              <a href="/tags/MatLab/">MatLab</a>
             
           </div>
         
@@ -550,21 +543,21 @@ python 的 pip 安装包工具非常便利，但由于其默认的下载源为�
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Technique/Qt/Deepin15.11%E4%B8%8BQt5.14%E6%8A%A5%E9%94%99/">Deepin15.11下Qt5.14报错</a>
+        <a href="/2020/05/26/Technique/MatLab/MatLab%E5%87%BD%E6%95%B0rand%E3%80%81randi%E3%80%81randn%E3%80%81rng/">MatLab函数rand、randi、randn、rng</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Technique/Qt/Deepin15.11%E4%B8%8BQt5.14%E6%8A%A5%E9%94%99/">
+        <a href="/2020/05/26/Technique/MatLab/MatLab%E5%87%BD%E6%95%B0rand%E3%80%81randi%E3%80%81randn%E3%80%81rng/">
           
           
             
           
-          1. error: Unknown module(s) in QT: xlsx
-
-问题：Qt 找不到 qtxlsx 的 modules
-解决：手动安装 qtxlsx 模块
-
-12345git clone git@github.com:dbzhang800/QtXlsxWriter.gitcd QtXlsxWriterqmakemakemake install
+          【注】详情请参阅 MatLab help 文档。
+1. rand 函数
+1.1 作用
+rand 函数用于生成在区间 (0,1) 均匀分布的随机数。
+1.2 语法
+123456X = rand    % 返回一个均匀分布的随机数X = rand(n) % 返回一个均匀分布的随机数矩阵（n x n）X = rand(sz1,...,szN)   % 返回由均匀分布的随机数组成的 sz1 x ... x
         </a>
       </p>
 
@@ -583,7 +576,7 @@ python 的 pip 安装包工具非常便利，但由于其默认的下载源为�
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/Qt/">Qt</a>
+              <a href="/categories/Technique/MatLab/">MatLab</a>
             
           </div>
         
@@ -593,7 +586,7 @@ python 的 pip 安装包工具非常便利，但由于其默认的下载源为�
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Qt/">Qt</a>
+              <a href="/tags/MatLab/">MatLab</a>
             
           </div>
         
@@ -607,23 +600,24 @@ python 的 pip 安装包工具非常便利，但由于其默认的下载源为�
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Technique/Qt/Deepin15.11%E4%B8%8BQt5.14%E6%97%A0%E6%B3%95%E4%BD%BF%E7%94%A8%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95/">Deepin15.11下Qt5.14无法使用中文输入法</a>
+        <a href="/2020/05/26/Technique/MatLab/MatLab%E5%87%BD%E6%95%B0repmat/">MatLab函数repmat</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Technique/Qt/Deepin15.11%E4%B8%8BQt5.14%E6%97%A0%E6%B3%95%E4%BD%BF%E7%94%A8%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95/">
+        <a href="/2020/05/26/Technique/MatLab/MatLab%E5%87%BD%E6%95%B0repmat/">
           
           
             
           
-          对于使用 fcitx 框架的中文输入法，需要手动编译 fcitx-qt5 生成中文输入法的库文件。
-1. 安装 cmake，用于编译 fcitx-qt5
-首先查看是否已经安装 cmake:
-1cmake --verison
-如果有显示版本信息说明已经安装，则可以到下一步；如果没有安装，则先安装：
-1sudo apt install cmake
-2. 安装 fcitx-libs-dev
-1sudo 
+          【注】详情请参阅 MatLab help 文档。
+1. 简介
+repmat函数可以用来创建重复元素的矩阵，元素可以是MatLab的任何单个数据类型（double、char、cell、struct 等）值，也可以是矩阵。
+2. 格式
+123B = repmat(A,n)B = repmat(A,r1,...,rN)B = repmat(A,r)
+
+
+第一种格式
+B为行、列维度均包含n个A的副本的矩阵
         </a>
       </p>
 
@@ -642,7 +636,7 @@ python 的 pip 安装包工具非常便利，但由于其默认的下载源为�
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/Qt/">Qt</a>
+              <a href="/categories/Technique/MatLab/">MatLab</a>
             
           </div>
         
@@ -652,7 +646,7 @@ python 的 pip 安装包工具非常便利，但由于其默认的下载源为�
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Qt/">Qt</a>
+              <a href="/tags/MatLab/">MatLab</a>
             
           </div>
         
@@ -666,18 +660,28 @@ python 的 pip 安装包工具非常便利，但由于其默认的下载源为�
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Technique/Qt/Deepin15.11%E4%B8%8BQt5.14%E7%A8%8B%E5%BA%8F%E6%89%93%E5%8C%85/">Deepin15.11下Qt5.14程序打包</a>
+        <a href="/2020/05/26/Technique/MatLab/MatLab%E5%87%BD%E6%95%B0sort%E3%80%81issorted%E3%80%81sortrows%E3%80%81issortedrows/">MatLab函数sort、issorted、sortrows、issortedrows</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Technique/Qt/Deepin15.11%E4%B8%8BQt5.14%E7%A8%8B%E5%BA%8F%E6%89%93%E5%8C%85/">
+        <a href="/2020/05/26/Technique/MatLab/MatLab%E5%87%BD%E6%95%B0sort%E3%80%81issorted%E3%80%81sortrows%E3%80%81issortedrows/">
           
           
             
           
-          【注】使用 linuxdeployqt 工具首先要保证当前系统已经配置好相应的 Qt 环境。
-Qt5.14 for Linux 并没有提供相应的程序打包服务，所以 Linux 下打包 Qt 应用程序并不轻松。好在已经有人开源了一个在 Linux 平台下打包 Qt 应用程序的工具：linuxdeployqt，使用该工具可以轻松打包 Qt 应用程序。
-开发人员提供了已经编译好可直接运行的程序 linu
+          【注】详情请参阅 MatLab help 文档。
+1. sort 函数
+1.1 作用
+sort 函数对数组元素进行排序。
+1.2 语法
+12345B = sort(A)B = sort(A,dim)B = sort(___,direction)B = sort(___,Name,Value)[B,I] = sort(___)
+
+B = sort(A)
+按升序对 A 的元素进行排序。
+
+
+
+如果 A
         </a>
       </p>
 
@@ -696,7 +700,7 @@ Qt5.14 for Linux 并没有提供相应的程序打包服务，所以 Linux 下�
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/Qt/">Qt</a>
+              <a href="/categories/Technique/MatLab/">MatLab</a>
             
           </div>
         
@@ -706,7 +710,7 @@ Qt5.14 for Linux 并没有提供相应的程序打包服务，所以 Linux 下�
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Qt/">Qt</a>
+              <a href="/tags/MatLab/">MatLab</a>
             
           </div>
         
@@ -720,21 +724,22 @@ Qt5.14 for Linux 并没有提供相应的程序打包服务，所以 Linux 下�
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Technique/Qt/Qt%E6%8A%A5%E9%94%99%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/">Qt报错问题解决</a>
+        <a href="/2020/05/26/Technique/MatLab/MatLab%E5%87%BD%E6%95%B0xlsread%E3%80%81xlswrite%E3%80%81xlsfinfo/">MatLab函数xlsread、xlswrite、xlsfinfo</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Technique/Qt/Qt%E6%8A%A5%E9%94%99%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/">
+        <a href="/2020/05/26/Technique/MatLab/MatLab%E5%87%BD%E6%95%B0xlsread%E3%80%81xlswrite%E3%80%81xlsfinfo/">
           
           
             
           
-          1. Qt 定义函数模板时，声明和实现分离（前者在 .h 头文件声明，后者在 .cpp 文件实现）引发找不到定义问题
-
-原因：Qt 编译器不支持函数模板的声明和实现分离
-解决：直接在 .h 文件声明并实现，不进行分离
-
-
+          【注】详情请参阅 MatLab help 文档。
+1. xlsread 函数
+1.1 作用
+读取 XLS、XLSX、XLSM、XLTX 和 XLTM 电子表格文件。
+【注】xlsread 仅读取 7 位 ASCII 字符，不支持非相邻范围。
+1.2 语法
+12345678data = xlsread(filename)data = xlsread(filename,sheet)data = xls
         </a>
       </p>
 
@@ -753,7 +758,7 @@ Qt5.14 for Linux 并没有提供相应的程序打包服务，所以 Linux 下�
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/Qt/">Qt</a>
+              <a href="/categories/Technique/MatLab/">MatLab</a>
             
           </div>
         
@@ -763,7 +768,7 @@ Qt5.14 for Linux 并没有提供相应的程序打包服务，所以 Linux 下�
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Qt/">Qt</a>
+              <a href="/tags/MatLab/">MatLab</a>
             
           </div>
         
@@ -775,7 +780,7 @@ Qt5.14 for Linux 并没有提供相应的程序打包服务，所以 Linux 下�
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/page/46/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/45/#board">45</a><a class="page-number" href="/page/46/#board">46</a><span class="page-number current">47</span><a class="page-number" href="/page/48/#board">48</a><a class="page-number" href="/page/49/#board">49</a><span class="space">&hellip;</span><a class="page-number" href="/page/55/#board">55</a><a class="extend next" rel="next" href="/page/48/#board"><i class="iconfont icon-arrowright"></i></a>
+      <a class="extend prev" rel="prev" href="/page/46/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/45/#board">45</a><a class="page-number" href="/page/46/#board">46</a><span class="page-number current">47</span><a class="page-number" href="/page/48/#board">48</a><a class="page-number" href="/page/49/#board">49</a><span class="space">&hellip;</span><a class="page-number" href="/page/56/#board">56</a><a class="extend next" rel="next" href="/page/48/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 

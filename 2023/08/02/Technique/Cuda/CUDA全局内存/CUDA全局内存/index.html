@@ -1,0 +1,1055 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/image/self/portrait.jpg">
+  <link rel="icon" href="/image/self/portrait.jpg">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="一个记录各种笔记的小匣子^-^">
+  <meta name="author" content="hotarugali">
+  <meta name="keywords" content="頑張れ">
+  
+    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script> <script src="/live2d-widget/autoload.js" type="text/javascript"></script> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
+  
+  <title>CUDA全局内存 - お前はどこまで見えている</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+  <!-- 
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/fancybox.css" />
+   -->
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"blueheart0621.github.io","root":"/","version":"1.8.9","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":"§"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/image/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":"c194cf0c8cbc33bfb846ba1329537d81","google":"G-SXJN0942X9","gtag":"G-D3DEHLLP3W","tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"A24MlA4oV7hlze3uNQiXDAIi-MdYXbMMI","app_key":"3moFK5Ao3TD4rjA1HCmPTSm6","server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="お前はどこまで見えている" type="application/atom+xml">
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>お前はどこまで見えている</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/image/covers/%E5%9B%9B%E6%9C%88%E6%98%AF%E4%BD%A0%E7%9A%84%E8%B0%8E%E8%A8%80-1.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="CUDA全局内存">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2023-08-02 08:39" pubdate>
+        2023年8月2日 早上
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      6.7k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      71
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- LeanCloud 统计文章PV -->
+      <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="leancloud-page-views"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">CUDA全局内存</h1>
+            
+            <div class="markdown-body">
+              <h2 id="1-简介">1. 简介</h2>
+<p>CPU 和 GPU 的主存都采用的是 DRAM（动态随机存取存储器），而低延迟内存（如 CPU 一级缓存）使用的则是 SRAM（静态随机存取存储器）。CPU 和 GPU 在内存层次结构设计中都使用相似的准则和模型。GPU 和 CPU 内存模型的主要区别是，CUDA 编程模型能将内存层次结构更好地呈现给用户，能让我们显式地控制它的行为。</p>
+<h2 id="2-CUDA-内存模型">2. CUDA 内存模型</h2>
+<p>对于程序员来说，一般有两种类型的存储器：</p>
+<ul>
+<li>可编程的：需要显式地控制哪些数据存放在可编程内存中；</li>
+<li>不可编程的：无法人为决定数据的存放位置，程序将自动生成存放位置以获得良好的性能。</li>
+</ul>
+<p>在 CPU 内存层次中，一级缓存和二级缓存都是不可编程的存储器。另一方面，CUDA 内存模型提出了多种可编程内存的类型：</p>
+<ul>
+<li>
+<p>寄存器：GPU 上运行速度最快的内存空间。核函数中声明的一个没有其他修饰符的自变量，通常存储在寄存器中。寄存器变量对于每个线程来说都是私有的，寄存器变量的生命周期与核函数相同。</p>
+</li>
+<li>
+<p>共享内存：一个线程块有自己的共享同存，对同一线程块中所有线程都可见，其内容持续线程块的整个生命周期。</p>
+</li>
+<li>
+<p>本地内存：一个核函数中的线程都有自己私有的本地内存。</p>
+</li>
+<li>
+<p>常量内存：所有线程都可以访问的只读内存空间。</p>
+</li>
+<li>
+<p>纹理内存：所有线程都可以访问的只读内存空间。纹理内存为各种数据布局提供了不同的寻址模式和滤波模式。</p>
+</li>
+<li>
+<p>全局内存：所有线程都可以访问全局内存。</p>
+</li>
+</ul>
+<img src="/images/Technique/Cuda/CUDA%E5%85%A8%E5%B1%80%E5%86%85%E5%AD%98/CUDA%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B.png" srcset="/image/loading.gif" lazyload class="" width="335" title="CUDA内存模型"> 
+<h3 id="寄存器">寄存器</h3>
+<p><strong>寄存器</strong>是一个在 SM 中由活跃线程束划分出的较少资源。在 Fermi GPU 中，每个线程限制最多拥有 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>63</mn></mrow><annotation encoding="application/x-tex">63</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">6</span><span class="mord">3</span></span></span></span> 个寄存器。Kepler GPU 将该限制扩展至每个线程可拥有 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>255</mn></mrow><annotation encoding="application/x-tex">255</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span><span class="mord">5</span><span class="mord">5</span></span></span></span> 个寄存器。在核函数中使用较少的寄存器将使在 SM 上有更多的常驻线程块。每个 SM 上并发线程块越多，使用率和性能就越高。<strong>如果一个核函数使用了超过硬件限制数量的寄存器，则会使用本地内存替代多占用的寄存器。</strong></p>
+<p><code>nvcc</code> 编译器使用启发式策略来最小化寄存器的使用，以避免寄存器溢出。我们也可以在代码中为每个核函数显式地加上额外的信息来帮助编译器进行优化：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs cuda">__global__ void<br>__launch_bounds__ (maxThreadsPerBlock, minBlocksPerMultiprocessor)<br>kernel(...) &#123;<br>	// your kernel body<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>其中，<code>maxThreadsPerBlock</code> 指出了每个线程块可以包含的最大线程数，这个线程块由核函数来启动。<code>minBlockPerMultiprocessor</code> 是可选参数，指明了在每个 SM 中预期的最小的常驻线程块数量。对于给定的核函数，最优的启动边界会因主要架构的版本不同而有所不同。可以使用 <code>-maxrregcount</code> 编译器选项来指定一个编译单元里所有核函数使用的寄存器的最大数量。</p>
+<h3 id="本地内存">本地内存</h3>
+<p>核函数中符合存储在寄存器中但不能进入被该核函数分配的寄存器空间中的变量将溢出到本地内存中。编译器可能存放到本地内存中的变量有：</p>
+<ul>
+<li>在编译时使用未知索引引用的本地数组</li>
+<li>可能会占用大量寄存器空间的较大本地结构体或数组</li>
+<li>任何不满足核函数寄存器限定条件的变量</li>
+</ul>
+<p>本地内存访问符合高效内存访问要求，对于计算能力 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2.0</mn></mrow><annotation encoding="application/x-tex">2.0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span><span class="mord">.</span><span class="mord">0</span></span></span></span> 及以上的 GPU 来说，本地内存数据也是存储在每个 SM 的一级缓存和每个设备的二级缓存中。</p>
+<h3 id="共享内存">共享内存</h3>
+<p>在核函数中使用如下修饰符修饰的变量存放在共享内存中：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cuda">__shared__<br></code></pre></td></tr></table></figure>
+<p>因为共享内存是片上内存，所以与本地内存或全局内存相比，它具有更高的带宽和更低的延迟。它的使用类似于 CPU 一级缓存，但它是可编程的。每一个 SM 都有一定数量的由线程块分配的共享内存。共享内存在核函函数范围内声明，其生命周期伴随着整个线程块。**共享内存是线程之间相互通信的基本方式。**一个块内的线程通过使用共享内存中的数据可以相互合作。访问共享内存必须同步使用如下调用：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cuda">void __syncthreads();<br></code></pre></td></tr></table></figure>
+<p>该函数设立了一个执行障碍点，即同一个线程块中的所有线程必须在其它线程被允许执行前达到该处。</p>
+<p>SM 中的一级缓存和共享内存者使用 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>64</mn></mrow><annotation encoding="application/x-tex">64</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">6</span><span class="mord">4</span></span></span></span>KB 的片上内存，它通过静态划分，但在运行时可以通过如下指令进行动态配置：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cuda">cudaError_t cudaFuncSetCacheConfig(const void* func, enum cudaFuncCache cacheConfig);<br></code></pre></td></tr></table></figure>
+<p>此函数在每个核函数的基础上配置了片上内存划分，为 <code>func</code> 指定的核函数设置了配置。支持的缓存配置如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs cuda">cudaFuncCachePreferNone:	没有参考值（默认）<br>cudaFuncCachePreferShared:	建议48KB的共享内存和16KB的一级缓存<br>cudaFuncCachePreferL1:		建议48KB的一级缓存和16KB的共享内存<br>cudaFuncCachePreferEqual:	建议相同尺寸的一级缓存和共享内存，都是32KB<br></code></pre></td></tr></table></figure>
+<blockquote>
+<p>Fermi 设备支持前三种配置，Kepler 设备支持以上所有配置。</p>
+</blockquote>
+<h3 id="常量内存">常量内存</h3>
+<p>常量内存驻留在设备内存中，并在每个 SM 专用的常量缓存中缓存。常量变量用如下修饰符来修饰：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cuda">__constant__<br></code></pre></td></tr></table></figure>
+<p>常量变量必须在全局空间内和所有核函数之外进行声明。对于所有计算能力的设备，都只可以声明 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>64</mn></mrow><annotation encoding="application/x-tex">64</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">6</span><span class="mord">4</span></span></span></span>KB 的常量内存。**常量内存是静态声明的，并对同一编译单元中的所有核函数可见。**核函数只能从常量内存中读取数据，因此常量内存必须在主机端使用下面的函数来初始化：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cuda">cudaError_t cudaMemcpyToSymbol(const void* symbol, const void* src, size_t count);<br></code></pre></td></tr></table></figure>
+<p>这个函数将 <code>count</code> 个字节从 <code>src</code> 指向的内存复制到 <code>symbol</code> 指向的内存中，这个变量存放在设备的全局内存或常量内存中。在大多数情况下，这个函数是同步的。</p>
+<blockquote>
+<p>**每从一个常量内存中读取一次数据，都会广播给线程束中所有线程。**因此线程束中的所有线程从相同的内存地址中读取数据时，常量内存表现最好。</p>
+</blockquote>
+<h3 id="纹理内存">纹理内存</h3>
+<p>纹理内存驻留在设备内存中，并在每个 SM 的只读缓存中缓存。纹理内存是一种通过指定的只读缓存访问的全局内存。</p>
+<ul>
+<li>只读缓存包括硬件滤波的支持，它可以将浮点插入作为读过程的一部分来执行。</li>
+<li>纹理内存是对二维空间局部性的优化，所以线程束里使用纹理内存访问二维数据的线程可以达到最优性能。</li>
+</ul>
+<blockquote>
+<p>硬件滤波是啥？二维空间局部性优化又是啥？</p>
+</blockquote>
+<h3 id="全局内存">全局内存</h3>
+<p>全局内存是 GPU 中最大、延迟最高并且最常用的内存。<code>global</code> 指的是其作用域和生命周期。它的声明可以在任何 SM 设备上被访问到，并且贯穿应用程序的整个生命周期。一个全局内存变量可以被静态声明或动态声明，可以使用如下修饰符在设备代码中静态地声明一个变量：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cuda">__device__<br></code></pre></td></tr></table></figure>
+<p>在主机端使用 <code>cudaMalloc</code> 函数分配全局内存，使用 <code>cudaFree</code> 函数释放全局内存。全局内存分配空间存在于应用程序的整个生命周期中，并且可以访问所有核函数中的所有线程。从多个线程访问全局内存时必须注意，操作的原子性。</p>
+<blockquote>
+<p>全局内存常驻于设备内存中，可以通过 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>32</mn></mrow><annotation encoding="application/x-tex">32</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span><span class="mord">2</span></span></span></span> 字节、<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>64</mn></mrow><annotation encoding="application/x-tex">64</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">6</span><span class="mord">4</span></span></span></span> 字节或 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>128</mn></mrow><annotation encoding="application/x-tex">128</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord">2</span><span class="mord">8</span></span></span></span> 字节的内存事务进行访问。这些内存事务必须自然对齐。当一个线程束执行内存加载/存储时，需要满足的传输数量通常取决于以下两个因素：</p>
+<ul>
+<li>跨线程的内存地址分布</li>
+<li>每个事务内存地址的对齐方式</li>
+</ul>
+</blockquote>
+<h3 id="GPU-缓存">GPU 缓存</h3>
+<p>跟 CPU 缓存一样，GPU 缓存是不可编程的内存。在 GPU 上有 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4</mn></mrow><annotation encoding="application/x-tex">4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">4</span></span></span></span> 种缓存：</p>
+<ul>
+<li>一级缓存：粒度为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>128</mn></mrow><annotation encoding="application/x-tex">128</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord">2</span><span class="mord">8</span></span></span></span> 字节</li>
+<li>二级缓存：粒度为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>32</mn></mrow><annotation encoding="application/x-tex">32</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span><span class="mord">2</span></span></span></span> 字节</li>
+<li>只读常量缓存：粒度为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>32</mn></mrow><annotation encoding="application/x-tex">32</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span><span class="mord">2</span></span></span></span> 字节</li>
+<li>只读纹理缓存：粒度为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>32</mn></mrow><annotation encoding="application/x-tex">32</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span><span class="mord">2</span></span></span></span> 字节</li>
+</ul>
+<p>每个 SM 都有一个一级缓存，所有 SM 共享一个二级缓存。一级和二级缓存都被用来在存储本地内存和全局内存中的数据，也包括寄存器溢出的部分。对于 Fermi GPU 和 Kepler K40 及其后发布的 GPU 来说，CUDA 允许我们配置读操作的数据是使用一级和二级缓存，还是只使用二级缓存。</p>
+<blockquote>
+<p>在 CPU 上，内存的加载和存储都可以被缓存，但在 GPU 上只有内存加载操作可以被缓存。每个 SM 也有一个只读常量缓存和只读纹理缓存，它们用于在设备内存中提高来自于各自内存空间的读取性能。</p>
+</blockquote>
+<h3 id="CUDA-变量">CUDA 变量</h3>
+<p>下表总结了 CUDA 变量声明和它们相应的存储位置、作用域、生命周期和修饰符：</p>
+<table>
+<thead>
+<tr>
+<th>修饰符</th>
+<th>变量名称</th>
+<th>存储器</th>
+<th>作用域</th>
+<th>生命周期</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td><code>float var</code></td>
+<td>寄存器</td>
+<td>线程</td>
+<td>线程</td>
+</tr>
+<tr>
+<td></td>
+<td><code>float var[100]</code></td>
+<td>本地</td>
+<td>线程</td>
+<td>线程</td>
+</tr>
+<tr>
+<td><code>shared</code></td>
+<td><code>float var+</code></td>
+<td>共享</td>
+<td>块</td>
+<td>块</td>
+</tr>
+<tr>
+<td><code>__device__</code></td>
+<td><code>float var+</code></td>
+<td>全局</td>
+<td>全局</td>
+<td>应用程序</td>
+</tr>
+<tr>
+<td><code>__constant__</code></td>
+<td><code>float var+</code></td>
+<td>常量</td>
+<td>全局</td>
+<td>应用程序</td>
+</tr>
+</tbody>
+</table>
+<p>其中，<code>+</code> 既可以表明标量也可以表示数组。下表总结了各类存储器的主要特征：</p>
+<table>
+<thead>
+<tr>
+<th>存储器</th>
+<th>片上/片外</th>
+<th>缓存</th>
+<th>存取</th>
+<th>范围</th>
+<th>生命周期</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>寄存器</td>
+<td>片上</td>
+<td>n/a</td>
+<td>R/W</td>
+<td>一个线程</td>
+<td>线程</td>
+</tr>
+<tr>
+<td>本地</td>
+<td>片外</td>
+<td>-</td>
+<td>R/W</td>
+<td>一个线程</td>
+<td>线程</td>
+</tr>
+<tr>
+<td>共享</td>
+<td>片上</td>
+<td>n/a</td>
+<td>R/W</td>
+<td>块内所有线程</td>
+<td>块</td>
+</tr>
+<tr>
+<td>全局</td>
+<td>片外</td>
+<td>-</td>
+<td>R/W</td>
+<td>所有线程 + 主机</td>
+<td>主机配置</td>
+</tr>
+<tr>
+<td>常量</td>
+<td>片外</td>
+<td>Yes</td>
+<td>R</td>
+<td>所有线程 + 主机</td>
+<td>主机配置</td>
+</tr>
+<tr>
+<td>纹理</td>
+<td>片外</td>
+<td>Yes</td>
+<td>R</td>
+<td>所有线程 + 主机</td>
+<td>主机配置</td>
+</tr>
+</tbody>
+</table>
+<p>其中 <code>+</code> 表示只在计算能力 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2.</mn><mi mathvariant="normal">x</mi></mrow><annotation encoding="application/x-tex">\mathrm{2.x}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord"><span class="mord mathrm">2</span><span class="mord mathrm">.</span><span class="mord mathrm">x</span></span></span></span></span> 的设备上进行缓存。</p>
+<h3 id="设备变量">设备变量</h3>
+<p>在主机端声明的设备变量只是作为一个标识符，并不是设备全局内存的变量地址。因此，不能在主机端的设备变量中使用运算符 <code>&amp;</code>，因为它只是一个在 GPU 上表示物理位置符号。</p>
+<blockquote>
+<p>有一种例外，可以直接从主机引用 GPU 内存：<strong>CUDA 固定内存</strong>。主机代码和设备代码都可以通过简单的指针引用直接访问固定内存。</p>
+</blockquote>
+<h3 id="文件作用域">文件作用域</h3>
+<p>在 CUDA 编程中，需要控制主机和设备这两个地方的操作。一般情况下，设备核函数不能访问主机变量，并且主机函数也不能访问设备变量，即使这些变量在同一文件作用域中被声明。<strong>CUDA 运行时 API 能够访问主机和设备变量。</strong></p>
+<h2 id="3-内存管理">3. 内存管理</h2>
+<p>CUDA 编程的内存管理与 C 语言的类似，需要程序员显式地管理主机和设备之间的数据移动。随着 CUDA 版本的升级，NVIDIA 正系统地实现主机和设备内存空间的统一。</p>
+<blockquote>
+<p>统一内存是 CUDA 编程模型的一个组件，在 CUDA 6.0 中首次引入，它定义了一个托管内存空间，在该空间中所有处理器都可以看到具有公共地址空间的单个连贯内存映像。</p>
+</blockquote>
+<h3 id="内存分配和释放">内存分配和释放</h3>
+<p>CUDA 编程模型假设了一个包含一个主机和设备的异构系统，每一个异构系统都有自己独立的内存空间。核函数在设备内存空间中运行，CUDA 运行时提供以下函数以分配和释放设备内存：</p>
+<table>
+<thead>
+<tr>
+<th>函数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>cudaError_t cudaMalloc(void **devPtr, size_t count);</code></td>
+<td>在设备上分配 <code>count</code> 字节的全局内存。执行失败则返回 <code>cudaErrorMemory Allocation</code>。</td>
+</tr>
+<tr>
+<td><code>cudaError_t cudaMemset(void *devPtr, int value, size_t count);</code></td>
+<td>用存储在变量 <code>value</code> 中的值来填充从设备内存地址 <code>devPtr</code> 处开始的 <code>count</code> 字节。</td>
+</tr>
+<tr>
+<td><code>cudaError_t cudaFree(void *devPtr)</code></td>
+<td>释放全局内存变量占用的空间。执行失败则返回错误 <code>cudaErrorInvalidDevicePointer</code>。</td>
+</tr>
+</tbody>
+</table>
+<p>设备内存的分配和释放操作成本较高，所以应用程序应重利用设备内存，以减少对整体性能的影响。</p>
+<h3 id="内存传输">内存传输</h3>
+<p>一旦分配好了全局内存，就可以使用以下函数在主机和设备之间传输数据：</p>
+<table>
+<thead>
+<tr>
+<th>函数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>cudaError_t cudaMemcpy(void *dst, const void *src, size_t count, enum cudaMemcpyKind kind)</code></td>
+<td>指定从内存位置 <code>src</code> 复制 <code>count</code> 字节到内存位置 <code>dst</code>，变量 <code>kind</code> 指定了复制的方向。</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><code>kind</code> 指定的复制方向有以下四种：</p>
+<ul>
+<li><code>cudaMemcpyHostToHost</code></li>
+<li><code>cudaMemcpyHostToDevice</code></li>
+<li><code>cudaMemcpyDeviceToHost</code></li>
+<li><code>cudaMemcpyDeviceToDevice</code></li>
+</ul>
+</blockquote>
+<p>如果指针 <code>dst</code> 和 <code>src</code> 与 <code>kind</code> 指定的复制方向不一致，那么 <code>cudaMemcpy</code> 的行为就是未定义行为。这个函数在大多数情况下都是同步的。下图为 Fermi C2050 GPU 与 CPU 之间的传输带宽图：</p>
+<img src="/images/Technique/Cuda/CUDA%E5%85%A8%E5%B1%80%E5%86%85%E5%AD%98/CPU%E4%B8%8EGPU%E4%BC%A0%E8%BE%93%E5%B8%A6%E5%AE%BD.png" srcset="/image/loading.gif" lazyload class="" width="472" title="CPU与GPU传输带宽">
+<p>上图说明，主机和设备间的数据传输会降低应用程序的整体性能。因此，<strong>CUDA 编程的一个基本原则应是尽可能减少主机和设备之间的传输。</strong></p>
+<h3 id="固定内存">固定内存</h3>
+<p>分配的主机内存默认是可分页的。GPU 不能在可分页主机内存上安全地访问数据，因为当主机操作系统在物理位置上移动该数据时，它无法控制。当从可分页内存传输数据到设备内存时，CUDA 驱动程序首先分配临时页面锁定的或固定的主机内存，将主机源数据复制到固定内存中，然后从固定内存传输数据给设备内存。</p>
+<blockquote>
+<p>分页是一种内存管理技术，用于将进程所需的内存空间分割成固定大小的页面（或称为页框），并将这些页面映射到物理内存中的页面框。每个页面的大小通常是固定的，例如4KB或8KB。</p>
+</blockquote>
+<img src="/images/Technique/Cuda/CUDA%E5%85%A8%E5%B1%80%E5%86%85%E5%AD%98/%E5%9B%BA%E5%AE%9A%E5%86%85%E5%AD%98.png" srcset="/image/loading.gif" lazyload class="" width="483" title="固定内存">
+<p>CUDA 运行时允许你使用如下指令直接分配/释放固定主机内存：</p>
+<table>
+<thead>
+<tr>
+<th>函数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>cudaError_t cudaMallocHost(void **devPtr, size_t count);</code></td>
+<td>分配 <code>count</code> 字节的固定内存，设备可以直接访问。</td>
+</tr>
+<tr>
+<td><code>cudaError_t cudaFreeHost(void *ptr);</code></td>
+<td>固定内存必须通过该函数进行释放。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="零拷贝内存">零拷贝内存</h3>
+<p>通常来说，主机不能直接访问设备变量，同时设备也不能直接访问主机变量。但有一个例外：零拷贝内存，<strong>主机和设备都可以访问零拷贝内存</strong>。GPU 线程可以直接访问零拷贝内存，在 CUDA 核函数中使用零拷贝内存有以下几个优势：</p>
+<ul>
+<li>当设备内存不足时可利用主机内存</li>
+<li>避免主机和设备间的显式数据传输</li>
+<li>提高 PCIe 传输率</li>
+</ul>
+<p>当使用零拷贝内存来共享主机和设备间的数据时，必须同步主机和设备间的内存访问。<strong>零拷贝内存是固定内存，该内存映射到设备地址空间中</strong>。可以通过以下函数创建一个到固定内存的映射：</p>
+<table>
+<thead>
+<tr>
+<th>函数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>cudaError_t cudaHostAlloc(void **pHost, size_t count, unsigned int flags);</code></td>
+<td>分配 <code>count</code> 字节的主机内存，该内存是页面锁定的且设备可访问的。</td>
+</tr>
+</tbody>
+</table>
+<p>释放该函数分配的内存使用 <code>cudaFreeHost</code> 函数。<code>flags</code> 参数可以对已分配内存的特殊属性进一步进行配置：</p>
+<ul>
+<li><code>cudaHostAllocDefault</code>：使 <code>cudaHostAlloc</code> 函数的行为与 <code>cudaMallocHost</code> 函数一致。</li>
+<li><code>cudaHostAllocPortable</code>：可以返回能被所有 CUDA 上下文使用的固定内存，而不仅是执行内存分配的那一个。</li>
+<li><code>cudaHostAllocWriteCombined</code>：返回写结合内存，该内存可以在某些系统配置上通过 PCIe 总线上更快地传输，但是它在大多数主机上不能被有效地读取。</li>
+<li><code>cudaHostAllocMapped</code>：该标志返回可以实现主机写入和设备读取被映射到设备地址空间中的主机内存。</li>
+</ul>
+<p>可以使用下列函数获取映射到固定内存的设备指针：</p>
+<table>
+<thead>
+<tr>
+<th>函数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>cudaError_t cudaHostGetDevicePointer(void **pDevice, void *pHost, unsigned int flags);</code></td>
+<td>返回一个在 <code>pDevice</code> 中的设备指针，该指针可以在设备上被引用以访问映射得到的固定主机内存。</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>如果想共享主机和设备端的少量数据，零拷贝内存可能会是一个不错的选择，因为它简化了编程并且有较好的性能。对于由 PCIe 总线连接的离散 GPU 上的更大数据集来说，零拷贝内存不是一个好的选择，它会导致性能的显著下降。</p>
+</blockquote>
+<p>有两种常见的异构计算系统架构：</p>
+<ul>
+<li>集成架构：在集成架构中，CPU 和 GPU 集成在一个芯片上，并且在物理地址上共享内存。在这种架构中，由于无须在 PCIe 总线上备份，所以零拷贝内存在性能和可编程性方面可能更佳。</li>
+<li>离散架构：通过 PCIe 总线将设备连接到主机，零拷贝内存只在特殊情况下有优势。</li>
+</ul>
+<h3 id="统一虚拟寻址">统一虚拟寻址</h3>
+<p>计算能力 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2.0</mn></mrow><annotation encoding="application/x-tex">2.0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span><span class="mord">.</span><span class="mord">0</span></span></span></span> 及以上版本的设备支持一种特殊的寻址方式，称为统一虚拟寻址（UVA）。UVA 在 CUDA <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4.0</mn></mrow><annotation encoding="application/x-tex">4.0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">4</span><span class="mord">.</span><span class="mord">0</span></span></span></span> 中被引入，支持 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>64</mn></mrow><annotation encoding="application/x-tex">64</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">6</span><span class="mord">4</span></span></span></span> 位 Linux 系统。有了 UVA，主机内存和设备内存可以共享同一个虚拟地址空间，如下图所示：</p>
+<img src="/images/Technique/Cuda/CUDA%E5%85%A8%E5%B1%80%E5%86%85%E5%AD%98/%E7%BB%9F%E4%B8%80%E8%99%9A%E6%8B%9F%E5%AF%BB%E5%9D%80.png" srcset="/image/loading.gif" lazyload class="" width="539" title="统一虚拟寻址">
+<p>有 UVA 之前，需要管理哪些指针指向主机和哪些指针指向设备内存。有了 UVA 后，由指针指向的内存空间对应用程序代码来说是透明的。通过 UVA，由 <code>cudaHostAlloc</code> 分配的固定主机具有相同的主机和设备指针，可以将返回的指针直接传递给核函数。</p>
+<h3 id="统一内存寻址">统一内存寻址</h3>
+<p>在 CUDA <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>6.0</mn></mrow><annotation encoding="application/x-tex">6.0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">6</span><span class="mord">.</span><span class="mord">0</span></span></span></span> 中，引入了「统一内存寻址」这一新特性，它用于简化 CUDA 编程模型中的内存管理，统一内存中创建了一个托管内存池，内存池中已分配的空间可以用相同的内存地址（即指针）在 CPU 和 GPU 上进行访问。底层系统在统一内存空间中自动在主机和设备之间进行数据传输。这种数据传输对应用程序是透明的。</p>
+<p>统一内存寻址依赖于 UVA 的支持。二者是完全不同的技术：</p>
+<ul>
+<li>UVA 为系统中所有处理器提供了一个单一的虚拟内存地址空间。</li>
+<li>统一内存寻址会自动将数据从一个物理位置转移到另一个位置。</li>
+</ul>
+<blockquote>
+<p>和零拷贝内存不同，后者是在主机内存中进行分配的，受到 PCIe 总线上访问零拷贝内存的影响，核函数的性能将具有较高的延迟。</p>
+</blockquote>
+<p>托管内存指的是由底层系统自动分配的统一内存，与特定于设备的分配内存可以互操作，它们都是使用 <code>cudaMalloc</code> 程序创建的。<strong>可以在核函数中使用两种类型的内存：由系统控制的托管内存，以及由应用程序明确分配和调用的未托管内存</strong>。所有在设备内存上有效的 CUDA 操作也同样适用于托管内存，其主要区别是主机也能够引用和访问托管内存。</p>
+<p>托管内存可以被静态分配也可以被动态分配，可以通过添加 <code>__managed__</code> 注释，静态声明一个设备变量作为托管变量。但这个操作只能在文件范围和全局范围内进行，该变量可以从主机或设备代码中直接被引用。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cuda">__device__ __managed__ int y;<br></code></pre></td></tr></table></figure>
+<p>还可以使用下述 CUDA 运行时函数动态分配托管内存：</p>
+<table>
+<thead>
+<tr>
+<th>函数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>cudaError_t cudaMallocManaged(void **devPtr, size_t size, unsigned int flags=0);</code></td>
+<td>分配 <code>size</code> 字节的托管内存，并用 <code>devPtr</code> 返回一个指针，该指针在所有设备和主机上都是有效的。使用托管内存的程序可以利用自动数据传输和重复指针消除功能。</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>在 CUDA <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>6.0</mn></mrow><annotation encoding="application/x-tex">6.0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">6</span><span class="mord">.</span><span class="mord">0</span></span></span></span> 中，设备代码不能调用 <code>cudaMallocManaged</code> 函数，所有的托管内存必须在主机端动态声明或者在全局范围内静态声明。</p>
+</blockquote>
+<h2 id="4-内存访问模式">4. 内存访问模式</h2>
+<p>大多数设备端数据访问都是从全局内存开始的，并且多数GPU应用程序容易受内存带宽的限制。 因此，最大限度地利用全局内存带宽是调控核函数性能的基本。</p>
+<h3 id="对齐与合并访问">对齐与合并访问</h3>
+<p>全局内存通过缓存来实现加载/存储，如下图所示：</p>
+<img src="/images/Technique/Cuda/CUDA%E5%85%A8%E5%B1%80%E5%86%85%E5%AD%98/CUDA%E5%85%A8%E5%B1%80%E5%86%85%E5%AD%98%E8%AE%BF%E9%97%AE.png" srcset="/image/loading.gif" lazyload class="" width="533" title="CUDA全局内存访问">
+<p>核函数的内存请求通常是在 DRAM 设备和片上内存间以 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>128</mn></mrow><annotation encoding="application/x-tex">128</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord">2</span><span class="mord">8</span></span></span></span> 字节或 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>32</mn></mrow><annotation encoding="application/x-tex">32</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span><span class="mord">2</span></span></span></span> 字节内存事务来实现的。所有对全局内存的访问都会通过二级缓存，也有许多访问会通过一级缓存，这取决于访问类型和 GPU 架构。</p>
+<ul>
+<li>若两级缓存都被用到，那么内存访问是由一个 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>128</mn></mrow><annotation encoding="application/x-tex">128</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord">2</span><span class="mord">8</span></span></span></span> 字节的内存事务实现的。</li>
+<li>若只使用了二级缓存，那么这个内存访问是由一个 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>32</mn></mrow><annotation encoding="application/x-tex">32</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span><span class="mord">2</span></span></span></span> 字节的内存事务实现的。</li>
+</ul>
+<blockquote>
+<p>对于全局缓存架构，如果允许使用一级缓存，那么可在编译时选择启用或禁用一级缓存。</p>
+</blockquote>
+<p>在优化应用程序时，需要注意设备内存访问的两个特性：</p>
+<ul>
+<li>对齐内存访问：当设备内存事务的第一个地址是用于事务服务的缓存粒度的偶数位时，就会出现对齐内存访问。运行非对齐的加载会造成带宽浪费。</li>
+<li>合并内存访问：当一个线程束中全部 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>32</mn></mrow><annotation encoding="application/x-tex">32</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span><span class="mord">2</span></span></span></span> 个线程访问一个连续的内存块时，就会出现合并内存访问。</li>
+</ul>
+<h3 id="全局内存读取">全局内存读取</h3>
+<p>在 SM 中，数据通过以下 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn></mrow><annotation encoding="application/x-tex">3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span></span></span></span> 种缓存/缓冲路径进行传输，具体使用何种方式取决于引用于哪种类型的设备内存：</p>
+<ul>
+<li>一级和二级缓存</li>
+<li>常量缓存</li>
+<li>只读缓存</li>
+</ul>
+<blockquote>
+<p>一二级缓存是默认路径，想要通过其他两种路径传递数据需要应用程序显式地说明，但要想提升性能还要取决于访问模式。全局内存加载操作是否会通过一级缓存取决于两个因素：设备的计算能力、编译器选项。</p>
+<p>默认情况下，在 Fermi 设备上对于全局内存载可以用一级缓存，在 K40 及以上 GPU 中禁用。以下标志通知编译器禁用/启用一级缓存：<code>-Xptxas -dlcm=cg</code>、<code>-Xptxas -dlcm=ca</code>。</p>
+</blockquote>
+<p><strong>CPU 一级缓存和 GPU 一级缓存之间的差异</strong>：CPU 一级缓存优化了时间和空间局部性，GPU 一级缓存是专为空间局部性而不是为时间局部性设计的。频繁访问一个一级缓存的内存位置不会增加数据留在缓存中的概率。</p>
+<h3 id="只读缓存">只读缓存</h3>
+<p>只读缓存有两种方式可以指导内存通过只读缓存进行读取：</p>
+<ul>
+<li>使用函数 <code>__ldg</code></li>
+<li>在间接引用的指针上使用修饰符 <code>__restrict__</code>，帮助 <code>nvcc</code> 编译器识别无别名指针（即专门用来访问特定数组的指针）</li>
+</ul>
+<h3 id="全局内存写入">全局内存写入</h3>
+<p>内存的存储操作相对简单。一级缓存不能用在 Fermi 或 Kepler GPU 上进行存储操作，在发送到设备内存之前存储操作只通过二级缓存。存储操作在 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>32</mn></mrow><annotation encoding="application/x-tex">32</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span><span class="mord">2</span></span></span></span> 个字节段的粒度上被执行，内存事务可以同时被分为一段、两段或四段。</p>
+<h3 id="结构体数组与数组结构体">结构体数组与数组结构体</h3>
+<p>数组结构体（AoS）和结构体数组（SoA）是两种常见的数据组织方式。用 SoA 模式存储数据充分利用了 GPU 的内存带宽，由于没有相同字段元素的交叉存取，GPU 上的 SoA 布局提供了合并内存访问，并且可以对全局内存实现更高效的利用。</p>
+<blockquote>
+<p>许多并行编程范式，尤其是 SIMD 型范式，更倾向于使用 SoA。</p>
+</blockquote>
+<h3 id="性能调整">性能调整</h3>
+<p>优化设备内存带宽利用率有两个目标：</p>
+<ul>
+<li>对齐及合并内存访问，以减少带宽的浪费</li>
+<li>足够的并发内存操作，以隐藏内存延迟
+<ul>
+<li>增加每个线程中执行独立内存操作的数量</li>
+<li>对核函数启动的执行配置进行实验，以充分体现每个 SM 的并行性</li>
+</ul>
+</li>
+</ul>
+<p>最大化带宽利用率 - 影响设备内存操作性能的因素主要有两个：</p>
+<ul>
+<li>有效利用设备 DRAM 和 SM 片上内存之间的字节移动：为避免设备内存带宽的浪费，内存访问模式应是对齐和合并的</li>
+<li>当前的并发内存操作数：可通过以下两点实现最大化当前存储器操作数
+<ul>
+<li>展开，每个线程产生更多的独立内存访问</li>
+<li>修改核函数启动的执行配置来使每个 SM 有更多的并行性</li>
+</ul>
+</li>
+</ul>
+<h2 id="5-内存带宽">5. 内存带宽</h2>
+<p>一般有如下两种类型的带宽：</p>
+<ul>
+<li>
+<p>理论带宽：是当前硬件可以实现的绝对最大带宽。对禁用 ECC 的 Fermi M2090 来说，理论上设备内存带宽的峰值为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>177.6</mn></mrow><annotation encoding="application/x-tex">177.6</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord">7</span><span class="mord">7</span><span class="mord">.</span><span class="mord">6</span></span></span></span> GB/s。</p>
+</li>
+<li>
+<p>有效带宽：核函数实际达到的带宽，它是测量带宽，可以以下公式计算：</p>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mtext>有效带宽（</mtext><mi>G</mi><mi>B</mi><mi mathvariant="normal">/</mi><mi>s</mi><mtext>）</mtext><mo>=</mo><mfrac><mrow><mo stretchy="false">(</mo><mtext>读字节数</mtext><mo>+</mo><mtext>写字节数</mtext><mo stretchy="false">)</mo><mo>×</mo><mn>1</mn><msup><mn>0</mn><mrow><mo>−</mo><mn>9</mn></mrow></msup></mrow><mtext>运行时间</mtext></mfrac></mrow><annotation encoding="application/x-tex">有效带宽（GB/s）= \frac{(读字节数 + 写字节数) \times 10^{-9}}{运行时间}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord cjk_fallback">有</span><span class="mord cjk_fallback">效</span><span class="mord cjk_fallback">带</span><span class="mord cjk_fallback">宽</span><span class="mord cjk_fallback">（</span><span class="mord mathnormal">G</span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="mord">/</span><span class="mord mathnormal">s</span><span class="mord cjk_fallback">）</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.177108em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.491108em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord cjk_fallback">运</span><span class="mord cjk_fallback">行</span><span class="mord cjk_fallback">时</span><span class="mord cjk_fallback">间</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mopen">(</span><span class="mord cjk_fallback">读</span><span class="mord cjk_fallback">字</span><span class="mord cjk_fallback">节</span><span class="mord cjk_fallback">数</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord cjk_fallback">写</span><span class="mord cjk_fallback">字</span><span class="mord cjk_fallback">节</span><span class="mord cjk_fallback">数</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">9</span></span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
+</li>
+</ul>
+<h2 id="附录">附录</h2>
+<ul>
+<li>《CUDA C 编程权威指南》by 程润伟</li>
+<li><a target="_blank" rel="noopener" href="https://developer.nvidia.com/zh-cn/blog/cuda-unified-memory-introduction-cn/">附录N – CUDA 的统一内存</a></li>
+</ul>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/Technique/">Technique</a>
+                    
+                      <a class="hover-with-bg" href="/categories/Technique/Cuda/">Cuda</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Technique/">Technique</a>
+                    
+                      <a class="hover-with-bg" href="/tags/Cuda/">Cuda</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2023/08/07/Technique/ReinforcementLearning/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E6%A6%82%E8%BF%B0/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E6%A6%82%E8%BF%B0/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">强化学习概述</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2023/07/20/Technique/MachineLearning/LightGBM%E7%AE%97%E6%B3%95%E8%AF%A6%E8%A7%A3/LightGBM%E7%AE%97%E6%B3%95%E8%AF%A6%E8%A7%A3/">
+                        <span class="hidden-mobile">LightGBM算法详解</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="waline"></div>
+  <script type="text/javascript">
+    Fluid.utils.lazyComments('waline', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js', function () {
+        new Waline({
+          el: "#waline",
+          placeholder: "都看到这里了，留个脚印再走呗~",
+          path: window.location.pathname,
+          avatar: "retro",
+          visitor: true,
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: true,
+          serverURL: "https://waline-one-beta.vercel.app/",
+          avatarCDN: "https://gravatar.loli.net/avatar/",
+          avatarForce: false,
+          requiredMeta: [],
+          emoji: ["https://cdn.jsdelivr.net/gh/hotarugali/Emoji@bilibili_tv_gif/waline/bilibili_tv_gif","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@bilibiliHotKey/waline/bilibiliHotKey","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@bilibili2233/waline/bilibili2233","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@smallshake/waline/smallshake","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@alu/waline/alu","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@QQ/waline/QQ","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@Tieba-New/waline/Tieba-New","https://cdn.jsdelivr.net/gh/hotarugali/Emoji@weibo/waline/weibo"],
+          // emojiMaps: ,
+          login: "enable",
+          dark: 'html[data-user-color-scheme="dark"]',
+        });
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the
+    <a target="_blank" href="https://waline.js.org" rel="nofollow noopener noopener">comments powered by Waline.</a>
+  </noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+      <div class="col-lg-7 mx-auto nopadding-x-md">
+        <div class="container custom mx-auto">
+          <script src="https://myhkw.cn/api/player/161389264877" id="myhk" key="161389264877" m="1"></script>
+        </div>
+      </div>
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+<!-- 
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/fancybox.umd.js" ></script>
+ -->
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+
+  <script defer src="/js/leancloud.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- KaTeX -->
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" />
+  
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/mermaid@8.8.3/dist/mermaid.min.js" ></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({"theme":"default"});
+    }
+  </script>
+
+
+
+
+  
+    <!-- Baidu Analytics -->
+    <script defer>
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?c194cf0c8cbc33bfb846ba1329537d81";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  
+    <!-- Google Analytics -->
+    <script defer>
+      window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) };
+      ga.l = +new Date;
+      ga('create', 'G-SXJN0942X9', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+  
+
+  
+    <!-- Google gtag.js -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D3DEHLLP3W"></script>
+    <script defer>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-D3DEHLLP3W');
+    </script>
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

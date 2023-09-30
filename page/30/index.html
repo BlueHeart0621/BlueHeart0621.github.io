@@ -197,24 +197,23 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/10/01/Technique/Linux/Sundry/Linux%E4%B8%8B%E6%9F%A5%E7%9C%8B%E7%B3%BB%E7%BB%9F%E4%BF%A1%E6%81%AF/">Linux下查看系统信息</a>
+        <a href="/2020/10/10/Technique/Git/Git%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/">Git常见问题</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/10/01/Technique/Linux/Sundry/Linux%E4%B8%8B%E6%9F%A5%E7%9C%8B%E7%B3%BB%E7%BB%9F%E4%BF%A1%E6%81%AF/">
+        <a href="/2020/10/10/Technique/Git/Git%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/">
           
           
             
           
-          1. 查看操作系统信息
-1lsb_release -a
-【注】并不是所有 Linux 发行版都自带 lsb_release 命令，如果系统上没有该命令需要手动安装 lsb-release 工具。
-2. 查看 Linux 内核版本
-1uname -r
-3. 查看显卡厂商
-1lspci | grep -i vga
-4. 查看内存容量
-1free -g/-m/-k/-b    # -g/-m/-k/b 
+          1. remote：error：File：××× exceeds 100.00 MB. ⋯\cdots⋯ remote：Please remove the file from history and try again.
+
+问题：上传文件超出远程仓库的限制
+解决：
+
+
+方案一：撤销上一次 commit，会退到上一次 commit 前的状态，然后移除超出限制的文件，重新上传。
+1git reset 
         </a>
       </p>
 
@@ -222,8 +221,8 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-10-01 17:21" pubdate>
-              2020-10-01
+            <time datetime="2020-10-10 21:34" pubdate>
+              2020-10-10
             </time>
           </div>
         
@@ -233,9 +232,7 @@
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/Linux/">Linux</a>
-            
-              <a href="/categories/Technique/Linux/Sundry/">Sundry</a>
+              <a href="/categories/Technique/Git/">Git</a>
             
           </div>
         
@@ -245,9 +242,7 @@
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Sundry/">Sundry</a>
-            
-              <a href="/tags/Linux/">Linux</a>
+              <a href="/tags/Git/">Git</a>
             
           </div>
         
@@ -261,24 +256,22 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/10/01/Technique/Linux/Manjaro/Manjaro20.1%E4%B8%8B%E6%90%AD%E5%BB%BAPytorch%E7%8E%AF%E5%A2%83/">Manjaro20.1下搭建Pytorch环境</a>
+        <a href="/2020/10/10/Technique/Math/Theory/%E5%9B%BE%E5%83%8F%E7%9F%A9/%E5%87%A0%E4%BD%95%E7%9F%A9/">几何矩</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/10/01/Technique/Linux/Manjaro/Manjaro20.1%E4%B8%8B%E6%90%AD%E5%BB%BAPytorch%E7%8E%AF%E5%A2%83/">
+        <a href="/2020/10/10/Technique/Math/Theory/%E5%9B%BE%E5%83%8F%E7%9F%A9/%E5%87%A0%E4%BD%95%E7%9F%A9/">
           
           
             
           
-          1. 安装 cuda 环境
-1sudo pacman -S python-pytorch-cuda
-2. 安装 pytorch 环境
-1pip install torch torchvision
-也可以用其他命令比如 conda 等，具体可以参照 pytorch 官网。
-3. 测试
-1python
-进入到 python 命令行后运行：
-12import torchtorch.cuda.is_ava
+          1. 定义
+1.1 几何矩
+几何矩定义于基本集 {xpyq}\{x^p y^q\}{xpyq}，则 p+qp+qp+q 阶二维几何矩用 mpqm_{pq}mpq​ 表示，其表达式为：
+mpq=∬ζxpyqf(x,y)dxdy\begin{array}{c}
+m_{pq} = \underset{\zeta}{\iint} x^p y^q f(x,y) dxdy
+\end{array}
+mpq​=ζ
         </a>
       </p>
 
@@ -286,8 +279,8 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-10-01 17:19" pubdate>
-              2020-10-01
+            <time datetime="2020-10-10 19:33" pubdate>
+              2020-10-10
             </time>
           </div>
         
@@ -297,9 +290,11 @@
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/Linux/">Linux</a>
+              <a href="/categories/Technique/Math/">Math</a>
             
-              <a href="/categories/Technique/Linux/Manjaro/">Manjaro</a>
+              <a href="/categories/Technique/Math/Theory/">Theory</a>
+            
+              <a href="/categories/Technique/Math/Theory/%E5%9B%BE%E5%83%8F%E7%9F%A9/">图像矩</a>
             
           </div>
         
@@ -309,9 +304,13 @@
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Linux/">Linux</a>
+              <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
             
-              <a href="/tags/Manjaro/">Manjaro</a>
+              <a href="/tags/Math/">Math</a>
+            
+              <a href="/tags/Theory/">Theory</a>
+            
+              <a href="/tags/%E5%9B%BE%E5%83%8F%E7%9F%A9/">图像矩</a>
             
           </div>
         
@@ -325,24 +324,25 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/10/01/Technique/Linux/Mint/Mint20%E4%B8%8B%E6%9F%A5%E7%9C%8Bnvidia%E6%98%BE%E5%8D%A1%E5%9E%8B%E5%8F%B7/">Mint20下查看nvidia显卡型号</a>
+        <a href="/2020/10/03/Technique/Math/Theory/%E7%9F%A9%E9%98%B5/%E7%9F%A9%E9%98%B5%E5%BE%AE%E5%88%86%E5%B8%83%E5%B1%80/">矩阵微分布局</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/10/01/Technique/Linux/Mint/Mint20%E4%B8%8B%E6%9F%A5%E7%9C%8Bnvidia%E6%98%BE%E5%8D%A1%E5%9E%8B%E5%8F%B7/">
+        <a href="/2020/10/03/Technique/Math/Theory/%E7%9F%A9%E9%98%B5/%E7%9F%A9%E9%98%B5%E5%BE%AE%E5%88%86%E5%B8%83%E5%B1%80/">
           
           
             
           
-          1. 命令
-12nvidia-smi      # 显示 GPU 的实时信息nvidia-smi -L   # 列出所有可用的 NVIDIA 设备信息
-2. 参数含义
+          【注】参考邱锡鹏《神经网络与深度学习》。
+1. 简介
+在数学中, 矩阵微积分是多元微积分的一种特殊表达，尤其是在矩阵空间上进行讨论的时候。它把单个函数对多个变量或者多元函数对单个变量的偏导数写成向量和矩阵的形式，使其可以被当成一个整体被处理。
+2. 偏导数
+矩阵微积分的表示通常有两种符号约定：
 
-GPU：GPU 编号。
-Name：GPU 型号。
-Persistence-M：持续模式的状态。持续模式虽然耗能大，但是在新的GPU应用启动时，花费的时间更少，这里显示的是off的状态。
-Fan：风扇转速，从0到100%之间变动。
+分子布局（Numerator Layout）
+分母布局（Denominator Layout）
 
+两者
         </a>
       </p>
 
@@ -350,95 +350,8 @@ Fan：风扇转速，从0到100%之间变动。
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-10-01 17:08" pubdate>
-              2020-10-01
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/Linux/">Linux</a>
-            
-              <a href="/categories/Technique/Linux/Mint/">Mint</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/Mint/">Mint</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/09/29/Technique/Math/Theory/%E7%9F%A9%E9%98%B5/%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/">基本概念</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/09/29/Technique/Math/Theory/%E7%9F%A9%E9%98%B5/%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/">
-          
-          
-            
-          
-          1. 术语
-
-
-
-概念/符号
-含义
-
-
-
-
-方阵
-行数和列数相同的矩阵
-
-
-长方矩阵
-函数和列数可能不相同的矩阵
-
-
-C\mathbb{C}C
-复数域
-
-
-R\mathbb{R}R
-实数域
-
-
-Sn\mathbb{S}^nSn
-nnn 阶对称阵全集
-
-
-diag(d1,⋯ ,dn)\mathrm{diag}(d_1,\cdots,d_n)diag(d1​,⋯,dn​)
-表示对角元素为 d1,⋯ ,
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-09-29 11:01" pubdate>
-              2020-09-29
+            <time datetime="2020-10-03 10:24" pubdate>
+              2020-10-03
             </time>
           </div>
         
@@ -466,6 +379,8 @@ diag(d1,⋯ ,dn)\mathrm{diag}(d_1,\cdots,d_n)diag(d1​,⋯,dn​)
             
               <a href="/tags/Theory/">Theory</a>
             
+              <a href="/tags/%E6%95%B0%E5%AD%A6%E7%90%86%E8%AE%BA/">数学理论</a>
+            
               <a href="/tags/%E7%9F%A9%E9%98%B5/">矩阵</a>
             
           </div>
@@ -480,25 +395,26 @@ diag(d1,⋯ ,dn)\mathrm{diag}(d_1,\cdots,d_n)diag(d1​,⋯,dn​)
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/09/28/Technique/Python/Numpy/Numpy%E6%95%B0%E7%BB%84/Numpy%E6%95%B0%E7%BB%84/">Numpy数组</a>
+        <a href="/2020/10/02/Technique/DeepLearning/%E8%BF%87%E6%8B%9F%E5%90%88/">过拟合</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/09/28/Technique/Python/Numpy/Numpy%E6%95%B0%E7%BB%84/Numpy%E6%95%B0%E7%BB%84/">
+        <a href="/2020/10/02/Technique/DeepLearning/%E8%BF%87%E6%8B%9F%E5%90%88/">
           
           
             
           
-          1. 概述
+          1. 简介
+机器学习的目标是提高泛化能力，即便是没有包含在训练数据里的未观测数据，也希望模型可以进行正确的识别。而机器学习问题中经常会出现过拟合的问题，即只能拟合训练数据，但不能很好地拟合不包含在训练数据中的其他数据的状态。
+2. 原因
+发生过拟合的原因，主要有以下两个。
 
-ndarray 数组要求数据类型一致，默认数据类型为 np.float64；显式更改数据类型需要使用 dtype 关键字。
+模型拥有大量参数、表现力强。
+训练数据少。
 
-2. axis 轴
-Numpy 中 axis = n 对应 ndarray 的第 nnn 层 []，从最外层的 axis = 0，逐渐往内层递增。
-3. 数组大小 &amp; 维度
-
-
-ndarray 数组维度元组 shape 为从最外层到最里层逐层的大小；从
+3. 解决
+3.1 权值衰减
+该方法通过在学习的过程中对大的权重进行惩罚，来抑
         </a>
       </p>
 
@@ -506,74 +422,8 @@ ndarray 数组维度元组 shape 为从最外层到最里层逐层的大小；�
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-09-28 14:02" pubdate>
-              2020-09-28
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Technique/">Technique</a>
-            
-              <a href="/categories/Technique/Python/">Python</a>
-            
-              <a href="/categories/Technique/Python/Numpy/">Numpy</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Technique/">Technique</a>
-            
-              <a href="/tags/Python/">Python</a>
-            
-              <a href="/tags/Numpy/">Numpy</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/09/28/Technique/DeepLearning/%E8%AF%AF%E5%B7%AE%E5%87%BD%E6%95%B0/">误差函数</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/09/28/Technique/DeepLearning/%E8%AF%AF%E5%B7%AE%E5%87%BD%E6%95%B0/">
-          
-          
-            
-          
-          1. 平方误差
-
-对于单个数据来说，其平方误差为
-
-E=12∑k(yk−tk)2\begin{array}{c}
-E = \frac{1}{2} \sum_{k} (y_k - t_k)^2
-\end{array}
-E=21​∑k​(yk​−tk​)2​
-其中，yky_kyk​ 表示神经网络的输出，tkt_ktk​ 表示监督数据（ttt 采用 one-hot 编码），kkk 表示数据的维度。
-
-对
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-09-28 11:40" pubdate>
-              2020-09-28
+            <time datetime="2020-10-02 22:41" pubdate>
+              2020-10-02
             </time>
           </div>
         
@@ -609,22 +459,19 @@ E=21​∑k​(yk​−tk​)2​
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/09/27/Technique/Math/Theory/%E7%9F%A9%E9%98%B5/MoorePenrose%E4%BC%AA%E9%80%86/">MoorePenrose伪逆</a>
+        <a href="/2020/10/02/Technique/DeepLearning/BatchNormalization/">BatchNormalization</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/09/27/Technique/Math/Theory/%E7%9F%A9%E9%98%B5/MoorePenrose%E4%BC%AA%E9%80%86/">
+        <a href="/2020/10/02/Technique/DeepLearning/BatchNormalization/">
           
           
             
           
           1. 简介
-Moore-Penrose 伪逆常用于求解或简化非一致线性方程组的最小范数最小二乘解。其在实数域和复数域上都是唯一的，并且可以通过奇异值分解求得。
-2. 定义
-矩阵 AAA 的伪逆定义为
-A+=lim⁡α→0(ATA+αI)−1AT\begin{array}{c}
-A^+ = \lim_{\alpha \rightarrow 0}(A^T A + \alpha I)^{-1} A^T
-
+Batch Norm（Batch Normalization）是以进行时学习的 mini-batch 为单位，按 mini-batch 进行正规化（即就是进行使数据分布的均值为 0、方差为 1）。通过将这个处理插入到激活函数的前面（或者后面），可以减小数据分布的偏向。
+2. 实现
+考虑 mini-batch 的 mmm 个输入样本数据 {x1,x2,⋯ ,xm}\{x_1,x_2,\c
         </a>
       </p>
 
@@ -632,8 +479,8 @@ A^+ = \lim_{\alpha \rightarrow 0}(A^T A + \alpha I)^{-1} A^T
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-09-27 22:13" pubdate>
-              2020-09-27
+            <time datetime="2020-10-02 20:12" pubdate>
+              2020-10-02
             </time>
           </div>
         
@@ -643,11 +490,7 @@ A^+ = \lim_{\alpha \rightarrow 0}(A^T A + \alpha I)^{-1} A^T
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/Math/">Math</a>
-            
-              <a href="/categories/Technique/Math/Theory/">Theory</a>
-            
-              <a href="/categories/Technique/Math/Theory/%E7%9F%A9%E9%98%B5/">矩阵</a>
+              <a href="/categories/Technique/DeepLearning/">DeepLearning</a>
             
           </div>
         
@@ -657,13 +500,9 @@ A^+ = \lim_{\alpha \rightarrow 0}(A^T A + \alpha I)^{-1} A^T
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
+              <a href="/tags/DeepLearning/">DeepLearning</a>
             
-              <a href="/tags/Math/">Math</a>
-            
-              <a href="/tags/Theory/">Theory</a>
-            
-              <a href="/tags/%E7%9F%A9%E9%98%B5/">矩阵</a>
+              <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a>
             
           </div>
         
@@ -677,23 +516,20 @@ A^+ = \lim_{\alpha \rightarrow 0}(A^T A + \alpha I)^{-1} A^T
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/09/27/Technique/Math/Theory/%E7%9F%A9%E9%98%B5/%E8%8C%83%E6%95%B0/">范数</a>
+        <a href="/2020/10/02/Technique/DeepLearning/%E6%9D%83%E9%87%8D%E5%88%9D%E5%A7%8B%E5%80%BC/">权重初始值</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/09/27/Technique/Math/Theory/%E7%9F%A9%E9%98%B5/%E8%8C%83%E6%95%B0/">
+        <a href="/2020/10/02/Technique/DeepLearning/%E6%9D%83%E9%87%8D%E5%88%9D%E5%A7%8B%E5%80%BC/">
           
           
             
           
-          1. 向量范数
-1.1 LpL_pLp​ 范数
-LpL_pLp​ 范数是向量空间中的一组范数。
-1.1.1 定义
-Lp(x⃗)=∣x⃗∣p=(∑i=1n∣xi∣p)1p\begin{array}{c}
-L_p(\vec{x}) = |\vec{x}|_p = (\sum_{i=1}^n |x_i|^p)^{\frac{1}{p}}
-\end{array}
-Lp​(x)=∣x∣p​=(∑i=1n​∣
+          隐藏层的激活值受到权重初始值的影响，进而关系到神经网络的学习能否成功，所以权重初始值的设定至关重要。
+1. Xavier 初始值
+Xavier的论文中提出的设定值， 不仅考虑了前一层的输入节点数量，还考虑了下一层的输出节点数量。
+
+在 Caffe 等框架中，对 Xavier 初始值进行了简化，如果前一层的结点数为 nnn，则初始化值使用标准差为 1n\frac{1}{\sqrt{n}}n​1​ 的
         </a>
       </p>
 
@@ -701,8 +537,8 @@ Lp​(x)=∣x∣p​=(∑i=1n​∣
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-09-27 19:20" pubdate>
-              2020-09-27
+            <time datetime="2020-10-02 20:12" pubdate>
+              2020-10-02
             </time>
           </div>
         
@@ -712,11 +548,7 @@ Lp​(x)=∣x∣p​=(∑i=1n​∣
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/Math/">Math</a>
-            
-              <a href="/categories/Technique/Math/Theory/">Theory</a>
-            
-              <a href="/categories/Technique/Math/Theory/%E7%9F%A9%E9%98%B5/">矩阵</a>
+              <a href="/categories/Technique/DeepLearning/">DeepLearning</a>
             
           </div>
         
@@ -726,13 +558,9 @@ Lp​(x)=∣x∣p​=(∑i=1n​∣
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
+              <a href="/tags/DeepLearning/">DeepLearning</a>
             
-              <a href="/tags/Math/">Math</a>
-            
-              <a href="/tags/Theory/">Theory</a>
-            
-              <a href="/tags/%E7%9F%A9%E9%98%B5/">矩阵</a>
+              <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a>
             
           </div>
         
@@ -746,20 +574,21 @@ Lp​(x)=∣x∣p​=(∑i=1n​∣
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/09/27/Technique/Math/Theory/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/%E6%9D%A1%E4%BB%B6%E6%95%B0/">条件数</a>
+        <a href="/2020/10/02/Technique/DeepLearning/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/AdaGrad/">AdaGrad</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/09/27/Technique/Math/Theory/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/%E6%9D%A1%E4%BB%B6%E6%95%B0/">
+        <a href="/2020/10/02/Technique/DeepLearning/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/AdaGrad/">
           
           
             
           
           1. 简介
-数值分析中，函数的条件数衡量的是输入参数的微小变化可以使函数的输出值变化多少，用来测量函数输出对于输入的微小变化的敏感程度，或者说一个问题的条件数是该数量在数值计算中容易程度的衡量。一个低条件数的问题称为良置的，而高条件数的问题称为病态（非良置）的。
-2. 定义
-给定问题 fff，输入 xxx 以及用于求解问题的算法 f~\tilde{f}f~​，则绝对误差定义为
-E(f~(x))=∣
+AdaGrad 算法是借鉴 ℓ2\ell_2ℓ2​ 正则化的思想，每次迭代时自适应地调整每个参数的学习率。
+2. 原理
+第 ttt 次迭代时：
+ht=ht−1+∂L∂Wt−1⊙∂L∂Wt−1Wt=Wt−1−η1ht+ε∂L∂Wt−1\begin{array}{c}
+\boldsymbol{h}_t = \boldsymbol{h}_{t-1} + \frac{\partial L}{\
         </a>
       </p>
 
@@ -767,8 +596,8 @@ E(f~(x))=∣
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-09-27 16:49" pubdate>
-              2020-09-27
+            <time datetime="2020-10-02 20:12" pubdate>
+              2020-10-02
             </time>
           </div>
         
@@ -778,11 +607,9 @@ E(f~(x))=∣
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/Math/">Math</a>
+              <a href="/categories/Technique/DeepLearning/">DeepLearning</a>
             
-              <a href="/categories/Technique/Math/Theory/">Theory</a>
-            
-              <a href="/categories/Technique/Math/Theory/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/">数值分析</a>
+              <a href="/categories/Technique/DeepLearning/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/">优化算法</a>
             
           </div>
         
@@ -792,13 +619,11 @@ E(f~(x))=∣
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
+              <a href="/tags/DeepLearning/">DeepLearning</a>
             
-              <a href="/tags/Math/">Math</a>
+              <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a>
             
-              <a href="/tags/Theory/">Theory</a>
-            
-              <a href="/tags/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/">数值分析</a>
+              <a href="/tags/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/">优化算法</a>
             
           </div>
         
@@ -812,23 +637,22 @@ E(f~(x))=∣
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/09/27/Technique/Math/Theory/%E7%9F%A9%E9%98%B5/%E6%AD%A3%E8%B4%9F%E5%AE%9A%E7%9F%A9%E9%98%B5/">正负定矩阵</a>
+        <a href="/2020/10/02/Technique/DeepLearning/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/Nesterov/">Nesterov</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/09/27/Technique/Math/Theory/%E7%9F%A9%E9%98%B5/%E6%AD%A3%E8%B4%9F%E5%AE%9A%E7%9F%A9%E9%98%B5/">
+        <a href="/2020/10/02/Technique/DeepLearning/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/Nesterov/">
           
           
             
           
-          1. 正定矩阵
-1.1 定义
-
-
-在实数域下，一个 n×nn \times nn×n 的实对称矩阵 MMM 是正定的，当且仅当对于所有的非零实系数向量 zzz 都有 zTMz&gt;0z^T M z \gt 0zTMz&gt;0 。
-
-
-在复数域下，一个 n×nn \times nn×n 的埃尔米特矩阵 MMM 是正定的当且仅当对于每个非零的复向量 zzz 都有 z∗Mz&gt;0z^* M z 
+          1. 简介
+Nesterov 加速梯度算法是一种对 Momentum 动量法的改进。
+2. 原理
+第 ttt 次迭代时：
+W^t=Wt−1+αΔWt−1Wt=Wt^−η∂L∂W^t\begin{array}{c}
+\hat{\boldsymbol{W}}_t = \boldsymbol{W}_{t-1} + \alpha \Delta \boldsymbol{W}_{t-1} \\
+\boldsy
         </a>
       </p>
 
@@ -836,8 +660,8 @@ E(f~(x))=∣
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-09-27 15:57" pubdate>
-              2020-09-27
+            <time datetime="2020-10-02 20:12" pubdate>
+              2020-10-02
             </time>
           </div>
         
@@ -847,11 +671,9 @@ E(f~(x))=∣
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/Math/">Math</a>
+              <a href="/categories/Technique/DeepLearning/">DeepLearning</a>
             
-              <a href="/categories/Technique/Math/Theory/">Theory</a>
-            
-              <a href="/categories/Technique/Math/Theory/%E7%9F%A9%E9%98%B5/">矩阵</a>
+              <a href="/categories/Technique/DeepLearning/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/">优化算法</a>
             
           </div>
         
@@ -861,13 +683,140 @@ E(f~(x))=∣
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
+              <a href="/tags/DeepLearning/">DeepLearning</a>
             
-              <a href="/tags/Math/">Math</a>
+              <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a>
             
-              <a href="/tags/Theory/">Theory</a>
+              <a href="/tags/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/">优化算法</a>
             
-              <a href="/tags/%E7%9F%A9%E9%98%B5/">矩阵</a>
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/10/02/Technique/DeepLearning/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/Adam/">Adam</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/10/02/Technique/DeepLearning/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/Adam/">
+          
+          
+            
+          
+          1. 简介
+Adam 算法可以看作动量法和 RMSprop 算法的结合，不但使用动量作为参数更新方向，而且可以自适应调整学习率。
+2. 原理
+第 ttt 次迭代时：
+
+一方面计算梯度平方的指数加权平均：
+
+Gt=β2Gt−1+(1−β2)∂L∂Wt−1⊙∂L∂Wt−1\begin{array}{c}
+\boldsymbol{G}_t = \beta_2 \boldsymbol{G}_{t-1} +
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-10-02 20:01" pubdate>
+              2020-10-02
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/DeepLearning/">DeepLearning</a>
+            
+              <a href="/categories/Technique/DeepLearning/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/">优化算法</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/DeepLearning/">DeepLearning</a>
+            
+              <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a>
+            
+              <a href="/tags/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/">优化算法</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/10/02/Technique/DeepLearning/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/Momentum/">Momentum</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/10/02/Technique/DeepLearning/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/Momentum/">
+          
+          
+            
+          
+          1. 简介
+Momentum 类似于物理中的冲量的思想，Momentum 算法优化的过程给人的感觉就像是小球在地面上滚动。
+2. 原理
+第 ttt 次迭代时：
+vt=αvt−1−η∂L∂Wt−1Wt=Wt−1+vt\begin{array}{c}
+\boldsymbol{v}_t = \alpha \boldsymbol{v}_{t-1} - \eta \frac{\partial L}{\par
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-10-02 20:01" pubdate>
+              2020-10-02
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Technique/">Technique</a>
+            
+              <a href="/categories/Technique/DeepLearning/">DeepLearning</a>
+            
+              <a href="/categories/Technique/DeepLearning/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/">优化算法</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Technique/">Technique</a>
+            
+              <a href="/tags/DeepLearning/">DeepLearning</a>
+            
+              <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a>
+            
+              <a href="/tags/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/">优化算法</a>
             
           </div>
         
@@ -879,7 +828,7 @@ E(f~(x))=∣
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/page/29/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/28/#board">28</a><a class="page-number" href="/page/29/#board">29</a><span class="page-number current">30</span><a class="page-number" href="/page/31/#board">31</a><a class="page-number" href="/page/32/#board">32</a><span class="space">&hellip;</span><a class="page-number" href="/page/55/#board">55</a><a class="extend next" rel="next" href="/page/31/#board"><i class="iconfont icon-arrowright"></i></a>
+      <a class="extend prev" rel="prev" href="/page/29/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/28/#board">28</a><a class="page-number" href="/page/29/#board">29</a><span class="page-number current">30</span><a class="page-number" href="/page/31/#board">31</a><a class="page-number" href="/page/32/#board">32</a><span class="space">&hellip;</span><a class="page-number" href="/page/56/#board">56</a><a class="extend next" rel="next" href="/page/31/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 

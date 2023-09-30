@@ -197,39 +197,38 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Technique/CompilingPrinciple/%E5%BC%95%E8%AE%BA/%E5%BC%95%E8%AE%BA/">引论</a>
+        <a href="/2020/05/26/Technique/MatLab/MatLab%E5%8F%96%E6%95%B4%E5%87%BD%E6%95%B0/">MatLab取整函数</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Technique/CompilingPrinciple/%E5%BC%95%E8%AE%BA/%E5%BC%95%E8%AE%BA/">
+        <a href="/2020/05/26/Technique/MatLab/MatLab%E5%8F%96%E6%95%B4%E5%87%BD%E6%95%B0/">
           
           
             
           
-          1. 主要内容
-
-引论
-高级语言及其文法
-语法分析
-自顶向下的语法分析
-自底向上的语法分析
-语法制导翻译与属性文法
-语义分析与中间代码生成
-符号表管理
-运行时的存储组织
-代码优化
-代码生成
-
-2. 程序设计语言
+          MatLab默认的数值类型为双精度 double 型，而 double / single 类型数据在转为整型时常常需要取整，MatLab提供了以下四种取整函数。
 
 
-机器语言与汇编语言：01 代码与助记符，更接近于计算机硬件指令系统的工作
+
+函数
+说明
+举例
 
 
-高级语言：其表示方法更接近于带解决的表示方法
 
 
-命令语言：控制系统的工作，以功能封装为特征（如 UNIX
+floor
+向下取整
+floor(1.5)=1floor(-1.5)=-2
+
+
+ceil
+向上取整
+ceil(1.5)=2ceil(-1.5)=-1
+
+
+round
+取整到最近的整数（若小数部分为0.5，则
         </a>
       </p>
 
@@ -248,7 +247,7 @@
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/CompilingPrinciple/">CompilingPrinciple</a>
+              <a href="/categories/Technique/MatLab/">MatLab</a>
             
           </div>
         
@@ -258,7 +257,7 @@
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/CompilingPrinciple/">CompilingPrinciple</a>
+              <a href="/tags/MatLab/">MatLab</a>
             
           </div>
         
@@ -272,43 +271,23 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Technique/InformationTheory/%E4%BF%A1%E6%81%AF%E8%AE%BA%E6%A6%82%E8%AE%BA/%E4%BF%A1%E6%81%AF%E8%AE%BA%E6%A6%82%E8%AE%BA/">信息论概论</a>
+        <a href="/2020/05/26/Technique/MatLab/MatLab%E5%8F%98%E9%87%8F/">MatLab变量</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Technique/InformationTheory/%E4%BF%A1%E6%81%AF%E8%AE%BA%E6%A6%82%E8%AE%BA/%E4%BF%A1%E6%81%AF%E8%AE%BA%E6%A6%82%E8%AE%BA/">
+        <a href="/2020/05/26/Technique/MatLab/MatLab%E5%8F%98%E9%87%8F/">
           
           
             
           
-          1. 内容
+          1. 变量命名
+在 MatLab 中，变量不需预先声明就可直接进行赋值操作。变量命名遵循以下规则：
 
-绪论
-信息的统计度量
-离散信源
-离散信道及其容量
-无失真信源编码
-有噪信道编码
-限失真信源编码
-保密系统的基本信息理论
-
-2. 信息
-2.1 客观世界三大基本要素
-
-物质：材料科学
-能量：能源科学
-信息：信息科学
-
-2.2 信息、消息、信号
-
-
-消息：是信息的载体和具体表现形式（比如文字、图片等），是信号的具体内容
-
-
-信息：是消息中包含的有意义的内容
-
-
-同一消息对不同的接收者来说
+变量名和函数名对字母大小写敏感
+变量名和函数名必须以字母为开端，其后可以是字母、数字和下划线
+不能使用 MatLab 关键字作为变量名和函数名（可使用 iskeywords 函数查看 MatLab 中所有的关键字）
+变量名和函数名最多可包含 63 个字符，超过部分被截断忽略
+避免使用函数名作为变量
         </a>
       </p>
 
@@ -327,7 +306,7 @@
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/InformationTheory/">InformationTheory</a>
+              <a href="/categories/Technique/MatLab/">MatLab</a>
             
           </div>
         
@@ -337,7 +316,7 @@
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/InformationTheory/">InformationTheory</a>
+              <a href="/tags/MatLab/">MatLab</a>
             
           </div>
         
@@ -351,23 +330,20 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Technique/Linux/Deepin/Deepin15.11%E4%B8%8Bapt%E6%8A%A5%E9%94%99/">Deepin15.11下apt报错</a>
+        <a href="/2020/05/26/Technique/MatLab/MatLab%E5%B7%A5%E4%BD%9C%E5%8C%BA/">MatLab工作区</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Technique/Linux/Deepin/Deepin15.11%E4%B8%8Bapt%E6%8A%A5%E9%94%99/">
+        <a href="/2020/05/26/Technique/MatLab/MatLab%E5%B7%A5%E4%BD%9C%E5%8C%BA/">
           
           
             
           
-          1. 由于没有公匙，无法验证下列签名: NO_PUBKEY xxx
-执行命令 sudo apt update 时如上报错。
-
-错误原因：GPG Key 对应的 GPG 验证文件过期或者是有些软件源没有导入 GPG Key 对应的 GPG 验证文件。可以通过下列命令查看所有 GPG Key:
-
-1sudo apt-key list
-
-解决办法：更新无效 GPG Key 对应的 GPG 验证文件。可以
+          1. 基础工作区
+MatLab 中的基础工作区是针对当前 MatLab 窗口内的脚本代码而言的（无论是命令行窗口输入的还是 M 脚本文件中的），是所有脚本代码所共享的（即对当前 MatLab 窗口而言是唯一的），是对外可见的（即 MatLab 窗口中显示的工作区），与当前 MatLab 窗口是共存亡的。
+【注】从函数中调用脚本时，脚本使用的是调用函数的函数工作区。
+2. 函数工作区
+MatLab 
         </a>
       </p>
 
@@ -386,9 +362,7 @@
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/Linux/">Linux</a>
-            
-              <a href="/categories/Technique/Linux/Deepin/">Deepin</a>
+              <a href="/categories/Technique/MatLab/">MatLab</a>
             
           </div>
         
@@ -398,9 +372,7 @@
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/Deepin/">Deepin</a>
+              <a href="/tags/MatLab/">MatLab</a>
             
           </div>
         
@@ -414,21 +386,42 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Technique/Linux/Deepin/Deepin15.11%E4%B8%8B%E8%93%9D%E7%89%99%E9%85%8D%E5%AF%B9%E5%92%8C%E8%BF%9E%E6%8E%A5/">Deepin15.11下蓝牙配对和连接</a>
+        <a href="/2020/05/26/Technique/MatLab/MatLab%E8%BF%90%E7%AE%97%E7%AC%A6%E4%B8%8E%E8%BF%90%E7%AE%97/">MatLab运算符与运算</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Technique/Linux/Deepin/Deepin15.11%E4%B8%8B%E8%93%9D%E7%89%99%E9%85%8D%E5%AF%B9%E5%92%8C%E8%BF%9E%E6%8E%A5/">
+        <a href="/2020/05/26/Technique/MatLab/MatLab%E8%BF%90%E7%AE%97%E7%AC%A6%E4%B8%8E%E8%BF%90%E7%AE%97/">
           
           
             
           
-          首先确保 bluetooth, bluez, bluez-tools, rfkill 已经安装好，没有则在终端进行安装：
-1sudo apt install bluetooth bluez bluez-tools rfkill
-1. 查找蓝牙适配器
-1hciconfig
-对于系统识别到的每个蓝牙适配器，会显示出其相应信息：XXX:   Type:***，其中 XXX 为该蓝牙适配器的设备名。
-2.
+          1. 算术运算符
+MatLab 算术运算符有四则运算符和带点四则运算符。
+
+
+
+运算符
+运算法则
+运算符
+运算法则
+
+
+
+
+A+B
+A 与 B 相加（维度必须一致）
+A-B
+A 与 B 相减（维度必须一致）
+
+
+A*B
+A 与 B 相乘（二者之一为标量或满足矩阵相乘条件）
+A.*B
+A 与 B 相应元素相乘（维度必须一致）
+
+
+A\B
+B 与 A 相除（A 为标量或满足 A 非奇异，A\B=A−1
         </a>
       </p>
 
@@ -447,9 +440,7 @@
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/Linux/">Linux</a>
-            
-              <a href="/categories/Technique/Linux/Deepin/">Deepin</a>
+              <a href="/categories/Technique/MatLab/">MatLab</a>
             
           </div>
         
@@ -459,9 +450,7 @@
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/Deepin/">Deepin</a>
+              <a href="/tags/MatLab/">MatLab</a>
             
           </div>
         
@@ -475,23 +464,20 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Technique/Linux/Manjaro/Manjaro20.0%E4%B8%8B%E8%93%9D%E7%89%99%E9%85%8D%E5%AF%B9%E5%92%8C%E8%BF%9E%E6%8E%A5/">Manjaro20.0下蓝牙配对和连接</a>
+        <a href="/2020/05/26/Technique/MySQL/Deepin15.11%E9%85%8D%E7%BD%AEMySQL%E7%8E%AF%E5%A2%83/">Deepin15.11配置MySQL环境</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Technique/Linux/Manjaro/Manjaro20.0%E4%B8%8B%E8%93%9D%E7%89%99%E9%85%8D%E5%AF%B9%E5%92%8C%E8%BF%9E%E6%8E%A5/">
+        <a href="/2020/05/26/Technique/MySQL/Deepin15.11%E9%85%8D%E7%BD%AEMySQL%E7%8E%AF%E5%A2%83/">
           
           
             
           
-          首先确保 bluez, bluez-utils 已经安装好，否则在终端安装：
-1sudo pacman -S bluez bluez-utils
-1. 查看蓝牙服务状态
-1systemctl status bluetooth.service
-2. 启动蓝牙服务
-如果蓝牙服务未启动，则需手动启动蓝牙服务：
-1sudo systemctl start bluetooth.service
-3. 操控蓝牙
+          【注】mysql 环境配置详情请参阅 mysql 官方教程。
+1. 添加 APT Repository
+从官网上下载对应的 MySQL APT Repository 配置包，然后安装该 mysql-apt-config_x.y.z_all.deb 包（具体取决于所下载的 deb 包）。
+1sudo dpkg -i mysql-apt-config_x.y.z_all.deb
+在安装该 APT Re
         </a>
       </p>
 
@@ -510,9 +496,7 @@
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/Linux/">Linux</a>
-            
-              <a href="/categories/Technique/Linux/Manjaro/">Manjaro</a>
+              <a href="/categories/Technique/MySQL/">MySQL</a>
             
           </div>
         
@@ -522,9 +506,7 @@
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/Manjaro/">Manjaro</a>
+              <a href="/tags/MySQL/">MySQL</a>
             
           </div>
         
@@ -538,26 +520,30 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Technique/Linux/Manjaro/Manjaro20.0%E5%AE%89%E8%A3%85EasyConnect/">Manjaro20.0安装EasyConnect</a>
+        <a href="/2020/05/26/Technique/MySQL/MySQL%E6%8A%A5%E9%94%99/">MySQL报错</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Technique/Linux/Manjaro/Manjaro20.0%E5%AE%89%E8%A3%85EasyConnect/">
+        <a href="/2020/05/26/Technique/MySQL/MySQL%E6%8A%A5%E9%94%99/">
           
           
             
           
-          EasyConnect 是深信服公司新一代的 SSLVPN，支持各大操作系统平台，但 Linux 目前只支持 deb 包和 rpm 包，所以 Manjaro 安装 EasyConnect 并不友好。
-1. 安装最新版 EasyConnect
-1.1 终端安装 AUR 版本
+          1. The MySQL server is running with the --secure-file-priv option ***
 
-yaourt 用户
+问题：secure-file-priv 未配置或配置与当前使用路径冲突。secure-file-priv 参数是用来限制 mysql 下数据导入导出只能发生的路径下。
 
-1yaourt -S easyconnect
 
-yay 用户
 
-1yay -S easyconnect
+
+secure-file-priv 参数值
+说明
+
+
+
+
+''
+表示 mysqld 
         </a>
       </p>
 
@@ -576,9 +562,7 @@ yay 用户
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/Linux/">Linux</a>
-            
-              <a href="/categories/Technique/Linux/Manjaro/">Manjaro</a>
+              <a href="/categories/Technique/MySQL/">MySQL</a>
             
           </div>
         
@@ -588,9 +572,7 @@ yay 用户
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/Manjaro/">Manjaro</a>
+              <a href="/tags/MySQL/">MySQL</a>
             
           </div>
         
@@ -604,30 +586,26 @@ yay 用户
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Technique/Linux/Manjaro/Manjaro20.0%E5%AE%89%E8%A3%85deb%E8%BD%AF%E4%BB%B6%E5%8C%85/">Manjaro20.0安装deb软件包</a>
+        <a href="/2020/05/26/Technique/MySQL/%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%B8%8B%E4%BD%BF%E7%94%A8MySQL/">命令行下使用MySQL</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Technique/Linux/Manjaro/Manjaro20.0%E5%AE%89%E8%A3%85deb%E8%BD%AF%E4%BB%B6%E5%8C%85/">
+        <a href="/2020/05/26/Technique/MySQL/%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%B8%8B%E4%BD%BF%E7%94%A8MySQL/">
           
           
             
           
-          由于 Manjaro 基于 ArchLinux，而 deb 软件包格式为 Debian 系统安装包格式，故 Manjaro 不能直接安装 deb 软件包，而需要借助 debtap 工具。
-1. 安装 debtap
+          1. 进入 MySQL 终端
 
-yaourt 工具
+指定服务器 host 和 user
 
-1yaourt -S debtap
+1mysql -h host -u user -p    # -p 选项指明输入密码
 
-yay 工具
+匿名形式进入 MySQL 终端（host 默认为 localhost，user 默认为当前系统的 user）
 
-1yay -S debtap
-
-pacaur 工具
-
-1pacaur -S debtap
-【注】三种方式任选
+1mysql
+【注】linux 系统下可能需要使用超级用户权限：
+12sudo mysql -h host -u user -ps
         </a>
       </p>
 
@@ -646,9 +624,7 @@ pacaur 工具
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/Linux/">Linux</a>
-            
-              <a href="/categories/Technique/Linux/Manjaro/">Manjaro</a>
+              <a href="/categories/Technique/MySQL/">MySQL</a>
             
           </div>
         
@@ -658,9 +634,7 @@ pacaur 工具
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/Manjaro/">Manjaro</a>
+              <a href="/tags/MySQL/">MySQL</a>
             
           </div>
         
@@ -674,25 +648,19 @@ pacaur 工具
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Technique/Linux/Manjaro/Manjaro20.0%E5%AE%89%E8%A3%85man%E4%B8%AD%E6%96%87%E6%89%8B%E5%86%8C/">Manjaro20.0安装man中文手册</a>
+        <a href="/2020/05/26/Technique/Net/Hosts%E6%96%87%E4%BB%B6%E4%BF%AE%E6%94%B9/">Hosts文件修改</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Technique/Linux/Manjaro/Manjaro20.0%E5%AE%89%E8%A3%85man%E4%B8%AD%E6%96%87%E6%89%8B%E5%86%8C/">
+        <a href="/2020/05/26/Technique/Net/Hosts%E6%96%87%E4%BB%B6%E4%BF%AE%E6%94%B9/">
           
           
             
           
-          1. 安装 man 中文软件包
-1pacman -S man-pages-zh_cn   # 繁体换成 man-pages-zh_tw
-2. 查询 man 中文手册安装目录
-1pacman -Ql man-pages-zh_cn | less
-发现 man 中文手册安装目录为 /usr/share/man/zh_CN 。
-3. 设置中英文 man 别名
-
-编辑 ~/.bashrc文件：
-
-1sud
+          1. 简介
+有时访问某些国外网站很卡（不包括无法访问的网站），很大的原因是这些网站的 CDN 的域名遭到 DNS 污染了。这时就可以选择直接访问源网站 IP ，绕过 DNS 解析，即通过修改主机 hosts 文件的方式，将域名和 IP 的对应关系直接记录下来，来加速对这些网站的访问。
+2. 原理
+主机操作系统下都有一个 hosts 文件，其作用在于将一些常用网址域名与其对应的 IP 地址建立一个关
         </a>
       </p>
 
@@ -711,9 +679,7 @@ pacaur 工具
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/Linux/">Linux</a>
-            
-              <a href="/categories/Technique/Linux/Manjaro/">Manjaro</a>
+              <a href="/categories/Technique/Net/">Net</a>
             
           </div>
         
@@ -723,9 +689,7 @@ pacaur 工具
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/Manjaro/">Manjaro</a>
+              <a href="/tags/Net/">Net</a>
             
           </div>
         
@@ -739,25 +703,20 @@ pacaur 工具
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Technique/Linux/Manjaro/Manjaro20.0%E6%B7%BB%E5%8A%A0%E5%9B%BD%E5%86%85%E6%BA%90%E3%80%81%E7%A4%BE%E5%8C%BA%E6%BA%90%E3%80%81AUR%E6%BA%90/">Manjaro20.0添加国内源、社区源、AUR源</a>
+        <a href="/2020/05/26/Technique/NodeJS/Mint19.1%E5%AE%89%E8%A3%85NodeJS/">Mint19.1安装NodeJS</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Technique/Linux/Manjaro/Manjaro20.0%E6%B7%BB%E5%8A%A0%E5%9B%BD%E5%86%85%E6%BA%90%E3%80%81%E7%A4%BE%E5%8C%BA%E6%BA%90%E3%80%81AUR%E6%BA%90/">
+        <a href="/2020/05/26/Technique/NodeJS/Mint19.1%E5%AE%89%E8%A3%85NodeJS/">
           
           
             
           
-          1. 添加国内源
-1.1 备份文件
-1sudo cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak
-1.2 编辑文件
-1sudo vim /etc/pacman.d/mirrorlist
-添加的源从上到下优先级依次降低。
-
-添加 Manjaro 源
-
-123456789## manjaro 稳定源# 中科大Server = https:
+          1. 查看 NodeJS 版本
+查看最新版本的 NodeJS，见官网地址。
+2. 添加 NodeJS 源
+NodeJS 每个大版本都有相对应的源，比如 12.16.2 版本对应的源为 https://deb.nodesource.com/setup_12.x，将所需安装的 NodeJS 版本源添加到系统中：
+1curl -sL https://deb.nodesource.com/setup_12
         </a>
       </p>
 
@@ -776,9 +735,7 @@ pacaur 工具
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/Linux/">Linux</a>
-            
-              <a href="/categories/Technique/Linux/Manjaro/">Manjaro</a>
+              <a href="/categories/Technique/NodeJS/">NodeJS</a>
             
           </div>
         
@@ -788,9 +745,7 @@ pacaur 工具
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/Manjaro/">Manjaro</a>
+              <a href="/tags/NodeJS/">NodeJS</a>
             
           </div>
         
@@ -804,22 +759,22 @@ pacaur 工具
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/05/26/Technique/Linux/Manjaro/Manjaro20.0%E9%85%8D%E7%BD%AETR4527%E6%89%93%E5%8D%B0%E6%9C%BA%E5%92%8C%E6%89%AB%E6%8F%8F%E4%BB%AA%E9%A9%B1%E5%8A%A8/">Manjaro20.0配置TR4527打印机和扫描仪驱动</a>
+        <a href="/2020/05/26/Technique/Python/Python%E6%8A%A5%E9%94%99/">Python报错</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/05/26/Technique/Linux/Manjaro/Manjaro20.0%E9%85%8D%E7%BD%AETR4527%E6%89%93%E5%8D%B0%E6%9C%BA%E5%92%8C%E6%89%AB%E6%8F%8F%E4%BB%AA%E9%A9%B1%E5%8A%A8/">
+        <a href="/2020/05/26/Technique/Python/Python%E6%8A%A5%E9%94%99/">
           
           
             
           
-          【注】Manjaro 系统日常使用问题可以上 Manjaro 官方论坛上逛一逛，说不定具有解决办法。
-1. 打印机驱动
-Arch Linux AUR 源已经提供了 TR4527 打印机驱动程序 cnijfilter2，详情参见地址。
-在终端手动安装该驱动程序即可：
-1yay -S cnijfilter2
-2. 扫描仪驱动
-Arch Linux AUR 源已经提供了 TR4527 扫描仪驱动程序 s
+          1. fatal error: Python.h: 没有那个文件或目录
+
+问题：缺少 python-dev 包
+解决：安装对应包：
+
+1sudo apt install python-dev # 最好指定 python 版本，比如：python3.6-dev
+2. ERROR: Package 'pylint' requires a different Python: 2.7.15 not in 
         </a>
       </p>
 
@@ -838,9 +793,7 @@ Arch Linux AUR 源已经提供了 TR4527 扫描仪驱动程序 s
             
               <a href="/categories/Technique/">Technique</a>
             
-              <a href="/categories/Technique/Linux/">Linux</a>
-            
-              <a href="/categories/Technique/Linux/Manjaro/">Manjaro</a>
+              <a href="/categories/Technique/Python/">Python</a>
             
           </div>
         
@@ -850,9 +803,7 @@ Arch Linux AUR 源已经提供了 TR4527 扫描仪驱动程序 s
             
               <a href="/tags/Technique/">Technique</a>
             
-              <a href="/tags/Linux/">Linux</a>
-            
-              <a href="/tags/Manjaro/">Manjaro</a>
+              <a href="/tags/Python/">Python</a>
             
           </div>
         
@@ -864,7 +815,7 @@ Arch Linux AUR 源已经提供了 TR4527 扫描仪驱动程序 s
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/page/47/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/46/#board">46</a><a class="page-number" href="/page/47/#board">47</a><span class="page-number current">48</span><a class="page-number" href="/page/49/#board">49</a><a class="page-number" href="/page/50/#board">50</a><span class="space">&hellip;</span><a class="page-number" href="/page/55/#board">55</a><a class="extend next" rel="next" href="/page/49/#board"><i class="iconfont icon-arrowright"></i></a>
+      <a class="extend prev" rel="prev" href="/page/47/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/46/#board">46</a><a class="page-number" href="/page/47/#board">47</a><span class="page-number current">48</span><a class="page-number" href="/page/49/#board">49</a><a class="page-number" href="/page/50/#board">50</a><span class="space">&hellip;</span><a class="page-number" href="/page/56/#board">56</a><a class="extend next" rel="next" href="/page/49/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 
